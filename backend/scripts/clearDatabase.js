@@ -43,6 +43,9 @@ async function clearDatabase() {
 
       console.log('\n正在清理数据...');
       
+      // 关闭外键检查
+      await sequelize.query('SET FOREIGN_KEY_CHECKS = 0;');
+      
       // 按外键依赖顺序删除数据
       await Checkin.destroy({ where: {}, truncate: true });
       console.log('✓ 清理打卡记录');
@@ -55,6 +58,9 @@ async function clearDatabase() {
       
       await Family.destroy({ where: {}, truncate: true });
       console.log('✓ 清理家庭数据');
+      
+      // 恢复外键检查
+      await sequelize.query('SET FOREIGN_KEY_CHECKS = 1;');
 
       console.log('\n✅ 数据库清理完成！');
       
