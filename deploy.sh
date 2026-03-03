@@ -205,9 +205,9 @@ module.exports = {
       env_production: {
         NODE_ENV: 'production'
       },
-      log_file: './logs/backend.log',
-      out_file: './logs/backend-out.log',
-      error_file: './logs/backend-error.log',
+      log_file: '$SCRIPT_DIR/logs/backend.log',
+      out_file: '$SCRIPT_DIR/logs/backend-out.log',
+      error_file: '$SCRIPT_DIR/logs/backend-error.log',
       log_date_format: 'YYYY-MM-DD HH:mm:ss'
     }
   ]
@@ -215,7 +215,7 @@ module.exports = {
 EOF
 
 # 创建日志目录
-mkdir -p logs
+mkdir -p "$SCRIPT_DIR/logs"
 
 echo -e "${GREEN}✓ PM2 配置创建完成${NC}"
 echo ""
