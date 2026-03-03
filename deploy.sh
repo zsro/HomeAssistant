@@ -91,24 +91,36 @@ server {
     listen 80;
     server_name _;  # 监听所有域名
     
+    # 后端 API 代理 - 放在前面优先匹配
+    location /api/ {
+        proxy_pass http://127.0.0.1:3001/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        
+        # 后端连接设置
+        proxy_connect_timeout 300s;
+        proxy_send_timeout 300s;
+        proxy_read_timeout 300s;
+        
+        # 错误处理
+        proxy_intercept_errors on;
+        error_page 502 503 504 = @backend_error;
+    }
+    
+    # 后端错误页面
+    location @backend_error {
+        return 503 '{"error": "后端服务不可用，请检查服务状态"}';
+        add_header Content-Type application/json;
+    }
+    
     # 前端静态文件
     location / {
         root /var/www/home-assistant;
         try_files $uri $uri/ /index.html;
         index index.html;
-    }
-    
-    # 后端 API 代理
-    location /api/ {
-        proxy_pass http://localhost:3001/;
-        proxy_http_version 1.1;
-        proxy_set_header Upgrade $http_upgrade;
-        proxy_set_header Connection 'upgrade';
-        proxy_set_header Host $host;
-        proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        proxy_set_header X-Forwarded-Proto $scheme;
-        proxy_cache_bypass $http_upgrade;
     }
 }
 EOF
