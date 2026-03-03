@@ -70,6 +70,10 @@ fi
 # 部署前端到 Nginx
 echo -e "${YELLOW}[5/9] 部署前端到 Nginx...${NC}"
 if command -v nginx &> /dev/null; then
+    # 确保 Nginx 配置目录存在
+    sudo mkdir -p /etc/nginx/sites-available
+    sudo mkdir -p /etc/nginx/sites-enabled
+    
     # 创建 Nginx 配置
     sudo tee /etc/nginx/sites-available/home-assistant << 'EOF'
 server {
@@ -159,7 +163,7 @@ DB_HOST=localhost
 DB_PORT=3306
 DB_NAME=homeAssistantDB
 DB_USER=homeAssistantUser
-DB_PASSWORD=your-password
+DB_PASSWORD=yingzi123
 
 # AI 配置
 AI_PROVIDER=volcano
