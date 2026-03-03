@@ -2,6 +2,7 @@ const express = require('express');
 const { AIServiceFactory } = require('../services/ai');
 const db = require('../models/dbAdapter');
 const { authenticateToken } = require('../middleware/auth');
+const { ErrorCodes, success, error } = require('../utils/errorCodes');
 const router = express.Router();
 
 // 获取当前周的开始日期（周一）
@@ -30,7 +31,7 @@ router.get('/templates', authenticateToken, async (req, res) => {
     const user = req.user;
     
     if (!user.familyId) {
-      return res.status(400).json({ error: '您还没有加入家庭' });
+      return res.status(400).json(error(ErrorCodes.FAMILY_NOT_FOUND, '您还没有加入家庭'));
     }
 
     // 获取家庭的所有模板
@@ -47,13 +48,10 @@ router.get('/templates', authenticateToken, async (req, res) => {
     // 按创建时间倒序
     templateList.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
 
-    res.json({
-      success: true,
-      data: { templates: templateList },
-    });
-  } catch (error) {
-    console.error('获取模板列表失败:', error);
-    res.status(500).json({ error: '获取模板列表失败' });
+    res.json(success({ templates: templateList }));
+  } catch (err) {
+    console.error('获取模板列表失败:', err);
+    res.status(500).json(error(ErrorCodes.SYSTEM_ERROR, '获取模板列表失败'));
   }
 });
 
