@@ -193,8 +193,8 @@ module.exports = {
   apps: [
     {
       name: '$PROJECT_NAME-backend',
-      cwd: './backend',
-      script: 'server.js',
+      cwd: '$SCRIPT_DIR/backend',
+      script: '$SCRIPT_DIR/backend/server.js',
       instances: 1,
       autorestart: true,
       watch: false,
