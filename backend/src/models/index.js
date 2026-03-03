@@ -7,6 +7,16 @@ if (useRealDatabase) {
   // 使用真实数据库 (MySQL)
   const { User, Family, Template, Checkin, sequelize, syncDatabase } = require('./database');
   
+  // 生成家庭码函数
+  function generateFamilyCode() {
+    const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+    let code = '';
+    for (let i = 0; i < 6; i++) {
+      code += chars.charAt(Math.floor(Math.random() * chars.length));
+    }
+    return code;
+  }
+  
   module.exports = {
     User,
     Family,
@@ -14,6 +24,7 @@ if (useRealDatabase) {
     Checkin,
     sequelize,
     syncDatabase,
+    generateFamilyCode,
     useRealDatabase: true
   };
 } else {
