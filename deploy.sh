@@ -31,7 +31,7 @@ check_command() {
     fi
 }
 
-echo -e "${YELLOW}[1/7] 检查依赖...${NC}"
+echo -e "${YELLOW}[1/9] 检查依赖...${NC}"
 check_command node
 check_command npm
 check_command git
@@ -42,27 +42,77 @@ echo ""
 cd "$SCRIPT_DIR"
 
 # 安装后端依赖
-echo -e "${YELLOW}[2/7] 安装后端依赖...${NC}"
+echo -e "${YELLOW}[2/9] 安装后端依赖...${NC}"
 cd backend
 npm install
 echo -e "${GREEN}✓ 后端依赖安装完成${NC}"
 echo ""
 
 # 安装前端依赖
-echo -e "${YELLOW}[3/7] 安装前端依赖...${NC}"
+echo -e "${YELLOW}[3/9] 安装前端依赖...${NC}"
 cd ../frontend
 npm install
 echo -e "${GREEN}✓ 前端依赖安装完成${NC}"
 echo ""
 
 # 构建前端
-echo -e "${YELLOW}[4/7] 构建前端...${NC}"
+echo -e "${YELLOW}[4/9] 构建前端...${NC}"
 npm run build
 echo -e "${GREEN}✓ 前端构建完成${NC}"
 echo ""
 
+# 部署前端到 Nginx
+echo -e "${YELLOW}[5/9] 部署前端到 Nginx...${NC}"
+if command -v nginx &> /dev/null; then
+    # 创建 Nginx 配置
+    sudo tee /etc/nginx/sites-available/home-assistant << 'EOF'
+server {
+    listen 80;
+    server_name _;  # 监听所有域名
+    
+    # 前端静态文件
+    location / {
+        root /var/www/home-assistant;
+        try_files $uri $uri/ /index.html;
+        index index.html;
+    }
+    
+    # 后端 API 代理
+    location /api/ {
+        proxy_pass http://localhost:3001/;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_cache_bypass $http_upgrade;
+    }
+}
+EOF
+    
+    # 创建网站目录
+    sudo mkdir -p /var/www/home-assistant
+    sudo cp -r "$SCRIPT_DIR/frontend/dist"/* /var/www/home-assistant/
+    sudo chown -R www-data:www-data /var/www/home-assistant
+    
+    # 启用站点
+    sudo ln -sf /etc/nginx/sites-available/home-assistant /etc/nginx/sites-enabled/
+    sudo rm -f /etc/nginx/sites-enabled/default
+    
+    # 测试并重载 Nginx
+    sudo nginx -t && sudo systemctl reload nginx
+    
+    echo -e "${GREEN}✓ 前端已部署到 Nginx (http://服务器IP)${NC}"
+else
+    echo -e "${YELLOW}警告: Nginx 未安装，跳过前端部署${NC}"
+    echo -e "${YELLOW}请手动安装 Nginx 并配置前端目录: frontend/dist${NC}"
+fi
+echo ""
+
 # 检查环境变量文件
-echo -e "${YELLOW}[5/7] 检查环境变量...${NC}"
+echo -e "${YELLOW}[6/9] 检查环境变量...${NC}"
 cd ..
 
 if [ ! -f "backend/.env" ]; then
@@ -92,7 +142,7 @@ echo -e "${GREEN}✓ 环境变量检查完成${NC}"
 echo ""
 
 # 创建 PM2 配置文件
-echo -e "${YELLOW}[6/7] 创建 PM2 配置...${NC}"
+echo -e "${YELLOW}[7/9] 创建 PM2 配置...${NC}"
 
 cat > ecosystem.config.js << EOF
 module.exports = {
@@ -127,7 +177,7 @@ echo -e "${GREEN}✓ PM2 配置创建完成${NC}"
 echo ""
 
 # 检查 PM2
-echo -e "${YELLOW}[7/7] 配置进程管理...${NC}"
+echo -e "${YELLOW}[8/9] 配置进程管理...${NC}"
 if command -v pm2 &> /dev/null; then
     echo -e "${GREEN}✓ PM2 已安装${NC}"
 else
@@ -136,30 +186,41 @@ else
     echo -e "${GREEN}✓ PM2 安装完成${NC}"
 fi
 
+# 启动服务
+echo ""
+echo -e "${YELLOW}[9/9] 启动服务...${NC}"
+echo ""
+read -p "是否立即启动后端服务? (y/n): " -n 1 -r
+echo
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+    pm2 start ecosystem.config.js --env production
+    echo -e "${GREEN}✓ 后端服务已启动${NC}"
+    echo ""
+    echo -e "${YELLOW}访问地址:${NC}"
+    echo "  前端: http://$(hostname -I | awk '{print $1}')"
+    echo "  后端 API: http://$(hostname -I | awk '{print $1}'):3001"
+else
+    echo -e "${YELLOW}跳过启动服务${NC}"
+fi
+
 echo ""
 echo -e "${GREEN}========================================${NC}"
-echo -e "${GREEN}  部署准备完成！${NC}"
+echo -e "${GREEN}  部署完成！${NC}"
 echo -e "${GREEN}========================================${NC}"
 echo ""
-echo -e "${YELLOW}后续步骤:${NC}"
-echo ""
-echo "1. 编辑后端配置:"
-echo "   vim backend/.env"
-echo ""
-echo "2. 启动后端服务:"
-echo "   cd backend && npm start"
-echo "   或使用 PM2: pm2 start ecosystem.config.js --env production"
-echo ""
-echo "3. 启动前端开发服务器 (开发环境):"
-echo "   cd frontend && npm run dev"
-echo ""
-echo "4. 生产环境前端部署:"
-echo "   将 frontend/dist 目录部署到 Nginx/Apache"
+echo -e "${YELLOW}服务地址:${NC}"
+echo "  前端: http://服务器IP"
+echo "  后端 API: http://服务器IP:3001"
 echo ""
 echo -e "${YELLOW}常用命令:${NC}"
 echo "  pm2 status              # 查看服务状态"
 echo "  pm2 logs $PROJECT_NAME-backend  # 查看后端日志"
 echo "  pm2 restart $PROJECT_NAME-backend # 重启后端"
 echo "  pm2 stop $PROJECT_NAME-backend    # 停止后端"
+echo "  sudo systemctl reload nginx       # 重载 Nginx"
+echo ""
+echo -e "${YELLOW}文件位置:${NC}"
+echo "  前端目录: /var/www/home-assistant"
+echo "  Nginx 配置: /etc/nginx/sites-available/home-assistant"
 echo ""
 echo -e "${GREEN}部署完成！${NC}"
