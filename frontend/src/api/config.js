@@ -42,12 +42,35 @@ async function fetchWithTimeout(url, options = {}, timeout = DEFAULT_TIMEOUT) {
   }
 }
 
+// 统一处理响应，检查错误码
+async function handleResponse(response) {
+  const data = await response.json();
+  
+  // 检查错误码规范：code !== 0 表示错误
+  if (data.code !== undefined && data.code !== 0) {
+    const error = new Error(data.msg || '请求失败');
+    error.code = data.code;
+    error.data = data;
+    throw error;
+  }
+  
+  // 兼容旧格式（没有 code 字段）
+  if (data.error) {
+    const error = new Error(data.error);
+    error.code = -1;
+    error.data = data;
+    throw error;
+  }
+  
+  return data;
+}
+
 export const api = {
   baseURL: API_BASE_URL,
   
   async get(url, timeout) {
     const response = await fetchWithTimeout(`${API_BASE_URL}${url}`, {}, timeout);
-    return response.json();
+    return handleResponse(response);
   },
   
   async post(url, data, timeout) {
@@ -58,7 +81,7 @@ export const api = {
       },
       body: JSON.stringify(data),
     }, timeout);
-    return response.json();
+    return handleResponse(response);
   },
   
   async put(url, data, timeout) {
@@ -69,14 +92,14 @@ export const api = {
       },
       body: JSON.stringify(data),
     }, timeout);
-    return response.json();
+    return handleResponse(response);
   },
   
   async delete(url, timeout) {
     const response = await fetchWithTimeout(`${API_BASE_URL}${url}`, {
       method: 'DELETE',
     }, timeout);
-    return response.json();
+    return handleResponse(response);
   },
 };
 
