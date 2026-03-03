@@ -93,7 +93,7 @@ server {
     
     # 后端 API 代理 - 放在前面优先匹配
     location /api/ {
-        proxy_pass http://127.0.0.1:3001/;
+        proxy_pass http://127.0.0.1:3001/api/;
         proxy_http_version 1.1;
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
