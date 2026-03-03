@@ -1,5 +1,6 @@
 const jwt = require('jsonwebtoken');
 const db = require('../models/dbAdapter');
+const { ErrorCodes, error } = require('../utils/errorCodes');
 
 const JWT_SECRET = process.env.JWT_SECRET || 'your-secret-key-change-in-production';
 
@@ -23,18 +24,21 @@ function authenticateToken(req, res, next) {
   const token = authHeader && authHeader.split(' ')[1]; // Bearer TOKEN
 
   if (!token) {
-    return res.status(401).json({ error: '未提供认证令牌' });
+    return res.status(401).json(error(ErrorCodes.AUTH_UNAUTHORIZED));
   }
 
   jwt.verify(token, JWT_SECRET, async (err, decoded) => {
     if (err) {
-      return res.status(403).json({ error: '令牌无效或已过期' });
+      if (err.name === 'TokenExpiredError') {
+        return res.status(403).json(error(ErrorCodes.AUTH_TOKEN_EXPIRED));
+      }
+      return res.status(403).json(error(ErrorCodes.AUTH_TOKEN_INVALID));
     }
     
     // 获取完整用户信息
     const user = await db.user.findById(decoded.userId);
     if (!user) {
-      return res.status(403).json({ error: '用户不存在' });
+      return res.status(403).json(error(ErrorCodes.USER_NOT_FOUND));
     }
     
     req.user = user;
