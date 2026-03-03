@@ -70,12 +70,23 @@ fi
 # 部署前端到 Nginx
 echo -e "${YELLOW}[5/9] 部署前端到 Nginx...${NC}"
 if command -v nginx &> /dev/null; then
-    # 确保 Nginx 配置目录存在
-    sudo mkdir -p /etc/nginx/sites-available
-    sudo mkdir -p /etc/nginx/sites-enabled
+    # 检测 Nginx 配置目录风格
+    if [ -d "/etc/nginx/conf.d" ]; then
+        # Alibaba Cloud Linux / CentOS / RHEL 风格
+        NGINX_CONF_DIR="/etc/nginx/conf.d"
+        NGINX_CONF_FILE="$NGINX_CONF_DIR/home-assistant.conf"
+    else
+        # Debian / Ubuntu 风格
+        NGINX_CONF_DIR="/etc/nginx/sites-available"
+        sudo mkdir -p /etc/nginx/sites-available
+        sudo mkdir -p /etc/nginx/sites-enabled
+        NGINX_CONF_FILE="$NGINX_CONF_DIR/home-assistant"
+    fi
+    
+    echo -e "${YELLOW}使用 Nginx 配置目录: $NGINX_CONF_DIR${NC}"
     
     # 创建 Nginx 配置
-    sudo tee /etc/nginx/sites-available/home-assistant << 'EOF'
+    sudo tee $NGINX_CONF_FILE << 'EOF'
 server {
     listen 80;
     server_name _;  # 监听所有域名
@@ -85,22 +96,6 @@ server {
         root /var/www/home-assistant;
         try_files $uri $uri/ /index.html;
         index index.html;
-        
-        # 正确设置 MIME 类型
-        include /etc/nginx/mime.types;
-        default_type application/octet-stream;
-    }
-    
-    # 明确设置 JS 文件的 MIME 类型
-    location ~* \.js$ {
-        root /var/www/home-assistant;
-        add_header Content-Type application/javascript;
-    }
-    
-    # 设置 CSS 文件的 MIME 类型
-    location ~* \.css$ {
-        root /var/www/home-assistant;
-        add_header Content-Type text/css;
     }
     
     # 后端 API 代理
@@ -118,6 +113,12 @@ server {
 }
 EOF
     
+    # 对于 Debian/Ubuntu 风格，创建软链接
+    if [ "$NGINX_CONF_DIR" = "/etc/nginx/sites-available" ]; then
+        sudo ln -sf /etc/nginx/sites-available/home-assistant /etc/nginx/sites-enabled/
+        sudo rm -f /etc/nginx/sites-enabled/default
+    fi
+    
     # 创建网站目录
     sudo mkdir -p /var/www/home-assistant
     
@@ -126,15 +127,11 @@ EOF
     
     # 复制构建后的文件
     sudo cp -r "$SCRIPT_DIR/frontend/dist/"* /var/www/home-assistant/
-    sudo chown -R www-data:www-data /var/www/home-assistant
+    sudo chown -R nginx:nginx /var/www/home-assistant 2>/dev/null || sudo chown -R www-data:www-data /var/www/home-assistant
     
     # 验证文件
     echo -e "${YELLOW}部署的文件列表:${NC}"
     ls -la /var/www/home-assistant/ | head -10
-    
-    # 启用站点
-    sudo ln -sf /etc/nginx/sites-available/home-assistant /etc/nginx/sites-enabled/
-    sudo rm -f /etc/nginx/sites-enabled/default
     
     # 测试并重载 Nginx
     sudo nginx -t && sudo systemctl reload nginx
