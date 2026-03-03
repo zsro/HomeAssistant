@@ -1,4 +1,8 @@
-const API_BASE_URL = 'http://localhost:3001/api';
+// 根据环境配置 API 地址
+// 开发环境使用 localhost，生产环境使用相对路径（同域）
+const API_BASE_URL = import.meta.env.PROD 
+  ? '/api'  // 生产环境：使用同域的 /api 路径（Nginx 会代理到后端）
+  : 'http://localhost:3001/api';  // 开发环境：直接访问后端
 
 // 默认超时 5 分钟（AI 生成可能需要较长时间）
 const DEFAULT_TIMEOUT = 300000;
