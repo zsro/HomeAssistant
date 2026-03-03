@@ -18,7 +18,8 @@ export const useAuthStore = create(
         set({ isLoading: true, error: null });
         try {
           const response = await authApi.login({ username, password });
-          if (response.success) {
+          // 新错误码格式：code === 0 表示成功
+          if (response.code === 0 || response.success) {
             const { user, family, token } = response.data;
             localStorage.setItem('token', token);
             set({
@@ -44,7 +45,8 @@ export const useAuthStore = create(
         set({ isLoading: true, error: null });
         try {
           const response = await authApi.register(data);
-          if (response.success) {
+          // 新错误码格式：code === 0 表示成功
+          if (response.code === 0 || response.success) {
             const { user, family, token } = response.data;
             localStorage.setItem('token', token);
             set({
@@ -69,7 +71,8 @@ export const useAuthStore = create(
       fetchUser: async () => {
         try {
           const response = await authApi.getMe();
-          if (response.success) {
+          // 新错误码格式：code === 0 表示成功
+          if (response.code === 0 || response.success) {
             const { user, family } = response.data;
             set({ user, family });
             return { success: true };
