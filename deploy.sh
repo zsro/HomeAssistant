@@ -234,18 +234,36 @@ fi
 echo ""
 echo -e "${YELLOW}[9/9] 启动服务...${NC}"
 echo ""
-read -p "是否立即启动后端服务? (y/n): " -n 1 -r
-echo
-if [[ $REPLY =~ ^[Yy]$ ]]; then
-    pm2 start ecosystem.config.js --env production
-    echo -e "${GREEN}✓ 后端服务已启动${NC}"
-    echo ""
-    echo -e "${YELLOW}访问地址:${NC}"
-    echo "  前端: http://$(hostname -I | awk '{print $1}')"
-    echo "  后端 API: http://$(hostname -I | awk '{print $1}'):3001"
+
+# 检查后端服务是否已在运行
+if pm2 list | grep -q "$PROJECT_NAME-backend"; then
+    echo -e "${YELLOW}后端服务已在运行，正在重启...${NC}"
+    pm2 restart ecosystem.config.js --env production
 else
-    echo -e "${YELLOW}跳过启动服务${NC}"
+    echo -e "${YELLOW}正在启动后端服务...${NC}"
+    pm2 start ecosystem.config.js --env production
 fi
+
+echo -e "${GREEN}✓ 后端服务已启动${NC}"
+echo ""
+
+# 等待服务启动
+sleep 3
+
+# 健康检查
+echo -e "${YELLOW}检查服务健康状态...${NC}"
+if curl -s http://127.0.0.1:3001/api/health > /dev/null 2>&1; then
+    echo -e "${GREEN}✓ 后端服务健康检查通过${NC}"
+elif curl -s http://127.0.0.1:3001/ > /dev/null 2>&1; then
+    echo -e "${GREEN}✓ 后端服务响应正常${NC}"
+else
+    echo -e "${YELLOW}警告: 后端服务可能未完全启动，请检查日志: pm2 logs${NC}"
+fi
+
+echo ""
+echo -e "${YELLOW}访问地址:${NC}"
+echo "  前端: http://$(hostname -I | awk '{print $1}')"
+echo "  后端 API: http://$(hostname -I | awk '{print $1}'):3001"
 
 echo ""
 echo -e "${GREEN}========================================${NC}"
