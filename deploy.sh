@@ -16,6 +16,7 @@ NC='\033[0m' # No Color
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_NAME="home-assistant"
 ENV=${1:-production}
+SERVER_NAME=${SERVER_NAME:-_}
 
 echo -e "${GREEN}========================================${NC}"
 echo -e "${GREEN}  家庭计划应用 - 一键部署脚本${NC}"
@@ -89,7 +90,7 @@ if command -v nginx &> /dev/null; then
     sudo tee $NGINX_CONF_FILE << 'EOF'
 server {
     listen 80;
-    server_name _;  # 监听所有域名
+    server_name __SERVER_NAME__;
     
     # 后端 API 代理 - 放在前面优先匹配
     location /api/ {
@@ -151,6 +152,7 @@ server {
     }
 }
 EOF
+    sudo sed -i "s/__SERVER_NAME__/${SERVER_NAME}/g" $NGINX_CONF_FILE
     
     # 对于 Debian/Ubuntu 风格，创建软链接
     if [ "$NGINX_CONF_DIR" = "/etc/nginx/sites-available" ]; then
