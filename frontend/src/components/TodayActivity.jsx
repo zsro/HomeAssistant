@@ -1,18 +1,12 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useEffectEvent, useState } from 'react';
 import { starPrepApi } from '../api/config';
-import { useAuthStore } from '../stores/authStore';
 
 function TodayActivity({ onCheckin, onNavigateToGenerate }) {
-  const { user } = useAuthStore();
   const [todayData, setTodayData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [checkingIn, setCheckingIn] = useState(false);
 
-  useEffect(() => {
-    loadTodayData();
-  }, []);
-
-  const loadTodayData = async () => {
+  const loadTodayData = useEffectEvent(async () => {
     try {
       setLoading(true);
       const response = await starPrepApi.getToday();
@@ -24,7 +18,11 @@ function TodayActivity({ onCheckin, onNavigateToGenerate }) {
     } finally {
       setLoading(false);
     }
-  };
+  });
+
+  useEffect(() => {
+    loadTodayData();
+  }, []);
 
   const handleCheckin = async () => {
     try {

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useEffectEvent } from 'react';
 import { useAuthStore } from '../stores/authStore';
 import { familyApi } from '../api/config';
 
@@ -10,11 +10,7 @@ function Family() {
   const [familyCode, setFamilyCode] = useState('');
   const [message, setMessage] = useState('');
 
-  useEffect(() => {
-    fetchFamilyData();
-  }, []);
-
-  const fetchFamilyData = async () => {
+  const fetchFamilyData = useEffectEvent(async () => {
     try {
       setLoading(true);
       const [familyRes, membersRes] = await Promise.all([
@@ -33,7 +29,11 @@ function Family() {
     } finally {
       setLoading(false);
     }
-  };
+  });
+
+  useEffect(() => {
+    fetchFamilyData();
+  }, []);
 
   const handleJoinFamily = async (e) => {
     e.preventDefault();

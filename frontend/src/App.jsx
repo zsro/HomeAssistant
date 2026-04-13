@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, Navigate, Link } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, useEffectEvent } from 'react';
 import { useAuthStore } from './stores/authStore';
 import Login from './pages/Login';
 import Register from './pages/Register';
@@ -10,10 +10,16 @@ import './App.css';
 // 受保护的路由组件
 function ProtectedRoute({ children }) {
   const { isAuthenticated, fetchUser } = useAuthStore();
+
+  const syncCurrentUser = useEffectEvent(() => {
+    if (isAuthenticated) {
+      fetchUser();
+    }
+  });
   
   useEffect(() => {
     if (isAuthenticated) {
-      fetchUser();
+      syncCurrentUser();
     }
   }, [isAuthenticated]);
   

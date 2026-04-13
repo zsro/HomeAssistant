@@ -30,6 +30,7 @@ if (useRealDatabase) {
 } else {
   // 使用内存数据库（原有实现）
   const { v4: uuidv4 } = require('uuid');
+  const { getTodayString } = require('../utils/date');
 
   const db = {
     users: new Map(),
@@ -101,9 +102,13 @@ if (useRealDatabase) {
       this.userId = userId;
       this.templateId = templateId;
       this.activityId = activityId;
-      this.date = date || new Date().toISOString().split('T')[0];
+      this.date = date || getTodayString();
       this.createdAt = new Date();
     }
+  }
+
+  async function syncDatabase() {
+    return Promise.resolve();
   }
 
   module.exports = {
@@ -113,6 +118,7 @@ if (useRealDatabase) {
     Template,
     Checkin,
     generateFamilyCode,
+    syncDatabase,
     useRealDatabase: false
   };
 }

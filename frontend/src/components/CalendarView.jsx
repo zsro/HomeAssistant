@@ -1,5 +1,6 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useEffectEvent, useState } from 'react';
 import { starPrepApi } from '../api/config';
+import { isToday } from '../utils/date';
 
 function CalendarView() {
   const [calendar, setCalendar] = useState([]);
@@ -7,11 +8,7 @@ function CalendarView() {
   const [loading, setLoading] = useState(true);
   const [activeTemplate, setActiveTemplate] = useState(null);
 
-  useEffect(() => {
-    loadCalendar();
-  }, [currentDate]);
-
-  const loadCalendar = async () => {
+  const loadCalendar = useEffectEvent(async () => {
     try {
       setLoading(true);
       const year = currentDate.getFullYear();
@@ -27,7 +24,11 @@ function CalendarView() {
     } finally {
       setLoading(false);
     }
-  };
+  });
+
+  useEffect(() => {
+    loadCalendar();
+  }, [currentDate]);
 
   const goToPrevMonth = () => {
     setCurrentDate(new Date(currentDate.getFullYear(), currentDate.getMonth() - 1, 1));
@@ -43,11 +44,6 @@ function CalendarView() {
 
   const monthNames = ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'];
   const weekDays = ['日', '一', '二', '三', '四', '五', '六'];
-
-  const isToday = (dateStr) => {
-    const today = new Date().toISOString().split('T')[0];
-    return dateStr === today;
-  };
 
   if (loading) {
     return (

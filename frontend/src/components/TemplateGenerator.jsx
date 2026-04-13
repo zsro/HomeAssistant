@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { api } from '../api/config'
+import { starPrepApi } from '../api/config'
+import { splitCommaSeparatedValues } from '../utils/text'
 
 function TemplateGenerator({ onTemplateGenerated }) {
   const [formData, setFormData] = useState({
@@ -25,30 +26,16 @@ function TemplateGenerator({ onTemplateGenerated }) {
     try {
       const params = {
         ...formData,
-        preferences: formData.preferences.split(',').filter(Boolean),
-        avoidances: formData.avoidances.split(',').filter(Boolean),
+        preferences: splitCommaSeparatedValues(formData.preferences),
+        avoidances: splitCommaSeparatedValues(formData.avoidances),
       }
 
       // 调用一周模板生成接口
       if (params.stream && params.provider === 'volcano') {
         await handleStreamGenerate(params)
       } else {
-        // 普通响应 - 使用一周模板接口
-        const response = await fetch(`${api.baseURL}/star-prep/templates/generate-week`, {
-          method: 'POST',
-          headers: { 
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${localStorage.getItem('token')}`
-          },
-          body: JSON.stringify(params),
-        })
-        const data = await response.json()
-        
-        if (data.success) {
-          onTemplateGenerated(data.template)
-        } else {
-          setError(data.message || data.error || '生成失败')
-        }
+        const response = await starPrepApi.generateWeekTemplate(params)
+        onTemplateGenerated(response.template)
       }
     } catch (err) {
       setError(err.message || '请求失败')
@@ -58,51 +45,17 @@ function TemplateGenerator({ onTemplateGenerated }) {
   }
 
   const handleStreamGenerate = async (params) => {
-    const response = await fetch(`${api.baseURL}/star-prep/templates/generate-week`, {
-      method: 'POST',
-      headers: { 
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${localStorage.getItem('token')}`
-      },
-      body: JSON.stringify(params),
-    })
-
-    const reader = response.body.getReader()
-    const decoder = new TextDecoder()
-    let buffer = ''
-    let fullTemplate = null
-
-    while (true) {
-      const { done, value } = await reader.read()
-      if (done) break
-
-      buffer += decoder.decode(value, { stream: true })
-      const lines = buffer.split('\n')
-      buffer = lines.pop() || ''
-
-      for (const line of lines) {
-        if (line.startsWith('data: ')) {
-          try {
-            const data = JSON.parse(line.slice(6))
-            
-            if (data.type === 'start') {
-              setProgress(data.message)
-            } else if (data.type === 'progress') {
-              setProgress(data.message)
-            } else if (data.type === 'chunk') {
-              setProgress('正在生成内容...')
-            } else if (data.type === 'complete') {
-              fullTemplate = data.template
-              onTemplateGenerated(data.template)
-            } else if (data.type === 'error') {
-              setError(data.message)
-            }
-          } catch (e) {
-            // 忽略解析错误
-          }
-        }
+    await starPrepApi.generateWeekTemplateStream(params, (data) => {
+      if (data.type === 'start' || data.type === 'progress') {
+        setProgress(data.message)
+      } else if (data.type === 'chunk') {
+        setProgress('正在生成内容...')
+      } else if (data.type === 'complete') {
+        onTemplateGenerated(data.template)
+      } else if (data.type === 'error') {
+        setError(data.message)
       }
-    }
+    })
   }
 
   return (

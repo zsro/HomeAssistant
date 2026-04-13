@@ -3,26 +3,28 @@ const { AIServiceFactory } = require('../services/ai');
 const db = require('../models/dbAdapter');
 const { authenticateToken } = require('../middleware/auth');
 const { ErrorCodes, success, error } = require('../utils/errorCodes');
+const {
+  calculateConsecutiveDays,
+  getMonthRange,
+  getTodayString,
+  getWeekDates,
+  getWeekStart,
+  getWeekdayIndex,
+} = require('../utils/date');
+const {
+  serializeCheckin,
+  serializeMember,
+  serializeTemplateSummary,
+} = require('../utils/serializers');
 const router = express.Router();
 
-// 获取当前周的开始日期（周一）
-function getWeekStart(date = new Date()) {
-  const d = new Date(date);
-  const day = d.getDay();
-  const diff = d.getDate() - day + (day === 0 ? -6 : 1); // 调整为周一开始
-  return new Date(d.setDate(diff)).toISOString().split('T')[0];
+function buildUserMap(users) {
+  return new Map(users.map((user) => [user.id, user]));
 }
 
-// 获取一周的日期数组
-function getWeekDates(weekStart) {
-  const dates = [];
-  const start = new Date(weekStart);
-  for (let i = 0; i < 7; i++) {
-    const date = new Date(start);
-    date.setDate(start.getDate() + i);
-    dates.push(date.toISOString().split('T')[0]);
-  }
-  return dates;
+async function loadUserMap(userIds) {
+  const users = await db.user.findManyByIds(userIds);
+  return buildUserMap(users);
 }
 
 // 获取活动模板列表
@@ -36,17 +38,7 @@ router.get('/templates', authenticateToken, async (req, res) => {
 
     // 获取家庭的所有模板
     const templates = await db.template.findByFamily(user.familyId);
-    const templateList = templates.map(template => ({
-      id: template.id,
-      name: template.name,
-      description: template.description,
-      weekStart: template.weekStart,
-      isActive: template.isActive,
-      createdAt: template.createdAt,
-    }));
-
-    // 按创建时间倒序
-    templateList.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+    const templateList = templates.map(serializeTemplateSummary);
 
     res.json(success({ templates: templateList }));
   } catch (err) {
@@ -461,34 +453,17 @@ router.get('/checkins', authenticateToken, async (req, res) => {
     const { date, startDate, endDate } = req.query;
 
     if (!user.familyId) {
-      return res.json({ success: true, data: { checkins: [] } });
+      return res.json(success({ checkins: [] }));
     }
 
     const checkins = await db.checkin.findByFamily(user.familyId, { date, startDate, endDate });
-    
-    // 获取用户信息
-    const checkinList = [];
-    for (const checkin of checkins) {
-      const userInfo = await db.user.findById(checkin.userId);
-      checkinList.push({
-        id: checkin.id,
-        userId: checkin.userId,
-        userName: userInfo ? userInfo.name : '未知用户',
-        userRole: userInfo ? userInfo.role : 'unknown',
-        templateId: checkin.templateId,
-        activityId: checkin.activityId,
-        date: checkin.date,
-        createdAt: checkin.createdAt,
-      });
-    }
+    const userMap = await loadUserMap(checkins.map((checkin) => checkin.userId));
+    const checkinList = checkins.map((checkin) => serializeCheckin(checkin, userMap.get(checkin.userId)));
 
-    res.json({
-      success: true,
-      data: { checkins: checkinList },
-    });
+    res.json(success({ checkins: checkinList }));
   } catch (error) {
     console.error('获取打卡记录失败:', error);
-    res.status(500).json({ error: '获取打卡记录失败' });
+    res.status(500).json(error(ErrorCodes.SYSTEM_ERROR, '获取打卡记录失败'));
   }
 });
 
@@ -499,20 +474,19 @@ router.post('/checkins', authenticateToken, async (req, res) => {
     const { templateId, activityId, date } = req.body;
 
     if (!user.familyId) {
-      return res.status(400).json({ error: '您还没有加入家庭' });
+      return res.status(400).json(error(ErrorCodes.FAMILY_NOT_FOUND, '您还没有加入家庭'));
     }
 
-    const today = date || new Date().toISOString().split('T')[0];
+    const today = date || getTodayString();
 
     // 检查今天是否已打卡
     const existingCheckin = await db.checkin.findByUserAndDate(user.id, today);
 
     if (existingCheckin) {
-      return res.json({
-        success: true,
-        message: '今日已打卡',
-        data: { checkin: existingCheckin, alreadyChecked: true },
-      });
+      return res.json(success({
+        checkin: serializeCheckin(existingCheckin, user),
+        alreadyChecked: true,
+      }, '今日已打卡'));
     }
 
     // 创建新打卡记录
@@ -524,25 +498,12 @@ router.post('/checkins', authenticateToken, async (req, res) => {
       date: today,
     });
 
-  res.status(201).json({
-    success: true,
-    message: '打卡成功',
-    data: {
-      checkin: {
-        id: checkin.id,
-        userId: checkin.userId,
-        userName: user.name,
-        userRole: user.role,
-        templateId: checkin.templateId,
-        activityId: checkin.activityId,
-        date: checkin.date,
-        createdAt: checkin.createdAt,
-      },
-    },
-  });
+    res.status(201).json(success({
+      checkin: serializeCheckin(checkin, user),
+    }, '打卡成功'));
   } catch (error) {
     console.error('打卡失败:', error);
-    res.status(500).json({ error: '打卡失败' });
+    res.status(500).json(error(ErrorCodes.CHECKIN_CREATE_FAILED));
   }
 });
 
@@ -550,31 +511,25 @@ router.post('/checkins', authenticateToken, async (req, res) => {
 router.get('/checkins/today', authenticateToken, async (req, res) => {
   try {
     const user = req.user;
-    const today = new Date().toISOString().split('T')[0];
+    const today = getTodayString();
 
     if (!user.familyId) {
-      return res.json({
-        success: true,
-        data: { checked: false, checkin: null },
-      });
+      return res.json(success({ checked: false, checkin: null }));
     }
 
     const checkin = await db.checkin.findByUserAndDate(user.id, today);
 
-    res.json({
-      success: true,
-      data: {
-        checked: !!checkin,
-        checkin: checkin ? {
-          id: checkin.id,
-          date: checkin.date,
-          createdAt: checkin.createdAt,
-        } : null,
-      },
-    });
+    res.json(success({
+      checked: !!checkin,
+      checkin: checkin ? {
+        id: checkin.id,
+        date: checkin.date,
+        createdAt: checkin.createdAt,
+      } : null,
+    }));
   } catch (error) {
     console.error('检查打卡状态失败:', error);
-    res.status(500).json({ error: '检查打卡状态失败' });
+    res.status(500).json(error(ErrorCodes.SYSTEM_ERROR, '检查打卡状态失败'));
   }
 });
 
@@ -587,28 +542,22 @@ router.get('/calendar', authenticateToken, async (req, res) => {
     const { year, month } = req.query;
 
     if (!user.familyId) {
-      return res.json({
-        success: true,
-        data: { calendar: [] },
-      });
+      return res.json(success({ calendar: [] }));
     }
 
-    const currentYear = year ? parseInt(year) : new Date().getFullYear();
-    const currentMonth = month ? parseInt(month) - 1 : new Date().getMonth();
-
-    // 获取该月的所有日期
-    const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
+    const currentYear = year ? parseInt(year, 10) : new Date().getFullYear();
+    const currentMonth = month ? parseInt(month, 10) : new Date().getMonth() + 1;
+    const { daysInMonth, startDate, endDate } = getMonthRange(currentYear, currentMonth);
     const calendar = [];
 
     // 获取活跃模板
     const activeTemplate = await db.template.findActiveByFamily(user.familyId);
 
     // 获取该月所有打卡记录
-    const startDate = `${currentYear}-${String(currentMonth + 1).padStart(2, '0')}-01`;
-    const endDate = `${currentYear}-${String(currentMonth + 1).padStart(2, '0')}-${String(daysInMonth).padStart(2, '0')}`;
     const checkins = await db.checkin.findByFamily(user.familyId, { startDate, endDate });
-    
+    const userMap = await loadUserMap(checkins.map((checkin) => checkin.userId));
     const monthCheckins = new Map(); // date -> userIds[]
+
     for (const checkin of checkins) {
       if (!monthCheckins.has(checkin.date)) {
         monthCheckins.set(checkin.date, new Set());
@@ -618,15 +567,15 @@ router.get('/calendar', authenticateToken, async (req, res) => {
 
     // 构建日历数据
     for (let day = 1; day <= daysInMonth; day++) {
-      const dateStr = `${currentYear}-${String(currentMonth + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
-      const date = new Date(currentYear, currentMonth, day);
+      const date = new Date(currentYear, currentMonth - 1, day);
+      const dateStr = `${currentYear}-${String(currentMonth).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
       const dayOfWeek = date.getDay(); // 0=周日, 1=周一...
       
       // 判断是否有模板活动
       let hasActivity = false;
       let activityInfo = null;
       if (activeTemplate && activeTemplate.days) {
-        const weekDayIndex = dayOfWeek === 0 ? 6 : dayOfWeek - 1; // 转换为周一开始
+        const weekDayIndex = getWeekdayIndex(date);
         const dayData = activeTemplate.days[weekDayIndex];
         if (dayData) {
           hasActivity = true;
@@ -638,20 +587,10 @@ router.get('/calendar', authenticateToken, async (req, res) => {
       }
 
       // 获取当天打卡的家庭成员
-      const checkedUsers = [];
-      const checkedUserIds = monthCheckins.get(dateStr);
-      if (checkedUserIds) {
-        for (const userId of checkedUserIds) {
-          const member = await db.user.findById(userId);
-          if (member) {
-            checkedUsers.push({
-              id: member.id,
-              name: member.name,
-              role: member.role,
-            });
-          }
-        }
-      }
+      const checkedUserIds = monthCheckins.get(dateStr) || new Set();
+      const checkedUsers = Array.from(checkedUserIds)
+        .map((userId) => serializeMember(userMap.get(userId)))
+        .filter(Boolean);
 
       calendar.push({
         date: dateStr,
@@ -664,22 +603,19 @@ router.get('/calendar', authenticateToken, async (req, res) => {
       });
     }
 
-    res.json({
-      success: true,
-    data: {
+    res.json(success({
       year: currentYear,
-      month: currentMonth + 1,
+      month: currentMonth,
       calendar,
       activeTemplate: activeTemplate ? {
         id: activeTemplate.id,
         name: activeTemplate.name,
         weekStart: activeTemplate.weekStart,
       } : null,
-    },
-  });
+    }));
   } catch (error) {
     console.error('获取日历失败:', error);
-    res.status(500).json({ error: '获取日历失败' });
+    res.status(500).json(error(ErrorCodes.SYSTEM_ERROR, '获取日历失败'));
   }
 });
 
@@ -687,25 +623,20 @@ router.get('/calendar', authenticateToken, async (req, res) => {
 router.get('/today', authenticateToken, async (req, res) => {
   try {
     const user = req.user;
-    const today = new Date().toISOString().split('T')[0];
-    const dayOfWeek = new Date().getDay();
-    const weekDayIndex = dayOfWeek === 0 ? 6 : dayOfWeek - 1;
+    const now = new Date();
+    const today = getTodayString();
+    const dayOfWeek = now.getDay();
+    const weekDayIndex = getWeekdayIndex(now);
 
     if (!user.familyId) {
-      return res.json({
-        success: true,
-        data: { hasActivity: false },
-      });
+      return res.json(success({ hasActivity: false }));
     }
 
     // 获取活跃模板
     const activeTemplate = await db.template.findActiveByFamily(user.familyId);
 
     if (!activeTemplate) {
-      return res.json({
-        success: true,
-        data: { hasActivity: false, message: '当前没有活跃的活动模板' },
-      });
+      return res.json(success({ hasActivity: false, message: '当前没有活跃的活动模板' }));
     }
 
     // 获取今日活动
@@ -726,22 +657,19 @@ router.get('/today', authenticateToken, async (req, res) => {
     const existingCheckin = await db.checkin.findByUserAndDate(user.id, today);
     const checked = !!existingCheckin;
 
-    res.json({
-      success: true,
-      data: {
-        hasActivity: !!todayActivities,
-        date: today,
-        checked,
-        template: {
-          id: activeTemplate.id,
-          name: activeTemplate.name,
-        },
-        activities: todayActivities,
+    res.json(success({
+      hasActivity: !!todayActivities,
+      date: today,
+      checked,
+      template: {
+        id: activeTemplate.id,
+        name: activeTemplate.name,
       },
-    });
+      activities: todayActivities,
+    }));
   } catch (error) {
     console.error('获取今日活动失败:', error);
-    res.status(500).json({ error: '获取今日活动失败' });
+    res.status(500).json(error(ErrorCodes.SYSTEM_ERROR, '获取今日活动失败'));
   }
 });
 
@@ -753,14 +681,12 @@ router.get('/stats', authenticateToken, async (req, res) => {
     const user = req.user;
 
     if (!user.familyId) {
-      return res.json({
-        success: true,
-        data: {
-          totalCheckins: 0,
-          streak: 0,
-          familyCheckins: [],
-        },
-      });
+      return res.json(success({
+        totalCheckins: 0,
+        streak: 0,
+        uniqueDays: 0,
+        familyCheckins: [],
+      }));
     }
 
     // 获取家庭所有打卡记录
@@ -789,56 +715,39 @@ router.get('/stats', authenticateToken, async (req, res) => {
       familyDatesMap.get(checkin.userId).add(checkin.date);
     }
 
-    // 计算连续打卡天数
-    const sortedDates = Array.from(userCheckinDates).sort();
-    let streak = 0;
-    const today = new Date().toISOString().split('T')[0];
-    const yesterday = new Date(Date.now() - 86400000).toISOString().split('T')[0];
-    
-    if (sortedDates.includes(today) || sortedDates.includes(yesterday)) {
-      streak = 1;
-      for (let i = sortedDates.length - 1; i > 0; i--) {
-        const curr = new Date(sortedDates[i]);
-        const prev = new Date(sortedDates[i - 1]);
-        const diffDays = (curr - prev) / (1000 * 60 * 60 * 24);
-        if (diffDays === 1) {
-          streak++;
-        } else {
-          break;
-        }
-      }
-    }
+    const streak = calculateConsecutiveDays(Array.from(userCheckinDates));
+    const userMap = await loadUserMap(Array.from(familyCheckinMap.keys()));
 
     // 构建家庭统计
-    const familyCheckins = [];
-    for (const [userId, count] of familyCheckinMap) {
-      const member = await db.user.findById(userId);
-      if (member) {
-        familyCheckins.push({
+    const familyCheckins = Array.from(familyCheckinMap.entries())
+      .map(([userId, count]) => {
+        const member = userMap.get(userId);
+        if (!member) {
+          return null;
+        }
+
+        return {
           userId,
           name: member.name,
           role: member.role,
           checkinCount: count,
           uniqueDays: familyDatesMap.get(userId).size,
-        });
-      }
-    }
+        };
+      })
+      .filter(Boolean);
 
     // 按打卡次数排序
     familyCheckins.sort((a, b) => b.checkinCount - a.checkinCount);
 
-    res.json({
-      success: true,
-      data: {
-        totalCheckins,
-        streak,
-        uniqueDays: userCheckinDates.size,
-        familyCheckins,
-      },
-    });
+    res.json(success({
+      totalCheckins,
+      streak,
+      uniqueDays: userCheckinDates.size,
+      familyCheckins,
+    }));
   } catch (error) {
     console.error('获取统计信息失败:', error);
-    res.status(500).json({ error: '获取统计信息失败' });
+    res.status(500).json(error(ErrorCodes.SYSTEM_ERROR, '获取统计信息失败'));
   }
 });
 

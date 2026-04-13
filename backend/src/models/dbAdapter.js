@@ -2,6 +2,7 @@
 // 为路由提供统一的数据访问接口，支持内存数据库和真实数据库
 
 const { useRealDatabase } = require('./index');
+const { calculateConsecutiveDays } = require('../utils/date');
 
 // 内存数据库实例（当不使用真实数据库时）
 let memDb = null;
@@ -36,6 +37,23 @@ const userAdapter = {
     } else {
       return memDb.users.get(id);
     }
+  },
+
+  // 根据 ID 列表批量查找用户
+  async findManyByIds(ids = []) {
+    const uniqueIds = Array.from(new Set(ids.filter(Boolean)));
+
+    if (uniqueIds.length === 0) {
+      return [];
+    }
+
+    if (useRealDatabase) {
+      return await models.User.findAll({ where: { id: uniqueIds } });
+    }
+
+    return uniqueIds
+      .map((id) => memDb.users.get(id))
+      .filter(Boolean);
   },
 
   // 创建用户
@@ -107,6 +125,24 @@ const familyAdapter = {
       memDb.familyByCode.set(family.code, family.id);
       return family;
     }
+  },
+
+  // 更新家庭
+  async update(id, updateData) {
+    if (useRealDatabase) {
+      const family = await models.Family.findByPk(id);
+      if (family) {
+        return await family.update(updateData);
+      }
+      return null;
+    }
+
+    const family = memDb.families.get(id);
+    if (family) {
+      Object.assign(family, updateData, { updatedAt: new Date() });
+      return family;
+    }
+    return null;
   },
 
   // 获取家庭成员
@@ -249,12 +285,22 @@ const checkinAdapter = {
   // 查找家庭的打卡记录
   async findByFamily(familyId, options = {}) {
     if (useRealDatabase) {
+      const { Op } = require('sequelize');
       const where = { familyId };
-      if (options.date) where.date = options.date;
-      if (options.startDate) where.date = { [require('sequelize').Op.gte]: options.startDate };
-      if (options.endDate) where.date = { [require('sequelize').Op.lte]: options.endDate };
-      
-      return await models.Checkin.findAll({ 
+
+      if (options.date) {
+        where.date = options.date;
+      } else if (options.startDate || options.endDate) {
+        where.date = {};
+        if (options.startDate) {
+          where.date[Op.gte] = options.startDate;
+        }
+        if (options.endDate) {
+          where.date[Op.lte] = options.endDate;
+        }
+      }
+
+      return await models.Checkin.findAll({
         where,
         order: [['createdAt', 'DESC']]
       });
@@ -305,7 +351,7 @@ const checkinAdapter = {
         order: [['date', 'DESC']],
         attributes: ['date']
       });
-      return calculateConsecutiveDays(checkins.map(c => c.date));
+      return calculateConsecutiveDays(checkins.map((checkin) => checkin.date));
     } else {
       const dates = [];
       for (const [id, checkin] of memDb.checkins) {
@@ -313,39 +359,10 @@ const checkinAdapter = {
           dates.push(checkin.date);
         }
       }
-      dates.sort((a, b) => b.localeCompare(a));
       return calculateConsecutiveDays(dates);
     }
   }
 };
-
-// 计算连续打卡天数
-function calculateConsecutiveDays(dates) {
-  if (dates.length === 0) return 0;
-  
-  const today = new Date().toISOString().split('T')[0];
-  const yesterday = new Date(Date.now() - 86400000).toISOString().split('T')[0];
-  
-  // 如果今天没打卡，且昨天也没打卡，返回0
-  if (dates[0] !== today && dates[0] !== yesterday) {
-    return 0;
-  }
-  
-  let consecutive = 1;
-  for (let i = 1; i < dates.length; i++) {
-    const prevDate = new Date(dates[i - 1]);
-    const currDate = new Date(dates[i]);
-    const diffDays = (prevDate - currDate) / (1000 * 60 * 60 * 24);
-    
-    if (diffDays === 1) {
-      consecutive++;
-    } else {
-      break;
-    }
-  }
-  
-  return consecutive;
-}
 
 module.exports = {
   user: userAdapter,

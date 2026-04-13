@@ -5,7 +5,7 @@ const dotenv = require('dotenv');
 // 必须先加载环境变量
 dotenv.config();
 
-const { syncDatabase } = require('./src/models/database');
+const { syncDatabase } = require('./src/models');
 const authRoutes = require('./src/routes/auth');
 const familyRoutes = require('./src/routes/family');
 const starPrepRoutes = require('./src/routes/starPrep');

@@ -1,6 +1,7 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 import { authApi } from '../api/config';
+import { clearAuthToken, setAuthToken } from '../utils/authToken';
 
 export const useAuthStore = create(
   persist(
@@ -13,24 +14,29 @@ export const useAuthStore = create(
       isLoading: false,
       error: null,
 
+      applySession: ({ user, family, token }) => {
+        if (token) {
+          setAuthToken(token);
+        }
+
+        set({
+          user,
+          family,
+          token,
+          isAuthenticated: true,
+          isLoading: false,
+          error: null,
+        });
+      },
+
       // 登录
       login: async (username, password) => {
         set({ isLoading: true, error: null });
         try {
           const response = await authApi.login({ username, password });
-          // 新错误码格式：code === 0 表示成功
-          if (response.code === 0 || response.success) {
-            const { user, family, token } = response.data;
-            localStorage.setItem('token', token);
-            set({
-              user,
-              family,
-              token,
-              isAuthenticated: true,
-              isLoading: false,
-            });
-            return { success: true };
-          }
+
+          get().applySession(response.data);
+          return { success: true };
         } catch (error) {
           set({
             error: error.message || '登录失败',
@@ -45,19 +51,9 @@ export const useAuthStore = create(
         set({ isLoading: true, error: null });
         try {
           const response = await authApi.register(data);
-          // 新错误码格式：code === 0 表示成功
-          if (response.code === 0 || response.success) {
-            const { user, family, token } = response.data;
-            localStorage.setItem('token', token);
-            set({
-              user,
-              family,
-              token,
-              isAuthenticated: true,
-              isLoading: false,
-            });
-            return { success: true };
-          }
+
+          get().applySession(response.data);
+          return { success: true };
         } catch (error) {
           set({
             error: error.message || '注册失败',
@@ -71,13 +67,11 @@ export const useAuthStore = create(
       fetchUser: async () => {
         try {
           const response = await authApi.getMe();
-          // 新错误码格式：code === 0 表示成功
-          if (response.code === 0 || response.success) {
-            const { user, family } = response.data;
-            set({ user, family });
-            return { success: true };
-          }
-        } catch (error) {
+
+          const { user, family } = response.data;
+          set({ user, family });
+          return { success: true };
+        } catch {
           // Token可能过期，清除状态
           get().logout();
           return { success: false };
@@ -91,7 +85,7 @@ export const useAuthStore = create(
 
       // 退出登录
       logout: () => {
-        localStorage.removeItem('token');
+        clearAuthToken();
         set({
           user: null,
           family: null,
