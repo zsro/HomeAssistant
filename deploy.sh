@@ -115,6 +115,33 @@ server {
         return 503 '{"error": "后端服务不可用，请检查服务状态"}';
         add_header Content-Type application/json;
     }
+
+    # 构建产物资源必须直接命中真实文件，避免错误回退到 index.html
+    location /assets/ {
+        root /var/www/home-assistant;
+        try_files $uri =404;
+        access_log off;
+        expires 1y;
+        add_header Cache-Control "public, immutable";
+    }
+
+    # 入口 HTML 不缓存，避免引用过期的资源 hash
+    location = /index.html {
+        root /var/www/home-assistant;
+        try_files $uri =404;
+        add_header Cache-Control "no-cache, no-store, must-revalidate";
+        add_header Pragma "no-cache";
+        add_header Expires "0";
+    }
+
+    # 其他顶层静态文件直接返回，找不到就 404
+    location = /vite.svg {
+        root /var/www/home-assistant;
+        try_files $uri =404;
+        access_log off;
+        expires 7d;
+        add_header Cache-Control "public";
+    }
     
     # 前端静态文件
     location / {
