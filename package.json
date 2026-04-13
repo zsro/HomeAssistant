@@ -1,0 +1,14 @@
+{
+  "name": "homeassistant",
+  "private": true,
+  "scripts": {
+    "dev": "npm run dev:backend & npm run dev:frontend",
+    "dev:backend": "npm --prefix backend run dev",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "start:backend": "npm --prefix backend run start",
+    "build": "npm run build:frontend",
+    "build:frontend": "npm --prefix frontend run build",
+    "lint": "npm run lint:frontend",
+    "lint:frontend": "npm --prefix frontend run lint"
+  }
+}

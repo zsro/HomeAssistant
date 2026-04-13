@@ -45,7 +45,7 @@ class AIServiceFactory {
       baseURL: process.env.AI_BASE_URL,
     };
 
-    if (!config.apiKey) {
+    if (selectedProvider !== 'mock' && !config.apiKey) {
       throw new Error('请设置 AI_API_KEY 环境变量');
     }
 

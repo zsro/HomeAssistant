@@ -16,10 +16,12 @@
 
 ```text
 HomeAssistant/
+├── package.json
 ├── backend/
 │   ├── server.js
 │   ├── scripts/
 │   └── src/
+│       ├── controllers/
 │       ├── middleware/
 │       ├── models/
 │       ├── routes/
@@ -65,6 +67,19 @@ npm run dev
 
 默认端口为 Vite 的本地开发端口，开发环境下会请求 `http://localhost:3001/api`。
 
+### 3. 从根目录统一启动
+
+```bash
+npm run dev
+```
+
+常用脚本：
+
+- `npm run dev:backend`
+- `npm run dev:frontend`
+- `npm run build`
+- `npm run lint`
+
 ## 当前实现重点
 
 - 后端接口已覆盖家庭管理和星星预备班核心流程
@@ -76,3 +91,4 @@ npm run dev
 - 抽离了前后端日期与序列化公共逻辑
 - 统一了前端 token 访问与流式请求入口
 - 修复了内存模式启动、家庭更新、打卡日期范围查询等结构性问题
+- 后端进一步整理为 `routes -> controllers -> services`，降低路由层耦合

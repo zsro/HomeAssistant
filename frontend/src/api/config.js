@@ -205,11 +205,21 @@ export const starPrepApi = {
   },
   
   async generateTemplate(data, timeout = DEFAULT_TIMEOUT) {
-    return api.post('/star-prep/templates/generate', data, timeout);
+    const response = await api.post('/star-prep/templates/generate', data, timeout);
+    return {
+      success: response.success,
+      ...(response.data || {}),
+      msg: response.msg,
+    };
   },
   
   async generateWeekTemplate(data, timeout = DEFAULT_TIMEOUT) {
-    return api.post('/star-prep/templates/generate-week', data, timeout);
+    const response = await api.post('/star-prep/templates/generate-week', data, timeout);
+    return {
+      success: response.success,
+      ...(response.data || {}),
+      msg: response.msg,
+    };
   },
 
   async generateWeekTemplateStream(data, onEvent, timeout = DEFAULT_TIMEOUT) {
