@@ -156,6 +156,9 @@ EOF
     if [ "$NGINX_CONF_DIR" = "/etc/nginx/sites-available" ]; then
         sudo ln -sf /etc/nginx/sites-available/home-assistant /etc/nginx/sites-enabled/
         sudo rm -f /etc/nginx/sites-enabled/default
+    else
+        # 对于 conf.d 风格，移除可能抢占 80 端口的默认站点
+        sudo rm -f /etc/nginx/conf.d/default.conf
     fi
     
     # 创建网站目录
