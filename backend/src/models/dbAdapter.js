@@ -1,367 +1,160 @@
 // 数据库适配层
-// 为路由提供统一的数据访问接口，支持内存数据库和真实数据库
+// 统一使用云端 MySQL（Sequelize）访问数据
 
-const { useRealDatabase } = require('./index');
+const { Op } = require('sequelize');
 const { calculateConsecutiveDays } = require('../utils/date');
+const { User, Family, Template, Checkin, generateFamilyCode } = require('./index');
 
-// 内存数据库实例（当不使用真实数据库时）
-let memDb = null;
-if (!useRealDatabase) {
-  const { db } = require('./index');
-  memDb = db;
-}
-
-// Sequelize 模型（当使用真实数据库时）
-let models = null;
-if (useRealDatabase) {
-  const { User, Family, Template, Checkin } = require('./database');
-  models = { User, Family, Template, Checkin };
-}
-
-// 用户相关操作
 const userAdapter = {
-  // 根据用户名查找用户
   async findByUsername(username) {
-    if (useRealDatabase) {
-      return await models.User.findOne({ where: { username } });
-    } else {
-      const userId = memDb.userByUsername.get(username);
-      return userId ? memDb.users.get(userId) : null;
-    }
+    return User.findOne({ where: { username } });
   },
 
-  // 根据 ID 查找用户
   async findById(id) {
-    if (useRealDatabase) {
-      return await models.User.findByPk(id);
-    } else {
-      return memDb.users.get(id);
-    }
+    return User.findByPk(id);
   },
 
-  // 根据 ID 列表批量查找用户
   async findManyByIds(ids = []) {
     const uniqueIds = Array.from(new Set(ids.filter(Boolean)));
-
     if (uniqueIds.length === 0) {
       return [];
     }
 
-    if (useRealDatabase) {
-      return await models.User.findAll({ where: { id: uniqueIds } });
-    }
-
-    return uniqueIds
-      .map((id) => memDb.users.get(id))
-      .filter(Boolean);
+    return User.findAll({ where: { id: uniqueIds } });
   },
 
-  // 创建用户
   async create(userData) {
-    if (useRealDatabase) {
-      return await models.User.create(userData);
-    } else {
-      const { User } = require('./index');
-      const user = new User(userData);
-      memDb.users.set(user.id, user);
-      memDb.userByUsername.set(user.username, user.id);
-      return user;
-    }
+    return User.create(userData);
   },
 
-  // 更新用户
   async update(id, updateData) {
-    if (useRealDatabase) {
-      const user = await models.User.findByPk(id);
-      if (user) {
-        return await user.update(updateData);
-      }
-      return null;
-    } else {
-      const user = memDb.users.get(id);
-      if (user) {
-        Object.assign(user, updateData, { updatedAt: new Date() });
-        return user;
-      }
+    const user = await User.findByPk(id);
+    if (!user) {
       return null;
     }
-  }
+
+    return user.update(updateData);
+  },
 };
 
-// 家庭相关操作
 const familyAdapter = {
-  // 根据家庭码查找家庭
   async findByCode(code) {
-    if (useRealDatabase) {
-      return await models.Family.findOne({ where: { code: code.toUpperCase() } });
-    } else {
-      const familyId = memDb.familyByCode.get(code.toUpperCase());
-      return familyId ? memDb.families.get(familyId) : null;
-    }
+    return Family.findOne({ where: { code: code.toUpperCase() } });
   },
 
-  // 根据 ID 查找家庭
   async findById(id) {
-    if (useRealDatabase) {
-      return await models.Family.findByPk(id);
-    } else {
-      return memDb.families.get(id);
-    }
+    return Family.findByPk(id);
   },
 
-  // 创建家庭
   async create(familyData) {
-    if (useRealDatabase) {
-      const { generateFamilyCode } = require('./index');
-      const family = await models.Family.create({
-        ...familyData,
-        code: generateFamilyCode()
-      });
-      return family;
-    } else {
-      const { Family } = require('./index');
-      const family = new Family(familyData);
-      memDb.families.set(family.id, family);
-      memDb.familyByCode.set(family.code, family.id);
-      return family;
-    }
+    return Family.create({
+      ...familyData,
+      code: generateFamilyCode(),
+    });
   },
 
-  // 更新家庭
   async update(id, updateData) {
-    if (useRealDatabase) {
-      const family = await models.Family.findByPk(id);
-      if (family) {
-        return await family.update(updateData);
-      }
+    const family = await Family.findByPk(id);
+    if (!family) {
       return null;
     }
 
-    const family = memDb.families.get(id);
-    if (family) {
-      Object.assign(family, updateData, { updatedAt: new Date() });
-      return family;
-    }
-    return null;
+    return family.update(updateData);
   },
 
-  // 获取家庭成员
   async getMembers(familyId) {
-    if (useRealDatabase) {
-      return await models.User.findAll({ where: { familyId } });
-    } else {
-      const members = [];
-      for (const [id, user] of memDb.users) {
-        if (user.familyId === familyId) {
-          members.push(user);
-        }
-      }
-      return members;
-    }
-  }
+    return User.findAll({ where: { familyId } });
+  },
 };
 
-// 模板相关操作
 const templateAdapter = {
-  // 根据 ID 查找模板
   async findById(id) {
-    if (useRealDatabase) {
-      return await models.Template.findByPk(id);
-    } else {
-      return memDb.templates.get(id);
-    }
+    return Template.findByPk(id);
   },
 
-  // 查找家庭的活跃模板
   async findActiveByFamily(familyId) {
-    if (useRealDatabase) {
-      return await models.Template.findOne({ 
-        where: { familyId, isActive: true } 
-      });
-    } else {
-      for (const [id, template] of memDb.templates) {
-        if (template.familyId === familyId && template.isActive) {
-          return template;
-        }
-      }
-      return null;
-    }
+    return Template.findOne({
+      where: { familyId, isActive: true },
+    });
   },
 
-  // 查找家庭的所有模板
   async findByFamily(familyId) {
-    if (useRealDatabase) {
-      return await models.Template.findAll({ 
-        where: { familyId },
-        order: [['createdAt', 'DESC']]
-      });
-    } else {
-      const templates = [];
-      for (const [id, template] of memDb.templates) {
-        if (template.familyId === familyId) {
-          templates.push(template);
-        }
-      }
-      templates.sort((a, b) => b.createdAt - a.createdAt);
-      return templates;
-    }
+    return Template.findAll({
+      where: { familyId },
+      order: [['createdAt', 'DESC']],
+    });
   },
 
-  // 创建模板
   async create(templateData) {
-    if (useRealDatabase) {
-      return await models.Template.create(templateData);
-    } else {
-      const { Template } = require('./index');
-      const template = new Template(templateData);
-      memDb.templates.set(template.id, template);
-      return template;
-    }
+    return Template.create(templateData);
   },
 
-  // 更新模板
   async update(id, updateData) {
-    if (useRealDatabase) {
-      const template = await models.Template.findByPk(id);
-      if (template) {
-        return await template.update(updateData);
-      }
-      return null;
-    } else {
-      const template = memDb.templates.get(id);
-      if (template) {
-        Object.assign(template, updateData, { updatedAt: new Date() });
-        return template;
-      }
+    const template = await Template.findByPk(id);
+    if (!template) {
       return null;
     }
+
+    return template.update(updateData);
   },
 
-  // 停用家庭的所有模板
   async deactivateAllByFamily(familyId) {
-    if (useRealDatabase) {
-      await models.Template.update(
-        { isActive: false },
-        { where: { familyId, isActive: true } }
-      );
-    } else {
-      for (const [id, template] of memDb.templates) {
-        if (template.familyId === familyId && template.isActive) {
-          template.isActive = false;
-          template.updatedAt = new Date();
-        }
-      }
-    }
-  }
+    await Template.update(
+      { isActive: false },
+      { where: { familyId, isActive: true } }
+    );
+  },
 };
 
-// 打卡相关操作
 const checkinAdapter = {
-  // 根据 ID 查找打卡记录
   async findById(id) {
-    if (useRealDatabase) {
-      return await models.Checkin.findByPk(id);
-    } else {
-      return memDb.checkins.get(id);
-    }
+    return Checkin.findByPk(id);
   },
 
-  // 查找用户在指定日期的打卡记录
   async findByUserAndDate(userId, date) {
-    if (useRealDatabase) {
-      return await models.Checkin.findOne({ 
-        where: { userId, date } 
-      });
-    } else {
-      for (const [id, checkin] of memDb.checkins) {
-        if (checkin.userId === userId && checkin.date === date) {
-          return checkin;
-        }
-      }
-      return null;
-    }
+    return Checkin.findOne({
+      where: { userId, date },
+    });
   },
 
-  // 查找家庭的打卡记录
   async findByFamily(familyId, options = {}) {
-    if (useRealDatabase) {
-      const { Op } = require('sequelize');
-      const where = { familyId };
+    const where = { familyId };
 
-      if (options.date) {
-        where.date = options.date;
-      } else if (options.startDate || options.endDate) {
-        where.date = {};
-        if (options.startDate) {
-          where.date[Op.gte] = options.startDate;
-        }
-        if (options.endDate) {
-          where.date[Op.lte] = options.endDate;
-        }
+    if (options.date) {
+      where.date = options.date;
+    } else if (options.startDate || options.endDate) {
+      where.date = {};
+      if (options.startDate) {
+        where.date[Op.gte] = options.startDate;
       }
-
-      return await models.Checkin.findAll({
-        where,
-        order: [['createdAt', 'DESC']]
-      });
-    } else {
-      const checkins = [];
-      for (const [id, checkin] of memDb.checkins) {
-        if (checkin.familyId !== familyId) continue;
-        if (options.date && checkin.date !== options.date) continue;
-        if (options.startDate && checkin.date < options.startDate) continue;
-        if (options.endDate && checkin.date > options.endDate) continue;
-        checkins.push(checkin);
+      if (options.endDate) {
+        where.date[Op.lte] = options.endDate;
       }
-      checkins.sort((a, b) => b.createdAt - a.createdAt);
-      return checkins;
     }
+
+    return Checkin.findAll({
+      where,
+      order: [['createdAt', 'DESC']],
+    });
   },
 
-  // 创建打卡记录
   async create(checkinData) {
-    if (useRealDatabase) {
-      return await models.Checkin.create(checkinData);
-    } else {
-      const { Checkin } = require('./index');
-      const checkin = new Checkin(checkinData);
-      memDb.checkins.set(checkin.id, checkin);
-      return checkin;
-    }
+    return Checkin.create(checkinData);
   },
 
-  // 统计用户打卡次数
   async countByUser(userId) {
-    if (useRealDatabase) {
-      return await models.Checkin.count({ where: { userId } });
-    } else {
-      let count = 0;
-      for (const [id, checkin] of memDb.checkins) {
-        if (checkin.userId === userId) count++;
-      }
-      return count;
-    }
+    return Checkin.count({ where: { userId } });
   },
 
-  // 获取用户连续打卡天数
   async getConsecutiveDays(userId) {
-    if (useRealDatabase) {
-      const checkins = await models.Checkin.findAll({
-        where: { userId },
-        order: [['date', 'DESC']],
-        attributes: ['date']
-      });
-      return calculateConsecutiveDays(checkins.map((checkin) => checkin.date));
-    } else {
-      const dates = [];
-      for (const [id, checkin] of memDb.checkins) {
-        if (checkin.userId === userId) {
-          dates.push(checkin.date);
-        }
-      }
-      return calculateConsecutiveDays(dates);
-    }
-  }
+    const checkins = await Checkin.findAll({
+      where: { userId },
+      order: [['date', 'DESC']],
+      attributes: ['date'],
+    });
+
+    return calculateConsecutiveDays(checkins.map((checkin) => checkin.date));
+  },
 };
 
 module.exports = {
@@ -369,5 +162,4 @@ module.exports = {
   family: familyAdapter,
   template: templateAdapter,
   checkin: checkinAdapter,
-  useRealDatabase
 };

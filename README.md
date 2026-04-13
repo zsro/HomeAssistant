@@ -9,7 +9,7 @@
 
 - 前端：React 19、Vite、React Router、Zustand、Tailwind
 - 后端：Express、JWT、Sequelize
-- 数据层：支持内存模式和 MySQL 模式
+- 数据层：统一连接云端 MySQL
 - AI：支持 `mock`、`volcano`、`openai`、`claude`、`deepseek`
 
 ## 目录结构
@@ -53,8 +53,9 @@ npm run dev
 
 `.env` 关键项：
 
-- `USE_REAL_DB=false`：使用内存数据，适合本地快速启动
-- `USE_REAL_DB=true`：使用 MySQL，并补齐 `DB_*` 配置
+- `DB_HOST`：云端数据库地址
+- `DB_PORT`：数据库端口，默认 `3306`
+- `DB_NAME` / `DB_USER` / `DB_PASSWORD`：云端数据库连接凭据
 - `AI_PROVIDER=mock`：不接入真实模型，适合联调
 
 ### 2. 启动前端
@@ -90,5 +91,5 @@ npm run dev
 
 - 抽离了前后端日期与序列化公共逻辑
 - 统一了前端 token 访问与流式请求入口
-- 修复了内存模式启动、家庭更新、打卡日期范围查询等结构性问题
+- 修复了数据库连接、家庭更新、打卡日期范围查询等结构性问题
 - 后端进一步整理为 `routes -> controllers -> services`，降低路由层耦合

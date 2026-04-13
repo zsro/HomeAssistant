@@ -1,12 +1,20 @@
 const { Sequelize, DataTypes } = require('sequelize');
 
+function getRequiredEnv(name) {
+  const value = process.env[name];
+  if (!value) {
+    throw new Error(`缺少数据库配置: ${name}`);
+  }
+  return value;
+}
+
 // 创建 Sequelize 实例
 const sequelize = new Sequelize(
-  process.env.DB_NAME || 'homeassistant',
-  process.env.DB_USER || 'root',
-  process.env.DB_PASSWORD || '',
+  getRequiredEnv('DB_NAME'),
+  getRequiredEnv('DB_USER'),
+  getRequiredEnv('DB_PASSWORD'),
   {
-    host: process.env.DB_HOST || 'localhost',
+    host: getRequiredEnv('DB_HOST'),
     port: process.env.DB_PORT || 3306,
     dialect: 'mysql',
     logging: process.env.NODE_ENV === 'development' ? console.log : false,

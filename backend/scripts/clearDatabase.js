@@ -16,16 +16,9 @@ const rl = readline.createInterface({
 });
 
 async function clearDatabase() {
-  const useRealDatabase = process.env.USE_REAL_DB === 'true';
-  
-  if (!useRealDatabase) {
-    console.log('当前使用内存数据库，无需清理');
-    process.exit(0);
-  }
-
-  console.log('警告: 这将删除 MySQL 数据库中的所有数据！');
-  console.log(`数据库: ${process.env.DB_NAME || 'homeassistant'}`);
-  console.log(`主机: ${process.env.DB_HOST || 'localhost'}`);
+  console.log('警告: 这将删除云端 MySQL 数据库中的所有数据！');
+  console.log(`数据库: ${process.env.DB_NAME || '(未配置)'}`);
+  console.log(`主机: ${process.env.DB_HOST || '(未配置)'}`);
   
   rl.question('\n确认要清理吗? 输入 "yes" 继续: ', async (answer) => {
     if (answer.toLowerCase() !== 'yes') {
