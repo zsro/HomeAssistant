@@ -3,7 +3,7 @@
 
 const { Op } = require('sequelize');
 const { calculateConsecutiveDays } = require('../utils/date');
-const { User, Family, Template, Checkin, generateFamilyCode } = require('./index');
+const { User, Family, Template, Checkin, PinyinProgress, generateFamilyCode } = require('./index');
 
 const userAdapter = {
   async findByUsername(username) {
@@ -157,9 +157,29 @@ const checkinAdapter = {
   },
 };
 
+const pinyinProgressAdapter = {
+  async findByUserId(userId) {
+    return PinyinProgress.findOne({ where: { userId } });
+  },
+
+  async create(progressData) {
+    return PinyinProgress.create(progressData);
+  },
+
+  async update(id, updateData) {
+    const progress = await PinyinProgress.findByPk(id);
+    if (!progress) {
+      return null;
+    }
+
+    return progress.update(updateData);
+  },
+};
+
 module.exports = {
   user: userAdapter,
   family: familyAdapter,
   template: templateAdapter,
   checkin: checkinAdapter,
+  pinyinProgress: pinyinProgressAdapter,
 };

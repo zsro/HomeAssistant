@@ -35,7 +35,7 @@ function Register() {
 
     const result = await register(data);
     if (result.success) {
-      navigate('/star-prep');
+      navigate('/');
     }
   };
 

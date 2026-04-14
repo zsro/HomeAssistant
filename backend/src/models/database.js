@@ -165,12 +165,42 @@ const Checkin = sequelize.define('Checkin', {
   timestamps: true
 });
 
+const PinyinProgress = sequelize.define('PinyinProgress', {
+  id: {
+    type: DataTypes.UUID,
+    defaultValue: DataTypes.UUIDV4,
+    primaryKey: true,
+  },
+  userId: {
+    type: DataTypes.UUID,
+    allowNull: false,
+    unique: true,
+  },
+  currentLessonId: {
+    type: DataTypes.STRING(32),
+    allowNull: true,
+  },
+  lastCompletedLessonId: {
+    type: DataTypes.STRING(32),
+    allowNull: true,
+  },
+  completedLessonIds: {
+    type: DataTypes.JSON,
+    allowNull: false,
+  },
+}, {
+  tableName: 'pinyin_progress',
+  timestamps: true,
+});
+
 // 建立关联关系
 Family.hasMany(User, { foreignKey: 'familyId' });
 User.belongsTo(Family, { foreignKey: 'familyId' });
 
 Family.hasMany(Template, { foreignKey: 'familyId' });
 Template.belongsTo(Family, { foreignKey: 'familyId' });
+User.hasOne(PinyinProgress, { foreignKey: 'userId' });
+PinyinProgress.belongsTo(User, { foreignKey: 'userId' });
 
 // 同步数据库
 async function syncDatabase() {
@@ -183,6 +213,7 @@ async function syncDatabase() {
     await User.sync({ alter: true });
     await Template.sync({ alter: true });
     await Checkin.sync({ alter: true });
+    await PinyinProgress.sync({ alter: true });
     
     console.log('数据库表同步完成');
   } catch (error) {
@@ -197,5 +228,6 @@ module.exports = {
   Family,
   Template,
   Checkin,
+  PinyinProgress,
   syncDatabase
 };

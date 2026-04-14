@@ -1,4 +1,4 @@
-const { User, Family, Template, Checkin, sequelize, syncDatabase } = require('./database');
+const { User, Family, Template, Checkin, PinyinProgress, sequelize, syncDatabase } = require('./database');
 
 function generateFamilyCode() {
   const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
@@ -16,6 +16,7 @@ module.exports = {
   Family,
   Template,
   Checkin,
+  PinyinProgress,
   sequelize,
   syncDatabase,
   generateFamilyCode,

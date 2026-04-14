@@ -8,6 +8,7 @@ dotenv.config();
 const { syncDatabase } = require('./src/models');
 const authRoutes = require('./src/routes/auth');
 const familyRoutes = require('./src/routes/family');
+const pinyinRoutes = require('./src/routes/pinyin');
 const starPrepRoutes = require('./src/routes/starPrep');
 
 const app = express();
@@ -32,6 +33,7 @@ app.get('/api/health', (req, res) => {
 
 app.use('/api/auth', authRoutes);
 app.use('/api/family', familyRoutes);
+app.use('/api/pinyin', pinyinRoutes);
 app.use('/api/star-prep', starPrepRoutes);
 
 // 启动服务器

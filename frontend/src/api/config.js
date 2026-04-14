@@ -296,3 +296,17 @@ export const starPrepApi = {
     return api.get('/star-prep/stats');
   },
 };
+
+export const pinyinApi = {
+  async getOverview() {
+    return api.get('/pinyin/overview');
+  },
+
+  async getSummary() {
+    return api.get('/pinyin/summary');
+  },
+
+  async completeLesson(lessonId) {
+    return api.post('/pinyin/progress/complete', { lessonId });
+  },
+};

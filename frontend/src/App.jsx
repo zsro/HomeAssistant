@@ -1,10 +1,12 @@
-import { BrowserRouter as Router, Routes, Route, Navigate, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate, NavLink } from 'react-router-dom';
 import { useEffect, useEffectEvent } from 'react';
 import { useAuthStore } from './stores/authStore';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import Home from './pages/Home';
 import StarPrep from './pages/StarPrep';
 import Family from './pages/Family';
+import Pinyin from './pages/Pinyin';
 import './App.css';
 
 // 受保护的路由组件
@@ -35,32 +37,40 @@ function Navbar() {
   const { user, family, logout, isAuthenticated } = useAuthStore();
   
   if (!isAuthenticated) return null;
+
+  const linkClassName = ({ isActive }) => (
+    `px-3 py-2 rounded-full text-sm font-medium transition-colors ${
+      isActive
+        ? 'bg-slate-900 text-white'
+        : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
+    }`
+  );
   
   return (
     <nav className="bg-white shadow-sm border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
-          <div className="flex items-center space-x-8">
-            <Link to="/" className="text-xl font-bold text-gray-900">
+        <div className="flex min-h-16 flex-col gap-3 py-3 md:flex-row md:items-center md:justify-between">
+          <div className="flex flex-col gap-3 md:flex-row md:items-center md:space-x-8">
+            <NavLink to="/" className="text-xl font-bold text-gray-900">
               家庭计划
-            </Link>
-            <div className="hidden md:flex space-x-4">
-              <Link 
-                to="/star-prep" 
-                className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium"
-              >
+            </NavLink>
+            <div className="flex flex-wrap gap-2">
+              <NavLink to="/" className={linkClassName}>
+                首页
+              </NavLink>
+              <NavLink to="/star-prep" className={linkClassName}>
                 星星预备班
-              </Link>
-              <Link 
-                to="/family" 
-                className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium"
-              >
+              </NavLink>
+              <NavLink to="/pinyin" className={linkClassName}>
+                拼音学习
+              </NavLink>
+              <NavLink to="/family" className={linkClassName}>
                 家庭管理
-              </Link>
+              </NavLink>
             </div>
           </div>
           
-          <div className="flex items-center space-x-4">
+          <div className="flex flex-wrap items-center gap-3 md:justify-end">
             {family && (
               <span className="text-sm text-gray-500">
                 家庭码: <span className="font-mono font-medium">{family.code}</span>
@@ -80,17 +90,6 @@ function Navbar() {
   );
 }
 
-// 首页组件
-function Home() {
-  const { isAuthenticated } = useAuthStore();
-  
-  if (!isAuthenticated) {
-    return <Navigate to="/login" replace />;
-  }
-  
-  return <Navigate to="/star-prep" replace />;
-}
-
 function App() {
   return (
     <Router>
@@ -99,7 +98,14 @@ function App() {
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/" element={<Home />} />
+          <Route
+            path="/"
+            element={
+              <ProtectedRoute>
+                <Home />
+              </ProtectedRoute>
+            }
+          />
           <Route 
             path="/star-prep" 
             element={
@@ -107,6 +113,14 @@ function App() {
                 <StarPrep />
               </ProtectedRoute>
             } 
+          />
+          <Route
+            path="/pinyin"
+            element={
+              <ProtectedRoute>
+                <Pinyin />
+              </ProtectedRoute>
+            }
           />
           <Route 
             path="/family" 
@@ -116,6 +130,7 @@ function App() {
               </ProtectedRoute>
             } 
           />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </div>
     </Router>

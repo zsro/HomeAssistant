@@ -17,7 +17,7 @@ function Login() {
     
     const result = await login(formData.username, formData.password);
     if (result.success) {
-      navigate('/star-prep');
+      navigate('/');
     }
   };
 
