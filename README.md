@@ -86,7 +86,11 @@ npm run dev
 - 后端接口已覆盖家庭管理和星星预备班核心流程
 - 前端已完成登录注册、家庭页、活动页、日历页和 AI 模板生成
 - 生产部署脚本见 [deploy.sh](/Users/zsr/HomeAssistant/deploy.sh)
-- 生产服务器项目目录固定为 `/var/HomeAssistant`
+- 生产服务器 Git 源码目录固定为 `/var/HomeAssistant`
+- 当前运行版本目录为 `/var/lib/home-assistant/current`
+- 历史版本目录为 `/var/lib/home-assistant/releases`
+- 共享环境文件为 `/var/lib/home-assistant/shared/backend.env`
+- 前端静态目录固定为 `/var/www/home-assistant`
 
 ## 最近整理方向
 

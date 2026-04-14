@@ -3,203 +3,227 @@
 # 家庭计划应用 - 一键部署脚本
 # 使用方法: ./deploy.sh [环境]
 # 环境选项: production (默认) | development
+#
+# 目录约定
+# - Git 源码目录: /var/HomeAssistant
+# - 后端发布目录: /var/lib/home-assistant/current
+# - 后端历史版本: /var/lib/home-assistant/releases
+# - 后端共享配置: /var/lib/home-assistant/shared/backend.env
+# - 后端日志目录: /var/lib/home-assistant/logs
+# - 前端静态目录: /var/www/home-assistant
 
-set -e
+set -euo pipefail
 
-# 颜色定义
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
-NC='\033[0m' # No Color
+NC='\033[0m'
 
-# 获取脚本所在目录
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_NAME="home-assistant"
-ENV=${1:-production}
-SERVER_NAME=${SERVER_NAME:-_}
+ENV="${1:-production}"
+SERVER_NAME="${SERVER_NAME:-_}"
+
+DEPLOY_ROOT="${DEPLOY_ROOT:-/var/lib/home-assistant}"
+RELEASES_DIR="$DEPLOY_ROOT/releases"
+CURRENT_LINK="$DEPLOY_ROOT/current"
+SHARED_DIR="$DEPLOY_ROOT/shared"
+LOG_DIR="$DEPLOY_ROOT/logs"
+PM2_CONFIG="$DEPLOY_ROOT/ecosystem.config.js"
+ENV_FILE="$SHARED_DIR/backend.env"
+WEB_ROOT="${WEB_ROOT:-/var/www/home-assistant}"
+KEEP_RELEASES="${KEEP_RELEASES:-3}"
+RELEASE_ID="$(date +%Y%m%d-%H%M%S)"
+RELEASE_DIR="$RELEASES_DIR/release-$RELEASE_ID"
 
 echo -e "${GREEN}========================================${NC}"
 echo -e "${GREEN}  家庭计划应用 - 一键部署脚本${NC}"
 echo -e "${GREEN}  环境: $ENV${NC}"
+echo -e "${GREEN}  源码目录: $SCRIPT_DIR${NC}"
+echo -e "${GREEN}  发布目录: $DEPLOY_ROOT${NC}"
 echo -e "${GREEN}========================================${NC}"
 echo ""
 
-# 检查必要命令
 check_command() {
-    if ! command -v $1 &> /dev/null; then
+    if ! command -v "$1" >/dev/null 2>&1; then
         echo -e "${RED}错误: $1 未安装${NC}"
         exit 1
     fi
 }
 
-echo -e "${YELLOW}[1/9] 检查依赖...${NC}"
+run_npm_install() {
+    local target_dir="$1"
+
+    if [ -f "$target_dir/package-lock.json" ]; then
+        npm --prefix "$target_dir" ci
+    else
+        npm --prefix "$target_dir" install
+    fi
+}
+
+cleanup_old_releases() {
+    mapfile -t releases < <(find "$RELEASES_DIR" -mindepth 1 -maxdepth 1 -type d -name 'release-*' | sort -r)
+
+    if [ "${#releases[@]}" -le "$KEEP_RELEASES" ]; then
+        return
+    fi
+
+    for old_release in "${releases[@]:$KEEP_RELEASES}"; do
+        rm -rf "$old_release"
+    done
+}
+
+echo -e "${YELLOW}[1/10] 检查依赖...${NC}"
 check_command node
 check_command npm
 check_command git
+check_command tar
+check_command curl
 echo -e "${GREEN}✓ 依赖检查通过${NC}"
 echo ""
 
-# 进入项目目录
-cd "$SCRIPT_DIR"
+echo -e "${YELLOW}[2/10] 准备发布目录...${NC}"
+mkdir -p "$RELEASES_DIR" "$SHARED_DIR" "$LOG_DIR"
+rm -rf "$RELEASE_DIR"
+mkdir -p "$RELEASE_DIR"
+echo -e "${GREEN}✓ 发布目录准备完成${NC}"
+echo ""
 
-# 安装后端依赖
-echo -e "${YELLOW}[2/9] 安装后端依赖...${NC}"
-cd backend
-npm install
+echo -e "${YELLOW}[3/10] 复制源码到独立发布目录...${NC}"
+tar \
+    --exclude=.git \
+    --exclude=node_modules \
+    --exclude=frontend/node_modules \
+    --exclude=backend/node_modules \
+    --exclude=frontend/dist \
+    --exclude=logs \
+    --exclude=backend/logs \
+    --exclude=ecosystem.config.js \
+    --exclude=backend/.env \
+    -C "$SCRIPT_DIR" \
+    -cf - . | tar -xf - -C "$RELEASE_DIR"
+echo -e "${GREEN}✓ 源码复制完成${NC}"
+echo ""
+
+echo -e "${YELLOW}[4/10] 安装后端依赖到发布目录...${NC}"
+run_npm_install "$RELEASE_DIR/backend"
 echo -e "${GREEN}✓ 后端依赖安装完成${NC}"
 echo ""
 
-# 安装前端依赖
-echo -e "${YELLOW}[3/9] 安装前端依赖...${NC}"
-cd "$SCRIPT_DIR/frontend"
-npm install
-echo -e "${GREEN}✓ 前端依赖安装完成${NC}"
-echo ""
-
-# 构建前端
-echo -e "${YELLOW}[4/9] 构建前端...${NC}"
-npm run build
+echo -e "${YELLOW}[5/10] 安装前端依赖并构建...${NC}"
+run_npm_install "$RELEASE_DIR/frontend"
+npm --prefix "$RELEASE_DIR/frontend" run build
 echo -e "${GREEN}✓ 前端构建完成${NC}"
 echo ""
 
-# 检查构建输出
-if [ ! -d "$SCRIPT_DIR/frontend/dist" ]; then
+if [ ! -d "$RELEASE_DIR/frontend/dist" ]; then
     echo -e "${RED}错误: 前端构建失败，dist 目录不存在${NC}"
     exit 1
 fi
 
-# 部署前端到 Nginx
-echo -e "${YELLOW}[5/9] 部署前端到 Nginx...${NC}"
-if command -v nginx &> /dev/null; then
-    # 检测 Nginx 配置目录风格
+echo -e "${YELLOW}[6/10] 部署前端静态文件到 Nginx 目录...${NC}"
+if command -v nginx >/dev/null 2>&1; then
     if [ -d "/etc/nginx/conf.d" ]; then
-        # Alibaba Cloud Linux / CentOS / RHEL 风格
         NGINX_CONF_DIR="/etc/nginx/conf.d"
         NGINX_CONF_FILE="$NGINX_CONF_DIR/home-assistant.conf"
     else
-        # Debian / Ubuntu 风格
         NGINX_CONF_DIR="/etc/nginx/sites-available"
         sudo mkdir -p /etc/nginx/sites-available
         sudo mkdir -p /etc/nginx/sites-enabled
         NGINX_CONF_FILE="$NGINX_CONF_DIR/home-assistant"
     fi
-    
+
     echo -e "${YELLOW}使用 Nginx 配置目录: $NGINX_CONF_DIR${NC}"
-    
-    # 创建 Nginx 配置
-    sudo tee $NGINX_CONF_FILE << 'EOF'
+
+    sudo tee "$NGINX_CONF_FILE" > /dev/null << EOF
 server {
     listen 80;
     server_name __SERVER_NAME__;
-    
-    # 后端 API 代理 - 放在前面优先匹配
+
     location /api/ {
         proxy_pass http://127.0.0.1:3001/api/;
         proxy_http_version 1.1;
-        proxy_set_header Host $host;
-        proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        proxy_set_header X-Forwarded-Proto $scheme;
-        
-        # 后端连接设置
+        proxy_set_header Host \$host;
+        proxy_set_header X-Real-IP \$remote_addr;
+        proxy_set_header X-Forwarded-For \$proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto \$scheme;
+
         proxy_connect_timeout 300s;
         proxy_send_timeout 300s;
         proxy_read_timeout 300s;
-        
-        # 错误处理
+
         proxy_intercept_errors on;
         error_page 502 503 504 = @backend_error;
     }
-    
-    # 后端错误页面
+
     location @backend_error {
         return 503 '{"error": "后端服务不可用，请检查服务状态"}';
         add_header Content-Type application/json;
     }
 
-    # 构建产物资源必须直接命中真实文件，避免错误回退到 index.html
     location /assets/ {
-        root /var/www/home-assistant;
-        try_files $uri =404;
+        root $WEB_ROOT;
+        try_files \$uri =404;
         access_log off;
         expires 1y;
         add_header Cache-Control "public, immutable";
     }
 
-    # 入口 HTML 不缓存，避免引用过期的资源 hash
     location = /index.html {
-        root /var/www/home-assistant;
-        try_files $uri =404;
+        root $WEB_ROOT;
+        try_files \$uri =404;
         add_header Cache-Control "no-cache, no-store, must-revalidate";
         add_header Pragma "no-cache";
         add_header Expires "0";
     }
 
-    # 其他顶层静态文件直接返回，找不到就 404
     location = /vite.svg {
-        root /var/www/home-assistant;
-        try_files $uri =404;
+        root $WEB_ROOT;
+        try_files \$uri =404;
         access_log off;
         expires 7d;
         add_header Cache-Control "public";
     }
-    
-    # 前端静态文件
+
     location / {
-        root /var/www/home-assistant;
-        try_files $uri $uri/ /index.html;
+        root $WEB_ROOT;
+        try_files \$uri \$uri/ /index.html;
         index index.html;
     }
 }
 EOF
-    sudo sed -i "s/__SERVER_NAME__/${SERVER_NAME}/g" $NGINX_CONF_FILE
-    
-    # 对于 Debian/Ubuntu 风格，创建软链接
+    sudo sed -i "s/__SERVER_NAME__/${SERVER_NAME}/g" "$NGINX_CONF_FILE"
+
     if [ "$NGINX_CONF_DIR" = "/etc/nginx/sites-available" ]; then
         sudo ln -sf /etc/nginx/sites-available/home-assistant /etc/nginx/sites-enabled/
         sudo rm -f /etc/nginx/sites-enabled/default
     else
-        # 对于 conf.d 风格，移除可能抢占 80 端口的默认站点
         sudo rm -f /etc/nginx/conf.d/default.conf
     fi
-    
-    # 创建网站目录
-    sudo mkdir -p /var/www/home-assistant
-    
-    # 清空旧文件
-    sudo rm -rf /var/www/home-assistant/*
-    
-    # 复制构建后的文件
-    sudo cp -r "$SCRIPT_DIR/frontend/dist/"* /var/www/home-assistant/
-    sudo chown -R nginx:nginx /var/www/home-assistant 2>/dev/null || sudo chown -R www-data:www-data /var/www/home-assistant
-    
-    # 验证文件
-    echo -e "${YELLOW}部署的文件列表:${NC}"
-    ls -la /var/www/home-assistant/ | head -10
-    
-    # 测试并重载 Nginx
+
+    sudo mkdir -p "$WEB_ROOT"
+    sudo rm -rf "$WEB_ROOT"/*
+    sudo cp -r "$RELEASE_DIR/frontend/dist/"* "$WEB_ROOT/"
+    sudo chown -R nginx:nginx "$WEB_ROOT" 2>/dev/null || sudo chown -R www-data:www-data "$WEB_ROOT"
+
+    echo -e "${YELLOW}部署的静态文件:${NC}"
+    ls -la "$WEB_ROOT" | head -10
+
     sudo nginx -t && sudo systemctl reload nginx
-    
-    echo -e "${GREEN}✓ 前端已部署到 Nginx (http://服务器IP)${NC}"
+    echo -e "${GREEN}✓ 前端静态文件部署完成${NC}"
 else
     echo -e "${YELLOW}警告: Nginx 未安装，跳过前端部署${NC}"
-    echo -e "${YELLOW}请手动安装 Nginx 并配置前端目录: frontend/dist${NC}"
 fi
 echo ""
 
-# 检查环境变量文件
-echo -e "${YELLOW}[6/9] 检查环境变量...${NC}"
-cd ..
-
-if [ ! -f "backend/.env" ]; then
-    echo -e "${YELLOW}警告: backend/.env 文件不存在，创建默认配置...${NC}"
-    cat > backend/.env << 'EOF'
+echo -e "${YELLOW}[7/10] 准备共享环境配置...${NC}"
+if [ ! -f "$ENV_FILE" ]; then
+    cat > "$ENV_FILE" << 'EOF'
 PORT=3001
 JWT_SECRET=your-secret-key-change-in-production
 NODE_ENV=production
 
 # 数据库配置
-USE_REAL_DB=true
 DB_HOST=localhost
 DB_PORT=3306
 DB_NAME=homeAssistantDB
@@ -211,23 +235,25 @@ AI_PROVIDER=volcano
 AI_API_KEY=your-api-key
 AI_MODEL=deepseek-v3-2-251201
 EOF
-    echo -e "${YELLOW}请编辑 backend/.env 文件，修改数据库和 AI 配置${NC}"
+    echo -e "${YELLOW}警告: 已创建默认环境文件 $ENV_FILE，请按实际环境修改${NC}"
 fi
 
-echo -e "${GREEN}✓ 环境变量检查完成${NC}"
+ln -sfn "$ENV_FILE" "$RELEASE_DIR/backend/.env"
+echo -e "${GREEN}✓ 环境配置检查完成${NC}"
 echo ""
 
-# 创建 PM2 配置文件
-echo -e "${YELLOW}[7/9] 创建 PM2 配置...${NC}"
+echo -e "${YELLOW}[8/10] 生成 PM2 配置并切换当前版本...${NC}"
+ln -sfn "$RELEASE_DIR" "$CURRENT_LINK"
 
-cat > ecosystem.config.js << EOF
+cat > "$PM2_CONFIG" << EOF
 module.exports = {
   apps: [
     {
       name: '$PROJECT_NAME-backend',
-      cwd: '$SCRIPT_DIR/backend',
-      script: '$SCRIPT_DIR/backend/server.js',
+      cwd: '$CURRENT_LINK/backend',
+      script: '$CURRENT_LINK/backend/server.js',
       instances: 1,
+      exec_mode: 'fork',
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
@@ -237,24 +263,19 @@ module.exports = {
       env_production: {
         NODE_ENV: 'production'
       },
-      log_file: '$SCRIPT_DIR/logs/backend.log',
-      out_file: '$SCRIPT_DIR/logs/backend-out.log',
-      error_file: '$SCRIPT_DIR/logs/backend-error.log',
+      log_file: '$LOG_DIR/backend-combined.log',
+      out_file: '$LOG_DIR/backend-out.log',
+      error_file: '$LOG_DIR/backend-error.log',
       log_date_format: 'YYYY-MM-DD HH:mm:ss'
     }
   ]
 };
 EOF
-
-# 创建日志目录
-mkdir -p "$SCRIPT_DIR/logs"
-
-echo -e "${GREEN}✓ PM2 配置创建完成${NC}"
+echo -e "${GREEN}✓ PM2 配置生成完成${NC}"
 echo ""
 
-# 检查 PM2
-echo -e "${YELLOW}[8/9] 配置进程管理...${NC}"
-if command -v pm2 &> /dev/null; then
+echo -e "${YELLOW}[9/10] 启动或重启后端服务...${NC}"
+if command -v pm2 >/dev/null 2>&1; then
     echo -e "${GREEN}✓ PM2 已安装${NC}"
 else
     echo -e "${YELLOW}PM2 未安装，正在安装...${NC}"
@@ -262,59 +283,42 @@ else
     echo -e "${GREEN}✓ PM2 安装完成${NC}"
 fi
 
-# 启动服务
-echo ""
-echo -e "${YELLOW}[9/9] 启动服务...${NC}"
-echo ""
-
-# 检查后端服务是否已在运行
-if pm2 list | grep -q "$PROJECT_NAME-backend"; then
-    echo -e "${YELLOW}后端服务已在运行，正在重启...${NC}"
-    pm2 restart ecosystem.config.js --env production
-else
-    echo -e "${YELLOW}正在启动后端服务...${NC}"
-    pm2 start ecosystem.config.js --env production
-fi
-
+pm2 startOrRestart "$PM2_CONFIG" --env production
 echo -e "${GREEN}✓ 后端服务已启动${NC}"
 echo ""
 
-# 等待服务启动
-sleep 3
+echo -e "${YELLOW}[10/10] 健康检查与清理旧版本...${NC}"
+health_ok=false
+for _ in {1..10}; do
+    if curl -sSf http://127.0.0.1:3001/api/health >/dev/null 2>&1; then
+        health_ok=true
+        break
+    fi
+    sleep 2
+done
 
-# 健康检查
-echo -e "${YELLOW}检查服务健康状态...${NC}"
-if curl -s http://127.0.0.1:3001/api/health > /dev/null 2>&1; then
+if [ "$health_ok" = true ]; then
     echo -e "${GREEN}✓ 后端服务健康检查通过${NC}"
-elif curl -s http://127.0.0.1:3001/ > /dev/null 2>&1; then
-    echo -e "${GREEN}✓ 后端服务响应正常${NC}"
 else
-    echo -e "${YELLOW}警告: 后端服务可能未完全启动，请检查日志: pm2 logs${NC}"
+    echo -e "${YELLOW}警告: 后端服务可能未完全启动，请检查日志: pm2 logs $PROJECT_NAME-backend${NC}"
 fi
 
+cleanup_old_releases
+echo -e "${GREEN}✓ 旧版本清理完成${NC}"
 echo ""
+
 echo -e "${YELLOW}访问地址:${NC}"
 echo "  前端: http://$(hostname -I | awk '{print $1}')"
 echo "  后端 API: http://$(hostname -I | awk '{print $1}'):3001"
-
+echo ""
+echo -e "${YELLOW}目录布局:${NC}"
+echo "  Git 源码目录: $SCRIPT_DIR"
+echo "  当前后端版本: $CURRENT_LINK"
+echo "  历史版本目录: $RELEASES_DIR"
+echo "  共享环境文件: $ENV_FILE"
+echo "  后端日志目录: $LOG_DIR"
+echo "  前端静态目录: $WEB_ROOT"
 echo ""
 echo -e "${GREEN}========================================${NC}"
 echo -e "${GREEN}  部署完成！${NC}"
 echo -e "${GREEN}========================================${NC}"
-echo ""
-echo -e "${YELLOW}服务地址:${NC}"
-echo "  前端: http://服务器IP"
-echo "  后端 API: http://服务器IP:3001"
-echo ""
-echo -e "${YELLOW}常用命令:${NC}"
-echo "  pm2 status              # 查看服务状态"
-echo "  pm2 logs $PROJECT_NAME-backend  # 查看后端日志"
-echo "  pm2 restart $PROJECT_NAME-backend # 重启后端"
-echo "  pm2 stop $PROJECT_NAME-backend    # 停止后端"
-echo "  sudo systemctl reload nginx       # 重载 Nginx"
-echo ""
-echo -e "${YELLOW}文件位置:${NC}"
-echo "  前端目录: /var/www/home-assistant"
-echo "  Nginx 配置: /etc/nginx/sites-available/home-assistant"
-echo ""
-echo -e "${GREEN}部署完成！${NC}"
