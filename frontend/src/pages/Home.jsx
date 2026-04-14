@@ -36,7 +36,7 @@ function Home() {
                   {user?.name}，今天先学十分钟，再去探索。
                 </h1>
                 <p className="max-w-2xl text-base leading-7 text-slate-300 sm:text-lg">
-                  首页把家庭陪伴和基础学习放在一起。你可以继续使用星星预备班，也可以进入拼音课程，按天完成小学一到三年级的拼音内容。
+                  首页把家庭管理和基础学习放在一起。你可以直接进入拼音课程，按天完成小学一到三年级的拼音内容。
                 </p>
               </div>
               <div className="flex flex-wrap gap-3 text-sm text-slate-300">
@@ -74,35 +74,14 @@ function Home() {
           </div>
         </section>
 
-        <section className="grid gap-6 lg:grid-cols-2">
-          <Link
-            to="/star-prep"
-            className="group overflow-hidden rounded-[28px] bg-white p-7 shadow-lg shadow-slate-200 transition-transform hover:-translate-y-1"
-          >
-            <div className="space-y-4">
-              <span className="inline-flex rounded-full bg-blue-50 px-3 py-1 text-sm font-medium text-blue-700">
-                子栏目 01
-              </span>
-              <div>
-                <h2 className="text-2xl font-black text-slate-900">星星预备班</h2>
-                <p className="mt-3 text-sm leading-7 text-slate-600">
-                  保留你现在的 AI 亲子活动、日历打卡和家庭统计。适合晚间陪伴、亲子互动和家庭协作。
-                </p>
-              </div>
-              <div className="flex items-center justify-between rounded-3xl bg-slate-50 px-4 py-3 text-sm text-slate-600">
-                <span>继续今天的家庭活动安排</span>
-                <span className="font-semibold text-slate-900 group-hover:translate-x-1 transition-transform">进入</span>
-              </div>
-            </div>
-          </Link>
-
+        <section className="grid gap-6 lg:grid-cols-1">
           <Link
             to="/pinyin"
             className="group overflow-hidden rounded-[28px] bg-[#fff8ee] p-7 shadow-lg shadow-orange-200/60 transition-transform hover:-translate-y-1"
           >
             <div className="space-y-4">
               <span className="inline-flex rounded-full bg-orange-100 px-3 py-1 text-sm font-medium text-orange-700">
-                子栏目 02
+                子栏目 01
               </span>
               <div>
                 <h2 className="text-2xl font-black text-slate-900">中文拼音小课</h2>

@@ -1,16 +1,16 @@
 # HomeAssistant
 
-家庭协作应用，当前主要包含两个功能域：
+家庭协作应用，当前主要包含以下功能：
 
 - 家庭管理：注册、登录、创建/加入家庭、查看成员
-- 星星预备班：AI 生成一周亲子活动模板、今日活动、日历打卡、统计
+- 中文拼音学习：覆盖小学 1-3 年级拼音内容，支持进度记录
+- 展示端 / 控制端：电视或投影配对展示，手机端实时控制内容切换
 
 ## 技术栈
 
 - 前端：React 19、Vite、React Router、Zustand、Tailwind
 - 后端：Express、JWT、Sequelize
 - 数据层：统一连接云端 MySQL
-- AI：支持 `mock`、`volcano`、`openai`、`claude`、`deepseek`
 
 ## 目录结构
 
@@ -56,7 +56,6 @@ npm run dev
 - `DB_HOST`：云端数据库地址
 - `DB_PORT`：数据库端口，默认 `3306`
 - `DB_NAME` / `DB_USER` / `DB_PASSWORD`：云端数据库连接凭据
-- `AI_PROVIDER=mock`：不接入真实模型，适合联调
 
 ### 2. 启动前端
 
@@ -83,8 +82,8 @@ npm run dev
 
 ## 当前实现重点
 
-- 后端接口已覆盖家庭管理和星星预备班核心流程
-- 前端已完成登录注册、家庭页、活动页、日历页和 AI 模板生成
+- 后端接口已覆盖家庭管理、拼音学习和展示端控制核心流程
+- 前端已完成登录注册、家庭页、拼音学习页和展示端控制页
 - 生产部署脚本见 [deploy.sh](/Users/zsr/HomeAssistant/deploy.sh)
 - 生产服务器 Git 源码目录固定为 `/var/HomeAssistant`
 - 当前运行版本目录为 `/var/lib/home-assistant/current`

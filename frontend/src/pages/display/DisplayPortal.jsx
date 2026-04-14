@@ -40,26 +40,6 @@ function DisplayPinyin({ payload }) {
   );
 }
 
-function DisplayStarPrep({ payload }) {
-  return (
-    <div className="min-h-screen bg-[linear-gradient(160deg,_#0f766e,_#164e63_45%,_#082f49)] px-6 py-12 text-white">
-      <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[0.8fr_1.2fr]">
-        <div className="rounded-[36px] bg-white/10 p-8 backdrop-blur">
-          <p className="text-sm uppercase tracking-[0.35em] text-teal-100">星星预备班</p>
-          <h1 className="mt-5 text-4xl font-black sm:text-5xl">{payload.title}</h1>
-          <p className="mt-6 text-xl leading-9 text-teal-50">{payload.footer}</p>
-        </div>
-        <div className="rounded-[36px] bg-slate-950/65 p-8 shadow-2xl shadow-cyan-950/30">
-          <p className="text-sm uppercase tracking-[0.35em] text-teal-200">今日安排</p>
-          <div className="mt-6 whitespace-pre-line text-2xl leading-[1.9] text-white">
-            {payload.schedule}
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
 function DisplayMessage({ payload }) {
   return (
     <div className="flex min-h-screen items-center justify-center bg-[linear-gradient(135deg,_#7f1d1d,_#991b1b_45%,_#450a0a)] px-6 text-white">
@@ -103,8 +83,6 @@ function DisplayScreen({ state }) {
   switch (state?.screenType) {
     case 'pinyin':
       return <DisplayPinyin payload={state.payload || {}} />;
-    case 'star_prep':
-      return <DisplayStarPrep payload={state.payload || {}} />;
     case 'message':
       return <DisplayMessage payload={state.payload || {}} />;
     case 'image':

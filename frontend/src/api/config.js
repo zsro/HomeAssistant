@@ -25,14 +25,6 @@ function buildHeaders(headers = {}) {
   };
 }
 
-function buildQueryString(params = {}) {
-  const query = new URLSearchParams(
-    Object.entries(params).filter(([, value]) => value !== undefined && value !== null && value !== '')
-  ).toString();
-
-  return query ? `?${query}` : '';
-}
-
 async function parseResponseBody(response) {
   const rawText = await response.text();
   if (!rawText) {
@@ -251,118 +243,6 @@ export const displayApi = {
 
   async updateDeviceState(deviceId, data) {
     return api.put(`/display/devices/${deviceId}/state`, data);
-  },
-};
-
-// 星星预备班相关API
-export const starPrepApi = {
-  // 模板
-  async getTemplates() {
-    return api.get('/star-prep/templates');
-  },
-  
-  async getTemplate(id) {
-    return api.get(`/star-prep/templates/${id}`);
-  },
-  
-  async createTemplate(data) {
-    return api.post('/star-prep/templates', data);
-  },
-  
-  async applyTemplate(id, data) {
-    return api.post(`/star-prep/templates/${id}/apply`, data);
-  },
-  
-  async generateTemplate(data, timeout = DEFAULT_TIMEOUT) {
-    const response = await api.post('/star-prep/templates/generate', data, timeout);
-    return {
-      success: response.success,
-      ...(response.data || {}),
-      msg: response.msg,
-    };
-  },
-  
-  async generateWeekTemplate(data, timeout = DEFAULT_TIMEOUT) {
-    const response = await api.post('/star-prep/templates/generate-week', data, timeout);
-    return {
-      success: response.success,
-      ...(response.data || {}),
-      msg: response.msg,
-    };
-  },
-
-  async generateWeekTemplateStream(data, onEvent, timeout = DEFAULT_TIMEOUT) {
-    const response = await fetchWithTimeout(`${API_BASE_URL}/star-prep/templates/generate-week`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data),
-    }, timeout);
-
-    if (!response.ok) {
-      await handleResponse(response);
-      return;
-    }
-
-    if (!response.body) {
-      throw new Error('当前环境不支持流式响应');
-    }
-
-    const reader = response.body.getReader();
-    const decoder = new TextDecoder();
-    let buffer = '';
-
-    while (true) {
-      const { done, value } = await reader.read();
-      if (done) {
-        break;
-      }
-
-      buffer += decoder.decode(value, { stream: true });
-      const lines = buffer.split('\n');
-      buffer = lines.pop() || '';
-
-      for (const line of lines) {
-        if (!line.startsWith('data: ')) {
-          continue;
-        }
-
-        try {
-          const event = JSON.parse(line.slice(6));
-          onEvent?.(event);
-        } catch {
-          // 忽略非 JSON 片段
-        }
-      }
-    }
-  },
-  
-  // 打卡
-  async getCheckins(params = {}) {
-    return api.get(`/star-prep/checkins${buildQueryString(params)}`);
-  },
-  
-  async createCheckin(data) {
-    return api.post('/star-prep/checkins', data);
-  },
-  
-  async getTodayCheckin() {
-    return api.get('/star-prep/checkins/today');
-  },
-  
-  // 日历
-  async getCalendar(params = {}) {
-    return api.get(`/star-prep/calendar${buildQueryString(params)}`);
-  },
-  
-  async getToday() {
-    return api.get('/star-prep/today');
-  },
-  
-  // 统计
-  async getStats() {
-    return api.get('/star-prep/stats');
   },
 };
 

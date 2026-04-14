@@ -245,11 +245,6 @@ DB_PORT=3306
 DB_NAME=homeAssistantDB
 DB_USER=homeAssistantUser
 DB_PASSWORD=yingzi123
-
-# AI 配置
-AI_PROVIDER=volcano
-AI_API_KEY=your-api-key
-AI_MODEL=deepseek-v3-2-251201
 EOF
     echo -e "${YELLOW}警告: 已创建默认环境文件 $ENV_FILE，请按实际环境修改${NC}"
 fi

@@ -44,38 +44,6 @@ function serializeMember(member) {
   };
 }
 
-function serializeTemplateSummary(template) {
-  if (!template) {
-    return null;
-  }
-
-  return {
-    id: template.id,
-    name: template.name,
-    description: template.description,
-    weekStart: template.weekStart,
-    isActive: template.isActive,
-    createdAt: template.createdAt,
-  };
-}
-
-function serializeCheckin(checkin, user) {
-  if (!checkin) {
-    return null;
-  }
-
-  return {
-    id: checkin.id,
-    userId: checkin.userId,
-    userName: user?.name || '未知用户',
-    userRole: user?.role || 'unknown',
-    templateId: checkin.templateId,
-    activityId: checkin.activityId,
-    date: checkin.date,
-    createdAt: checkin.createdAt,
-  };
-}
-
 function serializeDisplayDevice(device, options = {}) {
   if (!device) {
     return null;
@@ -115,11 +83,9 @@ function serializeDisplayState(state) {
 }
 
 module.exports = {
-  serializeCheckin,
   serializeDisplayDevice,
   serializeDisplayState,
   serializeFamily,
   serializeMember,
-  serializeTemplateSummary,
   serializeUser,
 };

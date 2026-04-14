@@ -89,82 +89,6 @@ const Family = sequelize.define('Family', {
   timestamps: true
 });
 
-// 定义 Template 模型
-const Template = sequelize.define('Template', {
-  id: {
-    type: DataTypes.UUID,
-    defaultValue: DataTypes.UUIDV4,
-    primaryKey: true
-  },
-  familyId: {
-    type: DataTypes.UUID,
-    allowNull: false
-  },
-  name: {
-    type: DataTypes.STRING(100),
-    allowNull: false
-  },
-  description: {
-    type: DataTypes.TEXT,
-    allowNull: true
-  },
-  activities: {
-    type: DataTypes.JSON,
-    allowNull: true
-  },
-  days: {
-    type: DataTypes.JSON,
-    allowNull: true
-  },
-  createdBy: {
-    type: DataTypes.UUID,
-    allowNull: false
-  },
-  weekStart: {
-    type: DataTypes.DATEONLY,
-    allowNull: true
-  },
-  isActive: {
-    type: DataTypes.BOOLEAN,
-    defaultValue: true
-  }
-}, {
-  tableName: 'templates',
-  timestamps: true
-});
-
-// 定义 Checkin 模型
-const Checkin = sequelize.define('Checkin', {
-  id: {
-    type: DataTypes.UUID,
-    defaultValue: DataTypes.UUIDV4,
-    primaryKey: true
-  },
-  familyId: {
-    type: DataTypes.UUID,
-    allowNull: false
-  },
-  userId: {
-    type: DataTypes.UUID,
-    allowNull: false
-  },
-  templateId: {
-    type: DataTypes.UUID,
-    allowNull: true
-  },
-  activityId: {
-    type: DataTypes.UUID,
-    allowNull: true
-  },
-  date: {
-    type: DataTypes.DATEONLY,
-    allowNull: false
-  }
-}, {
-  tableName: 'checkins',
-  timestamps: true
-});
-
 const PinyinProgress = sequelize.define('PinyinProgress', {
   id: {
     type: DataTypes.UUID,
@@ -295,7 +219,7 @@ const DisplayState = sequelize.define('DisplayState', {
     unique: true,
   },
   screenType: {
-    type: DataTypes.ENUM('home', 'pinyin', 'star_prep', 'message', 'image'),
+    type: DataTypes.ENUM('home', 'pinyin', 'message', 'image'),
     allowNull: false,
   },
   payload: {
@@ -330,10 +254,25 @@ DisplaySession.belongsTo(DisplayDevice, { foreignKey: 'deviceId' });
 DisplayDevice.hasOne(DisplayState, { foreignKey: 'deviceId' });
 DisplayState.belongsTo(DisplayDevice, { foreignKey: 'deviceId' });
 
-Family.hasMany(Template, { foreignKey: 'familyId' });
-Template.belongsTo(Family, { foreignKey: 'familyId' });
 User.hasOne(PinyinProgress, { foreignKey: 'userId' });
 PinyinProgress.belongsTo(User, { foreignKey: 'userId' });
+
+async function migrateLegacyDisplayStates() {
+  const tableNames = await sequelize.getQueryInterface().showAllTables();
+  const normalizedTableNames = tableNames.map((entry) => {
+    if (typeof entry === 'string') {
+      return entry;
+    }
+
+    return entry.tableName || entry.TABLE_NAME || Object.values(entry)[0];
+  });
+
+  if (!normalizedTableNames.includes('display_states')) {
+    return;
+  }
+
+  await sequelize.query("UPDATE display_states SET screenType = 'home' WHERE screenType = 'star_prep'");
+}
 
 // 同步数据库
 async function syncDatabase() {
@@ -346,9 +285,8 @@ async function syncDatabase() {
     await User.sync({ alter: true });
     await DisplayDevice.sync({ alter: true });
     await DisplaySession.sync({ alter: true });
+    await migrateLegacyDisplayStates();
     await DisplayState.sync({ alter: true });
-    await Template.sync({ alter: true });
-    await Checkin.sync({ alter: true });
     await PinyinProgress.sync({ alter: true });
     
     console.log('数据库表同步完成');
@@ -362,8 +300,6 @@ module.exports = {
   sequelize,
   User,
   Family,
-  Template,
-  Checkin,
   PinyinProgress,
   DisplayDevice,
   DisplaySession,

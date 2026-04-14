@@ -4,7 +4,6 @@ import { useAuthStore } from './stores/authStore';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Home from './pages/Home';
-import StarPrep from './pages/StarPrep';
 import Family from './pages/Family';
 import Pinyin from './pages/Pinyin';
 import ControlHome from './pages/control/ControlHome';
@@ -62,9 +61,6 @@ function Navbar() {
             <div className="flex flex-wrap gap-2">
               <NavLink to="/" className={linkClassName}>
                 首页
-              </NavLink>
-              <NavLink to="/star-prep" className={linkClassName}>
-                星星预备班
               </NavLink>
               <NavLink to="/pinyin" className={linkClassName}>
                 拼音学习
@@ -129,14 +125,6 @@ function AppShell() {
           element={
             <ProtectedRoute>
               <Home />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/star-prep"
-          element={
-            <ProtectedRoute>
-              <StarPrep />
             </ProtectedRoute>
           }
         />

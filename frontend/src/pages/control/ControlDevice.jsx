@@ -4,6 +4,8 @@ import { displayApi } from '../../api/config';
 import { getAuthToken } from '../../utils/authToken';
 import { createDisplaySocket } from '../../utils/displaySocket';
 
+const SUPPORTED_SCREEN_TYPES = ['home', 'pinyin', 'message', 'image'];
+
 const INITIAL_FORM_STATE = {
   home: {
     title: '欢迎来到家庭展示屏',
@@ -15,11 +17,6 @@ const INITIAL_FORM_STATE = {
     focusText: 'ai ei ui',
     note: '先读三遍，再跟着拼读',
   },
-  star_prep: {
-    title: '星星预备班',
-    schedule: '1. 热身 2. 拼音 3. 亲子活动',
-    footer: '完成后记得打卡',
-  },
   message: {
     title: '休息一下',
     subtitle: '五分钟后继续',
@@ -30,6 +27,10 @@ const INITIAL_FORM_STATE = {
     caption: '请输入一张公开可访问的图片地址',
   },
 };
+
+function normalizeScreenType(screenType) {
+  return SUPPORTED_SCREEN_TYPES.includes(screenType) ? screenType : 'home';
+}
 
 function buildPayload(screenType, formState) {
   switch (screenType) {
@@ -44,12 +45,6 @@ function buildPayload(screenType, formState) {
         title: formState.pinyin.title,
         focusText: formState.pinyin.focusText,
         note: formState.pinyin.note,
-      };
-    case 'star_prep':
-      return {
-        title: formState.star_prep.title,
-        schedule: formState.star_prep.schedule,
-        footer: formState.star_prep.footer,
       };
     case 'message':
       return {
@@ -92,7 +87,7 @@ function ControlDevice() {
         setDevice(matchedDevice);
         setCurrentState(nextState);
         if (nextState?.screenType) {
-          setScreenType(nextState.screenType);
+          setScreenType(normalizeScreenType(nextState.screenType));
         }
       } catch (loadError) {
         setError(loadError.message || '获取展示设备失败');
@@ -134,7 +129,7 @@ function ControlDevice() {
 
           if (message.type === 'device_state' && message.data.deviceId === deviceId) {
             setCurrentState(message.data.state);
-            setScreenType(message.data.state.screenType);
+            setScreenType(normalizeScreenType(message.data.state.screenType));
             setDevice((current) => current ? {
               ...current,
               currentScreenType: message.data.state.screenType,
@@ -208,7 +203,9 @@ function ControlDevice() {
           <div className="mt-6 grid gap-4 rounded-[28px] bg-white/8 p-5">
             <div>
               <p className="text-sm text-slate-400">当前画面</p>
-              <p className="mt-2 text-2xl font-bold">{currentState?.screenType || '未设置'}</p>
+              <p className="mt-2 text-2xl font-bold">
+                {currentState?.screenType ? normalizeScreenType(currentState.screenType) : '未设置'}
+              </p>
             </div>
             <div>
               <p className="text-sm text-slate-400">设备编号</p>
@@ -246,7 +243,6 @@ function ControlDevice() {
               >
                 <option value="home">家庭欢迎页</option>
                 <option value="pinyin">拼音展示</option>
-                <option value="star_prep">预备班安排</option>
                 <option value="message">全屏消息</option>
                 <option value="image">图片展示</option>
               </select>
@@ -304,36 +300,6 @@ function ControlDevice() {
                   <input
                     value={formState.pinyin.note}
                     onChange={(event) => updateSection('pinyin', 'note', event.target.value)}
-                    className="rounded-2xl border border-slate-200 px-4 py-3 outline-none transition focus:border-cyan-400"
-                  />
-                </label>
-              </>
-            )}
-
-            {screenType === 'star_prep' && (
-              <>
-                <label className="grid gap-2">
-                  <span className="text-sm font-medium text-slate-700">标题</span>
-                  <input
-                    value={formState.star_prep.title}
-                    onChange={(event) => updateSection('star_prep', 'title', event.target.value)}
-                    className="rounded-2xl border border-slate-200 px-4 py-3 outline-none transition focus:border-cyan-400"
-                  />
-                </label>
-                <label className="grid gap-2">
-                  <span className="text-sm font-medium text-slate-700">安排内容</span>
-                  <textarea
-                    rows="4"
-                    value={formState.star_prep.schedule}
-                    onChange={(event) => updateSection('star_prep', 'schedule', event.target.value)}
-                    className="rounded-2xl border border-slate-200 px-4 py-3 outline-none transition focus:border-cyan-400"
-                  />
-                </label>
-                <label className="grid gap-2">
-                  <span className="text-sm font-medium text-slate-700">底部说明</span>
-                  <input
-                    value={formState.star_prep.footer}
-                    onChange={(event) => updateSection('star_prep', 'footer', event.target.value)}
                     className="rounded-2xl border border-slate-200 px-4 py-3 outline-none transition focus:border-cyan-400"
                   />
                 </label>

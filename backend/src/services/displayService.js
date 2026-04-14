@@ -11,7 +11,7 @@ const {
   notifySessionRefreshed,
 } = require('./displaySocketService');
 
-const DISPLAY_SCREEN_TYPES = ['home', 'pinyin', 'star_prep', 'message', 'image'];
+const DISPLAY_SCREEN_TYPES = ['home', 'pinyin', 'message', 'image'];
 const PAIR_CODE_TTL_MS = 5 * 60 * 1000;
 const OFFLINE_THRESHOLD_MS = 30 * 1000;
 

@@ -1,8 +1,6 @@
 const {
   User,
   Family,
-  Template,
-  Checkin,
   PinyinProgress,
   DisplayDevice,
   DisplaySession,
@@ -25,8 +23,6 @@ function generateFamilyCode() {
 module.exports = {
   User,
   Family,
-  Template,
-  Checkin,
   PinyinProgress,
   DisplayDevice,
   DisplaySession,
