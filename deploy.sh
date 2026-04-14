@@ -283,7 +283,11 @@ else
     echo -e "${GREEN}✓ PM2 安装完成${NC}"
 fi
 
-pm2 startOrRestart "$PM2_CONFIG" --env production
+if pm2 describe "$PROJECT_NAME-backend" >/dev/null 2>&1; then
+    pm2 delete "$PROJECT_NAME-backend"
+fi
+
+pm2 start "$PM2_CONFIG" --env production
 echo -e "${GREEN}✓ 后端服务已启动${NC}"
 echo ""
 
