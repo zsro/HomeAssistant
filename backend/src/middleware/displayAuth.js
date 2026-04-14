@@ -27,6 +27,41 @@ function generateDisplayToken({ sessionId, deviceId, familyId }) {
   );
 }
 
+async function getDisplayAuthFromToken(token, options = {}) {
+  const { allowPairToken = false } = options;
+  const decoded = jwt.verify(token, JWT_SECRET);
+  const session = await db.displaySession.findById(decoded.sessionId);
+
+  if (!session) {
+    const authError = new Error('Display session not found');
+    authError.code = ErrorCodes.DISPLAY_SESSION_NOT_FOUND.code;
+    throw authError;
+  }
+
+  if (decoded.type === 'display_pair') {
+    if (!allowPairToken || session.pairToken !== token) {
+      const authError = new Error('Display pair token invalid');
+      authError.code = ErrorCodes.DISPLAY_TOKEN_INVALID.code;
+      throw authError;
+    }
+  } else if (decoded.type === 'display') {
+    if (session.displayToken !== token) {
+      const authError = new Error('Display token invalid');
+      authError.code = ErrorCodes.DISPLAY_TOKEN_INVALID.code;
+      throw authError;
+    }
+  } else {
+    const authError = new Error('Unknown display token type');
+    authError.code = ErrorCodes.DISPLAY_TOKEN_INVALID.code;
+    throw authError;
+  }
+
+  return {
+    decoded,
+    session,
+  };
+}
+
 function authenticateDisplay(options = {}) {
   const { allowPairToken = false } = options;
 
@@ -39,24 +74,7 @@ function authenticateDisplay(options = {}) {
     }
 
     try {
-      const decoded = jwt.verify(token, JWT_SECRET);
-      const session = await db.displaySession.findById(decoded.sessionId);
-
-      if (!session) {
-        return res.status(403).json(error(ErrorCodes.DISPLAY_SESSION_NOT_FOUND));
-      }
-
-      if (decoded.type === 'display_pair') {
-        if (!allowPairToken || session.pairToken !== token) {
-          return res.status(403).json(error(ErrorCodes.DISPLAY_TOKEN_INVALID));
-        }
-      } else if (decoded.type === 'display') {
-        if (session.displayToken !== token) {
-          return res.status(403).json(error(ErrorCodes.DISPLAY_TOKEN_INVALID));
-        }
-      } else {
-        return res.status(403).json(error(ErrorCodes.DISPLAY_TOKEN_INVALID));
-      }
+      const { decoded, session } = await getDisplayAuthFromToken(token, { allowPairToken });
 
       req.displayToken = token;
       req.displayAuth = decoded;
@@ -74,6 +92,7 @@ function authenticateDisplay(options = {}) {
 
 module.exports = {
   authenticateDisplay,
+  getDisplayAuthFromToken,
   generateDisplayToken,
   generatePairToken,
 };

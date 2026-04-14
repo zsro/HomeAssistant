@@ -18,6 +18,26 @@ function generateToken(user) {
   );
 }
 
+async function getUserFromToken(token) {
+  if (!token) {
+    throw new Error('Missing token');
+  }
+
+  const decoded = jwt.verify(token, JWT_SECRET);
+  const user = await db.user.findById(decoded.userId);
+
+  if (!user) {
+    const authError = new Error('User not found');
+    authError.name = 'UserNotFoundError';
+    throw authError;
+  }
+
+  return {
+    decoded,
+    user,
+  };
+}
+
 // 验证 Token 中间件
 function authenticateToken(req, res, next) {
   const authHeader = req.headers['authorization'];
@@ -68,6 +88,7 @@ function optionalAuth(req, res, next) {
 
 module.exports = {
   generateToken,
+  getUserFromToken,
   authenticateToken,
   optionalAuth,
   JWT_SECRET,

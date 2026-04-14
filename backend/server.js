@@ -1,4 +1,5 @@
 const express = require('express');
+const http = require('http');
 const cors = require('cors');
 const dotenv = require('dotenv');
 
@@ -11,8 +12,10 @@ const familyRoutes = require('./src/routes/family');
 const pinyinRoutes = require('./src/routes/pinyin');
 const starPrepRoutes = require('./src/routes/starPrep');
 const displayRoutes = require('./src/routes/display');
+const { initDisplaySocketServer } = require('./src/services/displaySocketService');
 
 const app = express();
+const server = http.createServer(app);
 const PORT = process.env.PORT || 3001;
 
 // 设置超时时间为 5 分钟（AI 生成可能需要较长时间）
@@ -43,8 +46,10 @@ async function startServer() {
   try {
     // 同步数据库
     await syncDatabase();
-    
-    app.listen(PORT, () => {
+
+    initDisplaySocketServer(server);
+
+    server.listen(PORT, () => {
       console.log(`Server is running on port ${PORT}`);
     });
   } catch (error) {

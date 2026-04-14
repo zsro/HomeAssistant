@@ -48,6 +48,7 @@ export const useDisplayStore = create((set, get) => ({
   currentState: null,
   isLoading: false,
   error: null,
+  socketConnected: false,
 
   initializeSession: async () => {
     set({ isLoading: true, error: null });
@@ -127,6 +128,22 @@ export const useDisplayStore = create((set, get) => ({
     }
   },
 
+  applySocketSession: (data) => {
+    applySessionData(set, data);
+  },
+
+  applySocketState: (state) => {
+    set({
+      currentState: state,
+      isBound: true,
+      error: null,
+    });
+  },
+
+  setSocketConnected: (connected) => {
+    set({ socketConnected: connected });
+  },
+
   refreshPairCode: async () => {
     const token = get().pairToken;
     if (!token) {
@@ -181,6 +198,7 @@ export const useDisplayStore = create((set, get) => ({
       currentState: null,
       isLoading: false,
       error: null,
+      socketConnected: false,
     });
   },
 

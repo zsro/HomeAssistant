@@ -1,5 +1,6 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { useDisplayStore } from '../../stores/displayStore';
+import { createDisplaySocket } from '../../utils/displaySocket';
 
 function formatExpiry(expiresAt) {
   if (!expiresAt) {
@@ -123,43 +124,101 @@ function DisplayPortal() {
     error,
     isBound,
     isLoading,
+    pairToken,
+    displayToken,
     initializeSession,
-    pollSession,
-    pollState,
+    applySocketSession,
+    applySocketState,
     refreshPairCode,
     restartSession,
     sendHeartbeat,
+    setSocketConnected,
   } = useDisplayStore();
+  const socketRef = useRef(null);
 
   useEffect(() => {
     initializeSession();
   }, [initializeSession]);
 
   useEffect(() => {
-    if (isBound) {
-      pollState();
-      sendHeartbeat();
-      const stateTimer = window.setInterval(() => {
-        pollState();
-      }, 3000);
-      const heartbeatTimer = window.setInterval(() => {
-        sendHeartbeat();
-      }, 15000);
-
-      return () => {
-        window.clearInterval(stateTimer);
-        window.clearInterval(heartbeatTimer);
-      };
+    if (!displayToken) {
+      return undefined;
     }
 
-    const sessionTimer = window.setInterval(() => {
-      pollSession();
-    }, 3000);
+    sendHeartbeat();
+    const heartbeatTimer = window.setInterval(() => {
+      sendHeartbeat();
+    }, 15000);
 
     return () => {
-      window.clearInterval(sessionTimer);
+      window.clearInterval(heartbeatTimer);
     };
-  }, [isBound, pollSession, pollState, sendHeartbeat]);
+  }, [displayToken, sendHeartbeat]);
+
+  useEffect(() => {
+    const socketToken = displayToken || pairToken;
+    if (!socketToken) {
+      return undefined;
+    }
+
+    let isDisposed = false;
+    let reconnectTimer = null;
+
+    const connect = () => {
+      const socket = createDisplaySocket({
+        token: socketToken,
+        role: 'display',
+        onOpen: () => {
+          setSocketConnected(true);
+        },
+        onClose: () => {
+          setSocketConnected(false);
+          if (!isDisposed) {
+            reconnectTimer = window.setTimeout(connect, 1500);
+          }
+        },
+        onError: () => {
+          setSocketConnected(false);
+        },
+        onMessage: (message) => {
+          if (message.type === 'session_bound') {
+            applySocketSession(message.data);
+            if (message.data.state) {
+              applySocketState(message.data.state);
+            }
+          }
+
+          if (message.type === 'session_refreshed') {
+            applySocketSession(message.data);
+          }
+
+          if (message.type === 'display_state') {
+            applySocketState(message.data);
+          }
+        },
+      });
+
+      socketRef.current = socket;
+    };
+
+    connect();
+
+    return () => {
+      isDisposed = true;
+      setSocketConnected(false);
+      if (reconnectTimer) {
+        window.clearTimeout(reconnectTimer);
+      }
+      socketRef.current?.close();
+      socketRef.current = null;
+    };
+  }, [
+    applySocketSession,
+    applySocketState,
+    displayToken,
+    pairToken,
+    setSocketConnected,
+  ]);
 
   if (isBound && currentState) {
     return <DisplayScreen state={currentState} />;

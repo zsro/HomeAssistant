@@ -1,6 +1,8 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { displayApi } from '../../api/config';
+import { getAuthToken } from '../../utils/authToken';
+import { createDisplaySocket } from '../../utils/displaySocket';
 
 const INITIAL_FORM_STATE = {
   home: {
@@ -74,20 +76,15 @@ function ControlDevice() {
   const [error, setError] = useState('');
   const [successMessage, setSuccessMessage] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const socketRef = useRef(null);
 
   useEffect(() => {
-    let active = true;
-
     async function loadDeviceState() {
       try {
         const [devicesResponse, stateResponse] = await Promise.all([
           displayApi.getDevices(),
           displayApi.getDeviceState(deviceId),
         ]);
-
-        if (!active) {
-          return;
-        }
 
         const matchedDevice = (devicesResponse.data.devices || []).find((item) => item.id === deviceId) || null;
         const nextState = stateResponse.data || null;
@@ -98,18 +95,64 @@ function ControlDevice() {
           setScreenType(nextState.screenType);
         }
       } catch (loadError) {
-        if (active) {
-          setError(loadError.message || '获取展示设备失败');
-        }
+        setError(loadError.message || '获取展示设备失败');
       }
     }
 
     loadDeviceState();
-    const intervalId = window.setInterval(loadDeviceState, 5000);
+    return () => {
+      socketRef.current?.close();
+    };
+  }, [deviceId]);
+
+  useEffect(() => {
+    const token = getAuthToken();
+    if (!token) {
+      return undefined;
+    }
+
+    let isDisposed = false;
+    let reconnectTimer = null;
+
+    const connect = () => {
+      socketRef.current = createDisplaySocket({
+        token,
+        role: 'control',
+        onClose: () => {
+          if (!isDisposed) {
+            reconnectTimer = window.setTimeout(connect, 1500);
+          }
+        },
+        onMessage: (message) => {
+          if (message.type === 'device_presence' && message.data.deviceId === deviceId) {
+            setDevice((current) => current ? {
+              ...current,
+              status: message.data.status,
+              lastSeenAt: message.data.lastSeenAt,
+            } : current);
+          }
+
+          if (message.type === 'device_state' && message.data.deviceId === deviceId) {
+            setCurrentState(message.data.state);
+            setScreenType(message.data.state.screenType);
+            setDevice((current) => current ? {
+              ...current,
+              currentScreenType: message.data.state.screenType,
+            } : current);
+          }
+        },
+      });
+    };
+
+    connect();
 
     return () => {
-      active = false;
-      window.clearInterval(intervalId);
+      isDisposed = true;
+      if (reconnectTimer) {
+        window.clearTimeout(reconnectTimer);
+      }
+      socketRef.current?.close();
+      socketRef.current = null;
     };
   }, [deviceId]);
 
@@ -190,7 +233,7 @@ function ControlDevice() {
         <section className="rounded-[30px] bg-white p-7 shadow-xl shadow-slate-200">
           <h2 className="text-2xl font-black text-slate-900">切换展示内容</h2>
           <p className="mt-2 text-sm leading-6 text-slate-600">
-            第一阶段先用状态覆盖的方式切换画面。电视端会自动轮询并刷新内容。
+            状态会通过 WebSocket 直接推送到展示端，手机端修改后大屏会立刻切换。
           </p>
 
           <form onSubmit={handleSubmit} className="mt-6 grid gap-5">

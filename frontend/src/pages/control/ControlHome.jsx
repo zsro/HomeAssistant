@@ -1,7 +1,9 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { displayApi } from '../../api/config';
 import { useAuthStore } from '../../stores/authStore';
+import { getAuthToken } from '../../utils/authToken';
+import { createDisplaySocket } from '../../utils/displaySocket';
 
 function ControlHome() {
   const { family } = useAuthStore();
@@ -11,32 +13,98 @@ function ControlHome() {
   const [isPairing, setIsPairing] = useState(false);
   const [error, setError] = useState('');
   const [successMessage, setSuccessMessage] = useState('');
+  const socketRef = useRef(null);
+
+  const refreshDevices = useCallback(async () => {
+    try {
+      const response = await displayApi.getDevices();
+      setDevices(response.data.devices || []);
+      setError('');
+    } catch (loadError) {
+      setError(loadError.message || '获取展示设备失败');
+    }
+  }, []);
 
   useEffect(() => {
-    let active = true;
+    refreshDevices();
+    return () => {
+      socketRef.current?.close();
+    };
+  }, [refreshDevices]);
 
-    async function loadDevices() {
-      try {
-        const response = await displayApi.getDevices();
-        if (active) {
-          setDevices(response.data.devices || []);
-          setError('');
-        }
-      } catch (loadError) {
-        if (active) {
-          setError(loadError.message || '获取展示设备失败');
-        }
-      }
+  useEffect(() => {
+    const token = getAuthToken();
+    if (!token) {
+      return undefined;
     }
 
-    loadDevices();
-    const intervalId = window.setInterval(loadDevices, 5000);
+    let isDisposed = false;
+    let reconnectTimer = null;
+
+    const connect = () => {
+      socketRef.current = createDisplaySocket({
+        token,
+        role: 'control',
+        onClose: () => {
+          if (!isDisposed) {
+            reconnectTimer = window.setTimeout(connect, 1500);
+          }
+        },
+        onMessage: (message) => {
+          if (message.type === 'device_presence') {
+            setDevices((current) => {
+              if (!current.some((device) => device.id === message.data.deviceId)) {
+                refreshDevices();
+                return current;
+              }
+
+              return current.map((device) => (
+                device.id === message.data.deviceId
+                  ? {
+                    ...device,
+                    status: message.data.status,
+                    lastSeenAt: message.data.lastSeenAt,
+                  }
+                  : device
+              ));
+            });
+          }
+
+          if (message.type === 'device_state') {
+            const { deviceId, state } = message.data;
+            setDevices((current) => {
+              if (!current.some((device) => device.id === deviceId)) {
+                refreshDevices();
+                return current;
+              }
+
+              const nextDevices = current.map((device) => (
+                device.id === deviceId
+                  ? {
+                    ...device,
+                    currentScreenType: state.screenType,
+                  }
+                  : device
+              ));
+
+              return nextDevices;
+            });
+          }
+        },
+      });
+    };
+
+    connect();
 
     return () => {
-      active = false;
-      window.clearInterval(intervalId);
+      isDisposed = true;
+      if (reconnectTimer) {
+        window.clearTimeout(reconnectTimer);
+      }
+      socketRef.current?.close();
+      socketRef.current = null;
     };
-  }, []);
+  }, [refreshDevices]);
 
   async function handlePairSubmit(event) {
     event.preventDefault();
@@ -52,9 +120,7 @@ function ControlHome() {
 
       setSuccessMessage(response.msg || '展示端绑定成功');
       setPairCode('');
-
-      const devicesResponse = await displayApi.getDevices();
-      setDevices(devicesResponse.data.devices || []);
+      await refreshDevices();
     } catch (pairError) {
       setError(pairError.message || '绑定展示端失败');
     } finally {

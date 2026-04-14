@@ -4,6 +4,12 @@ const { ErrorCodes } = require('../utils/errorCodes');
 const { serializeDisplayDevice, serializeDisplayState } = require('../utils/serializers');
 const { createAppError } = require('../utils/appError');
 const { generateDisplayToken, generatePairToken } = require('../middleware/displayAuth');
+const {
+  markDevicePresence,
+  notifyDeviceStateChanged,
+  notifySessionBound,
+  notifySessionRefreshed,
+} = require('./displaySocketService');
 
 const DISPLAY_SCREEN_TYPES = ['home', 'pinyin', 'star_prep', 'message', 'image'];
 const PAIR_CODE_TTL_MS = 5 * 60 * 1000;
@@ -127,6 +133,12 @@ async function refreshSession(session) {
     expiresAt,
   });
 
+  notifySessionRefreshed({
+    sessionId: session.id,
+    pairCode,
+    expiresAt,
+  });
+
   return {
     data: {
       sessionId: session.id,
@@ -199,13 +211,29 @@ async function pairDisplay(user, payload) {
     lastHeartbeatAt: new Date(),
   });
 
+  const serializedDevice = serializeDisplayDevice(device, {
+    currentScreenType: state.screenType,
+    includeCurrentScreenType: true,
+  });
+  const serializedState = serializeDisplayState(state);
+
+  notifySessionBound({
+    sessionId: session.id,
+    device: serializedDevice,
+    state: serializedState,
+    displayToken,
+    expiresAt: session.expiresAt,
+  });
+  notifyDeviceStateChanged({
+    deviceId: device.id,
+    familyId: family.id,
+    state: serializedState,
+  });
+
   return {
     data: {
-      device: serializeDisplayDevice(device, {
-        currentScreenType: state.screenType,
-        includeCurrentScreenType: true,
-      }),
-      state: serializeDisplayState(state),
+      device: serializedDevice,
+      state: serializedState,
     },
     message: '展示端绑定成功',
   };
@@ -278,8 +306,15 @@ async function updateDeviceState(user, deviceId, payload) {
 
     await db.displayDevice.update(device.id, { status: 'active' });
 
+    const serializedState = serializeDisplayState(createdState);
+    notifyDeviceStateChanged({
+      deviceId,
+      familyId: device.familyId,
+      state: serializedState,
+    });
+
     return {
-      data: serializeDisplayState(createdState),
+      data: serializedState,
       message: '展示内容已更新',
     };
   }
@@ -293,8 +328,15 @@ async function updateDeviceState(user, deviceId, payload) {
 
   await db.displayDevice.update(device.id, { status: 'active' });
 
+  const serializedState = serializeDisplayState(updatedState);
+  notifyDeviceStateChanged({
+    deviceId,
+    familyId: device.familyId,
+    state: serializedState,
+  });
+
   return {
-    data: serializeDisplayState(updatedState),
+    data: serializedState,
     message: '展示内容已更新',
   };
 }
@@ -310,6 +352,12 @@ async function heartbeat(session) {
   });
   await db.displayDevice.update(session.deviceId, {
     lastSeenAt: now,
+    status: 'active',
+  });
+
+  await markDevicePresence({
+    deviceId: session.deviceId,
+    sessionId: session.id,
     status: 'active',
   });
 

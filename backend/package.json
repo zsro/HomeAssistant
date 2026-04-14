@@ -22,7 +22,8 @@
     "node-fetch": "^2.7.0",
     "openai": "^6.25.0",
     "sequelize": "^6.37.7",
-    "uuid": "^13.0.0"
+    "uuid": "^13.0.0",
+    "ws": "^8.20.0"
   },
   "devDependencies": {
     "nodemon": "^3.1.14"
