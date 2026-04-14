@@ -193,9 +193,133 @@ const PinyinProgress = sequelize.define('PinyinProgress', {
   timestamps: true,
 });
 
+const DisplayDevice = sequelize.define('DisplayDevice', {
+  id: {
+    type: DataTypes.UUID,
+    defaultValue: DataTypes.UUIDV4,
+    primaryKey: true,
+  },
+  familyId: {
+    type: DataTypes.UUID,
+    allowNull: false,
+  },
+  name: {
+    type: DataTypes.STRING(100),
+    allowNull: false,
+  },
+  status: {
+    type: DataTypes.ENUM('offline', 'idle', 'active'),
+    allowNull: false,
+    defaultValue: 'offline',
+  },
+  lastSeenAt: {
+    type: DataTypes.DATE,
+    allowNull: true,
+  },
+  createdBy: {
+    type: DataTypes.UUID,
+    allowNull: false,
+  },
+}, {
+  tableName: 'display_devices',
+  timestamps: true,
+});
+
+const DisplaySession = sequelize.define('DisplaySession', {
+  id: {
+    type: DataTypes.UUID,
+    defaultValue: DataTypes.UUIDV4,
+    primaryKey: true,
+  },
+  deviceId: {
+    type: DataTypes.UUID,
+    allowNull: true,
+  },
+  familyId: {
+    type: DataTypes.UUID,
+    allowNull: true,
+  },
+  pairCode: {
+    type: DataTypes.STRING(6),
+    allowNull: false,
+    unique: true,
+  },
+  pairToken: {
+    type: DataTypes.STRING(512),
+    allowNull: false,
+  },
+  displayToken: {
+    type: DataTypes.STRING(512),
+    allowNull: true,
+  },
+  expiresAt: {
+    type: DataTypes.DATE,
+    allowNull: false,
+  },
+  lastHeartbeatAt: {
+    type: DataTypes.DATE,
+    allowNull: true,
+  },
+  boundByUserId: {
+    type: DataTypes.UUID,
+    allowNull: true,
+  },
+  isBound: {
+    type: DataTypes.BOOLEAN,
+    allowNull: false,
+    defaultValue: false,
+  },
+}, {
+  tableName: 'display_sessions',
+  timestamps: true,
+});
+
+const DisplayState = sequelize.define('DisplayState', {
+  id: {
+    type: DataTypes.UUID,
+    defaultValue: DataTypes.UUIDV4,
+    primaryKey: true,
+  },
+  deviceId: {
+    type: DataTypes.UUID,
+    allowNull: false,
+    unique: true,
+  },
+  screenType: {
+    type: DataTypes.ENUM('home', 'pinyin', 'star_prep', 'message', 'image'),
+    allowNull: false,
+  },
+  payload: {
+    type: DataTypes.JSON,
+    allowNull: false,
+    defaultValue: {},
+  },
+  version: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+    defaultValue: 1,
+  },
+  updatedBy: {
+    type: DataTypes.UUID,
+    allowNull: true,
+  },
+}, {
+  tableName: 'display_states',
+  timestamps: true,
+});
+
 // 建立关联关系
 Family.hasMany(User, { foreignKey: 'familyId' });
 User.belongsTo(Family, { foreignKey: 'familyId' });
+
+Family.hasMany(DisplayDevice, { foreignKey: 'familyId' });
+DisplayDevice.belongsTo(Family, { foreignKey: 'familyId' });
+
+DisplayDevice.hasMany(DisplaySession, { foreignKey: 'deviceId' });
+DisplaySession.belongsTo(DisplayDevice, { foreignKey: 'deviceId' });
+
+DisplayDevice.hasOne(DisplayState, { foreignKey: 'deviceId' });
+DisplayState.belongsTo(DisplayDevice, { foreignKey: 'deviceId' });
 
 Family.hasMany(Template, { foreignKey: 'familyId' });
 Template.belongsTo(Family, { foreignKey: 'familyId' });
@@ -211,6 +335,9 @@ async function syncDatabase() {
     // 按顺序同步模型（先创建没有外键的表）
     await Family.sync({ alter: true });
     await User.sync({ alter: true });
+    await DisplayDevice.sync({ alter: true });
+    await DisplaySession.sync({ alter: true });
+    await DisplayState.sync({ alter: true });
     await Template.sync({ alter: true });
     await Checkin.sync({ alter: true });
     await PinyinProgress.sync({ alter: true });
@@ -229,5 +356,8 @@ module.exports = {
   Template,
   Checkin,
   PinyinProgress,
+  DisplayDevice,
+  DisplaySession,
+  DisplayState,
   syncDatabase
 };

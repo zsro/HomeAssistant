@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Navigate, NavLink } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate, NavLink, useLocation } from 'react-router-dom';
 import { useEffect, useEffectEvent } from 'react';
 import { useAuthStore } from './stores/authStore';
 import Login from './pages/Login';
@@ -7,36 +7,41 @@ import Home from './pages/Home';
 import StarPrep from './pages/StarPrep';
 import Family from './pages/Family';
 import Pinyin from './pages/Pinyin';
+import ControlHome from './pages/control/ControlHome';
+import ControlDevice from './pages/control/ControlDevice';
+import DisplayPortal from './pages/display/DisplayPortal';
 import './App.css';
 
-// 受保护的路由组件
-function ProtectedRoute({ children }) {
+function ProtectedRoute({ children, loginPath = '/login' }) {
   const { isAuthenticated, fetchUser } = useAuthStore();
+  const location = useLocation();
 
   const syncCurrentUser = useEffectEvent(() => {
     if (isAuthenticated) {
       fetchUser();
     }
   });
-  
+
   useEffect(() => {
     if (isAuthenticated) {
       syncCurrentUser();
     }
   }, [isAuthenticated]);
-  
+
   if (!isAuthenticated) {
-    return <Navigate to="/login" replace />;
+    return <Navigate to={loginPath} replace state={{ from: location }} />;
   }
-  
+
   return children;
 }
 
-// 导航栏组件
 function Navbar() {
   const { user, family, logout, isAuthenticated } = useAuthStore();
-  
-  if (!isAuthenticated) return null;
+  const location = useLocation();
+
+  if (!isAuthenticated || location.pathname.startsWith('/display')) {
+    return null;
+  }
 
   const linkClassName = ({ isActive }) => (
     `px-3 py-2 rounded-full text-sm font-medium transition-colors ${
@@ -45,7 +50,7 @@ function Navbar() {
         : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
     }`
   );
-  
+
   return (
     <nav className="bg-white shadow-sm border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -67,9 +72,12 @@ function Navbar() {
               <NavLink to="/family" className={linkClassName}>
                 家庭管理
               </NavLink>
+              <NavLink to="/control" className={linkClassName}>
+                控制端
+              </NavLink>
             </div>
           </div>
-          
+
           <div className="flex flex-wrap items-center gap-3 md:justify-end">
             {family && (
               <span className="text-sm text-gray-500">
@@ -90,49 +98,74 @@ function Navbar() {
   );
 }
 
+function AppShell() {
+  return (
+    <div className="min-h-screen bg-gray-50">
+      <Navbar />
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/control/login" element={<Login />} />
+        <Route path="/control/register" element={<Register />} />
+        <Route
+          path="/control"
+          element={
+            <ProtectedRoute loginPath="/control/login">
+              <ControlHome />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/control/device/:deviceId"
+          element={
+            <ProtectedRoute loginPath="/control/login">
+              <ControlDevice />
+            </ProtectedRoute>
+          }
+        />
+        <Route path="/display" element={<DisplayPortal />} />
+        <Route
+          path="/"
+          element={
+            <ProtectedRoute>
+              <Home />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/star-prep"
+          element={
+            <ProtectedRoute>
+              <StarPrep />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/pinyin"
+          element={
+            <ProtectedRoute>
+              <Pinyin />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/family"
+          element={
+            <ProtectedRoute>
+              <Family />
+            </ProtectedRoute>
+          }
+        />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+    </div>
+  );
+}
+
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-gray-50">
-        <Navbar />
-        <Routes>
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route
-            path="/"
-            element={
-              <ProtectedRoute>
-                <Home />
-              </ProtectedRoute>
-            }
-          />
-          <Route 
-            path="/star-prep" 
-            element={
-              <ProtectedRoute>
-                <StarPrep />
-              </ProtectedRoute>
-            } 
-          />
-          <Route
-            path="/pinyin"
-            element={
-              <ProtectedRoute>
-                <Pinyin />
-              </ProtectedRoute>
-            }
-          />
-          <Route 
-            path="/family" 
-            element={
-              <ProtectedRoute>
-                <Family />
-              </ProtectedRoute>
-            } 
-          />
-          <Route path="*" element={<Navigate to="/" replace />} />
-        </Routes>
-      </div>
+      <AppShell />
     </Router>
   );
 }

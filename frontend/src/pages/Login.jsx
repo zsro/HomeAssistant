@@ -1,10 +1,14 @@
 import { useState } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate, Link, useLocation } from 'react-router-dom';
 import { useAuthStore } from '../stores/authStore';
 
 function Login() {
   const navigate = useNavigate();
+  const location = useLocation();
   const { login, isLoading, error, clearError } = useAuthStore();
+  const isControlEntry = location.pathname.startsWith('/control');
+  const redirectPath = isControlEntry ? '/control' : '/';
+  const registerPath = isControlEntry ? '/control/register' : '/register';
   
   const [formData, setFormData] = useState({
     username: '',
@@ -17,7 +21,7 @@ function Login() {
     
     const result = await login(formData.username, formData.password);
     if (result.success) {
-      navigate('/');
+      navigate(redirectPath);
     }
   };
 
@@ -77,7 +81,7 @@ function Login() {
           <div className="mt-6 text-center">
             <p className="text-gray-600">
               还没有账户？{' '}
-              <Link to="/register" className="text-blue-600 hover:text-blue-700 font-medium">
+              <Link to={registerPath} className="text-blue-600 hover:text-blue-700 font-medium">
                 立即注册
               </Link>
             </p>

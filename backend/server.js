@@ -10,6 +10,7 @@ const authRoutes = require('./src/routes/auth');
 const familyRoutes = require('./src/routes/family');
 const pinyinRoutes = require('./src/routes/pinyin');
 const starPrepRoutes = require('./src/routes/starPrep');
+const displayRoutes = require('./src/routes/display');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -35,6 +36,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/family', familyRoutes);
 app.use('/api/pinyin', pinyinRoutes);
 app.use('/api/star-prep', starPrepRoutes);
+app.use('/api/display', displayRoutes);
 
 // 启动服务器
 async function startServer() {

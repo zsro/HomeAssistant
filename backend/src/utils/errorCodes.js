@@ -53,6 +53,14 @@ const ErrorCodes = {
   CHECKIN_CREATE_FAILED: { code: 5002, msg: '打卡失败' },
   CHECKIN_ACTIVITY_NOT_FOUND: { code: 5003, msg: '活动不存在' },
 
+  // 展示端错误 (6000-6999)
+  DISPLAY_SESSION_NOT_FOUND: { code: 6000, msg: '展示会话不存在' },
+  DISPLAY_DEVICE_NOT_FOUND: { code: 6001, msg: '展示设备不存在' },
+  DISPLAY_PAIR_CODE_INVALID: { code: 6002, msg: '配对码无效' },
+  DISPLAY_PAIR_CODE_EXPIRED: { code: 6003, msg: '配对码已过期' },
+  DISPLAY_ALREADY_BOUND: { code: 6004, msg: '展示端已绑定' },
+  DISPLAY_TOKEN_INVALID: { code: 6005, msg: '展示端令牌无效' },
+
   // 参数错误 (9000-9999)
   PARAM_MISSING: { code: 9000, msg: '缺少必要参数' },
   PARAM_INVALID: { code: 9001, msg: '参数格式不正确' },

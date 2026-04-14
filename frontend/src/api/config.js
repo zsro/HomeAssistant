@@ -10,6 +10,10 @@ const API_BASE_URL = import.meta.env.PROD
 const DEFAULT_TIMEOUT = 300000;
 
 function buildHeaders(headers = {}) {
+  if (headers.Authorization || headers.authorization) {
+    return headers;
+  }
+
   const token = getAuthToken();
   if (!token) {
     return headers;
@@ -182,6 +186,71 @@ export const familyApi = {
   
   async createFamily(data) {
     return api.post('/family/create', data);
+  },
+};
+
+function buildDisplayAuthHeaders(token) {
+  return {
+    Authorization: `Bearer ${token}`,
+    'Content-Type': 'application/json',
+  };
+}
+
+async function getWithHeaders(url, headers, timeout = DEFAULT_TIMEOUT) {
+  const response = await fetchWithTimeout(`${API_BASE_URL}${url}`, {
+    headers,
+  }, timeout);
+  return handleResponse(response);
+}
+
+async function postWithHeaders(url, data, headers, timeout = DEFAULT_TIMEOUT) {
+  const response = await fetchWithTimeout(`${API_BASE_URL}${url}`, {
+    method: 'POST',
+    headers,
+    body: JSON.stringify(data),
+  }, timeout);
+  return handleResponse(response);
+}
+
+export const displayApi = {
+  async createSession() {
+    return api.post('/display/session', {});
+  },
+
+  async getSession(token) {
+    return getWithHeaders('/display/session', {
+      Authorization: `Bearer ${token}`,
+    });
+  },
+
+  async refreshSession(token) {
+    return postWithHeaders('/display/session/refresh', {}, buildDisplayAuthHeaders(token));
+  },
+
+  async heartbeat(token) {
+    return postWithHeaders('/display/session/heartbeat', {}, buildDisplayAuthHeaders(token));
+  },
+
+  async getState(token) {
+    return getWithHeaders('/display/state', {
+      Authorization: `Bearer ${token}`,
+    });
+  },
+
+  async pair(data) {
+    return api.post('/display/pair', data);
+  },
+
+  async getDevices() {
+    return api.get('/display/devices');
+  },
+
+  async getDeviceState(deviceId) {
+    return api.get(`/display/devices/${deviceId}/state`);
+  },
+
+  async updateDeviceState(deviceId, data) {
+    return api.put(`/display/devices/${deviceId}/state`, data);
   },
 };
 

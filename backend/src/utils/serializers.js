@@ -76,8 +76,48 @@ function serializeCheckin(checkin, user) {
   };
 }
 
+function serializeDisplayDevice(device, options = {}) {
+  if (!device) {
+    return null;
+  }
+
+  const serialized = {
+    id: device.id,
+    familyId: device.familyId,
+    name: device.name,
+    status: device.status,
+    lastSeenAt: device.lastSeenAt,
+  };
+
+  if (options.includeCreatedAt) {
+    serialized.createdAt = device.createdAt;
+  }
+
+  if (options.includeCurrentScreenType) {
+    serialized.currentScreenType = options.currentScreenType || null;
+  }
+
+  return serialized;
+}
+
+function serializeDisplayState(state) {
+  if (!state) {
+    return null;
+  }
+
+  return {
+    deviceId: state.deviceId,
+    screenType: state.screenType,
+    payload: state.payload || {},
+    version: state.version,
+    updatedAt: state.updatedAt,
+  };
+}
+
 module.exports = {
   serializeCheckin,
+  serializeDisplayDevice,
+  serializeDisplayState,
   serializeFamily,
   serializeMember,
   serializeTemplateSummary,
