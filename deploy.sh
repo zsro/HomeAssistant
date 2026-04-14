@@ -156,6 +156,22 @@ server {
         error_page 502 503 504 = @backend_error;
     }
 
+    location /ws/display {
+        proxy_pass http://127.0.0.1:3001/ws/display;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade \$http_upgrade;
+        proxy_set_header Connection "upgrade";
+        proxy_set_header Host \$host;
+        proxy_set_header X-Real-IP \$remote_addr;
+        proxy_set_header X-Forwarded-For \$proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto \$scheme;
+
+        proxy_connect_timeout 300s;
+        proxy_send_timeout 300s;
+        proxy_read_timeout 300s;
+        proxy_buffering off;
+    }
+
     location @backend_error {
         return 503 '{"error": "后端服务不可用，请检查服务状态"}';
         add_header Content-Type application/json;
