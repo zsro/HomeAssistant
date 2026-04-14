@@ -126,10 +126,12 @@ function DisplayPortal() {
     isLoading,
     pairToken,
     displayToken,
+    socketAuthReady,
     initializeSession,
     applySocketSession,
     applySocketState,
     refreshPairCode,
+    invalidateSocketAuth,
     restartSession,
     sendHeartbeat,
     setSocketConnected,
@@ -156,6 +158,10 @@ function DisplayPortal() {
   }, [displayToken, sendHeartbeat]);
 
   useEffect(() => {
+    if (!socketAuthReady) {
+      return undefined;
+    }
+
     const socketToken = displayToken || pairToken;
     if (!socketToken) {
       return undefined;
@@ -171,8 +177,12 @@ function DisplayPortal() {
         onOpen: () => {
           setSocketConnected(true);
         },
-        onClose: () => {
+        onClose: (event) => {
           setSocketConnected(false);
+          if (event.code === 4001) {
+            invalidateSocketAuth();
+            return;
+          }
           if (!isDisposed) {
             reconnectTimer = window.setTimeout(connect, 1500);
           }
@@ -216,7 +226,9 @@ function DisplayPortal() {
     applySocketSession,
     applySocketState,
     displayToken,
+    invalidateSocketAuth,
     pairToken,
+    socketAuthReady,
     setSocketConnected,
   ]);
 

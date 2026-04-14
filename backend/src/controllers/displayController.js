@@ -4,7 +4,7 @@ const { sendError, sendSuccess } = require('./response');
 
 async function createSession(req, res) {
   try {
-    const result = await displayService.createSession();
+    const result = await displayService.createSession(req.body);
     return sendSuccess(res, result);
   } catch (err) {
     return sendError(res, err, ErrorCodes.SYSTEM_ERROR, '创建展示会话失败');

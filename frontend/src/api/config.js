@@ -213,8 +213,8 @@ async function postWithHeaders(url, data, headers, timeout = DEFAULT_TIMEOUT) {
 }
 
 export const displayApi = {
-  async createSession() {
-    return api.post('/display/session', {});
+  async createSession(data = {}) {
+    return api.post('/display/session', data);
   },
 
   async getSession(token) {

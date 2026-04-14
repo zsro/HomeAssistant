@@ -19,6 +19,20 @@ function buildExpiryDate(ttlMs = PAIR_CODE_TTL_MS) {
   return new Date(Date.now() + ttlMs);
 }
 
+function normalizeInstallationId(installationId) {
+  const normalizedInstallationId = installationId?.trim();
+
+  if (!normalizedInstallationId) {
+    return null;
+  }
+
+  if (normalizedInstallationId.length < 16 || normalizedInstallationId.length > 64) {
+    throw createAppError(400, ErrorCodes.PARAM_INVALID, '无效的展示端安装标识');
+  }
+
+  return normalizedInstallationId;
+}
+
 async function generateUniquePairCode() {
   for (let attempt = 0; attempt < 10; attempt += 1) {
     const pairCode = String(crypto.randomInt(100000, 1000000));
@@ -72,10 +86,12 @@ async function getSessionState(session) {
   return serializeDisplayState(state);
 }
 
-async function createSession() {
+async function createSession(payload = {}) {
+  const installationId = normalizeInstallationId(payload.installationId);
   const pairCode = await generateUniquePairCode();
   const expiresAt = buildExpiryDate();
   const session = await db.displaySession.create({
+    installationId,
     pairCode,
     pairToken: 'pending',
     expiresAt,
@@ -179,22 +195,53 @@ async function pairDisplay(user, payload) {
     throw createAppError(404, ErrorCodes.FAMILY_NOT_FOUND);
   }
 
-  const device = await db.displayDevice.create({
-    familyId: family.id,
-    name: deviceName,
-    status: 'idle',
-    lastSeenAt: new Date(),
-    createdBy: user.id,
-  });
+  const now = new Date();
+  const installationId = normalizeInstallationId(session.installationId);
+  const existingDevice = installationId
+    ? await db.displayDevice.findByInstallationId(installationId)
+    : null;
+
+  let device = existingDevice;
+
+  if (device) {
+    device = await db.displayDevice.update(device.id, {
+      familyId: family.id,
+      name: deviceName,
+      status: 'idle',
+      lastSeenAt: now,
+      installationId,
+    });
+  } else {
+    device = await db.displayDevice.create({
+      familyId: family.id,
+      name: deviceName,
+      installationId,
+      status: 'idle',
+      lastSeenAt: now,
+      createdBy: user.id,
+    });
+  }
 
   const defaultState = buildDefaultState(family, user);
-  const state = await db.displayState.create({
-    deviceId: device.id,
-    screenType: defaultState.screenType,
-    payload: defaultState.payload,
-    version: 1,
-    updatedBy: user.id,
-  });
+  const existingState = await db.displayState.findByDeviceId(device.id);
+  let state = existingState;
+
+  if (!state) {
+    state = await db.displayState.create({
+      deviceId: device.id,
+      screenType: defaultState.screenType,
+      payload: defaultState.payload,
+      version: 1,
+      updatedBy: user.id,
+    });
+  } else if (existingDevice && existingDevice.familyId !== family.id) {
+    state = await db.displayState.updateByDeviceId(device.id, {
+      screenType: defaultState.screenType,
+      payload: defaultState.payload,
+      version: existingState.version + 1,
+      updatedBy: user.id,
+    });
+  }
 
   const displayToken = generateDisplayToken({
     sessionId: session.id,
@@ -208,7 +255,7 @@ async function pairDisplay(user, payload) {
     boundByUserId: user.id,
     isBound: true,
     displayToken,
-    lastHeartbeatAt: new Date(),
+    lastHeartbeatAt: now,
   });
 
   const serializedDevice = serializeDisplayDevice(device, {

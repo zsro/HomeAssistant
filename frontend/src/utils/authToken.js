@@ -2,6 +2,7 @@ const TOKEN_KEY = 'token';
 const DISPLAY_PAIR_TOKEN_KEY = 'display-pair-token';
 const DISPLAY_TOKEN_KEY = 'display-token';
 const DISPLAY_SESSION_ID_KEY = 'display-session-id';
+const DISPLAY_INSTALLATION_ID_KEY = 'display-installation-id';
 
 export function getAuthToken() {
   return localStorage.getItem(TOKEN_KEY);
@@ -73,7 +74,34 @@ export function clearDisplaySessionStorage() {
   clearDisplaySessionId();
 }
 
+export function getDisplayInstallationId() {
+  return localStorage.getItem(DISPLAY_INSTALLATION_ID_KEY);
+}
+
+export function setDisplayInstallationId(installationId) {
+  if (!installationId) {
+    return;
+  }
+
+  localStorage.setItem(DISPLAY_INSTALLATION_ID_KEY, installationId);
+}
+
+export function getOrCreateDisplayInstallationId() {
+  const existingInstallationId = getDisplayInstallationId();
+  if (existingInstallationId) {
+    return existingInstallationId;
+  }
+
+  const installationId = typeof crypto !== 'undefined' && crypto.randomUUID
+    ? crypto.randomUUID()
+    : `display-${Date.now()}-${Math.random().toString(36).slice(2, 12)}`;
+
+  setDisplayInstallationId(installationId);
+  return installationId;
+}
+
 export {
+  DISPLAY_INSTALLATION_ID_KEY,
   DISPLAY_PAIR_TOKEN_KEY,
   DISPLAY_SESSION_ID_KEY,
   DISPLAY_TOKEN_KEY,

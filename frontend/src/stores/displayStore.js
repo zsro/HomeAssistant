@@ -3,6 +3,7 @@ import { displayApi } from '../api/config';
 import {
   clearDisplaySessionStorage,
   getDisplayPairToken,
+  getOrCreateDisplayInstallationId,
   getDisplaySessionId,
   getDisplayToken,
   setDisplayPairToken,
@@ -41,6 +42,7 @@ export const useDisplayStore = create((set, get) => ({
   sessionId: getDisplaySessionId(),
   pairToken: getDisplayPairToken(),
   displayToken: getDisplayToken(),
+  installationId: getOrCreateDisplayInstallationId(),
   pairCode: null,
   expiresAt: null,
   isBound: false,
@@ -49,48 +51,51 @@ export const useDisplayStore = create((set, get) => ({
   isLoading: false,
   error: null,
   socketConnected: false,
+  socketAuthReady: false,
 
   initializeSession: async () => {
-    set({ isLoading: true, error: null });
+    set({ isLoading: true, error: null, socketAuthReady: false });
 
     const displayToken = get().displayToken;
     const pairToken = get().pairToken;
+    const installationId = get().installationId || getOrCreateDisplayInstallationId();
 
     try {
       if (displayToken) {
         const response = await displayApi.getSession(displayToken);
         applySessionData(set, response.data);
-        set({ isLoading: false, isBound: true });
+        set({ isLoading: false, isBound: true, socketAuthReady: true });
         return;
       }
 
       if (pairToken) {
         const response = await displayApi.getSession(pairToken);
         applySessionData(set, response.data);
-        set({ isLoading: false });
+        set({ isLoading: false, socketAuthReady: true });
         return;
       }
 
-      const response = await displayApi.createSession();
+      const response = await displayApi.createSession({ installationId });
       applySessionData(set, {
         ...response.data,
         isBound: false,
       });
-      set({ isLoading: false });
+      set({ isLoading: false, socketAuthReady: true });
     } catch (error) {
       clearDisplaySessionStorage();
       try {
-        const response = await displayApi.createSession();
+        const response = await displayApi.createSession({ installationId });
         applySessionData(set, {
           ...response.data,
           isBound: false,
         });
-        set({ isLoading: false, error: null });
+        set({ isLoading: false, error: null, socketAuthReady: true });
       } catch (fallbackError) {
         set({
           sessionId: null,
           pairToken: null,
           displayToken: null,
+          installationId,
           pairCode: null,
           expiresAt: null,
           isBound: false,
@@ -98,6 +103,7 @@ export const useDisplayStore = create((set, get) => ({
           currentState: null,
           isLoading: false,
           error: fallbackError.message || error.message || '初始化展示端失败',
+          socketAuthReady: false,
         });
       }
     }
@@ -142,6 +148,26 @@ export const useDisplayStore = create((set, get) => ({
 
   setSocketConnected: (connected) => {
     set({ socketConnected: connected });
+  },
+
+  invalidateSocketAuth: async () => {
+    clearDisplaySessionStorage();
+    set({
+      sessionId: null,
+      pairToken: null,
+      displayToken: null,
+      installationId: get().installationId || getOrCreateDisplayInstallationId(),
+      pairCode: null,
+      expiresAt: null,
+      isBound: false,
+      device: null,
+      currentState: null,
+      error: null,
+      socketConnected: false,
+      socketAuthReady: false,
+    });
+
+    await get().initializeSession();
   },
 
   refreshPairCode: async () => {
@@ -191,6 +217,7 @@ export const useDisplayStore = create((set, get) => ({
       sessionId: null,
       pairToken: null,
       displayToken: null,
+      installationId: get().installationId || getOrCreateDisplayInstallationId(),
       pairCode: null,
       expiresAt: null,
       isBound: false,
@@ -199,6 +226,7 @@ export const useDisplayStore = create((set, get) => ({
       isLoading: false,
       error: null,
       socketConnected: false,
+      socketAuthReady: false,
     });
   },
 

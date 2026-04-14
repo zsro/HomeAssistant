@@ -207,6 +207,11 @@ const DisplayDevice = sequelize.define('DisplayDevice', {
     type: DataTypes.STRING(100),
     allowNull: false,
   },
+  installationId: {
+    type: DataTypes.STRING(64),
+    allowNull: true,
+    unique: true,
+  },
   status: {
     type: DataTypes.ENUM('offline', 'idle', 'active'),
     allowNull: false,
@@ -243,6 +248,10 @@ const DisplaySession = sequelize.define('DisplaySession', {
     type: DataTypes.STRING(6),
     allowNull: false,
     unique: true,
+  },
+  installationId: {
+    type: DataTypes.STRING(64),
+    allowNull: true,
   },
   pairToken: {
     type: DataTypes.STRING(512),

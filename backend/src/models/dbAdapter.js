@@ -191,6 +191,12 @@ const displayDeviceAdapter = {
     return DisplayDevice.findByPk(id);
   },
 
+  async findByInstallationId(installationId) {
+    return DisplayDevice.findOne({
+      where: { installationId },
+    });
+  },
+
   async findByFamily(familyId) {
     return DisplayDevice.findAll({
       where: { familyId },
