@@ -35,6 +35,7 @@ WEB_ROOT="${WEB_ROOT:-/var/www/home-assistant}"
 KEEP_RELEASES="${KEEP_RELEASES:-3}"
 RELEASE_ID="$(date +%Y%m%d-%H%M%S)"
 RELEASE_DIR="$RELEASES_DIR/release-$RELEASE_ID"
+SOURCE_GIT_STATUS_BEFORE=""
 
 echo -e "${GREEN}========================================${NC}"
 echo -e "${GREEN}  家庭计划应用 - 一键部署脚本${NC}"
@@ -73,12 +74,37 @@ cleanup_old_releases() {
     done
 }
 
+capture_source_git_status() {
+    if [ -d "$SCRIPT_DIR/.git" ]; then
+        git -C "$SCRIPT_DIR" status --porcelain
+    fi
+}
+
+assert_source_tree_unchanged() {
+    if [ ! -d "$SCRIPT_DIR/.git" ]; then
+        return
+    fi
+
+    local current_status
+    current_status="$(capture_source_git_status)"
+
+    if [ "$current_status" != "$SOURCE_GIT_STATUS_BEFORE" ]; then
+        echo -e "${RED}错误: 部署过程中检测到源码目录发生变化: $SCRIPT_DIR${NC}"
+        echo -e "${YELLOW}部署前状态:${NC}"
+        printf '%s\n' "$SOURCE_GIT_STATUS_BEFORE"
+        echo -e "${YELLOW}部署后状态:${NC}"
+        printf '%s\n' "$current_status"
+        exit 1
+    fi
+}
+
 echo -e "${YELLOW}[1/10] 检查依赖...${NC}"
 check_command node
 check_command npm
 check_command git
 check_command tar
 check_command curl
+SOURCE_GIT_STATUS_BEFORE="$(capture_source_git_status)"
 echo -e "${GREEN}✓ 依赖检查通过${NC}"
 echo ""
 
@@ -319,6 +345,7 @@ else
 fi
 
 cleanup_old_releases
+assert_source_tree_unchanged
 echo -e "${GREEN}✓ 旧版本清理完成${NC}"
 echo ""
 
