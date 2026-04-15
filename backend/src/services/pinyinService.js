@@ -11,20 +11,54 @@ function normalizeCompletedLessonIds(value) {
   return Array.isArray(value) ? Array.from(new Set(value.filter(Boolean))) : [];
 }
 
+function sanitizeProgressData(progressRecord) {
+  const lessons = getCurriculumLessons();
+  const validLessonIds = new Set(lessons.map((lesson) => lesson.id));
+  const completedLessonIds = normalizeCompletedLessonIds(progressRecord?.completedLessonIds)
+    .filter((lessonId) => validLessonIds.has(lessonId));
+  const completedSet = new Set(completedLessonIds);
+  const fallbackCurrentLesson = lessons.find((lesson) => !completedSet.has(lesson.id)) || null;
+  const currentLessonId = (
+    progressRecord?.currentLessonId
+    && validLessonIds.has(progressRecord.currentLessonId)
+    && !completedSet.has(progressRecord.currentLessonId)
+  )
+    ? progressRecord.currentLessonId
+    : (fallbackCurrentLesson?.id || null);
+  const lastCompletedLessonId = (
+    progressRecord?.lastCompletedLessonId
+    && validLessonIds.has(progressRecord.lastCompletedLessonId)
+    && completedSet.has(progressRecord.lastCompletedLessonId)
+  )
+    ? progressRecord.lastCompletedLessonId
+    : null;
+
+  return {
+    completedLessonIds,
+    currentLessonId,
+    lastCompletedLessonId,
+  };
+}
+
 function getProgressSummary(progressRecord) {
   const lessons = getCurriculumLessons();
-  const completedLessonIds = normalizeCompletedLessonIds(progressRecord?.completedLessonIds);
+  const {
+    completedLessonIds,
+    currentLessonId,
+    lastCompletedLessonId,
+  } = sanitizeProgressData(progressRecord);
   const completedSet = new Set(completedLessonIds);
-  const currentLesson = lessons.find((lesson) => !completedSet.has(lesson.id)) || null;
+  const fallbackCurrentLesson = lessons.find((lesson) => !completedSet.has(lesson.id)) || null;
+  const currentLesson = lessons.find((lesson) => lesson.id === currentLessonId) || fallbackCurrentLesson;
 
   return {
     completedLessonIds,
     completedLessons: completedLessonIds.length,
     totalLessons: lessons.length,
     completionRate: lessons.length === 0 ? 0 : Math.round((completedLessonIds.length / lessons.length) * 100),
-    currentLessonId: progressRecord?.currentLessonId || currentLesson?.id || null,
+    currentLessonId: currentLessonId || currentLesson?.id || null,
     currentLesson,
-    lastCompletedLessonId: progressRecord?.lastCompletedLessonId || null,
+    lastCompletedLessonId,
     updatedAt: progressRecord?.updatedAt || null,
     totalMinutes: lessons.reduce((total, lesson) => total + lesson.durationMinutes, 0),
   };
@@ -33,7 +67,21 @@ function getProgressSummary(progressRecord) {
 async function getOrCreateProgress(userId) {
   const progress = await db.pinyinProgress.findByUserId(userId);
   if (progress) {
-    return progress;
+    const sanitizedProgress = sanitizeProgressData(progress);
+    const currentCompletedLessonIds = normalizeCompletedLessonIds(progress.completedLessonIds);
+    const hasChanged = (
+      sanitizedProgress.currentLessonId !== (progress.currentLessonId || null)
+      || sanitizedProgress.lastCompletedLessonId !== (progress.lastCompletedLessonId || null)
+      || sanitizedProgress.completedLessonIds.length !== currentCompletedLessonIds.length
+      || sanitizedProgress.completedLessonIds.some((lessonId, index) => lessonId !== currentCompletedLessonIds[index])
+    );
+
+    if (!hasChanged) {
+      return progress;
+    }
+
+    const updatedProgress = await db.pinyinProgress.update(progress.id, sanitizedProgress);
+    return updatedProgress || progress;
   }
 
   const firstLesson = getCurriculumLessons()[0] || null;

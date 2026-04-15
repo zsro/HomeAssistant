@@ -25,26 +25,22 @@ function DisplayHome({ payload }) {
 
 function DisplayPinyin({ payload }) {
   const summary = payload.summary || {};
-  const selectedLesson = payload.selectedLesson || null;
-  const lessons = Array.isArray(payload.lessons) ? payload.lessons : [];
-  const selectedIndex = selectedLesson
-    ? lessons.findIndex((lesson) => lesson.id === selectedLesson.id)
-    : -1;
-  const visibleLessons = selectedIndex >= 0
-    ? lessons.slice(Math.max(0, selectedIndex - 2), Math.min(lessons.length, selectedIndex + 3))
-    : [];
+  const lesson = payload.lesson || null;
+  const stages = Array.isArray(payload.stages) ? payload.stages : [];
+  const currentStage = payload.currentStage || null;
+  const currentStep = payload.currentStep || null;
 
-  if (!selectedLesson) {
+  if (!lesson || !currentStep) {
     return (
       <div className="flex min-h-screen items-center justify-center bg-[linear-gradient(135deg,_#fff7ed,_#fed7aa_45%,_#ffedd5)] px-6 text-slate-900">
-        <div className="grid max-w-6xl gap-10 lg:grid-cols-[0.7fr_1.1fr] lg:items-center">
-          <div className="rounded-[40px] bg-white/80 p-8 shadow-2xl shadow-orange-200">
-            <p className="text-sm uppercase tracking-[0.35em] text-orange-600">拼音大字卡</p>
-            <h1 className="mt-5 text-4xl font-black sm:text-5xl">{payload.title}</h1>
-            <p className="mt-5 text-lg leading-8 text-slate-700">{payload.note}</p>
-          </div>
-          <div className="rounded-[56px] bg-slate-950 px-8 py-14 text-center text-white shadow-2xl shadow-slate-400/50">
-            <div className="text-[5rem] font-black tracking-[0.15em] sm:text-[10rem]">{payload.focusText}</div>
+        <div className="max-w-4xl rounded-[40px] bg-white/80 p-10 text-center shadow-2xl shadow-orange-200">
+          <p className="text-sm uppercase tracking-[0.35em] text-orange-600">拼音互动课堂</p>
+          <h1 className="mt-5 text-4xl font-black sm:text-5xl">{payload.title || '等待课程同步'}</h1>
+          <p className="mt-5 text-lg leading-8 text-slate-700">
+            控制端选择课程并推进步骤后，这里会自动切换到对应的电视分镜。
+          </p>
+          <div className="mt-8 rounded-[28px] bg-slate-950 px-8 py-8 text-white">
+            <div className="text-2xl font-black">准备开始今天的拼音课</div>
           </div>
         </div>
       </div>
@@ -52,142 +48,164 @@ function DisplayPinyin({ payload }) {
   }
 
   return (
-    <div className="min-h-screen bg-[radial-gradient(circle_at_top,_#fff7ed,_#fed7aa_34%,_#0f172a_96%)] px-6 py-6 text-white">
-      <div className="mx-auto grid min-h-[calc(100vh-3rem)] max-w-[1800px] gap-6 xl:grid-cols-[0.8fr_1.05fr_0.95fr]">
+    <div className="min-h-screen bg-[radial-gradient(circle_at_top,_#fef3c7,_#fed7aa_22%,_#0f172a_88%)] px-6 py-6 text-white">
+      <div className="mx-auto flex min-h-[calc(100vh-3rem)] max-w-[1800px] flex-col gap-6">
         <section className="rounded-[40px] border border-white/10 bg-slate-950/80 p-8 shadow-2xl shadow-slate-950/40 backdrop-blur">
-          <p className="text-sm uppercase tracking-[0.35em] text-cyan-200">拼音同步展示</p>
-          <h1 className="mt-5 text-4xl font-black leading-tight text-white">
-            {payload.title || '拼音课程选择'}
-          </h1>
-          <p className="mt-4 text-xl leading-9 text-slate-200">
-            {payload.subtitle || '控制端正在同步当前课程'}
-          </p>
-
-          <div className="mt-8 grid gap-4 sm:grid-cols-2">
-            <div className="rounded-[28px] bg-white/10 p-5">
-              <p className="text-xs uppercase tracking-[0.22em] text-slate-400">整体进度</p>
-              <p className="mt-3 text-5xl font-black text-white">{summary.completionRate || 0}%</p>
-              <p className="mt-3 text-sm text-slate-300">
-                已完成 {summary.completedLessons || 0} / {summary.totalLessons || 0}
-              </p>
-            </div>
-            <div className="rounded-[28px] bg-white/10 p-5">
-              <p className="text-xs uppercase tracking-[0.22em] text-slate-400">当前课程</p>
-              <p className="mt-3 text-3xl font-black text-white">
-                Lesson {selectedLesson.order}
-              </p>
-              <p className="mt-3 text-sm text-slate-300">
-                最近同步 {formatExpiry(payload.updatedAt)}
-              </p>
-            </div>
-          </div>
-
-          <div className="mt-8 rounded-[30px] bg-white px-6 py-6 text-slate-900">
-            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-orange-500">
-              当前选中
-            </p>
-            <h2 className="mt-3 text-4xl font-black">{selectedLesson.title}</h2>
-            <p className="mt-4 text-xl leading-9 text-slate-600">{selectedLesson.tagline}</p>
-            <div className="mt-6 flex flex-wrap gap-2">
-              {(selectedLesson.focus || []).map((item) => (
-                <span
-                  key={item}
-                  className="rounded-full bg-orange-50 px-4 py-2 text-base font-semibold text-orange-700"
-                >
-                  {item}
-                </span>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="relative overflow-hidden rounded-[48px] border border-white/10 bg-white/80 p-8 text-slate-900 shadow-2xl shadow-orange-200/40">
-          <div className="pointer-events-none absolute inset-x-8 top-8 h-28 rounded-t-[40px] bg-gradient-to-b from-white via-white/92 to-transparent" />
-          <div className="pointer-events-none absolute inset-x-8 bottom-8 h-28 rounded-b-[40px] bg-gradient-to-t from-white via-white/92 to-transparent" />
-          <div className="pointer-events-none absolute inset-x-8 top-1/2 h-[128px] -translate-y-1/2 rounded-[36px] border border-orange-200 bg-[linear-gradient(135deg,_#fff7ed,_#ffffff)] shadow-[0_20px_50px_rgba(251,146,60,0.18)]" />
-
-          <div className="relative z-10 flex h-full flex-col justify-center">
-            <div className="mb-8 text-center">
-              <p className="text-sm font-semibold uppercase tracking-[0.3em] text-orange-500">
-                课程选择同步中
-              </p>
-              <h2 className="mt-3 text-5xl font-black">滑动选课</h2>
-            </div>
-
-            <div className="space-y-5 px-6 py-16">
-              {visibleLessons.map((lesson) => {
-                const isCurrent = lesson.id === selectedLesson.id;
-                const isCompleted = lesson.isCompleted;
-
-                return (
-                  <div
-                    key={lesson.id}
-                    className={`flex items-center justify-between rounded-[32px] px-6 py-5 transition ${
-                      isCurrent
-                        ? 'scale-[1.03] bg-slate-950 text-white shadow-xl shadow-slate-300'
-                        : 'bg-white/70 text-slate-500'
-                    }`}
+          <div className="grid gap-6 xl:grid-cols-[1.2fr_0.8fr]">
+            <div>
+              <p className="text-sm uppercase tracking-[0.35em] text-cyan-200">拼音互动课堂</p>
+              <h1 className="mt-4 text-5xl font-black leading-tight text-white">
+                Lesson {lesson.order} · {lesson.title}
+              </h1>
+              <p className="mt-4 text-xl leading-9 text-slate-200">{lesson.tagline}</p>
+              <div className="mt-6 flex flex-wrap gap-2">
+                {(lesson.focus || []).map((item) => (
+                  <span
+                    key={item}
+                    className="rounded-full bg-white/10 px-4 py-2 text-base font-semibold text-cyan-100"
                   >
-                    <div>
-                      <p className={`text-sm font-semibold uppercase tracking-[0.22em] ${isCurrent ? 'text-orange-200' : 'text-slate-400'}`}>
-                        Lesson {lesson.order}
-                      </p>
-                      <p className="mt-2 text-3xl font-black">{lesson.title}</p>
-                    </div>
-                    <div className="flex flex-col items-end gap-3">
-                      {lesson.isRecommended && (
-                        <span className={`rounded-full px-4 py-2 text-sm font-semibold ${isCurrent ? 'bg-white/15 text-white' : 'bg-orange-100 text-orange-700'}`}>
-                          当前推荐
-                        </span>
-                      )}
-                      <span className={`rounded-full px-4 py-2 text-sm font-semibold ${
-                        isCurrent
-                          ? 'bg-white/15 text-white'
-                          : isCompleted
-                            ? 'bg-emerald-100 text-emerald-700'
-                            : 'bg-slate-100 text-slate-500'
-                      }`}>
-                        {isCompleted ? '已完成' : '待学习'}
-                      </span>
-                    </div>
-                  </div>
-                );
-              })}
+                    {item}
+                  </span>
+                ))}
+              </div>
             </div>
+
+            <div className="grid gap-4 sm:grid-cols-2">
+              <div className="rounded-[28px] bg-white/10 p-5">
+                <p className="text-xs uppercase tracking-[0.22em] text-slate-400">整体进度</p>
+                <p className="mt-3 text-5xl font-black text-white">{summary.completionRate || 0}%</p>
+                <p className="mt-3 text-sm text-slate-300">
+                  已完成 {summary.completedLessons || 0} / {summary.totalLessons || 0}
+                </p>
+              </div>
+              <div className="rounded-[28px] bg-white/10 p-5">
+                <p className="text-xs uppercase tracking-[0.22em] text-slate-400">当前步骤</p>
+                <p className="mt-3 text-4xl font-black text-white">
+                  {currentStep.stepIndex} / {currentStep.totalStepCount}
+                </p>
+                <p className="mt-3 text-sm text-slate-300">
+                  最近同步 {formatExpiry(payload.updatedAt)}
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-8 grid gap-3 lg:grid-cols-4">
+            {stages.map((stage) => (
+              <div
+                key={stage.id}
+                className={`rounded-[28px] border px-5 py-4 ${
+                  stage.isActive
+                    ? 'border-amber-300 bg-amber-50 text-slate-900'
+                    : stage.isCompleted
+                      ? 'border-emerald-300 bg-emerald-50 text-slate-900'
+                      : 'border-white/10 bg-white/6 text-white'
+                }`}
+              >
+                <p className={`text-xs font-semibold uppercase tracking-[0.22em] ${stage.isActive || stage.isCompleted ? 'text-slate-500' : 'text-slate-400'}`}>
+                  课堂板块
+                </p>
+                <p className="mt-2 text-xl font-black">{stage.title}</p>
+                <p className={`mt-2 text-sm leading-6 ${stage.isActive || stage.isCompleted ? 'text-slate-600' : 'text-slate-300'}`}>
+                  {stage.summary}
+                </p>
+              </div>
+            ))}
           </div>
         </section>
 
-        <section className="rounded-[40px] border border-white/10 bg-slate-950/80 p-8 shadow-2xl shadow-slate-950/40 backdrop-blur">
-          <div className="rounded-[32px] bg-white/8 p-6">
-            <p className="text-sm uppercase tracking-[0.28em] text-amber-200">课堂提示</p>
-            <h2 className="mt-4 text-4xl font-black leading-tight text-white">
-              {selectedLesson.stageTitle}
-            </h2>
-            <p className="mt-4 text-lg leading-8 text-slate-300">
-              预计 {selectedLesson.durationMinutes} 分钟，控制端滑动选课时，这里会实时跟着高亮。
-            </p>
-          </div>
+        <section className="grid flex-1 gap-6 xl:grid-cols-[1.05fr_0.95fr_0.8fr]">
+          <div className="rounded-[40px] bg-white p-6 text-slate-900 shadow-2xl shadow-orange-200/40">
+            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-orange-500">电视画面</p>
+            <h2 className="mt-3 text-4xl font-black leading-tight">{currentStep.title}</h2>
+            <p className="mt-5 text-xl leading-9 text-slate-700">{currentStep.tvScene}</p>
 
-          <div className="mt-6 rounded-[32px] bg-white p-6 text-slate-900">
-            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-slate-400">本课目标</p>
-            <div className="mt-4 space-y-4">
-              {(selectedLesson.goals || []).map((goal) => (
-                <div key={goal} className="flex gap-4">
-                  <span className="mt-2 h-3 w-3 shrink-0 rounded-full bg-orange-500" />
-                  <p className="text-xl leading-9">{goal}</p>
-                </div>
-              ))}
+            <div className="mt-6 rounded-[28px] bg-slate-950 p-5 text-white">
+              <p className="text-xs uppercase tracking-[0.22em] text-slate-400">教师引导语</p>
+              <p className="mt-3 text-lg leading-8">{currentStep.teacherPrompt}</p>
+            </div>
+
+            <div className="mt-6 rounded-[28px] bg-amber-50 p-5">
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-amber-700">课堂反馈</p>
+              <p className="mt-3 text-base leading-7 text-slate-700">{currentStep.feedback}</p>
             </div>
           </div>
 
-          <div className="mt-6 rounded-[32px] bg-white/8 p-6">
-            <p className="text-sm uppercase tracking-[0.22em] text-slate-400">练习句</p>
-            <p className="mt-4 text-3xl font-black leading-tight text-white">
-              {selectedLesson.practiceSentence}
-            </p>
-            <p className="mt-4 text-lg leading-8 text-slate-300">
-              {selectedLesson.miniTask}
-            </p>
+          <div className="rounded-[40px] border border-white/10 bg-slate-950/80 p-6 shadow-2xl shadow-slate-950/40">
+            <p className="text-sm uppercase tracking-[0.25em] text-cyan-200">手机操作</p>
+            <h2 className="mt-3 text-4xl font-black text-white">{currentStage?.title || currentStep.stageTitle}</h2>
+            <p className="mt-5 text-xl leading-9 text-slate-200">{currentStep.controllerScene}</p>
+
+            <div className="mt-6 rounded-[28px] bg-white/8 p-5">
+              <p className="text-xs uppercase tracking-[0.22em] text-slate-400">交互动作</p>
+              <p className="mt-3 text-lg leading-8 text-white">{currentStep.interaction}</p>
+            </div>
+
+            <div className="mt-6">
+              <p className="text-xs uppercase tracking-[0.22em] text-slate-400">当前高亮</p>
+              <div className="mt-3 flex flex-wrap gap-2">
+                {(currentStep.highlights || []).map((item) => (
+                  <span
+                    key={item}
+                    className="rounded-full bg-white/10 px-4 py-2 text-sm font-semibold text-cyan-100"
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="rounded-[40px] border border-white/10 bg-slate-950/80 p-6 shadow-2xl shadow-slate-950/40">
+            <div className="rounded-[28px] bg-white/8 p-5">
+              <p className="text-sm uppercase tracking-[0.22em] text-amber-200">课堂提示</p>
+              <h2 className="mt-4 text-3xl font-black leading-tight text-white">
+                {lesson.stageTitle}
+              </h2>
+              <p className="mt-4 text-base leading-8 text-slate-300">
+                预计 {lesson.durationMinutes} 分钟，手机端按“上一步 / 下一步”推进，这里会同步切换课堂分镜。
+              </p>
+            </div>
+
+            <div className="mt-6 rounded-[28px] bg-white p-5 text-slate-900">
+              <p className="text-sm font-semibold uppercase tracking-[0.22em] text-slate-400">本课目标</p>
+              <div className="mt-4 space-y-4">
+                {(lesson.goals || []).map((goal) => (
+                  <div key={goal} className="flex gap-3">
+                    <span className="mt-2 h-3 w-3 shrink-0 rounded-full bg-orange-500" />
+                    <p className="text-base leading-7">{goal}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="mt-6 rounded-[28px] bg-white/8 p-5">
+              <p className="text-sm uppercase tracking-[0.22em] text-slate-400">练习句</p>
+              <p className="mt-4 text-2xl font-black leading-tight text-white">
+                {lesson.practiceSentence}
+              </p>
+              <p className="mt-4 text-base leading-8 text-slate-300">
+                {lesson.miniTask}
+              </p>
+            </div>
+
+            <div className="mt-6 space-y-3">
+              {(currentStep.resources || []).length > 0 ? currentStep.resources.map((resource) => (
+                <div key={resource.label} className="rounded-[24px] bg-white/8 px-4 py-4">
+                  <div className="flex items-center justify-between gap-3">
+                    <span className="text-sm font-semibold text-white">{resource.label}</span>
+                    <span className="rounded-full bg-amber-200/15 px-3 py-1 text-xs font-semibold text-amber-100">
+                      待补充
+                    </span>
+                  </div>
+                  <p className="mt-2 text-sm leading-6 text-slate-300">{resource.solution}</p>
+                </div>
+              )) : (
+                <div className="rounded-[24px] bg-white/8 px-4 py-4 text-sm leading-7 text-slate-300">
+                  当前步骤没有额外素材依赖，先用文案、色块和动效就能跑通课堂流程。
+                </div>
+              )}
+            </div>
           </div>
         </section>
       </div>
