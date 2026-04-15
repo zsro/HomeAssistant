@@ -2,15 +2,18 @@
   "name": "homeassistant",
   "private": true,
   "scripts": {
-    "dev": "npm run dev:backend & npm run dev:frontend",
+    "dev": "npm run dev:backend & npm run dev:frontend & npm run dev:display",
     "dev:backend": "npm --prefix backend run dev",
     "dev:frontend": "npm --prefix frontend run dev",
+    "dev:display": "npm --prefix display-frontend run dev",
     "start:backend": "npm --prefix backend run start",
-    "build": "npm run build:frontend",
+    "build": "npm run build:frontend && npm run build:display",
     "build:frontend": "npm --prefix frontend run build",
+    "build:display": "npm --prefix display-frontend run build",
     "openapi:write": "node scripts/sync-apifox.js --write-only",
     "apifox:sync": "node scripts/sync-apifox.js",
-    "lint": "npm run lint:frontend",
-    "lint:frontend": "npm --prefix frontend run lint"
+    "lint": "npm run lint:frontend && npm run lint:display",
+    "lint:frontend": "npm --prefix frontend run lint",
+    "lint:display": "npm --prefix display-frontend run lint"
   }
 }

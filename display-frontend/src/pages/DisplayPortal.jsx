@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
-import { useDisplayStore } from '../../stores/displayStore';
-import { createDisplaySocket } from '../../utils/displaySocket';
+import { useDisplayStore } from '../stores/displayStore';
+import { createDisplaySocket } from '../utils/displaySocket';
 
 function formatExpiry(expiresAt) {
   if (!expiresAt) {
@@ -176,10 +176,7 @@ function DisplayPinyin({ payload }) {
               <p className="mt-4 text-xl leading-9 text-slate-200">{lesson.tagline}</p>
               <div className="mt-6 flex flex-wrap gap-2">
                 {(lesson.focus || []).map((item) => (
-                  <span
-                    key={item}
-                    className="rounded-full bg-white/10 px-4 py-2 text-base font-semibold text-cyan-100"
-                  >
+                  <span key={item} className="rounded-full bg-white/10 px-4 py-2 text-base font-semibold text-cyan-100">
                     {item}
                   </span>
                 ))}
@@ -260,10 +257,7 @@ function DisplayPinyin({ payload }) {
               <p className="text-sm uppercase tracking-[0.22em] text-slate-400">当前高亮</p>
               <div className="mt-4 flex flex-wrap gap-2">
                 {(currentStep.highlights || []).map((item) => (
-                  <span
-                    key={item}
-                    className="rounded-full bg-white/10 px-4 py-2 text-sm font-semibold text-cyan-100"
-                  >
+                  <span key={item} className="rounded-full bg-white/10 px-4 py-2 text-sm font-semibold text-cyan-100">
                     {item}
                   </span>
                 ))}
@@ -357,7 +351,7 @@ function DisplayScreen({ state }) {
   }
 }
 
-function DisplayPortal() {
+export default function DisplayPortal() {
   const {
     device,
     pairCode,
@@ -470,8 +464,8 @@ function DisplayPortal() {
     displayToken,
     invalidateSocketAuth,
     pairToken,
-    socketAuthReady,
     setSocketConnected,
+    socketAuthReady,
   ]);
 
   if (isBound && currentState) {
@@ -545,5 +539,3 @@ function DisplayPortal() {
     </div>
   );
 }
-
-export default DisplayPortal;

@@ -8,7 +8,6 @@ import Family from './pages/Family';
 import Pinyin from './pages/Pinyin';
 import ControlHome from './pages/control/ControlHome';
 import ControlDevice from './pages/control/ControlDevice';
-import DisplayPortal from './pages/display/DisplayPortal';
 import './App.css';
 
 function ProtectedRoute({ children, loginPath = '/login' }) {
@@ -36,9 +35,8 @@ function ProtectedRoute({ children, loginPath = '/login' }) {
 
 function Navbar() {
   const { user, family, logout, isAuthenticated } = useAuthStore();
-  const location = useLocation();
 
-  if (!isAuthenticated || location.pathname.startsWith('/display')) {
+  if (!isAuthenticated) {
     return null;
   }
 
@@ -119,7 +117,6 @@ function AppShell() {
             </ProtectedRoute>
           }
         />
-        <Route path="/display" element={<DisplayPortal />} />
         <Route
           path="/"
           element={

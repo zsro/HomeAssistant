@@ -10,7 +10,8 @@
 # - 后端历史版本: /var/lib/home-assistant/releases
 # - 后端共享配置: /var/lib/home-assistant/shared/backend.env
 # - 后端日志目录: /var/lib/home-assistant/logs
-# - 前端静态目录: /var/www/home-assistant
+# - 控制端静态目录: /var/www/home-assistant
+# - 展示端静态目录: /var/www/home-assistant/display
 
 set -euo pipefail
 
@@ -120,8 +121,10 @@ tar \
     --exclude=.git \
     --exclude=node_modules \
     --exclude=frontend/node_modules \
+    --exclude=display-frontend/node_modules \
     --exclude=backend/node_modules \
     --exclude=frontend/dist \
+    --exclude=display-frontend/dist \
     --exclude=logs \
     --exclude=backend/logs \
     --exclude=ecosystem.config.js \
@@ -136,18 +139,25 @@ run_npm_install "$RELEASE_DIR/backend"
 echo -e "${GREEN}✓ 后端依赖安装完成${NC}"
 echo ""
 
-echo -e "${YELLOW}[5/10] 安装前端依赖并构建...${NC}"
+echo -e "${YELLOW}[5/10] 安装控制端与展示端依赖并构建...${NC}"
 run_npm_install "$RELEASE_DIR/frontend"
 npm --prefix "$RELEASE_DIR/frontend" run build
-echo -e "${GREEN}✓ 前端构建完成${NC}"
+run_npm_install "$RELEASE_DIR/display-frontend"
+npm --prefix "$RELEASE_DIR/display-frontend" run build
+echo -e "${GREEN}✓ 控制端与展示端构建完成${NC}"
 echo ""
 
 if [ ! -d "$RELEASE_DIR/frontend/dist" ]; then
-    echo -e "${RED}错误: 前端构建失败，dist 目录不存在${NC}"
+    echo -e "${RED}错误: 控制端构建失败，frontend/dist 目录不存在${NC}"
     exit 1
 fi
 
-echo -e "${YELLOW}[6/10] 部署前端静态文件到 Nginx 目录...${NC}"
+if [ ! -d "$RELEASE_DIR/display-frontend/dist" ]; then
+    echo -e "${RED}错误: 展示端构建失败，display-frontend/dist 目录不存在${NC}"
+    exit 1
+fi
+
+echo -e "${YELLOW}[6/10] 部署控制端与展示端静态文件到 Nginx 目录...${NC}"
 if command -v nginx >/dev/null 2>&1; then
     if [ -d "/etc/nginx/conf.d" ]; then
         NGINX_CONF_DIR="/etc/nginx/conf.d"
@@ -203,6 +213,26 @@ server {
         add_header Content-Type application/json;
     }
 
+    location /display/assets/ {
+        root $WEB_ROOT;
+        try_files \$uri =404;
+        access_log off;
+        expires 1y;
+        add_header Cache-Control "public, immutable";
+    }
+
+    location = /display {
+        return 301 /display/;
+    }
+
+    location /display/ {
+        root $WEB_ROOT;
+        try_files \$uri \$uri/ /display/index.html;
+        add_header Cache-Control "no-cache, no-store, must-revalidate";
+        add_header Pragma "no-cache";
+        add_header Expires "0";
+    }
+
     location /assets/ {
         root $WEB_ROOT;
         try_files \$uri =404;
@@ -246,15 +276,17 @@ EOF
     sudo mkdir -p "$WEB_ROOT"
     sudo rm -rf "$WEB_ROOT"/*
     sudo cp -r "$RELEASE_DIR/frontend/dist/"* "$WEB_ROOT/"
+    sudo mkdir -p "$WEB_ROOT/display"
+    sudo cp -r "$RELEASE_DIR/display-frontend/dist/"* "$WEB_ROOT/display/"
     sudo chown -R nginx:nginx "$WEB_ROOT" 2>/dev/null || sudo chown -R www-data:www-data "$WEB_ROOT"
 
     echo -e "${YELLOW}部署的静态文件:${NC}"
     ls -la "$WEB_ROOT" | head -10
 
     sudo nginx -t && sudo systemctl reload nginx
-    echo -e "${GREEN}✓ 前端静态文件部署完成${NC}"
+    echo -e "${GREEN}✓ 控制端与展示端静态文件部署完成${NC}"
 else
-    echo -e "${YELLOW}警告: Nginx 未安装，跳过前端部署${NC}"
+    echo -e "${YELLOW}警告: Nginx 未安装，跳过控制端与展示端静态文件部署${NC}"
 fi
 echo ""
 
@@ -359,7 +391,8 @@ echo "  当前后端版本: $CURRENT_LINK"
 echo "  历史版本目录: $RELEASES_DIR"
 echo "  共享环境文件: $ENV_FILE"
 echo "  后端日志目录: $LOG_DIR"
-echo "  前端静态目录: $WEB_ROOT"
+echo "  控制端静态目录: $WEB_ROOT"
+echo "  展示端静态目录: $WEB_ROOT/display"
 echo ""
 echo -e "${GREEN}========================================${NC}"
 echo -e "${GREEN}  部署完成！${NC}"

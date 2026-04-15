@@ -109,31 +109,6 @@ export const useDisplayStore = create((set, get) => ({
     }
   },
 
-  pollSession: async () => {
-    const token = get().displayToken || get().pairToken;
-    if (!token) {
-      return;
-    }
-
-    try {
-      const response = await displayApi.getSession(token);
-      applySessionData(set, response.data);
-    } catch (error) {
-      clearDisplaySessionStorage();
-      set({
-        sessionId: null,
-        pairToken: null,
-        displayToken: null,
-        pairCode: null,
-        expiresAt: null,
-        isBound: false,
-        device: null,
-        currentState: null,
-        error: error.message || '获取展示会话失败',
-      });
-    }
-  },
-
   applySocketSession: (data) => {
     applySessionData(set, data);
   },
@@ -181,20 +156,6 @@ export const useDisplayStore = create((set, get) => ({
       applySessionData(set, response.data);
     } catch (error) {
       set({ error: error.message || '刷新配对码失败' });
-    }
-  },
-
-  pollState: async () => {
-    const token = get().displayToken;
-    if (!token) {
-      return;
-    }
-
-    try {
-      const response = await displayApi.getState(token);
-      set({ currentState: response.data, error: null, isBound: true });
-    } catch (error) {
-      set({ error: error.message || '获取展示内容失败' });
     }
   },
 
