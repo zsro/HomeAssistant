@@ -1,4 +1,0 @@
-interface:
-  display_name: "Requirement To Design"
-  short_description: "Turn rough requests into concrete feature specs"
-  default_prompt: "Use $requirement-to-design to turn this request into a concrete design and interaction flow."
