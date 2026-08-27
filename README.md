@@ -2,6 +2,8 @@
 
 基于 TypeScript、Express 5、Sequelize 和 MySQL 8 的邀请制用户后端。公开注册必须使用已有用户的邀请码；每位用户拥有一个长期可复用的唯一邀请码。
 
+Web 前端位于 [`frontend/`](frontend/)，提供登录、邀请码注册、登录态恢复和个人邀请码展示。
+
 ## 本地配置
 
 ```bash
@@ -36,6 +38,25 @@ ALLOW_LEGACY_RESET=1
 - OpenAPI：`GET /api/openapi.json`
 - Swagger UI：`GET /api/docs`
 
+## Web 前端
+
+前端使用 React、TypeScript 和 Vite，开发服务默认监听 `5173`，并将 `/api` 代理到本地后端 `http://127.0.0.1:3001`：
+
+```bash
+npm --prefix frontend install
+npm run frontend:dev
+```
+
+前端质量检查与构建：
+
+```bash
+npm run frontend:lint
+npm run frontend:test
+npm run frontend:build
+```
+
+生产构建使用同源 `/api`，Nginx 将 `/api` 转发到后端。`deploy.sh` 会构建前端并通过版本化静态目录切换 `/var/www/home-assistant`。
+
 ## API
 
 - `POST /api/v1/auth/register`
@@ -67,4 +88,4 @@ cd /var/HomeAssistant
 SERVER_NAME=106.15.230.148 ./deploy.sh
 ```
 
-部署脚本会构建独立 release、创建压缩数据库备份、应用 migration、切换 `current`、重启 PM2，并通过 `/api/ready` 验证新版本。migration 失败时不会切换 release 或重启当前服务。
+部署脚本会构建独立的前后端 release、默认创建压缩数据库备份、应用 migration、切换 `current`、重启 PM2、发布静态站点，并验证后端就绪和前端访问。migration 失败时不会切换 release 或重启当前服务。只有用户明确放弃备份时才允许临时设置 `SKIP_DATABASE_BACKUP=1`。

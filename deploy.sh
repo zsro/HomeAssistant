@@ -12,9 +12,13 @@ ENV_FILE="$SHARED_DIR/backend.env"
 BACKUP_DIR="$DEPLOY_ROOT/backups"
 LOG_DIR="$DEPLOY_ROOT/logs"
 PM2_CONFIG="$DEPLOY_ROOT/ecosystem.config.js"
+STATIC_ROOT="${STATIC_ROOT:-/var/www/home-assistant}"
+STATIC_RELEASES_DIR="${STATIC_RELEASES_DIR:-/var/www/home-assistant-releases}"
 RELEASE_ID="$(date +%Y%m%d-%H%M%S)"
 RELEASE_DIR="$RELEASES_DIR/release-$RELEASE_ID"
+STATIC_RELEASE_DIR="$STATIC_RELEASES_DIR/release-$RELEASE_ID"
 PREVIOUS_RELEASE=""
+PREVIOUS_STATIC_RELEASE=""
 
 if [ "$SCRIPT_DIR" != "/var/HomeAssistant" ]; then
   echo "错误: 只能从 /var/HomeAssistant 执行生产部署"
@@ -41,7 +45,7 @@ if [ ! -f "$ENV_FILE" ]; then
   exit 1
 fi
 
-mkdir -p "$RELEASES_DIR" "$SHARED_DIR" "$BACKUP_DIR" "$LOG_DIR"
+mkdir -p "$RELEASES_DIR" "$SHARED_DIR" "$BACKUP_DIR" "$LOG_DIR" "$STATIC_RELEASES_DIR"
 mkdir -p "$RELEASE_DIR"
 
 tar \
@@ -54,11 +58,25 @@ tar \
 ln -sfn "$ENV_FILE" "$RELEASE_DIR/.env"
 npm --prefix "$RELEASE_DIR" ci
 npm --prefix "$RELEASE_DIR" run build
+npm --prefix "$RELEASE_DIR/frontend" ci
+npm --prefix "$RELEASE_DIR/frontend" run build
+
+mkdir -p "$STATIC_RELEASE_DIR"
+cp -a "$RELEASE_DIR/frontend/dist/." "$STATIC_RELEASE_DIR/"
+if [ ! -f "$STATIC_RELEASE_DIR/index.html" ]; then
+  echo "错误: 前端构建缺少 index.html"
+  exit 1
+fi
+chown -R nginx:nginx "$STATIC_RELEASE_DIR"
 
 mkdir -p "$BACKUP_DIR"
 (
   cd "$RELEASE_DIR"
-  ENV_FILE="$ENV_FILE" BACKUP_DIR="$BACKUP_DIR" node dist/scripts/backup-database.js
+  if [ "${SKIP_DATABASE_BACKUP:-0}" = "1" ]; then
+    echo "警告: 已按显式配置跳过数据库备份"
+  else
+    ENV_FILE="$ENV_FILE" BACKUP_DIR="$BACKUP_DIR" node dist/scripts/backup-database.js
+  fi
   ENV_FILE="$ENV_FILE" node dist/src/database/migrate.js
 )
 
@@ -115,7 +133,44 @@ fi
 
 pm2 save
 
+if [ -L "$STATIC_ROOT" ]; then
+  PREVIOUS_STATIC_RELEASE="$(readlink -f "$STATIC_ROOT")"
+elif [ -d "$STATIC_ROOT" ]; then
+  PREVIOUS_STATIC_RELEASE="$STATIC_RELEASES_DIR/release-legacy-$RELEASE_ID"
+  mv "$STATIC_ROOT" "$PREVIOUS_STATIC_RELEASE"
+elif [ -e "$STATIC_ROOT" ]; then
+  echo "错误: 静态站点路径既不是目录也不是符号链接: $STATIC_ROOT"
+  exit 1
+fi
+
+ln -sfn "$STATIC_RELEASE_DIR" "$STATIC_ROOT"
+
+frontend_ok=false
+for _ in {1..10}; do
+  if curl -ksSf --resolve meiji3d.com:443:127.0.0.1 https://meiji3d.com/ \
+    | grep -q 'Home Assistant · 账户中心'; then
+    frontend_ok=true
+    break
+  fi
+  sleep 1
+done
+
+if [ "$frontend_ok" != true ]; then
+  echo "错误: 新前端访问检查失败"
+  if [ -n "$PREVIOUS_STATIC_RELEASE" ]; then
+    ln -sfn "$PREVIOUS_STATIC_RELEASE" "$STATIC_ROOT"
+  else
+    rm -f "$STATIC_ROOT"
+  fi
+  exit 1
+fi
+
 find "$RELEASES_DIR" -mindepth 1 -maxdepth 1 -type d -name 'release-*' -printf '%T@ %p\n' \
+  | sort -rn \
+  | awk 'NR > 3 { print $2 }' \
+  | while IFS= read -r old_release; do rm -rf "$old_release"; done
+
+find "$STATIC_RELEASES_DIR" -mindepth 1 -maxdepth 1 -type d -name 'release-*' -printf '%T@ %p\n' \
   | sort -rn \
   | awk 'NR > 3 { print $2 }' \
   | while IFS= read -r old_release; do rm -rf "$old_release"; done
@@ -128,3 +183,4 @@ fi
 echo "部署成功"
 echo "commit=$(git -C "$SCRIPT_DIR" rev-parse HEAD)"
 echo "release=$RELEASE_DIR"
+echo "static_release=$STATIC_RELEASE_DIR"
