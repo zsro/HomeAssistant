@@ -104,12 +104,22 @@ module.exports = {
 };
 EOF
 
-if ! pm2 startOrReload "$PM2_CONFIG" --env production --update-env; then
-  echo "错误: PM2 启动新版本失败"
-  if [ -n "$PREVIOUS_RELEASE" ]; then
+start_backend() {
+  pm2 delete "$PROJECT_NAME" >/dev/null 2>&1 || true
+  pm2 start "$PM2_CONFIG" --env production --update-env
+}
+
+rollback_backend() {
+  pm2 delete "$PROJECT_NAME" >/dev/null 2>&1 || true
+  if [ "${ALLOW_LEGACY_RESET:-0}" != "1" ] && [ -n "$PREVIOUS_RELEASE" ]; then
     ln -sfn "$PREVIOUS_RELEASE" "$CURRENT_LINK"
-    pm2 startOrReload "$PM2_CONFIG" --env production --update-env || true
+    pm2 start "$PM2_CONFIG" --env production --update-env || true
   fi
+}
+
+if ! start_backend; then
+  echo "错误: PM2 启动新版本失败"
+  rollback_backend
   exit 1
 fi
 
@@ -124,10 +134,7 @@ done
 
 if [ "$health_ok" != true ]; then
   echo "错误: 新版本就绪检查失败"
-  if [ -n "$PREVIOUS_RELEASE" ]; then
-    ln -sfn "$PREVIOUS_RELEASE" "$CURRENT_LINK"
-    pm2 startOrReload "$PM2_CONFIG" --env production --update-env || true
-  fi
+  rollback_backend
   exit 1
 fi
 
