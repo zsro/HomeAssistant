@@ -36,9 +36,14 @@ if [ "$(git -C "$SCRIPT_DIR" branch --show-current)" != "main" ]; then
   exit 1
 fi
 
-for command in node npm git tar pm2 mysqldump curl; do
+for command in node npm git tar pm2 mysqldump curl g++ nginx; do
   command -v "$command" >/dev/null 2>&1 || { echo "错误: 缺少 $command"; exit 1; }
 done
+
+if ! id nginx >/dev/null 2>&1; then
+  echo "错误: 缺少 nginx 系统用户"
+  exit 1
+fi
 
 if [ ! -f "$ENV_FILE" ]; then
   echo "错误: 缺少生产环境文件 $ENV_FILE"
@@ -154,7 +159,7 @@ ln -sfn "$STATIC_RELEASE_DIR" "$STATIC_ROOT"
 
 frontend_ok=false
 for _ in {1..10}; do
-  if curl -ksSf --resolve meiji3d.com:443:127.0.0.1 https://meiji3d.com/ \
+  if curl -sSf --resolve meiji3d.com:443:127.0.0.1 https://meiji3d.com/ \
     | grep -q 'Home Assistant · 账户中心'; then
     frontend_ok=true
     break
