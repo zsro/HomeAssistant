@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useAuth } from '../auth/auth-context';
-import { Logo } from '../components/Logo';
+import { AppHeader } from '../components/AppHeader';
 
 export function AccountPage() {
   const { user, signOut } = useAuth();
@@ -25,13 +25,8 @@ export function AccountPage() {
   };
 
   return (
-    <main className="account-shell">
-      <header className="account-nav">
-        <Logo />
-        <button className="text-button" type="button" onClick={handleSignOut} disabled={signingOut}>
-          {signingOut ? '正在退出…' : '退出登录'}
-        </button>
-      </header>
+    <main className="app-shell">
+      <AppHeader user={user} />
       <section className="account-main">
         <div className="welcome-row">
           <div>
@@ -65,10 +60,14 @@ export function AccountPage() {
               <div><dt>账户状态</dt><dd><span className="status-dot" />正常</dd></div>
               <div><dt>加入时间</dt><dd>{new Intl.DateTimeFormat('zh-CN', { dateStyle: 'long' }).format(new Date(user.createdAt))}</dd></div>
             </dl>
+            <button className="sign-out-button" type="button" onClick={handleSignOut} disabled={signingOut}>
+              <span>{signingOut ? '正在安全退出…' : '退出登录'}</span>
+              {!signingOut && <span aria-hidden="true">→</span>}
+            </button>
           </article>
         </div>
       </section>
-      <footer className="account-footer">Home Assistant · 安全连接你的生活</footer>
+      <footer className="app-footer">Home Assistant · 安全连接你的生活</footer>
     </main>
   );
 }
