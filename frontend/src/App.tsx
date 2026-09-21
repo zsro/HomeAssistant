@@ -6,6 +6,7 @@ import { AccountPage } from './pages/AccountPage';
 import { HomePage } from './pages/HomePage';
 import { LoginPage } from './pages/LoginPage';
 import { MathPrintablePage } from './pages/MathPrintablePage';
+import { PinyinPrintablePage } from './pages/PinyinPrintablePage';
 import { PrinterPage } from './pages/PrinterPage';
 import { RegisterPage } from './pages/RegisterPage';
 
@@ -47,6 +48,7 @@ export function App() {
         <Route path="/account" element={<Protected><AccountPage /></Protected>} />
         <Route path="/modules/printer" element={<Protected><PrinterPage /></Protected>} />
         <Route path="/modules/printer/kindergarten/math" element={<Protected><MathPrintablePage /></Protected>} />
+        <Route path="/modules/printer/kindergarten/pinyin" element={<Protected><PinyinPrintablePage /></Protected>} />
         <Route path="*" element={<Navigate to={status === 'authenticated' ? '/' : '/login'} replace />} />
       </Routes>
     </>

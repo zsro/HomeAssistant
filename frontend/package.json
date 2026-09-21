@@ -10,6 +10,7 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "generate:math-samples": "vite-node scripts/generate-math-pdf-samples.tsx",
+    "generate:pinyin-samples": "vite-node scripts/generate-pinyin-pdf-samples.tsx",
     "lint": "eslint .",
     "test": "vitest run",
     "preview": "vite preview"

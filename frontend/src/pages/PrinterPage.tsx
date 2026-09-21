@@ -30,6 +30,11 @@ export function PrinterPage() {
             <span>5-6 岁幼小衔接</span>
           </div>
           <div className="content-module-grid">
+            <Link className="content-module-card" to="/modules/printer/kindergarten/pinyin">
+              <span className="content-module-icon pinyin-card-icon" aria-hidden="true">ā</span>
+              <div><h3>拼音</h3><p>认读、连线、描写与常用词语拼写，词库依次轮换。</p></div>
+              <span className="content-module-arrow" aria-hidden="true">→</span>
+            </Link>
             <Link className="content-module-card" to="/modules/printer/kindergarten/math">
               <span className="content-module-icon" aria-hidden="true">1+2</span>
               <div><h3>数学</h3><p>随机生成六类数学练习，并可单独下载答案。</p></div>
