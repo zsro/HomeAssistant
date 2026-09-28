@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { lazy, Suspense, useEffect } from 'react';
 import { Navigate, Route, Routes, useLocation } from 'react-router-dom';
 import { useAuth } from './auth/auth-context';
 import { LoadingScreen } from './components/LoadingScreen';
@@ -9,6 +9,8 @@ import { MathPrintablePage } from './pages/MathPrintablePage';
 import { PinyinPrintablePage } from './pages/PinyinPrintablePage';
 import { PrinterPage } from './pages/PrinterPage';
 import { RegisterPage } from './pages/RegisterPage';
+
+const RichmanPage = lazy(() => import('./pages/RichmanPage').then((module) => ({ default: module.RichmanPage })));
 
 function PublicOnly({ children }: { children: React.ReactNode }) {
   const { status } = useAuth();
@@ -46,6 +48,7 @@ export function App() {
         <Route path="/register" element={<PublicOnly><RegisterPage /></PublicOnly>} />
         <Route path="/" element={<Protected><HomePage /></Protected>} />
         <Route path="/account" element={<Protected><AccountPage /></Protected>} />
+        <Route path="/modules/richman" element={<Protected><Suspense fallback={<LoadingScreen />}><RichmanPage /></Suspense></Protected>} />
         <Route path="/modules/printer" element={<Protected><PrinterPage /></Protected>} />
         <Route path="/modules/printer/kindergarten/math" element={<Protected><MathPrintablePage /></Protected>} />
         <Route path="/modules/printer/kindergarten/pinyin" element={<Protected><PinyinPrintablePage /></Protected>} />

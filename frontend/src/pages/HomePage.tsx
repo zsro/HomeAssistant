@@ -33,10 +33,15 @@ export function HomePage() {
         </div>
 
         <section className="module-collection" aria-labelledby="module-collection-heading">
-          <div className="module-collection-heading"><div><p className="home-card-kicker">MODULE COLLECTION</p><h2 id="module-collection-heading">模块集合</h2></div><span>1 个可用模块</span></div>
+          <div className="module-collection-heading"><div><p className="home-card-kicker">MODULE COLLECTION</p><h2 id="module-collection-heading">模块集合</h2></div><span>2 个可用模块</span></div>
           <Link className="module-entry-card" to="/modules/printer">
             <span className="module-entry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 9V4h10v5M7 18H5a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" /><path d="M7 14h10v7H7z" /><path d="M17.5 12h.01" /></svg></span>
             <span className="module-entry-copy"><small>学习内容输出</small><strong>打印机</strong><span>生成适合 A4 纸打印的学习 PDF</span></span>
+            <span className="module-entry-arrow" aria-hidden="true">→</span>
+          </Link>
+          <Link className="module-entry-card" to="/modules/richman" style={{ marginTop: 14 }}>
+            <span className="module-entry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4" /><path d="M8 8h.01M16 8h.01M12 12h.01M8 16h.01M16 16h.01" /></svg></span>
+            <span className="module-entry-copy"><small>经典游戏 · 技术体验</small><strong>大富翁</strong><span>和四位老朋友，掷骰开启日本之旅</span></span>
             <span className="module-entry-arrow" aria-hidden="true">→</span>
           </Link>
         </section>

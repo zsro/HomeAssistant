@@ -16,3 +16,6 @@ logs/
 .idea/
 .vscode/
 *.local
+
+# Locally exported game assets (rebuild from the user-provided installation)
+frontend/public/richman/generated/

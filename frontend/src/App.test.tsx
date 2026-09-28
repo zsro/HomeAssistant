@@ -46,6 +46,16 @@ describe('authenticated app navigation', () => {
     expect(screen.getByRole('link', { name: '进入测试用户的用户页面' })).toHaveAttribute('href', '/account');
   });
 
+  it('links the richman module from home and protects its route', () => {
+    const { unmount, container } = renderApp('/');
+    expect(within(container).getByRole('link', { name: /大富翁/ })).toHaveAttribute('href', '/modules/richman');
+    expect(within(container).getByText('2 个可用模块')).toBeInTheDocument();
+    unmount();
+    const anonymous = renderApp('/modules/richman', { status: 'anonymous', user: null });
+    expect(within(anonymous.container).getByRole('heading', { name: '欢迎回来' })).toBeInTheDocument();
+    expect(within(anonymous.container).queryByTestId('richman-viewport')).not.toBeInTheDocument();
+  });
+
   it('keeps sign out inside the account information card', async () => {
     const signOut = vi.fn().mockResolvedValue(undefined);
     const user = userEvent.setup();

@@ -14,6 +14,11 @@ HomeAssistant 是一个前后端分离项目：后端使用 TypeScript、Express
 └── deploy.sh              # 生产发布脚本
 ```
 
+## 模块开发接续
+
+- [大富翁 4 Web 复刻计划与接续记录](docs/richman-roadmap.md)：当前进度、分阶段任务、规则核验、验收标准和下一步。
+- [大富翁技术验证报告](docs/richman-technical-validation.md)：原版资源、地图与移动原型的验证结果。
+
 ## 本地开发
 
 运行环境：
