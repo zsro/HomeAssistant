@@ -21,3 +21,5 @@ node scripts/richman/check-release-assets.cjs frontend/dist/richman/generated
 发布前扩大界面检查发现两条旧模式说明测试仍匹配S3-05a之前文案；现改为断言同一历史范围的现行说明，不改产品或游戏语义。全量历史长局生成测试未完成、已停止，不计通过；发布相关界面回归单列。
 
 本次提交前：319项/44文件非领域长局的前端回归、前端lint/build、素材39文件校验和缺失包拒绝检查通过；部署脚本bash语法检查通过。
+
+首次服务器构建发现后端`tsconfig.json`的`scripts/**/*.ts`也包含大富翁离线验收脚本，并引入前端源码，不适合后端CommonJS生产编译。现仅从后端编译排除`scripts/richman`；这些脚本仍按原来的tsx/浏览器入口运行，前端编译范围和游戏规则不变。修正后本地`npm run build`通过；首次失败发生在服务切换和数据库备份/迁移之前。
