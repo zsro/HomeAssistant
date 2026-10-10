@@ -46,6 +46,7 @@
 .rm-action-bar { min-height: 103px; display: flex; align-items: center; gap: 18px; padding: 17px 23px; }
 .rm-die { display: grid; place-items: center; width: 58px; height: 58px; flex-shrink: 0; border-radius: 14px; background: #f1ecdc; color: #32563e; font-size: 48px; line-height: 1; border: 1px solid #e5dec8; }
 .rm-die.is-rolling { animation: rm-roll .18s linear infinite; }
+.rm-die img { max-width: 85%; max-height: 85%; image-rendering: pixelated; }
 @keyframes rm-roll { 0% { transform: rotate(-8deg) scale(.94); } 50% { transform: rotate(8deg) scale(1.04); } 100% { transform: rotate(-8deg) scale(.94); } }
 .rm-turn-copy { display: flex; flex-direction: column; gap: 5px; }
 .rm-turn-copy small { color: #929979; font-size: 9px; }

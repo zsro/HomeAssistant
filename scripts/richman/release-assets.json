@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "scope": "S3 Chrome candidate resource package; binaries transferred separately, not committed",
+  "scope": "Original game runtime resources; bundled in the committed frontend release",
   "files": [
     {
       "path": "animation/manifest.json",
@@ -163,6 +163,36 @@
       "sha256": "07d537f09e102041f70dd9f803c510b5cf3116253a8a4516e38cf045be8c9b81"
     },
     {
+      "path": "dice-1.webp",
+      "bytes": 634,
+      "sha256": "edfb764df36c16dd44a2fa1207a2b5b6cef97537967a374b1d489217ec5ab5df"
+    },
+    {
+      "path": "dice-2.webp",
+      "bytes": 588,
+      "sha256": "14a7fe94858e591bdc1c2484197e6439d7b3aa1d4a60700f085a39511df7dd8c"
+    },
+    {
+      "path": "dice-3.webp",
+      "bytes": 612,
+      "sha256": "f20046d18f3064cf1aa76556708564dce11668598a1c8adfa854b974285f7a3b"
+    },
+    {
+      "path": "dice-4.webp",
+      "bytes": 682,
+      "sha256": "4b7042806a615ef5ea695bfd1c87d376052e215fa41a0c26aba527a3b1a202d1"
+    },
+    {
+      "path": "dice-5.webp",
+      "bytes": 618,
+      "sha256": "b4b7cdfce6be55b870f10e3f08e292fe188f6a9c9293c585ac149e0a191daabe"
+    },
+    {
+      "path": "dice-6.webp",
+      "bytes": 628,
+      "sha256": "e0608c7579fd66f364c15914f2d4e4ea991059d7ab2dc58e6cf0d796bb6d67ce"
+    },
+    {
       "path": "japan-mini.webp",
       "bytes": 19080,
       "sha256": "bb539badc78468acf764260b17da34d9c69ecc592ab5e02b11b4e6fdaa2eb57b"
@@ -174,8 +204,8 @@
     },
     {
       "path": "manifest.json",
-      "bytes": 48765,
-      "sha256": "09502821a623766728bd8f97a1d0553f575be2d6326338c5c86cc4a77f0ffc72"
+      "bytes": 183379,
+      "sha256": "2c1f30ac281dc6fb4174be05ee0a0d84855cb27bc2cf7a9fcc25edae6ff77f43"
     },
     {
       "path": "salonbus.webp",
@@ -184,8 +214,8 @@
     },
     {
       "path": "sprites.webp",
-      "bytes": 863934,
-      "sha256": "de03675f4975bdf502ab25572f04e90963d01da1781c816736352b92f6014d69"
+      "bytes": 4551612,
+      "sha256": "3696ab6fdd6c07a73110e99c70a877e226991f3386849509b984c423a9e39309"
     },
     {
       "path": "tuu.webp",

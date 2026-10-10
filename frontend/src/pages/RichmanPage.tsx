@@ -1,4 +1,5 @@
 import { decisionSelector, navigateGame } from '../features/richman/decision-navigation';
+import { OriginalDie } from '../features/richman/OriginalDie';
 import { GameHelp } from '../features/richman/GameHelp';
 import {AudioPanel} from '../features/richman/AudioPanel';
 import {RichmanAudio, audioPreferences, AUDIO_STORAGE} from '../features/richman/audio';
@@ -36,7 +37,6 @@ import { FinancePanel } from '../features/richman/FinancePanel';
 import { PropertyPanel } from '../features/richman/PropertyPanel';
 import { INITIAL_FUNDS, ECONOMY_RULES } from '../features/richman/game/economy';
 
-const DICE = ['·', '⚀', '⚁', '⚂', '⚃', '⚄', '⚅'];
 const PHASES = { surrender: '认输后选人', minigame:'小游戏', facility:'设施探访', magic: '魔法屋', idle: '等待掷骰', rolling: '掷骰中', moving: '前进中', choosing: '选择岔路', property: '地产决策', bank: '银行存取款', debt: '债务处理', finished: '本局结束', turnEnd: '本回合结束', shop: '商店', effect: '道具选择', reaction: '反应决策', auction: '地产拍卖', news: '新闻事件', fortune: '命运事件', company: '公司营业', commerce: '公司服务', lottery: '彩票购买' };
 
 export function RichmanPage() {
@@ -297,7 +297,7 @@ export function RichmanPage() {
               </>}
             </div>
             <div className="rm-action-bar">
-              <div className={`rm-die ${snapshot?.phase === 'rolling' ? 'is-rolling' : ''}`} aria-label={`骰子点数 ${snapshot?.dice || '尚未掷骰'}`}>{DICE[snapshot?.dice ?? 0] ?? snapshot?.dice}</div>
+              <div className={`rm-die ${snapshot?.phase === 'rolling' ? 'is-rolling' : ''}`} aria-label={`骰子点数 ${snapshot?.dice || '尚未掷骰'}`}><OriginalDie value={snapshot?.dice ?? 0} /></div>
               <div className="rm-turn-copy"><small>{paused ? '已暂停' : snapshot ? PHASES[snapshot.phase] : '加载中'}</small><strong>{snapshot?.phase === 'finished' ? '本局已结束' : active ? `${active.name}的旅程` : '准备好，就出发'}</strong><span>{snapshot?.phase === 'moving' || snapshot?.phase === 'choosing' ? `剩余 ${snapshot.remaining} 步` : snapshot && ['property', 'bank', 'debt', 'shop', 'effect', 'reaction', 'auction', 'news', 'fortune', 'company', 'commerce', 'lottery', 'facility', 'magic', 'surrender', 'minigame'].includes(snapshot.phase) ? '点“当前操作”前往决策面板' : snapshot?.phase === 'finished' ? '查看结果或开启新局' : '掷骰前进，看看下一站在哪里'}</span></div>
               {snapshot?.phase === 'turnEnd'
                 ? <button className="rm-roll" disabled={paused || !ready||computerBusy} onClick={() => { scene.current?.model.endTurn(); scene.current?.followPlayer(); }}>下一位 <span aria-hidden="true">→</span></button>

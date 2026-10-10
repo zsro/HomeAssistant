@@ -1,0 +1,492 @@
+{
+  "scope": "Japan map images; local base-game resources, no rule or topology changes",
+  "sourceHashes": {
+    "Data.mkf": "c63023e815b1ad4bef172b6415d128c7f041f12b71b5d80dc3ff29240a0a1988",
+    "map.mkf": "717aaa1c1becf277064d29772500027427d39488bad64a7ee42875975c0e7106",
+    "MapDat.MKF": "4dc6a47efe03f64484e6b9ac5ee31489b7f42fc369c0296f2f0b8d63845294b1"
+  },
+  "localExecutable": {
+    "sha256": "110b29f9d2fadcff3836eb69ec380aa264951859c90955da6e11158d2f956a13",
+    "mappingPatterns": {
+      "83c01a5057": [
+        28473,
+        28555
+      ],
+      "83c01b5057": [
+        28327
+      ],
+      "6a006a006a2f57": [
+        28370
+      ],
+      "8d43305057": [
+        28396
+      ]
+    }
+  },
+  "roadTiles": [
+    {
+      "drawingId": 1,
+      "name": "公园",
+      "nodeIds": [
+        41
+      ]
+    },
+    {
+      "drawingId": 2,
+      "name": "新闻",
+      "nodeIds": [
+        13,
+        61,
+        94
+      ]
+    },
+    {
+      "drawingId": 3,
+      "name": "命运",
+      "nodeIds": [
+        2,
+        19,
+        45,
+        66
+      ]
+    },
+    {
+      "drawingId": 4,
+      "name": "探监",
+      "nodeIds": [
+        78
+      ]
+    },
+    {
+      "drawingId": 5,
+      "name": "探病",
+      "nodeIds": [
+        55
+      ]
+    },
+    {
+      "drawingId": 6,
+      "name": "小游戏1",
+      "nodeIds": [
+        22
+      ]
+    },
+    {
+      "drawingId": 7,
+      "name": "小游戏2",
+      "nodeIds": [
+        26
+      ]
+    },
+    {
+      "drawingId": 8,
+      "name": "小游戏3",
+      "nodeIds": [
+        24
+      ]
+    },
+    {
+      "drawingId": 9,
+      "name": "彩票",
+      "nodeIds": [
+        28,
+        88
+      ]
+    },
+    {
+      "drawingId": 10,
+      "name": "50点",
+      "nodeIds": [
+        20,
+        31
+      ]
+    },
+    {
+      "drawingId": 11,
+      "name": "30点",
+      "nodeIds": [
+        23,
+        27,
+        83
+      ]
+    },
+    {
+      "drawingId": 12,
+      "name": "10点",
+      "nodeIds": [
+        14,
+        16,
+        18,
+        25,
+        29,
+        33,
+        79,
+        81
+      ]
+    },
+    {
+      "drawingId": 13,
+      "name": "随机卡片",
+      "nodeIds": [
+        98
+      ]
+    },
+    {
+      "drawingId": 14,
+      "name": "银行",
+      "nodeIds": [
+        1
+      ]
+    },
+    {
+      "drawingId": 15,
+      "name": "商店",
+      "nodeIds": [
+        50,
+        107
+      ]
+    },
+    {
+      "drawingId": 16,
+      "name": "魔法屋",
+      "nodeIds": [
+        35,
+        73
+      ]
+    },
+    {
+      "drawingId": 17,
+      "name": "普通圆点",
+      "nodeIds": [
+        15,
+        17,
+        21,
+        30,
+        32,
+        34,
+        80,
+        82,
+        84
+      ]
+    }
+  ],
+  "scenery": [
+    {
+      "x": 1671,
+      "y": 1717,
+      "name": "三越百貨",
+      "sprite": "map-80-5",
+      "resource": 80,
+      "frame": 5,
+      "table": "companies",
+      "recordId": 1
+    },
+    {
+      "x": 1345,
+      "y": 1095,
+      "name": "豐田汽車",
+      "sprite": "map-82-1",
+      "resource": 82,
+      "frame": 1,
+      "table": "companies",
+      "recordId": 2
+    },
+    {
+      "x": 1583,
+      "y": 789,
+      "name": "日產建設",
+      "sprite": "map-77-2",
+      "resource": 77,
+      "frame": 2,
+      "table": "companies",
+      "recordId": 3
+    },
+    {
+      "x": 1871,
+      "y": 983,
+      "name": "三井生命",
+      "sprite": "map-78-2",
+      "resource": 78,
+      "frame": 2,
+      "table": "companies",
+      "recordId": 4
+    },
+    {
+      "x": 1723,
+      "y": 1436,
+      "name": "ＳＥＧＡ",
+      "sprite": "map-76-1",
+      "resource": 76,
+      "frame": 1,
+      "table": "companies",
+      "recordId": 5
+    },
+    {
+      "x": 1369,
+      "y": 1763,
+      "name": "富士銀行",
+      "sprite": "map-84-4",
+      "resource": 84,
+      "frame": 4,
+      "table": "companies",
+      "recordId": 6
+    },
+    {
+      "x": 1163,
+      "y": 1251,
+      "name": "醫院",
+      "sprite": "map-87-1",
+      "resource": 87,
+      "frame": 1,
+      "table": "landmarks",
+      "recordId": 1
+    },
+    {
+      "x": 1943,
+      "y": 126,
+      "name": "監獄",
+      "sprite": "map-132-7",
+      "resource": 132,
+      "frame": 7,
+      "table": "landmarks",
+      "recordId": 2
+    },
+    {
+      "x": 1799,
+      "y": 1120,
+      "name": "東照宮",
+      "sprite": "map-126-2",
+      "resource": 126,
+      "frame": 2,
+      "table": "landmarks",
+      "recordId": 3
+    },
+    {
+      "x": 1636,
+      "y": 1290,
+      "name": "東京",
+      "sprite": "map-131-3",
+      "resource": 131,
+      "frame": 3,
+      "table": "landmarks",
+      "recordId": 4
+    },
+    {
+      "x": 1217,
+      "y": 1493,
+      "name": "京都",
+      "sprite": "map-123-3",
+      "resource": 123,
+      "frame": 3,
+      "table": "landmarks",
+      "recordId": 5
+    },
+    {
+      "x": 1114,
+      "y": 1780,
+      "name": "大阪城",
+      "sprite": "map-130-0",
+      "resource": 130,
+      "frame": 0,
+      "table": "landmarks",
+      "recordId": 6
+    },
+    {
+      "x": 740,
+      "y": 1666,
+      "name": "神戶",
+      "sprite": "map-125-4",
+      "resource": 125,
+      "frame": 4,
+      "table": "landmarks",
+      "recordId": 7
+    },
+    {
+      "x": 505,
+      "y": 1722,
+      "name": "宮島",
+      "sprite": "map-127-6",
+      "resource": 127,
+      "frame": 6,
+      "table": "landmarks",
+      "recordId": 8
+    },
+    {
+      "x": 135,
+      "y": 2012,
+      "name": "阿蘇山",
+      "sprite": "map-124-0",
+      "resource": 124,
+      "frame": 0,
+      "table": "landmarks",
+      "recordId": 9
+    },
+    {
+      "x": 2172,
+      "y": 1345,
+      "name": "",
+      "sprite": "map-144-0",
+      "resource": 144,
+      "frame": 0,
+      "table": "landmarks",
+      "recordId": 10
+    },
+    {
+      "x": 1633,
+      "y": 1933,
+      "name": "",
+      "sprite": "map-144-0",
+      "resource": 144,
+      "frame": 0,
+      "table": "landmarks",
+      "recordId": 11
+    },
+    {
+      "x": 436,
+      "y": 1241,
+      "name": "",
+      "sprite": "map-144-3",
+      "resource": 144,
+      "frame": 3,
+      "table": "landmarks",
+      "recordId": 12
+    },
+    {
+      "x": 400,
+      "y": 2225,
+      "name": "",
+      "sprite": "map-144-7",
+      "resource": 144,
+      "frame": 7,
+      "table": "landmarks",
+      "recordId": 13
+    },
+    {
+      "x": 504,
+      "y": 1864,
+      "name": "宮島",
+      "sprite": "map-127-6",
+      "resource": 127,
+      "frame": 6,
+      "table": "landmarks",
+      "recordId": 14
+    },
+    {
+      "x": 2111,
+      "y": 900,
+      "name": "松島",
+      "sprite": "map-129-0",
+      "resource": 129,
+      "frame": 0,
+      "table": "landmarks",
+      "recordId": 15
+    },
+    {
+      "x": 1448,
+      "y": 1456,
+      "name": "富士山",
+      "sprite": "map-128-0",
+      "resource": 128,
+      "frame": 0,
+      "table": "landmarks",
+      "recordId": 16
+    }
+  ],
+  "propertyArt": {
+    "house-1": 37,
+    "house-2": 38,
+    "house-3": 39,
+    "house-4": 40,
+    "house-5": 41,
+    "chain": 47,
+    "facility-0-1": 48,
+    "facility-1-1": 49,
+    "facility-1-2": 50,
+    "facility-1-3": 51,
+    "facility-1-4": 52,
+    "facility-1-5": 53,
+    "facility-2-1": 54,
+    "facility-2-2": 55,
+    "facility-2-3": 56,
+    "facility-2-4": 57,
+    "facility-2-5": 58,
+    "facility-3-1": 59,
+    "facility-4-1": 64,
+    "facility-4-2": 65,
+    "facility-4-3": 66,
+    "facility-4-4": 67,
+    "facility-4-5": 68
+  },
+  "propertyDirections": {
+    "japan:land:1": 6,
+    "japan:land:2": 6,
+    "japan:land:3": 6,
+    "japan:land:4": 6,
+    "japan:land:5": 6,
+    "japan:land:6": 6,
+    "japan:land:7": 6,
+    "japan:land:8": 6,
+    "japan:land:9": 6,
+    "japan:land:10": 7,
+    "japan:land:11": 7,
+    "japan:land:12": 7,
+    "japan:land:13": 7,
+    "japan:land:14": 7,
+    "japan:land:15": 7,
+    "japan:land:16": 0,
+    "japan:land:17": 0,
+    "japan:land:18": 0,
+    "japan:land:19": 0,
+    "japan:land:20": 0,
+    "japan:land:21": 0,
+    "japan:land:22": 0,
+    "japan:land:23": 0,
+    "japan:land:24": 7,
+    "japan:land:25": 7,
+    "japan:land:26": 7,
+    "japan:land:27": 7,
+    "japan:land:28": 7,
+    "japan:land:29": 6,
+    "japan:land:30": 6,
+    "japan:land:31": 6,
+    "japan:land:32": 0,
+    "japan:land:33": 0,
+    "japan:land:34": 0,
+    "japan:land:35": 7,
+    "japan:land:36": 7,
+    "japan:land:37": 7,
+    "japan:land:38": 7,
+    "japan:land:39": 7,
+    "japan:land:40": 7,
+    "japan:land:41": 7,
+    "japan:land:42": 7,
+    "japan:land:43": 7,
+    "japan:land:44": 7,
+    "japan:land:45": 7,
+    "japan:land:46": 6,
+    "japan:land:47": 6,
+    "japan:land:48": 6,
+    "japan:land:49": 6,
+    "japan:facility:1": 0,
+    "japan:facility:2": 7,
+    "japan:facility:3": 0,
+    "japan:facility:4": 0,
+    "japan:facility:5": 0
+  },
+  "counts": {
+    "roadTiles": 43,
+    "companies": 6,
+    "landmarks": 16,
+    "spriteFrames": 549
+  },
+  "referenceSources": [
+    {
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_load_map.asm",
+      "sha256": "7a555911e15b8c947c6c281b95c23bf536dba92baca20929ab1666ed31df3987"
+    },
+    {
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4.asm",
+      "sha256": "30904cbb4f23a6b74fc1b80ad023bd7dff11b441c2c1978f768f9891d099d64a"
+    }
+  ]
+}

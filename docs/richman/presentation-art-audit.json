@@ -1,0 +1,413 @@
+{
+  "version": 1,
+  "sourceHashes": {
+    "Data.mkf": "c63023e815b1ad4bef172b6415d128c7f041f12b71b5d80dc3ff29240a0a1988",
+    "map.mkf": "717aaa1c1becf277064d29772500027427d39488bad64a7ee42875975c0e7106",
+    "MapDat.MKF": "4dc6a47efe03f64484e6b9ac5ee31489b7f42fc369c0296f2f0b8d63845294b1",
+    "Panel.mkf": "5b9bfd11a866694cfdf93457d2010d30f20a43f96b668e5186fa99452e16f563"
+  },
+  "nativeExecution": false,
+  "mappingEvidence": "Local resource contact sheets; fixed reference rich4_update_player_sprite relative offsets; not a native runtime timing comparison",
+  "characters": [
+    {
+      "id": "xiaomei",
+      "base": 276,
+      "poses": {
+        "motorcycle": {
+          "resources": [
+            279,
+            280
+          ],
+          "idleFrames": 8,
+          "walkFrames": 88,
+          "decodedSha256": [
+            "5c0fd2e1267b97edc25b53f2d31b1d7c398eda6589b85e9b8f0cdabf47b188f4",
+            "8d2c08dba6839dd3c41b6b775f23583b336c9e99e9b203a8ef980d0e40ecc3fb"
+          ]
+        },
+        "car": {
+          "resources": [
+            282,
+            283
+          ],
+          "idleFrames": 8,
+          "walkFrames": 88,
+          "decodedSha256": [
+            "85986021b807eec8de1d821406758654a080aa96829ce7ebfbe66de1b82e5459",
+            "c8dd425574fdd7cc5197b4e806431c97b212965715b917ee528cd7421a09c855"
+          ]
+        },
+        "engineer": {
+          "resources": [
+            285,
+            286
+          ],
+          "idleFrames": 8,
+          "walkFrames": 48,
+          "decodedSha256": [
+            "0572e58fb51bd81f4a5c19f418fbeeca43fd5fe6a563365430f306acba238394",
+            "1a1e756679903205b46da41b6f1a78df6acb52f084e3b362bd57cdeef5f5bb27"
+          ]
+        },
+        "dream": {
+          "resources": [
+            292,
+            293
+          ],
+          "idleFrames": 8,
+          "walkFrames": 40,
+          "decodedSha256": [
+            "d7e5ab330cbdc97739ba12fc8ada89557c60fad8a45e44d97a0cc2db31d58ff6",
+            "0fd77f886c9d482f5c70258c847ef062ee82559922e51076d4b1d287d2e01481"
+          ]
+        },
+        "winter": {
+          "resources": [
+            294
+          ],
+          "idleFrames": 8,
+          "walkFrames": 8,
+          "decodedSha256": [
+            "f45729468893623dc714366361f06e9b523e8bb8a4c74c22d8d58104224b648d"
+          ]
+        },
+        "hospital": {
+          "resources": [
+            295
+          ],
+          "idleFrames": 8,
+          "walkFrames": 8,
+          "decodedSha256": [
+            "e762f7863dd209f9e4959e9968381c28301aec7c56ca1e1d678deef117596f4f"
+          ]
+        },
+        "prison": {
+          "resources": [
+            296
+          ],
+          "idleFrames": 8,
+          "walkFrames": 8,
+          "decodedSha256": [
+            "f65f02b806a8bda46629678187d1539ce258d1c5fb6703b69c8517e348bcb84a"
+          ]
+        }
+      }
+    },
+    {
+      "id": "tuu",
+      "base": 171,
+      "poses": {
+        "motorcycle": {
+          "resources": [
+            174,
+            175
+          ],
+          "idleFrames": 8,
+          "walkFrames": 32,
+          "decodedSha256": [
+            "a133e53d933ea03d10af4d902db43b5cd4d314ae7207bdb9704e1806bc9c1aa5",
+            "68cf66909b7eb5e05a12e3d8b3b6d6848107de4d4aadaf6efd2da90e0590729a"
+          ]
+        },
+        "car": {
+          "resources": [
+            177,
+            178
+          ],
+          "idleFrames": 8,
+          "walkFrames": 24,
+          "decodedSha256": [
+            "605306669e669b9227a4456ac4c7eaabc9a0c79909dfd735fd33e965aaeed4a9",
+            "56077da8d562f54c7070b85e20a5ee125cff3dadffc0aa8c319bcb747eeb5dd1"
+          ]
+        },
+        "engineer": {
+          "resources": [
+            180,
+            181
+          ],
+          "idleFrames": 8,
+          "walkFrames": 16,
+          "decodedSha256": [
+            "c6fca0a330991a45d565b1eaa618f7963110ea6441915e20430cf812f8ba2891",
+            "357d633e07f3b8a849c909723cc5c86f117fa1862bc28fcbe62a8978e11cfd33"
+          ]
+        },
+        "dream": {
+          "resources": [
+            187,
+            188
+          ],
+          "idleFrames": 8,
+          "walkFrames": 72,
+          "decodedSha256": [
+            "bf0eeb15b70e8b80fe4104a09cd3b0bde85dbf76c5f4c655579f5c7ac5891cc6",
+            "4b568a1a450249d975dc30297bee1e38471a7d8bc7ed28839a9f199ddb836322"
+          ]
+        },
+        "winter": {
+          "resources": [
+            189
+          ],
+          "idleFrames": 8,
+          "walkFrames": 8,
+          "decodedSha256": [
+            "969283d9889460586d6948fdd4925c424ec7b64473571af0abfbf33e3d81539c"
+          ]
+        },
+        "hospital": {
+          "resources": [
+            190
+          ],
+          "idleFrames": 8,
+          "walkFrames": 8,
+          "decodedSha256": [
+            "7bfc1b1fdc565323fe29ec145261a5531f385017a3c3000255ec55d6651b3bfc"
+          ]
+        },
+        "prison": {
+          "resources": [
+            191
+          ],
+          "idleFrames": 8,
+          "walkFrames": 8,
+          "decodedSha256": [
+            "4c2d0dcb7eff6838107b79861e558ae8b5a4fe059534e6f3b971990c42927e50"
+          ]
+        }
+      }
+    },
+    {
+      "id": "chyan",
+      "base": 150,
+      "poses": {
+        "motorcycle": {
+          "resources": [
+            153,
+            154
+          ],
+          "idleFrames": 8,
+          "walkFrames": 32,
+          "decodedSha256": [
+            "096a200d88bd012cc0b5bf4ff96c2676d373bd4c0a260d099ddc3219e20fff33",
+            "8766b33f9dac92444ab4bea5f32f30264205e58d584fb3d8a8827150777015a8"
+          ]
+        },
+        "car": {
+          "resources": [
+            156,
+            157
+          ],
+          "idleFrames": 8,
+          "walkFrames": 24,
+          "decodedSha256": [
+            "47f80552ac9fcc37e455f4f16c6ef608e176d5a24634622ce46178bd0a1aff87",
+            "2423ca47ab8bc87fbf11ca42eb2feb4a6c0ff0c44a92b0478f6543676b94905c"
+          ]
+        },
+        "engineer": {
+          "resources": [
+            159,
+            160
+          ],
+          "idleFrames": 8,
+          "walkFrames": 40,
+          "decodedSha256": [
+            "1116e9d72fa9513b9fa8cbd55fb137530e97c831f97c1256910cbf08df95d003",
+            "b1b1a4f5aae96ae56e1df6d95b06f579966c89e8d70a647b2012f5cd42643f53"
+          ]
+        },
+        "dream": {
+          "resources": [
+            166,
+            167
+          ],
+          "idleFrames": 8,
+          "walkFrames": 72,
+          "decodedSha256": [
+            "25e33836eb4679677a2ed4de248b9fa58ff60bc34b27f4474c4f7dac7abac12c",
+            "c99c198d240864e127e44e5dae798c537b73e70f18a6b9df909beabc0345c0ba"
+          ]
+        },
+        "winter": {
+          "resources": [
+            168
+          ],
+          "idleFrames": 8,
+          "walkFrames": 8,
+          "decodedSha256": [
+            "8113344f17ce03188a65b627759b107b80631b5768727360fd8659991a557717"
+          ]
+        },
+        "hospital": {
+          "resources": [
+            169
+          ],
+          "idleFrames": 8,
+          "walkFrames": 8,
+          "decodedSha256": [
+            "01f302376676b7b458c067e0ed5454dd43524a37bb89595b400afad04d38ae85"
+          ]
+        },
+        "prison": {
+          "resources": [
+            170
+          ],
+          "idleFrames": 8,
+          "walkFrames": 8,
+          "decodedSha256": [
+            "f2454d0dce9f7befdd53ca061f5cebbaa560f546aea08223b99110eb80c79133"
+          ]
+        }
+      }
+    },
+    {
+      "id": "salonbus",
+      "base": 108,
+      "poses": {
+        "motorcycle": {
+          "resources": [
+            111,
+            112
+          ],
+          "idleFrames": 8,
+          "walkFrames": 32,
+          "decodedSha256": [
+            "916467dcc98ff4db99a644c668f3a4ad66e6e96b25d42acf224ef36b436e0615",
+            "e3737c722a12b706b782cbdcfc9dc5a158042f97da30cdb29d8b21052ac0ff38"
+          ]
+        },
+        "car": {
+          "resources": [
+            114,
+            115
+          ],
+          "idleFrames": 8,
+          "walkFrames": 24,
+          "decodedSha256": [
+            "de4d6c71e06a22c228c2a5bfbab70a8d0484be74de92004fa70c7e144790222b",
+            "c0e3c1b56d0f9258beae5cf00c8c92cdaa7d92b6b58d748c1346e63ddc270d97"
+          ]
+        },
+        "engineer": {
+          "resources": [
+            117,
+            118
+          ],
+          "idleFrames": 8,
+          "walkFrames": 16,
+          "decodedSha256": [
+            "e6498344ef9cb0be0a791b361066a59fce62140971fda9b878cdbf51b0c5e615",
+            "47d3726bf533325b5324867e739396578bf749757f65f5e18022f7d41981ec28"
+          ]
+        },
+        "dream": {
+          "resources": [
+            124,
+            125
+          ],
+          "idleFrames": 8,
+          "walkFrames": 72,
+          "decodedSha256": [
+            "6cdb607b4745dcea455c480388f2d8f5426a0d2cf9a2bda35d9fe412ace8c470",
+            "3b95ca5e7053f0304b1fc594af7fada52165b3a9099ee67ca8c7ba847afb228d"
+          ]
+        },
+        "winter": {
+          "resources": [
+            126
+          ],
+          "idleFrames": 8,
+          "walkFrames": 8,
+          "decodedSha256": [
+            "bbf6467201441fe7a9e0c4615f5351f7a486f9b3b6598e153932f7868e562567"
+          ]
+        },
+        "hospital": {
+          "resources": [
+            127
+          ],
+          "idleFrames": 8,
+          "walkFrames": 8,
+          "decodedSha256": [
+            "68fc634cd8f419086d928c81c11db6b40e7de0ee373aa489f04d2f73de977205"
+          ]
+        },
+        "prison": {
+          "resources": [
+            128
+          ],
+          "idleFrames": 8,
+          "walkFrames": 8,
+          "decodedSha256": [
+            "a3b76c92081f24c8fd600caa5c0582527789b958f2cf0427b865c1cb0ee9dc4c"
+          ]
+        }
+      }
+    }
+  ],
+  "roadTools": {
+    "block": 370,
+    "mine": 371,
+    "bomb": 372
+  },
+  "dice": {
+    "archive": "Panel.mkf",
+    "resource": 3,
+    "frames": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "values": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ]
+  },
+  "atlas": {
+    "width": 2048,
+    "height": 3575,
+    "frames": 1517
+  },
+  "outputs": {
+    "manifest.json": {
+      "bytes": 183379,
+      "sha256": "2c1f30ac281dc6fb4174be05ee0a0d84855cb27bc2cf7a9fcc25edae6ff77f43"
+    },
+    "sprites.webp": {
+      "bytes": 4551612,
+      "sha256": "3696ab6fdd6c07a73110e99c70a877e226991f3386849509b984c423a9e39309"
+    },
+    "dice-1.webp": {
+      "bytes": 634,
+      "sha256": "edfb764df36c16dd44a2fa1207a2b5b6cef97537967a374b1d489217ec5ab5df"
+    },
+    "dice-2.webp": {
+      "bytes": 588,
+      "sha256": "14a7fe94858e591bdc1c2484197e6439d7b3aa1d4a60700f085a39511df7dd8c"
+    },
+    "dice-3.webp": {
+      "bytes": 612,
+      "sha256": "f20046d18f3064cf1aa76556708564dce11668598a1c8adfa854b974285f7a3b"
+    },
+    "dice-4.webp": {
+      "bytes": 682,
+      "sha256": "4b7042806a615ef5ea695bfd1c87d376052e215fa41a0c26aba527a3b1a202d1"
+    },
+    "dice-5.webp": {
+      "bytes": 618,
+      "sha256": "b4b7cdfce6be55b870f10e3f08e292fe188f6a9c9293c585ac149e0a191daabe"
+    },
+    "dice-6.webp": {
+      "bytes": 628,
+      "sha256": "e0608c7579fd66f364c15914f2d4e4ea991059d7ab2dc58e6cf0d796bb6d67ce"
+    }
+  }
+}

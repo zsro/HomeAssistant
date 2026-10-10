@@ -1,4 +1,5 @@
 import {objectPoses, validObjectArt} from './object-presentation';
+import {actorSprite, roadToolPoses} from './actor-presentation';
 import type {ObjectArt} from './object-presentation';
 import type {AudioPacket} from './audio';
 import {godTrafficView} from './god-traffic-view';
@@ -7,6 +8,7 @@ import { ROBOT_EFFECT } from './game/road-tools';
 import { atlasMask, pickMapTarget, pointerToWorld } from './map-picking';
 import type { PixelMask, PickLayer } from './map-picking';
 import { propertyOutline, roadSegments } from './map-geometry';
+import { propertyAppearance, propertySprite, validMapArt } from './property-art';
 import { NEARBY_WORKER_EFFECT } from './game/nearby-construction';
 import { Application, Container, Graphics, Rectangle, Sprite, Text, Texture } from 'pixi.js';
 import { PROPERTY_CATALOG } from './game/economy';
@@ -43,11 +45,11 @@ export async function createScene(host: HTMLElement, signal: AbortSignal, callba
   if (manifest.version !== 1 || !manifest.map?.nodes?.length || !manifest.characters?.length || !manifest.sprites) {
     throw new Error('资源清单格式不正确，请重新导出。');
   }
-  if (manifest.sourceHashes?.['MapDat.MKF'] !== PROPERTY_CATALOG.sourceHash || manifest.propertyArtVersion !== 1 ||
+  if (manifest.sourceHashes?.['MapDat.MKF'] !== PROPERTY_CATALOG.sourceHash || !validMapArt(manifest) ||
     PROPERTY_CATALOG.properties.some((p) => p.nodeIds.some((id) => {
       const node = manifest.map.nodes.find((n) => n.id === id);
       return node?.kind !== (p.kind === 'land' ? 2000 : 4000) + Number(p.id.split(':')[2]);
-    })) || Array.from({ length: 40 }, (_, i) => `house-${Math.floor(i / 8) + 1}-${i % 8}`).some((id) => !manifest.sprites[id])) {
+    })) || PROPERTY_CATALOG.properties.some(p => !Number.isInteger(manifest.map.propertyDirections?.[p.id]))) {
     throw new Error('地产数据与素材版本不一致，请重新运行资源转换脚本。');
   }
   const model = new GameSession(manifest, undefined, 'surrender');
@@ -98,6 +100,7 @@ export class RichmanScene {
   private readonly world = new Container();
   private readonly objects = new Container();
   private readonly paths = new Graphics();
+  private readonly groundTiles = new Container();
   private readonly pathDebug = new Graphics();
   private readonly roadMarkers = new Graphics();
   private readonly choices = new Graphics();
@@ -122,6 +125,7 @@ export class RichmanScene {
   private animationMs = 0;
   private presentationGame: string | null = null;
   private readonly godSprites = new Map<string, Sprite>();
+  private readonly toolSprites = new Map<string, Sprite>();
   private statsMs = 0;
   private frames = 0;
   private readonly loadMs: number;
@@ -158,7 +162,14 @@ export class RichmanScene {
       const objectsAtlas = Texture.from(images[2]); objectsAtlas.source.scaleMode = 'nearest'; this.roots.push(objectsAtlas);
       for (const [key, f] of Object.entries(objectArt.sprites)) this.textures.set(key, new Texture({source: objectsAtlas.source, frame: new Rectangle(f.x, f.y, f.width, f.height)}));
     }
-    this.world.addChild(new Sprite(ground), this.paths, this.pathDebug, this.ring, this.objects, this.roadMarkers, this.choices, this.propertyPreview);
+    this.world.addChild(new Sprite(ground), this.paths, this.groundTiles, this.pathDebug, this.ring, this.objects, this.roadMarkers, this.choices, this.propertyPreview);
+    for (const tile of manifest.map.roadTiles ?? []) {
+      const sprite = new Sprite(this.textures.get(tile.sprite)!);
+      const frame = manifest.sprites[tile.sprite];
+      sprite.anchor.set(frame.anchorX / frame.width, frame.anchorY / frame.height);
+      sprite.position.set(tile.x, tile.y);
+      this.groundTiles.addChild(sprite);
+    }
     this.objects.sortableChildren = true;
     for (const item of manifest.map.scenery.filter((item) => !item.sprite.startsWith('building-'))) {
       const sprite = new Sprite(this.textures.get(item.sprite)!);
@@ -169,7 +180,8 @@ export class RichmanScene {
       sprite.zIndex = item.y;
       this.objects.addChild(sprite);
     }
-    for (const property of PROPERTY_CATALOG.properties) {
+    for (const definition of PROPERTY_CATALOG.properties) {
+      const property = propertyAppearance(definition, manifest);
       const marker = new Graphics(), house = new Sprite(), label = new Text({ text: '',
         style: { fontFamily: 'sans-serif', fontSize: 11, fill: '#fff', stroke: { color: '#183746', width: 3 } } });
       marker.position.set(property.x, property.y); marker.zIndex = property.y - 1;
@@ -242,7 +254,8 @@ export class RichmanScene {
     const signature = JSON.stringify([state.participants, state.economy?.properties]);
     if (signature === this.propertySignature) return;
     this.propertySignature = signature;
-    for (const definition of PROPERTY_CATALOG.properties) {
+    for (const catalogDefinition of PROPERTY_CATALOG.properties) {
+      const definition = propertyAppearance(catalogDefinition, this.manifest);
       const view = this.propertyViews.get(definition.id)!;
       const property = state.economy?.properties.find((p) => p.id === definition.id);
       view.marker.visible = view.label.visible = !!property;
@@ -255,7 +268,7 @@ export class RichmanScene {
       view.label.text = owner ? `${owner.name} · ${property.level}级` : definition.kind === 'facility' ? '大型用地' : property.level ? `待售 · ${property.level}级` : '空地';
       if (state.g4) view.label.text = `${owner?.name ?? '待售'} · ${buildingName(property, definition)} ${property.level}级 ${priceText(property)}${property.research ? ` · 研究 ${property.research.remaining}` : ''}`;
       if (view.house.visible) {
-        const key = `house-${property.level}-${(8 - definition.direction) & 7}`;
+        const key = propertySprite(property, definition)!;
         const frame = this.manifest.sprites[key];
         view.house.texture = this.textures.get(key)!;
         this.spriteFrames.set(view.house, frame);
@@ -314,11 +327,7 @@ export class RichmanScene {
       if (status) { badge.text = status.badge; badge.style.fill = status.bad ? '#ffd1ca' : '#fff4ba'; }
       if (!sprite.visible) return;
       const actor = state.actors[index];
-      const character = this.manifest.characters[index];
-      const moving = index === state.active && state.phase === 'moving';
-      const key = moving
-        ? character.walk[actor.direction * character.walkFramesPerDirection + Math.floor(this.animationMs / 95) % character.walkFramesPerDirection]
-        : character.idle[actor.direction];
+      const key = actorSprite(this.manifest, state, index, this.animationMs);
       const frame = this.manifest.sprites[key];
       sprite.texture = this.textures.get(key)!;
       this.spriteFrames.set(sprite, frame);
@@ -328,6 +337,7 @@ export class RichmanScene {
       sprite.zIndex = actor.y + 0.5;
     });
     this.renderGods(state);
+    this.renderRoadToolSprites(state);
     const actor = this.model.actor;
     const color = this.manifest.characters[state.active].color;
     this.ring.visible = !state.eliminated.includes(state.active) && !state.g2?.players[`player-${state.participants.indexOf(state.active)+1}`]?.travel;
@@ -364,14 +374,33 @@ export class RichmanScene {
     }
     for(const g of this.objectArt ? [] : state.g6?.objects??[]){const n=this.model.nodes.get(g.node)!;graphics.rect(n.x-10,n.y-32,20,20).fill(g.type===11?'#d65545':g.type===13?'#5496df':'#68b573').stroke({color:'#fff4ba',width:2});}
     for (const h of state.g5?.hazards ?? []) {
+      if (this.textures.has(`tool-${h.itemId === 'tool:03' ? 'mine' : 'bomb'}-0`)) continue;
       const node = this.model.nodes.get(h.carrier ? this.model.gameState!.players.find(p => p.id === h.carrier)!.node : h.node)!;
       graphics.circle(node.x, node.y - (h.carrier ? 45 : 6), 10).fill(h.itemId === 'tool:03' ? '#b94b42' : '#342b46').stroke({ color: '#ffe183', width: 2 });
     }
     for (const id of state.roadTools?.blocks ?? []) {
+      if (this.textures.has('tool-block-0')) continue;
       const node = this.model.nodes.get(id)!;
       graphics.rect(node.x - 13, node.y - 13, 26, 12).fill('#f8d36b').stroke({ color: '#672d24', width: 2 });
       for (const dx of [-8, 0, 8]) graphics.moveTo(node.x + dx - 3, node.y - 12).lineTo(node.x + dx + 3, node.y - 2).stroke({ color: '#c94631', width: 3 });
       graphics.moveTo(node.x - 9, node.y - 1).lineTo(node.x - 11, node.y + 6).moveTo(node.x + 9, node.y - 1).lineTo(node.x + 11, node.y + 6).stroke({ color: '#fff2c9', width: 3 });
+    }
+  }
+
+  private renderRoadToolSprites(state: SessionSnapshot) {
+    const poses = roadToolPoses(state, this.model.nodes).filter(p => this.textures.has(p.key));
+    const live = new Set(poses.map(p => p.id));
+    for (const [id, sprite] of this.toolSprites) if (!live.has(id)) {
+      this.spriteFrames.delete(sprite); sprite.destroy(); this.toolSprites.delete(id);
+    }
+    for (const pose of poses) {
+      let sprite = this.toolSprites.get(pose.id);
+      if (!sprite) { sprite = new Sprite(); sprite.eventMode = 'none'; this.toolSprites.set(pose.id, sprite); this.objects.addChild(sprite); }
+      const frame = this.manifest.sprites[pose.key];
+      sprite.texture = this.textures.get(pose.key)!;
+      sprite.anchor.set(frame.anchorX / frame.width, frame.anchorY / frame.height);
+      sprite.position.set(pose.x, pose.y); sprite.zIndex = pose.z;
+      this.spriteFrames.set(sprite, frame);
     }
   }
 
@@ -456,7 +485,7 @@ export class RichmanScene {
             const frame = this.spriteFrames.get(child);
             if (frame) layers.push({ kind: 'sprite', target, x: child.x, y: child.y, frame });
           } else if (target) layers.push({ kind: 'land', target, x: child.x, y: child.y,
-            shape: PROPERTY_CATALOG.properties.find(property => property.id === target)! });
+            shape: propertyAppearance(PROPERTY_CATALOG.properties.find(property => property.id === target)!, this.manifest) });
           // Labels, rings and debug paths are UI annotations, not game-object occluders.
         }
         const id = pickMapTarget(point, layers, this.mask, state.workerTargets ?? []);
@@ -489,7 +518,7 @@ export class RichmanScene {
     this.camera();
   }
   private highlightProperty(id: string) {
-    const definition = PROPERTY_CATALOG.properties.find(p => p.id === id)!;
+    const definition = propertyAppearance(PROPERTY_CATALOG.properties.find(p => p.id === id)!, this.manifest);
     this.propertyPreview.clear().poly(propertyOutline(definition).map((value, i) => value + (i % 2 === 0 ? definition.x : definition.y)))
       .stroke({ color: '#ffce67', width: 4 });
   }
@@ -539,6 +568,6 @@ export class RichmanScene {
     this.textures.forEach((texture) => texture.destroy(false));
     this.roots.forEach((texture) => texture.destroy(true));
     this.images.forEach((image) => image.close());
-    this.godSprites.clear(); this.mask = null; this.spriteFrames.clear(); this.pickTargets.clear();
+    this.godSprites.clear(); this.toolSprites.clear(); this.mask = null; this.spriteFrames.clear(); this.pickTargets.clear();
   }
 }
