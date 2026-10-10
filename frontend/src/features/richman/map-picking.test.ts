@@ -5,7 +5,7 @@ import type { PickLayer } from './map-picking';
 const mask = { width: 4, height: 2, alpha: Uint8Array.from([0, 255, 0, 0, 255, 0, 1, 0]) };
 const sprite: Extract<PickLayer, { kind: 'sprite' }> = { kind: 'sprite', target: 'a', x: 100, y: 80,
   frame: { x: 0, y: 0, width: 4, height: 2, anchorX: 2, anchorY: 1 } };
-const land: PickLayer = { kind: 'land', target: 'b', x: 100, y: 80 };
+const land: PickLayer = { kind: 'land', target: 'b', x: 100, y: 80, shape: { kind: 'land', direction: 0 } };
 
 describe('Web map picking using actual sprite opacity and draw order', () => {
   it('extracts alpha rather than treating RGB black or bounding boxes as opaque', () => {
@@ -34,10 +34,13 @@ describe('Web map picking using actual sprite opacity and draw order', () => {
     expect(pickMapTarget({ x: 98, y: 79 }, [land, { ...sprite, target: null }], mask, ['b'])).toBe('b');
     expect(pickMapTarget({ x: 100, y: 80 }, [land], mask, [])).toBeNull();
   });
-  it('matches the visible land diamond rather than its rectangular bounding box', () => {
-    expect(pickMapTarget({ x: 128, y: 80 }, [land], mask, ['b'])).toBe('b');
-    expect(pickMapTarget({ x: 100, y: 94 }, [land], mask, ['b'])).toBe('b');
+  it('matches the ground lot including its corners and rotated boundaries', () => {
+    expect(pickMapTarget({ x: 122, y: 102 }, [land], mask, ['b'])).toBe('b');
+    expect(pickMapTarget({ x: 100, y: 102 }, [land], mask, ['b'])).toBe('b');
     expect(pickMapTarget({ x: 127, y: 93 }, [land], mask, ['b'])).toBeNull();
+    const rotated: PickLayer = { ...land, kind: 'land', shape: { kind: 'land', direction: 7 } };
+    expect(pickMapTarget({ x: 130, y: 80 }, [rotated], mask, ['b'])).toBe('b');
+    expect(pickMapTarget({ x: 122, y: 102 }, [rotated], mask, ['b'])).toBeNull();
     expect(pickMapTarget({ x: NaN, y: 80 }, [land], mask, ['b'])).toBeNull();
   });
   it('converts CSS-sized canvas coordinates after zoom/pan and rejects outside pointer-capture releases', () => {

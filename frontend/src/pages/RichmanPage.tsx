@@ -393,7 +393,7 @@ export function RichmanPage() {
 
         <details className="rm-diagnostics" data-object-ids={stats?.objectIds.join(',') ?? ''}><summary>运行信息与验证工具 <span>{ready ? `${stats?.fps ?? '—'} FPS · ${stats?.sprites ?? 0} 个精灵帧 · ${stats?.objectSprites ?? 0} 个对象实例` : '资源准备中'}</span></summary>
           <div className="rm-diagnostic-body"><p>WebGL · 地图 2304 × 2304 · 110 个道路节点 · 首次场景加载 {stats?.loadMs ?? '—'} ms。地产模式按真实归属和等级显示建筑；住宅五级素材与朝向映射仍待原版运行对照。</p>
-            <label><input type="checkbox" checked={debug} disabled={!ready} onChange={(event) => { setDebug(event.target.checked); scene.current?.setDebug(event.target.checked); }} /> 显示道路连线</label>
+            <label><input type="checkbox" checked={debug} disabled={!ready} onChange={(event) => { setDebug(event.target.checked); scene.current?.setDebug(event.target.checked); }} /> 高亮道路节点</label>
             <button className="rm-button rm-button-light" disabled={!idle || snapshot?.mode !== 'sandbox'} onClick={() => scene.current?.junction()}>定位岔路验证</button>
             <p className="rm-replay-note">{snapshot && snapshot.mode !== 'sandbox' ? `本局种子：${snapshot.seed} · 状态版本：${snapshot.revision}。相同配置、种子和选择可复现对局。` : '自由验证模式不记录回放。'} 岔路定位仅在新建对局选择“自由验证”后可用。</p>
             <button className="rm-button rm-button-light" disabled={!ready || snapshot?.mode === 'sandbox'} onClick={downloadReplay}>下载回放记录</button>

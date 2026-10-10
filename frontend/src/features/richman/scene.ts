@@ -6,6 +6,7 @@ import { buildingName, priceText } from './game/g4';
 import { ROBOT_EFFECT } from './game/road-tools';
 import { atlasMask, pickMapTarget, pointerToWorld } from './map-picking';
 import type { PixelMask, PickLayer } from './map-picking';
+import { propertyOutline, roadSegments } from './map-geometry';
 import { NEARBY_WORKER_EFFECT } from './game/nearby-construction';
 import { Application, Container, Graphics, Rectangle, Sprite, Text, Texture } from 'pixi.js';
 import { PROPERTY_CATALOG } from './game/economy';
@@ -97,6 +98,7 @@ export class RichmanScene {
   private readonly world = new Container();
   private readonly objects = new Container();
   private readonly paths = new Graphics();
+  private readonly pathDebug = new Graphics();
   private readonly roadMarkers = new Graphics();
   private readonly choices = new Graphics();
   private readonly propertyPreview = new Graphics();
@@ -156,7 +158,7 @@ export class RichmanScene {
       const objectsAtlas = Texture.from(images[2]); objectsAtlas.source.scaleMode = 'nearest'; this.roots.push(objectsAtlas);
       for (const [key, f] of Object.entries(objectArt.sprites)) this.textures.set(key, new Texture({source: objectsAtlas.source, frame: new Rectangle(f.x, f.y, f.width, f.height)}));
     }
-    this.world.addChild(new Sprite(ground), this.paths, this.ring, this.objects, this.roadMarkers, this.choices, this.propertyPreview);
+    this.world.addChild(new Sprite(ground), this.paths, this.pathDebug, this.ring, this.objects, this.roadMarkers, this.choices, this.propertyPreview);
     this.objects.sortableChildren = true;
     for (const item of manifest.map.scenery.filter((item) => !item.sprite.startsWith('building-'))) {
       const sprite = new Sprite(this.textures.get(item.sprite)!);
@@ -172,7 +174,8 @@ export class RichmanScene {
         style: { fontFamily: 'sans-serif', fontSize: 11, fill: '#fff', stroke: { color: '#183746', width: 3 } } });
       marker.position.set(property.x, property.y); marker.zIndex = property.y - 1;
       house.position.set(property.x, property.y); house.zIndex = property.y;
-      label.anchor.set(0.5, 0); label.position.set(property.x, property.y + 10); label.zIndex = property.y + 1;
+      const outline = propertyOutline(property);
+      label.anchor.set(0.5, 0); label.position.set(property.x, property.y + Math.max(...outline.filter((_, i) => i % 2 === 1)) + 3); label.zIndex = property.y + 1;
       this.propertyViews.set(property.id, { marker, house, label });
       this.pickTargets.set(marker, property.id); this.pickTargets.set(house, property.id);
       this.objects.addChild(marker, house, label);
@@ -186,7 +189,7 @@ export class RichmanScene {
       this.objects.addChild(sprite);
     });
     this.drawPaths();
-    this.paths.visible = false;
+    this.pathDebug.visible = false;
     app.stage.addChild(this.world);
     const canvas = app.canvas;
     canvas.setAttribute('aria-label', '日本地图，可拖动平移，滚轮缩放；邻近建造时可点选地块，再在面板确认；使用旁边按钮掷骰和选择岔路');
@@ -248,7 +251,7 @@ export class RichmanScene {
       const ownerIndex = property.ownerId ? Number(property.ownerId.split('-')[1]) - 1 : -1;
       const owner = ownerIndex >= 0 ? this.manifest.characters[state.participants[ownerIndex]] : null;
       const color = owner?.color ?? '#d9ded4';
-      view.marker.clear().poly([-28, 0, 0, -14, 28, 0, 0, 14]).fill({ color, alpha: owner ? 0.5 : 0.15 }).stroke({ color, width: 2 });
+      view.marker.clear().poly(propertyOutline(definition)).fill({ color, alpha: owner ? 0.3 : 0.08 }).stroke({ color, width: 2 });
       view.label.text = owner ? `${owner.name} · ${property.level}级` : definition.kind === 'facility' ? '大型用地' : property.level ? `待售 · ${property.level}级` : '空地';
       if (state.g4) view.label.text = `${owner?.name ?? '待售'} · ${buildingName(property, definition)} ${property.level}级 ${priceText(property)}${property.research ? ` · 研究 ${property.research.remaining}` : ''}`;
       if (view.house.visible) {
@@ -380,12 +383,17 @@ export class RichmanScene {
   }
 
   private drawPaths() {
+    const segments = roadSegments(this.manifest.map.nodes);
+    // A permanent route layer also connects the gaps in the original ground bitmap.
+    for (const { from, to } of segments) this.paths.moveTo(from.x, from.y).lineTo(to.x, to.y);
+    this.paths.stroke({ color: '#283039', width: 6, alpha: 0.85 });
+    for (const { from, to } of segments) this.paths.moveTo(from.x, from.y).lineTo(to.x, to.y);
+    this.paths.stroke({ color: '#ead8a0', width: 2, alpha: 0.8 });
     for (const node of this.manifest.map.nodes) {
-      for (const id of node.adjacent) {
-        const to = this.model.nodes.get(id)!;
-        this.paths.moveTo(node.x, node.y).lineTo(to.x, to.y).stroke({ color: '#fff1aa', width: 2, alpha: 0.6 });
-      }
-      this.paths.circle(node.x, node.y, 4).fill({ color: '#fff4bc', alpha: 0.85 });
+      const special = node.kind >= 6000;
+      this.paths.circle(node.x, node.y, special ? 8 : 3).fill({ color: special ? '#66533a' : '#ead8a0', alpha: 0.9 });
+      if (special) this.paths.stroke({ color: '#fff1bb', width: 2 });
+      this.pathDebug.circle(node.x, node.y, 12).stroke({ color: '#76e4ed', width: 2 });
     }
   }
 
@@ -447,7 +455,8 @@ export class RichmanScene {
           if (child instanceof Sprite) {
             const frame = this.spriteFrames.get(child);
             if (frame) layers.push({ kind: 'sprite', target, x: child.x, y: child.y, frame });
-          } else if (target) layers.push({ kind: 'land', target, x: child.x, y: child.y });
+          } else if (target) layers.push({ kind: 'land', target, x: child.x, y: child.y,
+            shape: PROPERTY_CATALOG.properties.find(property => property.id === target)! });
           // Labels, rings and debug paths are UI annotations, not game-object occluders.
         }
         const id = pickMapTarget(point, layers, this.mask, state.workerTargets ?? []);
@@ -481,7 +490,7 @@ export class RichmanScene {
   }
   private highlightProperty(id: string) {
     const definition = PROPERTY_CATALOG.properties.find(p => p.id === id)!;
-    this.propertyPreview.clear().circle(definition.x, definition.y, 26)
+    this.propertyPreview.clear().poly(propertyOutline(definition).map((value, i) => value + (i % 2 === 0 ? definition.x : definition.y)))
       .stroke({ color: '#ffce67', width: 4 });
   }
   previewProperty(id: string) {
@@ -509,7 +518,7 @@ export class RichmanScene {
     this.focus();
     this.reportStats(Math.round(this.app.ticker.FPS));
   }
-  setDebug(value: boolean) { this.debug = value; this.paths.visible = this.debug; }
+  setDebug(value: boolean) { this.debug = value; this.pathDebug.visible = this.debug; }
   select(index: number) { this.model.select(index); this.focus(); }
   reset() { this.model.reset(); this.followPlayer(); }
   junction() { this.model.visitJunction(); this.followPlayer(); }

@@ -1,10 +1,12 @@
 import type { Frame } from './types';
+import { propertyContains } from './map-geometry';
+import type { LandShape } from './map-geometry';
 
 export type Point = { x: number; y: number };
 export type PixelMask = { width: number; height: number; alpha: Uint8Array };
 export type PickLayer = { target: string | null; x: number; y: number } & (
   | { kind: 'sprite'; frame: Frame }
-  | { kind: 'land' }
+  | { kind: 'land'; shape: LandShape }
 );
 
 /** Use the Web atlas's displayed transparency, not the unverified original index-mask mapping. */
@@ -29,7 +31,7 @@ export function pickMapTarget(point: Point, layers: readonly PickLayer[], mask: 
   for (let i = layers.length - 1; i >= 0; i--) {
     const layer = layers[i];
     const hit = layer.kind === 'sprite' ? spriteContains(point, layer, mask)
-      : Math.abs(point.x - layer.x) / 28 + Math.abs(point.y - layer.y) / 14 <= 1;
+      : propertyContains(point.x - layer.x, point.y - layer.y, layer.shape);
     if (hit) return layer.target !== null && candidates.includes(layer.target) ? layer.target : null;
   }
   return null;
