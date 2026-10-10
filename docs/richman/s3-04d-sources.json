@@ -1,0 +1,100 @@
+{
+  "stage": "S3-04d",
+  "rulesId": "japan-events-candidate-v47",
+  "newGameSemantics": false,
+  "nativeExecution": false,
+  "resourceMapping": "inherits S3-04a/b/c sources unchanged; no new clips guessed",
+  "facts": [
+    {
+      "id": "R11-D01",
+      "finding": "Seven real UI legal routes + nine-command visual route; matching normalized legal actions, exact full/prefix state/events replays.",
+      "evidence": "s3-04d-results.json and presentation-* fixtures"
+    },
+    {
+      "id": "R11-D02",
+      "finding": "Actual HTMLAudioElement events observed without replacing play/pause outcomes. All28files decode/time advance; no-gesture CDP play rejects then real button succeeds.",
+      "evidence": "s3-04d-browser-media.json"
+    },
+    {
+      "id": "R11-D03",
+      "finding": "Missing optional atlas had no markers until first onChange: constructor omitted drawRoadTools. Add initial draw only; after-fix real browser missing/corrupt/normal/exit regression and screenshot verified.",
+      "evidence": "scene.ts constructor; presentation-loading-browser.cjs"
+    },
+    {
+      "id": "R11-D04",
+      "finding": "Visibility probes returned false, including headed/window minimize; never synthesize visibilitychange or claim hidden passed.",
+      "evidence": "s3-04d-browser-media.json"
+    },
+    {
+      "id": "R11-D05",
+      "finding": "Near-view legal surrender15 and moving pause screenshots inspected; paused capture hides only shade via Playwright screenshot style, no game mutation.",
+      "evidence": "presentation-v47-visual replay/manifest"
+    },
+    {
+      "id": "R11-D06",
+      "finding": "Two-player v47 game continues when audio preference Storage get/set throw; terminal surrender pauses audio and no later playing event. Real popup-tab switch still reports visible in both headless and headed Chrome.",
+      "evidence": "s3-04d-targeted-results.json; presentation-targeted-browser.cjs"
+    },
+    {
+      "id": "R11-D07",
+      "finding": "Legal map purchase triggers effect49; injected NotAllowedError releases ports and UI retry restores music. Independent browser packet checks same-turn priority/flush. No natural browser policy rejection or original-map queue saturation claimed.",
+      "evidence": "s3-04d-targeted-results.json; presentation-short-refusal-browser.cjs; presentation-media-boundaries.cjs"
+    },
+    {
+      "id": "R11-D08",
+      "finding": "At the prior targeted checkpoint 234 saved legal replays contained no ordinary paid land 4→5 trigger. New legal routes and real browser acceptance were subsequently added in R11-D11; this prior negative scan is historical, not the current coverage status.",
+      "evidence": "find-presentation-upgrade.ts; s3-04d-targeted-results.json"
+    },
+    {
+      "id": "R11-D09",
+      "finding": "One focused normal-speed four-player v47 original-map G7 route: 2432 actual UI commands including 8 pause commands; exact legal business command match, complete/4 prefix replay, browser object IDs equal replay public world at four captures. Visible set unchanged across G7; changed-set removal and exact-boundary media ports remain unaccepted.",
+      "evidence": "s3-04d-targeted-results.json; presentation-v47-research-focused-replay.json and -manifest.json"
+    },
+    {
+      "id": "R11-D10",
+      "finding": "A new two-player v47 original-map G7 route executed 2,114 UI commands; exact legal actions, full/3-prefix replay, world set changes god-19/20 to god-16/17, and all 51 media ports were captured on both sides of the actual time-machine command. One music port stayed active; other 50 were released; no new media event at this observed boundary. Native Chrome CDP tab switching and window minimization still did not produce document.hidden=true.",
+      "evidence": "s3-04d-targeted-results.json; presentation-v47-g7-changed-set-replay.json and -manifest.json; scene.ts drawGods; /private/tmp/richman-presentation-visibility/native-cdp.json"
+    },
+    {
+      "id": "R11-D11",
+      "finding": "All four paid ordinary land level 4→5 voices accepted on real original-map UI: xiaomei 3772 commands/400 cash/voice1308, tuu 3772/400/1173, chyan 2429/500/1146, salonbus 3490/500/1092. Each exact selectable character pair, legal command match, full/upgrade-prefix replay and actual HTMLAudioElement playing. 13,463 actual commands total; initial invalid seat attempts excluded.",
+      "evidence": "s3-04d-targeted-results.json; four presentation-v47-paid-upgrade-* replay and manifest files"
+    },
+    {
+      "id": "R11-D12",
+      "finding": "Native regular Chrome tab now produces true trusted hidden/visible events. Music paused during loading and actual playback; 6409.9ms hidden at 17.976783 seconds, same port resumes; exit releases all four created ports. Six legal original-map UI commands and full/three-prefix replay verified.",
+      "evidence": "s3-04d-native-final.json; presentation-v47-native-final replay/manifest"
+    },
+    {
+      "id": "R11-D13",
+      "finding": "Original-map effect49 actually plays without policy rejection; natural NotAllowedError remains untriggered. Read-only audit of fourteen actual replays/26845 commands finds zero same-turn same-channel competitors within non-flushed epochs; no original-map queue passing claimed. User explicitly accepted Chrome candidate closure retaining both untriggered items and device/difference list.",
+      "evidence": "s3-04d-native-final.json; s3-04d-targeted-results.json closure"
+    }
+  ],
+  "scripts": {
+    "verify-presentation.ts": "74743792fdb964a438a19dc2f6968c691bc0dc047d3d8f4e080b6ab99ba3eb8f",
+    "presentation-visual-browser.cjs": "b57c8fea78386b4a9b0c9964a7a1ad1a3068f4d399760ebb1284507427420424",
+    "presentation-probe.cjs": "5a1a9ed3d1a2eb1da090f353d4e183526c824eb955fcd331725c80d88a5e8032",
+    "presentation-ui-browser.cjs": "485783ecba379a9e436d1758df8c09fb53a95f6369ebdc470be064041fb6dd49",
+    "verify-presentation-visual.ts": "e4c28f0646dc5d28c73a782960817f867cada000e2d190addab2552e9cb1d443",
+    "presentation-media-browser.cjs": "abffc4477e4bdf2efb0aa557387fafc262f1229742d5963642e0f5c14404b10b",
+    "presentation-loading-browser.cjs": "3af3c4774a99cfe5b1a874c87c5c2753fb0f16dc686bd74b3d45accbce1cbaa9",
+    "presentation-targeted-browser.cjs": "b83e0ba0bfa492c9d5517ab4e2b6d43780563459c8365ff291e2e953cf346a51",
+    "presentation-short-refusal-browser.cjs": "af73cb2b272f9947edbeb6c18d87c7ddd847cfe770fa62420ff1429cb5f12da3",
+    "presentation-media-boundaries.cjs": "3678936eb3b212b19519ff0cefcb9f8b934cad7a5ce11840a0c9ce91da5ce94e",
+    "find-presentation-upgrade.ts": "7714bdd691812f8a305ab34209884dea99f94370269e973f0b708bad63ec5050",
+    "verify-presentation-focused.ts": "1d9f10f98268c168f8d286011f03aca59c6a765d2f051e47e60005bd00bb51b0"
+  },
+  "priorResourcesUnchanged": true,
+  "differences": [
+    "original music/audio random/queue/palette/occlusion stack",
+    "vehicle/event animations and Panel/jump unmapped",
+    "exit/endgame/RNG/special actors/spinner/AI/market/minigame prior differences"
+  ],
+  "finalScripts": {
+    "presentation-native-server.cjs": "853c5b2c4fb856a32e8622c8a4ec6277338bc0a8e7f351e0a3d37e34236d6100",
+    "audit-presentation-competition.ts": "f8bbcd7ff5cff98b5ce0384dde22f8b4b455e4e8e401f0a9f793ee2d3da26896",
+    "verify-presentation-native.ts": "370615504d8cdb7f00fcb65737478564f81aab91f3d1dd12cc36971cd7c269e3"
+  },
+  "finalApplicationChanges": false
+}

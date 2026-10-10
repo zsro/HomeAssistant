@@ -1,0 +1,1217 @@
+{
+  "stage": "S3-03f",
+  "date": "2026-10-09",
+  "status": "scoped-gods-and-vehicles-Web-candidate-closed",
+  "S3_03Closed": true,
+  "closureScope": "ordinary seats, current documented v45/v46/v47 rules and read-only presentation; not native-full-fidelity or all UI combinations",
+  "rulesId": "japan-events-candidate-v47",
+  "mode": "surrender",
+  "fingerprint": "c6d96cc",
+  "newGameSemantics": false,
+  "newPolicyVersion": false,
+  "nativeExecution": false,
+  "preservedPolicies": [
+    "basic-v1",
+    "tools-v1",
+    "rent-v1",
+    "defense-v1",
+    "estate-v1",
+    "cash-v1",
+    "status-v1",
+    "inventory-v1",
+    "commerce-v1",
+    "area-v1",
+    "roads-v1",
+    "mobility-v1",
+    "gods-v1",
+    "capital-v1",
+    "research-v1"
+  ],
+  "historicalCapabilities": {
+    "items": 43,
+    "news": 36,
+    "japanFortuneSlots": 37
+  },
+  "audit": {
+    "files": 9,
+    "inheritedNativeFacts": 13,
+    "closureFacts": 6,
+    "historicalReports": 5,
+    "hashesVerified": true
+  },
+  "tests": {
+    "uniquePassed": 351,
+    "files": {
+      "src/features/richman/game/surrender-circuit.test.ts": 4,
+      "src/features/richman/game/god-circuit-browser.test.ts": 3,
+      "src/features/richman/game/god-pairs-browser.test.ts": 3,
+      "src/features/richman/game/computer-mobility.test.ts": 41,
+      "src/features/richman/game/surrender-browser.test.ts": 3,
+      "src/features/richman/game/g7.test.ts": 11,
+      "src/features/richman/game/computer-research.test.ts": 45,
+      "src/features/richman/game/special-objects-browser.test.ts": 3,
+      "src/features/richman/game/surrender-session.test.ts": 3,
+      "src/features/richman/game/special-objects.test.ts": 23,
+      "src/features/richman/GodTrafficPanel.test.tsx": 5,
+      "src/features/richman/game/surrender.test.ts": 17,
+      "src/features/richman/game/god-pairs.test.ts": 21,
+      "src/features/richman/game/god-circuit-domain.test.ts": 9,
+      "src/features/richman/game/replay-matrix.test.ts": 133,
+      "src/features/richman/game/computer-mobility-browser.test.ts": 5,
+      "src/features/richman/game/god-closure-domain.test.ts": 1,
+      "src/features/richman/game/god-closure-browser.test.ts": 3,
+      "src/features/richman/G456Choice.test.tsx": 18
+    },
+    "scope": "targeted domains/session/component and archived replays; not full frontend suite",
+    "logs": [
+      "/private/tmp/03f-regression.log",
+      "/private/tmp/03f-legacy.log",
+      "/private/tmp/03f-domain.log",
+      "/private/tmp/03f-goldens.log",
+      "/private/tmp/03f-engineer-ui.log"
+    ]
+  },
+  "build": {
+    "passed": true,
+    "log": "/private/tmp/03f-build-final.log",
+    "warnings": [
+      "existing large chunks",
+      "existing mixed static/dynamic math-printables import"
+    ]
+  },
+  "lint": {
+    "passed": true,
+    "log": "/private/tmp/03f-lint-final.log"
+  },
+  "preservation": {
+    "priorFeatureFiles": 746,
+    "changed": 0,
+    "historicalFixtures": 452,
+    "newActualUIFiles": 6,
+    "runtimeOrPolicyChanges": false
+  },
+  "browser": {
+    "newCommands": 3224,
+    "namedPrefixes": 22,
+    "uniquePrefixes": 20,
+    "longRoutes": [
+      {
+        "route": "car",
+        "players": 3,
+        "normalSpeed": true,
+        "map": "original Japan; real human UI + actual automatic seats; auth fixture only",
+        "computerCommands": 0,
+        "commands": 775,
+        "human": 303,
+        "auto": 460,
+        "displayChecks": [
+          {
+            "index": 0,
+            "kinds": []
+          },
+          {
+            "index": 569,
+            "kinds": [
+              "equipped"
+            ]
+          },
+          {
+            "index": 588,
+            "kinds": [
+              "before-surrender"
+            ]
+          },
+          {
+            "index": 589,
+            "kinds": [
+              "after-surrender",
+              "equipped-before-attachment"
+            ]
+          },
+          {
+            "index": 590,
+            "kinds": [
+              "cleared-after-attachment"
+            ]
+          },
+          {
+            "index": 763,
+            "kinds": [
+              "death-expired"
+            ]
+          }
+        ],
+        "lifecycle": [
+          "pause/resume",
+          "reset dialog cancel",
+          "reset",
+          "replace",
+          "exit",
+          "fullscreen",
+          "390px"
+        ],
+        "cleanup": {
+          "raf": 0,
+          "canvas": 0
+        },
+        "errors": [],
+        "finalTurn": 110,
+        "finalDate": "1998-02-18",
+        "monthRefreshes": [
+          {
+            "type": "specialObjectsRefreshed",
+            "date": "1998-02-01",
+            "objects": [
+              {
+                "type": 13,
+                "node": 84
+              },
+              {
+                "type": 14,
+                "node": 90
+              }
+            ],
+            "sequence": 909,
+            "commandId": "command-479",
+            "playerId": "player-3",
+            "turn": 69
+          }
+        ],
+        "facts": [
+          {
+            "kind": "exit-barrier",
+            "index": 595,
+            "turn": 85,
+            "checkpointsCleared": true,
+            "sourceFunds": {
+              "cash": 0,
+              "bank": 0
+            },
+            "publicFund": 23070
+          },
+          {
+            "kind": "equipment-cleared",
+            "index": 598,
+            "before": {
+              "mobility": {
+                "stop": 0,
+                "winter": 0,
+                "dream": 0,
+                "prison": 0,
+                "hospital": 0,
+                "turtle": 0,
+                "vehicle": "tool:06",
+                "diceCount": 3,
+                "savedVehicle": "foot",
+                "savedDice": 1,
+                "travel": 0
+              },
+              "engineer": null,
+              "inventory": {
+                "tool:08": 1,
+                "tool:09": 1,
+                "tool:01": 1,
+                "tool:02": 1,
+                "card:02": 0,
+                "card:01": 0,
+                "card:03": 0,
+                "card:04": 0,
+                "card:05": 0,
+                "card:06": 0,
+                "card:12": 0,
+                "card:14": 0,
+                "card:15": 0,
+                "card:16": 0,
+                "card:17": 0,
+                "card:30": 0,
+                "tool:05": 0,
+                "tool:06": 0,
+                "card:13": 0,
+                "card:18": 0,
+                "card:19": 0,
+                "card:20": 1,
+                "card:21": 0,
+                "card:29": 0,
+                "card:07": 0,
+                "card:08": 0,
+                "card:26": 0,
+                "card:27": 0,
+                "card:28": 0,
+                "card:09": 0,
+                "card:10": 0,
+                "card:11": 0,
+                "tool:03": 0,
+                "tool:04": 0,
+                "tool:07": 0,
+                "tool:12": 0,
+                "card:22": 0,
+                "card:23": 0,
+                "card:24": 0,
+                "card:25": 0,
+                "tool:10": 0,
+                "tool:11": 0,
+                "tool:13": 0
+              }
+            },
+            "after": {
+              "mobility": {
+                "stop": 0,
+                "winter": 0,
+                "dream": 0,
+                "prison": 0,
+                "hospital": 0,
+                "turtle": 0,
+                "vehicle": "foot",
+                "diceCount": 1,
+                "savedVehicle": "foot",
+                "savedDice": 1,
+                "travel": 0
+              },
+              "engineer": null,
+              "inventory": {
+                "tool:08": 0,
+                "tool:09": 0,
+                "tool:01": 0,
+                "tool:02": 0,
+                "card:02": 0,
+                "card:01": 0,
+                "card:03": 0,
+                "card:04": 0,
+                "card:05": 0,
+                "card:06": 0,
+                "card:12": 0,
+                "card:14": 0,
+                "card:15": 0,
+                "card:16": 0,
+                "card:17": 0,
+                "card:30": 0,
+                "tool:05": 0,
+                "tool:06": 0,
+                "card:13": 0,
+                "card:18": 0,
+                "card:19": 0,
+                "card:20": 0,
+                "card:21": 0,
+                "card:29": 0,
+                "card:07": 0,
+                "card:08": 0,
+                "card:26": 0,
+                "card:27": 0,
+                "card:28": 0,
+                "card:09": 0,
+                "card:10": 0,
+                "card:11": 0,
+                "tool:03": 0,
+                "tool:04": 0,
+                "tool:07": 0,
+                "tool:12": 0,
+                "card:22": 0,
+                "card:23": 0,
+                "card:24": 0,
+                "card:25": 0,
+                "tool:10": 0,
+                "tool:11": 0,
+                "tool:13": 0
+              },
+              "god": {
+                "id": "god-14",
+                "type": 15,
+                "node": 6,
+                "carrier": "player-2",
+                "remaining": 13,
+                "slot": 15
+              }
+            },
+            "pools": [
+              {
+                "id": "tool:01",
+                "before": 8,
+                "after": 9,
+                "bag": 1,
+                "equipped": 0
+              },
+              {
+                "id": "tool:02",
+                "before": 8,
+                "after": 9,
+                "bag": 1,
+                "equipped": 0
+              },
+              {
+                "id": "tool:03",
+                "before": 10,
+                "after": 10,
+                "bag": 0,
+                "equipped": 0
+              },
+              {
+                "id": "tool:04",
+                "before": 10,
+                "after": 10,
+                "bag": 0,
+                "equipped": 0
+              },
+              {
+                "id": "tool:05",
+                "before": 10,
+                "after": 10,
+                "bag": 0,
+                "equipped": 0
+              },
+              {
+                "id": "tool:06",
+                "before": 9,
+                "after": 10,
+                "bag": 0,
+                "equipped": 1
+              },
+              {
+                "id": "tool:07",
+                "before": 10,
+                "after": 10,
+                "bag": 0,
+                "equipped": 0
+              },
+              {
+                "id": "tool:08",
+                "before": 8,
+                "after": 9,
+                "bag": 1,
+                "equipped": 0
+              }
+            ],
+            "noRefund": true
+          },
+          {
+            "kind": "natural-expiry",
+            "index": 773,
+            "turn": 110,
+            "remainingBefore": 1
+          }
+        ],
+        "duration": [
+          {
+            "index": 601,
+            "turn": 86,
+            "before": 13,
+            "after": 12,
+            "type": "endTurn"
+          },
+          {
+            "index": 620,
+            "turn": 88,
+            "before": 12,
+            "after": 11,
+            "type": "endTurn"
+          },
+          {
+            "index": 637,
+            "turn": 90,
+            "before": 11,
+            "after": 10,
+            "type": "endTurn"
+          },
+          {
+            "index": 647,
+            "turn": 92,
+            "before": 10,
+            "after": 9,
+            "type": "endTurn"
+          },
+          {
+            "index": 660,
+            "turn": 94,
+            "before": 9,
+            "after": 8,
+            "type": "endTurn"
+          },
+          {
+            "index": 675,
+            "turn": 96,
+            "before": 8,
+            "after": 7,
+            "type": "endTurn"
+          },
+          {
+            "index": 687,
+            "turn": 98,
+            "before": 7,
+            "after": 6,
+            "type": "endTurn"
+          },
+          {
+            "index": 697,
+            "turn": 100,
+            "before": 6,
+            "after": 5,
+            "type": "endTurn"
+          },
+          {
+            "index": 709,
+            "turn": 102,
+            "before": 5,
+            "after": 4,
+            "type": "endTurn"
+          },
+          {
+            "index": 724,
+            "turn": 104,
+            "before": 4,
+            "after": 3,
+            "type": "endTurn"
+          },
+          {
+            "index": 739,
+            "turn": 106,
+            "before": 3,
+            "after": 2,
+            "type": "endTurn"
+          },
+          {
+            "index": 758,
+            "turn": 108,
+            "before": 2,
+            "after": 1,
+            "type": "endTurn"
+          },
+          {
+            "index": 773,
+            "turn": 110,
+            "before": 1,
+            "after": 0,
+            "type": "endTurn"
+          }
+        ],
+        "timeProduction": [],
+        "prefixes": [
+          {
+            "index": 571,
+            "kind": "equipped"
+          },
+          {
+            "index": 592,
+            "kind": "before-surrender"
+          },
+          {
+            "index": 595,
+            "kind": "after-surrender"
+          },
+          {
+            "index": 595,
+            "kind": "equipped-before-attachment"
+          },
+          {
+            "index": 598,
+            "kind": "cleared-after-attachment"
+          },
+          {
+            "index": 773,
+            "kind": "death-expired"
+          }
+        ],
+        "uniquePrefixes": 5,
+        "fullReplay": true,
+        "prefixReplay": true,
+        "commandsMatchLegalPlan": true,
+        "hashes": {
+          "replay": "176418d9a188ab29ec27f7866143b8597f79df4afa761c4ab61a18d7d6be9bc0",
+          "state": "d341a1fc789c60e80092361f411c2435f01bfa1eb343fc8be57a460f8fe0ad0c",
+          "events": "ae1174f1e93172634e21c85839a5f678e94920a3ab33a354b18f55d0abb6ea6b"
+        }
+      },
+      {
+        "route": "research",
+        "players": 4,
+        "normalSpeed": true,
+        "map": "original Japan; real human UI + actual automatic seats; auth fixture only",
+        "computerCommands": 228,
+        "commands": 2442,
+        "human": 707,
+        "auto": 1717,
+        "displayChecks": [
+          {
+            "index": 0,
+            "kinds": []
+          },
+          {
+            "index": 2142,
+            "kinds": [
+              "equipped"
+            ]
+          },
+          {
+            "index": 2165,
+            "kinds": [
+              "before-surrender"
+            ]
+          },
+          {
+            "index": 2166,
+            "kinds": [
+              "after-surrender",
+              "equipped-before-attachment"
+            ]
+          },
+          {
+            "index": 2167,
+            "kinds": [
+              "cleared-after-attachment"
+            ]
+          },
+          {
+            "index": 2262,
+            "kinds": [
+              "post-exit-research-produced"
+            ]
+          },
+          {
+            "index": 2283,
+            "kinds": [
+              "before-time"
+            ]
+          },
+          {
+            "index": 2284,
+            "kinds": [
+              "after-time"
+            ]
+          },
+          {
+            "index": 2424,
+            "kinds": [
+              "death-expired"
+            ]
+          }
+        ],
+        "lifecycle": [
+          "pause/resume",
+          "reset dialog cancel",
+          "reset",
+          "replace",
+          "exit",
+          "fullscreen",
+          "390px"
+        ],
+        "cleanup": {
+          "raf": 0,
+          "canvas": 0
+        },
+        "errors": [],
+        "finalTurn": 333,
+        "finalDate": "1998-04-04",
+        "monthRefreshes": [
+          {
+            "type": "specialObjectsRefreshed",
+            "date": "1998-02-01",
+            "objects": [
+              {
+                "type": 13,
+                "node": 12
+              },
+              {
+                "type": 14,
+                "node": 53
+              }
+            ],
+            "sequence": 1254,
+            "commandId": "command-688",
+            "playerId": "player-4",
+            "turn": 92
+          },
+          {
+            "type": "specialObjectsRefreshed",
+            "date": "1998-03-01",
+            "objects": [
+              {
+                "type": 13,
+                "node": 90
+              },
+              {
+                "type": 14,
+                "node": 79
+              }
+            ],
+            "sequence": 2737,
+            "commandId": "command-1487",
+            "playerId": "player-4",
+            "turn": 204
+          },
+          {
+            "type": "specialObjectsRefreshed",
+            "date": "1998-04-01",
+            "objects": [
+              {
+                "type": 13,
+                "node": 101
+              },
+              {
+                "type": 14,
+                "node": 57
+              }
+            ],
+            "sequence": 4426,
+            "commandId": "command-2397",
+            "playerId": "player-4",
+            "turn": 323
+          }
+        ],
+        "facts": [
+          {
+            "kind": "exit-barrier",
+            "index": 2172,
+            "turn": 293,
+            "checkpointsCleared": true,
+            "sourceFunds": {
+              "cash": 0,
+              "bank": 0
+            },
+            "publicFund": 7600
+          },
+          {
+            "kind": "equipment-cleared",
+            "index": 2175,
+            "before": {
+              "mobility": {
+                "stop": 0,
+                "winter": 0,
+                "dream": 0,
+                "prison": 0,
+                "hospital": 0,
+                "turtle": 0,
+                "vehicle": "foot",
+                "diceCount": 1,
+                "savedVehicle": "foot",
+                "savedDice": 1,
+                "travel": 0
+              },
+              "engineer": {
+                "remaining": 6,
+                "vehicle": "foot",
+                "dice": 1,
+                "suspended": false
+              },
+              "inventory": {
+                "tool:08": 1,
+                "tool:09": 1,
+                "tool:01": 1,
+                "tool:02": 1,
+                "card:02": 0,
+                "card:01": 0,
+                "card:03": 0,
+                "card:04": 0,
+                "card:05": 0,
+                "card:06": 0,
+                "card:12": 0,
+                "card:14": 0,
+                "card:15": 0,
+                "card:16": 0,
+                "card:17": 0,
+                "card:30": 0,
+                "tool:05": 0,
+                "tool:06": 0,
+                "card:13": 0,
+                "card:18": 0,
+                "card:19": 0,
+                "card:20": 0,
+                "card:21": 0,
+                "card:29": 0,
+                "card:07": 0,
+                "card:08": 0,
+                "card:26": 0,
+                "card:27": 0,
+                "card:28": 1,
+                "card:09": 0,
+                "card:10": 0,
+                "card:11": 0,
+                "tool:03": 0,
+                "tool:04": 0,
+                "tool:07": 1,
+                "tool:12": 0,
+                "card:22": 0,
+                "card:23": 0,
+                "card:24": 0,
+                "card:25": 0,
+                "tool:10": 0,
+                "tool:11": 0,
+                "tool:13": 0
+              }
+            },
+            "after": {
+              "mobility": {
+                "stop": 0,
+                "winter": 0,
+                "dream": 0,
+                "prison": 0,
+                "hospital": 0,
+                "turtle": 0,
+                "vehicle": "foot",
+                "diceCount": 1,
+                "savedVehicle": "foot",
+                "savedDice": 1,
+                "travel": 0
+              },
+              "engineer": null,
+              "inventory": {
+                "tool:08": 0,
+                "tool:09": 0,
+                "tool:01": 0,
+                "tool:02": 0,
+                "card:02": 0,
+                "card:01": 0,
+                "card:03": 0,
+                "card:04": 0,
+                "card:05": 0,
+                "card:06": 0,
+                "card:12": 0,
+                "card:14": 0,
+                "card:15": 0,
+                "card:16": 0,
+                "card:17": 0,
+                "card:30": 0,
+                "tool:05": 0,
+                "tool:06": 0,
+                "card:13": 0,
+                "card:18": 0,
+                "card:19": 0,
+                "card:20": 0,
+                "card:21": 0,
+                "card:29": 0,
+                "card:07": 0,
+                "card:08": 0,
+                "card:26": 0,
+                "card:27": 0,
+                "card:28": 0,
+                "card:09": 0,
+                "card:10": 0,
+                "card:11": 0,
+                "tool:03": 0,
+                "tool:04": 0,
+                "tool:07": 0,
+                "tool:12": 0,
+                "card:22": 0,
+                "card:23": 0,
+                "card:24": 0,
+                "card:25": 0,
+                "tool:10": 0,
+                "tool:11": 0,
+                "tool:13": 0
+              },
+              "god": {
+                "id": "god-25",
+                "type": 15,
+                "node": 68,
+                "carrier": "player-2",
+                "remaining": 13,
+                "slot": 15
+              }
+            },
+            "pools": [
+              {
+                "id": "tool:01",
+                "before": 7,
+                "after": 8,
+                "bag": 1,
+                "equipped": 0
+              },
+              {
+                "id": "tool:02",
+                "before": 7,
+                "after": 8,
+                "bag": 1,
+                "equipped": 0
+              },
+              {
+                "id": "tool:03",
+                "before": 10,
+                "after": 10,
+                "bag": 0,
+                "equipped": 0
+              },
+              {
+                "id": "tool:04",
+                "before": 10,
+                "after": 10,
+                "bag": 0,
+                "equipped": 0
+              },
+              {
+                "id": "tool:05",
+                "before": 10,
+                "after": 10,
+                "bag": 0,
+                "equipped": 0
+              },
+              {
+                "id": "tool:06",
+                "before": 10,
+                "after": 10,
+                "bag": 0,
+                "equipped": 0
+              },
+              {
+                "id": "tool:07",
+                "before": 9,
+                "after": 10,
+                "bag": 1,
+                "equipped": 0
+              },
+              {
+                "id": "tool:08",
+                "before": 8,
+                "after": 9,
+                "bag": 1,
+                "equipped": 0
+              }
+            ],
+            "noRefund": true
+          },
+          {
+            "kind": "post-exit-time-research-start",
+            "index": 2184,
+            "turn": 295,
+            "property": {
+              "id": "japan:facility:4",
+              "ownerId": "player-3",
+              "level": 4,
+              "basePrice": 5000,
+              "buildingType": 4,
+              "priceStatus": 0,
+              "research": null
+            }
+          },
+          {
+            "kind": "post-exit-time-produced",
+            "index": 2271,
+            "turn": 310,
+            "inventory": {
+              "tool:08": 0,
+              "tool:09": 1,
+              "tool:01": 1,
+              "tool:02": 1,
+              "card:02": 0,
+              "card:01": 0,
+              "card:03": 0,
+              "card:04": 0,
+              "card:05": 0,
+              "card:06": 0,
+              "card:12": 0,
+              "card:14": 0,
+              "card:15": 0,
+              "card:16": 0,
+              "card:17": 0,
+              "card:30": 0,
+              "tool:05": 0,
+              "tool:06": 0,
+              "card:13": 0,
+              "card:18": 1,
+              "card:19": 0,
+              "card:20": 0,
+              "card:21": 0,
+              "card:29": 0,
+              "card:07": 0,
+              "card:08": 0,
+              "card:26": 0,
+              "card:27": 0,
+              "card:28": 0,
+              "card:09": 0,
+              "card:10": 0,
+              "card:11": 0,
+              "tool:03": 0,
+              "tool:04": 0,
+              "tool:07": 0,
+              "tool:12": 0,
+              "card:22": 0,
+              "card:23": 0,
+              "card:24": 0,
+              "card:25": 0,
+              "tool:10": 1,
+              "tool:11": 0,
+              "tool:13": 0
+            }
+          },
+          {
+            "kind": "time-restored-post-exit-world",
+            "index": 2298,
+            "checkpointTurn": 310,
+            "executionTurn": 313,
+            "beforeRemaining": 6,
+            "savedRemaining": 7,
+            "afterRemaining": 7,
+            "checkpointEliminated": [
+              "player-1"
+            ],
+            "randomBefore": 656784800,
+            "randomAfter": 656784800,
+            "dateBefore": "1998-03-29",
+            "dateSaved": "1998-03-28",
+            "dateAfter": "1998-03-28",
+            "sourceStillExited": true,
+            "inventoryTool10": 0
+          },
+          {
+            "kind": "natural-expiry",
+            "index": 2440,
+            "turn": 333,
+            "remainingBefore": 1
+          }
+        ],
+        "duration": [
+          {
+            "index": 2178,
+            "turn": 294,
+            "before": 13,
+            "after": 12,
+            "type": "endTurn"
+          },
+          {
+            "index": 2190,
+            "turn": 297,
+            "before": 12,
+            "after": 11,
+            "type": "endTurn"
+          },
+          {
+            "index": 2202,
+            "turn": 300,
+            "before": 11,
+            "after": 10,
+            "type": "endTurn"
+          },
+          {
+            "index": 2214,
+            "turn": 303,
+            "before": 10,
+            "after": 9,
+            "type": "endTurn"
+          },
+          {
+            "index": 2236,
+            "turn": 306,
+            "before": 9,
+            "after": 8,
+            "type": "endTurn"
+          },
+          {
+            "index": 2263,
+            "turn": 309,
+            "before": 8,
+            "after": 7,
+            "type": "endTurn"
+          },
+          {
+            "index": 2286,
+            "turn": 312,
+            "before": 7,
+            "after": 6,
+            "type": "endTurn"
+          },
+          {
+            "index": 2298,
+            "turn": 313,
+            "before": 6,
+            "after": 7,
+            "type": "item"
+          },
+          {
+            "index": 2315,
+            "turn": 315,
+            "before": 7,
+            "after": 6,
+            "type": "endTurn"
+          },
+          {
+            "index": 2336,
+            "turn": 318,
+            "before": 6,
+            "after": 5,
+            "type": "endTurn"
+          },
+          {
+            "index": 2360,
+            "turn": 321,
+            "before": 5,
+            "after": 4,
+            "type": "endTurn"
+          },
+          {
+            "index": 2381,
+            "turn": 324,
+            "before": 4,
+            "after": 3,
+            "type": "endTurn"
+          },
+          {
+            "index": 2398,
+            "turn": 327,
+            "before": 3,
+            "after": 2,
+            "type": "endTurn"
+          },
+          {
+            "index": 2418,
+            "turn": 330,
+            "before": 2,
+            "after": 1,
+            "type": "endTurn"
+          },
+          {
+            "index": 2440,
+            "turn": 333,
+            "before": 1,
+            "after": 0,
+            "type": "endTurn"
+          }
+        ],
+        "timeProduction": [
+          {
+            "turn": 295,
+            "remaining": 5
+          },
+          {
+            "turn": 298,
+            "remaining": 4
+          },
+          {
+            "turn": 301,
+            "remaining": 3
+          },
+          {
+            "turn": 304,
+            "remaining": 2
+          },
+          {
+            "turn": 307,
+            "remaining": 1
+          },
+          {
+            "turn": 310,
+            "remaining": 0
+          }
+        ],
+        "prefixes": [
+          {
+            "index": 2144,
+            "kind": "equipped"
+          },
+          {
+            "index": 2169,
+            "kind": "before-surrender"
+          },
+          {
+            "index": 2172,
+            "kind": "after-surrender"
+          },
+          {
+            "index": 2172,
+            "kind": "equipped-before-attachment"
+          },
+          {
+            "index": 2175,
+            "kind": "cleared-after-attachment"
+          },
+          {
+            "index": 2272,
+            "kind": "post-exit-research-produced"
+          },
+          {
+            "index": 2295,
+            "kind": "before-time"
+          },
+          {
+            "index": 2298,
+            "kind": "after-time"
+          },
+          {
+            "index": 2440,
+            "kind": "death-expired"
+          }
+        ],
+        "uniquePrefixes": 8,
+        "fullReplay": true,
+        "prefixReplay": true,
+        "commandsMatchLegalPlan": true,
+        "hashes": {
+          "replay": "c64cb45d0625d738b730c1509b42dd3dee6a3c07aa2fe2e4f34c9118a4db53c2",
+          "state": "c75823d9abeca48ff00390343bb01d69956600e91a6f0bf6dd2516f5675eae32",
+          "events": "3f0923445060080da178f9f146a783d9cca0701b9b0235a803347b39b55fb9df"
+        }
+      }
+    ],
+    "lifecycle": {
+      "players": 3,
+      "normalSpeed": true,
+      "policy": "research-v1",
+      "commands": 7,
+      "selectorRevision": 1,
+      "frozen": 4,
+      "afterComputer": 7,
+      "checks": [
+        "exited human retains selector",
+        "computer target",
+        "human roll/surrender disabled during AI",
+        "pause pending AI",
+        "reset-dialog cancel",
+        "resume AI",
+        "reset after AI",
+        "replace",
+        "exit"
+      ],
+      "cleanup": {
+        "raf": 0,
+        "canvas": 0
+      },
+      "errors": [],
+      "prefixes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "fullReplay": true,
+      "prefixReplay": true,
+      "hashes": {
+        "replay": "eb5aaff45fc650cb55f69c4bd686d68b0d1ec1a8fd0019adff03f05585ab45e3",
+        "state": "9dbb13cd0d1864be52c3671ad7a1695227b54e6f88d365fdab0990084aea46c6",
+        "events": "2ec1590d2ad96f32ca70c1c12800493f432feb9860e26f951596a0cb8f6ba13e"
+      }
+    },
+    "inheritedTwoPlayerEvidence": "s3-03e two-player surrender final survivor actual UI (3 commands), rerun archived golden this batch, not a new two-player browser run",
+    "normalSpeed": true,
+    "stateInjection": false,
+    "screenshots": "/private/tmp/richman-god-closure-ui-{car,research} and /private/tmp/richman-god-closure-lifecycle"
+  },
+  "failedBrowserAttempt": {
+    "commands": 2143,
+    "lastAction": "begin engineer selection",
+    "reason": "test adapter omitted visible target selection; disabled confirm timed out",
+    "replaySHA256": "337043f8051ddbedb767ee0c8fabf75d5fca9320d18541adc7c1f66b7ff72cfc",
+    "countedAsPassed": false,
+    "path": "/private/tmp/richman-god-closure-research-first-failed"
+  },
+  "exploration": [
+    "car seed0 had replacement before full expiry and was not accepted",
+    "planner initially supplied buildingType on decline; planner corrected before accepted route; no product change",
+    "first research UI stopped at engineer confirmation because the test adapter omitted target selection; failed export kept separately, adapter corrected and complete normal-speed route rerun"
+  ],
+  "unverifiedUI": [
+    "dream/suspended-engineer cleanup",
+    "source-equipped surrender cleanup",
+    "positive public-auction surrender combination",
+    "all vehicle/insurance/state combinations",
+    "fresh ordinary four-seat third successful gift is gated, busy behavior covered by domain fixtures only"
+  ],
+  "deferred": [
+    "native exit stack/endgame",
+    "native RNG and spinner",
+    "special actor identities",
+    "dedicated gods/vehicle animations and audio",
+    "original AI/market",
+    "other asset sale listings",
+    "special-object active teleport and variable explosion traversal",
+    "minigame presentation/collision"
+  ],
+  "next": "S3-04a audio/animation asset and event inventory, first evidence-backed audio group; preserve v47 and all prior policies/replays"
+}

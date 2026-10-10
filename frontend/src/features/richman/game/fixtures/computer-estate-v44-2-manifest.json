@@ -1,0 +1,208 @@
+{
+  "players": 2,
+  "commands": 1730,
+  "turn": 253,
+  "auto": 353,
+  "human": 353,
+  "acquisitions": [
+    {
+      "id": "player-2",
+      "ai": true,
+      "item": "card:05",
+      "turn": 54,
+      "action": "magic",
+      "evidence": [
+        {
+          "node": 35,
+          "group": 0,
+          "targets": [
+            "player-2"
+          ],
+          "effect": 6,
+          "title": "得一张卡片",
+          "rows": [
+            {
+              "playerId": "player-2",
+              "lines": [
+                "获得换屋卡。"
+              ],
+              "pointsBefore": 0,
+              "pointsAfter": 0,
+              "cashBefore": 600,
+              "cashAfter": 600,
+              "bankBefore": 96000,
+              "bankAfter": 96000,
+              "stopBefore": 0,
+              "stopAfter": 0,
+              "previousBefore": 36,
+              "previousAfter": 36,
+              "received": {
+                "itemId": "card:05",
+                "discarded": null
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "player-2",
+      "ai": true,
+      "item": "card:04",
+      "turn": 150,
+      "action": "buyItem",
+      "evidence": [
+        {
+          "item": "card:04",
+          "cost": 25
+        }
+      ]
+    },
+    {
+      "id": "player-2",
+      "ai": true,
+      "item": "card:03",
+      "turn": 176,
+      "action": "buyItem",
+      "evidence": [
+        {
+          "item": "card:03",
+          "cost": 35
+        }
+      ]
+    }
+  ],
+  "uses": [
+    {
+      "ai": true,
+      "id": "player-2",
+      "item": "card:04",
+      "turn": 172,
+      "target": "japan:land:22",
+      "cost": 0,
+      "changes": [
+        {
+          "before": {
+            "id": "japan:land:26",
+            "ownerId": "player-2",
+            "level": 0,
+            "basePrice": 1500,
+            "buildingType": 0,
+            "priceStatus": 0,
+            "research": null
+          },
+          "after": {
+            "id": "japan:land:26",
+            "ownerId": null,
+            "level": 0,
+            "basePrice": 1500,
+            "buildingType": 0,
+            "priceStatus": 0,
+            "research": null
+          }
+        },
+        {
+          "before": {
+            "id": "japan:land:22",
+            "ownerId": null,
+            "level": 0,
+            "basePrice": 2000,
+            "buildingType": 0,
+            "priceStatus": 0,
+            "research": null
+          },
+          "after": {
+            "id": "japan:land:22",
+            "ownerId": "player-2",
+            "level": 0,
+            "basePrice": 2000,
+            "buildingType": 0,
+            "priceStatus": 0,
+            "research": null
+          }
+        }
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "item": "card:03",
+      "turn": 252,
+      "target": "japan:land:12",
+      "cost": 2500,
+      "changes": [
+        {
+          "before": {
+            "id": "japan:land:12",
+            "ownerId": "player-1",
+            "level": 0,
+            "basePrice": 2500,
+            "buildingType": 0,
+            "priceStatus": 0,
+            "research": null
+          },
+          "after": {
+            "id": "japan:land:12",
+            "ownerId": "player-2",
+            "level": 0,
+            "basePrice": 2500,
+            "buildingType": 0,
+            "priceStatus": 0,
+            "research": null
+          }
+        }
+      ]
+    }
+  ],
+  "cancellations": [],
+  "prefixes": [
+    "card:05-acquired",
+    "card:04-acquired",
+    "card:04-paused",
+    "card:04-resumed",
+    "card:04-confirm-before",
+    "card:04-confirm-after",
+    "card:03-acquired",
+    "card:03-paused",
+    "card:03-resumed",
+    "card:03-confirm-before",
+    "card:03-confirm-after"
+  ],
+  "report": {
+    "policy": "estate-v1",
+    "toolWindows": [
+      "tool:08",
+      "card:04",
+      "card:03"
+    ],
+    "crossChecks": [],
+    "route": "2",
+    "terminal": false,
+    "players": 2,
+    "normalSpeed": true,
+    "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+    "commands": 1730,
+    "auto": 353,
+    "human": 353,
+    "lifecycle": [
+      "pause stops waiting",
+      "resume",
+      "reset dialog cancel",
+      "reset",
+      "replace with humans",
+      "exit cleanup",
+      "fullscreen",
+      "390px"
+    ],
+    "cleanup": {
+      "raf": 0,
+      "canvas": 0
+    },
+    "errors": []
+  },
+  "hashes": {
+    "replay": "f0ffd5a8c432a5782b056ce2895aafe422675cd4b0bc64ca60059f68c5ad31fc",
+    "state": "6dbfd021e90258ba16158738001f596fdfb966f5c21bd3aa38a41f6bcd78e0df",
+    "events": "222d6f5d9087d38568041a9b518a9feaaa2b72f1e0e2047c54ac26e252fd1178"
+  }
+}

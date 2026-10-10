@@ -1,0 +1,259 @@
+{
+  "stage": "S2-03aa",
+  "referenceCommit": "ec7d70e693059d1e781d9d1cc2ad7f36d360d39e",
+  "grade": "fixed cross-version source; no native Windows execution",
+  "inheritedSource": "s2-03z-sources.json",
+  "verifiedFiles": 6,
+  "sources": [
+    {
+      "path": "asm/rich4_shop.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_shop.asm",
+      "gitBlobSha1": "b7ae7b1f19435f6b7861ea15365da14be76ecf34",
+      "sha256": "2273fa44c0cbc7d4f508006b917b4f2c412a19e33014abd968435c29e0770410"
+    },
+    {
+      "path": "asm/rich4_card_utils.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_card_utils.asm",
+      "gitBlobSha1": "23304fd33491d039d9f50d36475fa9794acccdb2",
+      "sha256": "937d2f587f15068f1f1280ac60d4a61c0249dbde0f206bfcc1489a29591d8181"
+    },
+    {
+      "path": "asm/rich4_card_utils_2.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_card_utils_2.asm",
+      "gitBlobSha1": "461daf212cc8056beddaadd4ea6e36c5b9e93ceb",
+      "sha256": "98caa25f4c3cbbfca6cf304caa6485d719b3776ccb701a401d90920828b29ae2"
+    },
+    {
+      "path": "asm/rich4_tool_utils.c",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_tool_utils.c",
+      "gitBlobSha1": "218ab5b0e02204bcdb5a65c4483d8f570ef7265f",
+      "sha256": "12fb8cedf2a50efa98cdfbd15f55b8167a4b3d753c6677d5ba787ac50c8d4097"
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_core_actions.asm",
+      "gitBlobSha1": "ebfde6c820e8a430b856d9816a926b636e0db1dc",
+      "sha256": "2874c1a3e0ca1d0da5afe4cb93e42cf2d6f6fa864dbee11d7bcaa028af07d94a"
+    },
+    {
+      "path": "asm/rich4_player_say_on_events.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_say_on_events.asm",
+      "gitBlobSha1": "644c02665ec7ffce20f389e4c258cf1118ab8907",
+      "sha256": "9d12b7717f448b8928db8f2b89cfa0b4bbae694757ea9a53a6c8ea5d7fa5adb9"
+    }
+  ],
+  "references": [
+    {
+      "path": "asm/rich4_shop.asm",
+      "anchor": "_rich4_ui_shop_entry:",
+      "lines": [
+        1898
+      ]
+    },
+    {
+      "path": "asm/rich4_shop.asm",
+      "anchor": "loc_0042e9b9:",
+      "lines": [
+        1937
+      ]
+    },
+    {
+      "path": "asm/rich4_shop.asm",
+      "anchor": "loc_0042e9ea:",
+      "lines": [
+        1952
+      ]
+    },
+    {
+      "path": "asm/rich4_shop.asm",
+      "anchor": "loc_0042ea2b:",
+      "lines": [
+        1972
+      ]
+    },
+    {
+      "path": "asm/rich4_shop.asm",
+      "anchor": "loc_0042eb15:",
+      "lines": [
+        2042
+      ]
+    },
+    {
+      "path": "asm/rich4_shop.asm",
+      "anchor": "loc_0042eb40:",
+      "lines": [
+        2059
+      ]
+    },
+    {
+      "path": "asm/rich4_shop.asm",
+      "anchor": "loc_0042eb61:",
+      "lines": [
+        2071
+      ]
+    },
+    {
+      "path": "asm/rich4_shop.asm",
+      "anchor": "loc_0042ebfe:",
+      "lines": [
+        2120
+      ]
+    },
+    {
+      "path": "asm/rich4_shop.asm",
+      "anchor": "loc_0042ec23:",
+      "lines": [
+        2133
+      ]
+    },
+    {
+      "path": "asm/rich4_shop.asm",
+      "anchor": "loc_0042e1eb:",
+      "lines": [
+        1350
+      ]
+    },
+    {
+      "path": "asm/rich4_shop.asm",
+      "anchor": "loc_0042e39c:",
+      "lines": [
+        1480
+      ]
+    },
+    {
+      "path": "asm/rich4_shop.asm",
+      "anchor": "loc_0042e466:",
+      "lines": [
+        1535
+      ]
+    },
+    {
+      "path": "asm/rich4_shop.asm",
+      "anchor": "loc_0042ed50:",
+      "lines": [
+        2221
+      ]
+    },
+    {
+      "path": "asm/rich4_shop.asm",
+      "anchor": "_rich4_player_buy_card:",
+      "lines": [
+        176
+      ]
+    },
+    {
+      "path": "asm/rich4_shop.asm",
+      "anchor": "_rich4_player_buy_tool:",
+      "lines": [
+        200
+      ]
+    },
+    {
+      "path": "asm/rich4_card_utils.asm",
+      "anchor": "_rich4_find_player_cheapest_card:",
+      "lines": [
+        83
+      ]
+    },
+    {
+      "path": "asm/rich4_card_utils.asm",
+      "anchor": "_rich4_receive_card:",
+      "lines": [
+        125
+      ]
+    },
+    {
+      "path": "asm/rich4_card_utils.asm",
+      "anchor": "_rich4_consume_card:",
+      "lines": [
+        169
+      ]
+    },
+    {
+      "path": "asm/rich4_card_utils_2.asm",
+      "anchor": "_rich4_player_receive_random_card:",
+      "lines": [
+        16
+      ]
+    },
+    {
+      "path": "asm/rich4_tool_utils.c",
+      "anchor": "rich4_receive_tool(int player, int tool)",
+      "lines": [
+        13
+      ]
+    },
+    {
+      "path": "asm/rich4_tool_utils.c",
+      "anchor": "rich4_after_player_use_tool(int player, int tool)",
+      "lines": [
+        28
+      ]
+    },
+    {
+      "path": "asm/rich4_tool_utils.c",
+      "anchor": "rich4_receive_random_tool(int player)",
+      "lines": [
+        43
+      ]
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "anchor": "_rich4_handle_player_land_on_node:",
+      "lines": [
+        322
+      ]
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "anchor": "loc_00419884:",
+      "lines": [
+        346
+      ]
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "anchor": "loc_0041b3b9:",
+      "lines": [
+        2561
+      ]
+    },
+    {
+      "path": "asm/rich4_player_say_on_events.asm",
+      "anchor": "fcn_0044f230:",
+      "lines": [
+        22
+      ]
+    }
+  ],
+  "rules": {
+    "R07-03aa": "Human shelf: after operator gift copy30 card pool bytes, draw rand%10+6 slots. Each weighted draw removes one from local copy only (duplicates allowed); no global reservation. Tool list scans1..8 positive supply in numeric order with one slot per type. Buy clears clicked card/tool slot. Sale changes bag/pool but no shelf repopulation; re-entry rebuilds current pool. No periodic restock in this path.",
+    "R12-03aa": "Shop6001 company operator byte+18 equals current seat+1: before human/AI branch random low bit chooses tool(odd)/card(even). No check of merely holding shares or company funds. Applies Japan50/107 stop only, dream skips nonzero event; passing does not enter. Gift then falls through normal shop, no points/cash/company income.44f230 is character speech, not a fee.",
+    "R07-04aa": "Random card chooses from all30 remaining counts then receiveCard; full15 replaces first cheapest slot and returns discard. Random tool chooses among first8 counts then receiveTool; selected bag count>=9 grants nothing, consumes no pool and does not retry. Empty category returns0; no fallback to other category. Research/worker9..13 excluded from this gift/shelf.",
+    "R07-05aa": "Manual buy needs affordable points, card count<15 or selected tool count<9, consumes one available visit slot plus one global pool unit; purchase return10*base price continues v39 close ledger. Gifted last unit is absent when building shelf; used/sold items only become candidates for a subsequent visit.",
+    "R13-13aa": "Web serializes visit shelf slots+gift receipt in shop decision; commands guarded by existing actor/pause/revision/token. Same item duplicate slots consume first available because identity and price are equal. Current seeded v12 range sampler retained; no native UI/voice rand reproduction. Depleted total<requested safely caps shelf instead of native weighted loop modulo0. G7 inventory/ledger restored but RNG/history rules remain inherited."
+  },
+  "limits": {
+    "cardShelfRequested": [
+      6,
+      15
+    ],
+    "cardKinds": 30,
+    "toolKinds": 8,
+    "cardCapacity": 15,
+    "perToolCapacity": 9
+  },
+  "deferred": [
+    "native random generator, UI animation/voice draws and AI branch",
+    "special actors",
+    "minigames6/7/8",
+    "other asset listings",
+    "native roulette/post-exit stack/ending"
+  ],
+  "candidateDifferences": [
+    "cap shelf to remaining card total when native weighted loop would reach zero",
+    "empty gift message safely handles native itemID0 display indexing",
+    "same-item card slots grouped in Web UI with explicit remaining count",
+    "legacy seeded RNG and non-shop acquisition differences retained"
+  ]
+}

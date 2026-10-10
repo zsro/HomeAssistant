@@ -1,0 +1,83 @@
+{
+  "commands": 292,
+  "inputs": 57,
+  "ticks": 152,
+  "settlements": 1,
+  "prefixes": [
+    "beforeStart",
+    "beforeInput",
+    "midplay",
+    "beforeAck"
+  ],
+  "receipts": [
+    {
+      "type": "minigameFinished",
+      "game": "balloon",
+      "node": 24,
+      "score": 260,
+      "amount": 260,
+      "before": 10,
+      "balance": 270,
+      "reason": "time",
+      "ticks": 152,
+      "sequence": 145,
+      "commandId": "command-291",
+      "playerId": "player-2",
+      "turn": 8
+    }
+  ],
+  "report": {
+    "group": "03ab-24",
+    "normalSpeed": true,
+    "map": "original Japan; legal route and real input; auth-only fixture; no game-state injection",
+    "rulesId": "japan-events-candidate-v41",
+    "fingerprint": "31214035",
+    "commands": 292,
+    "turn": 9,
+    "players": 3,
+    "shots": 57,
+    "digs": 0,
+    "moves": 0,
+    "receipts": [
+      {
+        "type": "minigameFinished",
+        "game": "balloon",
+        "node": 24,
+        "score": 260,
+        "amount": 260,
+        "before": 10,
+        "balance": 270,
+        "reason": "time",
+        "ticks": 152,
+        "sequence": 145,
+        "commandId": "command-291",
+        "playerId": "player-2",
+        "turn": 8
+      }
+    ],
+    "checks": [
+      "ready",
+      "pause-freezes-ticks",
+      "fullscreen",
+      "reset-cancel",
+      "390px-playing",
+      "positive-score",
+      "natural-end",
+      "ack-once",
+      "next-turn",
+      "replay",
+      "reset-clears",
+      "cleanup"
+    ],
+    "cleanup": {
+      "raf": 0,
+      "canvas": 0
+    },
+    "errors": []
+  },
+  "hashes": {
+    "replay": "57570c421c95698ea609df24e2ee9a6fd64753908ca9940eeddc38897ffe305e",
+    "state": "3cd78e595e596ed1f16531cc1706b5a26bc24e83e3bd5876f10e9ecaa4f86b7a",
+    "events": "cf95aa6f8e073114a454128f9d795d91f2a336ab0ccf3832e57f00e8993c9092"
+  }
+}

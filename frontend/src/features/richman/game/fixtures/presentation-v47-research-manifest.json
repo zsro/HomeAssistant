@@ -1,0 +1,621 @@
+{
+  "media": {
+    "playing": 123,
+    "sources": [
+      "http://127.0.0.1:5177/richman/generated/audio/track02.mp3",
+      "http://127.0.0.1:5177/richman/generated/audio/effect-43.wav",
+      "http://127.0.0.1:5177/richman/generated/audio/effect-49.wav",
+      "http://127.0.0.1:5177/richman/generated/audio/effect-48.wav",
+      "http://127.0.0.1:5177/richman/generated/audio/track03.mp3",
+      "http://127.0.0.1:5177/richman/generated/audio/track04.mp3",
+      "http://127.0.0.1:5177/richman/generated/audio/voice-1133.wav",
+      "http://127.0.0.1:5177/richman/generated/audio/track05.mp3",
+      "http://127.0.0.1:5177/richman/generated/audio/effect-50.wav",
+      "http://127.0.0.1:5177/richman/generated/audio/voice-1160.wav",
+      "http://127.0.0.1:5177/richman/generated/audio/voice-1295.wav",
+      "http://127.0.0.1:5177/richman/generated/audio/voice-1158.wav",
+      "http://127.0.0.1:5177/richman/generated/audio/track06.mp3",
+      "http://127.0.0.1:5177/richman/generated/audio/voice-1079.wav",
+      "http://127.0.0.1:5177/richman/generated/audio/track07.mp3",
+      "http://127.0.0.1:5177/richman/generated/audio/voice-1078.wav",
+      "http://127.0.0.1:5177/richman/generated/audio/voice-1131.wav",
+      "http://127.0.0.1:5177/richman/generated/audio/track08.mp3",
+      "http://127.0.0.1:5177/richman/generated/audio/voice-1293.wav",
+      "http://127.0.0.1:5177/richman/generated/audio/track09.mp3"
+    ],
+    "released": true,
+    "headlessOutputMuted": true
+  },
+  "route": "research",
+  "players": 4,
+  "normalSpeed": true,
+  "map": "original Japan; real human UI + actual automatic seats; auth fixture only",
+  "computerCommands": 228,
+  "commands": 2442,
+  "human": 707,
+  "auto": 1717,
+  "displayChecks": [
+    {
+      "index": 0,
+      "kinds": []
+    },
+    {
+      "index": 2142,
+      "kinds": [
+        "equipped"
+      ]
+    },
+    {
+      "index": 2165,
+      "kinds": [
+        "before-surrender"
+      ]
+    },
+    {
+      "index": 2166,
+      "kinds": [
+        "after-surrender",
+        "equipped-before-attachment"
+      ]
+    },
+    {
+      "index": 2167,
+      "kinds": [
+        "cleared-after-attachment"
+      ]
+    },
+    {
+      "index": 2262,
+      "kinds": [
+        "post-exit-research-produced"
+      ]
+    },
+    {
+      "index": 2283,
+      "kinds": [
+        "before-time"
+      ]
+    },
+    {
+      "index": 2284,
+      "kinds": [
+        "after-time"
+      ]
+    },
+    {
+      "index": 2424,
+      "kinds": [
+        "death-expired"
+      ]
+    }
+  ],
+  "lifecycle": [
+    "pause/resume",
+    "reset dialog cancel",
+    "reset",
+    "replace",
+    "exit",
+    "fullscreen",
+    "390px"
+  ],
+  "cleanup": {
+    "raf": 0,
+    "canvas": 0
+  },
+  "errors": [],
+  "prefixes": [
+    {
+      "index": 216,
+      "kind": "specialObjectResolved"
+    },
+    {
+      "index": 251,
+      "kind": "g6Notice"
+    },
+    {
+      "index": 459,
+      "kind": "g6Notice"
+    },
+    {
+      "index": 607,
+      "kind": "g6Notice"
+    },
+    {
+      "index": 660,
+      "kind": "g6Notice"
+    },
+    {
+      "index": 686,
+      "kind": "specialObjectsRefreshed"
+    },
+    {
+      "index": 826,
+      "kind": "g6Notice"
+    },
+    {
+      "index": 869,
+      "kind": "g6Notice"
+    },
+    {
+      "index": 2144,
+      "kind": "equipped"
+    },
+    {
+      "index": 2169,
+      "kind": "before-surrender"
+    },
+    {
+      "index": 2172,
+      "kind": "equipped-before-attachment"
+    },
+    {
+      "index": 2175,
+      "kind": "cleared-after-attachment"
+    },
+    {
+      "index": 2272,
+      "kind": "post-exit-research-produced"
+    },
+    {
+      "index": 2295,
+      "kind": "before-time"
+    },
+    {
+      "index": 2298,
+      "kind": "G7 current world restored"
+    },
+    {
+      "index": 2440,
+      "kind": "death-expired"
+    }
+  ],
+  "facts": [
+    {
+      "index": 216,
+      "event": {
+        "type": "specialObjectResolved",
+        "objectType": 13,
+        "node": 32,
+        "targetId": "player-2",
+        "outcome": "tool",
+        "itemId": "tool:07",
+        "before": 0,
+        "after": 1,
+        "sequence": 388,
+        "commandId": "command-218",
+        "playerId": "player-2",
+        "turn": 30
+      }
+    },
+    {
+      "index": 251,
+      "event": {
+        "type": "g6Notice",
+        "message": "玩家2附身小穷神，期限7次自身行动边界。",
+        "sequence": 456,
+        "commandId": "command-253",
+        "playerId": "player-2",
+        "turn": 34
+      }
+    },
+    {
+      "index": 459,
+      "event": {
+        "type": "g6Notice",
+        "message": "玩家2的神仙期限结束。",
+        "sequence": 838,
+        "commandId": "command-461",
+        "playerId": "player-2",
+        "turn": 62
+      }
+    },
+    {
+      "index": 607,
+      "event": {
+        "type": "g6Notice",
+        "message": "玩家2附身大穷神，期限7次自身行动边界。",
+        "sequence": 1100,
+        "commandId": "command-609",
+        "playerId": "player-2",
+        "turn": 82
+      }
+    },
+    {
+      "index": 660,
+      "event": {
+        "type": "g6Notice",
+        "message": "玩家1附身小财神，期限7次自身行动边界。",
+        "sequence": 1202,
+        "commandId": "command-662",
+        "playerId": "player-1",
+        "turn": 89
+      }
+    },
+    {
+      "index": 686,
+      "event": {
+        "type": "specialObjectsRefreshed",
+        "date": "1998-02-01",
+        "objects": [
+          {
+            "type": 13,
+            "node": 12
+          },
+          {
+            "type": 14,
+            "node": 53
+          }
+        ],
+        "sequence": 1254,
+        "commandId": "command-688",
+        "playerId": "player-4",
+        "turn": 92
+      }
+    },
+    {
+      "index": 826,
+      "event": {
+        "type": "g6Notice",
+        "message": "玩家2的神仙期限结束。",
+        "sequence": 1511,
+        "commandId": "command-828",
+        "playerId": "player-2",
+        "turn": 110
+      }
+    },
+    {
+      "index": 869,
+      "event": {
+        "type": "g6Notice",
+        "message": "玩家2附身天使，期限7次自身行动边界。",
+        "sequence": 1589,
+        "commandId": "command-871",
+        "playerId": "player-2",
+        "turn": 114
+      }
+    },
+    {
+      "index": 891,
+      "event": {
+        "type": "g6Notice",
+        "message": "玩家1的神仙期限结束。",
+        "sequence": 1635,
+        "commandId": "command-893",
+        "playerId": "player-1",
+        "turn": 117
+      }
+    },
+    {
+      "index": 1044,
+      "event": {
+        "type": "g6Notice",
+        "message": "玩家3附身小衰神，期限7次自身行动边界。",
+        "sequence": 1902,
+        "commandId": "command-1046",
+        "playerId": "player-3",
+        "turn": 139
+      }
+    },
+    {
+      "index": 1060,
+      "event": {
+        "type": "g6Notice",
+        "message": "玩家2的神仙期限结束。",
+        "sequence": 1935,
+        "commandId": "command-1062",
+        "playerId": "player-2",
+        "turn": 142
+      }
+    },
+    {
+      "index": 1126,
+      "event": {
+        "type": "specialObjectResolved",
+        "objectType": 11,
+        "node": 70,
+        "targetId": "player-3",
+        "outcome": "hospital",
+        "sequence": 2059,
+        "commandId": "command-1128",
+        "playerId": "player-3",
+        "turn": 151
+      }
+    },
+    {
+      "index": 1145,
+      "event": {
+        "type": "g6Notice",
+        "message": "玩家2附身小福神，期限7次自身行动边界。",
+        "sequence": 2096,
+        "commandId": "command-1147",
+        "playerId": "player-2",
+        "turn": 154
+      }
+    },
+    {
+      "index": 1192,
+      "event": {
+        "type": "g6Notice",
+        "message": "玩家2附身土地公，期限7次自身行动边界。",
+        "sequence": 2189,
+        "commandId": "command-1194",
+        "playerId": "player-2",
+        "turn": 162
+      }
+    },
+    {
+      "index": 1206,
+      "event": {
+        "type": "g6Notice",
+        "message": "玩家3的神仙期限结束。",
+        "sequence": 2222,
+        "commandId": "command-1208",
+        "playerId": "player-3",
+        "turn": 167
+      }
+    },
+    {
+      "index": 1247,
+      "event": {
+        "type": "g6Notice",
+        "message": "玩家1附身小穷神，期限7次自身行动边界。",
+        "sequence": 2304,
+        "commandId": "command-1249",
+        "playerId": "player-1",
+        "turn": 173
+      }
+    },
+    {
+      "index": 1369,
+      "event": {
+        "type": "g6Notice",
+        "message": "玩家2的神仙期限结束。",
+        "sequence": 2524,
+        "commandId": "command-1371",
+        "playerId": "player-2",
+        "turn": 190
+      }
+    },
+    {
+      "index": 1453,
+      "event": {
+        "type": "g6Notice",
+        "message": "玩家1的神仙期限结束。",
+        "sequence": 2674,
+        "commandId": "command-1455",
+        "playerId": "player-1",
+        "turn": 201
+      }
+    },
+    {
+      "index": 1485,
+      "event": {
+        "type": "specialObjectsRefreshed",
+        "date": "1998-03-01",
+        "objects": [
+          {
+            "type": 13,
+            "node": 90
+          },
+          {
+            "type": 14,
+            "node": 79
+          }
+        ],
+        "sequence": 2737,
+        "commandId": "command-1487",
+        "playerId": "player-4",
+        "turn": 204
+      }
+    },
+    {
+      "index": 1506,
+      "event": {
+        "type": "g6Notice",
+        "message": "玩家3附身恶魔，期限7次自身行动边界。",
+        "sequence": 2775,
+        "commandId": "command-1508",
+        "playerId": "player-3",
+        "turn": 207
+      }
+    },
+    {
+      "index": 1616,
+      "event": {
+        "type": "specialObjectResolved",
+        "objectType": 13,
+        "node": 90,
+        "targetId": "player-1",
+        "outcome": "tool",
+        "itemId": "tool:02",
+        "before": 1,
+        "after": 2,
+        "sequence": 2982,
+        "commandId": "command-1618",
+        "playerId": "player-1",
+        "turn": 221
+      }
+    },
+    {
+      "index": 1720,
+      "event": {
+        "type": "g6Notice",
+        "message": "玩家3的神仙期限结束。",
+        "sequence": 3177,
+        "commandId": "command-1722",
+        "playerId": "player-3",
+        "turn": 235
+      }
+    },
+    {
+      "index": 1838,
+      "event": {
+        "type": "g6Notice",
+        "message": "玩家2附身天使，期限7次自身行动边界。",
+        "sequence": 3387,
+        "commandId": "command-1840",
+        "playerId": "player-2",
+        "turn": 250
+      }
+    },
+    {
+      "index": 1887,
+      "event": {
+        "type": "g6Notice",
+        "message": "玩家1附身大衰神，期限7次自身行动边界。",
+        "sequence": 3478,
+        "commandId": "command-1889",
+        "playerId": "player-1",
+        "turn": 257
+      }
+    },
+    {
+      "index": 2054,
+      "event": {
+        "type": "g6Notice",
+        "message": "玩家2的神仙期限结束。",
+        "sequence": 3794,
+        "commandId": "command-2056",
+        "playerId": "player-2",
+        "turn": 278
+      }
+    },
+    {
+      "index": 2104,
+      "event": {
+        "type": "g6Notice",
+        "message": "玩家1的神仙期限结束。",
+        "sequence": 3891,
+        "commandId": "command-2106",
+        "playerId": "player-1",
+        "turn": 285
+      }
+    },
+    {
+      "index": 2116,
+      "event": {
+        "type": "g6Notice",
+        "message": "玩家2附身恶魔，期限7次自身行动边界。",
+        "sequence": 3914,
+        "commandId": "command-2118",
+        "playerId": "player-2",
+        "turn": 286
+      }
+    },
+    {
+      "index": 2175,
+      "event": {
+        "type": "g6Notice",
+        "message": "玩家2附身衰神，期限13次自身行动边界。",
+        "sequence": 4028,
+        "commandId": "command-2183",
+        "playerId": "player-2",
+        "turn": 293
+      }
+    },
+    {
+      "index": 2187,
+      "event": {
+        "type": "g6Notice",
+        "message": "玩家3附身小衰神，期限7次自身行动边界。",
+        "sequence": 4047,
+        "commandId": "command-2197",
+        "playerId": "player-3",
+        "turn": 295
+      }
+    },
+    {
+      "index": 2298,
+      "event": {
+        "type": "g7Notice",
+        "message": "时光机：恢复第79轮、行动310出发前的全局资产和状态，扣除历史背包1台；随机序列继续，旧历史已清除。",
+        "sequence": 4263,
+        "commandId": "command-2312",
+        "playerId": "player-3",
+        "turn": 313
+      }
+    },
+    {
+      "index": 2307,
+      "event": {
+        "type": "g6Notice",
+        "message": "玩家3附身大穷神，期限7次自身行动边界。",
+        "sequence": 4279,
+        "commandId": "command-2323",
+        "playerId": "player-3",
+        "turn": 313
+      }
+    },
+    {
+      "index": 2329,
+      "event": {
+        "type": "g6Notice",
+        "message": "玩家3附身天使，期限7次自身行动边界。",
+        "sequence": 4321,
+        "commandId": "command-2345",
+        "playerId": "player-3",
+        "turn": 316
+      }
+    },
+    {
+      "index": 2381,
+      "event": {
+        "type": "specialObjectsRefreshed",
+        "date": "1998-04-01",
+        "objects": [
+          {
+            "type": 13,
+            "node": 101
+          },
+          {
+            "type": 14,
+            "node": 57
+          }
+        ],
+        "sequence": 4426,
+        "commandId": "command-2397",
+        "playerId": "player-4",
+        "turn": 323
+      }
+    },
+    {
+      "index": 2440,
+      "event": {
+        "type": "g6Notice",
+        "message": "玩家2的神仙期限结束。",
+        "sequence": 4541,
+        "commandId": "command-2456",
+        "playerId": "player-2",
+        "turn": 333
+      }
+    }
+  ],
+  "expectedVoices": [
+    "1133",
+    "1160",
+    "1295",
+    "1158",
+    "1079",
+    "1078",
+    "1131",
+    "1293"
+  ],
+  "playedVoices": [
+    "1133",
+    "1160",
+    "1295",
+    "1158",
+    "1079",
+    "1078",
+    "1131",
+    "1293"
+  ],
+  "fullReplay": true,
+  "prefixReplay": true,
+  "commandsMatchLegalPlan": true,
+  "hashes": {
+    "replay": "249f9f0de70ea47f7ccf5b7cf85f8e38fbaa22a090684fe9bcf9310436e2af35",
+    "state": "f01f3289598203ceb7995b6b989ea310fce508a7d24924eb4fae1a5f89eb5a0b",
+    "events": "45f4636cd07e05bb1cf4a2318e9466afe6b0cea9daa616da8c0bbd7c34d85f05"
+  }
+}

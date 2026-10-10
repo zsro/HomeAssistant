@@ -1,0 +1,12 @@
+import {expect,it} from 'vitest';
+import {createHash} from 'node:crypto';
+import {GameEngine,replayGame} from './engine';
+import type {Replay} from './engine';
+import nodes from '../japan-topology.fixture.json';
+import effectsReplay from './fixtures/magic-nested-v38-effects-replay.json';
+import effectsGolden from './fixtures/magic-nested-v38-effects-manifest.json';
+import multiReplay from './fixtures/magic-nested-v38-multi-replay.json';
+import multiGolden from './fixtures/magic-nested-v38-multi-manifest.json';
+import {verifyMagicNested} from '../../../../../scripts/richman/verify-magic-nested';
+for(const[name,replay,golden]of[['effects',effectsReplay,effectsGolden],['multi',multiReplay,multiGolden]]as const)it(`actual v38 ${name} original-map UI preserves hashes, serialized order and independent auction accounting`,()=>{const r=verifyMagicNested(replay as Replay);for(const k of['commands','calls','auctions','collections','multiSeats']as const)expect(r[k]).toBe(golden[k]);for(const k of['state','events']as const)expect(createHash('sha256').update(JSON.stringify(r[k])).digest('hex')).toBe(golden.hashes[k]);expect(createHash('sha256').update(JSON.stringify(replay)).digest('hex')).toBe(golden.hashes.replay);},20000);
+it('actual UI prefixes reconstruct first/third fortune, later seat, donor collection and auction then continue identically',()=>{const r=multiReplay as Replay,e=new GameEngine(nodes,r.config),points=new Map<string,number>();for(let i=0;i<r.commands.length;i++){const n=e.state.magic?.nested,a=r.commands[i].action;if(n){const key=a.type==='collectFortuneCard'?'collection':a.type==='auction'?'auction':a.type==='ackFortune'?(n.cursor>0?'laterSeat':n.calls===3?'thirdReceipt':'firstReceipt'):null;if(key&&!points.has(key))points.set(key,i);}expect(e.dispatch(r.commands[i]).ok).toBe(true);}expect([...points.keys()].sort()).toEqual(['auction','collection','firstReceipt','laterSeat','thirdReceipt']);for(const i of points.values()){const copy=replayGame(nodes,{...r,commands:r.commands.slice(0,i)});expect(JSON.parse(JSON.stringify(copy.state.magic!.nested))).toEqual(copy.state.magic!.nested);for(const c of r.commands.slice(i))expect(copy.dispatch(c).ok).toBe(true);expect(copy.state).toEqual(e.state);expect(copy.events).toEqual(e.events);}},20000);

@@ -1,0 +1,22 @@
+{
+  "character": "xiaomei",
+  "targetPlayerId": "player-1",
+  "voice": "1308",
+  "actualCommands": 3772,
+  "businessCommands": 3770,
+  "upgradeCommandIndex": 3772,
+  "paidAmount": 400,
+  "paidOrdinaryUpgrade4to5": true,
+  "voiceCues": 1,
+  "voicePlayingEvents": 1,
+  "commandsMatchLegalPlan": true,
+  "fullReplay": true,
+  "prefixReplay": true,
+  "mediaReleased": true,
+  "cleanup": {
+    "raf": 0,
+    "canvas": 0
+  },
+  "errors": [],
+  "replaySHA256": "d9290c6d935100363aca9e1fe9f25ca38dff9fb4b67e3d51a622555ae91df89f"
+}

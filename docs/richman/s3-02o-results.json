@@ -1,0 +1,1117 @@
+{
+  "stage": "S3-02o",
+  "status": "candidate-scope-accepted",
+  "completedDate": "2026-10-08",
+  "policy": "research-v1",
+  "rulesId": "japan-events-candidate-v44",
+  "fingerprint": "f9dbb7e9",
+  "newGameSemantics": false,
+  "newPolicyBehavior": false,
+  "nativeExecution": false,
+  "historicalCapabilities": {
+    "items": 43,
+    "news": 36,
+    "japanFortuneSlots": 37
+  },
+  "candidateClosure": {
+    "S3-02": true,
+    "scope": "Web conservative strategies a-n plus original Japan composition/terminal acceptance; not native AI equivalence"
+  },
+  "checks": {
+    "newDomain": {
+      "tests": 4,
+      "passed": true,
+      "includedInRelatedRegression": true
+    },
+    "relatedRegression": {
+      "tests": 945,
+      "files": 28,
+      "passed": true,
+      "log": "/private/tmp/strategy-regression.log",
+      "fullFrontendRerun": false
+    },
+    "compatibilityMatrix": {
+      "versions": "v1-v44",
+      "players": [
+        2,
+        3,
+        4
+      ],
+      "cases": 132,
+      "passed": true,
+      "includedInRelatedRegression": true
+    },
+    "historicalResearchArchive": {
+      "tests": 3,
+      "files": 1,
+      "passed": true,
+      "log": "/private/tmp/strategy-historical-research.log",
+      "newBrowserExecution": false,
+      "repeatedPrefixesSkipped": true
+    },
+    "actualReplayArchiveTests": {
+      "tests": 5,
+      "files": 1,
+      "passed": true,
+      "log": "/private/tmp/strategy-browser-tests.log",
+      "prefixesVerifiedDuringArchive": [
+        "terminal-2",
+        "terminal-3",
+        "terminal-4",
+        "restore-3",
+        "liquidation"
+      ],
+      "repeatedPrefixesSkippedInVitest": [
+        "terminal-2",
+        "terminal-3",
+        "terminal-4",
+        "restore-3",
+        "liquidation"
+      ],
+      "prefixAndFullReplay": true
+    },
+    "uniqueTestsThisBatch": 953,
+    "uniqueTestFiles": 30,
+    "preservation": {
+      "oldFixtures": 412,
+      "changedHistoricalFiles": [],
+      "oldPolicyBodiesUnchanged": true,
+      "runtimeUnchanged": true
+    },
+    "typecheck": true,
+    "lint": true,
+    "build": true,
+    "buildWarnings": [
+      "Existing chunk size warning retained"
+    ],
+    "builtUI": {
+      "built": true,
+      "policies": 15,
+      "switchBackToCapital": true,
+      "switchBackToGods": true,
+      "switchBackToMobility": true,
+      "normalSpeed": true,
+      "defaultHuman": true,
+      "defaultBasic": true,
+      "toolsEffect": true,
+      "policyMetadata": true,
+      "resetPreservesPolicy": true,
+      "switchBackToBasic": true,
+      "switchBackToTools": true,
+      "switchBackToRent": true,
+      "switchBackToDefense": true,
+      "switchBackToEstate": true,
+      "switchBackToCash": true,
+      "switchBackToStatus": true,
+      "switchBackToRoads": true,
+      "switchBackToArea": true,
+      "switchBackToCommerce": true,
+      "switchBackToInventory": true,
+      "humanReplacement": true,
+      "exitWhileToolsWaiting": true,
+      "setup390": true,
+      "cleanup": {
+        "raf": 0,
+        "canvas": 0
+      },
+      "errors": []
+    }
+  },
+  "actualBrowser": {
+    "status": "passed",
+    "routes": [
+      {
+        "route": "terminal-2",
+        "players": 2,
+        "commands": 1448,
+        "turn": 196,
+        "phase": "finished",
+        "winner": "player-1",
+        "auto": 287,
+        "human": 277,
+        "dates": 97,
+        "cross": [],
+        "reactions": [],
+        "forced": [],
+        "exits": [
+          {
+            "continuation": "payment",
+            "id": "disposal-1",
+            "payerId": "player-2",
+            "recipientId": "public",
+            "propertyId": "fortune:19",
+            "due": 3000,
+            "amount": 582,
+            "unpaid": 2418,
+            "paid": {
+              "cash": 0,
+              "bank": 582
+            },
+            "released": [],
+            "pool": [],
+            "draws": [],
+            "stocks": [],
+            "inventory": [],
+            "ignoredPoints": 0,
+            "auctions": [],
+            "finishedGame": true
+          }
+        ],
+        "publicAuctions": 0,
+        "restores": [],
+        "productions": [],
+        "observations": [],
+        "memory": {},
+        "prefixes": [
+          "paused",
+          "resumed",
+          "computer-first",
+          "date-before",
+          "date-after",
+          "exit-start-player-2",
+          "exit-return-player-2",
+          "paymentCompleted-fortune",
+          "before-terminal"
+        ],
+        "negativeChecks": 0,
+        "hashes": {
+          "replay": "16bafb5ad998abd21ecdf1b6f17dbc72f6a4514a022489b7e7473432a3683cee",
+          "state": "e29f6f0dbf8cfa6efd2ae4a4d5e771d3acec5812d0bbbbf573e6ffd7c8ea93d2",
+          "events": "316e70d77c2d3b8cc8c32f3f708a8d635d4cdf07a42da0cb4da5f843e87f8409"
+        },
+        "report": {
+          "researchWindows": [],
+          "robotPreviews": [],
+          "policy": "research-v1",
+          "toolWindows": [
+            "tool:08",
+            "card:23",
+            "card:17",
+            "card:30"
+          ],
+          "crossChecks": [],
+          "route": "terminal-2",
+          "terminal": true,
+          "players": 2,
+          "normalSpeed": true,
+          "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+          "commands": 1448,
+          "auto": 287,
+          "human": 277,
+          "lifecycle": [
+            "pause stops waiting",
+            "resume",
+            "reset dialog cancel",
+            "reset",
+            "replace with humans",
+            "exit cleanup",
+            "fullscreen",
+            "390px"
+          ],
+          "cleanup": {
+            "raf": 0,
+            "canvas": 0
+          },
+          "errors": []
+        },
+        "trades": 0,
+        "archive": "frontend/src/features/richman/game/fixtures/strategy-circuit-v44-terminal-2-replay.json"
+      },
+      {
+        "route": "terminal-3",
+        "players": 3,
+        "commands": 551,
+        "turn": 72,
+        "phase": "finished",
+        "winner": "player-2",
+        "auto": 86,
+        "human": 126,
+        "dates": 27,
+        "cross": [],
+        "reactions": [],
+        "forced": [],
+        "exits": [
+          {
+            "continuation": "payment",
+            "id": "disposal-1",
+            "payerId": "player-1",
+            "recipientId": "public",
+            "propertyId": "fortune:14",
+            "due": 6000,
+            "amount": 799,
+            "unpaid": 5201,
+            "paid": {
+              "cash": 0,
+              "bank": 799
+            },
+            "released": [
+              "japan:land:22",
+              "japan:land:26"
+            ],
+            "pool": [
+              "japan:land:22",
+              "japan:land:26"
+            ],
+            "draws": [],
+            "stocks": [],
+            "inventory": [
+              {
+                "itemId": "tool:08",
+                "quantity": 1,
+                "points": 30
+              },
+              {
+                "itemId": "tool:09",
+                "quantity": 1,
+                "points": 30
+              },
+              {
+                "itemId": "tool:01",
+                "quantity": 1,
+                "points": 15
+              },
+              {
+                "itemId": "tool:02",
+                "quantity": 1,
+                "points": 30
+              },
+              {
+                "itemId": "card:16",
+                "quantity": 1,
+                "points": 25
+              }
+            ],
+            "ignoredPoints": 130,
+            "auctions": [],
+            "finishedGame": false
+          },
+          {
+            "continuation": "payment",
+            "id": "disposal-2",
+            "payerId": "player-3",
+            "recipientId": "public",
+            "propertyId": "fortune:14",
+            "due": 3000,
+            "amount": 1533,
+            "unpaid": 1467,
+            "paid": {
+              "cash": 1533,
+              "bank": 0
+            },
+            "released": [],
+            "pool": [],
+            "draws": [],
+            "stocks": [],
+            "inventory": [],
+            "ignoredPoints": 0,
+            "auctions": [],
+            "finishedGame": true
+          }
+        ],
+        "publicAuctions": 0,
+        "restores": [],
+        "productions": [],
+        "observations": [],
+        "memory": {},
+        "prefixes": [
+          "paused",
+          "resumed",
+          "computer-first",
+          "date-before",
+          "date-after",
+          "exit-start-player-1",
+          "exit-return-player-1",
+          "paymentCompleted-fortune",
+          "exit-start-player-3",
+          "exit-return-player-3",
+          "before-terminal"
+        ],
+        "negativeChecks": 0,
+        "hashes": {
+          "replay": "0c0cf4ca5c0ab3662cea920fb4ee2eb083b88ed0da6ef1ecd80ecac1dc60188f",
+          "state": "63a69e0453103a4bd9e1a14df6e7cef481d5eb6ec70dc538ae9ae56cafc84a03",
+          "events": "8b057d13e077f93996bd641e960477a5832242220223dbba7139a25fca9448cd"
+        },
+        "report": {
+          "researchWindows": [],
+          "robotPreviews": [],
+          "policy": "research-v1",
+          "toolWindows": [
+            "tool:08",
+            "tool:09"
+          ],
+          "crossChecks": [],
+          "route": "terminal-3",
+          "terminal": true,
+          "players": 3,
+          "normalSpeed": true,
+          "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+          "commands": 551,
+          "auto": 86,
+          "human": 126,
+          "lifecycle": [
+            "pause stops waiting",
+            "resume",
+            "reset dialog cancel",
+            "reset",
+            "replace with humans",
+            "exit cleanup",
+            "fullscreen",
+            "390px"
+          ],
+          "cleanup": {
+            "raf": 0,
+            "canvas": 0
+          },
+          "errors": []
+        },
+        "trades": 0,
+        "archive": "frontend/src/features/richman/game/fixtures/strategy-circuit-v44-terminal-3-replay.json"
+      },
+      {
+        "route": "terminal-4",
+        "players": 4,
+        "commands": 3782,
+        "turn": 502,
+        "phase": "finished",
+        "winner": "player-2",
+        "auto": 702,
+        "human": 780,
+        "dates": 174,
+        "cross": [],
+        "reactions": [
+          {
+            "responder": "player-3",
+            "active": "player-3",
+            "computer": false,
+            "kind": "trafficDetention",
+            "stage": "redirect",
+            "choice": "decline",
+            "target": null
+          },
+          {
+            "responder": "player-3",
+            "active": "player-3",
+            "computer": false,
+            "kind": "rent",
+            "stage": "redirect",
+            "choice": "decline",
+            "target": null
+          }
+        ],
+        "forced": [],
+        "exits": [
+          {
+            "continuation": "payment",
+            "id": "disposal-1",
+            "payerId": "player-4",
+            "recipientId": "public",
+            "propertyId": "fortune:26",
+            "due": 8000,
+            "amount": 7507,
+            "unpaid": 493,
+            "paid": {
+              "cash": 5000,
+              "bank": 2507
+            },
+            "released": [],
+            "pool": [],
+            "draws": [],
+            "stocks": [],
+            "inventory": [
+              {
+                "itemId": "tool:01",
+                "quantity": 1,
+                "points": 15
+              },
+              {
+                "itemId": "tool:02",
+                "quantity": 1,
+                "points": 30
+              }
+            ],
+            "ignoredPoints": 45,
+            "auctions": [],
+            "finishedGame": false
+          },
+          {
+            "id": "disposal-2",
+            "payerId": "player-3",
+            "recipientId": "player-2",
+            "propertyId": "japan:land:33",
+            "due": 2000,
+            "amount": 779,
+            "unpaid": 1221,
+            "paid": {
+              "cash": 0,
+              "bank": 779
+            },
+            "released": [
+              "japan:land:13",
+              "japan:land:18",
+              "japan:land:20",
+              "japan:land:21",
+              "japan:land:43",
+              "japan:land:45",
+              "japan:land:48",
+              "japan:facility:4"
+            ],
+            "pool": [
+              "japan:land:13",
+              null,
+              null,
+              "japan:land:21",
+              null,
+              "japan:land:45",
+              "japan:land:48",
+              "japan:facility:4"
+            ],
+            "draws": [
+              4,
+              2,
+              1
+            ],
+            "stocks": [],
+            "inventory": [
+              {
+                "itemId": "tool:08",
+                "quantity": 1,
+                "points": 30
+              },
+              {
+                "itemId": "tool:09",
+                "quantity": 1,
+                "points": 30
+              },
+              {
+                "itemId": "tool:01",
+                "quantity": 1,
+                "points": 15
+              },
+              {
+                "itemId": "tool:02",
+                "quantity": 1,
+                "points": 30
+              },
+              {
+                "itemId": "card:04",
+                "quantity": 1,
+                "points": 25
+              },
+              {
+                "itemId": "card:05",
+                "quantity": 1,
+                "points": 20
+              },
+              {
+                "itemId": "card:19",
+                "quantity": 1,
+                "points": 40
+              },
+              {
+                "itemId": "card:27",
+                "quantity": 2,
+                "points": 70
+              }
+            ],
+            "ignoredPoints": 260,
+            "auctions": [
+              {
+                "propertyId": "japan:land:43",
+                "winnerId": null,
+                "amount": 0,
+                "reserve": 1500
+              },
+              {
+                "propertyId": "japan:land:20",
+                "winnerId": null,
+                "amount": 0,
+                "reserve": 2000
+              },
+              {
+                "propertyId": "japan:land:18",
+                "winnerId": null,
+                "amount": 0,
+                "reserve": 1500
+              }
+            ],
+            "finishedGame": false
+          },
+          {
+            "id": "disposal-3",
+            "payerId": "player-1",
+            "recipientId": "player-2",
+            "propertyId": "japan:land:15",
+            "due": 1000,
+            "amount": 78,
+            "unpaid": 922,
+            "paid": {
+              "cash": 78,
+              "bank": 0
+            },
+            "released": [],
+            "pool": [],
+            "draws": [],
+            "stocks": [],
+            "inventory": [],
+            "ignoredPoints": 0,
+            "auctions": [],
+            "finishedGame": true
+          }
+        ],
+        "publicAuctions": 0,
+        "restores": [],
+        "productions": [],
+        "observations": [],
+        "memory": {},
+        "prefixes": [
+          "paused",
+          "resumed",
+          "computer-first",
+          "date-before",
+          "date-after",
+          "exit-start-player-4",
+          "exit-return-player-4",
+          "paymentCompleted-fortune",
+          "public-auction-japan:land:28",
+          "public-auction-return-japan:land:28",
+          "exit-start-player-3",
+          "public-auction-japan:land:43",
+          "public-auction-return-japan:land:43",
+          "public-auction-japan:land:20",
+          "public-auction-return-japan:land:20",
+          "public-auction-japan:land:18",
+          "public-auction-return-japan:land:18",
+          "exit-return-player-3",
+          "exit-start-player-1",
+          "exit-return-player-1",
+          "before-terminal"
+        ],
+        "negativeChecks": 0,
+        "hashes": {
+          "replay": "6f76adf125bce0beffae5d30f7d96b078845fa329610afcdc7658612265b6c3c",
+          "state": "99b271275e67d721606acc7e2a19865c758a3b4f72fb06d46231df3f281d2efd",
+          "events": "d0c26b6f5e3a3a40320181a2ea872d206a5b42a0330fe097acc884de7f39ebb1"
+        },
+        "report": {
+          "researchWindows": [],
+          "robotPreviews": [
+            {
+              "mines": 1,
+              "bombs": 1
+            }
+          ],
+          "policy": "research-v1",
+          "toolWindows": [
+            "tool:08",
+            "tool:09",
+            "tool:02",
+            "card:11",
+            "card:06",
+            "card:07",
+            "card:03",
+            "card:10",
+            "card:26",
+            "tool:05",
+            "tool:03",
+            "tool:04",
+            "card:16",
+            "card:28",
+            "card:04",
+            "card:17",
+            "card:22",
+            "tool:01",
+            "card:12"
+          ],
+          "crossChecks": [
+            {
+              "index": 1067,
+              "kind": "reaction",
+              "computer": false
+            },
+            {
+              "index": 2468,
+              "kind": "auction",
+              "computer": false
+            },
+            {
+              "index": 2707,
+              "kind": "debt",
+              "computer": false
+            }
+          ],
+          "route": "terminal-4",
+          "terminal": true,
+          "players": 4,
+          "normalSpeed": true,
+          "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+          "commands": 3782,
+          "auto": 702,
+          "human": 780,
+          "lifecycle": [
+            "pause stops waiting",
+            "resume",
+            "reset dialog cancel",
+            "reset",
+            "replace with humans",
+            "exit cleanup",
+            "fullscreen",
+            "390px"
+          ],
+          "cleanup": {
+            "raf": 0,
+            "canvas": 0
+          },
+          "errors": []
+        },
+        "trades": 0,
+        "archive": "frontend/src/features/richman/game/fixtures/strategy-circuit-v44-terminal-4-replay.json"
+      },
+      {
+        "route": "restore-3",
+        "players": 3,
+        "commands": 2556,
+        "turn": 328,
+        "phase": "idle",
+        "winner": null,
+        "auto": 672,
+        "human": 324,
+        "dates": 110,
+        "cross": [],
+        "reactions": [],
+        "forced": [],
+        "exits": [],
+        "publicAuctions": 0,
+        "restores": [
+          {
+            "index": 2329,
+            "player": "player-2",
+            "from": "1998-04-15",
+            "to": "1998-04-14",
+            "observation": {
+              "value": {
+                "player-1": 363602,
+                "player-2": 384954,
+                "player-3": 361381
+              },
+              "protected": {
+                "player-1": "{\"inventory\":{\"tool:08\":0,\"tool:09\":0,\"tool:01\":0,\"tool:02\":0,\"card:02\":0,\"card:01\":0,\"card:03\":0,\"card:04\":0,\"card:05\":0,\"card:06\":0,\"card:12\":0,\"card:14\":0,\"card:15\":0,\"card:16\":0,\"card:17\":0,\"card:30\":0,\"tool:05\":0,\"tool:06\":0,\"card:13\":0,\"card:18\":1,\"card:19\":0,\"card:20\":0,\"card:21\":0,\"card:29\":0,\"card:07\":0,\"card:08\":0,\"card:26\":0,\"card:27\":0,\"card:28\":0,\"card:09\":0,\"card:10\":0,\"card:11\":0,\"tool:03\":0,\"tool:04\":0,\"tool:07\":0,\"tool:12\":0,\"card:22\":0,\"card:23\":0,\"card:24\":0,\"card:25\":0,\"tool:10\":0,\"tool:11\":0,\"tool:13\":0},\"status\":{\"stop\":0,\"winter\":0,\"dream\":0,\"prison\":0,\"hospital\":0,\"turtle\":0,\"vehicle\":\"foot\",\"diceCount\":1,\"savedVehicle\":\"foot\",\"savedDice\":1,\"travel\":0},\"engineer\":null,\"gods\":[],\"research\":[]}",
+                "player-2": "{\"inventory\":{\"tool:08\":0,\"tool:09\":0,\"tool:01\":0,\"tool:02\":0,\"card:02\":0,\"card:01\":0,\"card:03\":0,\"card:04\":0,\"card:05\":0,\"card:06\":0,\"card:12\":0,\"card:14\":0,\"card:15\":0,\"card:16\":0,\"card:17\":0,\"card:30\":0,\"tool:05\":0,\"tool:06\":0,\"card:13\":0,\"card:18\":0,\"card:19\":0,\"card:20\":0,\"card:21\":0,\"card:29\":0,\"card:07\":0,\"card:08\":0,\"card:26\":0,\"card:27\":0,\"card:28\":0,\"card:09\":0,\"card:10\":0,\"card:11\":0,\"tool:03\":0,\"tool:04\":0,\"tool:07\":0,\"tool:12\":0,\"card:22\":0,\"card:23\":0,\"card:24\":0,\"card:25\":0,\"tool:10\":1,\"tool:11\":0,\"tool:13\":0},\"status\":{\"stop\":0,\"winter\":0,\"dream\":0,\"prison\":0,\"hospital\":0,\"turtle\":0,\"vehicle\":\"foot\",\"diceCount\":1,\"savedVehicle\":\"foot\",\"savedDice\":1,\"travel\":0},\"engineer\":null,\"gods\":[],\"research\":[]}",
+                "player-3": "{\"inventory\":{\"tool:08\":0,\"tool:09\":0,\"tool:01\":1,\"tool:02\":0,\"card:02\":0,\"card:01\":0,\"card:03\":0,\"card:04\":0,\"card:05\":0,\"card:06\":0,\"card:12\":0,\"card:14\":0,\"card:15\":0,\"card:16\":0,\"card:17\":0,\"card:30\":0,\"tool:05\":0,\"tool:06\":0,\"card:13\":0,\"card:18\":0,\"card:19\":0,\"card:20\":0,\"card:21\":0,\"card:29\":0,\"card:07\":0,\"card:08\":0,\"card:26\":0,\"card:27\":0,\"card:28\":0,\"card:09\":0,\"card:10\":0,\"card:11\":0,\"tool:03\":0,\"tool:04\":0,\"tool:07\":0,\"tool:12\":0,\"card:22\":0,\"card:23\":0,\"card:24\":0,\"card:25\":0,\"tool:10\":0,\"tool:11\":0,\"tool:13\":0},\"status\":{\"stop\":0,\"winter\":0,\"dream\":0,\"prison\":0,\"hospital\":0,\"turtle\":0,\"vehicle\":\"tool:05\",\"diceCount\":2,\"savedVehicle\":\"foot\",\"savedDice\":1,\"travel\":0},\"engineer\":null,\"gods\":[],\"research\":[]}"
+              },
+              "allies": "{\"player-1\":null,\"player-2\":null,\"player-3\":null}",
+              "eliminated": "[]"
+            },
+            "current": {
+              "value": {
+                "player-1": 363602,
+                "player-2": 377829,
+                "player-3": 371941
+              },
+              "protected": {
+                "player-1": "{\"inventory\":{\"tool:08\":0,\"tool:09\":0,\"tool:01\":0,\"tool:02\":0,\"card:02\":0,\"card:01\":0,\"card:03\":0,\"card:04\":0,\"card:05\":0,\"card:06\":0,\"card:12\":0,\"card:14\":0,\"card:15\":0,\"card:16\":0,\"card:17\":0,\"card:30\":0,\"tool:05\":0,\"tool:06\":0,\"card:13\":0,\"card:18\":1,\"card:19\":0,\"card:20\":0,\"card:21\":0,\"card:29\":0,\"card:07\":0,\"card:08\":0,\"card:26\":0,\"card:27\":0,\"card:28\":0,\"card:09\":0,\"card:10\":0,\"card:11\":0,\"tool:03\":0,\"tool:04\":0,\"tool:07\":0,\"tool:12\":0,\"card:22\":0,\"card:23\":0,\"card:24\":0,\"card:25\":0,\"tool:10\":0,\"tool:11\":0,\"tool:13\":0},\"status\":{\"stop\":0,\"winter\":0,\"dream\":0,\"prison\":0,\"hospital\":0,\"turtle\":0,\"vehicle\":\"foot\",\"diceCount\":1,\"savedVehicle\":\"foot\",\"savedDice\":1,\"travel\":0},\"engineer\":null,\"gods\":[],\"research\":[]}",
+                "player-2": "{\"inventory\":{\"tool:08\":0,\"tool:09\":0,\"tool:01\":0,\"tool:02\":0,\"card:02\":0,\"card:01\":0,\"card:03\":0,\"card:04\":0,\"card:05\":0,\"card:06\":0,\"card:12\":0,\"card:14\":0,\"card:15\":0,\"card:16\":0,\"card:17\":0,\"card:30\":0,\"tool:05\":0,\"tool:06\":0,\"card:13\":0,\"card:18\":0,\"card:19\":0,\"card:20\":0,\"card:21\":0,\"card:29\":0,\"card:07\":0,\"card:08\":0,\"card:26\":0,\"card:27\":0,\"card:28\":0,\"card:09\":0,\"card:10\":0,\"card:11\":0,\"tool:03\":0,\"tool:04\":0,\"tool:07\":0,\"tool:12\":0,\"card:22\":0,\"card:23\":0,\"card:24\":0,\"card:25\":0,\"tool:10\":1,\"tool:11\":0,\"tool:13\":0},\"status\":{\"stop\":0,\"winter\":0,\"dream\":0,\"prison\":0,\"hospital\":0,\"turtle\":0,\"vehicle\":\"foot\",\"diceCount\":1,\"savedVehicle\":\"foot\",\"savedDice\":1,\"travel\":0},\"engineer\":null,\"gods\":[],\"research\":[]}",
+                "player-3": "{\"inventory\":{\"tool:08\":0,\"tool:09\":0,\"tool:01\":1,\"tool:02\":0,\"card:02\":0,\"card:01\":0,\"card:03\":0,\"card:04\":0,\"card:05\":0,\"card:06\":0,\"card:12\":0,\"card:14\":0,\"card:15\":0,\"card:16\":0,\"card:17\":0,\"card:30\":0,\"tool:05\":0,\"tool:06\":0,\"card:13\":0,\"card:18\":0,\"card:19\":0,\"card:20\":0,\"card:21\":0,\"card:29\":0,\"card:07\":0,\"card:08\":0,\"card:26\":0,\"card:27\":0,\"card:28\":0,\"card:09\":0,\"card:10\":0,\"card:11\":0,\"tool:03\":0,\"tool:04\":0,\"tool:07\":0,\"tool:12\":0,\"card:22\":0,\"card:23\":0,\"card:24\":0,\"card:25\":0,\"tool:10\":0,\"tool:11\":0,\"tool:13\":0},\"status\":{\"stop\":0,\"winter\":0,\"dream\":0,\"prison\":0,\"hospital\":0,\"turtle\":0,\"vehicle\":\"tool:05\",\"diceCount\":2,\"savedVehicle\":\"foot\",\"savedDice\":1,\"travel\":0},\"engineer\":null,\"gods\":[{\"id\":\"god-35\",\"type\":8,\"node\":60,\"carrier\":\"player-3\",\"remaining\":7}],\"research\":[]}"
+              },
+              "allies": "{\"player-1\":null,\"player-2\":null,\"player-3\":null}",
+              "eliminated": "[]"
+            }
+          }
+        ],
+        "productions": [
+          {
+            "player": "player-2",
+            "action": {
+              "type": "research",
+              "propertyId": "japan:facility:3",
+              "itemId": "tool:10"
+            }
+          }
+        ],
+        "observations": [
+          {
+            "index": 2006,
+            "player": "player-2"
+          },
+          {
+            "index": 2029,
+            "player": "player-2"
+          },
+          {
+            "index": 2058,
+            "player": "player-2"
+          },
+          {
+            "index": 2094,
+            "player": "player-2"
+          },
+          {
+            "index": 2126,
+            "player": "player-2"
+          },
+          {
+            "index": 2141,
+            "player": "player-2"
+          },
+          {
+            "index": 2162,
+            "player": "player-2"
+          },
+          {
+            "index": 2186,
+            "player": "player-2"
+          },
+          {
+            "index": 2204,
+            "player": "player-2"
+          },
+          {
+            "index": 2225,
+            "player": "player-2"
+          },
+          {
+            "index": 2241,
+            "player": "player-2"
+          },
+          {
+            "index": 2264,
+            "player": "player-2"
+          },
+          {
+            "index": 2291,
+            "player": "player-2"
+          }
+        ],
+        "memory": {},
+        "prefixes": [
+          "paused",
+          "resumed",
+          "computer-first",
+          "date-before",
+          "date-after",
+          "trade-buy-before",
+          "trade-buy-after",
+          "trade-sell-before",
+          "trade-sell-after",
+          "research-before",
+          "research-after",
+          "first-observation",
+          "time-before",
+          "time-after",
+          "date-after-restore",
+          "date-after-restore-done"
+        ],
+        "negativeChecks": 0,
+        "hashes": {
+          "replay": "09411811f9a66934ffa90755dbaff0fa755611a7567c55128d026daa95245d08",
+          "state": "57d7f046145dcf71480c93ed51e6d875644608f46d02fb57685e99dfa5a7cf18",
+          "events": "08a25f18222f6e62178b236c7741ed5e622b1e515882d3efb1edfa2f71de1538"
+        },
+        "report": {
+          "researchWindows": [
+            "tool:10"
+          ],
+          "robotPreviews": [],
+          "policy": "research-v1",
+          "toolWindows": [
+            "tool:08",
+            "tool:09",
+            "card:17",
+            "card:04",
+            "card:03",
+            "card:28",
+            "card:25",
+            "tool:05",
+            "card:02",
+            "card:06",
+            "card:12",
+            "card:07",
+            "card:13",
+            "card:30",
+            "tool:02",
+            "tool:10"
+          ],
+          "crossChecks": [],
+          "route": "restore-3",
+          "terminal": false,
+          "players": 3,
+          "normalSpeed": true,
+          "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+          "commands": 2556,
+          "auto": 672,
+          "human": 324,
+          "lifecycle": [
+            "pause stops waiting",
+            "resume",
+            "reset dialog cancel",
+            "reset",
+            "replace with humans",
+            "exit cleanup",
+            "fullscreen",
+            "390px"
+          ],
+          "cleanup": {
+            "raf": 0,
+            "canvas": 0
+          },
+          "errors": []
+        },
+        "trades": 25,
+        "archive": "frontend/src/features/richman/game/fixtures/strategy-circuit-v44-restore-3-replay.json"
+      },
+      {
+        "route": "liquidation",
+        "players": 4,
+        "commands": 2665,
+        "turn": 374,
+        "phase": "turnEnd",
+        "winner": null,
+        "auto": 296,
+        "human": 756,
+        "dates": 93,
+        "cross": [
+          {
+            "index": 2656,
+            "kind": "auction",
+            "actor": "player-1",
+            "active": "player-2",
+            "computer": false
+          },
+          {
+            "index": 2661,
+            "kind": "auction",
+            "actor": "player-4",
+            "active": "player-2",
+            "computer": true
+          },
+          {
+            "index": 2662,
+            "kind": "auction",
+            "actor": "player-1",
+            "active": "player-2",
+            "computer": false
+          },
+          {
+            "index": 2663,
+            "kind": "auction",
+            "actor": "player-4",
+            "active": "player-2",
+            "computer": true
+          }
+        ],
+        "reactions": [],
+        "forced": [
+          {
+            "trader": "player-1",
+            "active": "player-1",
+            "quantity": 1,
+            "amount": 764,
+            "stock": "jp:30",
+            "bankBefore": 150,
+            "bankAfter": 914
+          }
+        ],
+        "exits": [
+          {
+            "continuation": "payment",
+            "id": "disposal-1",
+            "payerId": "player-2",
+            "recipientId": "public",
+            "propertyId": "fortune:17",
+            "due": 12000,
+            "amount": 7927,
+            "unpaid": 4073,
+            "paid": {
+              "cash": 0,
+              "bank": 7927
+            },
+            "released": [
+              "japan:land:14",
+              "japan:land:26",
+              "japan:land:28",
+              "japan:land:29",
+              "japan:land:32",
+              "japan:land:38",
+              "japan:land:47"
+            ],
+            "pool": [
+              null,
+              null,
+              "japan:land:28",
+              "japan:land:29",
+              "japan:land:32",
+              null,
+              "japan:land:47"
+            ],
+            "draws": [
+              1,
+              5,
+              1,
+              0
+            ],
+            "stocks": [],
+            "inventory": [
+              {
+                "itemId": "card:30",
+                "quantity": 1,
+                "points": 70
+              },
+              {
+                "itemId": "card:13",
+                "quantity": 1,
+                "points": 25
+              },
+              {
+                "itemId": "card:25",
+                "quantity": 1,
+                "points": 30
+              }
+            ],
+            "ignoredPoints": 125,
+            "auctions": [
+              {
+                "propertyId": "japan:land:26",
+                "winnerId": "player-1",
+                "amount": 1600,
+                "reserve": 1500
+              },
+              {
+                "propertyId": "japan:land:38",
+                "winnerId": null,
+                "amount": 0,
+                "reserve": 2000
+              },
+              {
+                "propertyId": "japan:land:14",
+                "winnerId": null,
+                "amount": 0,
+                "reserve": 2500
+              }
+            ],
+            "finishedGame": false
+          }
+        ],
+        "publicAuctions": 1600,
+        "restores": [],
+        "productions": [],
+        "observations": [],
+        "memory": {},
+        "prefixes": [
+          "paused",
+          "resumed",
+          "computer-first",
+          "date-before",
+          "date-after",
+          "trade-buy-before",
+          "trade-buy-after",
+          "necessary-stock-sale",
+          "trade-sell-before",
+          "trade-sell-after",
+          "exit-start-player-2",
+          "human-auction",
+          "computer-auction",
+          "public-auction-japan:land:26",
+          "public-auction-return-japan:land:26",
+          "public-auction-japan:land:38",
+          "public-auction-return-japan:land:38",
+          "public-auction-japan:land:14",
+          "public-auction-return-japan:land:14",
+          "exit-return-player-2",
+          "paymentCompleted-fortune"
+        ],
+        "negativeChecks": 2,
+        "hashes": {
+          "replay": "c795494ce54dc301708dca3356c7937009ba329a8bb0f6cbc21ad71b689efd93",
+          "state": "6ab46d5bdf0d182acffc146cde0e03681ae7d6a0437e1640d1196c963f8ab903",
+          "events": "c4071520d3887ed6b02914a0eed4111c8f9c9f318cf0a6c0f8effae4f0a31cb2"
+        },
+        "report": {
+          "researchWindows": [],
+          "robotPreviews": [],
+          "policy": "research-v1",
+          "toolWindows": [
+            "tool:09",
+            "tool:08",
+            "tool:02",
+            "card:07",
+            "card:23",
+            "card:06"
+          ],
+          "crossChecks": [
+            {
+              "index": 2624,
+              "active": "player-2",
+              "actor": "player-1",
+              "kind": "auction",
+              "computer": false
+            },
+            {
+              "index": 2625,
+              "active": "player-2",
+              "actor": "player-4",
+              "kind": "auction",
+              "computer": true
+            }
+          ],
+          "route": "liquidation",
+          "terminal": false,
+          "players": 4,
+          "normalSpeed": true,
+          "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+          "commands": 2665,
+          "auto": 296,
+          "human": 756,
+          "lifecycle": [
+            "pause stops waiting",
+            "resume",
+            "reset dialog cancel",
+            "reset",
+            "replace with humans",
+            "exit cleanup",
+            "fullscreen",
+            "390px"
+          ],
+          "cleanup": {
+            "raf": 0,
+            "canvas": 0
+          },
+          "errors": []
+        },
+        "trades": 11,
+        "archive": "frontend/src/features/richman/game/fixtures/strategy-circuit-v44-liquidation-replay.json"
+      }
+    ],
+    "commands": 11002,
+    "auto": 2043,
+    "human": 2263,
+    "namedPrefixes": 78,
+    "note": "Normal animations, 600ms decisions, original Japan, auth fixture only; plans never count as browser evidence."
+  },
+  "scope": {
+    "terminalPlayers": [
+      2,
+      3,
+      4
+    ],
+    "noncurrentResponders": "New UI noncurrent responders: human/AI public auction in liquidation only. Terminal-4 human reaction/debt/auction windows are on-turn, despite the runner legacy crossChecks label. Archived cross lists compare actor vs active directly. Prior research-v1 AI reaction archive rechecked; explicit domain probes cover noncurrent AI reaction/property/auction and human auction.",
+    "necessarySaleAndExit": "Player1 sells1 share for764 to own bank and survives; player2 later exits fortune17 with due12000/paid7927/unpaid4073. Public auctions add1600 independently; never debt rescue.",
+    "observation": "Time restore clears all host observations and checkpoints; prefix folding rebuilds only accepted public observations. Restore-3 continues past Apr15 to turn328 without another tool10 acquisition, so memory correctly remains empty.",
+    "dateScope": "New restore/date continuity; no new research-v1 negative-dividend/loan-insolvency UI claim, retained historical and domain evidence."
+  },
+  "uncoveredUI": [
+    "post-restore reacquisition of a second time machine and new observation formation",
+    "all characters, background throttling, save/import and per-seat different policies",
+    "human scientific-tool cancellation, instantaneous invalidation, every ally/god/research protection combination",
+    "non-self teleport and nuclear nonempty road-object/carried-god targets",
+    "research-v1 mixed long-game UI for every negative-dividend/loan insolvency combination"
+  ],
+  "retainedDifferences": [
+    "native AI weights/difficulty/equivalence",
+    "local routes, long-term traps and future profitability",
+    "original price precision/RNG/chart",
+    "other asset listings, special roles, original roulette",
+    "native exit call stack/endgame",
+    "minigame presentation/collision"
+  ],
+  "next": "S3-03a: inventory current gods/vehicle rules and original luck, refresh/wandering lifecycle evidence; preserve v44 and fifteen policies; only verified new game semantics get a new version."
+}

@@ -1,0 +1,76 @@
+{
+  "stage": "S3-04c",
+  "date": "2026-10-09",
+  "status": "implemented-local-checks-passed-browser-deferred-to-S3-04d",
+  "rulesId": "japan-events-candidate-v47",
+  "fingerprint": "c6d96cc",
+  "presentationProfile": "object-presentation-v1",
+  "newGameSemantics": false,
+  "newPolicyVersion": false,
+  "nativeExecution": false,
+  "implemented": {
+    "directionalObjects": 15,
+    "frames": 120,
+    "autonomousWandering": false,
+    "vehicleAnimation": false,
+    "dedicatedEventAnimation": false
+  },
+  "checks": {
+    "tests": {
+      "passed": 40,
+      "files": 4,
+      "scope": "13 current-world object projection +17 audio queue +8 session +2 detached presentation; object suite rerun13 after travel assertion; deduplicated40"
+    },
+    "resources": {
+      "frames": 120,
+      "atlasBounds": true,
+      "alpha": true,
+      "hash": true,
+      "contactSheetViewed": true
+    },
+    "build": "tsc -b and Vite passed; existing chunk/import warnings",
+    "lint": "passed",
+    "diffCheck": "passed",
+    "fullFrontendRun": false
+  },
+  "preservation": {
+    "baselineFiles": 800,
+    "changedExisting": [
+      "frontend/src/features/richman/scene.ts"
+    ],
+    "unchangedFiles": 799,
+    "oldGeneratedFiles": 37,
+    "oldGeneratedUnchanged": true,
+    "oldFixtureFiles": 459,
+    "oldFixturesUnchanged": true,
+    "historicalReplayFixtures": 458,
+    "newReplayFixtures": 0,
+    "engineRulesPoliciesAudioUnchanged": true
+  },
+  "browser": {
+    "started": false,
+    "commands": 0,
+    "newPassedScenarios": 0,
+    "reason": "user schedules unified S3-04d after a-c"
+  },
+  "resolvedLocalFailures": [
+    "reference396 not local SPR; local EXE establishes355 base; corrected before integration",
+    "initial compile unused presentationGame before callback integration; subsequent compile passed"
+  ],
+  "pendingBrowserAcceptance": [
+    "optional art load/missing/corrupt/abort/unmount",
+    "legal original map gods attach/replace/remove/expiry and15 surrender",
+    "11 vehicle gates,13 failure/success,14/month refresh",
+    "directions/anchors/layers/worker click-through",
+    "pause/resume/cancel/reset/new game/hidden/fullscreen390px/exit",
+    "legal G7 restoration without stale sprites/audio",
+    "Mac unlock,volume,mute,listening/queues",
+    "2-4-seat prefixes/full replay"
+  ],
+  "remaining": [
+    "vehicle/event/Panel/jump animations unassigned",
+    "native color conversion/precision/pixel occlusion",
+    "historical music/voice/exit/endgame/RNG/actor/spinner/AI/market/minigame gaps"
+  ],
+  "next": "S3-04d unified a-c browser acceptance"
+}

@@ -1,0 +1,134 @@
+{
+  "players": 4,
+  "commands": 830,
+  "turn": 113,
+  "auto": 258,
+  "human": 73,
+  "acquisitions": [
+    {
+      "id": "player-2",
+      "ai": true,
+      "item": "card:10",
+      "turn": 22,
+      "action": "animationDone",
+      "events": [
+        {
+          "type": "mapCardReceived",
+          "node": 98,
+          "itemId": "card:10",
+          "discarded": null,
+          "sequence": 327,
+          "commandId": "command-184",
+          "playerId": "player-2",
+          "turn": 22
+        }
+      ]
+    },
+    {
+      "id": "player-4",
+      "ai": true,
+      "item": "card:10",
+      "turn": 84,
+      "action": "item",
+      "events": [
+        {
+          "type": "inventoryTransferred",
+          "sourceId": "player-2",
+          "targetId": "player-4",
+          "itemId": "card:10",
+          "discarded": null,
+          "received": true,
+          "sequence": 1109,
+          "commandId": "command-616",
+          "playerId": "player-4",
+          "turn": 84
+        }
+      ]
+    }
+  ],
+  "uses": [
+    {
+      "ai": true,
+      "id": "player-4",
+      "item": "card:10",
+      "target": "japan:land:21",
+      "turn": 112,
+      "phase": "idle",
+      "affected": [
+        "japan:land:19",
+        "japan:land:20",
+        "japan:land:21",
+        "japan:land:22",
+        "japan:land:23"
+      ],
+      "changes": [
+        {
+          "before": {
+            "id": "japan:land:23",
+            "ownerId": "player-2",
+            "level": 1,
+            "basePrice": 2000,
+            "buildingType": 0,
+            "priceStatus": 0,
+            "research": null
+          },
+          "after": {
+            "id": "japan:land:23",
+            "ownerId": "player-2",
+            "level": 0,
+            "basePrice": 2000,
+            "buildingType": 0,
+            "priceStatus": 0,
+            "research": null
+          }
+        }
+      ]
+    }
+  ],
+  "cancellations": [],
+  "prefixes": [
+    "card:10-acquired",
+    "card:10-paused",
+    "card:10-resumed",
+    "card:10-confirm-before",
+    "card:10-confirm-after"
+  ],
+  "report": {
+    "policy": "area-v1",
+    "toolWindows": [
+      "tool:08",
+      "tool:09",
+      "card:13",
+      "card:10"
+    ],
+    "crossChecks": [],
+    "route": "4",
+    "terminal": false,
+    "players": 4,
+    "normalSpeed": true,
+    "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+    "commands": 830,
+    "auto": 258,
+    "human": 73,
+    "lifecycle": [
+      "pause stops waiting",
+      "resume",
+      "reset dialog cancel",
+      "reset",
+      "replace with humans",
+      "exit cleanup",
+      "fullscreen",
+      "390px"
+    ],
+    "cleanup": {
+      "raf": 0,
+      "canvas": 0
+    },
+    "errors": []
+  },
+  "hashes": {
+    "replay": "4e9acf836138a8f0750c0ded885a5fd30863ac6ece9ab92a6c549a0e93eddc23",
+    "state": "e3c1b41d6fa9c7f860a46b3e53320a1c0d29bc24db578582522748be5c2acab2",
+    "events": "ff5e89c8788b7808a384ebf81a3afb3e7f0ed485cbaab394a5233a0cd055a0ba"
+  }
+}

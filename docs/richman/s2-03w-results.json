@@ -1,0 +1,409 @@
+{
+  "stage": "S2-03w",
+  "date": "2026-10-06",
+  "rulesId": "japan-events-candidate-v36",
+  "fingerprint": "62bff609",
+  "implemented": {
+    "itemsHistorical": 43,
+    "newsHistorical": 36,
+    "japanFortuneHistorical": 37,
+    "magicTargetGroups": 12,
+    "magicEffects": 6,
+    "magicEffectsTotal": 12
+  },
+  "sourceAudit": {
+    "files": 10,
+    "anchors": 56,
+    "mapCodes": 17,
+    "nodes": 110
+  },
+  "automated": {
+    "status": "passed",
+    "domain": 26,
+    "panel": 2,
+    "newReplayMatrix": 3,
+    "newRealBrowserReplay": 1,
+    "tests": 1313,
+    "files": 94,
+    "replayMatrix": 108,
+    "lint": "passed",
+    "build": "passed",
+    "diffCheck": "passed",
+    "logs": {
+      "test": "/private/tmp/richman-03w-tests.log",
+      "lint": "/private/tmp/richman-03w-lint.log",
+      "build": "/private/tmp/richman-03w-build.log"
+    }
+  },
+  "browser": {
+    "passed": true,
+    "normalSpeed": true,
+    "map": "original Japan; real UI commands; auth-only fixture; no game-state injection",
+    "seed": "magic-1",
+    "players": 4,
+    "commands": 567,
+    "turn": 83,
+    "date": "1998-01-21",
+    "receipts": [
+      {
+        "node": 73,
+        "group": 6,
+        "targets": [
+          "player-1",
+          "player-2",
+          "player-3",
+          "player-4"
+        ],
+        "effect": 0,
+        "title": "变卖所有卡片",
+        "rows": [
+          {
+            "playerId": "player-1",
+            "lines": [
+              "点数 0 → 0。"
+            ],
+            "pointsBefore": 0,
+            "pointsAfter": 0,
+            "cashBefore": 50000,
+            "cashAfter": 50000,
+            "bankBefore": 50000,
+            "bankAfter": 50000,
+            "stopBefore": 0,
+            "stopAfter": 0,
+            "previousBefore": 87,
+            "previousAfter": 87,
+            "sold": []
+          },
+          {
+            "playerId": "player-2",
+            "lines": [
+              "点数 140 → 140。"
+            ],
+            "pointsBefore": 140,
+            "pointsAfter": 140,
+            "cashBefore": 53542,
+            "cashAfter": 53542,
+            "bankBefore": 50000,
+            "bankAfter": 50000,
+            "stopBefore": 0,
+            "stopAfter": 0,
+            "previousBefore": 30,
+            "previousAfter": 30,
+            "sold": []
+          },
+          {
+            "playerId": "player-3",
+            "lines": [
+              "点数 10 → 10。"
+            ],
+            "pointsBefore": 10,
+            "pointsAfter": 10,
+            "cashBefore": 50000,
+            "cashAfter": 50000,
+            "bankBefore": 50000,
+            "bankAfter": 50000,
+            "stopBefore": 0,
+            "stopAfter": 0,
+            "previousBefore": 23,
+            "previousAfter": 23,
+            "sold": []
+          },
+          {
+            "playerId": "player-4",
+            "lines": [
+              "陷害卡 × 1：20 点。",
+              "点数 10 → 30。"
+            ],
+            "pointsBefore": 10,
+            "pointsAfter": 30,
+            "cashBefore": 50000,
+            "cashAfter": 50000,
+            "bankBefore": 50000,
+            "bankAfter": 50000,
+            "stopBefore": 0,
+            "stopAfter": 0,
+            "previousBefore": 74,
+            "previousAfter": 74,
+            "sold": [
+              {
+                "itemId": "card:17",
+                "count": 1,
+                "price": 20
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node": 35,
+        "group": 0,
+        "targets": [
+          "player-2"
+        ],
+        "effect": 3,
+        "title": "原地停留一回合",
+        "rows": [
+          {
+            "playerId": "player-2",
+            "lines": [
+              "停留 0 → 1，按自身行动计时。"
+            ],
+            "pointsBefore": 140,
+            "pointsAfter": 140,
+            "cashBefore": 53542,
+            "cashAfter": 53542,
+            "bankBefore": 50000,
+            "bankAfter": 50000,
+            "stopBefore": 0,
+            "stopAfter": 1,
+            "previousBefore": 34,
+            "previousAfter": 34
+          }
+        ]
+      },
+      {
+        "node": 73,
+        "group": 10,
+        "targets": [
+          "player-2",
+          "player-4"
+        ],
+        "effect": 4,
+        "title": "存入所有现金",
+        "rows": [
+          {
+            "playerId": "player-2",
+            "lines": [
+              "现金 53,542 → 0；存款 50,000 → 103,542 元。"
+            ],
+            "pointsBefore": 140,
+            "pointsAfter": 140,
+            "cashBefore": 53542,
+            "cashAfter": 0,
+            "bankBefore": 50000,
+            "bankAfter": 103542,
+            "stopBefore": 1,
+            "stopAfter": 1,
+            "previousBefore": 34,
+            "previousAfter": 34
+          },
+          {
+            "playerId": "player-4",
+            "lines": [
+              "现金 50,000 → 0；存款 50,000 → 100,000 元。"
+            ],
+            "pointsBefore": 30,
+            "pointsAfter": 30,
+            "cashBefore": 50000,
+            "cashAfter": 0,
+            "bankBefore": 50000,
+            "bankAfter": 100000,
+            "stopBefore": 0,
+            "stopAfter": 0,
+            "previousBefore": 68,
+            "previousAfter": 68
+          }
+        ]
+      },
+      {
+        "node": 35,
+        "group": 1,
+        "targets": [
+          "player-2"
+        ],
+        "effect": 6,
+        "title": "得一张卡片",
+        "rows": [
+          {
+            "playerId": "player-2",
+            "lines": [
+              "获得乌龟卡。"
+            ],
+            "pointsBefore": 140,
+            "pointsAfter": 140,
+            "cashBefore": 0,
+            "cashAfter": 0,
+            "bankBefore": 103542,
+            "bankAfter": 103542,
+            "stopBefore": 0,
+            "stopAfter": 0,
+            "previousBefore": 35,
+            "previousAfter": 35,
+            "received": {
+              "itemId": "card:30",
+              "discarded": null
+            }
+          }
+        ]
+      },
+      {
+        "node": 35,
+        "group": 9,
+        "targets": [
+          "player-4"
+        ],
+        "effect": 8,
+        "title": "变卖所有道具",
+        "rows": [
+          {
+            "playerId": "player-4",
+            "lines": [
+              "机器娃娃 × 1：15 点。",
+              "路障 × 1：30 点。",
+              "机器工人 × 1：30 点。",
+              "点数 30 → 105；恢复步行、1骰。"
+            ],
+            "pointsBefore": 30,
+            "pointsAfter": 105,
+            "cashBefore": 0,
+            "cashAfter": 0,
+            "bankBefore": 100000,
+            "bankAfter": 100000,
+            "stopBefore": 0,
+            "stopAfter": 0,
+            "previousBefore": null,
+            "previousAfter": null,
+            "sold": [
+              {
+                "itemId": "tool:01",
+                "count": 1,
+                "price": 15
+              },
+              {
+                "itemId": "tool:02",
+                "count": 1,
+                "price": 30
+              },
+              {
+                "itemId": "tool:09",
+                "count": 1,
+                "price": 30
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node": 73,
+        "group": 10,
+        "targets": [
+          "player-2",
+          "player-4"
+        ],
+        "effect": 7,
+        "title": "向后转",
+        "rows": [
+          {
+            "playerId": "player-2",
+            "lines": [
+              "原地向后转，下次移动使用新方向；不立即移动。"
+            ],
+            "pointsBefore": 140,
+            "pointsAfter": 140,
+            "cashBefore": 0,
+            "cashAfter": 0,
+            "bankBefore": 103742,
+            "bankAfter": 103742,
+            "stopBefore": 0,
+            "stopAfter": 0,
+            "previousBefore": 72,
+            "previousAfter": 74
+          },
+          {
+            "playerId": "player-4",
+            "lines": [
+              "住宿、旅行或拘留中，不能转向。"
+            ],
+            "pointsBefore": 105,
+            "pointsAfter": 105,
+            "cashBefore": 0,
+            "cashAfter": 0,
+            "bankBefore": 100000,
+            "bankAfter": 100000,
+            "stopBefore": 0,
+            "stopAfter": 0,
+            "previousBefore": null,
+            "previousAfter": null,
+            "skipped": true
+          }
+        ]
+      }
+    ],
+    "groups": [
+      6,
+      0,
+      10,
+      1,
+      9
+    ],
+    "nodes": [
+      73,
+      35
+    ],
+    "checks": [
+      "six actual nonempty effects at both Japan magic nodes",
+      "frozen group; six choices; one result acknowledgement",
+      "pause controls; reset dialog cancellation; fullscreen; 390px no horizontal overflow",
+      "following normal turns",
+      "actual command download vs legal plan normalized world",
+      "independent per-command before/after money, point and item accounting",
+      "exact replay and SHA256 golden",
+      "default v36 and date-input UI separately tested",
+      "exit raf0 canvas0"
+    ],
+    "cleanup": {
+      "raf": 0,
+      "canvas": 0
+    },
+    "errors": [],
+    "hashes": {
+      "replay": "e7b02e4f03c4fd0fcc1fb3e4b7d228f77a8b45b9d066207bc0909d980283f38b",
+      "state": "c7a962938007822e618af9a0295aaf802ac99896380654f899dc7f21c05d0035",
+      "events": "0bcf3c878c32bd2c53516d157a43696f38c778ce6763827847d662e992069b47"
+    },
+    "artifacts": "/private/tmp/richman-unified-ui-03w-final",
+    "screenshots": [
+      "/private/tmp/richman-unified-ui-03w-final/magic-narrow.png",
+      "/private/tmp/richman-unified-ui-03w-final/magic-0-0.png",
+      "/private/tmp/richman-unified-ui-03w-final/magic-7-5.png"
+    ],
+    "dateCoverage": "Jan15 zero-held company settlements and no-ticket lottery entry only; not negative dividend or prize payment UI"
+  },
+  "defaultBrowser": {
+    "rulesId": "japan-events-candidate-v36",
+    "fingerprint": "62bff609",
+    "defaultMode": "magic",
+    "cleanup": {
+      "raf": 0,
+      "canvas": 0
+    },
+    "errors": []
+  },
+  "fixes": [
+    "v36 new-game date input inherited",
+    "dream vehicle already in bag: no duplicate sale; current-foot target group",
+    "retain dream restoration metadata; suspended engineer retains preexisting v11 candidate lease"
+  ],
+  "notBrowserVerified": [
+    "remaining six magic effects1/2/5/9/10/11",
+    "all12 target group categories (actual five groups only)",
+    "motorcycle/car/active or suspended engineer sale and dream vehicle regression: domain only",
+    "full15 replacement, empty supply, uint16/stop overflow: domain only",
+    "magic followed by negative dividend bankruptcy/auction/lottery/loan: domain only",
+    "2/3-player dedicated full magic UI journeys",
+    "G7 restoring magic effects: domain only",
+    "original RNG/timing/AI/animation, native extreme money/float behavior",
+    "prison/hospital direct services, three minigames, original shop selling",
+    "other asset listings, special actors, native ending"
+  ],
+  "excludedTrials": [
+    "magic-0 longer UI route stopped unfinished",
+    "initial magic-1 UI pass used pre-fix fingerprint87f765d8; superseded, not archived as final"
+  ],
+  "next": {
+    "stage": "S2-03x",
+    "newVersion": 37,
+    "priority": "merge magic2/10 detention reactions and5/9 current-property construction/destruction; verify ownership/types/fees/research/insurance and caller restoration",
+    "remainingLater": "magic1 triple-fortune and11 current-property auction need serialized nested continuations; keep source entries from w report"
+  }
+}

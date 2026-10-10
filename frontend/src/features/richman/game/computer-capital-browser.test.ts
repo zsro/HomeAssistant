@@ -1,0 +1,10 @@
+import {expect,it} from 'vitest';import {createHash} from 'node:crypto';import {verifyComputerCapital} from '../../../../../scripts/richman/verify-computer-capital';import type {ControlledReplay} from './computer';
+const replays=import.meta.glob('./fixtures/computer-capital-v44-*-replay.json',{eager:true,import:'default'}) as Record<string,ControlledReplay>;
+const manifests=import.meta.glob('./fixtures/computer-capital-v44-*-manifest.json',{eager:true,import:'default'}) as Record<string,Awaited<ReturnType<typeof verifyComputerCapital>>&{hashes:Record<string,string>;report:{normalSpeed:boolean;errors:string[];cleanup:unknown;capitalWindows:string[]}} >;
+for(const route of ['2','3','4','loan','repay','payer'])it(`actual capital-v1 ${route}: legal acquisition, capital receipts, lifecycle, prefix/full replay`,async()=>{
+ const r=replays[`./fixtures/computer-capital-v44-${route}-replay.json`],m=manifests[`./fixtures/computer-capital-v44-${route}-manifest.json`];expect(r).toBeDefined();expect(m).toBeDefined();const{state,events,...summary}=await verifyComputerCapital(r);
+ for(const key of Object.keys(summary) as (keyof typeof summary)[])expect(summary[key]).toEqual(m[key]);const hash=(x:unknown)=>createHash('sha256').update(JSON.stringify(x)).digest('hex');expect(hash(r)).toBe(m.hashes.replay);expect(hash(state)).toBe(m.hashes.state);expect(hash(events)).toBe(m.hashes.events);expect(m.report.normalSpeed).toBe(true);expect(m.report.errors).toEqual([]);expect(m.report.cleanup).toEqual({raf:0,canvas:0});
+ const required=route==='loan'?['borrow']:route==='repay'?['repay']:route==='3'?['buy','subscription']:['buy','sell'];for(const effect of required){expect(summary.prefixes).toEqual(expect.arrayContaining([effect+'-paused',effect+'-resumed',effect+'-before',effect+'-after']));expect(m.report.capitalWindows).toContain(effect);}
+ if(route==='payer'){expect(summary.reactions.length).toBeGreaterThan(0);expect(summary.forcedSales.length).toBeGreaterThan(0);}
+ if(route==='4')expect(summary.reds.some(u=>(u as {ai:boolean;quantity:number}).ai&&(u as {quantity:number}).quantity>0)).toBe(true);
+},300000);

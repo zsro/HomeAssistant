@@ -1,0 +1,155 @@
+{
+  "route": "3",
+  "players": 3,
+  "normalSpeed": true,
+  "map": "original Japan; hotseat UI commands; auth fixture only",
+  "commands": 9,
+  "human": 3,
+  "auto": 0,
+  "displayChecks": [
+    {
+      "index": 0,
+      "kinds": []
+    },
+    {
+      "index": 1,
+      "kinds": [
+        "surrenderStarted",
+        "disposalCompleted",
+        "surrenderSelection"
+      ]
+    },
+    {
+      "index": 2,
+      "kinds": [
+        "surrenderCompleted"
+      ]
+    }
+  ],
+  "lifecycle": [
+    "pause/resume",
+    "reset dialog cancel",
+    "reset",
+    "replace",
+    "exit",
+    "fullscreen",
+    "390px"
+  ],
+  "cleanup": {
+    "raf": 0,
+    "canvas": 0
+  },
+  "errors": [],
+  "facts": [
+    {
+      "type": "surrenderStarted",
+      "sourceId": "player-1",
+      "sequence": 3,
+      "commandId": "command-5",
+      "playerId": "player-1",
+      "turn": 1
+    },
+    {
+      "type": "disposalCompleted",
+      "receipt": {
+        "continuation": "surrender",
+        "id": "disposal-1",
+        "payerId": "player-1",
+        "recipientId": "public",
+        "propertyId": "surrender",
+        "due": 0,
+        "amount": 0,
+        "unpaid": 0,
+        "paid": {
+          "cash": 0,
+          "bank": 0
+        },
+        "released": [],
+        "pool": [],
+        "draws": [],
+        "stocks": [],
+        "inventory": [
+          {
+            "itemId": "tool:08",
+            "quantity": 1,
+            "points": 30
+          },
+          {
+            "itemId": "tool:09",
+            "quantity": 1,
+            "points": 30
+          },
+          {
+            "itemId": "tool:01",
+            "quantity": 1,
+            "points": 15
+          },
+          {
+            "itemId": "tool:02",
+            "quantity": 1,
+            "points": 30
+          }
+        ],
+        "ignoredPoints": 105,
+        "auctions": [],
+        "finishedGame": false
+      },
+      "sequence": 9,
+      "commandId": "command-5",
+      "playerId": "player-1",
+      "turn": 1
+    },
+    {
+      "type": "surrenderSelection",
+      "decision": {
+        "kind": "surrender",
+        "id": "fe68d2fc-c990-42d1-9561-6577674ec044:2",
+        "sourceId": "player-1",
+        "targets": [
+          "player-2",
+          "player-3"
+        ]
+      },
+      "sequence": 10,
+      "commandId": "command-5",
+      "playerId": "player-1",
+      "turn": 1
+    },
+    {
+      "type": "surrenderCompleted",
+      "sourceId": "player-1",
+      "targetId": null,
+      "outcome": "cancelled",
+      "sequence": 13,
+      "commandId": "command-10",
+      "playerId": "player-1",
+      "turn": 1
+    }
+  ],
+  "prefixes": [
+    {
+      "index": 3,
+      "kind": "surrenderStarted"
+    },
+    {
+      "index": 3,
+      "kind": "disposalCompleted"
+    },
+    {
+      "index": 3,
+      "kind": "surrenderSelection"
+    },
+    {
+      "index": 6,
+      "kind": "surrenderCompleted"
+    }
+  ],
+  "fullReplay": true,
+  "prefixReplay": true,
+  "commandsMatchLegalPlan": true,
+  "hashes": {
+    "replay": "31ad52b4df05def815ccdd2fd2a2a75992935a3d51f2bff320a3d6edba245e33",
+    "state": "1ef69dd27d6f2f1cefa49574e67eb550031649cb35215d85e8455eb09c5ddee4",
+    "events": "05826c120802a945c19d0514c9559308546a7f30b01a689bddb2c53ae2216b76"
+  }
+}

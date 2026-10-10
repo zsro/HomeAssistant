@@ -1,0 +1,1151 @@
+{
+  "version": 1,
+  "evidence": "cross-version-candidate",
+  "sourceHash": "4dc6a47efe03f64484e6b9ac5ee31489b7f42fc369c0296f2f0b8d63845294b1",
+  "resourceHash": "9177f5d654721cff09afa1d390eaa3fef7a6ac20d244bb56c753980f621317ac",
+  "referenceCommit": "ec7d70e693059d1e781d9d1cc2ad7f36d360d39e",
+  "initialFunds": [
+    300000,
+    200000,
+    100000,
+    50000,
+    30000,
+    10000
+  ],
+  "properties": [
+    {
+      "id": "japan:land:1",
+      "kind": "land",
+      "name": "盛岡",
+      "nodeIds": [
+        85
+      ],
+      "x": 1895,
+      "y": 575,
+      "direction": 6,
+      "basePrice": 500,
+      "upgradeCost": 100,
+      "rents": [
+        100,
+        250,
+        700,
+        1800,
+        3500,
+        6600
+      ]
+    },
+    {
+      "id": "japan:land:2",
+      "kind": "land",
+      "name": "盛岡",
+      "nodeIds": [
+        86
+      ],
+      "x": 1895,
+      "y": 624,
+      "direction": 6,
+      "basePrice": 500,
+      "upgradeCost": 100,
+      "rents": [
+        100,
+        250,
+        700,
+        1800,
+        3500,
+        6600
+      ]
+    },
+    {
+      "id": "japan:land:3",
+      "kind": "land",
+      "name": "盛岡",
+      "nodeIds": [
+        87
+      ],
+      "x": 1895,
+      "y": 672,
+      "direction": 6,
+      "basePrice": 500,
+      "upgradeCost": 100,
+      "rents": [
+        100,
+        250,
+        700,
+        1800,
+        3500,
+        6600
+      ]
+    },
+    {
+      "id": "japan:land:4",
+      "kind": "land",
+      "name": "仙台",
+      "nodeIds": [
+        89
+      ],
+      "x": 1895,
+      "y": 816,
+      "direction": 6,
+      "basePrice": 800,
+      "upgradeCost": 150,
+      "rents": [
+        150,
+        400,
+        1000,
+        2400,
+        5000,
+        9000
+      ]
+    },
+    {
+      "id": "japan:land:5",
+      "kind": "land",
+      "name": "仙台",
+      "nodeIds": [
+        90
+      ],
+      "x": 1895,
+      "y": 864,
+      "direction": 6,
+      "basePrice": 800,
+      "upgradeCost": 150,
+      "rents": [
+        150,
+        400,
+        1000,
+        2400,
+        5000,
+        9000
+      ]
+    },
+    {
+      "id": "japan:land:6",
+      "kind": "land",
+      "name": "仙台",
+      "nodeIds": [
+        91
+      ],
+      "x": 1895,
+      "y": 911,
+      "direction": 6,
+      "basePrice": 500,
+      "upgradeCost": 150,
+      "rents": [
+        150,
+        400,
+        1000,
+        2400,
+        5000,
+        9000
+      ]
+    },
+    {
+      "id": "japan:land:7",
+      "kind": "land",
+      "name": "福島",
+      "nodeIds": [
+        95
+      ],
+      "x": 1895,
+      "y": 1153,
+      "direction": 6,
+      "basePrice": 1500,
+      "upgradeCost": 300,
+      "rents": [
+        300,
+        750,
+        2000,
+        4800,
+        10000,
+        18000
+      ]
+    },
+    {
+      "id": "japan:land:8",
+      "kind": "land",
+      "name": "福島",
+      "nodeIds": [
+        96
+      ],
+      "x": 1895,
+      "y": 1199,
+      "direction": 6,
+      "basePrice": 1500,
+      "upgradeCost": 300,
+      "rents": [
+        300,
+        750,
+        2000,
+        4800,
+        10000,
+        18000
+      ]
+    },
+    {
+      "id": "japan:land:9",
+      "kind": "land",
+      "name": "福島",
+      "nodeIds": [
+        97
+      ],
+      "x": 1895,
+      "y": 1248,
+      "direction": 6,
+      "basePrice": 1500,
+      "upgradeCost": 300,
+      "rents": [
+        300,
+        750,
+        2000,
+        4800,
+        10000,
+        18000
+      ]
+    },
+    {
+      "id": "japan:land:10",
+      "kind": "land",
+      "name": "東京",
+      "nodeIds": [
+        99
+      ],
+      "x": 1859,
+      "y": 1334,
+      "direction": 7,
+      "basePrice": 2500,
+      "upgradeCost": 500,
+      "rents": [
+        500,
+        1200,
+        3000,
+        7500,
+        16000,
+        30000
+      ]
+    },
+    {
+      "id": "japan:land:11",
+      "kind": "land",
+      "name": "東京",
+      "nodeIds": [
+        100
+      ],
+      "x": 1825,
+      "y": 1366,
+      "direction": 7,
+      "basePrice": 2500,
+      "upgradeCost": 500,
+      "rents": [
+        500,
+        1200,
+        3000,
+        7500,
+        16000,
+        30000
+      ]
+    },
+    {
+      "id": "japan:land:12",
+      "kind": "land",
+      "name": "東京",
+      "nodeIds": [
+        101
+      ],
+      "x": 1791,
+      "y": 1401,
+      "direction": 7,
+      "basePrice": 2500,
+      "upgradeCost": 500,
+      "rents": [
+        500,
+        1200,
+        3000,
+        7500,
+        16000,
+        30000
+      ]
+    },
+    {
+      "id": "japan:land:13",
+      "kind": "land",
+      "name": "東京",
+      "nodeIds": [
+        104
+      ],
+      "x": 1688,
+      "y": 1505,
+      "direction": 7,
+      "basePrice": 2500,
+      "upgradeCost": 500,
+      "rents": [
+        500,
+        1200,
+        3000,
+        7500,
+        16000,
+        30000
+      ]
+    },
+    {
+      "id": "japan:land:14",
+      "kind": "land",
+      "name": "東京",
+      "nodeIds": [
+        105
+      ],
+      "x": 1654,
+      "y": 1538,
+      "direction": 7,
+      "basePrice": 2500,
+      "upgradeCost": 500,
+      "rents": [
+        500,
+        1200,
+        3000,
+        7500,
+        16000,
+        30000
+      ]
+    },
+    {
+      "id": "japan:land:15",
+      "kind": "land",
+      "name": "東京",
+      "nodeIds": [
+        106
+      ],
+      "x": 1620,
+      "y": 1572,
+      "direction": 7,
+      "basePrice": 2500,
+      "upgradeCost": 500,
+      "rents": [
+        500,
+        1200,
+        3000,
+        7500,
+        16000,
+        30000
+      ]
+    },
+    {
+      "id": "japan:land:16",
+      "kind": "land",
+      "name": "名古屋",
+      "nodeIds": [
+        108
+      ],
+      "x": 1536,
+      "y": 1607,
+      "direction": 0,
+      "basePrice": 1500,
+      "upgradeCost": 300,
+      "rents": [
+        300,
+        750,
+        2000,
+        4800,
+        10000,
+        18000
+      ]
+    },
+    {
+      "id": "japan:land:17",
+      "kind": "land",
+      "name": "名古屋",
+      "nodeIds": [
+        109
+      ],
+      "x": 1487,
+      "y": 1607,
+      "direction": 0,
+      "basePrice": 1500,
+      "upgradeCost": 300,
+      "rents": [
+        300,
+        750,
+        2000,
+        4800,
+        10000,
+        18000
+      ]
+    },
+    {
+      "id": "japan:land:18",
+      "kind": "land",
+      "name": "名古屋",
+      "nodeIds": [
+        110
+      ],
+      "x": 1439,
+      "y": 1607,
+      "direction": 0,
+      "basePrice": 1500,
+      "upgradeCost": 300,
+      "rents": [
+        300,
+        750,
+        2000,
+        4800,
+        10000,
+        18000
+      ]
+    },
+    {
+      "id": "japan:land:19",
+      "kind": "land",
+      "name": "大阪",
+      "nodeIds": [
+        3
+      ],
+      "x": 1296,
+      "y": 1608,
+      "direction": 0,
+      "basePrice": 2000,
+      "upgradeCost": 400,
+      "rents": [
+        400,
+        1000,
+        2400,
+        6000,
+        12500,
+        22000
+      ]
+    },
+    {
+      "id": "japan:land:20",
+      "kind": "land",
+      "name": "大阪",
+      "nodeIds": [
+        4
+      ],
+      "x": 1248,
+      "y": 1608,
+      "direction": 0,
+      "basePrice": 2000,
+      "upgradeCost": 400,
+      "rents": [
+        400,
+        1000,
+        2400,
+        6000,
+        12500,
+        22000
+      ]
+    },
+    {
+      "id": "japan:land:21",
+      "kind": "land",
+      "name": "大阪",
+      "nodeIds": [
+        5
+      ],
+      "x": 1200,
+      "y": 1608,
+      "direction": 0,
+      "basePrice": 2000,
+      "upgradeCost": 400,
+      "rents": [
+        400,
+        1000,
+        2400,
+        6000,
+        12500,
+        22000
+      ]
+    },
+    {
+      "id": "japan:land:22",
+      "kind": "land",
+      "name": "大阪",
+      "nodeIds": [
+        6
+      ],
+      "x": 1152,
+      "y": 1608,
+      "direction": 0,
+      "basePrice": 2000,
+      "upgradeCost": 400,
+      "rents": [
+        400,
+        1000,
+        2400,
+        6000,
+        12500,
+        22000
+      ]
+    },
+    {
+      "id": "japan:land:23",
+      "kind": "land",
+      "name": "大阪",
+      "nodeIds": [
+        7
+      ],
+      "x": 1103,
+      "y": 1608,
+      "direction": 0,
+      "basePrice": 2000,
+      "upgradeCost": 400,
+      "rents": [
+        400,
+        1000,
+        2400,
+        6000,
+        12500,
+        22000
+      ]
+    },
+    {
+      "id": "japan:land:24",
+      "kind": "land",
+      "name": "神戶",
+      "nodeIds": [
+        8
+      ],
+      "x": 943,
+      "y": 1671,
+      "direction": 7,
+      "basePrice": 1500,
+      "upgradeCost": 300,
+      "rents": [
+        300,
+        750,
+        2000,
+        4800,
+        10000,
+        18000
+      ]
+    },
+    {
+      "id": "japan:land:25",
+      "kind": "land",
+      "name": "神戶",
+      "nodeIds": [
+        9
+      ],
+      "x": 909,
+      "y": 1707,
+      "direction": 7,
+      "basePrice": 1500,
+      "upgradeCost": 300,
+      "rents": [
+        300,
+        750,
+        2000,
+        4800,
+        10000,
+        18000
+      ]
+    },
+    {
+      "id": "japan:land:26",
+      "kind": "land",
+      "name": "神戶",
+      "nodeIds": [
+        10
+      ],
+      "x": 875,
+      "y": 1741,
+      "direction": 7,
+      "basePrice": 1500,
+      "upgradeCost": 300,
+      "rents": [
+        300,
+        750,
+        2000,
+        4800,
+        10000,
+        18000
+      ]
+    },
+    {
+      "id": "japan:land:27",
+      "kind": "land",
+      "name": "神戶",
+      "nodeIds": [
+        11
+      ],
+      "x": 840,
+      "y": 1776,
+      "direction": 7,
+      "basePrice": 1500,
+      "upgradeCost": 300,
+      "rents": [
+        300,
+        750,
+        2000,
+        4800,
+        10000,
+        18000
+      ]
+    },
+    {
+      "id": "japan:land:28",
+      "kind": "land",
+      "name": "神戶",
+      "nodeIds": [
+        12
+      ],
+      "x": 807,
+      "y": 1811,
+      "direction": 7,
+      "basePrice": 1500,
+      "upgradeCost": 300,
+      "rents": [
+        300,
+        750,
+        2000,
+        4800,
+        10000,
+        18000
+      ]
+    },
+    {
+      "id": "japan:land:29",
+      "kind": "land",
+      "name": "宮島",
+      "nodeIds": [
+        36
+      ],
+      "x": 335,
+      "y": 1752,
+      "direction": 6,
+      "basePrice": 1000,
+      "upgradeCost": 200,
+      "rents": [
+        200,
+        500,
+        1200,
+        2800,
+        6000,
+        10000
+      ]
+    },
+    {
+      "id": "japan:land:30",
+      "kind": "land",
+      "name": "宮島",
+      "nodeIds": [
+        37
+      ],
+      "x": 335,
+      "y": 1704,
+      "direction": 6,
+      "basePrice": 1000,
+      "upgradeCost": 200,
+      "rents": [
+        200,
+        500,
+        1200,
+        2800,
+        6000,
+        10000
+      ]
+    },
+    {
+      "id": "japan:land:31",
+      "kind": "land",
+      "name": "宮島",
+      "nodeIds": [
+        38
+      ],
+      "x": 335,
+      "y": 1657,
+      "direction": 6,
+      "basePrice": 1000,
+      "upgradeCost": 200,
+      "rents": [
+        200,
+        500,
+        1200,
+        2800,
+        6000,
+        10000
+      ]
+    },
+    {
+      "id": "japan:land:32",
+      "kind": "land",
+      "name": "倉敷",
+      "nodeIds": [
+        42
+      ],
+      "x": 575,
+      "y": 1463,
+      "direction": 0,
+      "basePrice": 1500,
+      "upgradeCost": 300,
+      "rents": [
+        300,
+        750,
+        2000,
+        4800,
+        10000,
+        18000
+      ]
+    },
+    {
+      "id": "japan:land:33",
+      "kind": "land",
+      "name": "倉敷",
+      "nodeIds": [
+        43
+      ],
+      "x": 623,
+      "y": 1463,
+      "direction": 0,
+      "basePrice": 1500,
+      "upgradeCost": 300,
+      "rents": [
+        300,
+        750,
+        2000,
+        4800,
+        10000,
+        18000
+      ]
+    },
+    {
+      "id": "japan:land:34",
+      "kind": "land",
+      "name": "倉敷",
+      "nodeIds": [
+        44
+      ],
+      "x": 672,
+      "y": 1463,
+      "direction": 0,
+      "basePrice": 1500,
+      "upgradeCost": 300,
+      "rents": [
+        300,
+        750,
+        2000,
+        4800,
+        10000,
+        18000
+      ]
+    },
+    {
+      "id": "japan:land:35",
+      "kind": "land",
+      "name": "京都",
+      "nodeIds": [
+        51
+      ],
+      "x": 1042,
+      "y": 1430,
+      "direction": 7,
+      "basePrice": 2000,
+      "upgradeCost": 400,
+      "rents": [
+        400,
+        1000,
+        2400,
+        6000,
+        12500,
+        22000
+      ]
+    },
+    {
+      "id": "japan:land:36",
+      "kind": "land",
+      "name": "京都",
+      "nodeIds": [
+        52
+      ],
+      "x": 1075,
+      "y": 1397,
+      "direction": 7,
+      "basePrice": 2000,
+      "upgradeCost": 400,
+      "rents": [
+        400,
+        1000,
+        2400,
+        6000,
+        12500,
+        22000
+      ]
+    },
+    {
+      "id": "japan:land:37",
+      "kind": "land",
+      "name": "京都",
+      "nodeIds": [
+        53
+      ],
+      "x": 1109,
+      "y": 1364,
+      "direction": 7,
+      "basePrice": 2000,
+      "upgradeCost": 400,
+      "rents": [
+        400,
+        1000,
+        2400,
+        6000,
+        12500,
+        22000
+      ]
+    },
+    {
+      "id": "japan:land:38",
+      "kind": "land",
+      "name": "京都",
+      "nodeIds": [
+        54
+      ],
+      "x": 1143,
+      "y": 1329,
+      "direction": 7,
+      "basePrice": 2000,
+      "upgradeCost": 400,
+      "rents": [
+        400,
+        1000,
+        2400,
+        6000,
+        12500,
+        22000
+      ]
+    },
+    {
+      "id": "japan:land:39",
+      "kind": "land",
+      "name": "松本",
+      "nodeIds": [
+        56
+      ],
+      "x": 1240,
+      "y": 1232,
+      "direction": 7,
+      "basePrice": 1500,
+      "upgradeCost": 300,
+      "rents": [
+        300,
+        750,
+        2000,
+        4800,
+        10000,
+        18000
+      ]
+    },
+    {
+      "id": "japan:land:40",
+      "kind": "land",
+      "name": "松本",
+      "nodeIds": [
+        57
+      ],
+      "x": 1273,
+      "y": 1199,
+      "direction": 7,
+      "basePrice": 1500,
+      "upgradeCost": 300,
+      "rents": [
+        300,
+        750,
+        2000,
+        4800,
+        10000,
+        18000
+      ]
+    },
+    {
+      "id": "japan:land:41",
+      "kind": "land",
+      "name": "松本",
+      "nodeIds": [
+        58
+      ],
+      "x": 1309,
+      "y": 1165,
+      "direction": 7,
+      "basePrice": 1500,
+      "upgradeCost": 300,
+      "rents": [
+        300,
+        750,
+        2000,
+        4800,
+        10000,
+        18000
+      ]
+    },
+    {
+      "id": "japan:land:42",
+      "kind": "land",
+      "name": "新潟",
+      "nodeIds": [
+        62
+      ],
+      "x": 1474,
+      "y": 999,
+      "direction": 7,
+      "basePrice": 1000,
+      "upgradeCost": 200,
+      "rents": [
+        200,
+        500,
+        1200,
+        2800,
+        6000,
+        10000
+      ]
+    },
+    {
+      "id": "japan:land:43",
+      "kind": "land",
+      "name": "新潟",
+      "nodeIds": [
+        63
+      ],
+      "x": 1507,
+      "y": 965,
+      "direction": 7,
+      "basePrice": 1000,
+      "upgradeCost": 200,
+      "rents": [
+        200,
+        500,
+        1200,
+        2800,
+        6000,
+        10000
+      ]
+    },
+    {
+      "id": "japan:land:44",
+      "kind": "land",
+      "name": "新潟",
+      "nodeIds": [
+        64
+      ],
+      "x": 1541,
+      "y": 932,
+      "direction": 7,
+      "basePrice": 1000,
+      "upgradeCost": 200,
+      "rents": [
+        200,
+        500,
+        1200,
+        2800,
+        6000,
+        10000
+      ]
+    },
+    {
+      "id": "japan:land:45",
+      "kind": "land",
+      "name": "新潟",
+      "nodeIds": [
+        65
+      ],
+      "x": 1576,
+      "y": 899,
+      "direction": 7,
+      "basePrice": 1000,
+      "upgradeCost": 200,
+      "rents": [
+        200,
+        500,
+        1200,
+        2800,
+        6000,
+        10000
+      ]
+    },
+    {
+      "id": "japan:land:46",
+      "kind": "land",
+      "name": "秋田",
+      "nodeIds": [
+        69
+      ],
+      "x": 1608,
+      "y": 719,
+      "direction": 6,
+      "basePrice": 800,
+      "upgradeCost": 150,
+      "rents": [
+        150,
+        400,
+        1000,
+        2400,
+        5000,
+        9000
+      ]
+    },
+    {
+      "id": "japan:land:47",
+      "kind": "land",
+      "name": "秋田",
+      "nodeIds": [
+        70
+      ],
+      "x": 1607,
+      "y": 672,
+      "direction": 6,
+      "basePrice": 800,
+      "upgradeCost": 150,
+      "rents": [
+        150,
+        400,
+        1000,
+        2400,
+        5000,
+        9000
+      ]
+    },
+    {
+      "id": "japan:land:48",
+      "kind": "land",
+      "name": "秋田",
+      "nodeIds": [
+        71
+      ],
+      "x": 1608,
+      "y": 623,
+      "direction": 6,
+      "basePrice": 800,
+      "upgradeCost": 150,
+      "rents": [
+        150,
+        400,
+        1000,
+        2400,
+        5000,
+        9000
+      ]
+    },
+    {
+      "id": "japan:land:49",
+      "kind": "land",
+      "name": "秋田",
+      "nodeIds": [
+        72
+      ],
+      "x": 1608,
+      "y": 576,
+      "direction": 6,
+      "basePrice": 800,
+      "upgradeCost": 150,
+      "rents": [
+        150,
+        400,
+        1000,
+        2400,
+        5000,
+        9000
+      ]
+    },
+    {
+      "id": "japan:facility:1",
+      "kind": "facility",
+      "name": "姬路",
+      "nodeIds": [
+        46,
+        47
+      ],
+      "x": 838,
+      "y": 1438,
+      "direction": 0,
+      "basePrice": 4000,
+      "upgradeCost": 400,
+      "rents": [
+        400,
+        1000,
+        2500,
+        5000,
+        8000
+      ]
+    },
+    {
+      "id": "japan:facility:2",
+      "kind": "facility",
+      "name": "廣島",
+      "nodeIds": [
+        39,
+        40
+      ],
+      "x": 379,
+      "y": 1532,
+      "direction": 0,
+      "basePrice": 6000,
+      "upgradeCost": 600,
+      "rents": [
+        600,
+        1500,
+        4000,
+        8000,
+        12000
+      ]
+    },
+    {
+      "id": "japan:facility:3",
+      "kind": "facility",
+      "name": "姬路",
+      "nodeIds": [
+        48,
+        49
+      ],
+      "x": 935,
+      "y": 1439,
+      "direction": 0,
+      "basePrice": 5000,
+      "upgradeCost": 500,
+      "rents": [
+        500,
+        1200,
+        3000,
+        6000,
+        10000
+      ]
+    },
+    {
+      "id": "japan:facility:4",
+      "kind": "facility",
+      "name": "青森",
+      "nodeIds": [
+        74,
+        75
+      ],
+      "x": 1751,
+      "y": 431,
+      "direction": 0,
+      "basePrice": 5000,
+      "upgradeCost": 500,
+      "rents": [
+        500,
+        1200,
+        2600,
+        6000,
+        15000
+      ]
+    },
+    {
+      "id": "japan:facility:5",
+      "kind": "facility",
+      "name": "青森",
+      "nodeIds": [
+        76,
+        77
+      ],
+      "x": 1848,
+      "y": 433,
+      "direction": 0,
+      "basePrice": 5000,
+      "upgradeCost": 500,
+      "rents": [
+        500,
+        1200,
+        2600,
+        6000,
+        15000
+      ]
+    }
+  ]
+}

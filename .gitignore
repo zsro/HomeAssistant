@@ -19,3 +19,4 @@ logs/
 
 # Locally exported game assets (rebuild from the user-provided installation)
 frontend/public/richman/generated/
+scripts/richman/__pycache__/

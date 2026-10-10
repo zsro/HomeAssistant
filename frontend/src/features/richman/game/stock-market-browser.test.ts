@@ -1,0 +1,13 @@
+import {GameEngine} from './engine';
+import type {Replay} from './engine';
+import {expect,it} from 'vitest';
+import {createHash} from 'node:crypto';
+import {verifyStockMarket} from '../../../../../scripts/richman/verify-stock-market';
+import r2 from './fixtures/stock-market-v42-2-replay.json';
+import m2 from './fixtures/stock-market-v42-2-manifest.json';
+import r3 from './fixtures/stock-market-v42-3-replay.json';
+import m3 from './fixtures/stock-market-v42-3-manifest.json';
+import r4 from './fixtures/stock-market-v42-4-replay.json';
+import m4 from './fixtures/stock-market-v42-4-manifest.json';
+void GameEngine;
+for(const [replay,golden]of[[r2,m2],[r3,m3],[r4,m4]]as const)it(`actual v42 ${golden.players}p: stock ledger, independent daily prices, closed day, limits, prefix replay and frozen hashes`,()=>{const r=verifyStockMarket(replay as Replay);for(const key of['players','commands','turn','trades','buy','sell','days','closed','up','down','prefixes']as const)expect(r[key]).toEqual(golden[key]);for(const key of['state','events']as const)expect(createHash('sha256').update(JSON.stringify(r[key])).digest('hex')).toBe(golden.hashes[key]);expect(createHash('sha256').update(JSON.stringify(replay)).digest('hex')).toBe(golden.hashes.replay);expect(golden.report.errors).toEqual([]);expect(golden.report.cleanup).toEqual({raf:0,canvas:0});},15000);

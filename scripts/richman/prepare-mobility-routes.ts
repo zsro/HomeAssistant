@@ -1,0 +1,5 @@
+/** Reproduce legal plans only. Run UI separately before claiming acceptance. */
+import {writeFileSync} from 'node:fs';import {planComputerMobility} from './plan-computer-mobility';import {planEngineer} from './plan-computer-mobility-engineer';
+for(const[count,seed,required]of [[2,'mobility-2-6',['card:06','tool:05']],[3,'mobility-3-0',['tool:06']],[4,'mobility-4-5',['card:06','tool:05']]] as const){const p=planComputerMobility(count,seed,required,1500);if(!p.replay)throw Error('Missing route '+count);writeFileSync('/private/tmp/computer-mobility-'+count+'.json',JSON.stringify(p));console.log(count,p.replay.commands.length);}
+const manual=planComputerMobility(2,'mobility-2-2',['tool:06'],2000,true);if(!manual.replay)throw Error('Missing manual route');writeFileSync('/private/tmp/computer-mobility-manual.json',JSON.stringify(manual));
+const engineer=planEngineer('mobility-engineer-1',2,2100);if(!engineer.replay)throw Error('Missing engineer route');writeFileSync('/private/tmp/computer-mobility-engineer.json',JSON.stringify(engineer));console.log('manual',manual.replay.commands.length,'engineer',engineer.replay.commands.length);

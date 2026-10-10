@@ -1,0 +1,5 @@
+import {verifySiteCircuit} from './verify-site-circuits';
+import {readFileSync,writeFileSync} from 'node:fs';
+import {strict as assert} from 'node:assert';
+import {createHash} from 'node:crypto';
+for(const count of[2,3,4,'dream']){const dir=`/private/tmp/richman-unified-ui-03ac-${count}`,r=JSON.parse(readFileSync(dir+'/replay.json','utf8')),v=verifySiteCircuit(r,count==='dream'?'dream':'circuit'),ui=JSON.parse(readFileSync(dir+'/results.json','utf8')),hash=(x:unknown)=>createHash('sha256').update(JSON.stringify(x)).digest('hex'),base=`frontend/src/features/richman/game/fixtures/site-circuit-v41-${count}`;assert.equal(ui.normalSpeed,true);assert.deepEqual(ui.errors,[]);assert.deepEqual(ui.cleanup,{raf:0,canvas:0});assert.equal(ui.commands,r.commands.length);const{state,events,...summary}=v;const report={normalSpeed:ui.normalSpeed,map:ui.map,cleanup:ui.cleanup,errors:ui.errors};writeFileSync(base+'-replay.json',JSON.stringify(r));writeFileSync(base+'-manifest.json',JSON.stringify({...summary,report,hashes:{replay:hash(r),state:hash(state),events:hash(events)}},null,2)+'\n');console.log(count,summary.commands,summary.turn,summary.prefixes,summary.dividends);}

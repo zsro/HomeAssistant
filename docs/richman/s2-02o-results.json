@@ -1,0 +1,3395 @@
+{
+  "date": "2026-10-05",
+  "implemented": 43,
+  "accepted": 43,
+  "historicalAccepted": 18,
+  "newlyAccepted": 25,
+  "scope": "versioned Web candidate rules, not original Windows runtime equivalence",
+  "rulesUnchanged": true,
+  "defaultRulesId": "japan-tools-candidate-v13",
+  "fingerprint": "7d7e7415",
+  "browserRuns": [
+    {
+      "group": "G3",
+      "rulesId": "japan-tools-candidate-v9",
+      "fingerprint": "6be76c90",
+      "commands": 1802,
+      "players": 3,
+      "turn": 249,
+      "state": "4505142a024c27cef6774c72e611cf615ec7130b274a07aa4784ee116740584b",
+      "events": "5662f4b85252950bc9ef407fc9a1aa4ccc762e7cafa0e289caf45de377a354ec",
+      "normalSpeed": true,
+      "originalMap": true,
+      "gameStateInjection": false,
+      "authFixtureOnly": true,
+      "completed": [
+        {
+          "id": "card:29",
+          "preview": "解除双方原有同盟，建立双方同盟，初始期限 7，按各自行动计时。同盟免租；对盟友实施有敌意的攻击会解除关系。\n\n确认消耗 1 张，取消不消耗。"
+        },
+        {
+          "id": "card:13",
+          "preview": "从目标背包拿取一张卡片或一个道具，再消耗抢夺卡。已装备的车辆不在背包中。\n\n卡包满 15 张时，先丢弃首张最低价卡，再收取目标卡并消费抢夺卡。\n\n确认消耗 1 张，取消不消耗。",
+          "stolen": "card:14"
+        },
+        {
+          "id": "card:13",
+          "preview": "从目标背包拿取一张卡片或一个道具，再消耗抢夺卡。已装备的车辆不在背包中。\n\n卡包满 15 张时，先丢弃首张最低价卡，再收取目标卡并消费抢夺卡。\n\n确认消耗 1 张，取消不消耗。",
+          "stolen": "tool:09"
+        },
+        {
+          "id": "card:16",
+          "preview": "梦游 5 次行动，暂时改为步行，车辆入包；不能用卡、买地或升级，仍需付租。正常到期尝试恢复原车辆。\n\n确认消耗 1 张卡片，取消不消耗。"
+        },
+        {
+          "id": "card:16",
+          "preview": "梦游 5 次行动，暂时改为步行，车辆入包；不能用卡、买地或升级，仍需付租。正常到期尝试恢复原车辆。\n\n确认消耗 1 张卡片，取消不消耗。"
+        },
+        {
+          "id": "card:16",
+          "preview": "梦游 5 次行动，暂时改为步行，车辆入包；不能用卡、买地或升级，仍需付租。正常到期尝试恢复原车辆。\n\n确认消耗 1 张卡片，取消不消耗。"
+        }
+      ],
+      "acquisitions": [
+        {
+          "type": "itemBought",
+          "itemId": "card:18",
+          "cost": 20,
+          "points": 70,
+          "supply": 3,
+          "sequence": 422,
+          "commandId": "command-237",
+          "playerId": "player-2",
+          "turn": 32
+        },
+        {
+          "type": "itemBought",
+          "itemId": "card:19",
+          "cost": 40,
+          "points": 30,
+          "supply": 3,
+          "sequence": 423,
+          "commandId": "command-238",
+          "playerId": "player-2",
+          "turn": 32
+        },
+        {
+          "type": "itemBought",
+          "itemId": "card:20",
+          "cost": 25,
+          "points": 5,
+          "supply": 3,
+          "sequence": 424,
+          "commandId": "command-239",
+          "playerId": "player-2",
+          "turn": 32
+        },
+        {
+          "type": "itemBought",
+          "itemId": "card:18",
+          "cost": 20,
+          "points": 190,
+          "supply": 2,
+          "sequence": 2620,
+          "commandId": "command-1508",
+          "playerId": "player-3",
+          "turn": 213
+        },
+        {
+          "type": "itemBought",
+          "itemId": "card:19",
+          "cost": 40,
+          "points": 150,
+          "supply": 2,
+          "sequence": 2621,
+          "commandId": "command-1509",
+          "playerId": "player-3",
+          "turn": 213
+        },
+        {
+          "type": "itemBought",
+          "itemId": "card:20",
+          "cost": 25,
+          "points": 125,
+          "supply": 2,
+          "sequence": 2622,
+          "commandId": "command-1510",
+          "playerId": "player-3",
+          "turn": 213
+        },
+        {
+          "type": "itemBought",
+          "itemId": "card:21",
+          "cost": 25,
+          "points": 100,
+          "supply": 3,
+          "sequence": 2623,
+          "commandId": "command-1511",
+          "playerId": "player-3",
+          "turn": 213
+        },
+        {
+          "type": "itemBought",
+          "itemId": "card:14",
+          "cost": 20,
+          "points": 80,
+          "supply": 3,
+          "sequence": 2624,
+          "commandId": "command-1512",
+          "playerId": "player-3",
+          "turn": 213
+        },
+        {
+          "type": "itemBought",
+          "itemId": "card:13",
+          "cost": 25,
+          "points": 235,
+          "supply": 3,
+          "sequence": 2707,
+          "commandId": "command-1561",
+          "playerId": "player-1",
+          "turn": 220
+        },
+        {
+          "type": "itemBought",
+          "itemId": "card:13",
+          "cost": 25,
+          "points": 210,
+          "supply": 2,
+          "sequence": 2708,
+          "commandId": "command-1562",
+          "playerId": "player-1",
+          "turn": 220
+        },
+        {
+          "type": "itemBought",
+          "itemId": "card:29",
+          "cost": 40,
+          "points": 170,
+          "supply": 1,
+          "sequence": 2709,
+          "commandId": "command-1563",
+          "playerId": "player-1",
+          "turn": 220
+        },
+        {
+          "type": "itemBought",
+          "itemId": "card:16",
+          "cost": 25,
+          "points": 145,
+          "supply": 3,
+          "sequence": 2710,
+          "commandId": "command-1564",
+          "playerId": "player-1",
+          "turn": 220
+        },
+        {
+          "type": "itemBought",
+          "itemId": "card:16",
+          "cost": 25,
+          "points": 120,
+          "supply": 2,
+          "sequence": 2711,
+          "commandId": "command-1565",
+          "playerId": "player-1",
+          "turn": 220
+        },
+        {
+          "type": "itemBought",
+          "itemId": "card:16",
+          "cost": 25,
+          "points": 95,
+          "supply": 1,
+          "sequence": 2712,
+          "commandId": "command-1566",
+          "playerId": "player-1",
+          "turn": 220
+        },
+        {
+          "type": "itemBought",
+          "itemId": "card:21",
+          "cost": 25,
+          "points": 150,
+          "supply": 3,
+          "sequence": 3052,
+          "commandId": "command-1746",
+          "playerId": "player-2",
+          "turn": 242
+        },
+        {
+          "type": "itemBought",
+          "itemId": "card:14",
+          "cost": 20,
+          "points": 130,
+          "supply": 2,
+          "sequence": 3053,
+          "commandId": "command-1747",
+          "playerId": "player-2",
+          "turn": 242
+        }
+      ],
+      "effectEvidence": [
+        {
+          "item": "tool:09",
+          "turn": 4,
+          "player": "player-1",
+          "command": "command-27",
+          "inventoryBefore": 1,
+          "inventoryAfter": 0,
+          "worldChanged": true,
+          "events": [
+            {
+              "type": "effectConsumed",
+              "playerId": "player-1",
+              "itemId": "tool:09",
+              "amount": 1,
+              "sequence": 46,
+              "commandId": "command-27",
+              "turn": 4
+            },
+            {
+              "type": "effectResolved",
+              "definitionId": "tool:09:build-nearby-anchor-v1",
+              "sourceId": "player-1",
+              "target": {
+                "kind": "property",
+                "id": "japan:land:22"
+              },
+              "sequence": 47,
+              "commandId": "command-27",
+              "playerId": "player-1",
+              "turn": 4
+            },
+            {
+              "type": "propertyBuilt",
+              "propertyId": "japan:land:22",
+              "fromLevel": 0,
+              "level": 1,
+              "ownerId": "player-1",
+              "sequence": 48,
+              "commandId": "command-27",
+              "playerId": "player-1",
+              "turn": 4
+            }
+          ]
+        },
+        {
+          "item": "tool:08",
+          "turn": 8,
+          "player": "player-2",
+          "command": "command-57",
+          "inventoryBefore": 1,
+          "inventoryAfter": 0,
+          "worldChanged": true,
+          "events": [
+            {
+              "type": "effectConsumed",
+              "playerId": "player-2",
+              "itemId": "tool:08",
+              "amount": 1,
+              "sequence": 98,
+              "commandId": "command-57",
+              "turn": 8
+            },
+            {
+              "type": "effectResolved",
+              "definitionId": "tool:08:select-dice-v1",
+              "sourceId": "player-2",
+              "target": {
+                "kind": "player",
+                "id": "player-2"
+              },
+              "sequence": 99,
+              "commandId": "command-57",
+              "playerId": "player-2",
+              "turn": 8
+            },
+            {
+              "type": "itemSupplyChanged",
+              "amount": 1,
+              "supply": 8,
+              "sequence": 100,
+              "commandId": "command-57",
+              "playerId": "player-2",
+              "turn": 8
+            },
+            {
+              "type": "rolled",
+              "value": 5,
+              "sequence": 101,
+              "commandId": "command-57",
+              "playerId": "player-2",
+              "turn": 8
+            }
+          ]
+        },
+        {
+          "item": "tool:08",
+          "turn": 12,
+          "player": "player-3",
+          "command": "command-90",
+          "inventoryBefore": 1,
+          "inventoryAfter": 0,
+          "worldChanged": true,
+          "events": [
+            {
+              "type": "effectConsumed",
+              "playerId": "player-3",
+              "itemId": "tool:08",
+              "amount": 1,
+              "sequence": 159,
+              "commandId": "command-90",
+              "turn": 12
+            },
+            {
+              "type": "effectResolved",
+              "definitionId": "tool:08:select-dice-v1",
+              "sourceId": "player-3",
+              "target": {
+                "kind": "player",
+                "id": "player-3"
+              },
+              "sequence": 160,
+              "commandId": "command-90",
+              "playerId": "player-3",
+              "turn": 12
+            },
+            {
+              "type": "itemSupplyChanged",
+              "amount": 1,
+              "supply": 9,
+              "sequence": 161,
+              "commandId": "command-90",
+              "playerId": "player-3",
+              "turn": 12
+            },
+            {
+              "type": "rolled",
+              "value": 6,
+              "sequence": 162,
+              "commandId": "command-90",
+              "playerId": "player-3",
+              "turn": 12
+            }
+          ]
+        },
+        {
+          "item": "tool:08",
+          "turn": 16,
+          "player": "player-1",
+          "command": "command-117",
+          "inventoryBefore": 1,
+          "inventoryAfter": 0,
+          "worldChanged": true,
+          "events": [
+            {
+              "type": "effectConsumed",
+              "playerId": "player-1",
+              "itemId": "tool:08",
+              "amount": 1,
+              "sequence": 209,
+              "commandId": "command-117",
+              "turn": 16
+            },
+            {
+              "type": "effectResolved",
+              "definitionId": "tool:08:select-dice-v1",
+              "sourceId": "player-1",
+              "target": {
+                "kind": "player",
+                "id": "player-1"
+              },
+              "sequence": 210,
+              "commandId": "command-117",
+              "playerId": "player-1",
+              "turn": 16
+            },
+            {
+              "type": "itemSupplyChanged",
+              "amount": 1,
+              "supply": 10,
+              "sequence": 211,
+              "commandId": "command-117",
+              "playerId": "player-1",
+              "turn": 16
+            },
+            {
+              "type": "rolled",
+              "value": 4,
+              "sequence": 212,
+              "commandId": "command-117",
+              "playerId": "player-1",
+              "turn": 16
+            }
+          ]
+        },
+        {
+          "item": "card:29",
+          "turn": 223,
+          "player": "player-1",
+          "command": "command-1588",
+          "inventoryBefore": 1,
+          "inventoryAfter": 0,
+          "worldChanged": true,
+          "events": [
+            {
+              "type": "effectConsumed",
+              "playerId": "player-1",
+              "itemId": "card:29",
+              "amount": 1,
+              "sequence": 2744,
+              "commandId": "command-1588",
+              "turn": 223
+            },
+            {
+              "type": "allianceChanged",
+              "players": [
+                "player-1",
+                "player-3"
+              ],
+              "remaining": 7,
+              "reason": "建立同盟",
+              "sequence": 2745,
+              "commandId": "command-1588",
+              "playerId": "player-1",
+              "turn": 223
+            },
+            {
+              "type": "g3Resolved",
+              "itemId": "card:29",
+              "sourceId": "player-1",
+              "targetId": "player-3",
+              "sequence": 2746,
+              "commandId": "command-1588",
+              "playerId": "player-1",
+              "turn": 223
+            }
+          ]
+        },
+        {
+          "item": "card:13",
+          "turn": 223,
+          "player": "player-1",
+          "command": "command-1590",
+          "inventoryBefore": 2,
+          "inventoryAfter": 1,
+          "worldChanged": true,
+          "events": [
+            {
+              "type": "allianceChanged",
+              "players": [
+                "player-3",
+                "player-1"
+              ],
+              "remaining": 0,
+              "reason": "敌对行为解除同盟",
+              "sequence": 2748,
+              "commandId": "command-1590",
+              "playerId": "player-1",
+              "turn": 223
+            },
+            {
+              "type": "effectConsumed",
+              "playerId": "player-1",
+              "itemId": "card:13",
+              "amount": 1,
+              "sequence": 2749,
+              "commandId": "command-1590",
+              "turn": 223
+            },
+            {
+              "type": "inventoryTransferred",
+              "sourceId": "player-3",
+              "targetId": "player-1",
+              "itemId": "card:14",
+              "discarded": null,
+              "received": true,
+              "sequence": 2750,
+              "commandId": "command-1590",
+              "playerId": "player-1",
+              "turn": 223
+            },
+            {
+              "type": "g3Resolved",
+              "itemId": "card:13",
+              "sourceId": "player-1",
+              "targetId": "player-3",
+              "sequence": 2751,
+              "commandId": "command-1590",
+              "playerId": "player-1",
+              "turn": 223
+            }
+          ]
+        },
+        {
+          "item": "card:13",
+          "turn": 223,
+          "player": "player-1",
+          "command": "command-1592",
+          "inventoryBefore": 1,
+          "inventoryAfter": 0,
+          "worldChanged": true,
+          "events": [
+            {
+              "type": "effectConsumed",
+              "playerId": "player-1",
+              "itemId": "card:13",
+              "amount": 1,
+              "sequence": 2753,
+              "commandId": "command-1592",
+              "turn": 223
+            },
+            {
+              "type": "inventoryTransferred",
+              "sourceId": "player-3",
+              "targetId": "player-1",
+              "itemId": "tool:09",
+              "discarded": null,
+              "received": true,
+              "sequence": 2754,
+              "commandId": "command-1592",
+              "playerId": "player-1",
+              "turn": 223
+            },
+            {
+              "type": "g3Resolved",
+              "itemId": "card:13",
+              "sourceId": "player-1",
+              "targetId": "player-3",
+              "sequence": 2755,
+              "commandId": "command-1592",
+              "playerId": "player-1",
+              "turn": 223
+            }
+          ]
+        },
+        {
+          "item": "card:16",
+          "turn": 223,
+          "player": "player-1",
+          "command": "command-1594",
+          "inventoryBefore": 3,
+          "inventoryAfter": 2,
+          "worldChanged": true,
+          "events": [
+            {
+              "type": "effectConsumed",
+              "playerId": "player-1",
+              "itemId": "card:16",
+              "amount": 1,
+              "sequence": 2757,
+              "commandId": "command-1594",
+              "turn": 223
+            },
+            {
+              "type": "effectResolved",
+              "definitionId": "card:16:dream-v1",
+              "sourceId": "player-1",
+              "target": {
+                "kind": "player",
+                "id": "player-3"
+              },
+              "sequence": 2758,
+              "commandId": "command-1594",
+              "playerId": "player-1",
+              "turn": 223
+            },
+            {
+              "type": "effectConsumed",
+              "playerId": "player-3",
+              "itemId": "card:21",
+              "amount": 1,
+              "sequence": 2759,
+              "commandId": "command-1594",
+              "turn": 223
+            },
+            {
+              "type": "g3Resolved",
+              "itemId": "card:21",
+              "sourceId": "player-3",
+              "targetId": "player-1",
+              "sequence": 2760,
+              "commandId": "command-1594",
+              "playerId": "player-1",
+              "turn": 223
+            },
+            {
+              "type": "attackResolved",
+              "itemId": "card:16",
+              "sourceId": "player-1",
+              "originalId": "player-3",
+              "targetId": null,
+              "sequence": 2761,
+              "commandId": "command-1594",
+              "playerId": "player-1",
+              "turn": 223
+            }
+          ]
+        },
+        {
+          "item": "card:16",
+          "turn": 223,
+          "player": "player-1",
+          "command": "command-1596",
+          "inventoryBefore": 2,
+          "inventoryAfter": 1,
+          "worldChanged": true,
+          "events": [
+            {
+              "type": "effectConsumed",
+              "playerId": "player-1",
+              "itemId": "card:16",
+              "amount": 1,
+              "sequence": 2763,
+              "commandId": "command-1596",
+              "turn": 223
+            },
+            {
+              "type": "effectResolved",
+              "definitionId": "card:16:dream-v1",
+              "sourceId": "player-1",
+              "target": {
+                "kind": "player",
+                "id": "player-3"
+              },
+              "sequence": 2764,
+              "commandId": "command-1596",
+              "playerId": "player-1",
+              "turn": 223
+            },
+            {
+              "type": "reactionOffered",
+              "decision": {
+                "kind": "reaction",
+                "id": "0071ff2c-0c79-434c-9848-d387e43490a9:1173",
+                "responderId": "player-3",
+                "stage": "redirect",
+                "continuation": {
+                  "kind": "attack",
+                  "itemId": "card:16",
+                  "sourceId": "player-1",
+                  "originalId": "player-3"
+                },
+                "targets": [
+                  "player-1",
+                  "player-2"
+                ]
+              },
+              "sequence": 2765,
+              "commandId": "command-1596",
+              "playerId": "player-1",
+              "turn": 223
+            }
+          ]
+        },
+        {
+          "item": "card:16",
+          "turn": 223,
+          "player": "player-1",
+          "command": "command-1603",
+          "inventoryBefore": 1,
+          "inventoryAfter": 0,
+          "worldChanged": true,
+          "events": [
+            {
+              "type": "effectConsumed",
+              "playerId": "player-1",
+              "itemId": "card:16",
+              "amount": 1,
+              "sequence": 2776,
+              "commandId": "command-1603",
+              "turn": 223
+            },
+            {
+              "type": "effectResolved",
+              "definitionId": "card:16:dream-v1",
+              "sourceId": "player-1",
+              "target": {
+                "kind": "player",
+                "id": "player-3"
+              },
+              "sequence": 2777,
+              "commandId": "command-1603",
+              "playerId": "player-1",
+              "turn": 223
+            },
+            {
+              "type": "mobilityChanged",
+              "targetId": "player-3",
+              "mobility": {
+                "stop": 0,
+                "winter": 0,
+                "dream": 5,
+                "prison": 0,
+                "hospital": 0,
+                "turtle": 0,
+                "vehicle": "foot",
+                "diceCount": 1,
+                "savedVehicle": "foot",
+                "savedDice": 1
+              },
+              "reason": "梦游卡",
+              "sequence": 2778,
+              "commandId": "command-1603",
+              "playerId": "player-1",
+              "turn": 223
+            },
+            {
+              "type": "effectConsumed",
+              "playerId": "player-3",
+              "itemId": "card:18",
+              "amount": 1,
+              "sequence": 2779,
+              "commandId": "command-1603",
+              "turn": 223
+            },
+            {
+              "type": "mobilityChanged",
+              "targetId": "player-1",
+              "mobility": {
+                "stop": 0,
+                "winter": 0,
+                "dream": 5,
+                "prison": 0,
+                "hospital": 0,
+                "turtle": 0,
+                "vehicle": "foot",
+                "diceCount": 1,
+                "savedVehicle": "foot",
+                "savedDice": 1
+              },
+              "reason": "梦游卡",
+              "sequence": 2780,
+              "commandId": "command-1603",
+              "playerId": "player-1",
+              "turn": 223
+            },
+            {
+              "type": "g3Resolved",
+              "itemId": "card:18",
+              "sourceId": "player-3",
+              "targetId": "player-1",
+              "sequence": 2781,
+              "commandId": "command-1603",
+              "playerId": "player-1",
+              "turn": 223
+            },
+            {
+              "type": "attackResolved",
+              "itemId": "card:16",
+              "sourceId": "player-1",
+              "originalId": "player-3",
+              "targetId": "player-3",
+              "sequence": 2782,
+              "commandId": "command-1603",
+              "playerId": "player-1",
+              "turn": 223
+            }
+          ]
+        },
+        {
+          "item": "tool:09",
+          "turn": 239,
+          "player": "player-2",
+          "command": "command-1711",
+          "inventoryBefore": 1,
+          "inventoryAfter": 0,
+          "worldChanged": true,
+          "events": [
+            {
+              "type": "effectConsumed",
+              "playerId": "player-2",
+              "itemId": "tool:09",
+              "amount": 1,
+              "sequence": 2985,
+              "commandId": "command-1711",
+              "turn": 239
+            },
+            {
+              "type": "effectResolved",
+              "definitionId": "tool:09:build-nearby-anchor-v1",
+              "sourceId": "player-2",
+              "target": {
+                "kind": "property",
+                "id": "japan:land:10"
+              },
+              "sequence": 2986,
+              "commandId": "command-1711",
+              "playerId": "player-2",
+              "turn": 239
+            },
+            {
+              "type": "propertyBuilt",
+              "propertyId": "japan:land:10",
+              "fromLevel": 0,
+              "level": 1,
+              "ownerId": "player-1",
+              "sequence": 2987,
+              "commandId": "command-1711",
+              "playerId": "player-2",
+              "turn": 239
+            }
+          ]
+        },
+        {
+          "item": "tool:09",
+          "turn": 241,
+          "player": "player-1",
+          "command": "command-1729",
+          "inventoryBefore": 1,
+          "inventoryAfter": 0,
+          "worldChanged": true,
+          "events": [
+            {
+              "type": "effectConsumed",
+              "playerId": "player-1",
+              "itemId": "tool:09",
+              "amount": 1,
+              "sequence": 3019,
+              "commandId": "command-1729",
+              "turn": 241
+            },
+            {
+              "type": "effectResolved",
+              "definitionId": "tool:09:build-nearby-anchor-v1",
+              "sourceId": "player-1",
+              "target": {
+                "kind": "property",
+                "id": "japan:land:48"
+              },
+              "sequence": 3020,
+              "commandId": "command-1729",
+              "playerId": "player-1",
+              "turn": 241
+            },
+            {
+              "type": "propertyBuilt",
+              "propertyId": "japan:land:48",
+              "fromLevel": 1,
+              "level": 2,
+              "ownerId": "player-1",
+              "sequence": 3021,
+              "commandId": "command-1729",
+              "playerId": "player-1",
+              "turn": 241
+            }
+          ]
+        }
+      ],
+      "additionalChecks": [],
+      "cleanup": {
+        "raf": 0,
+        "canvas": 0
+      },
+      "errors": [],
+      "rawDirectory": "/private/tmp/richman-s2-02j-ui",
+      "replay": "frontend/src/features/richman/game/fixtures/tools-v9-replay.json",
+      "golden": "frontend/src/features/richman/game/fixtures/tools-v9-golden.json"
+    },
+    {
+      "group": "G4/G6",
+      "rulesId": "japan-tools-candidate-v13",
+      "fingerprint": "7d7e7415",
+      "commands": 2041,
+      "players": 4,
+      "turn": 278,
+      "state": "3926d612a5fe82cdea9a42d1427308ea9ceba7a7b16a8fbc768384ab944565f5",
+      "events": "31c11a5735e1b4bf36d35fc5fb46a585f22384cd753010f6d31037fafa11780e",
+      "normalSpeed": true,
+      "originalMap": true,
+      "gameStateInjection": false,
+      "authFixtureOnly": true,
+      "completed": [
+        {
+          "id": "card:07",
+          "preview": "改建脚下建筑，产权与资金不变；公园、加油站最多保留1级，其他类型最多5级。改离研究所会取消当前生产。"
+        },
+        {
+          "id": "card:08",
+          "preview": "标价 2,000 元；其他有资格玩家用现金加价。成交款进入你的银行，建筑保留；流拍恢复待售。确认后不可取消拍卖。"
+        },
+        {
+          "id": "card:22",
+          "preview": "移除大衰神。已结算的资金/库存变化不会撤销。"
+        },
+        {
+          "id": "card:24",
+          "preview": "基准价109.50，当前118.00 → 120.00元。覆盖此前红黑行情，立即生效并持续至下一轮行情；同轮重复不复利。交易均使用银行存款。"
+        },
+        {
+          "id": "card:26",
+          "preview": "按其现金 24,694 的20%收取 4,938 元，存入你的银行。可用免费卡；原税额超过2000时可嫁祸，届时重算新付款者税额。"
+        },
+        {
+          "id": "card:23",
+          "preview": "替换现有附身。落点结算后脚下建筑升1级；空大型地默认饭店。期限7次自身行动边界；数字转盘用种子确定，神仙扣款最多扣到现金及存款为零。"
+        },
+        {
+          "id": "card:27",
+          "preview": "整条同名街区（包含其他业主与待售地产）设为涨价，适用收费翻倍，期限5轮；覆盖现有涨价/查封，产权和建筑不变。"
+        },
+        {
+          "id": "card:28",
+          "preview": "整条同名街区（包含其他业主与待售地产）设为查封，停止适用收费，期限5轮；覆盖现有涨价/查封，产权和建筑不变。"
+        },
+        {
+          "id": "card:25",
+          "preview": "基准价123.00，当前122.50 → 111.00元。覆盖此前红黑行情，立即生效并持续至下一轮行情；同轮重复不复利。交易均使用银行存款。"
+        }
+      ],
+      "acquisitions": [
+        {
+          "type": "g6Notice",
+          "message": "玩家1获得card:04。",
+          "sequence": 292,
+          "commandId": "command-161",
+          "playerId": "player-1",
+          "turn": 21
+        },
+        {
+          "type": "g6Notice",
+          "message": "玩家1获得card:07。",
+          "sequence": 293,
+          "commandId": "command-161",
+          "playerId": "player-1",
+          "turn": 21
+        },
+        {
+          "type": "itemBought",
+          "itemId": "card:08",
+          "cost": 20,
+          "points": 0,
+          "supply": 2,
+          "sequence": 625,
+          "commandId": "command-345",
+          "playerId": "player-3",
+          "turn": 47
+        },
+        {
+          "type": "itemBought",
+          "itemId": "card:22",
+          "cost": 10,
+          "points": 10,
+          "supply": 2,
+          "sequence": 702,
+          "commandId": "command-386",
+          "playerId": "player-4",
+          "turn": 52
+        },
+        {
+          "type": "g6Notice",
+          "message": "玩家2获得card:12。",
+          "sequence": 735,
+          "commandId": "command-407",
+          "playerId": "player-2",
+          "turn": 54
+        },
+        {
+          "type": "g6Notice",
+          "message": "玩家4获得card:18。",
+          "sequence": 1894,
+          "commandId": "command-1054",
+          "playerId": "player-4",
+          "turn": 144
+        },
+        {
+          "type": "g6Notice",
+          "message": "玩家4获得card:13。",
+          "sequence": 1895,
+          "commandId": "command-1054",
+          "playerId": "player-4",
+          "turn": 144
+        },
+        {
+          "type": "g6Notice",
+          "message": "玩家4获得card:24。",
+          "sequence": 2101,
+          "commandId": "command-1170",
+          "playerId": "player-4",
+          "turn": 160
+        },
+        {
+          "type": "itemBought",
+          "itemId": "card:23",
+          "cost": 20,
+          "points": 0,
+          "supply": 2,
+          "sequence": 2809,
+          "commandId": "command-1560",
+          "playerId": "player-4",
+          "turn": 212
+        },
+        {
+          "type": "itemBought",
+          "itemId": "card:26",
+          "cost": 35,
+          "points": 5,
+          "supply": 3,
+          "sequence": 2849,
+          "commandId": "command-1583",
+          "playerId": "player-3",
+          "turn": 215
+        },
+        {
+          "type": "g6Notice",
+          "message": "玩家1获得card:27。",
+          "sequence": 3156,
+          "commandId": "command-1750",
+          "playerId": "player-1",
+          "turn": 237
+        },
+        {
+          "type": "g6Notice",
+          "message": "玩家1获得card:16。",
+          "sequence": 3157,
+          "commandId": "command-1750",
+          "playerId": "player-1",
+          "turn": 237
+        },
+        {
+          "type": "itemBought",
+          "itemId": "card:28",
+          "cost": 35,
+          "points": 65,
+          "supply": 2,
+          "sequence": 3659,
+          "commandId": "command-2014",
+          "playerId": "player-2",
+          "turn": 274
+        },
+        {
+          "type": "itemBought",
+          "itemId": "card:25",
+          "cost": 30,
+          "points": 35,
+          "supply": 2,
+          "sequence": 3660,
+          "commandId": "command-2015",
+          "playerId": "player-2",
+          "turn": 274
+        }
+      ],
+      "effectEvidence": [
+        {
+          "item": "tool:08",
+          "turn": 10,
+          "player": "player-2",
+          "command": "command-73",
+          "inventoryBefore": 1,
+          "inventoryAfter": 0,
+          "worldChanged": true,
+          "events": [
+            {
+              "type": "effectConsumed",
+              "playerId": "player-2",
+              "itemId": "tool:08",
+              "amount": 1,
+              "sequence": 124,
+              "commandId": "command-73",
+              "turn": 10
+            },
+            {
+              "type": "effectResolved",
+              "definitionId": "tool:08:select-dice-v1",
+              "sourceId": "player-2",
+              "target": {
+                "kind": "player",
+                "id": "player-2"
+              },
+              "sequence": 125,
+              "commandId": "command-73",
+              "playerId": "player-2",
+              "turn": 10
+            },
+            {
+              "type": "itemSupplyChanged",
+              "amount": 1,
+              "supply": 7,
+              "sequence": 126,
+              "commandId": "command-73",
+              "playerId": "player-2",
+              "turn": 10
+            },
+            {
+              "type": "rolled",
+              "value": 5,
+              "sequence": 127,
+              "commandId": "command-73",
+              "playerId": "player-2",
+              "turn": 10
+            }
+          ]
+        },
+        {
+          "item": "tool:08",
+          "turn": 17,
+          "player": "player-1",
+          "command": "command-122",
+          "inventoryBefore": 1,
+          "inventoryAfter": 0,
+          "worldChanged": true,
+          "events": [
+            {
+              "type": "effectConsumed",
+              "playerId": "player-1",
+              "itemId": "tool:08",
+              "amount": 1,
+              "sequence": 215,
+              "commandId": "command-122",
+              "turn": 17
+            },
+            {
+              "type": "effectResolved",
+              "definitionId": "tool:08:select-dice-v1",
+              "sourceId": "player-1",
+              "target": {
+                "kind": "player",
+                "id": "player-1"
+              },
+              "sequence": 216,
+              "commandId": "command-122",
+              "playerId": "player-1",
+              "turn": 17
+            },
+            {
+              "type": "itemSupplyChanged",
+              "amount": 1,
+              "supply": 8,
+              "sequence": 217,
+              "commandId": "command-122",
+              "playerId": "player-1",
+              "turn": 17
+            },
+            {
+              "type": "rolled",
+              "value": 5,
+              "sequence": 218,
+              "commandId": "command-122",
+              "playerId": "player-1",
+              "turn": 17
+            }
+          ]
+        },
+        {
+          "item": "tool:08",
+          "turn": 47,
+          "player": "player-3",
+          "command": "command-337",
+          "inventoryBefore": 1,
+          "inventoryAfter": 0,
+          "worldChanged": true,
+          "events": [
+            {
+              "type": "effectConsumed",
+              "playerId": "player-3",
+              "itemId": "tool:08",
+              "amount": 1,
+              "sequence": 605,
+              "commandId": "command-337",
+              "turn": 47
+            },
+            {
+              "type": "effectResolved",
+              "definitionId": "tool:08:select-dice-v1",
+              "sourceId": "player-3",
+              "target": {
+                "kind": "player",
+                "id": "player-3"
+              },
+              "sequence": 606,
+              "commandId": "command-337",
+              "playerId": "player-3",
+              "turn": 47
+            },
+            {
+              "type": "itemSupplyChanged",
+              "amount": 1,
+              "supply": 9,
+              "sequence": 607,
+              "commandId": "command-337",
+              "playerId": "player-3",
+              "turn": 47
+            },
+            {
+              "type": "rolled",
+              "value": 6,
+              "sequence": 608,
+              "commandId": "command-337",
+              "playerId": "player-3",
+              "turn": 47
+            }
+          ]
+        },
+        {
+          "item": "tool:08",
+          "turn": 52,
+          "player": "player-4",
+          "command": "command-378",
+          "inventoryBefore": 1,
+          "inventoryAfter": 0,
+          "worldChanged": true,
+          "events": [
+            {
+              "type": "effectConsumed",
+              "playerId": "player-4",
+              "itemId": "tool:08",
+              "amount": 1,
+              "sequence": 684,
+              "commandId": "command-378",
+              "turn": 52
+            },
+            {
+              "type": "effectResolved",
+              "definitionId": "tool:08:select-dice-v1",
+              "sourceId": "player-4",
+              "target": {
+                "kind": "player",
+                "id": "player-4"
+              },
+              "sequence": 685,
+              "commandId": "command-378",
+              "playerId": "player-4",
+              "turn": 52
+            },
+            {
+              "type": "itemSupplyChanged",
+              "amount": 1,
+              "supply": 10,
+              "sequence": 686,
+              "commandId": "command-378",
+              "playerId": "player-4",
+              "turn": 52
+            },
+            {
+              "type": "rolled",
+              "value": 6,
+              "sequence": 687,
+              "commandId": "command-378",
+              "playerId": "player-4",
+              "turn": 52
+            }
+          ]
+        },
+        {
+          "item": "card:07",
+          "turn": 53,
+          "player": "player-1",
+          "command": "command-396",
+          "inventoryBefore": 1,
+          "inventoryAfter": 0,
+          "worldChanged": true,
+          "events": [
+            {
+              "type": "effectConsumed",
+              "playerId": "player-1",
+              "itemId": "card:07",
+              "amount": 1,
+              "sequence": 714,
+              "commandId": "command-396",
+              "turn": 53
+            },
+            {
+              "type": "g4PropertyChanged",
+              "property": {
+                "id": "japan:facility:3",
+                "ownerId": "player-2",
+                "level": 1,
+                "buildingType": 1,
+                "priceStatus": 0,
+                "research": null
+              },
+              "reason": "改建",
+              "sequence": 715,
+              "commandId": "command-396",
+              "playerId": "player-1",
+              "turn": 53
+            }
+          ]
+        },
+        {
+          "item": "card:08",
+          "turn": 55,
+          "player": "player-3",
+          "command": "command-411",
+          "inventoryBefore": 1,
+          "inventoryAfter": 0,
+          "worldChanged": true,
+          "events": [
+            {
+              "type": "effectConsumed",
+              "playerId": "player-3",
+              "itemId": "card:08",
+              "amount": 1,
+              "sequence": 741,
+              "commandId": "command-411",
+              "turn": 55
+            },
+            {
+              "type": "auctionOffered",
+              "decision": {
+                "kind": "auction",
+                "id": "808e67fc-3f92-47ec-8587-31f2606631e5:295",
+                "propertyId": "japan:land:36",
+                "sourceId": "player-3",
+                "originalOwner": "player-3",
+                "reserve": 2000,
+                "bid": 2000,
+                "leader": null,
+                "responderId": "player-1",
+                "remaining": [
+                  "player-1",
+                  "player-2",
+                  "player-4"
+                ]
+              },
+              "sequence": 742,
+              "commandId": "command-411",
+              "playerId": "player-3",
+              "turn": 55
+            }
+          ]
+        },
+        {
+          "item": "card:22",
+          "turn": 92,
+          "player": "player-4",
+          "command": "command-675",
+          "inventoryBefore": 1,
+          "inventoryAfter": 0,
+          "worldChanged": true,
+          "events": [
+            {
+              "type": "effectConsumed",
+              "playerId": "player-4",
+              "itemId": "card:22",
+              "amount": 1,
+              "sequence": 1210,
+              "commandId": "command-675",
+              "turn": 92
+            },
+            {
+              "type": "g6Notice",
+              "message": "送神符生效：移除自身不利神仙和携带炸弹。",
+              "sequence": 1211,
+              "commandId": "command-675",
+              "playerId": "player-4",
+              "turn": 92
+            }
+          ]
+        },
+        {
+          "item": "card:24",
+          "turn": 164,
+          "player": "player-4",
+          "command": "command-1191",
+          "inventoryBefore": 1,
+          "inventoryAfter": 0,
+          "worldChanged": true,
+          "events": [
+            {
+              "type": "effectConsumed",
+              "playerId": "player-4",
+              "itemId": "card:24",
+              "amount": 1,
+              "sequence": 2136,
+              "commandId": "command-1191",
+              "turn": 164
+            },
+            {
+              "type": "g6Notice",
+              "message": "富士银行：118.00 → 120.00元（红卡）。",
+              "sequence": 2137,
+              "commandId": "command-1191",
+              "playerId": "player-4",
+              "turn": 164
+            }
+          ]
+        },
+        {
+          "item": "card:26",
+          "turn": 219,
+          "player": "player-3",
+          "command": "command-1609",
+          "inventoryBefore": 1,
+          "inventoryAfter": 0,
+          "worldChanged": true,
+          "events": [
+            {
+              "type": "effectConsumed",
+              "playerId": "player-3",
+              "itemId": "card:26",
+              "amount": 1,
+              "sequence": 2892,
+              "commandId": "command-1609",
+              "turn": 219
+            },
+            {
+              "type": "taxSettled",
+              "sourceId": "player-3",
+              "payerId": "player-4",
+              "amount": 4938,
+              "waived": false,
+              "sequence": 2893,
+              "commandId": "command-1609",
+              "playerId": "player-3",
+              "turn": 219
+            }
+          ]
+        },
+        {
+          "item": "card:23",
+          "turn": 228,
+          "player": "player-4",
+          "command": "command-1682",
+          "inventoryBefore": 1,
+          "inventoryAfter": 0,
+          "worldChanged": true,
+          "events": [
+            {
+              "type": "effectConsumed",
+              "playerId": "player-4",
+              "itemId": "card:23",
+              "amount": 1,
+              "sequence": 3028,
+              "commandId": "command-1682",
+              "turn": 228
+            },
+            {
+              "type": "g6Notice",
+              "message": "玩家4附身天使，期限7次自身行动边界。",
+              "sequence": 3029,
+              "commandId": "command-1682",
+              "playerId": "player-4",
+              "turn": 228
+            }
+          ]
+        },
+        {
+          "item": "card:27",
+          "turn": 253,
+          "player": "player-1",
+          "command": "command-1854",
+          "inventoryBefore": 1,
+          "inventoryAfter": 0,
+          "worldChanged": true,
+          "events": [
+            {
+              "type": "effectConsumed",
+              "playerId": "player-1",
+              "itemId": "card:27",
+              "amount": 1,
+              "sequence": 3345,
+              "commandId": "command-1854",
+              "turn": 253
+            },
+            {
+              "type": "g4PropertyChanged",
+              "property": {
+                "id": "japan:land:29",
+                "ownerId": null,
+                "level": 0,
+                "buildingType": 0,
+                "priceStatus": 80,
+                "research": null
+              },
+              "reason": "涨价",
+              "sequence": 3346,
+              "commandId": "command-1854",
+              "playerId": "player-1",
+              "turn": 253
+            },
+            {
+              "type": "g4PropertyChanged",
+              "property": {
+                "id": "japan:land:30",
+                "ownerId": "player-1",
+                "level": 0,
+                "buildingType": 0,
+                "priceStatus": 80,
+                "research": null
+              },
+              "reason": "涨价",
+              "sequence": 3347,
+              "commandId": "command-1854",
+              "playerId": "player-1",
+              "turn": 253
+            },
+            {
+              "type": "g4PropertyChanged",
+              "property": {
+                "id": "japan:land:31",
+                "ownerId": "player-3",
+                "level": 1,
+                "buildingType": 0,
+                "priceStatus": 80,
+                "research": null
+              },
+              "reason": "涨价",
+              "sequence": 3348,
+              "commandId": "command-1854",
+              "playerId": "player-1",
+              "turn": 253
+            }
+          ]
+        },
+        {
+          "item": "card:28",
+          "turn": 278,
+          "player": "player-2",
+          "command": "command-2039",
+          "inventoryBefore": 1,
+          "inventoryAfter": 0,
+          "worldChanged": true,
+          "events": [
+            {
+              "type": "effectConsumed",
+              "playerId": "player-2",
+              "itemId": "card:28",
+              "amount": 1,
+              "sequence": 3703,
+              "commandId": "command-2039",
+              "turn": 278
+            },
+            {
+              "type": "g4PropertyChanged",
+              "property": {
+                "id": "japan:land:19",
+                "ownerId": "player-2",
+                "level": 0,
+                "buildingType": 0,
+                "priceStatus": 81,
+                "research": null
+              },
+              "reason": "查封",
+              "sequence": 3704,
+              "commandId": "command-2039",
+              "playerId": "player-2",
+              "turn": 278
+            },
+            {
+              "type": "g4PropertyChanged",
+              "property": {
+                "id": "japan:land:20",
+                "ownerId": "player-1",
+                "level": 1,
+                "buildingType": 0,
+                "priceStatus": 81,
+                "research": null
+              },
+              "reason": "查封",
+              "sequence": 3705,
+              "commandId": "command-2039",
+              "playerId": "player-2",
+              "turn": 278
+            },
+            {
+              "type": "g4PropertyChanged",
+              "property": {
+                "id": "japan:land:21",
+                "ownerId": "player-2",
+                "level": 0,
+                "buildingType": 0,
+                "priceStatus": 81,
+                "research": null
+              },
+              "reason": "查封",
+              "sequence": 3706,
+              "commandId": "command-2039",
+              "playerId": "player-2",
+              "turn": 278
+            },
+            {
+              "type": "g4PropertyChanged",
+              "property": {
+                "id": "japan:land:22",
+                "ownerId": "player-4",
+                "level": 2,
+                "buildingType": 0,
+                "priceStatus": 81,
+                "research": null
+              },
+              "reason": "查封",
+              "sequence": 3707,
+              "commandId": "command-2039",
+              "playerId": "player-2",
+              "turn": 278
+            },
+            {
+              "type": "g4PropertyChanged",
+              "property": {
+                "id": "japan:land:23",
+                "ownerId": "player-1",
+                "level": 1,
+                "buildingType": 0,
+                "priceStatus": 81,
+                "research": null
+              },
+              "reason": "查封",
+              "sequence": 3708,
+              "commandId": "command-2039",
+              "playerId": "player-2",
+              "turn": 278
+            }
+          ]
+        },
+        {
+          "item": "card:25",
+          "turn": 278,
+          "player": "player-2",
+          "command": "command-2041",
+          "inventoryBefore": 1,
+          "inventoryAfter": 0,
+          "worldChanged": true,
+          "events": [
+            {
+              "type": "effectConsumed",
+              "playerId": "player-2",
+              "itemId": "card:25",
+              "amount": 1,
+              "sequence": 3710,
+              "commandId": "command-2041",
+              "turn": 278
+            },
+            {
+              "type": "g6Notice",
+              "message": "富士银行：122.50 → 111.00元（黑卡）。",
+              "sequence": 3711,
+              "commandId": "command-2041",
+              "playerId": "player-2",
+              "turn": 278
+            }
+          ]
+        }
+      ],
+      "additionalChecks": [
+        "auction: actual winner cash and source bank transfer"
+      ],
+      "cleanup": {
+        "raf": 0,
+        "canvas": 0
+      },
+      "errors": [],
+      "rawDirectory": "/private/tmp/richman-unified-ui-46",
+      "replay": "frontend/src/features/richman/game/fixtures/tools-v13-g46-replay.json",
+      "golden": "frontend/src/features/richman/game/fixtures/tools-v13-g46-golden.json"
+    },
+    {
+      "group": "G5",
+      "rulesId": "japan-tools-candidate-v13",
+      "fingerprint": "7d7e7415",
+      "commands": 4809,
+      "players": 3,
+      "turn": 692,
+      "state": "e2269566e95dea9fbeeb91f75e853c0aead3db5dc7238ee47daf05552d22cdfa",
+      "events": "3f74f731c39b33834bd1e44c8d9561dc6d344c894f7c4654d4475037db694b6f",
+      "normalSpeed": true,
+      "originalMap": true,
+      "gameStateInjection": false,
+      "authFixtureOnly": true,
+      "completed": [
+        {
+          "id": "card:11",
+          "preview": "此地块：38号建筑 1 → 0。产权和资金不变。建筑类型重置；不触发防御卡。"
+        },
+        {
+          "id": "tool:03",
+          "preview": "在此放置地雷，停在这里的玩家住院3次，车辆损毁。路过不触发；机器娃娃和飞弹可清除。"
+        },
+        {
+          "id": "tool:04",
+          "preview": "在此放置炸弹；停下后携带，从之后每走一格倒数38格，相遇可转给首位未携带者；归零时脚下建筑降1级，携带者住院5次。"
+        },
+        {
+          "id": "tool:12",
+          "preview": "含本次共7次自身行动，固定1骰；落点结算后拆空非己方建筑（含待售），保留产权，经过不拆。原车辆入包，到期有库存才恢复；地雷和爆炸仍会伤害你。"
+        },
+        {
+          "id": "tool:07",
+          "preview": "投影200×200范围：地产 東京、東京、東京各降1级；玩家 2住院3次并损毁车辆；移除0个物件。不触发免罪/嫁祸/复仇。"
+        },
+        {
+          "id": "card:09",
+          "preview": "整条同名街区：19号建筑 0 → 1；20号建筑 0 → 1；21号建筑 2 → 3；22号建筑 1 → 2；23号建筑 1 → 2。产权和资金不变。达到上限不再升级，仍消耗卡片。"
+        },
+        {
+          "id": "card:10",
+          "preview": "整条同名街区：10号建筑 1 → 0；11号建筑 2 → 0；12号建筑 1 → 0；13号建筑 0 → 0；14号建筑 1 → 0；15号建筑 2 → 0。产权和资金不变。建筑类型重置；不触发防御卡。"
+        }
+      ],
+      "acquisitions": [
+        {
+          "type": "g6Notice",
+          "message": "玩家1获得card:26。",
+          "sequence": 131,
+          "commandId": "command-71",
+          "playerId": "player-1",
+          "turn": 10
+        },
+        {
+          "type": "g6Notice",
+          "message": "玩家1获得card:20。",
+          "sequence": 132,
+          "commandId": "command-71",
+          "playerId": "player-1",
+          "turn": 10
+        },
+        {
+          "type": "g6Notice",
+          "message": "玩家3获得card:02。",
+          "sequence": 186,
+          "commandId": "command-101",
+          "playerId": "player-3",
+          "turn": 15
+        },
+        {
+          "type": "itemBought",
+          "itemId": "card:11",
+          "cost": 60,
+          "points": 30,
+          "supply": 1,
+          "sequence": 1942,
+          "commandId": "command-1069",
+          "playerId": "player-1",
+          "turn": 154
+        },
+        {
+          "type": "itemBought",
+          "itemId": "tool:03",
+          "cost": 25,
+          "points": 5,
+          "supply": 9,
+          "sequence": 1943,
+          "commandId": "command-1070",
+          "playerId": "player-1",
+          "turn": 154
+        },
+        {
+          "type": "itemBought",
+          "itemId": "tool:04",
+          "cost": 25,
+          "points": 85,
+          "supply": 9,
+          "sequence": 2261,
+          "commandId": "command-1251",
+          "playerId": "player-3",
+          "turn": 180
+        },
+        {
+          "type": "itemBought",
+          "itemId": "tool:08",
+          "cost": 30,
+          "points": 55,
+          "supply": 9,
+          "sequence": 2262,
+          "commandId": "command-1252",
+          "playerId": "player-3",
+          "turn": 180
+        },
+        {
+          "type": "g6Notice",
+          "message": "玩家1获得card:26。",
+          "sequence": 3178,
+          "commandId": "command-1727",
+          "playerId": "player-1",
+          "turn": 253
+        },
+        {
+          "type": "g6Notice",
+          "message": "玩家3获得card:26。",
+          "sequence": 3666,
+          "commandId": "command-1995",
+          "playerId": "player-3",
+          "turn": 291
+        },
+        {
+          "type": "g6Notice",
+          "message": "玩家2获得card:05。",
+          "sequence": 3795,
+          "commandId": "command-2066",
+          "playerId": "player-2",
+          "turn": 302
+        },
+        {
+          "type": "g6Notice",
+          "message": "玩家1获得card:17。",
+          "sequence": 4114,
+          "commandId": "command-2241",
+          "playerId": "player-1",
+          "turn": 328
+        },
+        {
+          "type": "g5Notice",
+          "message": "研究完成：工程车已入包。",
+          "sequence": 4477,
+          "commandId": "command-2439",
+          "playerId": "player-2",
+          "turn": 359
+        },
+        {
+          "type": "itemBought",
+          "itemId": "tool:07",
+          "cost": 100,
+          "points": 25,
+          "supply": 9,
+          "sequence": 4754,
+          "commandId": "command-2590",
+          "playerId": "player-1",
+          "turn": 379
+        },
+        {
+          "type": "itemBought",
+          "itemId": "card:09",
+          "cost": 160,
+          "points": 85,
+          "supply": 1,
+          "sequence": 5230,
+          "commandId": "command-2850",
+          "playerId": "player-3",
+          "turn": 420
+        },
+        {
+          "type": "g6Notice",
+          "message": "玩家2获得card:06。",
+          "sequence": 5388,
+          "commandId": "command-2934",
+          "playerId": "player-2",
+          "turn": 431
+        },
+        {
+          "type": "g6Notice",
+          "message": "玩家2获得card:16。",
+          "sequence": 7204,
+          "commandId": "command-3945",
+          "playerId": "player-2",
+          "turn": 575
+        },
+        {
+          "type": "g6Notice",
+          "message": "玩家3获得card:12。",
+          "sequence": 7780,
+          "commandId": "command-4260",
+          "playerId": "player-3",
+          "turn": 618
+        },
+        {
+          "type": "itemBought",
+          "itemId": "card:10",
+          "cost": 180,
+          "points": 390,
+          "supply": 0,
+          "sequence": 8736,
+          "commandId": "command-4789",
+          "playerId": "player-2",
+          "turn": 689
+        }
+      ],
+      "effectEvidence": [
+        {
+          "item": "tool:08",
+          "turn": 21,
+          "player": "player-3",
+          "command": "command-142",
+          "inventoryBefore": 1,
+          "inventoryAfter": 0,
+          "worldChanged": true,
+          "events": [
+            {
+              "type": "effectConsumed",
+              "playerId": "player-3",
+              "itemId": "tool:08",
+              "amount": 1,
+              "sequence": 259,
+              "commandId": "command-142",
+              "turn": 21
+            },
+            {
+              "type": "effectResolved",
+              "definitionId": "tool:08:select-dice-v1",
+              "sourceId": "player-3",
+              "target": {
+                "kind": "player",
+                "id": "player-3"
+              },
+              "sequence": 260,
+              "commandId": "command-142",
+              "playerId": "player-3",
+              "turn": 21
+            },
+            {
+              "type": "itemSupplyChanged",
+              "amount": 1,
+              "supply": 8,
+              "sequence": 261,
+              "commandId": "command-142",
+              "playerId": "player-3",
+              "turn": 21
+            },
+            {
+              "type": "rolled",
+              "value": 4,
+              "sequence": 262,
+              "commandId": "command-142",
+              "playerId": "player-3",
+              "turn": 21
+            }
+          ]
+        },
+        {
+          "item": "tool:08",
+          "turn": 26,
+          "player": "player-2",
+          "command": "command-181",
+          "inventoryBefore": 1,
+          "inventoryAfter": 0,
+          "worldChanged": true,
+          "events": [
+            {
+              "type": "effectConsumed",
+              "playerId": "player-2",
+              "itemId": "tool:08",
+              "amount": 1,
+              "sequence": 331,
+              "commandId": "command-181",
+              "turn": 26
+            },
+            {
+              "type": "effectResolved",
+              "definitionId": "tool:08:select-dice-v1",
+              "sourceId": "player-2",
+              "target": {
+                "kind": "player",
+                "id": "player-2"
+              },
+              "sequence": 332,
+              "commandId": "command-181",
+              "playerId": "player-2",
+              "turn": 26
+            },
+            {
+              "type": "itemSupplyChanged",
+              "amount": 1,
+              "supply": 9,
+              "sequence": 333,
+              "commandId": "command-181",
+              "playerId": "player-2",
+              "turn": 26
+            },
+            {
+              "type": "rolled",
+              "value": 4,
+              "sequence": 334,
+              "commandId": "command-181",
+              "playerId": "player-2",
+              "turn": 26
+            }
+          ]
+        },
+        {
+          "item": "tool:08",
+          "turn": 31,
+          "player": "player-1",
+          "command": "command-220",
+          "inventoryBefore": 1,
+          "inventoryAfter": 0,
+          "worldChanged": true,
+          "events": [
+            {
+              "type": "effectConsumed",
+              "playerId": "player-1",
+              "itemId": "tool:08",
+              "amount": 1,
+              "sequence": 403,
+              "commandId": "command-220",
+              "turn": 31
+            },
+            {
+              "type": "effectResolved",
+              "definitionId": "tool:08:select-dice-v1",
+              "sourceId": "player-1",
+              "target": {
+                "kind": "player",
+                "id": "player-1"
+              },
+              "sequence": 404,
+              "commandId": "command-220",
+              "playerId": "player-1",
+              "turn": 31
+            },
+            {
+              "type": "itemSupplyChanged",
+              "amount": 1,
+              "supply": 10,
+              "sequence": 405,
+              "commandId": "command-220",
+              "playerId": "player-1",
+              "turn": 31
+            },
+            {
+              "type": "rolled",
+              "value": 6,
+              "sequence": 406,
+              "commandId": "command-220",
+              "playerId": "player-1",
+              "turn": 31
+            }
+          ]
+        },
+        {
+          "item": "card:11",
+          "turn": 157,
+          "player": "player-1",
+          "command": "command-1091",
+          "inventoryBefore": 1,
+          "inventoryAfter": 0,
+          "worldChanged": true,
+          "events": [
+            {
+              "type": "effectConsumed",
+              "playerId": "player-1",
+              "itemId": "card:11",
+              "amount": 1,
+              "sequence": 1972,
+              "commandId": "command-1091",
+              "turn": 157
+            },
+            {
+              "type": "g4PropertyChanged",
+              "property": {
+                "id": "japan:land:38",
+                "ownerId": "player-3",
+                "level": 0,
+                "buildingType": 0,
+                "priceStatus": 0,
+                "research": null
+              },
+              "reason": "怪兽",
+              "sequence": 1973,
+              "commandId": "command-1091",
+              "playerId": "player-1",
+              "turn": 157
+            }
+          ]
+        },
+        {
+          "item": "tool:03",
+          "turn": 157,
+          "player": "player-1",
+          "command": "command-1093",
+          "inventoryBefore": 1,
+          "inventoryAfter": 0,
+          "worldChanged": true,
+          "events": [
+            {
+              "type": "effectConsumed",
+              "playerId": "player-1",
+              "itemId": "tool:03",
+              "amount": 1,
+              "sequence": 1975,
+              "commandId": "command-1093",
+              "turn": 157
+            },
+            {
+              "type": "hazardChanged",
+              "hazard": {
+                "id": 1,
+                "itemId": "tool:03",
+                "node": 49,
+                "carrier": null,
+                "remaining": 0
+              },
+              "removed": false,
+              "reason": "放置",
+              "sequence": 1976,
+              "commandId": "command-1093",
+              "playerId": "player-1",
+              "turn": 157
+            }
+          ]
+        },
+        {
+          "item": "tool:04",
+          "turn": 183,
+          "player": "player-3",
+          "command": "command-1269",
+          "inventoryBefore": 1,
+          "inventoryAfter": 0,
+          "worldChanged": true,
+          "events": [
+            {
+              "type": "effectConsumed",
+              "playerId": "player-3",
+              "itemId": "tool:04",
+              "amount": 1,
+              "sequence": 2289,
+              "commandId": "command-1269",
+              "turn": 183
+            },
+            {
+              "type": "hazardChanged",
+              "hazard": {
+                "id": 2,
+                "itemId": "tool:04",
+                "node": 106,
+                "carrier": null,
+                "remaining": 0
+              },
+              "removed": false,
+              "reason": "放置",
+              "sequence": 2290,
+              "commandId": "command-1269",
+              "playerId": "player-3",
+              "turn": 183
+            }
+          ]
+        },
+        {
+          "item": "tool:08",
+          "turn": 183,
+          "player": "player-3",
+          "command": "command-1271",
+          "inventoryBefore": 1,
+          "inventoryAfter": 0,
+          "worldChanged": true,
+          "events": [
+            {
+              "type": "effectConsumed",
+              "playerId": "player-3",
+              "itemId": "tool:08",
+              "amount": 1,
+              "sequence": 2292,
+              "commandId": "command-1271",
+              "turn": 183
+            },
+            {
+              "type": "effectResolved",
+              "definitionId": "tool:08:select-dice-v1",
+              "sourceId": "player-3",
+              "target": {
+                "kind": "player",
+                "id": "player-3"
+              },
+              "sequence": 2293,
+              "commandId": "command-1271",
+              "playerId": "player-3",
+              "turn": 183
+            },
+            {
+              "type": "itemSupplyChanged",
+              "amount": 1,
+              "supply": 10,
+              "sequence": 2294,
+              "commandId": "command-1271",
+              "playerId": "player-3",
+              "turn": 183
+            },
+            {
+              "type": "rolled",
+              "value": 1,
+              "sequence": 2295,
+              "commandId": "command-1271",
+              "playerId": "player-3",
+              "turn": 183
+            }
+          ]
+        },
+        {
+          "item": "tool:12",
+          "turn": 359,
+          "player": "player-2",
+          "command": "command-2441",
+          "inventoryBefore": 1,
+          "inventoryAfter": 0,
+          "worldChanged": true,
+          "events": [
+            {
+              "type": "effectConsumed",
+              "playerId": "player-2",
+              "itemId": "tool:12",
+              "amount": 1,
+              "sequence": 4479,
+              "commandId": "command-2441",
+              "turn": 359
+            },
+            {
+              "type": "g5Notice",
+              "message": "工程车已启用：含本次7次行动，1骰；原车辆入包。",
+              "sequence": 4480,
+              "commandId": "command-2441",
+              "playerId": "player-2",
+              "turn": 359
+            }
+          ]
+        },
+        {
+          "item": "tool:07",
+          "turn": 382,
+          "player": "player-1",
+          "command": "command-2609",
+          "inventoryBefore": 1,
+          "inventoryAfter": 0,
+          "worldChanged": true,
+          "events": [
+            {
+              "type": "effectConsumed",
+              "playerId": "player-1",
+              "itemId": "tool:07",
+              "amount": 1,
+              "sequence": 4786,
+              "commandId": "command-2609",
+              "turn": 382
+            },
+            {
+              "type": "g4PropertyChanged",
+              "property": {
+                "id": "japan:land:11",
+                "ownerId": "player-2",
+                "level": 0,
+                "buildingType": 0,
+                "priceStatus": 0,
+                "research": null
+              },
+              "reason": "飞弹",
+              "sequence": 4787,
+              "commandId": "command-2609",
+              "playerId": "player-1",
+              "turn": 382
+            },
+            {
+              "type": "g4PropertyChanged",
+              "property": {
+                "id": "japan:land:12",
+                "ownerId": "player-3",
+                "level": 0,
+                "buildingType": 0,
+                "priceStatus": 0,
+                "research": null
+              },
+              "reason": "飞弹",
+              "sequence": 4788,
+              "commandId": "command-2609",
+              "playerId": "player-1",
+              "turn": 382
+            },
+            {
+              "type": "g4PropertyChanged",
+              "property": {
+                "id": "japan:land:13",
+                "ownerId": "player-1",
+                "level": 0,
+                "buildingType": 0,
+                "priceStatus": 0,
+                "research": null
+              },
+              "reason": "飞弹",
+              "sequence": 4789,
+              "commandId": "command-2609",
+              "playerId": "player-1",
+              "turn": 382
+            },
+            {
+              "type": "mobilityChanged",
+              "targetId": "player-2",
+              "mobility": {
+                "stop": 0,
+                "winter": 0,
+                "dream": 0,
+                "prison": 0,
+                "hospital": 3,
+                "turtle": 0,
+                "vehicle": "foot",
+                "diceCount": 1,
+                "savedVehicle": "foot",
+                "savedDice": 1
+              },
+              "reason": "爆炸住院3次，车辆损毁",
+              "sequence": 4790,
+              "commandId": "command-2609",
+              "playerId": "player-1",
+              "turn": 382
+            }
+          ]
+        },
+        {
+          "item": "card:09",
+          "turn": 423,
+          "player": "player-3",
+          "command": "command-2869",
+          "inventoryBefore": 1,
+          "inventoryAfter": 0,
+          "worldChanged": true,
+          "events": [
+            {
+              "type": "effectConsumed",
+              "playerId": "player-3",
+              "itemId": "card:09",
+              "amount": 1,
+              "sequence": 5262,
+              "commandId": "command-2869",
+              "turn": 423
+            },
+            {
+              "type": "g4PropertyChanged",
+              "property": {
+                "id": "japan:land:19",
+                "ownerId": null,
+                "level": 1,
+                "buildingType": 0,
+                "priceStatus": 0,
+                "research": null
+              },
+              "reason": "天使",
+              "sequence": 5263,
+              "commandId": "command-2869",
+              "playerId": "player-3",
+              "turn": 423
+            },
+            {
+              "type": "g4PropertyChanged",
+              "property": {
+                "id": "japan:land:20",
+                "ownerId": "player-1",
+                "level": 1,
+                "buildingType": 0,
+                "priceStatus": 0,
+                "research": null
+              },
+              "reason": "天使",
+              "sequence": 5264,
+              "commandId": "command-2869",
+              "playerId": "player-3",
+              "turn": 423
+            },
+            {
+              "type": "g4PropertyChanged",
+              "property": {
+                "id": "japan:land:21",
+                "ownerId": "player-2",
+                "level": 3,
+                "buildingType": 0,
+                "priceStatus": 0,
+                "research": null
+              },
+              "reason": "天使",
+              "sequence": 5265,
+              "commandId": "command-2869",
+              "playerId": "player-3",
+              "turn": 423
+            },
+            {
+              "type": "g4PropertyChanged",
+              "property": {
+                "id": "japan:land:22",
+                "ownerId": "player-1",
+                "level": 2,
+                "buildingType": 0,
+                "priceStatus": 0,
+                "research": null
+              },
+              "reason": "天使",
+              "sequence": 5266,
+              "commandId": "command-2869",
+              "playerId": "player-3",
+              "turn": 423
+            },
+            {
+              "type": "g4PropertyChanged",
+              "property": {
+                "id": "japan:land:23",
+                "ownerId": "player-3",
+                "level": 2,
+                "buildingType": 0,
+                "priceStatus": 0,
+                "research": null
+              },
+              "reason": "天使",
+              "sequence": 5267,
+              "commandId": "command-2869",
+              "playerId": "player-3",
+              "turn": 423
+            }
+          ]
+        },
+        {
+          "item": "card:10",
+          "turn": 692,
+          "player": "player-2",
+          "command": "command-4809",
+          "inventoryBefore": 1,
+          "inventoryAfter": 0,
+          "worldChanged": true,
+          "events": [
+            {
+              "type": "effectConsumed",
+              "playerId": "player-2",
+              "itemId": "card:10",
+              "amount": 1,
+              "sequence": 8770,
+              "commandId": "command-4809",
+              "turn": 692
+            },
+            {
+              "type": "g4PropertyChanged",
+              "property": {
+                "id": "japan:land:10",
+                "ownerId": "player-1",
+                "level": 0,
+                "buildingType": 0,
+                "priceStatus": 0,
+                "research": null
+              },
+              "reason": "恶魔",
+              "sequence": 8771,
+              "commandId": "command-4809",
+              "playerId": "player-2",
+              "turn": 692
+            },
+            {
+              "type": "g4PropertyChanged",
+              "property": {
+                "id": "japan:land:11",
+                "ownerId": "player-1",
+                "level": 0,
+                "buildingType": 0,
+                "priceStatus": 0,
+                "research": null
+              },
+              "reason": "恶魔",
+              "sequence": 8772,
+              "commandId": "command-4809",
+              "playerId": "player-2",
+              "turn": 692
+            },
+            {
+              "type": "g4PropertyChanged",
+              "property": {
+                "id": "japan:land:12",
+                "ownerId": "player-3",
+                "level": 0,
+                "buildingType": 0,
+                "priceStatus": 0,
+                "research": null
+              },
+              "reason": "恶魔",
+              "sequence": 8773,
+              "commandId": "command-4809",
+              "playerId": "player-2",
+              "turn": 692
+            },
+            {
+              "type": "g4PropertyChanged",
+              "property": {
+                "id": "japan:land:13",
+                "ownerId": "player-1",
+                "level": 0,
+                "buildingType": 0,
+                "priceStatus": 0,
+                "research": null
+              },
+              "reason": "恶魔",
+              "sequence": 8774,
+              "commandId": "command-4809",
+              "playerId": "player-2",
+              "turn": 692
+            },
+            {
+              "type": "g4PropertyChanged",
+              "property": {
+                "id": "japan:land:14",
+                "ownerId": "player-3",
+                "level": 0,
+                "buildingType": 0,
+                "priceStatus": 0,
+                "research": null
+              },
+              "reason": "恶魔",
+              "sequence": 8775,
+              "commandId": "command-4809",
+              "playerId": "player-2",
+              "turn": 692
+            },
+            {
+              "type": "g4PropertyChanged",
+              "property": {
+                "id": "japan:land:15",
+                "ownerId": "player-3",
+                "level": 0,
+                "buildingType": 0,
+                "priceStatus": 0,
+                "research": null
+              },
+              "reason": "恶魔",
+              "sequence": 8776,
+              "commandId": "command-4809",
+              "playerId": "player-2",
+              "turn": 692
+            }
+          ]
+        }
+      ],
+      "additionalChecks": [],
+      "cleanup": {
+        "raf": 0,
+        "canvas": 0
+      },
+      "errors": [],
+      "rawDirectory": "/private/tmp/richman-unified-ui-5",
+      "replay": "frontend/src/features/richman/game/fixtures/tools-v13-g5-replay.json",
+      "golden": "frontend/src/features/richman/game/fixtures/tools-v13-g5-golden.json"
+    },
+    {
+      "group": "G7",
+      "rulesId": "japan-tools-candidate-v13",
+      "fingerprint": "7d7e7415",
+      "commands": 3200,
+      "players": 2,
+      "turn": 448,
+      "state": "11551299ca45763ff947a1e12b774aeed76eca18bb4569aaeb823a7ce2f9ab5d",
+      "events": "ea29ff77fabd5824fb3350703c4e796208c4c7f50426d41838c0db664f9750bb",
+      "normalSpeed": true,
+      "originalMap": true,
+      "gameStateInjection": false,
+      "authFixtureOnly": true,
+      "completed": [
+        {
+          "id": "tool:10",
+          "preview": "恢复全体玩家位置、现金/存款、地产、库存/供应、研究、车辆/状态、神仙、道路物件及股票持仓/行情。随机序列和操作日志不倒退；从历史背包扣1台，所有旧历史清除。取消不改变任何状态。"
+        },
+        {
+          "id": "tool:11",
+          "preview": "传送自己后立即结算目的地，结束本次出发；不掷骰、不扣炸弹步数。会先保存时光机历史。目的地：50号路格。"
+        },
+        {
+          "id": "tool:13",
+          "preview": "440×440投影范围：6块地产清空产权与建筑/研究，1位玩家住院3次并损毁当前车辆，移除0个道路物件及0位神仙。包括自己，无反制窗口；范围不是全地图。"
+        }
+      ],
+      "acquisitions": [
+        {
+          "type": "g6Notice",
+          "message": "玩家1获得card:15。",
+          "sequence": 594,
+          "commandId": "command-326",
+          "playerId": "player-1",
+          "turn": 47
+        },
+        {
+          "type": "g6Notice",
+          "message": "玩家1获得card:28。",
+          "sequence": 595,
+          "commandId": "command-326",
+          "playerId": "player-1",
+          "turn": 47
+        },
+        {
+          "type": "itemBought",
+          "itemId": "tool:08",
+          "cost": 30,
+          "points": 100,
+          "supply": 9,
+          "sequence": 1193,
+          "commandId": "command-648",
+          "playerId": "player-1",
+          "turn": 91
+        },
+        {
+          "type": "g6Notice",
+          "message": "玩家1获得card:23。",
+          "sequence": 1412,
+          "commandId": "command-767",
+          "playerId": "player-1",
+          "turn": 107
+        },
+        {
+          "type": "g6Notice",
+          "message": "玩家1获得card:29。",
+          "sequence": 1413,
+          "commandId": "command-767",
+          "playerId": "player-1",
+          "turn": 107
+        },
+        {
+          "type": "g5Notice",
+          "message": "研究完成：时光机已入包。",
+          "sequence": 1916,
+          "commandId": "command-1039",
+          "playerId": "player-1",
+          "turn": 147
+        },
+        {
+          "type": "g6Notice",
+          "message": "玩家1获得card:04。",
+          "sequence": 2176,
+          "commandId": "command-1181",
+          "playerId": "player-1",
+          "turn": 165
+        },
+        {
+          "type": "g6Notice",
+          "message": "玩家1获得card:13。",
+          "sequence": 2177,
+          "commandId": "command-1181",
+          "playerId": "player-1",
+          "turn": 165
+        },
+        {
+          "type": "g6Notice",
+          "message": "玩家1获得card:04。",
+          "sequence": 2323,
+          "commandId": "command-1259",
+          "playerId": "player-1",
+          "turn": 175
+        },
+        {
+          "type": "itemBought",
+          "itemId": "tool:08",
+          "cost": 30,
+          "points": 150,
+          "supply": 9,
+          "sequence": 2759,
+          "commandId": "command-1490",
+          "playerId": "player-1",
+          "turn": 207
+        },
+        {
+          "type": "g6Notice",
+          "message": "玩家2获得card:04。",
+          "sequence": 2971,
+          "commandId": "command-1606",
+          "playerId": "player-2",
+          "turn": 224
+        },
+        {
+          "type": "g6Notice",
+          "message": "玩家2获得card:07。",
+          "sequence": 3170,
+          "commandId": "command-1714",
+          "playerId": "player-2",
+          "turn": 238
+        },
+        {
+          "type": "g6Notice",
+          "message": "玩家2获得card:20。",
+          "sequence": 3171,
+          "commandId": "command-1714",
+          "playerId": "player-2",
+          "turn": 238
+        },
+        {
+          "type": "itemBought",
+          "itemId": "tool:08",
+          "cost": 30,
+          "points": 100,
+          "supply": 9,
+          "sequence": 3478,
+          "commandId": "command-1882",
+          "playerId": "player-2",
+          "turn": 262
+        },
+        {
+          "type": "g5Notice",
+          "message": "研究完成：传送机已入包。",
+          "sequence": 4175,
+          "commandId": "command-2262",
+          "playerId": "player-1",
+          "turn": 319
+        },
+        {
+          "type": "itemBought",
+          "itemId": "tool:08",
+          "cost": 30,
+          "points": 310,
+          "supply": 8,
+          "sequence": 4181,
+          "commandId": "command-2265",
+          "playerId": "player-1",
+          "turn": 319
+        },
+        {
+          "type": "itemBought",
+          "itemId": "tool:08",
+          "cost": 30,
+          "points": 220,
+          "supply": 8,
+          "sequence": 4276,
+          "commandId": "command-2318",
+          "playerId": "player-2",
+          "turn": 326
+        },
+        {
+          "type": "g6Notice",
+          "message": "玩家1获得card:05。",
+          "sequence": 4339,
+          "commandId": "command-2353",
+          "playerId": "player-1",
+          "turn": 331
+        },
+        {
+          "type": "itemBought",
+          "itemId": "tool:08",
+          "cost": 30,
+          "points": 260,
+          "supply": 9,
+          "sequence": 5024,
+          "commandId": "command-2725",
+          "playerId": "player-2",
+          "turn": 382
+        },
+        {
+          "type": "itemBought",
+          "itemId": "tool:08",
+          "cost": 30,
+          "points": 230,
+          "supply": 9,
+          "sequence": 5400,
+          "commandId": "command-2930",
+          "playerId": "player-2",
+          "turn": 410
+        },
+        {
+          "type": "g6Notice",
+          "message": "玩家2获得card:28。",
+          "sequence": 5528,
+          "commandId": "command-3001",
+          "playerId": "player-2",
+          "turn": 420
+        },
+        {
+          "type": "g5Notice",
+          "message": "研究完成：核子飞弹已入包。",
+          "sequence": 5896,
+          "commandId": "command-3198",
+          "playerId": "player-2",
+          "turn": 448
+        }
+      ],
+      "effectEvidence": [
+        {
+          "item": "tool:08",
+          "turn": 15,
+          "player": "player-1",
+          "command": "command-93",
+          "inventoryBefore": 1,
+          "inventoryAfter": 0,
+          "worldChanged": true,
+          "events": [
+            {
+              "type": "effectConsumed",
+              "playerId": "player-1",
+              "itemId": "tool:08",
+              "amount": 1,
+              "sequence": 166,
+              "commandId": "command-93",
+              "turn": 15
+            },
+            {
+              "type": "effectResolved",
+              "definitionId": "tool:08:select-dice-v1",
+              "sourceId": "player-1",
+              "target": {
+                "kind": "player",
+                "id": "player-1"
+              },
+              "sequence": 167,
+              "commandId": "command-93",
+              "playerId": "player-1",
+              "turn": 15
+            },
+            {
+              "type": "itemSupplyChanged",
+              "amount": 1,
+              "supply": 9,
+              "sequence": 168,
+              "commandId": "command-93",
+              "playerId": "player-1",
+              "turn": 15
+            },
+            {
+              "type": "rolled",
+              "value": 6,
+              "sequence": 169,
+              "commandId": "command-93",
+              "playerId": "player-1",
+              "turn": 15
+            }
+          ]
+        },
+        {
+          "item": "tool:08",
+          "turn": 137,
+          "player": "player-1",
+          "command": "command-962",
+          "inventoryBefore": 1,
+          "inventoryAfter": 0,
+          "worldChanged": true,
+          "events": [
+            {
+              "type": "effectConsumed",
+              "playerId": "player-1",
+              "itemId": "tool:08",
+              "amount": 1,
+              "sequence": 1768,
+              "commandId": "command-962",
+              "turn": 137
+            },
+            {
+              "type": "effectResolved",
+              "definitionId": "tool:08:select-dice-v1",
+              "sourceId": "player-1",
+              "target": {
+                "kind": "player",
+                "id": "player-1"
+              },
+              "sequence": 1769,
+              "commandId": "command-962",
+              "playerId": "player-1",
+              "turn": 137
+            },
+            {
+              "type": "itemSupplyChanged",
+              "amount": 1,
+              "supply": 10,
+              "sequence": 1770,
+              "commandId": "command-962",
+              "playerId": "player-1",
+              "turn": 137
+            },
+            {
+              "type": "rolled",
+              "value": 4,
+              "sequence": 1771,
+              "commandId": "command-962",
+              "playerId": "player-1",
+              "turn": 137
+            }
+          ]
+        },
+        {
+          "item": "tool:10",
+          "turn": 149,
+          "player": "player-1",
+          "command": "command-1063",
+          "inventoryBefore": 1,
+          "inventoryAfter": 0,
+          "worldChanged": true,
+          "events": [
+            {
+              "type": "effectConsumed",
+              "playerId": "player-1",
+              "itemId": "tool:10",
+              "amount": 1,
+              "sequence": 1953,
+              "commandId": "command-1063",
+              "turn": 149
+            },
+            {
+              "type": "g7Notice",
+              "message": "时光机：恢复第74轮、行动147出发前的全局资产和状态，扣除历史背包1台；随机序列继续，旧历史已清除。",
+              "sequence": 1954,
+              "commandId": "command-1063",
+              "playerId": "player-1",
+              "turn": 149
+            }
+          ]
+        },
+        {
+          "item": "tool:08",
+          "turn": 249,
+          "player": "player-1",
+          "command": "command-1781",
+          "inventoryBefore": 1,
+          "inventoryAfter": 0,
+          "worldChanged": true,
+          "events": [
+            {
+              "type": "effectConsumed",
+              "playerId": "player-1",
+              "itemId": "tool:08",
+              "amount": 1,
+              "sequence": 3291,
+              "commandId": "command-1781",
+              "turn": 249
+            },
+            {
+              "type": "effectResolved",
+              "definitionId": "tool:08:select-dice-v1",
+              "sourceId": "player-1",
+              "target": {
+                "kind": "player",
+                "id": "player-1"
+              },
+              "sequence": 3292,
+              "commandId": "command-1781",
+              "playerId": "player-1",
+              "turn": 249
+            },
+            {
+              "type": "itemSupplyChanged",
+              "amount": 1,
+              "supply": 10,
+              "sequence": 3293,
+              "commandId": "command-1781",
+              "playerId": "player-1",
+              "turn": 249
+            },
+            {
+              "type": "rolled",
+              "value": 6,
+              "sequence": 3294,
+              "commandId": "command-1781",
+              "playerId": "player-1",
+              "turn": 249
+            }
+          ]
+        },
+        {
+          "item": "tool:11",
+          "turn": 319,
+          "player": "player-1",
+          "command": "command-2264",
+          "inventoryBefore": 1,
+          "inventoryAfter": 0,
+          "worldChanged": true,
+          "events": [
+            {
+              "type": "effectConsumed",
+              "playerId": "player-1",
+              "itemId": "tool:11",
+              "amount": 1,
+              "sequence": 4177,
+              "commandId": "command-2264",
+              "turn": 319
+            },
+            {
+              "type": "g7Notice",
+              "message": "玩家 1（68号）已传送至50号路格。",
+              "sequence": 4178,
+              "commandId": "command-2264",
+              "playerId": "player-1",
+              "turn": 319
+            },
+            {
+              "type": "landed",
+              "node": 50,
+              "sequence": 4179,
+              "commandId": "command-2264",
+              "playerId": "player-1",
+              "turn": 319
+            },
+            {
+              "type": "shopOffered",
+              "decision": {
+                "kind": "shop",
+                "id": "e117bc51-ceec-4319-be72-386344b415de:1620",
+                "node": 50,
+                "companyId": "japan:company:1"
+              },
+              "sequence": 4180,
+              "commandId": "command-2264",
+              "playerId": "player-1",
+              "turn": 319
+            }
+          ]
+        },
+        {
+          "item": "tool:08",
+          "turn": 324,
+          "player": "player-2",
+          "command": "command-2297",
+          "inventoryBefore": 1,
+          "inventoryAfter": 0,
+          "worldChanged": true,
+          "events": [
+            {
+              "type": "effectConsumed",
+              "playerId": "player-2",
+              "itemId": "tool:08",
+              "amount": 1,
+              "sequence": 4235,
+              "commandId": "command-2297",
+              "turn": 324
+            },
+            {
+              "type": "effectResolved",
+              "definitionId": "tool:08:select-dice-v1",
+              "sourceId": "player-2",
+              "target": {
+                "kind": "player",
+                "id": "player-2"
+              },
+              "sequence": 4236,
+              "commandId": "command-2297",
+              "playerId": "player-2",
+              "turn": 324
+            },
+            {
+              "type": "itemSupplyChanged",
+              "amount": 1,
+              "supply": 9,
+              "sequence": 4237,
+              "commandId": "command-2297",
+              "playerId": "player-2",
+              "turn": 324
+            },
+            {
+              "type": "rolled",
+              "value": 5,
+              "sequence": 4238,
+              "commandId": "command-2297",
+              "playerId": "player-2",
+              "turn": 324
+            }
+          ]
+        },
+        {
+          "item": "tool:08",
+          "turn": 363,
+          "player": "player-1",
+          "command": "command-2573",
+          "inventoryBefore": 1,
+          "inventoryAfter": 0,
+          "worldChanged": true,
+          "events": [
+            {
+              "type": "effectConsumed",
+              "playerId": "player-1",
+              "itemId": "tool:08",
+              "amount": 1,
+              "sequence": 4741,
+              "commandId": "command-2573",
+              "turn": 363
+            },
+            {
+              "type": "effectResolved",
+              "definitionId": "tool:08:select-dice-v1",
+              "sourceId": "player-1",
+              "target": {
+                "kind": "player",
+                "id": "player-1"
+              },
+              "sequence": 4742,
+              "commandId": "command-2573",
+              "playerId": "player-1",
+              "turn": 363
+            },
+            {
+              "type": "itemSupplyChanged",
+              "amount": 1,
+              "supply": 9,
+              "sequence": 4743,
+              "commandId": "command-2573",
+              "playerId": "player-1",
+              "turn": 363
+            },
+            {
+              "type": "rolled",
+              "value": 3,
+              "sequence": 4744,
+              "commandId": "command-2573",
+              "playerId": "player-1",
+              "turn": 363
+            }
+          ]
+        },
+        {
+          "item": "tool:08",
+          "turn": 380,
+          "player": "player-2",
+          "command": "command-2704",
+          "inventoryBefore": 1,
+          "inventoryAfter": 0,
+          "worldChanged": true,
+          "events": [
+            {
+              "type": "effectConsumed",
+              "playerId": "player-2",
+              "itemId": "tool:08",
+              "amount": 1,
+              "sequence": 4983,
+              "commandId": "command-2704",
+              "turn": 380
+            },
+            {
+              "type": "effectResolved",
+              "definitionId": "tool:08:select-dice-v1",
+              "sourceId": "player-2",
+              "target": {
+                "kind": "player",
+                "id": "player-2"
+              },
+              "sequence": 4984,
+              "commandId": "command-2704",
+              "playerId": "player-2",
+              "turn": 380
+            },
+            {
+              "type": "itemSupplyChanged",
+              "amount": 1,
+              "supply": 10,
+              "sequence": 4985,
+              "commandId": "command-2704",
+              "playerId": "player-2",
+              "turn": 380
+            },
+            {
+              "type": "rolled",
+              "value": 6,
+              "sequence": 4986,
+              "commandId": "command-2704",
+              "playerId": "player-2",
+              "turn": 380
+            }
+          ]
+        },
+        {
+          "item": "tool:08",
+          "turn": 438,
+          "player": "player-2",
+          "command": "command-3122",
+          "inventoryBefore": 1,
+          "inventoryAfter": 0,
+          "worldChanged": true,
+          "events": [
+            {
+              "type": "effectConsumed",
+              "playerId": "player-2",
+              "itemId": "tool:08",
+              "amount": 1,
+              "sequence": 5747,
+              "commandId": "command-3122",
+              "turn": 438
+            },
+            {
+              "type": "effectResolved",
+              "definitionId": "tool:08:select-dice-v1",
+              "sourceId": "player-2",
+              "target": {
+                "kind": "player",
+                "id": "player-2"
+              },
+              "sequence": 5748,
+              "commandId": "command-3122",
+              "playerId": "player-2",
+              "turn": 438
+            },
+            {
+              "type": "itemSupplyChanged",
+              "amount": 1,
+              "supply": 10,
+              "sequence": 5749,
+              "commandId": "command-3122",
+              "playerId": "player-2",
+              "turn": 438
+            },
+            {
+              "type": "rolled",
+              "value": 4,
+              "sequence": 5750,
+              "commandId": "command-3122",
+              "playerId": "player-2",
+              "turn": 438
+            }
+          ]
+        },
+        {
+          "item": "tool:13",
+          "turn": 448,
+          "player": "player-2",
+          "command": "command-3200",
+          "inventoryBefore": 1,
+          "inventoryAfter": 0,
+          "worldChanged": true,
+          "events": [
+            {
+              "type": "effectConsumed",
+              "playerId": "player-2",
+              "itemId": "tool:13",
+              "amount": 1,
+              "sequence": 5898,
+              "commandId": "command-3200",
+              "turn": 448
+            },
+            {
+              "type": "g4PropertyChanged",
+              "property": {
+                "id": "japan:land:38",
+                "ownerId": null,
+                "level": 0,
+                "buildingType": 0,
+                "priceStatus": 0,
+                "research": null
+              },
+              "reason": "核子飞弹清空",
+              "sequence": 5899,
+              "commandId": "command-3200",
+              "playerId": "player-2",
+              "turn": 448
+            },
+            {
+              "type": "g4PropertyChanged",
+              "property": {
+                "id": "japan:land:39",
+                "ownerId": null,
+                "level": 0,
+                "buildingType": 0,
+                "priceStatus": 0,
+                "research": null
+              },
+              "reason": "核子飞弹清空",
+              "sequence": 5900,
+              "commandId": "command-3200",
+              "playerId": "player-2",
+              "turn": 448
+            },
+            {
+              "type": "g4PropertyChanged",
+              "property": {
+                "id": "japan:land:40",
+                "ownerId": null,
+                "level": 0,
+                "buildingType": 0,
+                "priceStatus": 0,
+                "research": null
+              },
+              "reason": "核子飞弹清空",
+              "sequence": 5901,
+              "commandId": "command-3200",
+              "playerId": "player-2",
+              "turn": 448
+            },
+            {
+              "type": "g4PropertyChanged",
+              "property": {
+                "id": "japan:land:41",
+                "ownerId": null,
+                "level": 0,
+                "buildingType": 0,
+                "priceStatus": 0,
+                "research": null
+              },
+              "reason": "核子飞弹清空",
+              "sequence": 5902,
+              "commandId": "command-3200",
+              "playerId": "player-2",
+              "turn": 448
+            },
+            {
+              "type": "g4PropertyChanged",
+              "property": {
+                "id": "japan:land:42",
+                "ownerId": null,
+                "level": 0,
+                "buildingType": 0,
+                "priceStatus": 0,
+                "research": null
+              },
+              "reason": "核子飞弹清空",
+              "sequence": 5903,
+              "commandId": "command-3200",
+              "playerId": "player-2",
+              "turn": 448
+            },
+            {
+              "type": "g4PropertyChanged",
+              "property": {
+                "id": "japan:land:43",
+                "ownerId": null,
+                "level": 0,
+                "buildingType": 0,
+                "priceStatus": 0,
+                "research": null
+              },
+              "reason": "核子飞弹清空",
+              "sequence": 5904,
+              "commandId": "command-3200",
+              "playerId": "player-2",
+              "turn": 448
+            },
+            {
+              "type": "mobilityChanged",
+              "targetId": "player-2",
+              "mobility": {
+                "stop": 0,
+                "winter": 0,
+                "dream": 0,
+                "prison": 0,
+                "hospital": 3,
+                "turtle": 0,
+                "vehicle": "foot",
+                "diceCount": 1,
+                "savedVehicle": "foot",
+                "savedDice": 1
+              },
+              "reason": "爆炸住院3次，车辆损毁",
+              "sequence": 5905,
+              "commandId": "command-3200",
+              "playerId": "player-2",
+              "turn": 448
+            },
+            {
+              "type": "g7Notice",
+              "message": "核子飞弹命中6块地产、1位玩家，移除0位神仙。",
+              "sequence": 5906,
+              "commandId": "command-3200",
+              "playerId": "player-2",
+              "turn": 448
+            }
+          ]
+        }
+      ],
+      "additionalChecks": [
+        "time: actual browser replay restores multi-player world and historic inventory minus one, keeps RNG/turn, invalidates history"
+      ],
+      "cleanup": {
+        "raf": 0,
+        "canvas": 0
+      },
+      "errors": [],
+      "rawDirectory": "/private/tmp/richman-unified-ui-7",
+      "replay": "frontend/src/features/richman/game/fixtures/tools-v13-g7-replay.json",
+      "golden": "frontend/src/features/richman/game/fixtures/tools-v13-g7-golden.json"
+    }
+  ],
+  "domainTests": 40,
+  "uiTests": 16,
+  "replayMatrix": {
+    "versions": 13,
+    "players": [
+      2,
+      3,
+      4
+    ],
+    "commandsPerCase": 180,
+    "cases": 39
+  },
+  "longEngineRuns": {
+    "players": [
+      2,
+      3,
+      4
+    ],
+    "commandsPerCase": 1500
+  },
+  "limitations": [
+    "New browser long runs stop after group effects, not final winner; v13 final debt/winner cleanup uses explicit boundary fixtures. Historical S1-05 browser winner runs remain separate.",
+    "G7 browser nuclear case hits six properties and one player; wider multi-player/god/road-object cases use unit boundaries.",
+    "Time and teleport use explicit Web candidate semantics; no new Windows runtime comparison.",
+    "Not every one of 43 items was repeated in each player-count/browser/version combination."
+  ],
+  "checks": {
+    "frontend": {
+      "numTotalTests": 381,
+      "numPassedTests": 381,
+      "numFailedTests": 0,
+      "success": true
+    },
+    "python": {
+      "passed": 24,
+      "skipped": 0,
+      "referenceFilesShaVerified": 14
+    },
+    "lint": "passed",
+    "build": "passed",
+    "diffCheck": "passed",
+    "browserScriptSyntax": "passed"
+  }
+}

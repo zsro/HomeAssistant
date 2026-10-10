@@ -1,0 +1,2 @@
+import {writeFileSync} from 'node:fs';import {planComputerEstate} from './plan-computer-estate';
+for(const[count,seed,required]of [[2,'estate-2-0',['card:03','card:04']],[3,'estate-3-2',['card:05']],[4,'estate-4-0',['card:12']]] as const){const p=planComputerEstate(count,seed,required);if(!p.replay)throw Error('Missing route '+count);writeFileSync('/private/tmp/computer-estate-'+count+'.json',JSON.stringify(p));console.log(count,p.replay.commands.length,p.used,p.cancelled);}

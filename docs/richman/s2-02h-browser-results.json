@@ -1,0 +1,292 @@
+{
+  "baseUrl": "http://localhost:5173",
+  "normalSpeed": true,
+  "map": "original Japan; real UI commands; auth-only fixture; no game-state injection",
+  "seed": "group-one-13",
+  "rulesId": "japan-tools-candidate-v7",
+  "itemFingerprint": "e2ec2345",
+  "checks": [
+    "earn points and purchase all five",
+    "real changes for each card",
+    "pause/cancel/reset-dialog",
+    "fullscreen",
+    "390px",
+    "existing worker/roadblock/remote dice",
+    "following normal roll",
+    "exact replay",
+    "reset inventory",
+    "v6 mode",
+    "cleanup"
+  ],
+  "purchases": [
+    {
+      "type": "itemBought",
+      "itemId": "card:03",
+      "cost": 35,
+      "points": 65,
+      "supply": 3,
+      "sequence": 301,
+      "commandId": "command-181",
+      "playerId": "player-1",
+      "turn": 25
+    },
+    {
+      "type": "itemBought",
+      "itemId": "card:04",
+      "cost": 25,
+      "points": 40,
+      "supply": 3,
+      "sequence": 302,
+      "commandId": "command-182",
+      "playerId": "player-1",
+      "turn": 25
+    },
+    {
+      "type": "itemBought",
+      "itemId": "card:05",
+      "cost": 20,
+      "points": 20,
+      "supply": 3,
+      "sequence": 303,
+      "commandId": "command-183",
+      "playerId": "player-1",
+      "turn": 25
+    },
+    {
+      "type": "itemBought",
+      "itemId": "card:06",
+      "cost": 20,
+      "points": 0,
+      "supply": 2,
+      "sequence": 304,
+      "commandId": "command-184",
+      "playerId": "player-1",
+      "turn": 25
+    },
+    {
+      "type": "itemBought",
+      "itemId": "card:05",
+      "cost": 20,
+      "points": 110,
+      "supply": 2,
+      "sequence": 616,
+      "commandId": "command-382",
+      "playerId": "player-2",
+      "turn": 52
+    },
+    {
+      "type": "itemBought",
+      "itemId": "card:12",
+      "cost": 15,
+      "points": 95,
+      "supply": 4,
+      "sequence": 617,
+      "commandId": "command-383",
+      "playerId": "player-2",
+      "turn": 52
+    }
+  ],
+  "settlements": [
+    {
+      "type": "g1Resolved",
+      "itemId": "card:06",
+      "option": {
+        "target": {
+          "kind": "player",
+          "id": "player-1"
+        },
+        "title": "玩家 1（你） · 50 号路格",
+        "detail": "原地转身，下次移动按新方向选路。不立刻移动或掷骰。",
+        "changes": [],
+        "turn": {
+          "playerId": "player-1",
+          "candidates": [
+            51
+          ],
+          "direction": 5
+        }
+      },
+      "previous": 51,
+      "sequence": 334,
+      "commandId": "command-204",
+      "playerId": "player-1",
+      "turn": 27
+    },
+    {
+      "type": "g1Resolved",
+      "itemId": "card:03",
+      "option": {
+        "target": {
+          "kind": "property",
+          "id": "japan:land:33"
+        },
+        "title": "倉敷 · 脚下地产",
+        "detail": "支付现金 1,500 元，存入玩家 2的银行。归属改为你，建筑保持 0 级；不用存款补足。",
+        "changes": [
+          {
+            "before": {
+              "id": "japan:land:33",
+              "ownerId": "player-2",
+              "level": 0
+            },
+            "after": {
+              "id": "japan:land:33",
+              "ownerId": "player-1",
+              "level": 0
+            }
+          }
+        ],
+        "transfer": {
+          "from": "player-1",
+          "to": "player-2",
+          "amount": 1500
+        }
+      },
+      "sequence": 393,
+      "commandId": "command-242",
+      "playerId": "player-1",
+      "turn": 33
+    },
+    {
+      "type": "g1Resolved",
+      "itemId": "card:04",
+      "option": {
+        "target": {
+          "kind": "property",
+          "id": "japan:land:32"
+        },
+        "title": "倉敷 · 42 号路格",
+        "detail": "脚下倉敷：玩家 1 → 待售；目标倉敷：待售 → 玩家 1。楼级和现金不变。",
+        "changes": [
+          {
+            "before": {
+              "id": "japan:land:33",
+              "ownerId": "player-1",
+              "level": 0
+            },
+            "after": {
+              "id": "japan:land:33",
+              "ownerId": null,
+              "level": 0
+            }
+          },
+          {
+            "before": {
+              "id": "japan:land:32",
+              "ownerId": null,
+              "level": 0
+            },
+            "after": {
+              "id": "japan:land:32",
+              "ownerId": "player-1",
+              "level": 0
+            }
+          }
+        ]
+      },
+      "sequence": 398,
+      "commandId": "command-244",
+      "playerId": "player-1",
+      "turn": 33
+    },
+    {
+      "type": "g1Resolved",
+      "itemId": "card:12",
+      "option": {
+        "target": {
+          "kind": "property",
+          "id": "japan:land:16"
+        },
+        "title": "名古屋 · 108 号路格",
+        "detail": "待售的建筑：1 → 0 级。归属不变，不支付现金。",
+        "changes": [
+          {
+            "before": {
+              "id": "japan:land:16",
+              "ownerId": null,
+              "level": 1
+            },
+            "after": {
+              "id": "japan:land:16",
+              "ownerId": null,
+              "level": 0
+            }
+          }
+        ]
+      },
+      "sequence": 639,
+      "commandId": "command-396",
+      "playerId": "player-2",
+      "turn": 54
+    },
+    {
+      "type": "g1Resolved",
+      "itemId": "card:05",
+      "option": {
+        "target": {
+          "kind": "property",
+          "id": "japan:land:19"
+        },
+        "title": "大阪 · 3 号路格",
+        "detail": "脚下大阪：1 → 0 级；目标大阪：0 → 1 级。产权和现金不变。",
+        "changes": [
+          {
+            "before": {
+              "id": "japan:land:22",
+              "ownerId": "player-1",
+              "level": 1
+            },
+            "after": {
+              "id": "japan:land:22",
+              "ownerId": "player-1",
+              "level": 0
+            }
+          },
+          {
+            "before": {
+              "id": "japan:land:19",
+              "ownerId": null,
+              "level": 0
+            },
+            "after": {
+              "id": "japan:land:19",
+              "ownerId": null,
+              "level": 1
+            }
+          }
+        ]
+      },
+      "sequence": 655,
+      "commandId": "command-405",
+      "playerId": "player-1",
+      "turn": 55
+    }
+  ],
+  "completed": [
+    {
+      "id": "card:06",
+      "preview": "原地转身，下次移动按新方向选路。不立刻移动或掷骰。\n\n确认消耗 1 张，随后仍可使用卡片或掷骰。"
+    },
+    {
+      "id": "card:03",
+      "preview": "支付现金 1,500 元，存入玩家 2的银行。归属改为你，建筑保持 0 级；不用存款补足。\n\n确认消耗 1 张，随后仍可使用卡片或掷骰。"
+    },
+    {
+      "id": "card:04",
+      "preview": "脚下倉敷：玩家 1 → 待售；目标倉敷：待售 → 玩家 1。楼级和现金不变。\n\n确认消耗 1 张，随后仍可使用卡片或掷骰。"
+    },
+    {
+      "id": "card:12",
+      "preview": "待售的建筑：1 → 0 级。归属不变，不支付现金。\n\n确认消耗 1 张，随后仍可使用卡片或掷骰。"
+    },
+    {
+      "id": "card:05",
+      "preview": "脚下大阪：1 → 0 级；目标大阪：0 → 1 级。产权和现金不变。\n\n确认消耗 1 张，随后仍可使用卡片或掷骰。"
+    }
+  ],
+  "cleanup": {
+    "raf": 0,
+    "canvas": 0
+  },
+  "errors": []
+}

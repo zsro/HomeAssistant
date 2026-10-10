@@ -1,0 +1,223 @@
+{
+  "referenceCommit": "ec7d70e693059d1e781d9d1cc2ad7f36d360d39e",
+  "method": "Five fixed-commit local ASM blob SHA1 verified; reuse local map-byte audit (A mapping, B cross-version semantics); no Windows runtime observation",
+  "sources": [
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_core_actions.asm",
+      "gitBlobSha1": "ebfde6c820e8a430b856d9816a926b636e0db1dc",
+      "sha256": "2874c1a3e0ca1d0da5afe4cb93e42cf2d6f6fa864dbee11d7bcaa028af07d94a"
+    },
+    {
+      "path": "asm/rich4_new_game.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_new_game.asm",
+      "gitBlobSha1": "55015c738593cf08c2bf97b6298324be4b9bec00",
+      "sha256": "0abb3c6ee86e22c768480573e365dcefb692f69ffa701d5ff027cf4d1b2bf86a"
+    },
+    {
+      "path": "asm/rich4_player_utils.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_utils.asm",
+      "gitBlobSha1": "4bdaafa1f87f9fcd5f71dcf50f1aebd7e795d6be",
+      "sha256": "17479913576a004458908f124c4d7e94361dab41a501830d2ecb87eb7b438f01"
+    },
+    {
+      "path": "asm/rich4.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4.asm",
+      "gitBlobSha1": "d11a64755094435fa9953652a5a4951871fd9697",
+      "sha256": "30904cbb4f23a6b74fc1b80ad023bd7dff11b441c2c1978f768f9891d099d64a"
+    },
+    {
+      "path": "asm/rich4_player_say_on_events.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_say_on_events.asm",
+      "gitBlobSha1": "644c02665ec7ffce20f389e4c258cf1118ab8907",
+      "sha256": "9d12b7717f448b8928db8f2b89cfa0b4bbae694757ea9a53a6c8ea5d7fa5adb9"
+    }
+  ],
+  "verifiedFiles": 5,
+  "localMapSources": {
+    "MapDat.MKF": {
+      "bytes": 36560,
+      "sha256": "4dc6a47efe03f64484e6b9ac5ee31489b7f42fc369c0296f2f0b8d63845294b1"
+    },
+    "rich4.exe": {
+      "bytes": 591360,
+      "sha256": "110b29f9d2fadcff3836eb69ec380aa264951859c90955da6e11158d2f956a13"
+    }
+  },
+  "companyDirectory": [
+    {
+      "id": 1,
+      "offset": 7468,
+      "x": 1671,
+      "y": 1717,
+      "rawHex": "8706b506a454b656a6cab36600000000000000000000000000020a03000000003600000080af0200000000000000000000000000",
+      "name": "三越百貨",
+      "nodeIds": [
+        50,
+        107
+      ],
+      "byte18": 0,
+      "byte19": 2,
+      "byte1a": 10,
+      "word22": 0,
+      "capital": 176000,
+      "eventCodes": [
+        15,
+        15
+      ]
+    },
+    {
+      "id": 2,
+      "offset": 7520,
+      "x": 1345,
+      "y": 1095,
+      "rawHex": "41054704c2d7a5d0a854a8ae00000000000000000000000000050507000000003800bc02b01e0400000000000000000000000000",
+      "name": "豐田汽車",
+      "nodeIds": [
+        59,
+        60
+      ],
+      "byte18": 0,
+      "byte19": 5,
+      "byte1a": 5,
+      "word22": 700,
+      "capital": 270000,
+      "eventCodes": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": 3,
+      "offset": 7572,
+      "x": 1583,
+      "y": 789,
+      "rawHex": "2f061503a4e9b2a3abd8b35d00000000000000000000000000030b06000000003300881320b90300000000000000000000000000",
+      "name": "日產建設",
+      "nodeIds": [
+        67,
+        68
+      ],
+      "byte18": 0,
+      "byte19": 3,
+      "byte1a": 11,
+      "word22": 5000,
+      "capital": 244000,
+      "eventCodes": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": 4,
+      "offset": 7624,
+      "x": 1871,
+      "y": 983,
+      "rawHex": "4f07d703a454a4aba5cda95200000000000000000000000000010406000000003400e803f00d0c00000000000000000000000000",
+      "name": "三井生命",
+      "nodeIds": [
+        92,
+        93
+      ],
+      "byte18": 0,
+      "byte19": 1,
+      "byte1a": 4,
+      "word22": 1000,
+      "capital": 790000,
+      "eventCodes": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": 5,
+      "offset": 7676,
+      "x": 1723,
+      "y": 1436,
+      "rawHex": "bb069c05a2e1a2d3a2d5a2cf000000000000000000000000000403070000000032009600009f2400000000000000000000000000",
+      "name": "ＳＥＧＡ",
+      "nodeIds": [
+        102,
+        103
+      ],
+      "byte18": 0,
+      "byte19": 4,
+      "byte1a": 3,
+      "word22": 150,
+      "capital": 2400000,
+      "eventCodes": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": 6,
+      "offset": 7728,
+      "x": 1369,
+      "y": 1763,
+      "rawHex": "5905e306b449a468bbc8a6e600000000000000000000000000000704000000003a00000040420f00000000000000000000000000",
+      "name": "富士銀行",
+      "nodeIds": [
+        1
+      ],
+      "byte18": 0,
+      "byte19": 0,
+      "byte1a": 7,
+      "word22": 0,
+      "capital": 1000000,
+      "eventCodes": [
+        14
+      ]
+    }
+  ],
+  "rules": {
+    "R13-01n": {
+      "addresses": [
+        "004197e9",
+        "00419884",
+        "0041a998..0041abbb"
+      ],
+      "evidence": "17-code landing table; Toyota/SEGA/Nissan/insurance code0; shop code15 and bank14 bypass generic company fees. Dream only suppresses nonzero codes; company owner0/self skips fees. Passing does not call this landing handler."
+    },
+    "R08-01n": {
+      "addresses": [
+        "0041ac8c..0041acd1",
+        "0040d975"
+      ],
+      "evidence": "Toyota type5 fee word22=700 * 2^((vehicle&3)-1) * last dice-result(ref0048bafc) * price index; foot0=0, bike1, car2, active engineer4; dream-suspended engineer uses current restored vehicle; existing Web current-dice and fixed-price1 used."
+    },
+    "R08-02n": {
+      "addresses": [
+        "0041ac2c",
+        "new_game ref004990e4=0",
+        "0041cf9c"
+      ],
+      "evidence": "SEGA type3 word22=150 * ref004990e4 elapsed daily boundaries; starts0, date increment +1; no separate price-index factor in this branch."
+    },
+    "R07-01n": {
+      "addresses": [
+        "0041ae37..0041b00e",
+        "0041d709",
+        "0040fbb8"
+      ],
+      "evidence": "visitor god1/2/5/6 modifies fee; >=2000*price or exceeds cash+bank enables free then redirect; positive final fee picks first other alive seat carrying god14/15; no recursive reaction and no owner-self waiver after redirect. Existing eligible catalog includes15;14 remains unavailable."
+    },
+    "R05-01n": {
+      "addresses": [
+        "0041b00e",
+        "0041d2c6..0041d3af",
+        "0044f42d"
+      ],
+      "evidence": "recipient node kind -0x170c = company index+100, flags0 cash then bank; company period/cumulative receive actual paid; speech helper is not stock liquidation. No public-fund or owner direct credit. Web insufficient cleanup returns holdings without proceeds, original bankruptcy auction remains deferred."
+    },
+    "R09-01n": {
+      "evidence": "Web receipt ack and journal in business/G7 world; new v27; old versions unchanged; no speech/animation RNG or special players"
+    }
+  },
+  "deferred": {
+    "Nissan": "type11 targeted build before fee, target0 still1000*price; detailed selector/build type research link deferred",
+    "insurance": "type4 spinner days to player+62, fee1000*days*price and owner free-days branch; policy/claims deferred",
+    "onsiteShares": "0041d1a9 offers up-to1000 via capital/10000, company+0x30 available subscription shares and cash; separate from ordinary market, not implemented",
+    "other": "company shop/bank specialization, original bankruptcy forced auctions, other calendar activity and price index"
+  }
+}

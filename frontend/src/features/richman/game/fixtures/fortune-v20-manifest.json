@@ -1,0 +1,106 @@
+[
+  {
+    "route": "0",
+    "seed": "fortune-group-0",
+    "commands": 56,
+    "turn": 6,
+    "players": 2,
+    "state": "196714d6767ec70aa070ce3b974f34bc27d5bb29e9929b7d4862733c6f071239",
+    "events": "bea16a7820985b189ad41be50bed9205498c2a5d6f75ae4385fcc75f5ced15b6",
+    "fortune": [
+      17,
+      19
+    ]
+  },
+  {
+    "route": "1",
+    "seed": "fortune-group-1",
+    "commands": 34,
+    "turn": 3,
+    "players": 3,
+    "state": "8900dd416293908daa6df3d8d172c03ed7b9c43a07edc6901928fe42d5e01f08",
+    "events": "e0a3cb8f33df3f41ac0992c4b090afd3a323b66ca2053231179c0defbea0afc2",
+    "fortune": [
+      25,
+      28
+    ]
+  },
+  {
+    "route": "2",
+    "seed": "fortune-group-2",
+    "commands": 41,
+    "turn": 3,
+    "players": 4,
+    "state": "a895af4a667a87cab0382498e4532111758373dc631f2e1eee68513bf33a818c",
+    "events": "89ba7922363125a0cd2fdc84aa18af26d986bd2608caa5562a4e1f9be91022d8",
+    "fortune": [
+      24,
+      26
+    ]
+  },
+  {
+    "route": "3",
+    "seed": "fortune-group-7",
+    "commands": 61,
+    "turn": 6,
+    "players": 2,
+    "state": "80bfa2d5c4b4d72add814aef0d419c21bfe1e0cf31e1b655d26df29ad2d2b4e6",
+    "events": "feb91007abbfa440dd430bbfe2f7a3d3e7acb3841b5eb64995a5c72008a70bc6",
+    "fortune": [
+      32,
+      20
+    ]
+  },
+  {
+    "route": "4",
+    "seed": "fortune-group-9",
+    "commands": 34,
+    "turn": 3,
+    "players": 3,
+    "state": "8f08d17c6370320067e6cf28a292d617adddff7813a63ae11e8ce4a2d81d8e83",
+    "events": "5576960eef216544fa24159dcaf4c60d362bffd0c11b9b00be79a0ed23049e9a",
+    "fortune": [
+      30,
+      31
+    ]
+  },
+  {
+    "route": "5",
+    "seed": "fortune-group-57",
+    "commands": 41,
+    "turn": 3,
+    "players": 4,
+    "state": "f2b415cfbce9b9e2c8e415de934c30ef39d64876a36c1b9c7d5be79cb8a45e33",
+    "events": "a61d1da74040819e3c0f75be66a23cc06ac1690aab5f31eb9aa79a290a146b7e",
+    "fortune": [
+      27,
+      21
+    ]
+  },
+  {
+    "route": "6",
+    "seed": "fortune-group-67",
+    "commands": 60,
+    "turn": 6,
+    "players": 2,
+    "state": "ef81358b2db3770436ff26d75d6d61ce4b1b1f3e8f56b9bfdcd4087e089d9ee7",
+    "events": "0476e7be553f201c82ffb1c1c0addfadff99fb5dd0cca0af8f089fb5fa2681db",
+    "fortune": [
+      29,
+      23
+    ]
+  },
+  {
+    "route": "7",
+    "seed": "fortune-group-77",
+    "commands": 32,
+    "turn": 3,
+    "players": 3,
+    "state": "d18b0c2b9543044e92ceb42b3788c93082cba9f997697997513368974b76a7ff",
+    "events": "f6f6e147b992757e28600daaec5a502a157f3d82713cab5a0b153a53652c180e",
+    "fortune": [
+      22,
+      18
+    ]
+  }
+]

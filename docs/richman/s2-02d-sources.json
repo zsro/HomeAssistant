@@ -1,0 +1,47 @@
+{
+  "referenceCommit": "ec7d70e693059d1e781d9d1cc2ad7f36d360d39e",
+  "semantics": "B: reference byte-mask, anchor clipping and painter order confirmed; local MAP[26] is SMP/16bpp, exact original mask mapping unconfirmed. Product adds Web atlas-alpha picking only; v3 eligibility unchanged.",
+  "sources": [
+    {
+      "path": "asm/rich4.asm",
+      "sha256": "30904cbb4f23a6b74fc1b80ad023bd7dff11b441c2c1978f768f9891d099d64a",
+      "symbols": "fcn_00409b18; _compare_int16_lt; loc_004097cf; loc_004090ed..loc_004092ee; ref_0048a44c/ref_0048a84c",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4.asm"
+    },
+    {
+      "path": "asm/rich4_drawing_utils2.asm",
+      "sha256": "afdcf7d4af8132741a4c6e9cfbc4c02d55d8dd280ff9df5da4c432eb1ef08090",
+      "bytes": 26054,
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_drawing_utils2.asm",
+      "symbols": "fcn_00456a1c; loc_00456aa5/ab5/acf/adf/b19/b1c/b27/b35"
+    },
+    {
+      "path": "asm/rich4_load_map.asm",
+      "sha256": "7a555911e15b8c947c6c281b95c23bf536dba92baca20929ab1666ed31df3987",
+      "bytes": 18143,
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_load_map.asm",
+      "symbols": "_rich4_load_map; ref_0047494d assignment; MAP.MKF[0x1a]; ref_004631c0"
+    },
+    {
+      "path": "asm/rich4_libmkf.c",
+      "sha256": "40a861250961bf601e895996bdede814bfe1669ae562dd7067973599f4571410",
+      "bytes": 17,
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_libmkf.c",
+      "symbols": "symlink text -> ../csrc/mkf/mkf.c"
+    },
+    {
+      "path": "csrc/mkf/mkf.c",
+      "sha256": "853f9d04bfdb640935c7f75c5638ebe8adb584438a9b84a09dd8a000dfb87acd",
+      "bytes": 3685,
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/csrc/mkf/mkf.c",
+      "symbols": "read_mkf; update_spr_smp_ptr; update_pixels"
+    }
+  ],
+  "localResourceAudit": "s2-02d-local-hit-audit.json",
+  "unusedLookupFiles": [
+    "asm/rich4_drawing.c",
+    "asm/rich4_initialize.asm",
+    "asm/graph_struct.h"
+  ],
+  "failedLookup": "First attempted csrc/mkf/libmkf.c returned HTTP 404; followed actual symlink text to csrc/mkf/mkf.c."
+}

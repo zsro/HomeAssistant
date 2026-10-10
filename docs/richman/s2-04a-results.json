@@ -1,0 +1,350 @@
+{
+  "stage": "S2-04a",
+  "date": "2026-10-06",
+  "rulesId": "japan-events-candidate-v42",
+  "fingerprint": "3d941ac1",
+  "semanticIncrement": true,
+  "s2_04Complete": false,
+  "preserved": {
+    "s2_03CandidateClosed": true,
+    "items": 43,
+    "news": 36,
+    "japanFortuneSlots": 37,
+    "magicEffects": 12,
+    "minigames": 3,
+    "legacyFingerprintsAndGoldensUnchanged": true
+  },
+  "sourceAudit": {
+    "files": 4,
+    "anchors": 22,
+    "japanStocks": 12,
+    "referenceCommit": "ec7d70e693059d1e781d9d1cc2ad7f36d360d39e",
+    "nativeWindowsExecution": false
+  },
+  "checks": {
+    "frontend": {
+      "passed": 1649,
+      "files": 112,
+      "maxWorkers": 2,
+      "newDomain": 46,
+      "newComponent": 5,
+      "newActualReplay": 3,
+      "newVersionPlayerCases": 3,
+      "allVersionPlayerCases": 126
+    },
+    "lint": "passed",
+    "build": "passed; existing large-chunk warning",
+    "defaultModeUI": {
+      "development": {
+        "rulesId": "japan-events-candidate-v42",
+        "fingerprint": "3d941ac1",
+        "defaultMode": "stockMarket",
+        "cleanup": {
+          "raf": 0,
+          "canvas": 0
+        },
+        "errors": []
+      },
+      "builtPreview": {
+        "rulesId": "japan-events-candidate-v42",
+        "fingerprint": "3d941ac1",
+        "defaultMode": "stockMarket",
+        "cleanup": {
+          "raf": 0,
+          "canvas": 0
+        },
+        "errors": []
+      }
+    }
+  },
+  "originalMapBrowser": {
+    "routes": [
+      {
+        "players": 2,
+        "commands": 132,
+        "turn": 9,
+        "trades": 64,
+        "buy": 24,
+        "sell": 40,
+        "days": [
+          {
+            "date": "1998-01-10",
+            "index": 31458,
+            "shared": 2.817183256149292
+          },
+          {
+            "date": "1998-01-12",
+            "index": 32643,
+            "shared": -0.6912375092506409
+          },
+          {
+            "date": "1998-01-13",
+            "index": 35076,
+            "shared": 3.0229437351226807
+          }
+        ],
+        "closed": [
+          "1998-01-11"
+        ],
+        "up": 12,
+        "down": 5,
+        "prefixes": [
+          "buy",
+          "market-date",
+          "sell",
+          "closed-date",
+          "reopen-date"
+        ],
+        "report": {
+          "normalSpeed": true,
+          "map": "original Japan; real UI commands; auth-only fixture; no game-state injection",
+          "marketChecks": [
+            {
+              "stock": "jp:26",
+              "blocked": "buy",
+              "oppositeAllowed": true
+            },
+            {
+              "stock": "jp:27",
+              "blocked": "sell",
+              "oppositeAllowed": true
+            },
+            {
+              "stock": "jp:28",
+              "blocked": "sell",
+              "oppositeAllowed": true
+            },
+            {
+              "stock": "jp:30",
+              "blocked": "buy",
+              "oppositeAllowed": true
+            },
+            {
+              "stock": "jp:31",
+              "blocked": "buy",
+              "oppositeAllowed": true
+            },
+            {
+              "stock": "jp:34",
+              "blocked": "buy",
+              "oppositeAllowed": true
+            }
+          ],
+          "errors": [],
+          "cleanup": {
+            "raf": 0,
+            "canvas": 0
+          }
+        },
+        "hashes": {
+          "replay": "d76635a290ee1c1e89e94ef9a65f85932bb6d982b8da724ed0e02d8fbfd88e78",
+          "state": "aed759eab5bbdcd5d3848ec42aaaf87f2a8944e1b6e939b3953936cbcbb70395",
+          "events": "d5dd9a6e4bc50de8f6f7e9b390438326cd022291e847591d506162965c2f5b77"
+        },
+        "replay": "frontend/src/features/richman/game/fixtures/stock-market-v42-2-replay.json",
+        "screenshots": "/private/tmp/richman-unified-ui-04a-2"
+      },
+      {
+        "players": 3,
+        "commands": 348,
+        "turn": 13,
+        "trades": 90,
+        "buy": 36,
+        "sell": 54,
+        "days": [
+          {
+            "date": "1998-01-10",
+            "index": 29756,
+            "shared": -2.3402490615844727
+          },
+          {
+            "date": "1998-01-12",
+            "index": 29087,
+            "shared": -0.8335367441177368
+          },
+          {
+            "date": "1998-01-13",
+            "index": 29861,
+            "shared": 3.65194034576416
+          }
+        ],
+        "closed": [
+          "1998-01-11"
+        ],
+        "up": 5,
+        "down": 9,
+        "prefixes": [
+          "buy",
+          "market-date",
+          "sell",
+          "closed-date",
+          "reopen-date"
+        ],
+        "report": {
+          "normalSpeed": true,
+          "map": "original Japan; real UI commands; auth-only fixture; no game-state injection",
+          "marketChecks": [
+            {
+              "stock": "jp:26",
+              "blocked": "sell",
+              "oppositeAllowed": true
+            },
+            {
+              "stock": "jp:27",
+              "blocked": "buy",
+              "oppositeAllowed": true
+            },
+            {
+              "stock": "jp:29",
+              "blocked": "sell",
+              "oppositeAllowed": true
+            },
+            {
+              "stock": "jp:34",
+              "blocked": "sell",
+              "oppositeAllowed": true
+            }
+          ],
+          "errors": [],
+          "cleanup": {
+            "raf": 0,
+            "canvas": 0
+          }
+        },
+        "hashes": {
+          "replay": "1eecf010454c153ea5236acdd2b070f060b2a83a89639d466ee37c84124c046f",
+          "state": "7b11429efd8cea87df6d2060e059d853206b9e7525a81d62a2fd687970e5853f",
+          "events": "aa28770d9578315b2381a704e1f1d637406d3ff26571cda3da828edae57543bf"
+        },
+        "replay": "frontend/src/features/richman/game/fixtures/stock-market-v42-3-replay.json",
+        "screenshots": "/private/tmp/richman-unified-ui-04a-3"
+      },
+      {
+        "players": 4,
+        "commands": 452,
+        "turn": 17,
+        "trades": 128,
+        "buy": 48,
+        "sell": 80,
+        "days": [
+          {
+            "date": "1998-01-10",
+            "index": 30390,
+            "shared": 3.107639789581299
+          },
+          {
+            "date": "1998-01-12",
+            "index": 32002,
+            "shared": 3.7151575088500977
+          },
+          {
+            "date": "1998-01-13",
+            "index": 33034,
+            "shared": -1.5352697372436523
+          }
+        ],
+        "closed": [
+          "1998-01-11"
+        ],
+        "up": 9,
+        "down": 8,
+        "prefixes": [
+          "buy",
+          "market-date",
+          "sell",
+          "closed-date",
+          "reopen-date"
+        ],
+        "report": {
+          "normalSpeed": true,
+          "map": "original Japan; real UI commands; auth-only fixture; no game-state injection",
+          "marketChecks": [
+            {
+              "stock": "jp:25",
+              "blocked": "buy",
+              "oppositeAllowed": true
+            },
+            {
+              "stock": "jp:26",
+              "blocked": "sell",
+              "oppositeAllowed": true
+            },
+            {
+              "stock": "jp:27",
+              "blocked": "sell",
+              "oppositeAllowed": true
+            },
+            {
+              "stock": "jp:28",
+              "blocked": "buy",
+              "oppositeAllowed": true
+            },
+            {
+              "stock": "jp:29",
+              "blocked": "sell",
+              "oppositeAllowed": true
+            },
+            {
+              "stock": "jp:35",
+              "blocked": "buy",
+              "oppositeAllowed": true
+            }
+          ],
+          "errors": [],
+          "cleanup": {
+            "raf": 0,
+            "canvas": 0
+          }
+        },
+        "hashes": {
+          "replay": "b850673e9d3ba12c71bc2d256865202c98da7ab57680384318f39940bc5ba01e",
+          "state": "12a7013921a68a8d201c9c0c56911891822bfbda74d850f2637b23ac6da830b3",
+          "events": "cfa85b9f4e81f74bd1c6b4d0f4814093834e7442a36bddb23980d2fa68540e82"
+        },
+        "replay": "frontend/src/features/richman/game/fixtures/stock-market-v42-4-replay.json",
+        "screenshots": "/private/tmp/richman-unified-ui-04a-4"
+      }
+    ],
+    "commands": 932,
+    "trades": 282,
+    "buy": 108,
+    "sell": 174,
+    "normalSpeed": true,
+    "authOnlyFixture": true,
+    "gameStateInjection": false,
+    "independentAccounting": "all trades and 12 quotes each open day; closed date unchanged",
+    "continuations": [
+      "buy",
+      "market-date",
+      "sell",
+      "closed-date",
+      "reopen-date"
+    ]
+  },
+  "resolvedFailures": [
+    "Rule-chain circular import caused 18 legacy suite initialization failures and initial UI entry failure; split stock-market-rules from stock-market algorithm, then reran.",
+    "Concurrent 3 Chrome routes and full suite caused one old site-circuit timeout and two worker notification timeouts; final full suite after browsers finished passed with maxWorkers=2. No assertion/timeout configuration relaxed."
+  ],
+  "notNewBrowserAcceptance": [
+    "red/black cards or news combined with new quotes",
+    "global/individual suspension combined with new quotes",
+    "negative-dividend/loan bankruptcy or G7 use combined with new quotes",
+    "new minigame gameplay input (routes only wait for natural return)"
+  ],
+  "remainingDifferences": [
+    "native x87/CRT/time reseed equivalence",
+    "native float average-cost",
+    "full native chart/input/audio",
+    "other asset listings",
+    "special actors",
+    "native roulette",
+    "native exit call stack and ending",
+    "minigame presentation/collision"
+  ],
+  "next": "S2-04b: native average cost, holdings value/profit, manual/cash-subscription/forced-sale accounting; v43 for new semantics",
+  "release": {
+    "committed": false,
+    "pushed": false,
+    "deployed": false
+  }
+}

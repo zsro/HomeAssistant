@@ -1,0 +1,73 @@
+[
+  {
+    "id": "japan:company:1",
+    "name": "三越百貨",
+    "stockId": "jp:26",
+    "capital": 176000,
+    "funds": 0,
+    "cumulative": 0,
+    "nodeIds": [
+      50,
+      107
+    ]
+  },
+  {
+    "id": "japan:company:2",
+    "name": "豐田汽車",
+    "stockId": "jp:29",
+    "capital": 270000,
+    "funds": 0,
+    "cumulative": 0,
+    "nodeIds": [
+      59,
+      60
+    ]
+  },
+  {
+    "id": "japan:company:3",
+    "name": "日產建設",
+    "stockId": "jp:27",
+    "capital": 244000,
+    "funds": 0,
+    "cumulative": 0,
+    "nodeIds": [
+      67,
+      68
+    ]
+  },
+  {
+    "id": "japan:company:4",
+    "name": "三井生命",
+    "stockId": "jp:25",
+    "capital": 790000,
+    "funds": 0,
+    "cumulative": 0,
+    "nodeIds": [
+      92,
+      93
+    ]
+  },
+  {
+    "id": "japan:company:5",
+    "name": "ＳＥＧＡ",
+    "stockId": "jp:28",
+    "capital": 2400000,
+    "funds": 0,
+    "cumulative": 0,
+    "nodeIds": [
+      102,
+      103
+    ]
+  },
+  {
+    "id": "japan:company:6",
+    "name": "富士銀行",
+    "stockId": "jp:24",
+    "capital": 1000000,
+    "funds": 0,
+    "cumulative": 0,
+    "nodeIds": [
+      1
+    ]
+  }
+]

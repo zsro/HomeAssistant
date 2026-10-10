@@ -1,0 +1,133 @@
+{
+  "referenceCommit": "ec7d70e693059d1e781d9d1cc2ad7f36d360d39e",
+  "sources": [
+    {
+      "path": "asm/rich4_fortune.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_fortune.asm",
+      "gitBlobSha1": "32a7a9dff203a46ec3d2906c1e5f1ede22f97e70",
+      "sha256": "d6309c81b0943a38e138bcdf85c8d006ddb0ba53c4d72744c4d3cc4ab63a53fc"
+    },
+    {
+      "path": "asm/rich4.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4.asm",
+      "gitBlobSha1": "d11a64755094435fa9953652a5a4951871fd9697",
+      "sha256": "30904cbb4f23a6b74fc1b80ad023bd7dff11b441c2c1978f768f9891d099d64a"
+    },
+    {
+      "path": "asm/rich4_card_utils.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_card_utils.asm",
+      "gitBlobSha1": "23304fd33491d039d9f50d36475fa9794acccdb2",
+      "sha256": "937d2f587f15068f1f1280ac60d4a61c0249dbde0f206bfcc1489a29591d8181"
+    },
+    {
+      "path": "asm/rich4_card_passive.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_card_passive.asm",
+      "gitBlobSha1": "786c4467dcb1827b9bbe85c134ebb9560e2de3a9",
+      "sha256": "2c8ceb5582bb36974922ead75c86e681e35bf8faeb3ccf9a919edd108a0eaf9d"
+    },
+    {
+      "path": "asm/rich4_hospital_utils.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_hospital_utils.asm",
+      "gitBlobSha1": "a6442121b32fc0380f3a20909590236f8e7dca5e",
+      "sha256": "ba23adbaa7ccc396f3b99d8854285ee222aea8c1b81bcfc0637e72a6e56c145a"
+    },
+    {
+      "path": "asm/rich4_prison_utils.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_prison_utils.asm",
+      "gitBlobSha1": "96762e540959c05618816670fe7535e3ab495c97",
+      "sha256": "26984458a39e9fc06941772cc9b34931b32d85f561d08a4bddb88d450863abbc"
+    },
+    {
+      "path": "asm/rich4_player_utils.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_utils.asm",
+      "gitBlobSha1": "4bdaafa1f87f9fcd5f71dcf50f1aebd7e795d6be",
+      "sha256": "17479913576a004458908f124c4d7e94361dab41a501830d2ecb87eb7b438f01"
+    },
+    {
+      "path": "asm/rich4_player_info.h",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_info.h",
+      "gitBlobSha1": "2f04e6aa425bba2f9345b64ce0ab4c1240ac185f",
+      "sha256": "cc17726ce054de587a42c0f335d84495e66698da2e15eb6a7b7ca28ab38604be"
+    }
+  ],
+  "eligibility": {
+    "address": "0044bb4b/0044bcb1..0044be0f",
+    "10/11": "only traffic1/2; remap to10 for1,11 for2",
+    "12/13": "only traffic0/1; remap12 for0,13 for1",
+    "14/15/16": "traffic0/1/2 remap14/15/16;reject traffic>2;ASM15 foot becomes14 despite prior C typo",
+    "33..36": "requires stage0;Japan map2 gives41..44;Web single Japan base stage candidate"
+  },
+  "handlers": {
+    "10": {
+      "address": "0044ca46",
+      "effect": "resistance72;cancel1;code2 ignored;traffic=0,dice=1;return tool5 pool once"
+    },
+    "11": {
+      "address": "0044cb53",
+      "effect": "resistance72;cancel1;code2 ignored;traffic=0,dice=1;return tool6 pool once"
+    },
+    "12/13": {
+      "address": "0044cc53/0044cd6c ->0044ccd4",
+      "effect": "hospital3;resistance72 cancel1/double2;then try_mianzui_jiahuo;actual target0040cd07 before hospital helper"
+    },
+    "14/15/16": {
+      "address": "0044cd99/0044cf1e/0044d06d",
+      "effect": "priceIndex*3000;money70 cancel1/double2;cash-bank actual payment public;no absolution/redirect/revenge;policy insurance check remains deferred",
+      "labels": "14 pedestrian crossing fine;15 motorcycle no helmet;16 car speeding;C motorcycle overspeed name is inaccurate versus encoded string"
+    },
+    "41/42/43/44": {
+      "address": "0044da11/0044da3f/0044da6d/0044da9b ->0044d80b",
+      "effect": "prison3/5/7/9;resistance72 cancel1/double2;then auto absolution optional redirect;no vehicle damage helper"
+    }
+  },
+  "reactions": {
+    "address": "00441210,0044476a",
+    "order": "god->automatic21->optional19->actual detention;target not rechecked, no revenge/hostility",
+    "targets": "other who_plays nonzero, including detained/hotel;no distance requirement"
+  },
+  "hospitalDamage": {
+    "address": "0040cd07",
+    "fields": "only alive and dword at+50==0 clears current traffic/dice and returns base moto/car pool;otherwise retains;four bytes hotel/disappear/prison/hospital",
+    "Web": "hotel/prison/hospital gate;no disappear field;active engineer clearing and dream-suspended retention inherited candidate;does not copy temporary distant-node/speech RNG"
+  },
+  "detention": {
+    "address": "0043ec3f/0043d593;0040d761",
+    "fields": "existing same-facility days add &127;new admission clears conflicting hotel/disappear/prison/hospital via+50 dword;roster and forced node update;other action statuses preserved",
+    "Web": "reuse incoming-action raw128 clock;hospital node55,prison node84 from current topology;not calendar days;roster switch and hotel clear;attached gods retained",
+    "deferredDetails": "Hospital helper also calls insurance payout helper at2000*days*priceIndex if policy applies, and increments +66 statistic; no policy/statistic representation added in this batch."
+  },
+  "scope": {
+    "new": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      41,
+      42,
+      43,
+      44
+    ],
+    "totalJapan": 32,
+    "japanSlots": 37,
+    "globalHandlersImplemented": 32,
+    "globalHandlers": 49,
+    "remainingJapan": [
+      2,
+      3,
+      4,
+      6,
+      7
+    ]
+  },
+  "deferred": [
+    "calendar/interest",
+    "loan maturity",
+    "original bankruptcy auctions",
+    "full company/insurance and admission payouts",
+    "other maps/regional stage",
+    "disappearance and animation/speech RNG"
+  ]
+}

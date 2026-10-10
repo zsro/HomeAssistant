@@ -1,0 +1,189 @@
+{
+  "players": 3,
+  "commands": 586,
+  "turn": 77,
+  "auto": 81,
+  "human": 146,
+  "acquisitions": [
+    {
+      "id": "player-2",
+      "ai": false,
+      "item": "card:26",
+      "turn": 38,
+      "action": "buyItem",
+      "evidence": [
+        {
+          "item": "card:26",
+          "cost": 35
+        }
+      ]
+    },
+    {
+      "id": "player-1",
+      "ai": false,
+      "item": "card:26",
+      "turn": 63,
+      "action": "magic",
+      "evidence": [
+        {
+          "node": 73,
+          "group": 3,
+          "targets": [
+            "player-1"
+          ],
+          "effect": 6,
+          "title": "得一张卡片",
+          "rows": [
+            {
+              "playerId": "player-1",
+              "lines": [
+                "获得查税卡。"
+              ],
+              "pointsBefore": 120,
+              "pointsAfter": 120,
+              "cashBefore": 40325,
+              "cashAfter": 40325,
+              "bankBefore": 50848,
+              "bankAfter": 50848,
+              "stopBefore": 0,
+              "stopAfter": 0,
+              "previousBefore": 66,
+              "previousAfter": 66,
+              "received": {
+                "itemId": "card:26",
+                "discarded": null
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "uses": [
+    {
+      "ai": true,
+      "id": "player-3",
+      "item": "card:26",
+      "turn": 76,
+      "gain": 0,
+      "discarded": 0,
+      "receipt": {
+        "type": "taxSettled",
+        "sourceId": "player-1",
+        "payerId": "player-1",
+        "amount": 0,
+        "waived": true,
+        "sequence": 1074,
+        "commandId": "command-579",
+        "playerId": "player-1",
+        "turn": 76
+      },
+      "before": {
+        "player-1": {
+          "cash": 38875,
+          "bank": 50848
+        },
+        "player-2": {
+          "cash": 17071,
+          "bank": 51548
+        },
+        "player-3": {
+          "cash": 37184,
+          "bank": 50150
+        }
+      },
+      "after": {
+        "player-1": {
+          "cash": 38875,
+          "bank": 50848
+        },
+        "player-2": {
+          "cash": 17071,
+          "bank": 51548
+        },
+        "player-3": {
+          "cash": 37184,
+          "bank": 50150
+        }
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "ai": true,
+      "id": "player-3",
+      "active": "player-1",
+      "stage": "redirect",
+      "choice": "use",
+      "target": "player-1",
+      "turn": 76
+    }
+  ],
+  "cancellations": [
+    {
+      "ai": false,
+      "id": "player-1",
+      "item": "card:26",
+      "turn": 76
+    }
+  ],
+  "prefixes": [
+    "card:26-acquired",
+    "cancel-before",
+    "cancel-after",
+    "card:26-confirm-before",
+    "card:26-confirm-after",
+    "tax-redirect-paused",
+    "tax-redirect-resumed",
+    "tax-redirect-before",
+    "tax-redirect-after",
+    "tax-settled-before",
+    "tax-settled-after"
+  ],
+  "report": {
+    "policy": "cash-v1",
+    "toolWindows": [
+      "tool:08",
+      "tool:09"
+    ],
+    "crossChecks": [
+      {
+        "index": 562,
+        "active": "player-1",
+        "actor": "player-3",
+        "kind": "reaction",
+        "computer": true,
+        "item": "card:26",
+        "stage": "redirect"
+      }
+    ],
+    "route": "redirect",
+    "terminal": false,
+    "players": 3,
+    "normalSpeed": true,
+    "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+    "commands": 586,
+    "auto": 81,
+    "human": 146,
+    "lifecycle": [
+      "pause stops waiting",
+      "resume",
+      "reset dialog cancel",
+      "reset",
+      "replace with humans",
+      "exit cleanup",
+      "fullscreen",
+      "390px"
+    ],
+    "cleanup": {
+      "raf": 0,
+      "canvas": 0
+    },
+    "errors": []
+  },
+  "hashes": {
+    "replay": "9dccc01144c28aa176b89433664004e806ec8c7ee2a1c5ae4b9635f586de79a0",
+    "state": "ab11d961f8067d282013be1ed4b117839b3835f829bad677ff96dc6d6cdc8385",
+    "events": "036c4e9cbf21c58839f1a28e040b111d61f0a854faed241c9b96b7a34ddd12f1"
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "stage": "S3-02l",
+  "rulesId": "japan-events-candidate-v44",
+  "fingerprint": "f9dbb7e9",
+  "policy": "gods-v1",
+  "newGameSemantics": false,
+  "nativeExecution": false,
+  "referenceCommit": "ec7d70e693059d1e781d9d1cc2ad7f36d360d39e",
+  "preservedPolicies": [
+    "basic-v1",
+    "tools-v1",
+    "rent-v1",
+    "defense-v1",
+    "estate-v1",
+    "cash-v1",
+    "status-v1",
+    "inventory-v1",
+    "commerce-v1",
+    "area-v1",
+    "roads-v1",
+    "mobility-v1"
+  ],
+  "priorNativeAudit": [
+    "s2-02m-sources.json",
+    "s2-04a-sources.json",
+    "s2-04b-sources.json"
+  ],
+  "nativeReread": [
+    {
+      "path": "asm/rich4_card_songshenfu.asm",
+      "localPath": "/private/tmp/rich4-g6/rich4_card_songshenfu.asm",
+      "sha256": "02cac85b39b838474ae642c354a104aceb02559c00de6ee6fec04b18b80971fe",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_card_songshenfu.asm",
+      "reread": true
+    },
+    {
+      "path": "asm/rich4_card_qingshenfu.asm",
+      "localPath": "/private/tmp/rich4-g6/rich4_card_qingshenfu.asm",
+      "sha256": "046bdae010cdafbe4153789cc122a79ca98d087bcd5833dacb72cebe1ffaf55d",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_card_qingshenfu.asm",
+      "reread": true
+    },
+    {
+      "path": "asm/rich4_card_hongka.asm",
+      "localPath": "/private/tmp/rich4-g6/rich4_card_hongka.asm",
+      "sha256": "460c0948cae66960669c52b804b2d8b0205c5efe8be80a38198e2cd9692bd5cc",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_card_hongka.asm",
+      "reread": true
+    },
+    {
+      "path": "asm/rich4_card_heika.asm",
+      "localPath": "/private/tmp/rich4-g6/rich4_card_heika.asm",
+      "sha256": "0b31bae1adf04b1a1c92ebd5266a0019285b2488d957893f01487f971537fd7b",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_card_heika.asm",
+      "reread": true
+    }
+  ],
+  "claims": [
+    "Public nearest legal god only; no hypothetical farther selection",
+    "Current remaining duration and allied cash/buildings guard invitations; no wheel forecast",
+    "Red sums own and ally current integer market-value gains less enemy gains; black rejects own/ally integer loss",
+    "No autonomous share trading/subscription/financing; human legal investments and alliance are route support only",
+    "Halted quotes and news closure conservatively skipped; existing world still permits card effects",
+    "Quotes do not alter holdings average/company control/cash/bank/public fund",
+    "All twelve old policies delegate unchanged; no hidden news/fortune sequence, RNG or G7 checkpoint access"
+  ],
+  "localEvidence": [
+    {
+      "path": "frontend/src/features/richman/game/computer-gods.ts",
+      "sha256": "f48e8efa46ff627de2d7dc965859cf2f1b22685b6a3dadf56ed94657051f100e"
+    },
+    {
+      "path": "frontend/src/features/richman/game/computer-gods.test.ts",
+      "sha256": "c3759b5d461c0ebbddf597c62c55f6c863b4b696f2a71a28974333632ff6797e"
+    },
+    {
+      "path": "frontend/src/features/richman/game/computer-gods-browser.test.ts",
+      "sha256": "2e710f69ebd220d9d9e313ae8c74e420b9c6a1e6e7998d998a14c3df399ec2ad"
+    },
+    {
+      "path": "frontend/src/features/richman/game/computer.ts",
+      "sha256": "a29a7b26bf7a9876a1d560b96a2fd696a5b49c7b44d8cdda58bc0d382e3f026d"
+    },
+    {
+      "path": "frontend/src/features/richman/game/session.ts",
+      "sha256": "976746be38198ded7f34ba5df2d5d35e2c6d4927f5915ca7946ed68896d61b4b"
+    },
+    {
+      "path": "frontend/src/features/richman/game/g6.ts",
+      "sha256": "9d2c2d33b4f1e4e021fc19442ce4d7cf3fa012fe059e12849fecaaf818760b03"
+    },
+    {
+      "path": "frontend/src/features/richman/game/g6-market.ts",
+      "sha256": "e41019104edd4b8c5c55f499650526c6af815d42bcc254b6205476ce897e1333"
+    },
+    {
+      "path": "frontend/src/features/richman/game/g6-catalog.ts",
+      "sha256": "0eb03272671ec0698d0bd5c3ef52b91b613bbab46973d8ea57a83687cc846138"
+    },
+    {
+      "path": "frontend/src/features/richman/game/engine.ts",
+      "sha256": "edb72546f0f2c7269d77867855f24b764457c3b9f6a658632f50444eedada425"
+    },
+    {
+      "path": "frontend/src/features/richman/ComputerPanel.tsx",
+      "sha256": "6f146f1fe373df118b0978fe9ca1e0c864300c7be26b7453d07d3e7153dba5fd"
+    },
+    {
+      "path": "frontend/src/pages/RichmanPage.tsx",
+      "sha256": "3946804b442905559b3ac4313f75303f0e2ae7670881061c61dcfc6e28223b16"
+    },
+    {
+      "path": "scripts/richman/plan-computer-gods.ts",
+      "sha256": "2e834c5957d3fd1c56b6214ad8438073cdd47a3976fcebc96c4a066ff736e951"
+    },
+    {
+      "path": "scripts/richman/prepare-gods-routes.ts",
+      "sha256": "18c10f737a80c7c0cfa8d94533d2ac3a14f56f7e0ae5bf4cd0f88249d772a9d5"
+    },
+    {
+      "path": "scripts/richman/verify-computer-gods.ts",
+      "sha256": "664472f35b9032479e8846e89a7feb4903f694993982a7332a42dc55ef2fd705"
+    },
+    {
+      "path": "scripts/richman/archive-computer-gods.ts",
+      "sha256": "6d5fb3f74e3834c8593c18eff12025bfb5661857c2d5b1f3b4474c806155deb9"
+    },
+    {
+      "path": "scripts/richman/computer-gods-ui-browser.cjs",
+      "sha256": "3747532db2c0c8018ec61742a4054815e89615f49822f2e7687ed067528d5501"
+    },
+    {
+      "path": "scripts/richman/computer-gods-built-browser.cjs",
+      "sha256": "6a9ed7411efe0e5cb48f0b1e79375377c3baa05672f05cfb344d577aeb6ed334"
+    }
+  ]
+}

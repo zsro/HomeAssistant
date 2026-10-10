@@ -1,0 +1,101 @@
+{
+  "stage": "S3-04b",
+  "referenceCommit": "ec7d70e693059d1e781d9d1cc2ad7f36d360d39e",
+  "nativeExecution": false,
+  "provenance": "retained local reference cache; hash registered, no fresh remote fetch",
+  "sourceHashes": {
+    "rich4.asm": {
+      "bytes": 1007904,
+      "sha256": "30904cbb4f23a6b74fc1b80ad023bd7dff11b441c2c1978f768f9891d099d64a"
+    },
+    "rich4_player_core_actions.asm": {
+      "bytes": 151420,
+      "sha256": "2874c1a3e0ca1d0da5afe4cb93e42cf2d6f6fa864dbee11d7bcaa028af07d94a"
+    },
+    "rich4_player_say_on_events.asm": {
+      "bytes": 11100,
+      "sha256": "9d12b7717f448b8928db8f2b89cfa0b4bbae694757ea9a53a6c8ea5d7fa5adb9"
+    },
+    "rich4_text_drawing.asm": {
+      "bytes": 17298,
+      "sha256": "0de9b12f8bb5faf7ef3c0df4c97639a103b54d9945cc527b2608f77a4c2a4ec1"
+    },
+    "rich4_sound_effect.asm": {
+      "bytes": 21244,
+      "sha256": "f4210befb1d86ec31f01e544f4122187aa46c095cf89edb9c7a20d68d5d279a3"
+    },
+    "rich4_characters.c": {
+      "bytes": 2963,
+      "sha256": "42ac84738a5681c0010d23d2340f1b625e56c50f4849c2a0165c7e17b66d0852"
+    },
+    "rich4_player_info.h": {
+      "bytes": 2465,
+      "sha256": "cc17726ce054de587a42c0f335d84495e66698da2e15eb6a7b7ca28ab38604be"
+    }
+  },
+  "resourceAudit": "s3-04b-resources.json",
+  "facts": [
+    {
+      "id": "R11-B01",
+      "source": "rich4_characters.c + rich4_player_core_actions.asm + rich4.asm/_rich4_event_strings",
+      "finding": "Native character ids salonbus1/chyan3/tuu4/xiaomei9; 12 rows ×27 pointers, stride108. Selected slots0/1/2/15 yield16 #dddd prefixes. Each full prefixed Big5 string uniquely matches local EXE; no seat-based inference or guessed transcript."
+    },
+    {
+      "id": "R11-B02",
+      "source": "rich4_text_drawing.asm:344–383; rich4.asm:23625–23708; rich4_sound_effect.asm:819–882",
+      "finding": "#dddd is parsed as decimal resource id, then fcn_0045441a reads Speaking.mkf. Player speech routes through text drawing or equivalent # branch. Local selected WAVs decode PCM 22050Hz mono8bit."
+    },
+    {
+      "id": "R11-B03",
+      "source": "rich4_player_core_actions.asm:2391–2502",
+      "finding": "50-point node chooses slots0/1 via rand&1;30 chooses slot2;10 has no player_say. Web only matches existing same-command landed+pointsAwarded at proven nodes, uses public event sequence parity for50 (explicit presentation difference, no game RNG consumption)."
+    },
+    {
+      "id": "R11-B04",
+      "source": "rich4_player_core_actions.asm:400–460,1008–1053; rich4.asm ref_004823d2/ref_004823da",
+      "finding": "Accepted ordinary purchase plays descriptor49; ordinary upgrade plays50 and level5 speaks slot15. Web only propertySettled buy/upgrade with verified ordinary property transition; no generic rent, card/worker/large-building inference. Descriptor50 alone appears twice in local EXE; adjacent49/50 pair uniquely matches at516786."
+    },
+    {
+      "id": "R11-B05",
+      "source": "rich4.asm:23534–23563; rich4_player_info.h",
+      "finding": "player_say suppresses nonzero disappearance(+51), sleep(+54), sleepwalk(+55). Web travel/winter/dream gate reads pre-command public state; special actors unassigned. Native last-string-pointer suppression and popup scheduling are not fully recreated."
+    },
+    {
+      "id": "R11-B06",
+      "source": "rich4_player_core_actions.asm:322–364; inherited S3-04a slots and MapDat.MKF #2",
+      "finding": "Extend landing cues to all33 Japanese nodes whose code is2..16. Codes10..13 use48; remaining use43. New nodes22/24/26/28/35/55/73/78/88/98; no code0/1 service invented, passing/nested log events do not play landing cues."
+    },
+    {
+      "id": "R11-B07",
+      "source": "rich4_sound_effect.asm:819–882; audio.ts",
+      "finding": "Native starts new voice after releasing prior UI sound. Web explicitly uses separate effect/voice channels,3 waiting/channel,priority2 buy/build vspriority1 site/points, higher preempts and drops backlog, equal waits FIFO. Voice ducks music to35% of chosen music volume; independent voice volume. Queue/ducking not claimed native identical."
+    },
+    {
+      "id": "R11-B08",
+      "source": "audio.ts + GameSession.publish",
+      "finding": "Only accepted commands/new game emit detached cues. Game/revision and sequence/channel/id prevent duplicate play. Locked/paused/hidden/muted/replay/finished cues are dropped. Turn change, cancel, time-machine consumed, reset/new game/dispose clear transients and queue; late media callbacks cannot revive old clips. No engine or replay schema edit."
+    },
+    {
+      "id": "R11-B09",
+      "source": "audio-events.test.ts + audio-queue.test.ts + session-audio.test.ts",
+      "finding": "Necessary local checks cover mapping, suppressions, public-read boundary, ordinary property transitions, queue and playback invalidation. Mock media/local engine comparison only; no original map long flow or browser playback accepted."
+    }
+  ],
+  "presentationProfile": "event-audio-v1",
+  "rulesId": "japan-events-candidate-v47",
+  "newGameSemantics": false,
+  "newPolicyVersion": false,
+  "nativeDifferences": [
+    "original speech rand&1 vs public-sequence parity",
+    "original replace-immediately speech and popup scheduling vs bounded Web queue/ducking",
+    "native last-string-pointer suppression not fully reproduced",
+    "only16 Speaking clips; others unassigned",
+    "original CD/MIDI stack/volume curve retained gap",
+    "native executable layout differs; matched data does not prove identical local callsites"
+  ],
+  "preservedDifferences": [
+    "original exit stack/endgame, RNG, special actors, spinner",
+    "original AI/market, asset listings, minigame presentation/collision and historical gaps",
+    "no invented autonomous god wandering"
+  ]
+}

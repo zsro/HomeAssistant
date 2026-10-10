@@ -1,0 +1,54 @@
+{
+  "normalSpeed": true,
+  "seed": "s2-02c-worker",
+  "map": "original Japan, no map/state injection",
+  "rulesId": "japan-tools-candidate-v3",
+  "itemFingerprint": "18003b93",
+  "candidates": [
+    "名古屋 · 108 号路格待售地产 · 0 → 1 级",
+    "名古屋 · 109 号路格待售地产 · 0 → 1 级",
+    "名古屋 · 110 号路格待售地产 · 0 → 1 级",
+    "大阪 · 3 号路格待售地产 · 0 → 1 级",
+    "大阪 · 4 号路格待售地产 · 0 → 1 级",
+    "大阪 · 5 号路格待售地产 · 0 → 1 级"
+  ],
+  "checks": [
+    "multiple targets",
+    "preview location",
+    "non-current land build",
+    "pause",
+    "cancel without consumption",
+    "reset dialog cancel retains target",
+    "fullscreen",
+    "390px",
+    "pan/zoom/resize do not change candidates",
+    "cash/points/ownership/RNG preserved",
+    "worker then remote dice",
+    "downloaded replay",
+    "reset restores worker and unselected targets",
+    "v2 and v1 modes available",
+    "cleanup"
+  ],
+  "built": [
+    {
+      "type": "propertyBuilt",
+      "propertyId": "japan:land:16",
+      "fromLevel": 0,
+      "level": 1,
+      "ownerId": null,
+      "sequence": 10,
+      "commandId": "command-8",
+      "playerId": "player-1",
+      "turn": 1
+    }
+  ],
+  "consumed": [
+    "tool:09",
+    "tool:08"
+  ],
+  "cleanup": {
+    "raf": 0,
+    "canvas": 0
+  },
+  "errors": []
+}

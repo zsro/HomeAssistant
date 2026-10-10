@@ -1,0 +1,1711 @@
+{
+  "stage": "S3-02l",
+  "status": "candidate-group-accepted",
+  "policy": "gods-v1",
+  "rulesId": "japan-events-candidate-v44",
+  "fingerprint": "f9dbb7e9",
+  "newGameSemantics": false,
+  "nativeExecution": false,
+  "historicalCapabilities": {
+    "items": 43,
+    "news": 36,
+    "japanFortuneSlots": 37
+  },
+  "checks": {
+    "newDomain": {
+      "tests": 51,
+      "passed": true,
+      "log": "/private/tmp/gods-domain-final.log"
+    },
+    "relatedRegression": {
+      "firstRun": {
+        "tests": 683,
+        "files": 17,
+        "passed": true,
+        "log": "/private/tmp/gods-regression.log"
+      },
+      "uniqueDomainAfterSevenAddedCases": 690,
+      "fullFrontendRerun": false
+    },
+    "actualReplayArchiveTests": {
+      "tests": 3,
+      "files": 1,
+      "passed": true,
+      "log": "/private/tmp/gods-browser-tests.log"
+    },
+    "uniqueTestsThisBatch": 693,
+    "uniqueTestFiles": 18,
+    "compatibilityMatrix": {
+      "versions": "v1-v44",
+      "players": [
+        2,
+        3,
+        4
+      ],
+      "cases": 132,
+      "passed": true
+    },
+    "typecheck": true,
+    "lint": true,
+    "build": true,
+    "buildWarnings": [
+      "Existing chunk size warning retained"
+    ],
+    "builtUI": {
+      "built": true,
+      "policies": 13,
+      "switchBackToMobility": true,
+      "normalSpeed": true,
+      "defaultHuman": true,
+      "defaultBasic": true,
+      "toolsEffect": true,
+      "policyMetadata": true,
+      "resetPreservesPolicy": true,
+      "switchBackToBasic": true,
+      "switchBackToTools": true,
+      "switchBackToRent": true,
+      "switchBackToDefense": true,
+      "switchBackToEstate": true,
+      "switchBackToCash": true,
+      "switchBackToStatus": true,
+      "switchBackToRoads": true,
+      "switchBackToArea": true,
+      "switchBackToCommerce": true,
+      "switchBackToInventory": true,
+      "humanReplacement": true,
+      "exitWhileToolsWaiting": true,
+      "setup390": true,
+      "cleanup": {
+        "raf": 0,
+        "canvas": 0
+      },
+      "errors": []
+    },
+    "oldFixturesUnchanged": 388,
+    "preservedPolicies": [
+      "basic-v1",
+      "tools-v1",
+      "rent-v1",
+      "defense-v1",
+      "estate-v1",
+      "cash-v1",
+      "status-v1",
+      "inventory-v1",
+      "commerce-v1",
+      "area-v1",
+      "roads-v1",
+      "mobility-v1"
+    ]
+  },
+  "browser": {
+    "actualRoutes": [
+      {
+        "players": 2,
+        "commands": 1479,
+        "auto": 301,
+        "human": 296,
+        "acquisitions": [
+          {
+            "ai": true,
+            "id": "player-2",
+            "item": "card:24",
+            "turn": 54,
+            "cost": 50
+          },
+          {
+            "ai": true,
+            "id": "player-2",
+            "item": "card:22",
+            "turn": 120,
+            "cost": 10
+          },
+          {
+            "ai": true,
+            "id": "player-2",
+            "item": "card:25",
+            "turn": 120,
+            "cost": 30
+          },
+          {
+            "ai": true,
+            "id": "player-2",
+            "item": "card:22",
+            "turn": 150,
+            "cost": 10
+          }
+        ],
+        "uses": [
+          {
+            "ai": true,
+            "id": "player-2",
+            "item": "card:25",
+            "turn": 122,
+            "target": {
+              "kind": "stock",
+              "id": "jp:25"
+            },
+            "alliesBefore": {
+              "player-1": null,
+              "player-2": null
+            },
+            "choice": {
+              "target": {
+                "kind": "stock",
+                "id": "jp:25"
+              },
+              "score": 280,
+              "gain": 2800,
+              "own": 0,
+              "friend": 0,
+              "enemy": -2800,
+              "next": 12800
+            },
+            "godBefore": {
+              "id": "god-24",
+              "type": 2,
+              "node": 9,
+              "carrier": "player-2",
+              "remaining": 2
+            },
+            "godAfter": {
+              "id": "god-24",
+              "type": 2,
+              "node": 9,
+              "carrier": "player-2",
+              "remaining": 2
+            },
+            "quoteBefore": {
+              "momentum": 10,
+              "noise": 11.47822380065918,
+              "id": "jp:25",
+              "base": 14200,
+              "price": 15600,
+              "pool": 4900,
+              "quota": 950,
+              "trend": null,
+              "remaining": 0,
+              "history": [
+                9900,
+                9200,
+                8400,
+                7600,
+                8050,
+                8850,
+                8500,
+                7900,
+                8150,
+                8600,
+                9450,
+                9700,
+                9250,
+                8800,
+                9650,
+                10600,
+                11650,
+                12800,
+                14050,
+                14600,
+                14850,
+                13400,
+                12100,
+                10900,
+                9850,
+                10000,
+                11000,
+                12100,
+                13100,
+                12900,
+                13600,
+                12550,
+                11300,
+                10200,
+                9200,
+                8300,
+                7500,
+                6750,
+                6800,
+                7450,
+                8150,
+                8950,
+                9800,
+                10750,
+                11800,
+                12950,
+                14200,
+                15600
+              ]
+            },
+            "quoteAfter": {
+              "momentum": -10,
+              "noise": 11.47822380065918,
+              "id": "jp:25",
+              "base": 14200,
+              "price": 12800,
+              "pool": 4900,
+              "quota": 950,
+              "trend": "black",
+              "remaining": 2,
+              "history": [
+                9900,
+                9200,
+                8400,
+                7600,
+                8050,
+                8850,
+                8500,
+                7900,
+                8150,
+                8600,
+                9450,
+                9700,
+                9250,
+                8800,
+                9650,
+                10600,
+                11650,
+                12800,
+                14050,
+                14600,
+                14850,
+                13400,
+                12100,
+                10900,
+                9850,
+                10000,
+                11000,
+                12100,
+                13100,
+                12900,
+                13600,
+                12550,
+                11300,
+                10200,
+                9200,
+                8300,
+                7500,
+                6750,
+                6800,
+                7450,
+                8150,
+                8950,
+                9800,
+                10750,
+                11800,
+                12950,
+                14200,
+                12800
+              ]
+            }
+          },
+          {
+            "ai": true,
+            "id": "player-2",
+            "item": "card:25",
+            "turn": 146,
+            "target": {
+              "kind": "stock",
+              "id": "jp:33"
+            },
+            "alliesBefore": {
+              "player-1": null,
+              "player-2": null
+            },
+            "choice": {
+              "target": {
+                "kind": "stock",
+                "id": "jp:33"
+              },
+              "score": 260,
+              "gain": 2600,
+              "own": 0,
+              "friend": 0,
+              "enemy": -2600,
+              "next": 15950
+            },
+            "godBefore": {
+              "id": "god-19",
+              "type": 4,
+              "node": 70,
+              "carrier": "player-2",
+              "remaining": 3
+            },
+            "godAfter": {
+              "id": "god-19",
+              "type": 4,
+              "node": 70,
+              "carrier": "player-2",
+              "remaining": 3
+            },
+            "quoteBefore": {
+              "momentum": 5.477005958557129,
+              "noise": -3.041844606399536,
+              "id": "jp:33",
+              "base": 17650,
+              "price": 18550,
+              "pool": 9900,
+              "quota": 2446,
+              "trend": null,
+              "remaining": 0,
+              "history": [
+                22500,
+                21100,
+                19800,
+                18500,
+                16700,
+                15400,
+                15200,
+                15700,
+                16000,
+                15300,
+                14850,
+                13550,
+                13600,
+                12800,
+                12500,
+                11950,
+                12250,
+                13450,
+                14700,
+                16100,
+                17700,
+                18500,
+                20300,
+                22300,
+                22600,
+                23800,
+                23500,
+                23700,
+                22500,
+                20300,
+                19300,
+                17400,
+                15700,
+                14750,
+                14200,
+                13000,
+                12650,
+                11600,
+                10450,
+                10400,
+                10400,
+                9850,
+                9450,
+                9550,
+                10500,
+                11550,
+                12700,
+                13950,
+                14200,
+                14050,
+                13300,
+                12400,
+                12350,
+                12700,
+                13350,
+                14650,
+                16050,
+                17650,
+                18550
+              ]
+            },
+            "quoteAfter": {
+              "momentum": -10,
+              "noise": -3.041844606399536,
+              "id": "jp:33",
+              "base": 17650,
+              "price": 15950,
+              "pool": 9900,
+              "quota": 2446,
+              "trend": "black",
+              "remaining": 2,
+              "history": [
+                22500,
+                21100,
+                19800,
+                18500,
+                16700,
+                15400,
+                15200,
+                15700,
+                16000,
+                15300,
+                14850,
+                13550,
+                13600,
+                12800,
+                12500,
+                11950,
+                12250,
+                13450,
+                14700,
+                16100,
+                17700,
+                18500,
+                20300,
+                22300,
+                22600,
+                23800,
+                23500,
+                23700,
+                22500,
+                20300,
+                19300,
+                17400,
+                15700,
+                14750,
+                14200,
+                13000,
+                12650,
+                11600,
+                10450,
+                10400,
+                10400,
+                9850,
+                9450,
+                9550,
+                10500,
+                11550,
+                12700,
+                13950,
+                14200,
+                14050,
+                13300,
+                12400,
+                12350,
+                12700,
+                13350,
+                14650,
+                16050,
+                17650,
+                15950
+              ]
+            }
+          },
+          {
+            "ai": true,
+            "id": "player-2",
+            "item": "card:22",
+            "turn": 194,
+            "target": {
+              "kind": "player",
+              "id": "player-2"
+            },
+            "alliesBefore": {
+              "player-1": null,
+              "player-2": null
+            },
+            "choice": {
+              "target": {
+                "kind": "player",
+                "id": "player-2"
+              },
+              "score": 400
+            },
+            "godBefore": {
+              "id": "god-33",
+              "type": 5,
+              "node": 33,
+              "carrier": "player-2",
+              "remaining": 6
+            },
+            "godAfter": null,
+            "quoteBefore": null,
+            "quoteAfter": null
+          },
+          {
+            "ai": true,
+            "id": "player-2",
+            "item": "card:23",
+            "turn": 208,
+            "target": {
+              "kind": "god",
+              "id": "god-28"
+            },
+            "alliesBefore": {
+              "player-1": null,
+              "player-2": null
+            },
+            "choice": {
+              "target": {
+                "kind": "god",
+                "id": "god-28"
+              },
+              "score": 100
+            },
+            "godBefore": null,
+            "godAfter": {
+              "id": "god-28",
+              "type": 2,
+              "node": 103,
+              "carrier": "player-2",
+              "remaining": 7
+            },
+            "quoteBefore": null,
+            "quoteAfter": null
+          }
+        ],
+        "cancellations": [],
+        "gains": [
+          {
+            "playerId": "player-2",
+            "item": "card:24",
+            "amount": 1,
+            "turn": 54,
+            "action": "buyItem",
+            "eventTypes": [
+              "itemBought"
+            ],
+            "notices": []
+          },
+          {
+            "playerId": "player-2",
+            "item": "card:22",
+            "amount": 1,
+            "turn": 120,
+            "action": "buyItem",
+            "eventTypes": [
+              "itemBought"
+            ],
+            "notices": []
+          },
+          {
+            "playerId": "player-2",
+            "item": "card:25",
+            "amount": 1,
+            "turn": 120,
+            "action": "buyItem",
+            "eventTypes": [
+              "itemBought"
+            ],
+            "notices": []
+          },
+          {
+            "playerId": "player-2",
+            "item": "card:23",
+            "amount": 1,
+            "turn": 138,
+            "action": "animationDone",
+            "eventTypes": [
+              "nodeEntered",
+              "g6Notice",
+              "landed",
+              "propertyOffered"
+            ],
+            "notices": [
+              {
+                "type": "g6Notice",
+                "message": "玩家2附身大福神，期限7次自身行动边界。",
+                "sequence": 2000,
+                "commandId": "command-1025",
+                "playerId": "player-2",
+                "turn": 138
+              },
+              {
+                "type": "g6Notice",
+                "message": "玩家2获得card:13。",
+                "sequence": 2001,
+                "commandId": "command-1025",
+                "playerId": "player-2",
+                "turn": 138
+              },
+              {
+                "type": "g6Notice",
+                "message": "玩家2获得card:23。",
+                "sequence": 2002,
+                "commandId": "command-1025",
+                "playerId": "player-2",
+                "turn": 138
+              }
+            ]
+          },
+          {
+            "playerId": "player-2",
+            "item": "card:25",
+            "amount": 1,
+            "turn": 145,
+            "action": "magic",
+            "eventTypes": [
+              "magicResolved"
+            ],
+            "notices": []
+          },
+          {
+            "playerId": "player-2",
+            "item": "card:22",
+            "amount": 1,
+            "turn": 150,
+            "action": "buyItem",
+            "eventTypes": [
+              "itemBought"
+            ],
+            "notices": []
+          }
+        ],
+        "relations": [],
+        "prefixes": [
+          "god-attached",
+          "daily-market-before",
+          "daily-market-after",
+          "human-stock-before",
+          "human-stock-after",
+          "god-expired",
+          "card:24-received",
+          "card:24-bought",
+          "card:22-received",
+          "card:22-bought",
+          "card:25-received",
+          "card:25-bought",
+          "card:25-paused",
+          "card:25-resumed",
+          "card:25-confirm-before",
+          "card:25-confirm-after",
+          "card:23-received",
+          "card:22-paused",
+          "card:22-resumed",
+          "card:22-confirm-before",
+          "card:22-confirm-after",
+          "card:23-paused",
+          "card:23-resumed",
+          "card:23-confirm-before",
+          "card:23-confirm-after"
+        ],
+        "hashes": {
+          "replay": "2aab86e8c7aeff7a700fc554c178f58634cba89a83f0e756e57f9ad6badecab1",
+          "state": "c13567ce5127b65f2c7791eee0ffa747d310e2584b0371a8a97f03855ea2a928",
+          "events": "019c6076854e0d3d026c68fccb31cb54ad9c344e055b9bd3f56a1a1dddf2f1dc"
+        },
+        "report": {
+          "robotPreviews": [],
+          "policy": "gods-v1",
+          "toolWindows": [
+            "tool:08",
+            "tool:09",
+            "card:13",
+            "card:25",
+            "card:07",
+            "card:22",
+            "card:23"
+          ],
+          "crossChecks": [],
+          "route": "2",
+          "terminal": false,
+          "players": 2,
+          "normalSpeed": true,
+          "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+          "commands": 1479,
+          "auto": 301,
+          "human": 296,
+          "lifecycle": [
+            "pause stops waiting",
+            "resume",
+            "reset dialog cancel",
+            "reset",
+            "replace with humans",
+            "exit cleanup",
+            "fullscreen",
+            "390px"
+          ],
+          "cleanup": {
+            "raf": 0,
+            "canvas": 0
+          },
+          "errors": []
+        }
+      },
+      {
+        "players": 3,
+        "commands": 2389,
+        "auto": 644,
+        "human": 319,
+        "acquisitions": [
+          {
+            "ai": true,
+            "id": "player-3",
+            "item": "card:24",
+            "turn": 84,
+            "cost": 50
+          }
+        ],
+        "uses": [
+          {
+            "ai": true,
+            "id": "player-2",
+            "item": "card:25",
+            "turn": 113,
+            "target": {
+              "kind": "stock",
+              "id": "jp:32"
+            },
+            "alliesBefore": {
+              "player-1": null,
+              "player-2": null,
+              "player-3": null
+            },
+            "choice": {
+              "target": {
+                "kind": "stock",
+                "id": "jp:32"
+              },
+              "score": 300,
+              "gain": 3000,
+              "own": 0,
+              "friend": 0,
+              "enemy": -3000,
+              "next": 13650
+            },
+            "godBefore": {
+              "id": "god-4",
+              "type": 4,
+              "node": 88,
+              "carrier": "player-2",
+              "remaining": 6
+            },
+            "godAfter": {
+              "id": "god-4",
+              "type": 4,
+              "node": 88,
+              "carrier": "player-2",
+              "remaining": 6
+            },
+            "quoteBefore": {
+              "momentum": 10,
+              "noise": 4.514944553375244,
+              "id": "jp:32",
+              "base": 15150,
+              "price": 16650,
+              "pool": 9900,
+              "quota": 1178,
+              "trend": null,
+              "remaining": 0,
+              "history": [
+                30000,
+                27000,
+                26200,
+                23600,
+                23400,
+                25500,
+                23600,
+                21300,
+                19200,
+                17300,
+                15600,
+                15600,
+                17100,
+                17700,
+                16600,
+                15800,
+                17100,
+                18800,
+                17300,
+                15600,
+                14050,
+                12650,
+                12150,
+                11050,
+                10700,
+                11750,
+                12600,
+                13850,
+                15150,
+                16650
+              ]
+            },
+            "quoteAfter": {
+              "momentum": -10,
+              "noise": 4.514944553375244,
+              "id": "jp:32",
+              "base": 15150,
+              "price": 13650,
+              "pool": 9900,
+              "quota": 1178,
+              "trend": "black",
+              "remaining": 2,
+              "history": [
+                30000,
+                27000,
+                26200,
+                23600,
+                23400,
+                25500,
+                23600,
+                21300,
+                19200,
+                17300,
+                15600,
+                15600,
+                17100,
+                17700,
+                16600,
+                15800,
+                17100,
+                18800,
+                17300,
+                15600,
+                14050,
+                12650,
+                12150,
+                11050,
+                10700,
+                11750,
+                12600,
+                13850,
+                15150,
+                13650
+              ]
+            }
+          },
+          {
+            "ai": true,
+            "id": "player-3",
+            "item": "card:24",
+            "turn": 183,
+            "target": {
+              "kind": "stock",
+              "id": "jp:28"
+            },
+            "alliesBefore": {
+              "player-1": {
+                "partner": "player-3",
+                "remaining": 7
+              },
+              "player-2": null,
+              "player-3": {
+                "partner": "player-1",
+                "remaining": 6
+              }
+            },
+            "choice": {
+              "target": {
+                "kind": "stock",
+                "id": "jp:28"
+              },
+              "score": 190,
+              "gain": 1900,
+              "own": 0,
+              "friend": 1900,
+              "enemy": 0,
+              "next": 29300
+            },
+            "godBefore": null,
+            "godAfter": null,
+            "quoteBefore": {
+              "momentum": 2.9230997562408447,
+              "noise": 8.830060005187988,
+              "id": "jp:28",
+              "base": 26700,
+              "price": 27400,
+              "pool": 4900,
+              "quota": 749,
+              "trend": null,
+              "remaining": 0,
+              "history": [
+                30000,
+                30200,
+                27200,
+                25800,
+                24800,
+                26700,
+                29100,
+                27600,
+                27800,
+                29800,
+                32700,
+                31900,
+                33900,
+                33800,
+                31800,
+                32800,
+                32100,
+                30500,
+                27500,
+                28000,
+                27400,
+                28300,
+                31100,
+                34200,
+                37600,
+                38500,
+                42300,
+                41100,
+                40800,
+                42400,
+                38200,
+                34400,
+                33500,
+                36800,
+                40400,
+                43900,
+                48100,
+                52900,
+                52700,
+                47500,
+                45300,
+                43800,
+                39500,
+                36000,
+                32400,
+                29200,
+                26700,
+                27400
+              ]
+            },
+            "quoteAfter": {
+              "momentum": 10,
+              "noise": 8.830060005187988,
+              "id": "jp:28",
+              "base": 26700,
+              "price": 29300,
+              "pool": 4900,
+              "quota": 749,
+              "trend": "red",
+              "remaining": 2,
+              "history": [
+                30000,
+                30200,
+                27200,
+                25800,
+                24800,
+                26700,
+                29100,
+                27600,
+                27800,
+                29800,
+                32700,
+                31900,
+                33900,
+                33800,
+                31800,
+                32800,
+                32100,
+                30500,
+                27500,
+                28000,
+                27400,
+                28300,
+                31100,
+                34200,
+                37600,
+                38500,
+                42300,
+                41100,
+                40800,
+                42400,
+                38200,
+                34400,
+                33500,
+                36800,
+                40400,
+                43900,
+                48100,
+                52900,
+                52700,
+                47500,
+                45300,
+                43800,
+                39500,
+                36000,
+                32400,
+                29200,
+                26700,
+                29300
+              ]
+            }
+          },
+          {
+            "ai": true,
+            "id": "player-3",
+            "item": "card:25",
+            "turn": 309,
+            "target": {
+              "kind": "stock",
+              "id": "jp:33"
+            },
+            "alliesBefore": {
+              "player-1": null,
+              "player-2": null,
+              "player-3": null
+            },
+            "choice": {
+              "target": {
+                "kind": "stock",
+                "id": "jp:33"
+              },
+              "score": 300,
+              "gain": 11700,
+              "own": 0,
+              "friend": 0,
+              "enemy": -11700,
+              "next": 79800
+            },
+            "godBefore": null,
+            "godAfter": null,
+            "quoteBefore": {
+              "momentum": 3.3219189643859863,
+              "noise": 1.8958154916763306,
+              "id": "jp:33",
+              "base": 88600,
+              "price": 91500,
+              "pool": 9900,
+              "quota": 1111,
+              "trend": null,
+              "remaining": 0,
+              "history": [
+                22500,
+                21100,
+                19000,
+                17100,
+                15400,
+                15600,
+                14650,
+                13450,
+                12450,
+                11250,
+                10850,
+                10150,
+                9700,
+                9600,
+                9500,
+                9650,
+                10600,
+                11650,
+                12550,
+                13800,
+                14600,
+                14300,
+                13400,
+                13300,
+                14500,
+                15000,
+                15800,
+                15600,
+                14050,
+                12750,
+                11500,
+                11500,
+                11700,
+                12700,
+                12950,
+                14150,
+                15550,
+                16450,
+                16450,
+                15950,
+                15850,
+                15350,
+                13850,
+                12500,
+                11250,
+                10250,
+                10650,
+                10950,
+                12000,
+                13200,
+                14500,
+                15900,
+                17400,
+                18300,
+                19400,
+                19900,
+                19200,
+                18500,
+                17200,
+                17200,
+                18000,
+                19800,
+                21700,
+                23800,
+                26100,
+                28700,
+                30000,
+                33000,
+                35500,
+                39000,
+                42900,
+                46500,
+                48400,
+                52400,
+                55400,
+                60900,
+                66900,
+                68700,
+                74800,
+                82200,
+                81300,
+                84500,
+                88600,
+                91500
+              ]
+            },
+            "quoteAfter": {
+              "momentum": -10,
+              "noise": 1.8958154916763306,
+              "id": "jp:33",
+              "base": 88600,
+              "price": 79800,
+              "pool": 9900,
+              "quota": 1111,
+              "trend": "black",
+              "remaining": 2,
+              "history": [
+                22500,
+                21100,
+                19000,
+                17100,
+                15400,
+                15600,
+                14650,
+                13450,
+                12450,
+                11250,
+                10850,
+                10150,
+                9700,
+                9600,
+                9500,
+                9650,
+                10600,
+                11650,
+                12550,
+                13800,
+                14600,
+                14300,
+                13400,
+                13300,
+                14500,
+                15000,
+                15800,
+                15600,
+                14050,
+                12750,
+                11500,
+                11500,
+                11700,
+                12700,
+                12950,
+                14150,
+                15550,
+                16450,
+                16450,
+                15950,
+                15850,
+                15350,
+                13850,
+                12500,
+                11250,
+                10250,
+                10650,
+                10950,
+                12000,
+                13200,
+                14500,
+                15900,
+                17400,
+                18300,
+                19400,
+                19900,
+                19200,
+                18500,
+                17200,
+                17200,
+                18000,
+                19800,
+                21700,
+                23800,
+                26100,
+                28700,
+                30000,
+                33000,
+                35500,
+                39000,
+                42900,
+                46500,
+                48400,
+                52400,
+                55400,
+                60900,
+                66900,
+                68700,
+                74800,
+                82200,
+                81300,
+                84500,
+                88600,
+                79800
+              ]
+            }
+          }
+        ],
+        "cancellations": [
+          {
+            "ai": false,
+            "id": "player-1",
+            "item": "card:23",
+            "turn": 316
+          }
+        ],
+        "gains": [
+          {
+            "playerId": "player-3",
+            "item": "card:24",
+            "amount": 1,
+            "turn": 84,
+            "action": "buyItem",
+            "eventTypes": [
+              "itemBought"
+            ],
+            "notices": []
+          },
+          {
+            "playerId": "player-2",
+            "item": "card:25",
+            "amount": 1,
+            "turn": 110,
+            "action": "animationDone",
+            "eventTypes": [
+              "nodeEntered",
+              "g6Notice",
+              "landed",
+              "lotteryOffered"
+            ],
+            "notices": [
+              {
+                "type": "g6Notice",
+                "message": "玩家2附身大福神，期限7次自身行动边界。",
+                "sequence": 1613,
+                "commandId": "command-843",
+                "playerId": "player-2",
+                "turn": 110
+              },
+              {
+                "type": "g6Notice",
+                "message": "玩家2获得card:20。",
+                "sequence": 1614,
+                "commandId": "command-843",
+                "playerId": "player-2",
+                "turn": 110
+              },
+              {
+                "type": "g6Notice",
+                "message": "玩家2获得card:25。",
+                "sequence": 1615,
+                "commandId": "command-843",
+                "playerId": "player-2",
+                "turn": 110
+              }
+            ]
+          },
+          {
+            "playerId": "player-2",
+            "item": "card:24",
+            "amount": 1,
+            "turn": 287,
+            "action": "animationDone",
+            "eventTypes": [
+              "nodeEntered",
+              "landed",
+              "mapCardReceived"
+            ],
+            "notices": []
+          },
+          {
+            "playerId": "player-1",
+            "item": "card:23",
+            "amount": 1,
+            "turn": 306,
+            "action": "magic",
+            "eventTypes": [
+              "magicResolved"
+            ],
+            "notices": []
+          },
+          {
+            "playerId": "player-3",
+            "item": "card:25",
+            "amount": 1,
+            "turn": 306,
+            "action": "magic",
+            "eventTypes": [
+              "magicResolved"
+            ],
+            "notices": []
+          }
+        ],
+        "relations": [
+          {
+            "type": "allianceChanged",
+            "players": [
+              "player-1",
+              "player-3"
+            ],
+            "remaining": 7,
+            "reason": "建立同盟",
+            "sequence": 2636,
+            "commandId": "command-1362",
+            "playerId": "player-1",
+            "turn": 181
+          },
+          {
+            "type": "allianceChanged",
+            "players": [
+              "player-3",
+              "player-1"
+            ],
+            "remaining": 0,
+            "reason": "同盟到期",
+            "sequence": 3013,
+            "commandId": "command-1550",
+            "playerId": "player-3",
+            "turn": 204
+          }
+        ],
+        "prefixes": [
+          "god-attached",
+          "daily-market-before",
+          "daily-market-after",
+          "human-stock-before",
+          "human-stock-after",
+          "god-expired",
+          "card:24-received",
+          "card:24-bought",
+          "card:25-received",
+          "card:25-paused",
+          "card:25-resumed",
+          "card:25-confirm-before",
+          "card:25-confirm-after",
+          "alliance-formed-before",
+          "alliance-formed-after",
+          "card:24-paused",
+          "card:24-resumed",
+          "card:24-confirm-before",
+          "card:24-confirm-after",
+          "alliance-ended-before",
+          "alliance-ended-after",
+          "card:23-received",
+          "cancel-before",
+          "cancel-after"
+        ],
+        "hashes": {
+          "replay": "c85ae367312fa5fb6caeac8eeaa40c0036d986962e164b30ed604e4128a54d8a",
+          "state": "27d85671afc03039e9a1bef75950565b1a97602cf4b5e642e5d42d52e69948ce",
+          "events": "f42036cbdb52b8ae93dc877290222630df94f723538e89003b1db1ae512d95ba"
+        },
+        "report": {
+          "robotPreviews": [
+            {
+              "mines": 0,
+              "bombs": 0
+            }
+          ],
+          "policy": "gods-v1",
+          "toolWindows": [
+            "tool:08",
+            "tool:09",
+            "card:28",
+            "tool:02",
+            "tool:01",
+            "card:25",
+            "card:24",
+            "card:07",
+            "card:03"
+          ],
+          "crossChecks": [],
+          "route": "3",
+          "terminal": false,
+          "players": 3,
+          "normalSpeed": true,
+          "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+          "commands": 2389,
+          "auto": 644,
+          "human": 319,
+          "lifecycle": [
+            "pause stops waiting",
+            "resume",
+            "reset dialog cancel",
+            "reset",
+            "replace with humans",
+            "exit cleanup",
+            "fullscreen",
+            "390px"
+          ],
+          "cleanup": {
+            "raf": 0,
+            "canvas": 0
+          },
+          "errors": []
+        }
+      },
+      {
+        "players": 4,
+        "commands": 1380,
+        "auto": 427,
+        "human": 139,
+        "acquisitions": [],
+        "uses": [
+          {
+            "ai": true,
+            "id": "player-4",
+            "item": "card:25",
+            "turn": 192,
+            "target": {
+              "kind": "stock",
+              "id": "jp:28"
+            },
+            "alliesBefore": {
+              "player-1": null,
+              "player-2": null,
+              "player-3": null,
+              "player-4": null
+            },
+            "choice": {
+              "target": {
+                "kind": "stock",
+                "id": "jp:28"
+              },
+              "score": 300,
+              "gain": 3100,
+              "own": 0,
+              "friend": 0,
+              "enemy": -3100,
+              "next": 18400
+            },
+            "godBefore": {
+              "id": "god-24",
+              "type": 12,
+              "node": 71,
+              "carrier": "player-4",
+              "remaining": 3
+            },
+            "godAfter": {
+              "id": "god-24",
+              "type": 12,
+              "node": 71,
+              "carrier": "player-4",
+              "remaining": 3
+            },
+            "quoteBefore": {
+              "momentum": 5.5503435134887695,
+              "noise": -3.1716482639312744,
+              "id": "jp:28",
+              "base": 20400,
+              "price": 21500,
+              "pool": 4900,
+              "quota": 760,
+              "trend": null,
+              "remaining": 0,
+              "history": [
+                30000,
+                27800,
+                25100,
+                23800,
+                21500,
+                20600,
+                18600,
+                18400,
+                18100,
+                19200,
+                21100,
+                21900,
+                20500,
+                18500,
+                16800,
+                15200,
+                16100,
+                16100,
+                15900,
+                17400,
+                19100,
+                21000,
+                23100,
+                22800,
+                20600,
+                18600,
+                18600,
+                20400,
+                21500
+              ]
+            },
+            "quoteAfter": {
+              "momentum": -10,
+              "noise": -3.1716482639312744,
+              "id": "jp:28",
+              "base": 20400,
+              "price": 18400,
+              "pool": 4900,
+              "quota": 760,
+              "trend": "black",
+              "remaining": 2,
+              "history": [
+                30000,
+                27800,
+                25100,
+                23800,
+                21500,
+                20600,
+                18600,
+                18400,
+                18100,
+                19200,
+                21100,
+                21900,
+                20500,
+                18500,
+                16800,
+                15200,
+                16100,
+                16100,
+                15900,
+                17400,
+                19100,
+                21000,
+                23100,
+                22800,
+                20600,
+                18600,
+                18600,
+                20400,
+                18400
+              ]
+            }
+          }
+        ],
+        "cancellations": [],
+        "gains": [
+          {
+            "playerId": "player-2",
+            "item": "card:22",
+            "amount": 1,
+            "turn": 170,
+            "action": "animationDone",
+            "eventTypes": [
+              "nodeEntered",
+              "g6Notice",
+              "landed"
+            ],
+            "notices": [
+              {
+                "type": "g6Notice",
+                "message": "玩家2附身大福神，期限7次自身行动边界。",
+                "sequence": 2206,
+                "commandId": "command-1199",
+                "playerId": "player-2",
+                "turn": 170
+              },
+              {
+                "type": "g6Notice",
+                "message": "玩家2获得card:02。",
+                "sequence": 2207,
+                "commandId": "command-1199",
+                "playerId": "player-2",
+                "turn": 170
+              },
+              {
+                "type": "g6Notice",
+                "message": "玩家2获得card:22。",
+                "sequence": 2208,
+                "commandId": "command-1199",
+                "playerId": "player-2",
+                "turn": 170
+              }
+            ]
+          },
+          {
+            "playerId": "player-4",
+            "item": "card:25",
+            "amount": 1,
+            "turn": 191,
+            "action": "magic",
+            "eventTypes": [
+              "magicResolved"
+            ],
+            "notices": []
+          }
+        ],
+        "relations": [],
+        "prefixes": [
+          "god-attached",
+          "daily-market-before",
+          "daily-market-after",
+          "human-stock-before",
+          "human-stock-after",
+          "god-expired",
+          "card:22-received",
+          "card:25-received",
+          "card:25-paused",
+          "card:25-resumed",
+          "card:25-confirm-before",
+          "card:25-confirm-after"
+        ],
+        "hashes": {
+          "replay": "fb3085d52d667e0ec27466f04099383220b593cd5a218c1c1a66513361cccae8",
+          "state": "45deab0cc138456987ebf02cfdb74375ed3e396ce3fe809b3d499175fb8f241a",
+          "events": "8661b93a40e6c2455b2a82f6a14ae1bdef1d531e04ad4db91521938f788c2f6b"
+        },
+        "report": {
+          "robotPreviews": [
+            {
+              "mines": 0,
+              "bombs": 0
+            }
+          ],
+          "policy": "gods-v1",
+          "toolWindows": [
+            "tool:08",
+            "tool:09",
+            "tool:02",
+            "tool:01",
+            "card:13",
+            "card:08",
+            "card:02",
+            "card:25"
+          ],
+          "crossChecks": [],
+          "route": "4",
+          "terminal": false,
+          "players": 4,
+          "normalSpeed": true,
+          "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+          "commands": 1380,
+          "auto": 427,
+          "human": 139,
+          "lifecycle": [
+            "pause stops waiting",
+            "resume",
+            "reset dialog cancel",
+            "reset",
+            "replace with humans",
+            "exit cleanup",
+            "fullscreen",
+            "390px"
+          ],
+          "cleanup": {
+            "raf": 0,
+            "canvas": 0
+          },
+          "errors": []
+        }
+      }
+    ],
+    "commands": 5248,
+    "computerDecisions": 1372,
+    "humanDecisions": 754,
+    "namedPrefixes": 61,
+    "normalSpeed": true,
+    "worldInjection": false,
+    "authFixtureOnly": true,
+    "fullReplay": true,
+    "prefixReplay": true
+  },
+  "notBrowserAccepted": [
+    "Self-held red card: AI still has no active share acquisition; domain tests only",
+    "All god types and all angel/landlord ownership combinations",
+    "All halted/closed/changed-target/supply/full-bag boundary combinations",
+    "New complete terminal game, all characters, background throttling, saves, mixed policies per seat",
+    "Native AI/precision/RNG/charts/roulette/exit call stack/terminal parity and existing art/collision differences"
+  ],
+  "next": "S3-02m public stock/financing policy group; advanced research later",
+  "git": {
+    "committed": false,
+    "pushed": false,
+    "deployed": false
+  }
+}

@@ -1,0 +1,1045 @@
+[
+  {
+    "route": "terminal",
+    "seed": "batch-0",
+    "players": 3,
+    "commands": 778,
+    "turn": 108,
+    "endDate": "1998-02-15",
+    "state": "54198ab4284ceb3e760938db658cc9b8916bef48ff80fc19a8b43f416d81f956",
+    "events": "3f4b2bceddd295541083a1503b379c4552c7cd4932e6d71b3840262f46acbae2",
+    "checks": [
+      "float32 per-company allocation and frozen signed player nets",
+      "seat live balances with immutable amounts and exact actual/unpaid receipts",
+      "dividend receipt before same-day lottery and incoming turn",
+      "dividend debit is sink; public stock/auction proceeds minus lottery prize; company ledger unchanged",
+      "explicit row callback after disposal; auction money never rescues debtor",
+      "explicit Web final-survivor stops remaining seats and date tail"
+    ],
+    "batch": {
+      "kind": "dividend",
+      "rows": [
+        {
+          "playerId": "player-1",
+          "amount": -5000,
+          "before": {
+            "cash": 0,
+            "bank": 282
+          },
+          "returnedShares": 0,
+          "unpaid": 4718,
+          "bankrupt": true,
+          "paid": {
+            "cash": 0,
+            "bank": 282
+          },
+          "after": {
+            "cash": 0,
+            "bank": 0
+          }
+        },
+        {
+          "playerId": "player-2",
+          "amount": 0
+        }
+      ],
+      "companies": [
+        {
+          "companyId": "japan:company:6",
+          "stockId": "jp:24",
+          "name": "富士銀行",
+          "funds": 0,
+          "cumulative": 0,
+          "shares": 0,
+          "after": 0,
+          "allocations": [
+            {
+              "playerId": "player-1",
+              "quantity": 0,
+              "ratio": 0,
+              "amount": 0
+            },
+            {
+              "playerId": "player-2",
+              "quantity": 0,
+              "ratio": 0,
+              "amount": 0
+            }
+          ]
+        },
+        {
+          "companyId": "japan:company:4",
+          "stockId": "jp:25",
+          "name": "三井生命",
+          "funds": 0,
+          "cumulative": 0,
+          "shares": 0,
+          "after": 0,
+          "allocations": [
+            {
+              "playerId": "player-1",
+              "quantity": 0,
+              "ratio": 0,
+              "amount": 0
+            },
+            {
+              "playerId": "player-2",
+              "quantity": 0,
+              "ratio": 0,
+              "amount": 0
+            }
+          ]
+        },
+        {
+          "companyId": "japan:company:1",
+          "stockId": "jp:26",
+          "name": "三越百貨",
+          "funds": -5000,
+          "cumulative": -5000,
+          "shares": 1,
+          "after": 0,
+          "allocations": [
+            {
+              "playerId": "player-1",
+              "quantity": 1,
+              "ratio": 1,
+              "amount": -5000
+            },
+            {
+              "playerId": "player-2",
+              "quantity": 0,
+              "ratio": 0,
+              "amount": 0
+            }
+          ]
+        },
+        {
+          "companyId": "japan:company:3",
+          "stockId": "jp:27",
+          "name": "日產建設",
+          "funds": 0,
+          "cumulative": 0,
+          "shares": 0,
+          "after": 0,
+          "allocations": [
+            {
+              "playerId": "player-1",
+              "quantity": 0,
+              "ratio": 0,
+              "amount": 0
+            },
+            {
+              "playerId": "player-2",
+              "quantity": 0,
+              "ratio": 0,
+              "amount": 0
+            }
+          ]
+        },
+        {
+          "companyId": "japan:company:5",
+          "stockId": "jp:28",
+          "name": "ＳＥＧＡ",
+          "funds": 0,
+          "cumulative": 0,
+          "shares": 0,
+          "after": 0,
+          "allocations": [
+            {
+              "playerId": "player-1",
+              "quantity": 0,
+              "ratio": 0,
+              "amount": 0
+            },
+            {
+              "playerId": "player-2",
+              "quantity": 0,
+              "ratio": 0,
+              "amount": 0
+            }
+          ]
+        },
+        {
+          "companyId": "japan:company:2",
+          "stockId": "jp:29",
+          "name": "豐田汽車",
+          "funds": 0,
+          "cumulative": 0,
+          "shares": 0,
+          "after": 0,
+          "allocations": [
+            {
+              "playerId": "player-1",
+              "quantity": 0,
+              "ratio": 0,
+              "amount": 0
+            },
+            {
+              "playerId": "player-2",
+              "quantity": 0,
+              "ratio": 0,
+              "amount": 0
+            }
+          ]
+        }
+      ],
+      "skipped": [],
+      "id": 2,
+      "cursor": 1,
+      "waiting": false,
+      "date": "1998-02-15",
+      "stopped": true
+    },
+    "disposal": {
+      "continuation": "payment",
+      "id": "disposal-2",
+      "payerId": "player-1",
+      "recipientId": "sink",
+      "propertyId": "batch:2:0",
+      "due": 5000,
+      "amount": 282,
+      "unpaid": 4718,
+      "paid": {
+        "cash": 0,
+        "bank": 282
+      },
+      "released": [],
+      "pool": [],
+      "draws": [],
+      "stocks": [],
+      "inventory": [],
+      "ignoredPoints": 0,
+      "auctions": [],
+      "finishedGame": true
+    },
+    "batchCount": 2,
+    "ui": "/private/tmp/richman-unified-ui-03v-terminal"
+  },
+  {
+    "route": "dividend",
+    "seed": "batch-1",
+    "players": 4,
+    "commands": 1322,
+    "turn": 181,
+    "endDate": "1998-02-15",
+    "state": "07d2f4dd04ac52273b8ba3a724cabf0051ec094ad98572162b7855319475bc6b",
+    "events": "29cdfc4845dbe6578ed51a50031b210fb2e47cb4ee6c9f1fef43df8e3f02e627",
+    "checks": [
+      "float32 per-company allocation and frozen signed player nets",
+      "seat live balances with immutable amounts and exact actual/unpaid receipts",
+      "dividend receipt before same-day lottery and incoming turn",
+      "dividend debit is sink; public stock/auction proceeds minus lottery prize; company ledger unchanged",
+      "remaining stocks sold to public on exit, not pre-cleared",
+      "suspended batch freezes outer turn/date",
+      "explicit row callback after disposal; auction money never rescues debtor"
+    ],
+    "batch": {
+      "kind": "dividend",
+      "rows": [
+        {
+          "playerId": "player-1",
+          "amount": -20000,
+          "before": {
+            "cash": 169,
+            "bank": 2800
+          },
+          "returnedShares": 1,
+          "unpaid": 17031,
+          "bankrupt": true,
+          "paid": {
+            "cash": 169,
+            "bank": 2800
+          },
+          "after": {
+            "cash": 0,
+            "bank": 0
+          }
+        },
+        {
+          "playerId": "player-2",
+          "amount": 0,
+          "before": {
+            "cash": 0,
+            "bank": 2678
+          },
+          "returnedShares": 0,
+          "unpaid": 0,
+          "bankrupt": false,
+          "paid": {
+            "cash": 0,
+            "bank": 0
+          },
+          "after": {
+            "cash": 0,
+            "bank": 2678
+          }
+        },
+        {
+          "playerId": "player-3",
+          "amount": 0,
+          "before": {
+            "cash": 3744,
+            "bank": 3890
+          },
+          "returnedShares": 0,
+          "unpaid": 0,
+          "bankrupt": false,
+          "paid": {
+            "cash": 0,
+            "bank": 0
+          },
+          "after": {
+            "cash": 3744,
+            "bank": 3890
+          }
+        },
+        {
+          "playerId": "player-4",
+          "amount": 0,
+          "before": {
+            "cash": 0,
+            "bank": 3346
+          },
+          "returnedShares": 0,
+          "unpaid": 0,
+          "bankrupt": false,
+          "paid": {
+            "cash": 0,
+            "bank": 0
+          },
+          "after": {
+            "cash": 0,
+            "bank": 3346
+          }
+        }
+      ],
+      "companies": [
+        {
+          "companyId": "japan:company:6",
+          "stockId": "jp:24",
+          "name": "富士銀行",
+          "funds": 0,
+          "cumulative": 0,
+          "shares": 0,
+          "after": 0,
+          "allocations": [
+            {
+              "playerId": "player-1",
+              "quantity": 0,
+              "ratio": 0,
+              "amount": 0
+            },
+            {
+              "playerId": "player-2",
+              "quantity": 0,
+              "ratio": 0,
+              "amount": 0
+            },
+            {
+              "playerId": "player-3",
+              "quantity": 0,
+              "ratio": 0,
+              "amount": 0
+            },
+            {
+              "playerId": "player-4",
+              "quantity": 0,
+              "ratio": 0,
+              "amount": 0
+            }
+          ]
+        },
+        {
+          "companyId": "japan:company:4",
+          "stockId": "jp:25",
+          "name": "三井生命",
+          "funds": 0,
+          "cumulative": 0,
+          "shares": 0,
+          "after": 0,
+          "allocations": [
+            {
+              "playerId": "player-1",
+              "quantity": 0,
+              "ratio": 0,
+              "amount": 0
+            },
+            {
+              "playerId": "player-2",
+              "quantity": 0,
+              "ratio": 0,
+              "amount": 0
+            },
+            {
+              "playerId": "player-3",
+              "quantity": 0,
+              "ratio": 0,
+              "amount": 0
+            },
+            {
+              "playerId": "player-4",
+              "quantity": 0,
+              "ratio": 0,
+              "amount": 0
+            }
+          ]
+        },
+        {
+          "companyId": "japan:company:1",
+          "stockId": "jp:26",
+          "name": "三越百貨",
+          "funds": -20000,
+          "cumulative": -20000,
+          "shares": 1,
+          "after": 0,
+          "allocations": [
+            {
+              "playerId": "player-1",
+              "quantity": 1,
+              "ratio": 1,
+              "amount": -20000
+            },
+            {
+              "playerId": "player-2",
+              "quantity": 0,
+              "ratio": 0,
+              "amount": 0
+            },
+            {
+              "playerId": "player-3",
+              "quantity": 0,
+              "ratio": 0,
+              "amount": 0
+            },
+            {
+              "playerId": "player-4",
+              "quantity": 0,
+              "ratio": 0,
+              "amount": 0
+            }
+          ]
+        },
+        {
+          "companyId": "japan:company:3",
+          "stockId": "jp:27",
+          "name": "日產建設",
+          "funds": 0,
+          "cumulative": 0,
+          "shares": 0,
+          "after": 0,
+          "allocations": [
+            {
+              "playerId": "player-1",
+              "quantity": 0,
+              "ratio": 0,
+              "amount": 0
+            },
+            {
+              "playerId": "player-2",
+              "quantity": 0,
+              "ratio": 0,
+              "amount": 0
+            },
+            {
+              "playerId": "player-3",
+              "quantity": 0,
+              "ratio": 0,
+              "amount": 0
+            },
+            {
+              "playerId": "player-4",
+              "quantity": 0,
+              "ratio": 0,
+              "amount": 0
+            }
+          ]
+        },
+        {
+          "companyId": "japan:company:5",
+          "stockId": "jp:28",
+          "name": "ＳＥＧＡ",
+          "funds": 0,
+          "cumulative": 0,
+          "shares": 0,
+          "after": 0,
+          "allocations": [
+            {
+              "playerId": "player-1",
+              "quantity": 0,
+              "ratio": 0,
+              "amount": 0
+            },
+            {
+              "playerId": "player-2",
+              "quantity": 0,
+              "ratio": 0,
+              "amount": 0
+            },
+            {
+              "playerId": "player-3",
+              "quantity": 0,
+              "ratio": 0,
+              "amount": 0
+            },
+            {
+              "playerId": "player-4",
+              "quantity": 0,
+              "ratio": 0,
+              "amount": 0
+            }
+          ]
+        },
+        {
+          "companyId": "japan:company:2",
+          "stockId": "jp:29",
+          "name": "豐田汽車",
+          "funds": 0,
+          "cumulative": 0,
+          "shares": 0,
+          "after": 0,
+          "allocations": [
+            {
+              "playerId": "player-1",
+              "quantity": 0,
+              "ratio": 0,
+              "amount": 0
+            },
+            {
+              "playerId": "player-2",
+              "quantity": 0,
+              "ratio": 0,
+              "amount": 0
+            },
+            {
+              "playerId": "player-3",
+              "quantity": 0,
+              "ratio": 0,
+              "amount": 0
+            },
+            {
+              "playerId": "player-4",
+              "quantity": 0,
+              "ratio": 0,
+              "amount": 0
+            }
+          ]
+        }
+      ],
+      "skipped": [],
+      "id": 2,
+      "cursor": 4,
+      "waiting": false,
+      "date": "1998-02-15",
+      "stopped": false
+    },
+    "disposal": {
+      "continuation": "payment",
+      "id": "disposal-1",
+      "payerId": "player-1",
+      "recipientId": "sink",
+      "propertyId": "batch:2:0",
+      "due": 20000,
+      "amount": 2969,
+      "unpaid": 17031,
+      "paid": {
+        "cash": 169,
+        "bank": 2800
+      },
+      "released": [
+        "japan:land:19",
+        "japan:land:23",
+        "japan:land:28",
+        "japan:land:31",
+        "japan:land:34",
+        "japan:land:37",
+        "japan:land:44"
+      ],
+      "pool": [
+        "japan:land:19",
+        null,
+        "japan:land:28",
+        "japan:land:31",
+        "japan:land:34",
+        null,
+        null
+      ],
+      "draws": [
+        6,
+        5,
+        1
+      ],
+      "stocks": [
+        {
+          "stockId": "jp:26",
+          "quantity": 1,
+          "price": 1200,
+          "amount": 12
+        }
+      ],
+      "inventory": [
+        {
+          "itemId": "tool:09",
+          "quantity": 1,
+          "points": 30
+        },
+        {
+          "itemId": "tool:01",
+          "quantity": 1,
+          "points": 15
+        },
+        {
+          "itemId": "tool:02",
+          "quantity": 1,
+          "points": 30
+        },
+        {
+          "itemId": "tool:05",
+          "quantity": 1,
+          "points": 80
+        },
+        {
+          "itemId": "card:26",
+          "quantity": 1,
+          "points": 35
+        }
+      ],
+      "ignoredPoints": 190,
+      "auctions": [
+        {
+          "propertyId": "japan:land:44",
+          "winnerId": "player-3",
+          "amount": 1100,
+          "reserve": 1000
+        },
+        {
+          "propertyId": "japan:land:37",
+          "winnerId": "player-3",
+          "amount": 2100,
+          "reserve": 2000
+        },
+        {
+          "propertyId": "japan:land:23",
+          "winnerId": "player-3",
+          "amount": 3100,
+          "reserve": 3000
+        }
+      ],
+      "finishedGame": false
+    },
+    "batchCount": 2,
+    "ui": "/private/tmp/richman-unified-ui-03v-dividend"
+  },
+  {
+    "route": "landTax",
+    "seed": "batch-67",
+    "players": 4,
+    "commands": 822,
+    "turn": 111,
+    "endDate": "1998-02-01",
+    "state": "bb5c0a69a449ab49e4c78c85fb945819f2e40ba9a70f69dad1825983405e3848",
+    "events": "ea8b0f52bb222016b0b566524d825e30711e3af00dc04d4e24d95736c463b7ad",
+    "checks": [
+      "float32 per-company allocation and frozen signed player nets",
+      "seat live balances with immutable amounts and exact actual/unpaid receipts",
+      "dividend receipt before same-day lottery and incoming turn",
+      "dividend debit is sink; public stock/auction proceeds minus lottery prize; company ledger unchanged",
+      "original-map frozen tax basis and truncate-before-index",
+      "suspended batch freezes outer turn/date",
+      "explicit row callback after disposal; auction money never rescues debtor",
+      "tax public receipts equal original liquid payments plus separate stock/auction proceeds"
+    ],
+    "batch": {
+      "kind": "landTax",
+      "rows": [
+        {
+          "playerId": "player-1",
+          "amount": -550,
+          "base": 11000,
+          "before": {
+            "cash": 0,
+            "bank": 0
+          },
+          "returnedShares": 0,
+          "unpaid": 550,
+          "bankrupt": true,
+          "paid": {
+            "cash": 0,
+            "bank": 0
+          },
+          "after": {
+            "cash": 0,
+            "bank": 0
+          }
+        },
+        {
+          "playerId": "player-3",
+          "amount": -320,
+          "base": 6400,
+          "before": {
+            "cash": 1066,
+            "bank": 13477
+          },
+          "returnedShares": 0,
+          "unpaid": 0,
+          "bankrupt": false,
+          "paid": {
+            "cash": 320,
+            "bank": 0
+          },
+          "after": {
+            "cash": 746,
+            "bank": 13477
+          }
+        },
+        {
+          "playerId": "player-4",
+          "amount": -175,
+          "base": 3500,
+          "before": {
+            "cash": 0,
+            "bank": 5629
+          },
+          "returnedShares": 0,
+          "unpaid": 0,
+          "bankrupt": false,
+          "paid": {
+            "cash": 0,
+            "bank": 175
+          },
+          "after": {
+            "cash": 0,
+            "bank": 5454
+          }
+        }
+      ],
+      "skipped": [],
+      "news": {
+        "kind": "news",
+        "node": 13,
+        "newsId": 12,
+        "title": "全员缴交地产税5%",
+        "lines": [
+          "玩家1：应缴 550 元；现金 0＋存款 0，未付 550 元，已退出，资产公共处置不抵税款。",
+          "玩家3：应缴 320 元；现金 320＋存款 0，未付 0 元。",
+          "玩家4：应缴 175 元；现金 0＋存款 175，未付 0 元。"
+        ],
+        "scope": "税额在批次开始冻结，按座位依次结算；退出股票与拍卖收入归公共资金，不代缴原税。"
+      },
+      "id": 2,
+      "cursor": 3,
+      "waiting": false,
+      "date": "1998-02-01",
+      "stopped": false
+    },
+    "disposal": {
+      "continuation": "payment",
+      "id": "disposal-2",
+      "payerId": "player-1",
+      "recipientId": "public",
+      "propertyId": "batch:2:0",
+      "due": 550,
+      "amount": 0,
+      "unpaid": 550,
+      "paid": {
+        "cash": 0,
+        "bank": 0
+      },
+      "released": [
+        "japan:land:6",
+        "japan:land:7",
+        "japan:land:22",
+        "japan:land:42",
+        "japan:land:45",
+        "japan:facility:4"
+      ],
+      "pool": [
+        "japan:land:6",
+        null,
+        "japan:land:22",
+        null,
+        "japan:land:45",
+        null
+      ],
+      "draws": [
+        1,
+        3,
+        1,
+        5
+      ],
+      "stocks": [],
+      "inventory": [
+        {
+          "itemId": "tool:09",
+          "quantity": 1,
+          "points": 30
+        },
+        {
+          "itemId": "tool:01",
+          "quantity": 1,
+          "points": 15
+        },
+        {
+          "itemId": "tool:02",
+          "quantity": 1,
+          "points": 30
+        },
+        {
+          "itemId": "card:05",
+          "quantity": 1,
+          "points": 20
+        },
+        {
+          "itemId": "card:11",
+          "quantity": 1,
+          "points": 60
+        }
+      ],
+      "ignoredPoints": 155,
+      "auctions": [
+        {
+          "propertyId": "japan:land:7",
+          "winnerId": null,
+          "amount": 0,
+          "reserve": 1500
+        },
+        {
+          "propertyId": "japan:land:42",
+          "winnerId": null,
+          "amount": 0,
+          "reserve": 1000
+        },
+        {
+          "propertyId": "japan:facility:4",
+          "winnerId": null,
+          "amount": 0,
+          "reserve": 5000
+        }
+      ],
+      "finishedGame": false
+    },
+    "batchCount": 2,
+    "ui": "/private/tmp/richman-unified-ui-03v-landTax"
+  },
+  {
+    "route": "stockTax",
+    "seed": "batch-21",
+    "players": 4,
+    "commands": 484,
+    "turn": 72,
+    "endDate": "1998-01-18",
+    "state": "7fba0b416d52930864bc47a846fca198defa249a6457b3865e9999a77f6f62d1",
+    "events": "df2e7941e5e66ea78fd8015de031cf602794e3290ad4dfb50ba69fcf42f29b0a",
+    "checks": [
+      "float32 per-company allocation and frozen signed player nets",
+      "seat live balances with immutable amounts and exact actual/unpaid receipts",
+      "dividend receipt before same-day lottery and incoming turn",
+      "dividend debit is sink; public stock/auction proceeds minus lottery prize; company ledger unchanged",
+      "original-map frozen tax basis and truncate-before-index",
+      "remaining stocks sold to public on exit, not pre-cleared",
+      "suspended batch freezes outer turn/date",
+      "explicit row callback after disposal; auction money never rescues debtor",
+      "tax public receipts equal original liquid payments plus separate stock/auction proceeds"
+    ],
+    "batch": {
+      "kind": "stockTax",
+      "rows": [
+        {
+          "playerId": "player-1",
+          "amount": -960,
+          "baseCents": 1920000,
+          "before": {
+            "cash": 700,
+            "bank": 98
+          },
+          "returnedShares": 48,
+          "unpaid": 162,
+          "bankrupt": true,
+          "paid": {
+            "cash": 700,
+            "bank": 98
+          },
+          "after": {
+            "cash": 0,
+            "bank": 0
+          }
+        },
+        {
+          "playerId": "player-2",
+          "amount": 0,
+          "baseCents": 0,
+          "before": {
+            "cash": 0,
+            "bank": 15237
+          },
+          "returnedShares": 0,
+          "unpaid": 0,
+          "bankrupt": false,
+          "paid": {
+            "cash": 0,
+            "bank": 0
+          },
+          "after": {
+            "cash": 0,
+            "bank": 15237
+          }
+        },
+        {
+          "playerId": "player-3",
+          "amount": 0,
+          "baseCents": 0,
+          "before": {
+            "cash": 550,
+            "bank": 15410
+          },
+          "returnedShares": 0,
+          "unpaid": 0,
+          "bankrupt": false,
+          "paid": {
+            "cash": 0,
+            "bank": 0
+          },
+          "after": {
+            "cash": 550,
+            "bank": 15410
+          }
+        },
+        {
+          "playerId": "player-4",
+          "amount": 0,
+          "baseCents": 0,
+          "before": {
+            "cash": 1025,
+            "bank": 15410
+          },
+          "returnedShares": 0,
+          "unpaid": 0,
+          "bankrupt": false,
+          "paid": {
+            "cash": 0,
+            "bank": 0
+          },
+          "after": {
+            "cash": 1025,
+            "bank": 15410
+          }
+        }
+      ],
+      "skipped": [],
+      "news": {
+        "kind": "news",
+        "node": 61,
+        "newsId": 13,
+        "title": "全员缴交股票税5%",
+        "lines": [
+          "玩家1：应缴 960 元；现金 700＋存款 98，未付 162 元，已退出，资产公共处置不抵税款。",
+          "玩家2：应缴 0 元；现金 0＋存款 0，未付 0 元。",
+          "玩家3：应缴 0 元；现金 0＋存款 0，未付 0 元。",
+          "玩家4：应缴 0 元；现金 0＋存款 0，未付 0 元。"
+        ],
+        "scope": "税额在批次开始冻结，按座位依次结算；退出股票与拍卖收入归公共资金，不代缴原税。"
+      },
+      "id": 2,
+      "cursor": 4,
+      "waiting": false,
+      "date": "1998-01-18",
+      "stopped": false
+    },
+    "disposal": {
+      "continuation": "payment",
+      "id": "disposal-1",
+      "payerId": "player-1",
+      "recipientId": "public",
+      "propertyId": "batch:2:0",
+      "due": 960,
+      "amount": 798,
+      "unpaid": 162,
+      "paid": {
+        "cash": 700,
+        "bank": 98
+      },
+      "released": [
+        "japan:land:20",
+        "japan:land:22",
+        "japan:land:30",
+        "japan:land:39"
+      ],
+      "pool": [
+        null,
+        null,
+        "japan:land:30",
+        null
+      ],
+      "draws": [
+        1,
+        0,
+        0,
+        1,
+        3
+      ],
+      "stocks": [
+        {
+          "stockId": "jp:28",
+          "quantity": 48,
+          "price": 40000,
+          "amount": 19200
+        }
+      ],
+      "inventory": [
+        {
+          "itemId": "tool:08",
+          "quantity": 1,
+          "points": 30
+        },
+        {
+          "itemId": "tool:09",
+          "quantity": 1,
+          "points": 30
+        },
+        {
+          "itemId": "tool:01",
+          "quantity": 1,
+          "points": 15
+        },
+        {
+          "itemId": "tool:02",
+          "quantity": 1,
+          "points": 30
+        },
+        {
+          "itemId": "card:14",
+          "quantity": 1,
+          "points": 20
+        },
+        {
+          "itemId": "card:21",
+          "quantity": 1,
+          "points": 25
+        }
+      ],
+      "ignoredPoints": 150,
+      "auctions": [
+        {
+          "propertyId": "japan:land:22",
+          "winnerId": "player-4",
+          "amount": 2100,
+          "reserve": 2000
+        },
+        {
+          "propertyId": "japan:land:20",
+          "winnerId": null,
+          "amount": 0,
+          "reserve": 2000
+        },
+        {
+          "propertyId": "japan:land:39",
+          "winnerId": null,
+          "amount": 0,
+          "reserve": 1500
+        }
+      ],
+      "finishedGame": false
+    },
+    "batchCount": 2,
+    "ui": "/private/tmp/richman-unified-ui-03v-stockTax"
+  }
+]

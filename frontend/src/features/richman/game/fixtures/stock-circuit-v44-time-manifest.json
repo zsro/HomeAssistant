@@ -1,0 +1,58 @@
+{
+  "kind": "time",
+  "players": 4,
+  "commands": 2327,
+  "turn": 175,
+  "trades": 49,
+  "subscriptions": 11,
+  "subscriptionPaid": 9854,
+  "forcedBank": 0,
+  "forcedPublic": 4714,
+  "fortune": [
+    8
+  ],
+  "news": [
+    25,
+    14,
+    12,
+    30,
+    33
+  ],
+  "dates": 43,
+  "quoteDays": 35,
+  "companyTrends": 2,
+  "research": 1,
+  "restored": 1,
+  "prefixes": [
+    "trade",
+    "market-date",
+    "date",
+    "closed-date",
+    "subscription",
+    "fortune-8",
+    "company-trend",
+    "research-delivery",
+    "time-restore"
+  ],
+  "report": {
+    "normalSpeed": true,
+    "map": "original Japan; real UI commands; auth-only fixture; no game-state injection",
+    "circuitCommon": true,
+    "completed": [
+      {
+        "id": "tool:10",
+        "preview": "恢复全体玩家位置、现金/存款、地产、库存/供应、研究、车辆/状态、神仙、道路物件及股票持仓/行情。随机序列和操作日志不倒退；从历史背包扣1台，所有旧历史清除。取消不改变任何状态。"
+      }
+    ],
+    "errors": [],
+    "cleanup": {
+      "raf": 0,
+      "canvas": 0
+    }
+  },
+  "hashes": {
+    "replay": "eeff06f6cd71e58c06c637bc29745567db73fad3d62a1a9bb105cf6ddc1f56dd",
+    "state": "0ee5baef2453bff331944ba2d014ad869724a452a7abd43dad9b8912eda1545a",
+    "events": "5deebaac726b7234b6201df07b92e0e375ae7483738515f316cfa4c4094dd439"
+  }
+}

@@ -1,0 +1,511 @@
+{
+  "stage": "S3-04b",
+  "referenceCommit": "ec7d70e693059d1e781d9d1cc2ad7f36d360d39e",
+  "nativeExecution": false,
+  "provenance": "retained local reference cache; hash registered, no fresh remote fetch",
+  "sources": {
+    "rich4.asm": {
+      "bytes": 1007904,
+      "sha256": "30904cbb4f23a6b74fc1b80ad023bd7dff11b441c2c1978f768f9891d099d64a"
+    },
+    "rich4_player_core_actions.asm": {
+      "bytes": 151420,
+      "sha256": "2874c1a3e0ca1d0da5afe4cb93e42cf2d6f6fa864dbee11d7bcaa028af07d94a"
+    },
+    "rich4_player_say_on_events.asm": {
+      "bytes": 11100,
+      "sha256": "9d12b7717f448b8928db8f2b89cfa0b4bbae694757ea9a53a6c8ea5d7fa5adb9"
+    },
+    "rich4_text_drawing.asm": {
+      "bytes": 17298,
+      "sha256": "0de9b12f8bb5faf7ef3c0df4c97639a103b54d9945cc527b2608f77a4c2a4ec1"
+    },
+    "rich4_sound_effect.asm": {
+      "bytes": 21244,
+      "sha256": "f4210befb1d86ec31f01e544f4122187aa46c095cf89edb9c7a20d68d5d279a3"
+    },
+    "rich4_characters.c": {
+      "bytes": 2963,
+      "sha256": "42ac84738a5681c0010d23d2340f1b625e56c50f4849c2a0165c7e17b66d0852"
+    },
+    "rich4_player_info.h": {
+      "bytes": 2465,
+      "sha256": "cc17726ce054de587a42c0f335d84495e66698da2e15eb6a7b7ca28ab38604be"
+    }
+  },
+  "archives": {
+    "rich4.exe": {
+      "bytes": 591360,
+      "sha256": "110b29f9d2fadcff3836eb69ec380aa264951859c90955da6e11158d2f956a13"
+    },
+    "Effect.mkf": {
+      "bytes": 3897646,
+      "sha256": "4ac71accafd18e4f60badbf59491e7df002dc725cfb24f24dc4f20fd031d0125"
+    },
+    "Speaking.mkf": {
+      "bytes": 56970696,
+      "sha256": "0f43530b45a3286d1681f7a676c440864bc2f5734ab41c2f3763b4e3f8bbfb19"
+    },
+    "MapDat.MKF": {
+      "bytes": 36560,
+      "sha256": "4dc6a47efe03f64484e6b9ac5ee31489b7f42fc369c0296f2f0b8d63845294b1"
+    }
+  },
+  "voiceRows": [
+    {
+      "characterId": "xiaomei",
+      "nativeCharacter": 9,
+      "slot": 0,
+      "label": "ref_00467edf",
+      "resource": 1293,
+      "text": "我是不是\n在作夢啊？",
+      "rawHex": "2331323933a7daac4fa4a3ac4f0aa662a740b9dab0daa148",
+      "exeOffset": 412048
+    },
+    {
+      "characterId": "xiaomei",
+      "nativeCharacter": 9,
+      "slot": 1,
+      "label": "ref_00467ef8",
+      "resource": 1294,
+      "text": "太高興了！",
+      "rawHex": "2331323934a4d3b0aabfb3a446a149",
+      "exeOffset": 412073
+    },
+    {
+      "characterId": "xiaomei",
+      "nativeCharacter": 9,
+      "slot": 2,
+      "label": "ref_00467f08",
+      "resource": 1295,
+      "text": "好的開始\n是成功的一半！",
+      "rawHex": "2331323935a66eaabab67da96c0aac4fa6a8a55caabaa440a562a149",
+      "exeOffset": 412089
+    },
+    {
+      "characterId": "xiaomei",
+      "nativeCharacter": 9,
+      "slot": 15,
+      "label": "ref_00467ff1",
+      "resource": 1308,
+      "text": "人家真能幹！",
+      "rawHex": "2331333038a448ae61af75afe0b746a149",
+      "exeOffset": 412322
+    },
+    {
+      "characterId": "tuu",
+      "nativeCharacter": 4,
+      "slot": 0,
+      "label": "ref_0046744c",
+      "resource": 1158,
+      "text": "福氣啦！",
+      "rawHex": "2331313538bad6aef0b0d5a149",
+      "exeOffset": 409341
+    },
+    {
+      "characterId": "tuu",
+      "nativeCharacter": 4,
+      "slot": 1,
+      "label": "ref_0046745a",
+      "resource": 1159,
+      "text": "歹勢啦！",
+      "rawHex": "2331313539a4efb6d5b0d5a149",
+      "exeOffset": 409355
+    },
+    {
+      "characterId": "tuu",
+      "nativeCharacter": 4,
+      "slot": 2,
+      "label": "ref_00467468",
+      "resource": 1160,
+      "text": "真好運！",
+      "rawHex": "2331313630af75a66eb942a149",
+      "exeOffset": 409369
+    },
+    {
+      "characterId": "tuu",
+      "nativeCharacter": 4,
+      "slot": 15,
+      "label": "ref_00467536",
+      "resource": 1173,
+      "text": "大家有閒\n來坐喔！",
+      "rawHex": "2331313733a46aae61a6b3b6a20aa8d3a7a4b3e1a149",
+      "exeOffset": 409575
+    },
+    {
+      "characterId": "chyan",
+      "nativeCharacter": 3,
+      "slot": 0,
+      "label": "ref_00467242",
+      "resource": 1131,
+      "text": "今夜做夢\n也會笑∼",
+      "rawHex": "2331313331a4b5a95db0b5b9da0aa45db77cafbaa1e3",
+      "exeOffset": 408819
+    },
+    {
+      "characterId": "chyan",
+      "nativeCharacter": 3,
+      "slot": 1,
+      "label": "ref_00467259",
+      "resource": 1132,
+      "text": "我是幸運女神！",
+      "rawHex": "2331313332a7daac4fa9afb942a46bafaba149",
+      "exeOffset": 408842
+    },
+    {
+      "characterId": "chyan",
+      "nativeCharacter": 3,
+      "slot": 2,
+      "label": "ref_0046726d",
+      "resource": 1133,
+      "text": "不賴嘛∼",
+      "rawHex": "2331313333a4a3bfe0b9c0a1e3",
+      "exeOffset": 408862
+    },
+    {
+      "characterId": "chyan",
+      "nativeCharacter": 3,
+      "slot": 15,
+      "label": "ref_00467333",
+      "resource": 1146,
+      "text": "算你便宜一點，\n快來吧！",
+      "rawHex": "2331313436bae2a741ab4ba979a440c249a1410aa7d6a8d3a761a149",
+      "exeOffset": 409060
+    },
+    {
+      "characterId": "salonbus",
+      "nativeCharacter": 1,
+      "slot": 0,
+      "label": "ref_00466dcd",
+      "resource": 1077,
+      "text": "阿拉真主！\n我讚美你！",
+      "rawHex": "2331303737aafca9d4af75a544a1490aa7dac667acfca741a149",
+      "exeOffset": 407678
+    },
+    {
+      "characterId": "salonbus",
+      "nativeCharacter": 1,
+      "slot": 1,
+      "label": "ref_00466de8",
+      "resource": 1078,
+      "text": "感謝阿拉！",
+      "rawHex": "2331303738b750c1c2aafca9d4a149",
+      "exeOffset": 407705
+    },
+    {
+      "characterId": "salonbus",
+      "nativeCharacter": 1,
+      "slot": 2,
+      "label": "ref_00466df8",
+      "resource": 1079,
+      "text": "運氣好而已啦∼",
+      "rawHex": "2331303739b942aef0a66ea6d3a477b0d5a1e3",
+      "exeOffset": 407721
+    },
+    {
+      "characterId": "salonbus",
+      "nativeCharacter": 1,
+      "slot": 15,
+      "label": "ref_00466f1a",
+      "resource": 1092,
+      "text": "大家別打\n這棟房子\n的主意喔！",
+      "rawHex": "2331303932a46aae61a74fa5b40ab36fb4c9a9d0a46c0aaabaa544b74eb3e1a149",
+      "exeOffset": 408011
+    }
+  ],
+  "descriptors": {
+    "49": {
+      "label": "ref_004823d2",
+      "hex": "3100000000000000",
+      "matches": 1
+    },
+    "50": {
+      "label": "ref_004823da",
+      "hex": "3200000000000000",
+      "matches": 2
+    },
+    "pair49-50": {
+      "hex": "31000000000000003200000000000000",
+      "matches": 1,
+      "exeOffset": 516786
+    }
+  },
+  "catalog": {
+    "profile": "event-audio-v1",
+    "characters": {
+      "xiaomei": {
+        "0": 1293,
+        "1": 1294,
+        "2": 1295,
+        "15": 1308
+      },
+      "tuu": {
+        "0": 1158,
+        "1": 1159,
+        "2": 1160,
+        "15": 1173
+      },
+      "chyan": {
+        "0": 1131,
+        "1": 1132,
+        "2": 1133,
+        "15": 1146
+      },
+      "salonbus": {
+        "0": 1077,
+        "1": 1078,
+        "2": 1079,
+        "15": 1092
+      }
+    },
+    "landings": {
+      "1": 43,
+      "2": 43,
+      "13": 43,
+      "14": 48,
+      "16": 48,
+      "18": 48,
+      "19": 43,
+      "20": 48,
+      "22": 43,
+      "23": 48,
+      "24": 43,
+      "25": 48,
+      "26": 43,
+      "27": 48,
+      "28": 43,
+      "29": 48,
+      "31": 48,
+      "33": 48,
+      "35": 43,
+      "45": 43,
+      "50": 43,
+      "55": 43,
+      "61": 43,
+      "66": 43,
+      "73": 43,
+      "78": 43,
+      "79": 48,
+      "81": 48,
+      "83": 48,
+      "88": 43,
+      "94": 43,
+      "98": 48,
+      "107": 43
+    },
+    "voiceSlots": {
+      "points50": [
+        0,
+        1
+      ],
+      "points30": [
+        2
+      ],
+      "ordinaryUpgrade5": [
+        15
+      ]
+    }
+  },
+  "exports": [
+    {
+      "archive": "Effect.mkf",
+      "index": 49,
+      "file": "effect-49.wav",
+      "bytes": 3302,
+      "sha256": "b2ef72a6ed55f63b9f230c1df302d9a7f21df0d0be3511356106ce0863bdda9d",
+      "channels": 1,
+      "sampleRate": 22050,
+      "sampleWidth": 1,
+      "duration": 0.14399092970521543
+    },
+    {
+      "archive": "Effect.mkf",
+      "index": 50,
+      "file": "effect-50.wav",
+      "bytes": 20008,
+      "sha256": "efc2dcdb2bbf7a508f0d9aaf94aad9b537db48f719099d8f985e833303e87ae8",
+      "channels": 1,
+      "sampleRate": 22050,
+      "sampleWidth": 1,
+      "duration": 0.9016326530612245
+    },
+    {
+      "archive": "Speaking.mkf",
+      "index": 1077,
+      "file": "voice-1077.wav",
+      "bytes": 71466,
+      "sha256": "6f8d26b9c0bb1e56e3ef042609c344202a09426c41b8542f23a7f2b9f7d7b343",
+      "channels": 1,
+      "sampleRate": 22050,
+      "sampleWidth": 1,
+      "duration": 3.2346485260770974
+    },
+    {
+      "archive": "Speaking.mkf",
+      "index": 1078,
+      "file": "voice-1078.wav",
+      "bytes": 29194,
+      "sha256": "930f16024c5d63d59e2477639a07429b0d68d558b4c98995ea9e27e150f9dc6f",
+      "channels": 1,
+      "sampleRate": 22050,
+      "sampleWidth": 1,
+      "duration": 1.314467120181406
+    },
+    {
+      "archive": "Speaking.mkf",
+      "index": 1079,
+      "file": "voice-1079.wav",
+      "bytes": 35032,
+      "sha256": "de4a819fae56f45e311640b4bb7c5bceb5009585ac043b4d901b4e9a43111d50",
+      "channels": 1,
+      "sampleRate": 22050,
+      "sampleWidth": 1,
+      "duration": 1.5792290249433107
+    },
+    {
+      "archive": "Speaking.mkf",
+      "index": 1092,
+      "file": "voice-1092.wav",
+      "bytes": 54764,
+      "sha256": "62acd75f4d893fad9780cfa41e128089607a7b717ce9f8249cda7dd10ea9142f",
+      "channels": 1,
+      "sampleRate": 22050,
+      "sampleWidth": 1,
+      "duration": 2.4741043083900225
+    },
+    {
+      "archive": "Speaking.mkf",
+      "index": 1131,
+      "file": "voice-1131.wav",
+      "bytes": 64812,
+      "sha256": "be67e07a66d023082afbcd3585d485dd7d2d3b73bde6c87c87b7ed3495f07db9",
+      "channels": 1,
+      "sampleRate": 22050,
+      "sampleWidth": 1,
+      "duration": 2.9328798185941043
+    },
+    {
+      "archive": "Speaking.mkf",
+      "index": 1132,
+      "file": "voice-1132.wav",
+      "bytes": 40954,
+      "sha256": "ccf0d23bbca815f6aedb55f09fcb777e8f29a6c4c878ea6e15e11ee53aab400b",
+      "channels": 1,
+      "sampleRate": 22050,
+      "sampleWidth": 1,
+      "duration": 1.8508843537414965
+    },
+    {
+      "archive": "Speaking.mkf",
+      "index": 1133,
+      "file": "voice-1133.wav",
+      "bytes": 21658,
+      "sha256": "c8b69bb08a76ec70fc6522f0f1de470602a99083519347cb9dcc5e308c634776",
+      "channels": 1,
+      "sampleRate": 22050,
+      "sampleWidth": 1,
+      "duration": 0.9757369614512472
+    },
+    {
+      "archive": "Speaking.mkf",
+      "index": 1146,
+      "file": "voice-1146.wav",
+      "bytes": 44498,
+      "sha256": "7858cbe5e4ab16375ef1476a7a4e4a5f1cba10260edebc5722d48f5721c20608",
+      "channels": 1,
+      "sampleRate": 22050,
+      "sampleWidth": 1,
+      "duration": 2.011609977324263
+    },
+    {
+      "archive": "Speaking.mkf",
+      "index": 1158,
+      "file": "voice-1158.wav",
+      "bytes": 35090,
+      "sha256": "acad0320988b94bc0b98465e7422d0509c4c8119a3b6272e1c8fe979dea8de83",
+      "channels": 1,
+      "sampleRate": 22050,
+      "sampleWidth": 1,
+      "duration": 1.5849433106575963
+    },
+    {
+      "archive": "Speaking.mkf",
+      "index": 1159,
+      "file": "voice-1159.wav",
+      "bytes": 26100,
+      "sha256": "571f02a673fe124d8294c864f77fee14378a7fc53a05e612fdfb274adca4b8d6",
+      "channels": 1,
+      "sampleRate": 22050,
+      "sampleWidth": 1,
+      "duration": 1.177233560090703
+    },
+    {
+      "archive": "Speaking.mkf",
+      "index": 1160,
+      "file": "voice-1160.wav",
+      "bytes": 20572,
+      "sha256": "e931e045bf26649d78583e3690bcb934f194ff4a3065541ebbeb202713694bc3",
+      "channels": 1,
+      "sampleRate": 22050,
+      "sampleWidth": 1,
+      "duration": 0.926530612244898
+    },
+    {
+      "archive": "Speaking.mkf",
+      "index": 1173,
+      "file": "voice-1173.wav",
+      "bytes": 29142,
+      "sha256": "6f6170706bbdcbb59ac8eda4babf29148a6f99cb1244e70876839397f3a75635",
+      "channels": 1,
+      "sampleRate": 22050,
+      "sampleWidth": 1,
+      "duration": 1.3151927437641724
+    },
+    {
+      "archive": "Speaking.mkf",
+      "index": 1293,
+      "file": "voice-1293.wav",
+      "bytes": 37138,
+      "sha256": "2f7999cdfda758a0c04ea1bc50c10514530d56349abb9ab25ae75d6a2c995cd7",
+      "channels": 1,
+      "sampleRate": 22050,
+      "sampleWidth": 1,
+      "duration": 1.6778231292517007
+    },
+    {
+      "archive": "Speaking.mkf",
+      "index": 1294,
+      "file": "voice-1294.wav",
+      "bytes": 24986,
+      "sha256": "e69655abe407691484cf83475fbfba5f13ada36087a883e292b8b7f5e5c4a840",
+      "channels": 1,
+      "sampleRate": 22050,
+      "sampleWidth": 1,
+      "duration": 1.1267120181405896
+    },
+    {
+      "archive": "Speaking.mkf",
+      "index": 1295,
+      "file": "voice-1295.wav",
+      "bytes": 46128,
+      "sha256": "09cb44e263654cff98054d986814aef2ab5e5d5d99066110af33a52174ef365a",
+      "channels": 1,
+      "sampleRate": 22050,
+      "sampleWidth": 1,
+      "duration": 2.085532879818594
+    },
+    {
+      "archive": "Speaking.mkf",
+      "index": 1308,
+      "file": "voice-1308.wav",
+      "bytes": 26344,
+      "sha256": "edbebb3ce7d0c4c6ec79caba2deceae9eb54baf8d61cdc72711bd6c0727e0255",
+      "channels": 1,
+      "sampleRate": 22050,
+      "sampleWidth": 1,
+      "duration": 1.188299319727891
+    }
+  ],
+  "decodedExports": 18,
+  "nativeBoundary": "local full prefixed strings match uniquely; relocated descriptor patterns are not proof of identical executable callsites"
+}

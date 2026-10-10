@@ -1,0 +1,709 @@
+{
+  "date": "2026-10-06",
+  "stage": "S2-03j",
+  "mode": "finalFortune",
+  "rulesId": "japan-events-candidate-v23",
+  "fingerprint": "54aa29d1",
+  "implementedNewFortune": [
+    2,
+    3,
+    4,
+    6,
+    7
+  ],
+  "implementedFortuneTotal": 37,
+  "acceptedNewFortuneBasicBrowser": 5,
+  "acceptedFortuneHistorical": 32,
+  "acceptedFortuneBasicBrowserTotal": 37,
+  "japanSlots": 37,
+  "globalHandlers": 49,
+  "remainingJapanSlots": [],
+  "otherMapHandlersNotImplemented": 12,
+  "implementedNews": 36,
+  "acceptedNewsHistorical": 36,
+  "itemsImplemented": 43,
+  "itemsAcceptedHistorical": 43,
+  "s2_03Complete": false,
+  "sourceBlobsVerified": 9,
+  "tests": {
+    "total": 757,
+    "passed": 757,
+    "files": 57,
+    "newDomain": 29,
+    "newPanels": 2,
+    "newVersionMatrix": 3,
+    "actualBrowserReplays": 9,
+    "allVersionsMatrix": 69
+  },
+  "lint": "passed",
+  "typescriptBuild": "passed",
+  "buildWarning": "existing large chunk and mixed static/dynamic math-printable import notices",
+  "browser": {
+    "routes": [
+      {
+        "route": "2",
+        "seed": "final-group-9",
+        "commands": 15,
+        "turn": 1,
+        "players": 4,
+        "state": "f0dfa5ca58d19d0d6f77530b3c7575e4d72d283300661ef726bf0b38aa1e2659",
+        "events": "93cb118d2e9ea90fc6cb0e33733ea1ae7e84d20654100db63e183b00bfec99d1",
+        "fortune": [
+          2
+        ],
+        "checks": [
+          {
+            "checks": [
+              "debt-only addition, no immediate payment or proceeds"
+            ],
+            "fortuneId": 2,
+            "final": {
+              "targetId": "player-1",
+              "absolved": false,
+              "redirected": false,
+              "turns": 0,
+              "mode": 0,
+              "debtBefore": 0,
+              "debtAfter": 10000
+            }
+          }
+        ],
+        "normalSpeed": true,
+        "map": "original Japan; real UI commands; auth-only fixture; no game-state injection",
+        "cleanup": {
+          "raf": 0,
+          "canvas": 0
+        },
+        "errors": [],
+        "releases": [],
+        "bankChecks": [],
+        "loanChanges": [],
+        "purchases": [],
+        "screenshots": "/private/tmp/richman-unified-ui-03j-2"
+      },
+      {
+        "route": "3",
+        "seed": "final-group-42",
+        "commands": 15,
+        "turn": 1,
+        "players": 2,
+        "state": "c16e26c76601cd526be50b88afa7891b3a2cf7e95130076cf3dd0a7a847a6dea",
+        "events": "48430904476cb220be76879821674f53ac44124232963ce03f779125b2ee4865",
+        "fortune": [
+          3
+        ],
+        "checks": [
+          {
+            "checks": [
+              "bank refusal add30 byte wrap ignoring double code"
+            ],
+            "fortuneId": 3,
+            "final": {
+              "targetId": "player-1",
+              "absolved": false,
+              "redirected": false,
+              "turns": 0,
+              "mode": 0,
+              "rejectedBefore": 0,
+              "rejectedAfter": 30
+            }
+          }
+        ],
+        "normalSpeed": true,
+        "map": "original Japan; real UI commands; auth-only fixture; no game-state injection",
+        "cleanup": {
+          "raf": 0,
+          "canvas": 0
+        },
+        "errors": [],
+        "releases": [],
+        "bankChecks": [],
+        "loanChanges": [],
+        "purchases": [],
+        "screenshots": "/private/tmp/richman-unified-ui-03j-3"
+      },
+      {
+        "route": "4",
+        "seed": "final-group-44",
+        "commands": 15,
+        "turn": 1,
+        "players": 3,
+        "state": "f82172764e5b2b9543b718f599aa904a88516579b5c2b221f43df1482a2562c3",
+        "events": "4065f682df4dfda580379e005d52c2a4ad209422c6132a817da4119835f918e2",
+        "fortune": [
+          4
+        ],
+        "checks": [
+          {
+            "checks": [
+              "all solvent donor seats, float32 truncation, bank-to-bank conservation"
+            ],
+            "fortuneId": 4,
+            "final": {
+              "targetId": "player-1",
+              "absolved": false,
+              "redirected": false,
+              "turns": 0,
+              "mode": 0,
+              "transfers": [
+                {
+                  "id": "player-2",
+                  "before": 150000,
+                  "amount": 15000,
+                  "after": 135000
+                },
+                {
+                  "id": "player-3",
+                  "before": 150000,
+                  "amount": 15000,
+                  "after": 135000
+                }
+              ]
+            }
+          }
+        ],
+        "normalSpeed": true,
+        "map": "original Japan; real UI commands; auth-only fixture; no game-state injection",
+        "cleanup": {
+          "raf": 0,
+          "canvas": 0
+        },
+        "errors": [],
+        "releases": [],
+        "bankChecks": [],
+        "loanChanges": [],
+        "purchases": [],
+        "screenshots": "/private/tmp/richman-unified-ui-03j-4"
+      },
+      {
+        "route": "6",
+        "seed": "final-group-12",
+        "commands": 15,
+        "turn": 1,
+        "players": 2,
+        "state": "9abfae3ef5882898b6aae03f5141d6df36450c4ef15531693488b613f682062a",
+        "events": "c91fa0d622f0d6d8d20e5adc584794a5a4e8eb5a81880f61e385ce74cae3b5bc",
+        "fortune": [
+          6
+        ],
+        "checks": [
+          {
+            "checks": [
+              "actual travel target, encoded duration, no displacement/fee, vehicle retention and facility clearing"
+            ],
+            "fortuneId": 6,
+            "final": {
+              "targetId": "player-1",
+              "absolved": false,
+              "redirected": false,
+              "turns": 3,
+              "mode": 0,
+              "travelBefore": 0,
+              "node": 2,
+              "travelAfter": 3
+            }
+          }
+        ],
+        "normalSpeed": true,
+        "map": "original Japan; real UI commands; auth-only fixture; no game-state injection",
+        "cleanup": {
+          "raf": 0,
+          "canvas": 0
+        },
+        "errors": [],
+        "releases": [],
+        "bankChecks": [],
+        "loanChanges": [],
+        "purchases": [],
+        "screenshots": "/private/tmp/richman-unified-ui-03j-6"
+      },
+      {
+        "route": "7",
+        "seed": "final-group-4",
+        "commands": 15,
+        "turn": 1,
+        "players": 3,
+        "state": "9670e2c67d3a6fd41d28243266d48115611e9301b4ad8333b25103ab1216f073",
+        "events": "cdb18afb234faaaffc92a4dcc473a8f416461c45cf5c5884897d7307f5e806df",
+        "fortune": [
+          7
+        ],
+        "checks": [
+          {
+            "checks": [
+              "actual travel target, encoded duration, no displacement/fee, vehicle retention and facility clearing"
+            ],
+            "fortuneId": 7,
+            "final": {
+              "targetId": "player-1",
+              "absolved": false,
+              "redirected": false,
+              "turns": 3,
+              "mode": 1,
+              "travelBefore": 0,
+              "node": 2,
+              "travelAfter": 67
+            }
+          }
+        ],
+        "normalSpeed": true,
+        "map": "original Japan; real UI commands; auth-only fixture; no game-state injection",
+        "cleanup": {
+          "raf": 0,
+          "canvas": 0
+        },
+        "errors": [],
+        "releases": [],
+        "bankChecks": [],
+        "loanChanges": [],
+        "purchases": [],
+        "screenshots": "/private/tmp/richman-unified-ui-03j-7"
+      },
+      {
+        "route": "2-repay",
+        "seed": "final-group-9",
+        "commands": 797,
+        "turn": 109,
+        "players": 4,
+        "state": "79274f3cb462b607356c8da9ada895f0517ea525b37b4871cb6b60dddd76f96e",
+        "events": "9f9e2aeec28b5e2599a34372b22d019334f6a5862d84e4ce8474809f75f0dd81",
+        "fortune": [
+          2,
+          7
+        ],
+        "checks": [
+          {
+            "checks": [
+              "debt-only addition, no immediate payment or proceeds"
+            ],
+            "fortuneId": 2,
+            "final": {
+              "targetId": "player-1",
+              "absolved": false,
+              "redirected": false,
+              "turns": 0,
+              "mode": 0,
+              "debtBefore": 0,
+              "debtAfter": 10000
+            }
+          },
+          {
+            "checks": [
+              "actual travel target, encoded duration, no displacement/fee, vehicle retention and facility clearing"
+            ],
+            "fortuneId": 7,
+            "final": {
+              "targetId": "player-4",
+              "absolved": false,
+              "redirected": false,
+              "turns": 3,
+              "mode": 1,
+              "travelBefore": 0,
+              "node": 19,
+              "travelAfter": 67
+            }
+          }
+        ],
+        "normalSpeed": true,
+        "map": "original Japan; real UI commands; auth-only fixture; no game-state injection",
+        "cleanup": {
+          "raf": 0,
+          "canvas": 0
+        },
+        "errors": [],
+        "releases": [],
+        "bankChecks": [
+          {
+            "turn": 2,
+            "blocked": false
+          },
+          {
+            "turn": 3,
+            "blocked": false
+          },
+          {
+            "turn": 4,
+            "blocked": false
+          },
+          {
+            "turn": 109,
+            "blocked": false
+          }
+        ],
+        "loanChanges": [
+          {
+            "type": "loanChanged",
+            "targetId": "player-1",
+            "operation": "repay",
+            "amount": 10000,
+            "debt": 0,
+            "balance": {
+              "cash": 154289,
+              "bank": 140000
+            },
+            "sequence": 1423,
+            "commandId": "command-794",
+            "playerId": "player-1",
+            "turn": 109
+          }
+        ],
+        "purchases": [
+          {
+            "type": "itemBought",
+            "itemId": "tool:08",
+            "cost": 30,
+            "points": 100,
+            "supply": 9,
+            "sequence": 764,
+            "commandId": "command-430",
+            "playerId": "player-1",
+            "turn": 57
+          },
+          {
+            "type": "itemBought",
+            "itemId": "tool:08",
+            "cost": 30,
+            "points": 70,
+            "supply": 8,
+            "sequence": 765,
+            "commandId": "command-431",
+            "playerId": "player-1",
+            "turn": 57
+          }
+        ],
+        "screenshots": "/private/tmp/richman-unified-ui-03j-2-repay"
+      },
+      {
+        "route": "3-bank",
+        "seed": "final-group-42",
+        "commands": 381,
+        "turn": 49,
+        "players": 2,
+        "state": "7401ebdedb4ea2d1526d818c254589caeeca595f163e0e8d07a23bf763a7044e",
+        "events": "c774e17dcbf846f8b51d53849a498f234035acb2a6fe78ad31311c6827987a06",
+        "fortune": [
+          3,
+          4
+        ],
+        "checks": [
+          {
+            "checks": [
+              "bank refusal add30 byte wrap ignoring double code"
+            ],
+            "fortuneId": 3,
+            "final": {
+              "targetId": "player-1",
+              "absolved": false,
+              "redirected": false,
+              "turns": 0,
+              "mode": 0,
+              "rejectedBefore": 0,
+              "rejectedAfter": 30
+            }
+          },
+          {
+            "checks": [
+              "all solvent donor seats, float32 truncation, bank-to-bank conservation"
+            ],
+            "fortuneId": 4,
+            "final": {
+              "targetId": "player-1",
+              "absolved": false,
+              "redirected": false,
+              "turns": 0,
+              "mode": 0,
+              "transfers": [
+                {
+                  "id": "player-2",
+                  "before": 150000,
+                  "amount": 15000,
+                  "after": 135000
+                }
+              ]
+            }
+          }
+        ],
+        "normalSpeed": true,
+        "map": "original Japan; real UI commands; auth-only fixture; no game-state injection",
+        "cleanup": {
+          "raf": 0,
+          "canvas": 0
+        },
+        "errors": [],
+        "releases": [],
+        "bankChecks": [
+          {
+            "turn": 2,
+            "blocked": false
+          },
+          {
+            "turn": 49,
+            "blocked": true
+          }
+        ],
+        "loanChanges": [],
+        "purchases": [
+          {
+            "type": "itemBought",
+            "itemId": "tool:08",
+            "cost": 30,
+            "points": 70,
+            "supply": 9,
+            "sequence": 667,
+            "commandId": "command-361",
+            "playerId": "player-1",
+            "turn": 47
+          },
+          {
+            "type": "itemBought",
+            "itemId": "tool:08",
+            "cost": 30,
+            "points": 40,
+            "supply": 8,
+            "sequence": 668,
+            "commandId": "command-362",
+            "playerId": "player-1",
+            "turn": 47
+          }
+        ],
+        "screenshots": "/private/tmp/richman-unified-ui-03j-3-bank"
+      },
+      {
+        "route": "6-return",
+        "seed": "final-group-12",
+        "commands": 58,
+        "turn": 9,
+        "players": 2,
+        "state": "3e36e067eff472bc6cc208aa6200552a219e977c55ebd2a4ce9d98b865f08321",
+        "events": "c2ac0e5f057fbf4943afb64323136416e0c66b9611aa2d7f3d0feda2b1cdc4bf",
+        "fortune": [
+          6
+        ],
+        "checks": [
+          {
+            "checks": [
+              "actual travel target, encoded duration, no displacement/fee, vehicle retention and facility clearing"
+            ],
+            "fortuneId": 6,
+            "final": {
+              "targetId": "player-1",
+              "absolved": false,
+              "redirected": false,
+              "turns": 3,
+              "mode": 0,
+              "travelBefore": 0,
+              "node": 2,
+              "travelAfter": 3
+            }
+          }
+        ],
+        "normalSpeed": true,
+        "map": "original Japan; real UI commands; auth-only fixture; no game-state injection",
+        "cleanup": {
+          "raf": 0,
+          "canvas": 0
+        },
+        "errors": [],
+        "releases": [
+          {
+            "type": "mobilityChanged",
+            "targetId": "player-1",
+            "mobility": {
+              "stop": 0,
+              "winter": 0,
+              "dream": 0,
+              "prison": 0,
+              "hospital": 0,
+              "turtle": 0,
+              "vehicle": "foot",
+              "diceCount": 1,
+              "savedVehicle": "foot",
+              "savedDice": 1,
+              "travel": 0
+            },
+            "reason": "离开设施",
+            "sequence": 95,
+            "commandId": "command-52",
+            "playerId": "player-1",
+            "turn": 9
+          }
+        ],
+        "bankChecks": [],
+        "loanChanges": [],
+        "purchases": [],
+        "screenshots": "/private/tmp/richman-unified-ui-03j-6-return"
+      },
+      {
+        "route": "7-redirect",
+        "seed": "final-group-46",
+        "commands": 256,
+        "turn": 41,
+        "players": 3,
+        "state": "bb05649c07231d8ec0c57f2b51786941307f14159aab88acd9a148e848138f94",
+        "events": "0d79457feb11bde4b2fc4d4ac5351c8e7043a41d13bd7b7a8a928cf4d59fca59",
+        "fortune": [
+          7
+        ],
+        "checks": [
+          {
+            "checks": [
+              "actual travel target, encoded duration, no displacement/fee, vehicle retention and facility clearing"
+            ],
+            "fortuneId": 7,
+            "final": {
+              "targetId": "player-1",
+              "absolved": false,
+              "redirected": true,
+              "turns": 3,
+              "mode": 1,
+              "travelBefore": 0,
+              "node": 82,
+              "travelAfter": 67
+            }
+          }
+        ],
+        "normalSpeed": true,
+        "map": "original Japan; real UI commands; auth-only fixture; no game-state injection",
+        "cleanup": {
+          "raf": 0,
+          "canvas": 0
+        },
+        "errors": [],
+        "releases": [
+          {
+            "type": "mobilityChanged",
+            "targetId": "player-1",
+            "mobility": {
+              "stop": 0,
+              "winter": 0,
+              "dream": 0,
+              "prison": 0,
+              "hospital": 0,
+              "turtle": 0,
+              "vehicle": "foot",
+              "diceCount": 1,
+              "savedVehicle": "foot",
+              "savedDice": 1,
+              "travel": 0
+            },
+            "reason": "离开设施",
+            "sequence": 409,
+            "commandId": "command-217",
+            "playerId": "player-1",
+            "turn": 37
+          }
+        ],
+        "bankChecks": [],
+        "loanChanges": [],
+        "purchases": [
+          {
+            "type": "itemBought",
+            "itemId": "card:19",
+            "cost": 40,
+            "points": 110,
+            "supply": 3,
+            "sequence": 357,
+            "commandId": "command-190",
+            "playerId": "player-2",
+            "turn": 32
+          },
+          {
+            "type": "itemBought",
+            "itemId": "tool:08",
+            "cost": 30,
+            "points": 80,
+            "supply": 8,
+            "sequence": 358,
+            "commandId": "command-191",
+            "playerId": "player-2",
+            "turn": 32
+          },
+          {
+            "type": "itemBought",
+            "itemId": "tool:08",
+            "cost": 30,
+            "points": 50,
+            "supply": 7,
+            "sequence": 359,
+            "commandId": "command-192",
+            "playerId": "player-2",
+            "turn": 32
+          }
+        ],
+        "screenshots": "/private/tmp/richman-unified-ui-03j-7-redirect"
+      }
+    ],
+    "routeCount": 9,
+    "actualCommands": 1567,
+    "players": [
+      2,
+      3,
+      4
+    ],
+    "normalSpeed": true,
+    "originalMap": true,
+    "gameStateInjection": false,
+    "authFixtureOnly": true,
+    "commonChecks": [
+      "pause/resume",
+      "reset dialog cancel",
+      "fullscreen",
+      "390px no horizontal overflow",
+      "download actual replay",
+      "independent arithmetic/state checks",
+      "exact replay + permanent state/events SHA",
+      "reset then exit RAF0 canvas0 errors[]"
+    ],
+    "specialChecks": [
+      "2-repay: player1 repays entire stolen 10000 loan at turn109",
+      "3-bank: refusal persists at bank turn49, six remaining boundaries, both banking selects disabled, exit succeeds",
+      "6-return: original player returns at turn9, no new landing resolution",
+      "7-redirect: player2 legally buys redirect card turn32, transfers kidnapping3 to player1 turn41; no target reaction recursion"
+    ],
+    "screenshotsReviewed": [
+      "03j-7/fortune-narrow.png",
+      "03j-7-redirect/reaction-narrow.png",
+      "03j-3-bank/bank-rejected.png"
+    ]
+  },
+  "failures": [
+    {
+      "stage": "first 3-bank browser run",
+      "reason": "exact bank business label selector timed out at command376 while rejected bank panel was displayed",
+      "fix": "scope bank region, use first/second combobox to check disabled state",
+      "outcome": "full 381-actual-command route rerun passed; failed attempt not counted"
+    },
+    {
+      "stage": "initial independent verifier",
+      "reason": "compared whole pre-animation command position with after-fortune position, ignoring arrival in same command",
+      "fix": "validate nodeEntered step first; require travel remains at reached node and preserves predecessor",
+      "outcome": "all9 actual replays independently verified after correction; no production movement change"
+    }
+  ],
+  "domainOnlyNotBrowser": [
+    "god cancellation/doubling branches",
+    "automatic absolution priority",
+    "raw-byte overflow/reapplication/high-bit lifecycle",
+    "redirect to already detained/hotel/travel target",
+    "vehicle/engineer retention edge cases",
+    "bank transfer float32 boundary rounding and bankrupt donor exclusion",
+    "time-machine combination restoration",
+    "all status conflicts/full cross-product of participants"
+  ],
+  "preserved": [
+    "v1-v22 fingerprints and old replay hashes",
+    "v22 traffic/asset/money fortune",
+    "v19 36 news",
+    "43 items historical acceptance"
+  ],
+  "deferred": [
+    "calendar/periodic bank interest",
+    "loan due dates/collection",
+    "original bankruptcy auction",
+    "full company/insurance/special financing",
+    "absence statistics and source voice/animation RNG",
+    "lottery/minigame/magic house",
+    "12 other-map regional handlers"
+  ],
+  "next": "S2-03k: audit calendar progression, bank interest, transaction days and loan maturity; evidence-backed increment v24"
+}

@@ -1,0 +1,12 @@
+{
+  "route": "ui",
+  "seed": "insurance-2-0",
+  "players": 2,
+  "commands": 96,
+  "turn": 11,
+  "startDate": "1998-01-07",
+  "endDate": "1998-01-12",
+  "dividends": null,
+  "state": "98821a6d21fb8e0b68fb1572a1aa1697881af95704c12b9a03e429064f510a72",
+  "events": "fad833bce2de8f88cfbd6e05670cf4eb44819f6273fdcf1eea10cbf2ca3c463e"
+}

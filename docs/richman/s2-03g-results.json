@@ -1,0 +1,456 @@
+{
+  "date": "2026-10-05",
+  "task": "S2-03g",
+  "mode": "fortune",
+  "rulesId": "japan-events-candidate-v20",
+  "itemFingerprint": "45905600",
+  "implementedFortuneIds": [
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32
+  ],
+  "acceptedFortuneCandidateBaseEffects": 16,
+  "japanFortuneSlots": 37,
+  "globalFortuneHandlers": 49,
+  "remainingJapanSlots": 21,
+  "implementedNews": 36,
+  "acceptedNewsHistorical": 36,
+  "itemsImplemented": 43,
+  "itemsAcceptedHistorical": 43,
+  "s2_03Complete": false,
+  "sourceBlobsVerified": 13,
+  "domainAndComponentTests": {
+    "total": 640,
+    "passed": 640,
+    "newFortuneDomain": 37,
+    "newFortuneComponent": 2,
+    "newVersionMatrix": 3,
+    "actualBrowserReplays": 8,
+    "allVersionsMatrix": 60
+  },
+  "lint": "passed",
+  "typescriptBuild": "passed",
+  "buildWarning": "existing large chunk and mixed static/dynamic math-printable import notices",
+  "browser": {
+    "routes": [
+      {
+        "route": "0",
+        "seed": "fortune-group-0",
+        "commands": 56,
+        "turn": 6,
+        "players": 2,
+        "state": "196714d6767ec70aa070ce3b974f34bc27d5bb29e9929b7d4862733c6f071239",
+        "events": "bea16a7820985b189ad41be50bed9205498c2a5d6f75ae4385fcc75f5ced15b6",
+        "fortune": [
+          17,
+          19
+        ],
+        "normalSpeed": true,
+        "map": "original Japan; real UI commands; auth-only fixture; no game-state injection",
+        "checks": [
+          {
+            "fortuneId": 17,
+            "code": 0,
+            "godType": 0,
+            "amount": -6000,
+            "points": 0,
+            "sold": [],
+            "checked": "actual replay transition, independently checked amount/payment/public fund/inventory arithmetic"
+          },
+          {
+            "fortuneId": 19,
+            "code": 0,
+            "godType": 0,
+            "amount": -1500,
+            "points": 0,
+            "sold": [],
+            "checked": "actual replay transition, independently checked amount/payment/public fund/inventory arithmetic"
+          }
+        ],
+        "cleanup": {
+          "raf": 0,
+          "canvas": 0
+        },
+        "errors": [],
+        "screenshots": "/private/tmp/richman-unified-ui-03g-0"
+      },
+      {
+        "route": "1",
+        "seed": "fortune-group-1",
+        "commands": 34,
+        "turn": 3,
+        "players": 3,
+        "state": "8900dd416293908daa6df3d8d172c03ed7b9c43a07edc6901928fe42d5e01f08",
+        "events": "e0a3cb8f33df3f41ac0992c4b090afd3a323b66ca2053231179c0defbea0afc2",
+        "fortune": [
+          25,
+          28
+        ],
+        "normalSpeed": true,
+        "map": "original Japan; real UI commands; auth-only fixture; no game-state injection",
+        "checks": [
+          {
+            "fortuneId": 25,
+            "code": 0,
+            "godType": 0,
+            "amount": 10000,
+            "points": 0,
+            "sold": [],
+            "checked": "actual replay transition, independently checked amount/payment/public fund/inventory arithmetic"
+          },
+          {
+            "fortuneId": 28,
+            "code": 0,
+            "godType": 0,
+            "amount": 6000,
+            "points": 0,
+            "sold": [],
+            "checked": "actual replay transition, independently checked amount/payment/public fund/inventory arithmetic"
+          }
+        ],
+        "cleanup": {
+          "raf": 0,
+          "canvas": 0
+        },
+        "errors": [],
+        "screenshots": "/private/tmp/richman-unified-ui-03g-1"
+      },
+      {
+        "route": "2",
+        "seed": "fortune-group-2",
+        "commands": 41,
+        "turn": 3,
+        "players": 4,
+        "state": "a895af4a667a87cab0382498e4532111758373dc631f2e1eee68513bf33a818c",
+        "events": "89ba7922363125a0cd2fdc84aa18af26d986bd2608caa5562a4e1f9be91022d8",
+        "fortune": [
+          24,
+          26
+        ],
+        "normalSpeed": true,
+        "map": "original Japan; real UI commands; auth-only fixture; no game-state injection",
+        "checks": [
+          {
+            "fortuneId": 24,
+            "code": 0,
+            "godType": 0,
+            "amount": -2000,
+            "points": 0,
+            "sold": [],
+            "checked": "actual replay transition, independently checked amount/payment/public fund/inventory arithmetic"
+          },
+          {
+            "fortuneId": 26,
+            "code": 0,
+            "godType": 0,
+            "amount": -8000,
+            "points": 0,
+            "sold": [],
+            "checked": "actual replay transition, independently checked amount/payment/public fund/inventory arithmetic"
+          }
+        ],
+        "cleanup": {
+          "raf": 0,
+          "canvas": 0
+        },
+        "errors": [],
+        "screenshots": "/private/tmp/richman-unified-ui-03g-2"
+      },
+      {
+        "route": "3",
+        "seed": "fortune-group-7",
+        "commands": 61,
+        "turn": 6,
+        "players": 2,
+        "state": "80bfa2d5c4b4d72add814aef0d419c21bfe1e0cf31e1b655d26df29ad2d2b4e6",
+        "events": "feb91007abbfa440dd430bbfe2f7a3d3e7acb3841b5eb64995a5c72008a70bc6",
+        "fortune": [
+          32,
+          20
+        ],
+        "normalSpeed": true,
+        "map": "original Japan; real UI commands; auth-only fixture; no game-state injection",
+        "checks": [
+          {
+            "fortuneId": 32,
+            "code": 0,
+            "godType": 0,
+            "amount": 0,
+            "points": 75,
+            "sold": [
+              {
+                "itemId": "tool:09",
+                "count": 1,
+                "price": 30
+              },
+              {
+                "itemId": "tool:01",
+                "count": 1,
+                "price": 15
+              },
+              {
+                "itemId": "tool:02",
+                "count": 1,
+                "price": 30
+              }
+            ],
+            "checked": "actual replay transition, independently checked amount/payment/public fund/inventory arithmetic"
+          },
+          {
+            "fortuneId": 20,
+            "code": 0,
+            "godType": 0,
+            "amount": 1000,
+            "points": 0,
+            "sold": [],
+            "checked": "actual replay transition, independently checked amount/payment/public fund/inventory arithmetic"
+          }
+        ],
+        "cleanup": {
+          "raf": 0,
+          "canvas": 0
+        },
+        "errors": [],
+        "screenshots": "/private/tmp/richman-unified-ui-03g-3"
+      },
+      {
+        "route": "4",
+        "seed": "fortune-group-9",
+        "commands": 34,
+        "turn": 3,
+        "players": 3,
+        "state": "8f08d17c6370320067e6cf28a292d617adddff7813a63ae11e8ce4a2d81d8e83",
+        "events": "5576960eef216544fa24159dcaf4c60d362bffd0c11b9b00be79a0ed23049e9a",
+        "fortune": [
+          30,
+          31
+        ],
+        "normalSpeed": true,
+        "map": "original Japan; real UI commands; auth-only fixture; no game-state injection",
+        "checks": [
+          {
+            "fortuneId": 30,
+            "code": 0,
+            "godType": 0,
+            "amount": -5000,
+            "points": 0,
+            "sold": [],
+            "checked": "actual replay transition, independently checked amount/payment/public fund/inventory arithmetic"
+          },
+          {
+            "fortuneId": 31,
+            "code": 0,
+            "godType": 0,
+            "amount": 5000,
+            "points": 0,
+            "sold": [],
+            "checked": "actual replay transition, independently checked amount/payment/public fund/inventory arithmetic"
+          }
+        ],
+        "cleanup": {
+          "raf": 0,
+          "canvas": 0
+        },
+        "errors": [],
+        "screenshots": "/private/tmp/richman-unified-ui-03g-4"
+      },
+      {
+        "route": "5",
+        "seed": "fortune-group-57",
+        "commands": 41,
+        "turn": 3,
+        "players": 4,
+        "state": "f2b415cfbce9b9e2c8e415de934c30ef39d64876a36c1b9c7d5be79cb8a45e33",
+        "events": "a61d1da74040819e3c0f75be66a23cc06ac1690aab5f31eb9aa79a290a146b7e",
+        "fortune": [
+          27,
+          21
+        ],
+        "normalSpeed": true,
+        "map": "original Japan; real UI commands; auth-only fixture; no game-state injection",
+        "checks": [
+          {
+            "fortuneId": 27,
+            "code": 0,
+            "godType": 0,
+            "amount": 4000,
+            "points": 0,
+            "sold": [],
+            "checked": "actual replay transition, independently checked amount/payment/public fund/inventory arithmetic"
+          },
+          {
+            "fortuneId": 21,
+            "code": 0,
+            "godType": 0,
+            "amount": 2000,
+            "points": 0,
+            "sold": [],
+            "checked": "actual replay transition, independently checked amount/payment/public fund/inventory arithmetic"
+          }
+        ],
+        "cleanup": {
+          "raf": 0,
+          "canvas": 0
+        },
+        "errors": [],
+        "screenshots": "/private/tmp/richman-unified-ui-03g-5"
+      },
+      {
+        "route": "6",
+        "seed": "fortune-group-67",
+        "commands": 60,
+        "turn": 6,
+        "players": 2,
+        "state": "ef81358b2db3770436ff26d75d6d61ce4b1b1f3e8f56b9bfdcd4087e089d9ee7",
+        "events": "0476e7be553f201c82ffb1c1c0addfadff99fb5dd0cca0af8f089fb5fa2681db",
+        "fortune": [
+          29,
+          23
+        ],
+        "normalSpeed": true,
+        "map": "original Japan; real UI commands; auth-only fixture; no game-state injection",
+        "checks": [
+          {
+            "fortuneId": 29,
+            "code": 0,
+            "godType": 0,
+            "amount": 8000,
+            "points": 0,
+            "sold": [],
+            "checked": "actual replay transition, independently checked amount/payment/public fund/inventory arithmetic"
+          },
+          {
+            "fortuneId": 23,
+            "code": 0,
+            "godType": 12,
+            "amount": -1000,
+            "points": 0,
+            "sold": [],
+            "checked": "actual replay transition, independently checked amount/payment/public fund/inventory arithmetic"
+          }
+        ],
+        "cleanup": {
+          "raf": 0,
+          "canvas": 0
+        },
+        "errors": [],
+        "screenshots": "/private/tmp/richman-unified-ui-03g-6"
+      },
+      {
+        "route": "7",
+        "seed": "fortune-group-77",
+        "commands": 32,
+        "turn": 3,
+        "players": 3,
+        "state": "d18b0c2b9543044e92ceb42b3788c93082cba9f997697997513368974b76a7ff",
+        "events": "f6f6e147b992757e28600daaec5a502a157f3d82713cab5a0b153a53652c180e",
+        "fortune": [
+          22,
+          18
+        ],
+        "normalSpeed": true,
+        "map": "original Japan; real UI commands; auth-only fixture; no game-state injection",
+        "checks": [
+          {
+            "fortuneId": 22,
+            "code": 0,
+            "godType": 0,
+            "amount": 3000,
+            "points": 0,
+            "sold": [],
+            "checked": "actual replay transition, independently checked amount/payment/public fund/inventory arithmetic"
+          },
+          {
+            "fortuneId": 18,
+            "code": 0,
+            "godType": 0,
+            "amount": -600,
+            "points": 0,
+            "sold": [],
+            "checked": "actual replay transition, independently checked amount/payment/public fund/inventory arithmetic"
+          }
+        ],
+        "cleanup": {
+          "raf": 0,
+          "canvas": 0
+        },
+        "errors": [],
+        "screenshots": "/private/tmp/richman-unified-ui-03g-7"
+      }
+    ],
+    "totalActualCommands": 359,
+    "normalSpeed": true,
+    "authOnlyFixture": true,
+    "gameStateInjection": false,
+    "commonChecks": [
+      "pause/resume",
+      "cancel reset dialog",
+      "fullscreen",
+      "390px no horizontal overflow",
+      "actual replay export and independent verification",
+      "reset",
+      "leave module RAF0 canvas0"
+    ],
+    "failedAttempt": "4-player route2 initially used incorrect planner character ID sun; corrected salonbus and rerun passed; not counted as passing on initial attempt"
+  },
+  "engineOnlyLongPlan": {
+    "commands": 2895,
+    "turn": 416,
+    "fortuneIds": [
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32
+    ],
+    "exactReplay": true,
+    "browser": false
+  },
+  "notBrowserVerified": [
+    "equipped motorcycle/car/engineer sale",
+    "card/research-tool sale",
+    "god cancellation and double amounts",
+    "fee insolvency",
+    "uint16 point wrap",
+    "time machine after fortune",
+    "self teleport fortune and dream suppression",
+    "full game to victory",
+    "16 events x all three roster sizes"
+  ],
+  "deferred": [
+    "remaining21 Japan fortune slots and other-map regional handlers",
+    "calendar/periodic interest",
+    "loan maturity",
+    "original bankruptcy compulsory auction",
+    "full company/insurance services",
+    "lottery purchase/draw/prize",
+    "minigames and magic house",
+    "original fortune graphics/speech RNG"
+  ],
+  "git": "uncommitted; no push or deploy; existing workspace preserved",
+  "next": "S2-03h: batch-audit remaining property/inventory/stock fortunes0/1/5/8/9 and decide evidenced increment, v21"
+}

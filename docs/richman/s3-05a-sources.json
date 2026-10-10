@@ -1,0 +1,71 @@
+{
+  "stage": "S3-05a",
+  "date": "2026-10-10",
+  "rulesId": "japan-events-candidate-v47",
+  "newGameSemantics": false,
+  "scope": "UI help and feedback only; no new native rules claim",
+  "facts": [
+    {
+      "id": "R12-A01",
+      "finding": "Company/Calendar/Dividend/Estate/Property display mode chains stopped at minigames; stockMarket through surrender inherited rules but received historical missing-feature text or fixed index. UI-only ordered business mode metadata now covers existing modes.",
+      "evidence": [
+        "game/session.ts mode->rules mapping",
+        "game/insurance-state.ts",
+        "game/date-business.ts",
+        "mode-help.test.tsx real snapshots"
+      ]
+    },
+    {
+      "id": "R12-A02",
+      "finding": "Commerce insurance availability is read from the actual public business.insurance state. Game help reads actual economy/calendar/business availability. Historical economy and company modes retain their restrictions.",
+      "evidence": [
+        "CommercePanel.tsx",
+        "GameHelp.tsx",
+        "mode-help.test.tsx"
+      ]
+    },
+    {
+      "id": "R12-A03",
+      "finding": "Worker target selection/locate is non-consuming; confirm commits. Added empty-selection instruction, existing pending-id selection/reset and pause controls retained.",
+      "evidence": [
+        "NearbyWorkerChoice.tsx",
+        "two six-command real browser replays"
+      ]
+    },
+    {
+      "id": "R12-A04",
+      "finding": "Scene supports one pointer drag and wheel zoom; touch-action none, no pinch implementation. Help explicitly recommends zoom buttons for touch. Coarse pointer buttons now at least44x44.",
+      "evidence": [
+        "scene.ts pointerDown/Move/Up/Cancel",
+        "richman.css",
+        "s3-05a-results.json"
+      ]
+    },
+    {
+      "id": "R12-A05",
+      "finding": "Actual desktop and390px Chrome touch emulation enter native fullscreen and exit, select/cancel worker and retain old-mode scope. Physical touch, pinch, pointercancel and Safari not covered.",
+      "evidence": [
+        "polish-help-browser.cjs",
+        "s3-05a-results.json"
+      ]
+    }
+  ],
+  "files": {
+    "mode-help.ts": "9fb4c4475a937e31f16d1b69cbc0225947ba5e7b3ab5e27d64c43eabd71f85b2",
+    "GameHelp.tsx": "e7db4e823c1c484cd9b7f77343ea7b2b64f06e7badc2da4d288974fc047f633b",
+    "CompanyPanel.tsx": "192c7c5d614ad3944fdcb5c8d6d892251499478d84d3d94b4506558d3c388d99",
+    "CommercePanel.tsx": "5bbfdae7379ae6108410332d29ef121114b190bcbe1fa1e533a0ec14d28ca799",
+    "DividendPanel.tsx": "ae74ab8dcbfad676d1120fccccea3ee8b083b1e58654ad83b2e3890b0ddc2561",
+    "CalendarPanel.tsx": "027f4fa43ad25a6af81397a576d23b1125b3ded7c24c2787bf4ccf26c342acf8",
+    "EstateSalesPanel.tsx": "ad9a540b86caf93d954377c22444f27094febd1d7cdffe064f1cb8c102dc3c07",
+    "PropertyPanel.tsx": "c34b257b4fe5c9cb67261045ac6039466647c8093b0c521523dd7486a925d17c",
+    "NearbyWorkerChoice.tsx": "bb9db013cb6d624f7effa6798362d07b563672ad4887bf59f73e550585c192f2",
+    "richman.css": "60bda2cc737c1a39d889a189866b33489f219e02a4e27998fe67a0f46ef4949d"
+  },
+  "scripts": {
+    "polish-help-browser.cjs": "a1213339f94bdc463899acdd6fa5d88e02c574a83f4047aea1d9658fbf65cccd",
+    "verify-polish-help.ts": "8f2b3f859296ebdf68976a3467735697a65025fa8f3c6e94f39f823c69067937"
+  },
+  "historicalGameAndResourcesUnchanged": 756,
+  "historicalFixturesUnchanged": 488
+}

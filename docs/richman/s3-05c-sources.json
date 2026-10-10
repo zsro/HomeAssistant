@@ -1,0 +1,44 @@
+{
+  "stage": "S3-05c",
+  "date": "2026-10-10",
+  "scope": "UI focus/navigation and targeted acceptance only; no native gameplay inference",
+  "facts": [
+    {
+      "id": "R12-C01",
+      "finding": "工人键盘取消后焦点落到body已实测；成功确认/取消道具、确认重开/换局后定位下一操作。",
+      "evidence": "v47 desktop/390px Enter/Tab/Space segments; modal Escape/cancel restores opener; paused modal remains paused"
+    },
+    {
+      "id": "R12-C02",
+      "finding": "记录游戏内focusin；状态更新后仅在原控件已移除且焦点为body时补位；未移除的焦点不抢占，不提交游戏命令。",
+      "evidence": "v17 auction three responder transitions, final focus to news; v37 non-current magic reaction returns focus to magic"
+    },
+    {
+      "id": "R12-C03",
+      "finding": "确认重开/换局显式清除工人选择和无效命中反馈；取消弹窗保留旧选择。",
+      "evidence": "six exported v47 segments, inventory/economy unchanged; distinct sessions, not cross-game unified replay"
+    },
+    {
+      "id": "R12-C04",
+      "finding": "非当前付款人债务导航只完成独立组件检查，不记作原图破产UI；Web/Chrome代表性范围收口，其他组合与设备分列。",
+      "evidence": "decision-navigation.test.tsx FinancePanel payer player-2 while active player-1, paused and no settlement; historical baseline unchanged"
+    }
+  ],
+  "files": {
+    "frontend/src/pages/RichmanPage.tsx": "9581a33b2e2e8c26dd2fc67c2b2c167154122dfaffab6fedd60a838fec8f8a76",
+    "frontend/src/features/richman/decision-navigation.ts": "b884e8f00676fa186fc11746c0e7f79022740a2044f2e8b1ce429a16f1d1a595",
+    "frontend/src/features/richman/decision-navigation.test.tsx": "eb6c7170a9ab93a1976ff541082936677a170e027d1c9ac206eec405e5bea78b",
+    "scripts/richman/audit-polish-routes.ts": "c2581ceec2490d7f2ced01e4cc79b70a19ece6af982347bea4cb0195557c7cbc",
+    "scripts/richman/find-polish-reaction.ts": "60c0147303f3f9cf8a482e3d0bbb5f40683d6ed90381920019d912ded8e9257d",
+    "scripts/richman/prepare-polish-responders.ts": "fb40886fac9f36c99524d07e80b4b1af6decae899e307371072618a932ffa6c3",
+    "scripts/richman/polish-closure-browser.cjs": "1736c1828d896687c94bc1d46d27ac1c698f2b76c4fb5f2d74904dc5a70f4369",
+    "scripts/richman/polish-responders-browser.cjs": "ca1e18284ed2169e8d386063d2e18b899d20b4d5acbeede096b6bab60d8287b0",
+    "scripts/richman/verify-polish-closure.ts": "ad80dfda4831b028070f0a794c1bb4c823c9783d0b3e824250a7081c001abc6e"
+  },
+  "routeSources": [
+    "operating-news-v17-replay.json first30",
+    "magic-actions-v37-nested-replay.json first284"
+  ],
+  "historicalGameAndResourcesUnchanged": 761,
+  "historicalFixturesUnchanged": 493
+}

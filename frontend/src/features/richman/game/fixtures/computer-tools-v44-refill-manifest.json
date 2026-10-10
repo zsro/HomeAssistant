@@ -1,0 +1,75 @@
+{
+  "players": 2,
+  "commands": 675,
+  "turn": 91,
+  "auto": 142,
+  "human": 132,
+  "dates": 45,
+  "used": {
+    "tool:08": 2,
+    "tool:09": 1
+  },
+  "bought": [
+    {
+      "player": "player-2",
+      "turn": 74,
+      "pointsBefore": 150,
+      "pointsAfter": 120,
+      "supplyBefore": 9,
+      "supplyAfter": 8
+    }
+  ],
+  "prefixes": [
+    "idle:paused",
+    "idle:resumed",
+    "tool:08:begin",
+    "tool:08:select-dice-v1:paused",
+    "tool:08:select-dice-v1:resumed",
+    "tool:08:confirm",
+    "tool:08:after",
+    "tool:09:begin",
+    "tool:09:build-nearby-anchor-v1:paused",
+    "tool:09:build-nearby-anchor-v1:resumed",
+    "tool:09:confirm",
+    "tool:09:after",
+    "normal-roll",
+    "refill-before",
+    "refill-after"
+  ],
+  "report": {
+    "policy": "tools-v1",
+    "toolWindows": [
+      "tool:08",
+      "tool:09"
+    ],
+    "crossChecks": [],
+    "route": "refill",
+    "terminal": false,
+    "players": 2,
+    "normalSpeed": true,
+    "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+    "commands": 675,
+    "auto": 142,
+    "human": 132,
+    "lifecycle": [
+      "pause stops waiting",
+      "resume",
+      "reset dialog cancel",
+      "reset",
+      "replace with humans",
+      "exit cleanup",
+      "fullscreen",
+      "390px"
+    ],
+    "cleanup": {
+      "raf": 0,
+      "canvas": 0
+    },
+    "errors": []
+  },
+  "hashes": {
+    "replay": "edf337e638dd12f1d1c089fd7d49a402e07ec0d3ea0420c9ae0357af9876d794",
+    "state": "cad50d11de4e7e7e7d2e6971b36c6f758d92c2088a3c0b9993eaafc455819982",
+    "events": "4cdaceed9305d7425b85513b0dbe3bc7d1667fc4ae4dcec2e14aeb17439612e4"
+  }
+}

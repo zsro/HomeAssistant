@@ -50,6 +50,8 @@ if [ ! -f "$ENV_FILE" ]; then
   exit 1
 fi
 
+node "$SCRIPT_DIR/scripts/richman/check-release-assets.cjs"
+
 mkdir -p "$RELEASES_DIR" "$SHARED_DIR" "$BACKUP_DIR" "$LOG_DIR" "$STATIC_RELEASES_DIR"
 mkdir -p "$RELEASE_DIR"
 

@@ -1,0 +1,138 @@
+{
+  "players": 2,
+  "commands": 958,
+  "turn": 137,
+  "auto": 189,
+  "human": 195,
+  "acquisitions": [
+    {
+      "id": "player-2",
+      "item": "card:19",
+      "ai": true,
+      "turn": 15,
+      "action": "magic",
+      "node": 96,
+      "evidence": [
+        {
+          "node": 35,
+          "group": 4,
+          "targets": [
+            "player-2"
+          ],
+          "effect": 6,
+          "title": "得一张卡片",
+          "rows": [
+            {
+              "playerId": "player-2",
+              "lines": [
+                "获得嫁祸卡。"
+              ],
+              "pointsBefore": 0,
+              "pointsAfter": 0,
+              "cashBefore": 1000,
+              "cashAfter": 1000,
+              "bankBefore": 21000,
+              "bankAfter": 21000,
+              "stopBefore": 0,
+              "stopAfter": 0,
+              "previousBefore": 97,
+              "previousAfter": 97,
+              "received": {
+                "itemId": "card:19",
+                "discarded": null
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "player-1",
+      "item": "card:17",
+      "ai": false,
+      "turn": 117,
+      "action": "buyItem",
+      "node": 107,
+      "evidence": [
+        "card:17"
+      ]
+    }
+  ],
+  "attacks": [
+    {
+      "id": "player-1",
+      "target": "player-2",
+      "item": "card:17",
+      "turn": 127
+    }
+  ],
+  "reactions": [
+    {
+      "ai": true,
+      "id": "player-2",
+      "item": "card:17",
+      "target": "player-1",
+      "source": "player-1",
+      "choice": "use",
+      "turn": 127,
+      "turns": 4,
+      "phase": "turnEnd"
+    }
+  ],
+  "automatic": [],
+  "prefixes": [
+    "acquired-card:19",
+    "acquired-card:17",
+    "card:17-confirm-before",
+    "card:17-confirm-after",
+    "defense-paused",
+    "defense-resumed",
+    "reaction-before",
+    "reaction-after"
+  ],
+  "report": {
+    "policy": "defense-v1",
+    "toolWindows": [
+      "tool:08",
+      "tool:09"
+    ],
+    "crossChecks": [
+      {
+        "index": 910,
+        "active": "player-1",
+        "actor": "player-2",
+        "kind": "reaction",
+        "computer": true,
+        "item": "card:17"
+      }
+    ],
+    "route": "2",
+    "terminal": false,
+    "players": 2,
+    "normalSpeed": true,
+    "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+    "commands": 958,
+    "auto": 189,
+    "human": 195,
+    "lifecycle": [
+      "pause stops waiting",
+      "resume",
+      "reset dialog cancel",
+      "reset",
+      "replace with humans",
+      "exit cleanup",
+      "fullscreen",
+      "390px"
+    ],
+    "cleanup": {
+      "raf": 0,
+      "canvas": 0
+    },
+    "errors": []
+  },
+  "hashes": {
+    "replay": "dd81312739b57d80a6804e39dbce2e6938a927ba692f269a559fe7e9dd69a1da",
+    "state": "966e731103254cf55caca6f1c0b3dd77b8dc05581d409ee37279863c2b2bd4a9",
+    "events": "2b84efa9b8111217d21b1e016f18bb7c817d232c3e3b0a74e5503a98468f50c9"
+  }
+}

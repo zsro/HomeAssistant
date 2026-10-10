@@ -1,0 +1,306 @@
+{
+  "referenceCommit": "ec7d70e693059d1e781d9d1cc2ad7f36d360d39e",
+  "method": "Fixed-commit local ASM bytes verified by Git tree blobs; no new Windows runtime observation",
+  "verifiedFiles": 7,
+  "sources": [
+    {
+      "path": "asm/rich4.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4.asm",
+      "gitBlobSha1": "d11a64755094435fa9953652a5a4951871fd9697",
+      "sha256": "30904cbb4f23a6b74fc1b80ad023bd7dff11b441c2c1978f768f9891d099d64a"
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_core_actions.asm",
+      "gitBlobSha1": "ebfde6c820e8a430b856d9816a926b636e0db1dc",
+      "sha256": "2874c1a3e0ca1d0da5afe4cb93e42cf2d6f6fa864dbee11d7bcaa028af07d94a"
+    },
+    {
+      "path": "asm/rich4_player_info.h",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_info.h",
+      "gitBlobSha1": "2f04e6aa425bba2f9345b64ce0ab4c1240ac185f",
+      "sha256": "cc17726ce054de587a42c0f335d84495e66698da2e15eb6a7b7ca28ab38604be"
+    },
+    {
+      "path": "asm/rich4_date_utils.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_date_utils.asm",
+      "gitBlobSha1": "998c3796db062d05ce3703f13d0e4a9245f30b33",
+      "sha256": "4a2a4cd0ac80010a577739fd870d7735a878d8a94eb218ab5f7be6496935952f"
+    },
+    {
+      "path": "asm/rich4_ui_bank.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_ui_bank.asm",
+      "gitBlobSha1": "a33182c5fa87f03271e20c43956ad11302f14baa",
+      "sha256": "bd225f868ef673c4052d145223d9564a5ded0c4eec28093811cb439ec9fc230a"
+    },
+    {
+      "path": "asm/rich4_stocks.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_stocks.asm",
+      "gitBlobSha1": "c45cd776b51483d17f78972845b8053deeee2433",
+      "sha256": "d55e17af17da2464655f53d3b3dd32224637a37ab131c6cf483db8fbac045ea3"
+    },
+    {
+      "path": "asm/rich4_fortune.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_fortune.asm",
+      "gitBlobSha1": "32a7a9dff203a46ec3d2906c1e5f1ede22f97e70",
+      "sha256": "d6309c81b0943a38e138bcdf85c8d006ddb0ba53c4d72744c4d3cc4ab63a53fc"
+    }
+  ],
+  "tableAudit": {
+    "commit": "ec7d70e693059d1e781d9d1cc2ad7f36d360d39e",
+    "gitBlobSha1": "d11a64755094435fa9953652a5a4951871fd9697",
+    "sha256": "30904cbb4f23a6b74fc1b80ad023bd7dff11b441c2c1978f768f9891d099d64a",
+    "table": "0047ff4a + (stage0*4 + Japan2)*288; 24*12 bytes",
+    "rows": [
+      {
+        "slot": 0,
+        "closed": 1,
+        "kind": 0,
+        "month": 1,
+        "day": 1
+      },
+      {
+        "slot": 1,
+        "closed": 1,
+        "kind": 0,
+        "month": 1,
+        "day": 2
+      },
+      {
+        "slot": 2,
+        "closed": 1,
+        "kind": 0,
+        "month": 1,
+        "day": 3
+      },
+      {
+        "slot": 3,
+        "closed": 1,
+        "kind": 0,
+        "month": 1,
+        "day": 15
+      },
+      {
+        "slot": 4,
+        "closed": 0,
+        "kind": 0,
+        "month": 2,
+        "day": 3
+      },
+      {
+        "slot": 5,
+        "closed": 0,
+        "kind": 0,
+        "month": 2,
+        "day": 14
+      },
+      {
+        "slot": 6,
+        "closed": 1,
+        "kind": 0,
+        "month": 2,
+        "day": 11
+      },
+      {
+        "slot": 7,
+        "closed": 0,
+        "kind": 0,
+        "month": 3,
+        "day": 3
+      },
+      {
+        "slot": 8,
+        "closed": 1,
+        "kind": 0,
+        "month": 3,
+        "day": 22
+      },
+      {
+        "slot": 9,
+        "closed": 1,
+        "kind": 0,
+        "month": 4,
+        "day": 29
+      },
+      {
+        "slot": 10,
+        "closed": 1,
+        "kind": 0,
+        "month": 5,
+        "day": 3
+      },
+      {
+        "slot": 11,
+        "closed": 1,
+        "kind": 0,
+        "month": 5,
+        "day": 5
+      },
+      {
+        "slot": 12,
+        "closed": 1,
+        "kind": 0,
+        "month": 9,
+        "day": 15
+      },
+      {
+        "slot": 13,
+        "closed": 1,
+        "kind": 0,
+        "month": 9,
+        "day": 23
+      },
+      {
+        "slot": 14,
+        "closed": 1,
+        "kind": 0,
+        "month": 10,
+        "day": 10
+      },
+      {
+        "slot": 15,
+        "closed": 1,
+        "kind": 0,
+        "month": 11,
+        "day": 3
+      },
+      {
+        "slot": 16,
+        "closed": 1,
+        "kind": 0,
+        "month": 11,
+        "day": 23
+      },
+      {
+        "slot": 17,
+        "closed": 1,
+        "kind": 0,
+        "month": 12,
+        "day": 23
+      },
+      {
+        "slot": 18,
+        "closed": 0,
+        "kind": 0,
+        "month": 12,
+        "day": 25
+      },
+      {
+        "slot": 19,
+        "closed": 0,
+        "kind": 0,
+        "month": 0,
+        "day": 0
+      },
+      {
+        "slot": 20,
+        "closed": 0,
+        "kind": 0,
+        "month": 0,
+        "day": 0
+      },
+      {
+        "slot": 21,
+        "closed": 0,
+        "kind": 0,
+        "month": 0,
+        "day": 0
+      },
+      {
+        "slot": 22,
+        "closed": 0,
+        "kind": 0,
+        "month": 0,
+        "day": 0
+      },
+      {
+        "slot": 23,
+        "closed": 0,
+        "kind": 0,
+        "month": 0,
+        "day": 0
+      }
+    ],
+    "constants": {
+      "00464e88": 1.1,
+      "00464ea0": 0.1
+    }
+  },
+  "rules": {
+    "R06-01k": {
+      "addresses": [
+        "rich4.asm:00418f93..00419033",
+        "rich4_player_core_actions.asm:0041cf67",
+        "rich4_date_utils.asm:00451f8c/0045201f/004520a6/00452117"
+      ],
+      "evidence": "cycle humans then special slots4..7; wrap runs day boundary before incoming player; packed year/month/day, 1998 baseline, leap divisible4, weekday(dayIndex+4)%7; monthChanged flag",
+      "web": "No special players in current Web; one date per solvent human seat wrap; default1998-01-01 configurable1998..2099 is reproducible convention, not original default date"
+    },
+    "R08-01k": {
+      "addresses": [
+        "rich4.asm:004521f0/004523d5",
+        "rich4_stocks.asm:00428d01/004291d6",
+        "rich4_player_core_actions.asm:0041cf67/0041c84f"
+      ],
+      "evidence": "Sunday or first applicable holiday flag; Japan stage0 map2 at base0047ff4a+576,24*12,15 closure flags; no Saturday blanket closure; global news suspension additive; trend/stop counters tick before daily market; incoming quota refresh remains",
+      "boundary": "Original fixed table, not current public-holiday law; holiday activities and full lunar/nth-weekday maps not enabled"
+    },
+    "R05-01k": {
+      "addresses": [
+        "rich4_player_core_actions.asm:0041cf67",
+        "rich4.asm:00439bfa/00437e61/004381xx..00438218",
+        "rich4.asm:00464e88/00464ea0"
+      ],
+      "evidence": "month rollover calls interest window for nonzero who seats; actual mutation bank=trunc(bank*double1.1) only when principal+36 zero; visible interest usesdouble0.1; no facility/refusal gate; happens before incoming maturity",
+      "boundary": "No loan interest capitalization, public-fund transfer or proration; original window/statistics and annual awards not implemented"
+    },
+    "R05-02k": {
+      "addresses": [
+        "rich4_ui_bank.asm:00433b7e",
+        "rich4_date_utils.asm:0045218f",
+        "rich4.asm:004523d5",
+        "rich4_ui_bank.asm:004353a3/004353bf",
+        "rich4_fortune.asm:0044c180"
+      ],
+      "evidence": "loan principal+36; due+44 starts currentdate+90 only ifdue0 then skipclosed days; topup preservesdate; bank repay bankfirstthencash; zeroprincipal cleardue; fortune stolen loan calls shared term setup",
+      "boundary": "Existing candidate asset-backed loan capacity inherited"
+    },
+    "R05-03k": {
+      "addresses": [
+        "rich4_player_core_actions.asm:0041c84f",
+        "rich4_ui_bank.asm:00436a5a/00436a9b/00436adf/00436af5/00436b01",
+        "rich4_ui_bank.asm:0043695e/00436034",
+        "rich4_ui_bank.asm:00433bd8"
+      ],
+      "evidence": "incoming action before status tick, signed due-current switch3/2/1 reminder,0 bankfirstcashcollection; reminder callback speech/animation only, no balance mutation; bank refusal/noLoans do not gate; insufficient wipes funds and invokes bankruptcy",
+      "boundary": "Web visible nonblocking reminder instead of voice window; original forced auction unresolved, Web elimination returns stocks to pool without sale, releases ownership preserving buildings"
+    },
+    "R06-02k": {
+      "addresses": [
+        "rich4_player_core_actions.asm:0041c84f"
+      ],
+      "evidence": "+59 bankRejected and +60 noLoans clear bit128 else decrement/marklast1 as128 at own-action boundary even hotel/detention; distinct from global date; maturity checked first",
+      "web": "v24 fixes hotel freeze of inherited noLoans; old modes unchanged"
+    },
+    "R09-01k": {
+      "evidence": "Web integration convention: add calendar to existing G7 world checkpoint, retain RNG/log non-rewind; config/startDate and fingerprint versioned",
+      "boundary": "No new claim that original time machine rewinds date identically"
+    },
+    "R05-04k": {
+      "addresses": [
+        "rich4_ui_bank.asm:00433bd8"
+      ],
+      "evidence": "Insufficient loan payment consumes available bank/cash then calls original bankruptcy; full forced auction not verified",
+      "web": "Reuse existing candidate elimination; release property ownership, preserve buildings, return holdings without sale revenue; record unpaid principal"
+    }
+  },
+  "deferred": [
+    "original bankruptcy auction and liquidation proceeds",
+    "complete company/insurance operations",
+    "daily price index",
+    "holiday rewards/activities and monthly15 lottery",
+    "full original calendar/year statistics",
+    "special players and original initial-date selection",
+    "other-map holiday tables"
+  ]
+}

@@ -1,0 +1,753 @@
+{
+  "referenceCommit": "ec7d70e693059d1e781d9d1cc2ad7f36d360d39e",
+  "sources": [
+    {
+      "path": "asm/rich4_fortune.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_fortune.asm",
+      "gitBlobSha1": "32a7a9dff203a46ec3d2906c1e5f1ede22f97e70",
+      "sha256": "d6309c81b0943a38e138bcdf85c8d006ddb0ba53c4d72744c4d3cc4ab63a53fc"
+    },
+    {
+      "path": "csrc/fortune.c",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/csrc/fortune.c",
+      "gitBlobSha1": "e90741c45719ec11acc2b654b488f0ca9b7174be",
+      "sha256": "f6ed729c08b165aed4b793b40ff5508e27bf661d2e8bc8c9db8eb551cefd8823"
+    },
+    {
+      "path": "asm/rich4_characters.c",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_characters.c",
+      "gitBlobSha1": "02c145979f2c3631ec151707432bffc9f07858cb",
+      "sha256": "42ac84738a5681c0010d23d2340f1b625e56c50f4849c2a0165c7e17b66d0852"
+    },
+    {
+      "path": "asm/rich4_gods.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_gods.asm",
+      "gitBlobSha1": "f3e0d4a93e1e495e6335105353f7bfa4ecdc7fe0",
+      "sha256": "c1128c8e98dbedd828e3d1dc7e0b3aae4bb97f132e618733caaef44ed8534e16"
+    },
+    {
+      "path": "csrc/game_init.c",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/csrc/game_init.c",
+      "gitBlobSha1": "d2905b5f7e95b7d92cc3cb804759dcf76c2b29b0",
+      "sha256": "4167f960114ff5eca0aaadb24d9266c7826d6ea4d2dc55a3512c9c669e85ea71"
+    },
+    {
+      "path": "asm/rich4.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4.asm",
+      "gitBlobSha1": "d11a64755094435fa9953652a5a4951871fd9697",
+      "sha256": "30904cbb4f23a6b74fc1b80ad023bd7dff11b441c2c1978f768f9891d099d64a"
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_core_actions.asm",
+      "gitBlobSha1": "ebfde6c820e8a430b856d9816a926b636e0db1dc",
+      "sha256": "2874c1a3e0ca1d0da5afe4cb93e42cf2d6f6fa864dbee11d7bcaa028af07d94a"
+    },
+    {
+      "path": "asm/rich4_card_utils_2.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_card_utils_2.asm",
+      "gitBlobSha1": "461daf212cc8056beddaadd4ea6e36c5b9e93ceb",
+      "sha256": "98caa25f4c3cbbfca6cf304caa6485d719b3776ccb701a401d90920828b29ae2"
+    },
+    {
+      "path": "asm/rich4_tool_utils.c",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_tool_utils.c",
+      "gitBlobSha1": "218ab5b0e02204bcdb5a65c4483d8f570ef7265f",
+      "sha256": "12fb8cedf2a50efa98cdfbd15f55b8167a4b3d753c6677d5ba787ac50c8d4097"
+    },
+    {
+      "path": "asm/rich4_tool_table.c",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_tool_table.c",
+      "gitBlobSha1": "2fa0179939e646e8f3cee7aaf3fbc32ffb3cab6e",
+      "sha256": "d19259524990ed8b9bf13c85dbf7220d9166b11536f91df9c8ed904f5f4e3158"
+    },
+    {
+      "path": "asm/rich4_objects.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_objects.asm",
+      "gitBlobSha1": "f4318092a731c142b5973565cc4f17c14049d1b5",
+      "sha256": "a2d3c8c9d6946625df6f5b26a981cbae195d445f4b5de6447dea033a11adcaf6"
+    },
+    {
+      "path": "asm/rich4_player_info.h",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_info.h",
+      "gitBlobSha1": "2f04e6aa425bba2f9345b64ce0ab4c1240ac185f",
+      "sha256": "cc17726ce054de587a42c0f335d84495e66698da2e15eb6a7b7ca28ab38604be"
+    },
+    {
+      "path": "asm/rich4_new_game.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_new_game.asm",
+      "gitBlobSha1": "55015c738593cf08c2bf97b6298324be4b9bec00",
+      "sha256": "0abb3c6ee86e22c768480573e365dcefb692f69ffa701d5ff027cf4d1b2bf86a"
+    }
+  ],
+  "selection": {
+    "initializer": "fcn_0044baea",
+    "condition": "fcn_0044bb4b",
+    "entry": "fcn_0044db81",
+    "slots": 37,
+    "globalHandlers": 49,
+    "regionalMapping": "slot >=33 → slot + 4*game_map; Japan map=2 =>41..44",
+    "enabled": [
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32
+    ],
+    "unsupportedPolicy": "skip bounded37; Web seeded sampler, original libc randomness not claimed"
+  },
+  "godModifiers": {
+    "money": [
+      0,
+      100,
+      150,
+      0,
+      0,
+      -60,
+      -100,
+      0,
+      0,
+      60,
+      -60,
+      0,
+      0,
+      0,
+      0,
+      -200,
+      0,
+      0
+    ],
+    "resistance": [
+      0,
+      0,
+      0,
+      100,
+      150,
+      0,
+      0,
+      -60,
+      -100,
+      60,
+      -60,
+      0,
+      0,
+      0,
+      0,
+      -200,
+      0,
+      0
+    ],
+    "helper": "fcn_0044b896",
+    "base": "rich4_characters.c designated initializers omit f70/f72; static zero",
+    "rule": "gt100 good deterministic;51..100 one random bit;negative bad;inventory code2 no payout multiplier"
+  },
+  "settlement": {
+    "money": "17..31 fixed priceIndex1; fcn0041d2c6 cash->bank to public fund; reward fcn0041d3f4 flag1 cash",
+    "inventory": "32 +72; sell equipped vehicle then13 tools then15 cards; full price; each result added uint16 points",
+    "insurance": "fcn0044ba63 requires player+62; Web has no policies/full insurance company; explicitly deferred"
+  },
+  "deferred": [
+    "dates and periodic interest",
+    "loan maturity",
+    "original bankruptcy compulsory auctions",
+    "full company operations and insurance policy",
+    "fortune0..16 and regional33..48",
+    "lottery9, minigames6..8, magic-house16 and direct facility service UI"
+  ],
+  "mapAuditSha256": "e2eba8a3517f1a73fb349a42b0ae06242f8d0df026a886133059704e445a6921",
+  "mapEvents": [
+    {
+      "code": 0,
+      "candidate": "property",
+      "nodeIds": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        15,
+        17,
+        21,
+        30,
+        32,
+        34,
+        36,
+        37,
+        38,
+        39,
+        40,
+        42,
+        43,
+        44,
+        46,
+        47,
+        48,
+        49,
+        51,
+        52,
+        53,
+        54,
+        56,
+        57,
+        58,
+        59,
+        60,
+        62,
+        63,
+        64,
+        65,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        74,
+        75,
+        76,
+        77,
+        80,
+        82,
+        84,
+        85,
+        86,
+        87,
+        89,
+        90,
+        91,
+        92,
+        93,
+        95,
+        96,
+        97,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        108,
+        109,
+        110
+      ],
+      "status": "ordinary/facility implemented; six company share-owner/ledger foundation v19, full services incomplete"
+    },
+    {
+      "code": 1,
+      "candidate": "no-op",
+      "nodeIds": [
+        41
+      ],
+      "status": "no-op"
+    },
+    {
+      "code": 2,
+      "candidate": "news",
+      "nodeIds": [
+        13,
+        61,
+        94
+      ],
+      "status": "36 news candidate accepted v19"
+    },
+    {
+      "code": 3,
+      "candidate": "fortune",
+      "nodeIds": [
+        2,
+        19,
+        45,
+        66
+      ],
+      "status": "16 fortune handlers17..32 implemented v20; browser acceptance separately recorded"
+    },
+    {
+      "code": 4,
+      "candidate": "prison",
+      "nodeIds": [
+        78
+      ],
+      "status": "detention effects/roster implemented; direct prison interaction incomplete"
+    },
+    {
+      "code": 5,
+      "candidate": "hospital",
+      "nodeIds": [
+        55
+      ],
+      "status": "hospital effects/roster implemented; direct hospital interaction incomplete"
+    },
+    {
+      "code": 6,
+      "candidate": "penguin-game",
+      "nodeIds": [
+        22
+      ],
+      "status": "penguin minigame unimplemented"
+    },
+    {
+      "code": 7,
+      "candidate": "balloon-game",
+      "nodeIds": [
+        24
+      ],
+      "status": "balloon minigame unimplemented"
+    },
+    {
+      "code": 8,
+      "candidate": "falling-gifts-game",
+      "nodeIds": [
+        26
+      ],
+      "status": "falling gifts minigame unimplemented"
+    },
+    {
+      "code": 9,
+      "candidate": "lottery",
+      "nodeIds": [
+        28,
+        88
+      ],
+      "status": "lottery purchase/draw/prize unimplemented; fortune bonuses independent"
+    },
+    {
+      "code": 10,
+      "candidate": "points-50",
+      "nodeIds": [
+        20,
+        31
+      ],
+      "status": "points50 implemented"
+    },
+    {
+      "code": 11,
+      "candidate": "points-30",
+      "nodeIds": [
+        23,
+        27,
+        83
+      ],
+      "status": "points30 implemented"
+    },
+    {
+      "code": 12,
+      "candidate": "points-10",
+      "nodeIds": [
+        14,
+        16,
+        18,
+        25,
+        29,
+        33,
+        79,
+        81
+      ],
+      "status": "points10 implemented"
+    },
+    {
+      "code": 13,
+      "candidate": "random-card",
+      "nodeIds": [
+        98
+      ],
+      "status": "random card implemented v14"
+    },
+    {
+      "code": 14,
+      "candidate": "bank",
+      "nodeIds": [
+        1
+      ],
+      "status": "deposit/withdraw/basic loans implemented; interest/maturity/full service incomplete"
+    },
+    {
+      "code": 15,
+      "candidate": "shop",
+      "nodeIds": [
+        50,
+        107
+      ],
+      "status": "43 goods acquisition foundation; full sell UI incomplete (fortune32 forced sale implemented)"
+    },
+    {
+      "code": 16,
+      "candidate": "magic-house-candidate",
+      "nodeIds": [
+        35,
+        73
+      ],
+      "status": "magic house unimplemented"
+    }
+  ],
+  "fortuneDispatch": [
+    {
+      "id": 0,
+      "handler": "break_down_a_house",
+      "implementedV20": false,
+      "perJapanMap": true,
+      "condition": "owned ordinary built"
+    },
+    {
+      "id": 1,
+      "handler": "remove_a_land",
+      "implementedV20": false,
+      "perJapanMap": true,
+      "condition": "owned ordinary empty"
+    },
+    {
+      "id": 2,
+      "handler": "fake_loan",
+      "implementedV20": false,
+      "perJapanMap": true,
+      "condition": "unconditional in eligibility table"
+    },
+    {
+      "id": 3,
+      "handler": "bank_reject_a_month",
+      "implementedV20": false,
+      "perJapanMap": true,
+      "condition": "unconditional in eligibility table"
+    },
+    {
+      "id": 4,
+      "handler": "invade_bank_computer",
+      "implementedV20": false,
+      "perJapanMap": true,
+      "condition": "unconditional in eligibility table"
+    },
+    {
+      "id": 5,
+      "handler": "get_one_card_from_each_player",
+      "implementedV20": false,
+      "perJapanMap": true,
+      "condition": "other player card count nonzero"
+    },
+    {
+      "id": 6,
+      "handler": "travel_abroad",
+      "implementedV20": false,
+      "perJapanMap": true,
+      "condition": "unconditional in eligibility table"
+    },
+    {
+      "id": 7,
+      "handler": "kidnapped_by_alien",
+      "implementedV20": false,
+      "perJapanMap": true,
+      "condition": "unconditional in eligibility table"
+    },
+    {
+      "id": 8,
+      "handler": "lose_stock",
+      "implementedV20": false,
+      "perJapanMap": true,
+      "condition": "some stock held"
+    },
+    {
+      "id": 9,
+      "handler": "sell_all_the_stock",
+      "implementedV20": false,
+      "perJapanMap": true,
+      "condition": "some stock held"
+    },
+    {
+      "id": 10,
+      "handler": "moto_stolen",
+      "implementedV20": false,
+      "perJapanMap": true,
+      "condition": "vehicle1/2 remap10/11"
+    },
+    {
+      "id": 11,
+      "handler": "car_destroyed",
+      "implementedV20": false,
+      "perJapanMap": true,
+      "condition": "vehicle1/2 remap10/11"
+    },
+    {
+      "id": 12,
+      "handler": "drowned_to_hospital",
+      "implementedV20": false,
+      "perJapanMap": true,
+      "condition": "foot/motorcycle remap12/13"
+    },
+    {
+      "id": 13,
+      "handler": "fall_off_moto",
+      "implementedV20": false,
+      "perJapanMap": true,
+      "condition": "foot/motorcycle remap12/13"
+    },
+    {
+      "id": 14,
+      "handler": "fined_when_crossing_road",
+      "implementedV20": false,
+      "perJapanMap": true,
+      "condition": "traffic<=2 remap14/15/16; ASM15 foot->14 corrects C typo"
+    },
+    {
+      "id": 15,
+      "handler": "moto_overspeed",
+      "implementedV20": false,
+      "perJapanMap": true,
+      "condition": "traffic<=2 remap14/15/16; ASM15 foot->14 corrects C typo"
+    },
+    {
+      "id": 16,
+      "handler": "car_overspeed",
+      "implementedV20": false,
+      "perJapanMap": true,
+      "condition": "traffic<=2 remap14/15/16; ASM15 foot->14 corrects C typo"
+    },
+    {
+      "id": 17,
+      "handler": "invite_others_meal",
+      "implementedV20": true,
+      "perJapanMap": true,
+      "condition": "unconditional in eligibility table"
+    },
+    {
+      "id": 18,
+      "handler": "fined_for_throwing_trash",
+      "implementedV20": true,
+      "perJapanMap": true,
+      "condition": "unconditional in eligibility table"
+    },
+    {
+      "id": 19,
+      "handler": "fined_for_your_dog",
+      "implementedV20": true,
+      "perJapanMap": true,
+      "condition": "unconditional in eligibility table"
+    },
+    {
+      "id": 20,
+      "handler": "pick_money_on_road",
+      "implementedV20": true,
+      "perJapanMap": true,
+      "condition": "unconditional in eligibility table"
+    },
+    {
+      "id": 21,
+      "handler": "pick_money_on_road2",
+      "implementedV20": true,
+      "perJapanMap": true,
+      "condition": "unconditional in eligibility table"
+    },
+    {
+      "id": 22,
+      "handler": "pick_money_on_road3",
+      "implementedV20": true,
+      "perJapanMap": true,
+      "condition": "unconditional in eligibility table"
+    },
+    {
+      "id": 23,
+      "handler": "lose_wallet",
+      "implementedV20": true,
+      "perJapanMap": true,
+      "condition": "unconditional in eligibility table"
+    },
+    {
+      "id": 24,
+      "handler": "lose_wallet2",
+      "implementedV20": true,
+      "perJapanMap": true,
+      "condition": "unconditional in eligibility table"
+    },
+    {
+      "id": 25,
+      "handler": "get_heritage",
+      "implementedV20": true,
+      "perJapanMap": true,
+      "condition": "unconditional in eligibility table"
+    },
+    {
+      "id": 26,
+      "handler": "scammed_money",
+      "implementedV20": true,
+      "perJapanMap": true,
+      "condition": "unconditional in eligibility table"
+    },
+    {
+      "id": 27,
+      "handler": "win_lottery",
+      "implementedV20": true,
+      "perJapanMap": true,
+      "condition": "unconditional in eligibility table"
+    },
+    {
+      "id": 28,
+      "handler": "win_lottery2",
+      "implementedV20": true,
+      "perJapanMap": true,
+      "condition": "unconditional in eligibility table"
+    },
+    {
+      "id": 29,
+      "handler": "win_lottery3",
+      "implementedV20": true,
+      "perJapanMap": true,
+      "condition": "unconditional in eligibility table"
+    },
+    {
+      "id": 30,
+      "handler": "pay_assurance",
+      "implementedV20": true,
+      "perJapanMap": true,
+      "condition": "unconditional in eligibility table"
+    },
+    {
+      "id": 31,
+      "handler": "get_assurance",
+      "implementedV20": true,
+      "perJapanMap": true,
+      "condition": "unconditional in eligibility table"
+    },
+    {
+      "id": 32,
+      "handler": "sell_all_cards_and_tools",
+      "implementedV20": true,
+      "perJapanMap": true,
+      "condition": "unconditional in eligibility table"
+    },
+    {
+      "id": 33,
+      "handler": "goto_prison_for_drunk",
+      "implementedV20": false,
+      "perJapanMap": false,
+      "condition": "regional slot33..36 requires game_stage0"
+    },
+    {
+      "id": 34,
+      "handler": "goto_prison_for_taste",
+      "implementedV20": false,
+      "perJapanMap": false,
+      "condition": "regional slot33..36 requires game_stage0"
+    },
+    {
+      "id": 35,
+      "handler": "goto_prison_for_drug",
+      "implementedV20": false,
+      "perJapanMap": false,
+      "condition": "regional slot33..36 requires game_stage0"
+    },
+    {
+      "id": 36,
+      "handler": "goto_prison_for_drug2",
+      "implementedV20": false,
+      "perJapanMap": false,
+      "condition": "regional slot33..36 requires game_stage0"
+    },
+    {
+      "id": 37,
+      "handler": "goto_prison_for_drunk2",
+      "implementedV20": false,
+      "perJapanMap": false,
+      "condition": "regional slot33..36 requires game_stage0"
+    },
+    {
+      "id": 38,
+      "handler": "goto_prison_for_parade",
+      "implementedV20": false,
+      "perJapanMap": false,
+      "condition": "regional slot33..36 requires game_stage0"
+    },
+    {
+      "id": 39,
+      "handler": "goto_prison_for_catching_animal",
+      "implementedV20": false,
+      "perJapanMap": false,
+      "condition": "regional slot33..36 requires game_stage0"
+    },
+    {
+      "id": 40,
+      "handler": "goto_prison_for_selling_treasure",
+      "implementedV20": false,
+      "perJapanMap": false,
+      "condition": "regional slot33..36 requires game_stage0"
+    },
+    {
+      "id": 41,
+      "handler": "goto_prison_for_seducing",
+      "implementedV20": false,
+      "perJapanMap": true,
+      "condition": "regional slot33..36 requires game_stage0"
+    },
+    {
+      "id": 42,
+      "handler": "goto_prison_for_taste2",
+      "implementedV20": false,
+      "perJapanMap": true,
+      "condition": "regional slot33..36 requires game_stage0"
+    },
+    {
+      "id": 43,
+      "handler": "goto_prison_for_drug3",
+      "implementedV20": false,
+      "perJapanMap": true,
+      "condition": "regional slot33..36 requires game_stage0"
+    },
+    {
+      "id": 44,
+      "handler": "goto_prison_for_poisoning",
+      "implementedV20": false,
+      "perJapanMap": true,
+      "condition": "regional slot33..36 requires game_stage0"
+    },
+    {
+      "id": 45,
+      "handler": "goto_prison_for_guns",
+      "implementedV20": false,
+      "perJapanMap": false,
+      "condition": "regional slot33..36 requires game_stage0"
+    },
+    {
+      "id": 46,
+      "handler": "goto_prison_for_hitting_police",
+      "implementedV20": false,
+      "perJapanMap": false,
+      "condition": "regional slot33..36 requires game_stage0"
+    },
+    {
+      "id": 47,
+      "handler": "goto_prison_for_catching_animal2",
+      "implementedV20": false,
+      "perJapanMap": false,
+      "condition": "regional slot33..36 requires game_stage0"
+    },
+    {
+      "id": 48,
+      "handler": "goto_prison_for_selling_secret",
+      "implementedV20": false,
+      "perJapanMap": false,
+      "condition": "regional slot33..36 requires game_stage0"
+    }
+  ],
+  "dates": {
+    "entry": "fcn0041cf67",
+    "dateAdvance": "loc0041cf9c calls00452117(cfg+8); result edi semantics not fully verified",
+    "lottery": "loc0041d066 cfg+8 low byte==0x0f calls letou draw",
+    "monthBoundaryCandidate": "loc0041d099 edi==1 calls00439bfa and relocates13/14 objects; not asserted as a confirmed interest contract",
+    "expiry": "loc0041d12d/0041d179 compares property date+30/facility+34 to cfg+8, clears seal+19 on equality",
+    "status": "date scheduling/periodic interest/loan maturity explicitly unimplemented; existing turn/round clocks remain Web candidates"
+  }
+}

@@ -1,0 +1,300 @@
+{
+  "players": 4,
+  "commands": 2391,
+  "turn": 331,
+  "auto": 263,
+  "human": 688,
+  "reactions": [
+    {
+      "ai": true,
+      "id": "player-3",
+      "stage": "free",
+      "choice": "use",
+      "target": null,
+      "amount": 2900,
+      "turn": 307
+    },
+    {
+      "ai": false,
+      "id": "player-2",
+      "stage": "free",
+      "choice": "decline",
+      "target": null,
+      "amount": 1050,
+      "turn": 330
+    },
+    {
+      "ai": false,
+      "id": "player-2",
+      "stage": "redirect",
+      "choice": "use",
+      "target": "player-3",
+      "amount": 1050,
+      "turn": 330
+    }
+  ],
+  "purchases": [
+    {
+      "id": "player-3",
+      "item": "card:20",
+      "turn": 253
+    }
+  ],
+  "acquisitions": [
+    {
+      "id": "player-3",
+      "item": "card:20",
+      "turn": 253,
+      "command": "buyItem",
+      "node": 50,
+      "evidence": [
+        "card:20"
+      ]
+    }
+  ],
+  "payments": [
+    {
+      "id": "player-3",
+      "ai": true,
+      "amount": 1050,
+      "turn": 330
+    }
+  ],
+  "forced": [
+    {
+      "type": "stockTraded",
+      "stockId": "jp:30",
+      "traderId": "player-1",
+      "side": "sell",
+      "quantity": 9,
+      "price": 29300,
+      "amount": 2637,
+      "forced": true,
+      "sequence": 1658,
+      "commandId": "command-899",
+      "playerId": "player-1",
+      "turn": 121
+    },
+    {
+      "type": "stockTraded",
+      "stockId": "jp:30",
+      "traderId": "player-1",
+      "side": "sell",
+      "quantity": 2,
+      "price": 32200,
+      "amount": 644,
+      "forced": true,
+      "sequence": 1771,
+      "commandId": "command-959",
+      "playerId": "player-1",
+      "turn": 129
+    },
+    {
+      "type": "stockTraded",
+      "stockId": "jp:30",
+      "traderId": "player-1",
+      "side": "sell",
+      "quantity": 3,
+      "price": 35400,
+      "amount": 1062,
+      "forced": true,
+      "sequence": 1827,
+      "commandId": "command-988",
+      "playerId": "player-1",
+      "turn": 133
+    },
+    {
+      "type": "stockTraded",
+      "stockId": "jp:30",
+      "traderId": "player-1",
+      "side": "sell",
+      "quantity": 2,
+      "price": 33600,
+      "amount": 672,
+      "forced": true,
+      "sequence": 2473,
+      "commandId": "command-1338",
+      "playerId": "player-1",
+      "turn": 181
+    },
+    {
+      "type": "stockTraded",
+      "stockId": "jp:30",
+      "traderId": "player-1",
+      "side": "sell",
+      "quantity": 2,
+      "price": 30000,
+      "amount": 600,
+      "forced": true,
+      "sequence": 2576,
+      "commandId": "command-1393",
+      "playerId": "player-1",
+      "turn": 189
+    },
+    {
+      "type": "stockTraded",
+      "stockId": "jp:30",
+      "traderId": "player-1",
+      "side": "sell",
+      "quantity": 1,
+      "price": 29600,
+      "amount": 296,
+      "forced": true,
+      "sequence": 2627,
+      "commandId": "command-1420",
+      "playerId": "player-1",
+      "turn": 193
+    }
+  ],
+  "disposals": [
+    {
+      "type": "disposalCompleted",
+      "receipt": {
+        "id": "disposal-1",
+        "payerId": "player-1",
+        "recipientId": "player-4",
+        "propertyId": "japan:land:48",
+        "due": 450,
+        "amount": 282,
+        "unpaid": 168,
+        "paid": {
+          "cash": 0,
+          "bank": 282
+        },
+        "released": [
+          "japan:land:19",
+          "japan:land:24",
+          "japan:land:29",
+          "japan:land:31"
+        ],
+        "pool": [
+          null,
+          null,
+          null,
+          "japan:land:31"
+        ],
+        "draws": [
+          1,
+          1,
+          2,
+          1,
+          1,
+          1,
+          0
+        ],
+        "stocks": [],
+        "inventory": [
+          {
+            "itemId": "tool:08",
+            "quantity": 1,
+            "points": 30
+          },
+          {
+            "itemId": "tool:01",
+            "quantity": 1,
+            "points": 15
+          },
+          {
+            "itemId": "tool:02",
+            "quantity": 1,
+            "points": 30
+          }
+        ],
+        "ignoredPoints": 75,
+        "auctions": [
+          {
+            "propertyId": "japan:land:24",
+            "winnerId": "player-2",
+            "amount": 1600,
+            "reserve": 1500
+          },
+          {
+            "propertyId": "japan:land:29",
+            "winnerId": "player-2",
+            "amount": 1100,
+            "reserve": 1000
+          },
+          {
+            "propertyId": "japan:land:19",
+            "winnerId": "player-2",
+            "amount": 2100,
+            "reserve": 2000
+          }
+        ],
+        "finishedGame": false
+      },
+      "sequence": 2710,
+      "commandId": "command-1458",
+      "playerId": "player-1",
+      "turn": 197
+    }
+  ],
+  "prefixes": [
+    "forced-stock-before",
+    "forced-stock-after",
+    "exit-before",
+    "exit-after",
+    "public-disposal",
+    "card:20-acquired",
+    "card:20-buy",
+    "free-before-true",
+    "free-after-true",
+    "free-before-false",
+    "free-after-false",
+    "redirect-before-false",
+    "redirect-after-false",
+    "alternate-payer-before-true",
+    "alternate-payer-after-true"
+  ],
+  "report": {
+    "policy": "rent-v1",
+    "toolWindows": [
+      "tool:08",
+      "tool:09"
+    ],
+    "crossChecks": [
+      {
+        "index": 1436,
+        "active": "player-1",
+        "actor": "player-2",
+        "kind": "auction",
+        "computer": false
+      },
+      {
+        "index": 2369,
+        "active": "player-2",
+        "actor": "player-3",
+        "kind": "property",
+        "computer": true
+      }
+    ],
+    "route": "payer",
+    "terminal": false,
+    "players": 4,
+    "normalSpeed": true,
+    "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+    "commands": 2391,
+    "auto": 263,
+    "human": 688,
+    "lifecycle": [
+      "pause stops waiting",
+      "resume",
+      "reset dialog cancel",
+      "reset",
+      "replace with humans",
+      "exit cleanup",
+      "fullscreen",
+      "390px"
+    ],
+    "cleanup": {
+      "raf": 0,
+      "canvas": 0
+    },
+    "errors": []
+  },
+  "hashes": {
+    "replay": "b08ac9e9886a56cbd50529ed485ecb40f23313b1c4b60ead66fe4084bfea4e77",
+    "state": "7eccbf73f451178b8fd6da719c72c0ba5d02dbce02751a299483be9fa9d1c3f3",
+    "events": "bece5375927dc960626421a43c096811386a39b8d2e156433cbda4b168761d24"
+  }
+}

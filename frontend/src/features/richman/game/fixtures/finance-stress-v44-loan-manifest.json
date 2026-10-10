@@ -1,0 +1,210 @@
+{
+  "kind": "loan",
+  "players": 3,
+  "commands": 5006,
+  "turn": 358,
+  "date": "1998-04-30",
+  "rentSettled": 1,
+  "bankruptcies": 1,
+  "auctionPaid": 8200,
+  "stockPublic": 91229,
+  "loanActual": 8,
+  "dividendActual": 0,
+  "lotteries": 4,
+  "prizes": 0,
+  "forced": [
+    {
+      "type": "stockTraded",
+      "stockId": "jp:24",
+      "traderId": "player-1",
+      "side": "sell",
+      "quantity": 8,
+      "price": 11550,
+      "amount": 924,
+      "forced": true,
+      "sequence": 4690,
+      "commandId": "command-4332",
+      "playerId": "player-1",
+      "turn": 343
+    }
+  ],
+  "notices": [
+    {
+      "playerId": "player-1",
+      "date": "1998-04-27",
+      "due": "1998-04-30",
+      "kind": "reminder",
+      "days": 3,
+      "principal": 10000,
+      "bank": 0,
+      "cash": 0,
+      "unpaid": 0
+    },
+    {
+      "playerId": "player-1",
+      "date": "1998-04-28",
+      "due": "1998-04-30",
+      "kind": "reminder",
+      "days": 2,
+      "principal": 10000,
+      "bank": 0,
+      "cash": 0,
+      "unpaid": 0
+    },
+    {
+      "playerId": "player-1",
+      "date": "1998-04-29",
+      "due": "1998-04-30",
+      "kind": "reminder",
+      "days": 1,
+      "principal": 10000,
+      "bank": 0,
+      "cash": 0,
+      "unpaid": 0
+    },
+    {
+      "playerId": "player-1",
+      "date": "1998-04-30",
+      "due": "1998-04-30",
+      "kind": "collected",
+      "days": 0,
+      "principal": 10000,
+      "bank": 8,
+      "cash": 0,
+      "unpaid": 9992
+    }
+  ],
+  "receipts": [
+    {
+      "payment": {
+        "kind": "loan",
+        "stage": "completed",
+        "payerId": "player-1",
+        "due": 10000,
+        "paid": {
+          "cash": 0,
+          "bank": 8
+        },
+        "notice": {
+          "playerId": "player-1",
+          "date": "1998-04-30",
+          "due": "1998-04-30",
+          "kind": "collected",
+          "days": 0,
+          "principal": 10000,
+          "bank": 8,
+          "cash": 0,
+          "unpaid": 9992
+        },
+        "disposalId": "disposal-1"
+      },
+      "disposal": {
+        "continuation": "payment",
+        "id": "disposal-1",
+        "payerId": "player-1",
+        "recipientId": "bank",
+        "propertyId": "loan",
+        "due": 10000,
+        "amount": 8,
+        "unpaid": 9992,
+        "paid": {
+          "cash": 0,
+          "bank": 8
+        },
+        "released": [
+          "japan:land:23",
+          "japan:land:29",
+          "japan:land:30",
+          "japan:land:33",
+          "japan:land:35",
+          "japan:land:37",
+          "japan:land:39",
+          "japan:land:41",
+          "japan:land:43",
+          "japan:facility:1",
+          "japan:facility:2",
+          "japan:facility:3"
+        ],
+        "pool": [
+          "japan:land:23",
+          null,
+          "japan:land:30",
+          "japan:land:33",
+          "japan:land:35",
+          null,
+          "japan:land:39",
+          "japan:land:41",
+          "japan:land:43",
+          "japan:facility:1",
+          "japan:facility:2",
+          null
+        ],
+        "draws": [
+          11,
+          5,
+          1
+        ],
+        "stocks": [
+          {
+            "stockId": "jp:24",
+            "quantity": 717,
+            "price": 12700,
+            "amount": 91059
+          },
+          {
+            "stockId": "jp:25",
+            "quantity": 4,
+            "price": 4270,
+            "amount": 170
+          }
+        ],
+        "inventory": [],
+        "ignoredPoints": 0,
+        "auctions": [
+          {
+            "propertyId": "japan:facility:3",
+            "winnerId": "player-2",
+            "amount": 5100,
+            "reserve": 5000
+          },
+          {
+            "propertyId": "japan:land:37",
+            "winnerId": "player-2",
+            "amount": 1500,
+            "reserve": 1400
+          },
+          {
+            "propertyId": "japan:land:29",
+            "winnerId": "player-2",
+            "amount": 1600,
+            "reserve": 1500
+          }
+        ],
+        "finishedGame": false
+      }
+    }
+  ],
+  "prefixes": [
+    "borrow",
+    "necessary-sale",
+    "rent-settlement",
+    "exit-start",
+    "auction-wait",
+    "payment-return"
+  ],
+  "report": {
+    "normalSpeed": true,
+    "map": "original Japan; real UI commands; auth-only fixture; no game-state injection",
+    "calendarCommon": true,
+    "errors": [],
+    "cleanup": {
+      "raf": 0,
+      "canvas": 0
+    }
+  },
+  "hashes": {
+    "replay": "a66bd19b69d38c758371369f356d732bcb830626374f12fba3db93ed8fbd95a3",
+    "state": "f026e3b2de7d8e4fc19b051b37a4b3d19fcaad45405653dc8606a45557a72b8d",
+    "events": "39d7bd153ec50b59aceb4ad009f90e01fa6b20aae8826a13c3e7fcc47c345fd8"
+  }
+}

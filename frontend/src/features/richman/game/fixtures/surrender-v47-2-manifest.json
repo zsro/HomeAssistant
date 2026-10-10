@@ -1,0 +1,100 @@
+{
+  "route": "2",
+  "players": 2,
+  "normalSpeed": true,
+  "map": "original Japan; hotseat UI commands; auth fixture only",
+  "commands": 3,
+  "human": 1,
+  "auto": 0,
+  "displayChecks": [
+    {
+      "index": 0,
+      "kinds": []
+    }
+  ],
+  "lifecycle": [
+    "pause/resume",
+    "reset dialog cancel",
+    "reset",
+    "replace",
+    "exit",
+    "fullscreen",
+    "390px"
+  ],
+  "cleanup": {
+    "raf": 0,
+    "canvas": 0
+  },
+  "errors": [],
+  "facts": [
+    {
+      "type": "surrenderStarted",
+      "sourceId": "player-1",
+      "sequence": 3,
+      "commandId": "command-5",
+      "playerId": "player-1",
+      "turn": 1
+    },
+    {
+      "type": "disposalCompleted",
+      "receipt": {
+        "continuation": "surrender",
+        "id": "disposal-1",
+        "payerId": "player-1",
+        "recipientId": "public",
+        "propertyId": "surrender",
+        "due": 0,
+        "amount": 0,
+        "unpaid": 0,
+        "paid": {
+          "cash": 0,
+          "bank": 0
+        },
+        "released": [],
+        "pool": [],
+        "draws": [],
+        "stocks": [],
+        "inventory": [],
+        "ignoredPoints": 0,
+        "auctions": [],
+        "finishedGame": true
+      },
+      "sequence": 7,
+      "commandId": "command-5",
+      "playerId": "player-1",
+      "turn": 1
+    },
+    {
+      "type": "surrenderCompleted",
+      "sourceId": "player-1",
+      "targetId": null,
+      "outcome": "gated",
+      "sequence": 8,
+      "commandId": "command-5",
+      "playerId": "player-1",
+      "turn": 1
+    }
+  ],
+  "prefixes": [
+    {
+      "index": 3,
+      "kind": "surrenderStarted"
+    },
+    {
+      "index": 3,
+      "kind": "disposalCompleted"
+    },
+    {
+      "index": 3,
+      "kind": "surrenderCompleted"
+    }
+  ],
+  "fullReplay": true,
+  "prefixReplay": true,
+  "commandsMatchLegalPlan": true,
+  "hashes": {
+    "replay": "9bd50aa637998d22534e70fd2510e16602e0dec39e1743e526fe1c0afbba50a0",
+    "state": "8f95c54f82042321fc12d72a26aad121d41fbf34fbe041f01cb1b37b534d6ec3",
+    "events": "82f7283d5557c6d5ee91b504cdca8d237b00663b39de5b96656f20fbb09c99b3"
+  }
+}

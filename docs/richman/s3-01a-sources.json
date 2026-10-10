@@ -1,0 +1,177 @@
+{
+  "stage": "S3-01a",
+  "rulesId": "japan-events-candidate-v44",
+  "fingerprint": "f9dbb7e9",
+  "policy": "basic-v1",
+  "semanticIncrement": false,
+  "nativeExecution": false,
+  "referenceCommitFromPriorAudit": "ec7d70e693059d1e781d9d1cc2ad7f36d360d39e",
+  "sources": [
+    {
+      "cache": "/private/tmp/richman-price-reference/rich4_player_info.h",
+      "sha256": "cc17726ce054de587a42c0f335d84495e66698da2e15eb6a7b7ca28ab38604be",
+      "lines": [
+        [
+          23,
+          26
+        ]
+      ],
+      "claim": "who_plays documents low-bit human/computer and managed bit; Web deliberately stores controller outside world",
+      "grade": "cached fixed reverse-engineering reference, not native execution"
+    },
+    {
+      "cache": "/private/tmp/richman-price-reference/rich4_ui_ai_settings.asm",
+      "sha256": "a68d6851f864338bcf4a8edb1d6a933a6f95489ea9c033f9bf118584b6a074b0",
+      "lines": [
+        [
+          1012,
+          1035
+        ]
+      ],
+      "claim": "settings enumerate seats and current who_plays; no claim of full native settings emulation",
+      "grade": "cached fixed reverse-engineering reference, not native execution"
+    },
+    {
+      "cache": "/private/tmp/richman-price-reference/rich4_ai_use_card.asm",
+      "sha256": "aad843133290152c2675f000ca49b49477b93ecd37e0bb01c41d176b60f8a3f6",
+      "lines": [
+        [
+          37,
+          76
+        ],
+        [
+          138,
+          148
+        ]
+      ],
+      "claim": "native card path references RNG/hostility; explicitly outside basic-v1",
+      "grade": "cached fixed reverse-engineering reference, not native execution"
+    },
+    {
+      "path": "frontend/src/features/richman/game/engine.ts",
+      "sha256": "edb72546f0f2c7269d77867855f24b764457c3b9f6a658632f50444eedada425",
+      "anchors": [
+        {
+          "text": "export type Pending",
+          "lines": [
+            103
+          ]
+        },
+        {
+          "text": "case 'bank'",
+          "lines": [
+            1103
+          ]
+        },
+        {
+          "text": "case 'animationDone'",
+          "lines": [
+            1044
+          ]
+        }
+      ],
+      "grade": "workspace implementation audit"
+    },
+    {
+      "path": "frontend/src/features/richman/game/computer.ts",
+      "sha256": "46a49196cd6f64565c202fcc08fe6102eb0bb435207977231c9a2b20c45a40a7",
+      "anchors": [
+        {
+          "text": "decisionPlayer",
+          "lines": [
+            10,
+            19
+          ]
+        },
+        {
+          "text": "switch(p.kind)",
+          "lines": [
+            22
+          ]
+        }
+      ],
+      "grade": "workspace implementation audit"
+    },
+    {
+      "path": "frontend/src/features/richman/game/session.ts",
+      "sha256": "815a599a89d0cf6158c110483b95166e959820ce3ee8eedb969ccca99e8aecd7",
+      "anchors": [
+        {
+          "text": "start(options",
+          "lines": [
+            134
+          ]
+        },
+        {
+          "text": "private send",
+          "lines": [
+            247
+          ]
+        },
+        {
+          "text": "dispose()",
+          "lines": [
+            374
+          ]
+        },
+        {
+          "text": "tick(milliseconds",
+          "lines": [
+            376,
+            378
+          ]
+        }
+      ],
+      "grade": "workspace implementation audit"
+    },
+    {
+      "path": "frontend/src/pages/RichmanPage.tsx",
+      "sha256": "ae5024ef544624fdebc0380b2edbc0819eb87c8f1f80d53ab53d542826e1e9a7",
+      "anchors": [
+        {
+          "text": "openSetup",
+          "lines": [
+            152,
+            203,
+            238,
+            281
+          ]
+        },
+        {
+          "text": "rm-controlled-actions",
+          "lines": [
+            245
+          ]
+        },
+        {
+          "text": "rm-seat-controls",
+          "lines": [
+            339
+          ]
+        }
+      ],
+      "grade": "workspace implementation audit"
+    },
+    {
+      "path": "frontend/src/features/richman/scene.ts",
+      "sha256": "fda01f83f1dbbf08a634c80bcc6214ade43ef0d4d217894cd894366c3bee91f2",
+      "anchors": [
+        {
+          "text": "this.model.dispose()",
+          "lines": [
+            457
+          ]
+        }
+      ],
+      "grade": "workspace implementation audit"
+    }
+  ],
+  "differences": [
+    "No native AI equivalence or difficulty tuning",
+    "No mid-game takeover; controllers selected only at new-game setup",
+    "No policy RNG or world/controller coupling",
+    "Advanced cards, stocks, bidding, refinancing and research production deferred",
+    "Minigames quit normally with actual score, no native computer reward shortcut",
+    "Public one-hop route score uses base land value only as heuristic; actual decision uses quoted amount"
+  ]
+}

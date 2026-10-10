@@ -1,0 +1,116 @@
+{
+  "media": {
+    "playing": 9,
+    "sources": [
+      "http://127.0.0.1:5177/richman/generated/audio/track02.mp3",
+      "http://127.0.0.1:5177/richman/generated/audio/effect-49.wav",
+      "http://127.0.0.1:5177/richman/generated/audio/effect-43.wav",
+      "http://127.0.0.1:5177/richman/generated/audio/effect-48.wav"
+    ],
+    "released": true,
+    "headlessOutputMuted": true
+  },
+  "route": "special2",
+  "players": 2,
+  "normalSpeed": true,
+  "map": "original Japan; real human UI + actual automatic seats; auth fixture only",
+  "computerCommands": 21,
+  "commands": 69,
+  "human": 10,
+  "auto": 57,
+  "displayChecks": [
+    {
+      "index": 0,
+      "kinds": []
+    }
+  ],
+  "lifecycle": [
+    "pause/resume",
+    "reset dialog cancel",
+    "reset",
+    "replace",
+    "exit",
+    "fullscreen",
+    "390px"
+  ],
+  "cleanup": {
+    "raf": 0,
+    "canvas": 0
+  },
+  "errors": [],
+  "prefixes": [
+    {
+      "index": 15,
+      "kind": "g6Notice"
+    },
+    {
+      "index": 17,
+      "kind": "specialObjectsRefreshed"
+    },
+    {
+      "index": 48,
+      "kind": "specialObjectResolved"
+    }
+  ],
+  "facts": [
+    {
+      "index": 15,
+      "event": {
+        "type": "g6Notice",
+        "message": "玩家2附身小福神，期限7次自身行动边界。",
+        "sequence": 26,
+        "commandId": "command-17",
+        "playerId": "player-2",
+        "turn": 2
+      }
+    },
+    {
+      "index": 17,
+      "event": {
+        "type": "specialObjectsRefreshed",
+        "date": "1998-02-01",
+        "objects": [
+          {
+            "type": 13,
+            "node": 16
+          },
+          {
+            "type": 14,
+            "node": 77
+          }
+        ],
+        "sequence": 36,
+        "commandId": "command-19",
+        "playerId": "player-2",
+        "turn": 2
+      }
+    },
+    {
+      "index": 48,
+      "event": {
+        "type": "specialObjectResolved",
+        "objectType": 13,
+        "node": 16,
+        "targetId": "player-2",
+        "outcome": "tool",
+        "itemId": "tool:06",
+        "before": 0,
+        "after": 1,
+        "sequence": 97,
+        "commandId": "command-50",
+        "playerId": "player-2",
+        "turn": 8
+      }
+    }
+  ],
+  "expectedVoices": [],
+  "playedVoices": [],
+  "fullReplay": true,
+  "prefixReplay": true,
+  "commandsMatchLegalPlan": true,
+  "hashes": {
+    "replay": "f3105b979bc99803284130de925764253f98de111dc63dd2cf690526563f0cfa",
+    "state": "7545ae2e964d884bf5e2863e4c411311a9b8de2fadc394fb824861aa088b93b4",
+    "events": "c5010dd6667dd33751aec52586985f474207bec1a3ed667a6d7e429e966625c5"
+  }
+}

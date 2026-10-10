@@ -1,0 +1,170 @@
+[
+  {
+    "slot": 0,
+    "closed": 1,
+    "kind": 0,
+    "month": 1,
+    "day": 1
+  },
+  {
+    "slot": 1,
+    "closed": 1,
+    "kind": 0,
+    "month": 1,
+    "day": 2
+  },
+  {
+    "slot": 2,
+    "closed": 1,
+    "kind": 0,
+    "month": 1,
+    "day": 3
+  },
+  {
+    "slot": 3,
+    "closed": 1,
+    "kind": 0,
+    "month": 1,
+    "day": 15
+  },
+  {
+    "slot": 4,
+    "closed": 0,
+    "kind": 0,
+    "month": 2,
+    "day": 3
+  },
+  {
+    "slot": 5,
+    "closed": 0,
+    "kind": 0,
+    "month": 2,
+    "day": 14
+  },
+  {
+    "slot": 6,
+    "closed": 1,
+    "kind": 0,
+    "month": 2,
+    "day": 11
+  },
+  {
+    "slot": 7,
+    "closed": 0,
+    "kind": 0,
+    "month": 3,
+    "day": 3
+  },
+  {
+    "slot": 8,
+    "closed": 1,
+    "kind": 0,
+    "month": 3,
+    "day": 22
+  },
+  {
+    "slot": 9,
+    "closed": 1,
+    "kind": 0,
+    "month": 4,
+    "day": 29
+  },
+  {
+    "slot": 10,
+    "closed": 1,
+    "kind": 0,
+    "month": 5,
+    "day": 3
+  },
+  {
+    "slot": 11,
+    "closed": 1,
+    "kind": 0,
+    "month": 5,
+    "day": 5
+  },
+  {
+    "slot": 12,
+    "closed": 1,
+    "kind": 0,
+    "month": 9,
+    "day": 15
+  },
+  {
+    "slot": 13,
+    "closed": 1,
+    "kind": 0,
+    "month": 9,
+    "day": 23
+  },
+  {
+    "slot": 14,
+    "closed": 1,
+    "kind": 0,
+    "month": 10,
+    "day": 10
+  },
+  {
+    "slot": 15,
+    "closed": 1,
+    "kind": 0,
+    "month": 11,
+    "day": 3
+  },
+  {
+    "slot": 16,
+    "closed": 1,
+    "kind": 0,
+    "month": 11,
+    "day": 23
+  },
+  {
+    "slot": 17,
+    "closed": 1,
+    "kind": 0,
+    "month": 12,
+    "day": 23
+  },
+  {
+    "slot": 18,
+    "closed": 0,
+    "kind": 0,
+    "month": 12,
+    "day": 25
+  },
+  {
+    "slot": 19,
+    "closed": 0,
+    "kind": 0,
+    "month": 0,
+    "day": 0
+  },
+  {
+    "slot": 20,
+    "closed": 0,
+    "kind": 0,
+    "month": 0,
+    "day": 0
+  },
+  {
+    "slot": 21,
+    "closed": 0,
+    "kind": 0,
+    "month": 0,
+    "day": 0
+  },
+  {
+    "slot": 22,
+    "closed": 0,
+    "kind": 0,
+    "month": 0,
+    "day": 0
+  },
+  {
+    "slot": 23,
+    "closed": 0,
+    "kind": 0,
+    "month": 0,
+    "day": 0
+  }
+]

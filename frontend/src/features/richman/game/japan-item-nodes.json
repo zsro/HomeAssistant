@@ -1,0 +1,96 @@
+{
+  "version": 1,
+  "mapSha256": "4dc6a47efe03f64484e6b9ac5ee31489b7f42fc369c0296f2f0b8d63845294b1",
+  "nodes": [
+    {
+      "id": 14,
+      "kind": 0,
+      "points": 10,
+      "shop": false
+    },
+    {
+      "id": 16,
+      "kind": 0,
+      "points": 10,
+      "shop": false
+    },
+    {
+      "id": 18,
+      "kind": 0,
+      "points": 10,
+      "shop": false
+    },
+    {
+      "id": 20,
+      "kind": 0,
+      "points": 50,
+      "shop": false
+    },
+    {
+      "id": 23,
+      "kind": 0,
+      "points": 30,
+      "shop": false
+    },
+    {
+      "id": 25,
+      "kind": 0,
+      "points": 10,
+      "shop": false
+    },
+    {
+      "id": 27,
+      "kind": 0,
+      "points": 30,
+      "shop": false
+    },
+    {
+      "id": 29,
+      "kind": 0,
+      "points": 10,
+      "shop": false
+    },
+    {
+      "id": 31,
+      "kind": 0,
+      "points": 50,
+      "shop": false
+    },
+    {
+      "id": 33,
+      "kind": 0,
+      "points": 10,
+      "shop": false
+    },
+    {
+      "id": 50,
+      "kind": 6001,
+      "points": 0,
+      "shop": true
+    },
+    {
+      "id": 79,
+      "kind": 0,
+      "points": 10,
+      "shop": false
+    },
+    {
+      "id": 81,
+      "kind": 0,
+      "points": 10,
+      "shop": false
+    },
+    {
+      "id": 83,
+      "kind": 0,
+      "points": 30,
+      "shop": false
+    },
+    {
+      "id": 107,
+      "kind": 6001,
+      "points": 0,
+      "shop": true
+    }
+  ]
+}

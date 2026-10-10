@@ -1,0 +1,12 @@
+{
+  "route": "12-redirect",
+  "seed": "traffic-group-29",
+  "commands": 283,
+  "turn": 35,
+  "players": 2,
+  "state": "9770854376601a58d8b47c5275a4a80dd35cc1d8eab985bb28fee39add356762",
+  "events": "26183222c4f8653d76405381983a0c77ce35f9ed6d9e260be72cf9d24ed7bcc4",
+  "fortune": [
+    12
+  ]
+}

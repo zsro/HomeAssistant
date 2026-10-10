@@ -1,0 +1,1414 @@
+{
+  "stage": "S3-04a",
+  "referenceCommit": "ec7d70e693059d1e781d9d1cc2ad7f36d360d39e",
+  "nativeExecution": false,
+  "sources": {
+    "rich4.exe": {
+      "bytes": 591360,
+      "sha256": "110b29f9d2fadcff3836eb69ec380aa264951859c90955da6e11158d2f956a13"
+    },
+    "rich4_media_music.asm": {
+      "bytes": 24399,
+      "sha256": "cc1dcfd8893526c0175903308e4f236b8b9791bbfb656f6a6ec97ea8e50b62be"
+    },
+    "rich4_sound_effect.asm": {
+      "bytes": 21244,
+      "sha256": "f4210befb1d86ec31f01e544f4122187aa46c095cf89edb9c7a20d68d5d279a3"
+    },
+    "rich4_load_map.asm": {
+      "bytes": 18143,
+      "sha256": "7a555911e15b8c947c6c281b95c23bf536dba92baca20929ab1666ed31df3987"
+    },
+    "rich4_player_core_actions.asm": {
+      "bytes": 151420,
+      "sha256": "2874c1a3e0ca1d0da5afe4cb93e42cf2d6f6fa864dbee11d7bcaa028af07d94a"
+    },
+    "rich4.asm": {
+      "bytes": 1007904,
+      "sha256": "30904cbb4f23a6b74fc1b80ad023bd7dff11b441c2c1978f768f9891d099d64a"
+    },
+    "Midi.txt": {
+      "bytes": 304,
+      "sha256": "58df659d1cd4c61d2fbb2557bcc295a82f64753ec45ccb081d3e509f4a08f44f",
+      "text": "RICH08.MID\nRICH16.MID\nRICH17.MID\nRICH18.MID\nRICH19.MID\nRICH20.MID\nRICH21.MID\nRICH22.MID\nMIDI01.MID\nMIDI02.MID\nMIDI03.MID\nMIDI04.MID\nMIDI05.MID\nMIDI06.MID\nMIDI07.MID\nMIDI08.MID\nMIDI09.MID\nMIDI10.MID\nMIDI11.MID\nMIDI12.MID\nMIDI13.MID\nMIDI14-1.MID\nMIDI14-2.MID\nMIDI15.MID\nMIDI16.MID\n"
+    },
+    "tracklen.nfo": {
+      "bytes": 843,
+      "sha256": "80475ee942d298d06ae8a17d5c1d3de4ea8de84577303087af26c141ccb57c6b",
+      "text": "track=1 type=d pos=0 len=4\ntrack=2 type=o pos=4 len=148\ntrack=3 type=o pos=152 len=141\ntrack=4 type=o pos=293 len=148\ntrack=5 type=o pos=441 len=157\ntrack=6 type=o pos=598 len=126\ntrack=7 type=o pos=724 len=115\ntrack=8 type=o pos=839 len=112\ntrack=9 type=o pos=951 len=185\ntrack=10 type=o pos=1136 len=48\ntrack=11 type=o pos=1184 len=47\ntrack=12 type=o pos=1231 len=16\ntrack=13 type=o pos=1247 len=36\ntrack=14 type=o pos=1283 len=52\ntrack=15 type=o pos=1335 len=78\ntrack=16 type=o pos=1413 len=50\ntrack=17 type=o pos=1463 len=61\ntrack=18 type=o pos=1524 len=20\ntrack=19 type=o pos=1544 len=40\ntrack=20 type=o pos=1584 len=69\ntrack=21 type=o pos=1653 len=44\ntrack=22 type=o pos=1697 len=43\ntrack=23 type=o pos=1740 len=39\ntrack=24 type=o pos=1779 len=20\ntrack=25 type=o pos=1799 len=20\ntrack=26 type=o pos=1819 len=19\n"
+    }
+  },
+  "archives": {
+    "Data.mkf": {
+      "bytes": 53296712,
+      "sha256": "c63023e815b1ad4bef172b6415d128c7f041f12b71b5d80dc3ff29240a0a1988",
+      "entries": 561,
+      "signatures": {
+        "534d5000": 9,
+        "83648364": 3,
+        "b77db77d": 4,
+        "00382140": 2,
+        "e07ee07e": 3,
+        "a07ea07e": 1,
+        "10161016": 2,
+        "0038005c": 4,
+        "ff7fff7f": 3,
+        "03720372": 2,
+        "c564c564": 3,
+        "9352167b": 1,
+        "ab00ab00": 1,
+        "df06df06": 1,
+        "007ec07d": 1,
+        "207c207c": 4,
+        "e6208310": 2,
+        "0000630c": 2,
+        "817e6141": 2,
+        "2339e228": 2,
+        "5f4f5f4f": 2,
+        "bf01bf01": 2,
+        "017c017c": 2,
+        "c87fc87f": 1,
+        "00000000": 32,
+        "a514314a": 1,
+        "23616375": 1,
+        "003d003d": 1,
+        "bf33bf33": 1,
+        "0058627c": 1,
+        "80718065": 1,
+        "3c193c19": 1,
+        "40334033": 1,
+        "a0488040": 1,
+        "601c601c": 1,
+        "e511051a": 1,
+        "c06ac06a": 1,
+        "607f607f": 1,
+        "00040004": 1,
+        "a47ca47c": 1,
+        "201de014": 1,
+        "40738977": 1,
+        "a26da26d": 1,
+        "007c007c": 1,
+        "29642964": 1,
+        "dd06dd06": 1,
+        "017ec079": 1,
+        "41284128": 1,
+        "000c000c": 1,
+        "f57f7a73": 1,
+        "a0752055": 1,
+        "ff26de22": 1,
+        "bf2ebf2e": 1,
+        "07000700": 1,
+        "4b014b01": 1,
+        "ff7f7a6b": 1,
+        "00080004": 1,
+        "53505200": 290,
+        "ecd00000": 1,
+        "9e420100": 1,
+        "f2df0000": 1,
+        "f0b00000": 1,
+        "98670000": 1,
+        "2a700000": 1,
+        "1e3a0000": 1,
+        "d4810000": 1,
+        "fab30000": 1,
+        "9e3f0000": 1,
+        "f6980000": 1,
+        "66b70000": 1,
+        "746c0000": 1,
+        "aa990000": 1,
+        "504a0100": 1,
+        "66c80100": 1,
+        "f0aa0000": 1,
+        "72370100": 1,
+        "804e0000": 1,
+        "08fb0000": 1,
+        "3af10000": 1,
+        "e46e0000": 1,
+        "548d0000": 1,
+        "f2ae0000": 1,
+        "bc4abb4a": 1,
+        "c610a508": 1,
+        "5c473c43": 1,
+        "7c637b63": 1,
+        "635c4258": 1,
+        "9325721d": 1,
+        "eb7fcb7f": 1,
+        "297d087d": 1,
+        "7e2f7e2b": 1,
+        "b07faf7f": 1,
+        "c41ca318": 1,
+        "44182314": 1,
+        "a6088504": 1,
+        "c40ca204": 1,
+        "42082104": 5,
+        "1226f121": 1,
+        "6b0c6b08": 1,
+        "4230212c": 1,
+        "850c4308": 1,
+        "ae296d21": 1,
+        "4e210d19": 1,
+        "3d573d57": 1,
+        "087fe77e": 1,
+        "7011b211": 1,
+        "887d667d": 1,
+        "42080000": 2,
+        "e320a218": 1,
+        "39673967": 1,
+        "fb29fb29": 1,
+        "aa598a59": 1,
+        "1a56fa51": 1,
+        "ab514845": 1,
+        "a7248620": 1,
+        "58293825": 1,
+        "d035af31": 1,
+        "90738f73": 1,
+        "1d1b1d17": 1,
+        "bd57bd53": 1,
+        "697e487e": 1,
+        "be57be57": 1,
+        "c75da65d": 1,
+        "2921081d": 1,
+        "cb50894c": 1,
+        "d83ad736": 1,
+        "ee69e55c": 1,
+        "c6508454": 1,
+        "e71ca514": 1,
+        "28390739": 1,
+        "1d47dc2e": 1,
+        "5b365b36": 1,
+        "0331c128": 1,
+        "70294f21": 1,
+        "6b0d6b09": 1,
+        "027ee17d": 1,
+        "ae208d1c": 1,
+        "54653461": 1,
+        "640c2204": 1,
+        "84206218": 1,
+        "b84e4c29": 1,
+        "e37fe27f": 1,
+        "84146214": 1,
+        "f03d2b25": 1,
+        "ae248d20": 1,
+        "527a527a": 1,
+        "fd62fd62": 1,
+        "ff53ff4f": 1,
+        "c50ca308": 1,
+        "f218b214": 1,
+        "b5199515": 1,
+        "bf429f3e": 1,
+        "c628421c": 1,
+        "b2ba0500": 1,
+        "30440200": 1,
+        "a85b0000": 1,
+        "fe730000": 1,
+        "c4910300": 1,
+        "9cdd0100": 1,
+        "52f50b00": 1,
+        "3aa50a00": 1,
+        "760b0b00": 1,
+        "2ecd0400": 1,
+        "16850200": 1,
+        "b4f20100": 1,
+        "16750200": 1,
+        "a81e0000": 1,
+        "c61d0000": 1,
+        "ec8c0100": 1,
+        "10e20200": 1,
+        "244b0700": 1,
+        "f4ee0800": 1,
+        "609d0800": 1,
+        "cabd0300": 1,
+        "66550800": 1,
+        "d21c0200": 1,
+        "44ac0400": 1,
+        "b6730100": 1,
+        "d2e30500": 1,
+        "dedc0400": 1,
+        "06fe0700": 1,
+        "2c0a0800": 1,
+        "16030100": 1,
+        "429d0c00": 1,
+        "1ad00e00": 1,
+        "52570800": 1,
+        "10300b00": 1,
+        "d8790100": 1,
+        "76ec0200": 1,
+        "2a030300": 1,
+        "b0000400": 1,
+        "4ae50100": 1,
+        "56fd0300": 1,
+        "24e20200": 1,
+        "78c20200": 1,
+        "2e090400": 1,
+        "b2f00200": 1,
+        "d0ac0200": 1,
+        "061e0200": 1,
+        "144c0300": 1,
+        "b6a10400": 1
+      },
+      "spriteFrames": 8735
+    },
+    "Effect.mkf": {
+      "bytes": 3897646,
+      "sha256": "4ac71accafd18e4f60badbf59491e7df002dc725cfb24f24dc4f20fd031d0125",
+      "entries": 115,
+      "signatures": {
+        "52494646": 99,
+        "": 16
+      },
+      "spriteFrames": 0
+    },
+    "MapDat.MKF": {
+      "bytes": 36560,
+      "sha256": "4dc6a47efe03f64484e6b9ac5ee31489b7f42fc369c0296f2f0b8d63845294b1",
+      "entries": 4,
+      "signatures": {
+        "67000000": 1,
+        "90000000": 1,
+        "6e000000": 1,
+        "76000000": 1
+      },
+      "spriteFrames": 0
+    },
+    "Panel.mkf": {
+      "bytes": 25351066,
+      "sha256": "5b9bfd11a866694cfdf93457d2010d30f20a43f96b668e5186fa99452e16f563",
+      "entries": 113,
+      "signatures": {
+        "534d5000": 34,
+        "53505200": 66,
+        "84eb0000": 1,
+        "8a500100": 1,
+        "f2cb0100": 1,
+        "04040404": 1,
+        "c0c40000": 1,
+        "78251200": 1,
+        "b6d20b00": 1,
+        "00000000": 2,
+        "1c462500": 1,
+        "01010101": 1,
+        "a6120800": 1,
+        "352e352e": 1
+      },
+      "spriteFrames": 1451
+    },
+    "Speaking.mkf": {
+      "bytes": 56970696,
+      "sha256": "0f43530b45a3286d1681f7a676c440864bc2f5734ab41c2f3763b4e3f8bbfb19",
+      "entries": 1374,
+      "signatures": {
+        "52494646": 1374
+      },
+      "spriteFrames": 0
+    },
+    "help.mkf": {
+      "bytes": 363252,
+      "sha256": "34ade60d25a1a41696e8913dfa3cd6d7552bdf8c12a2b8c79127029817457107",
+      "entries": 100,
+      "signatures": {
+        "534d5000": 1,
+        "a5bbb943": 1,
+        "b943c0b8": 3,
+        "a467a661": 1,
+        "c249a8e9": 1,
+        "aaabbbf9": 1,
+        "c160a5ab": 1,
+        "b27baaf7": 1,
+        "c5aaa8fa": 1,
+        "c078a673": 1,
+        "bfefa977": 2,
+        "bfefbedc": 2,
+        "a8cfa5ce": 1,
+        "a5fabe61": 1,
+        "b8eab2a3": 1,
+        "aab1b16f": 1,
+        "b7edb17a": 3,
+        "a4bda571": 1,
+        "ab65b669": 1,
+        "a8aba8ec": 5,
+        "a8abb2d6": 1,
+        "b867b94c": 1,
+        "b36fac4f": 1,
+        "bdf1a457": 1,
+        "bdf2a8ec": 3,
+        "b773bb44": 1,
+        "a7a4a863": 1,
+        "b8f4b94c": 1,
+        "a6edb07c": 1,
+        "a662b943": 1,
+        "a46ab049": 1,
+        "a46ab05d": 1,
+        "a46abad6": 1,
+        "a46abd61": 1,
+        "a470b049": 1,
+        "a470b05d": 1,
+        "a57ca46a": 4,
+        "a470bad6": 1,
+        "a470bd61": 1,
+        "a4d1a8cf": 1,
+        "a6baafab": 1,
+        "b463c55d": 1,
+        "a55cafe0": 43
+      },
+      "spriteFrames": 12
+    },
+    "jump.mkf": {
+      "bytes": 26091102,
+      "sha256": "92b3ea10d4a8021052eb927ed97ccbe9cd51ca3d6021ab85e07b88c2377b761e",
+      "entries": 67,
+      "signatures": {
+        "790d9a11": 1,
+        "9f2e9f2e": 1,
+        "b215b215": 1,
+        "d41db319": 1,
+        "534d5000": 2,
+        "53505200": 36,
+        "22f20800": 1,
+        "36360a00": 1,
+        "eceb0800": 1,
+        "62750a00": 1,
+        "92e00600": 1,
+        "96b00b00": 1,
+        "d47d0800": 1,
+        "52360700": 1,
+        "80a70600": 1,
+        "42f00600": 1,
+        "f2550600": 1,
+        "08530600": 1,
+        "4e020400": 1,
+        "24281200": 1,
+        "a4311400": 1,
+        "a2810b00": 1,
+        "648e1100": 1,
+        "96e31000": 1,
+        "9e2b0e00": 1,
+        "78871100": 1,
+        "767a0b00": 1,
+        "74a50c00": 1,
+        "7adf0a00": 1,
+        "fad61200": 1,
+        "00d00900": 1
+      },
+      "spriteFrames": 492
+    },
+    "map.mkf": {
+      "bytes": 40312048,
+      "sha256": "717aaa1c1becf277064d29772500027427d39488bad64a7ee42875975c0e7106",
+      "entries": 150,
+      "signatures": {
+        "474e4400": 4,
+        "67000000": 1,
+        "90000000": 1,
+        "6e000000": 1,
+        "76000000": 1,
+        "534d5000": 17,
+        "53505200": 125
+      },
+      "spriteFrames": 1110
+    }
+  },
+  "music": [
+    {
+      "file": "track02.ogg",
+      "bytes": 6454577,
+      "sha256": "e254e2dec654f30a4f983555fab2e751da21c9e4fd751d81a8aaaa2a470a8430",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "vorbis",
+          "codec_type": "audio",
+          "sample_rate": "44100",
+          "channels": 2
+        }
+      ],
+      "format": {
+        "duration": "110.712744"
+      },
+      "export": {
+        "file": "track02.mp3",
+        "bytes": 2287848,
+        "sha256": "d344db89d10060a0ae4d4544866aa0226bcdeb73fdec794907ddd2e7e8c96d42",
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "mp3",
+            "codec_type": "audio",
+            "sample_rate": "44100",
+            "channels": 2
+          }
+        ],
+        "format": {
+          "duration": "110.759184"
+        }
+      }
+    },
+    {
+      "file": "track03.ogg",
+      "bytes": 6537933,
+      "sha256": "6089fbc723624dca3c123a0e2c5b3c2e27af4bce9f5dbfda5cef1bbfcd976459",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "vorbis",
+          "codec_type": "audio",
+          "sample_rate": "44100",
+          "channels": 2
+        }
+      ],
+      "format": {
+        "duration": "113.127619"
+      },
+      "export": {
+        "file": "track03.mp3",
+        "bytes": 2303993,
+        "sha256": "5db7b3a1b2d2da174b80d86f64ca3d6728e9161fcb1b1dac50592f915adbfcf3",
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "mp3",
+            "codec_type": "audio",
+            "sample_rate": "44100",
+            "channels": 2
+          }
+        ],
+        "format": {
+          "duration": "113.162449"
+        }
+      }
+    },
+    {
+      "file": "track04.ogg",
+      "bytes": 6956276,
+      "sha256": "b5db999e15b141a1daa11e85d2b350b06e90aafd2c9f46d241201d5af173cb7e",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "vorbis",
+          "codec_type": "audio",
+          "sample_rate": "44100",
+          "channels": 2
+        }
+      ],
+      "format": {
+        "duration": "123.158639"
+      },
+      "export": {
+        "file": "track04.mp3",
+        "bytes": 2683906,
+        "sha256": "6e5c1da8057102ef9a60e43dc0c7305285361a76736cade2ad6e6f8abc78c4b1",
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "mp3",
+            "codec_type": "audio",
+            "sample_rate": "44100",
+            "channels": 2
+          }
+        ],
+        "format": {
+          "duration": "123.193469"
+        }
+      }
+    },
+    {
+      "file": "track05.ogg",
+      "bytes": 9093386,
+      "sha256": "35d3f1d5c455b9dc13782f810accff4d1286231e74bb23779a485de0c7b17977",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "vorbis",
+          "codec_type": "audio",
+          "sample_rate": "44100",
+          "channels": 2
+        }
+      ],
+      "format": {
+        "duration": "154.459138"
+      },
+      "export": {
+        "file": "track05.mp3",
+        "bytes": 3229054,
+        "sha256": "6b7ec8310482aefecc8888e698f93f8d905882b6947a8484679e9810631f424d",
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "mp3",
+            "codec_type": "audio",
+            "sample_rate": "44100",
+            "channels": 2
+          }
+        ],
+        "format": {
+          "duration": "154.488163"
+        }
+      }
+    },
+    {
+      "file": "track06.ogg",
+      "bytes": 8612055,
+      "sha256": "a2af28601b998b32c3aca5099e795a5d0717f488071e19aa5104cb9a0dae377e",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "vorbis",
+          "codec_type": "audio",
+          "sample_rate": "44100",
+          "channels": 2
+        }
+      ],
+      "format": {
+        "duration": "144.520998"
+      },
+      "export": {
+        "file": "track06.mp3",
+        "bytes": 3108420,
+        "sha256": "8f2ce04a852c5f17dc04a294ca9b515f115d7e306fc07aadb4123bf18e8b730e",
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "mp3",
+            "codec_type": "audio",
+            "sample_rate": "44100",
+            "channels": 2
+          }
+        ],
+        "format": {
+          "duration": "144.561633"
+        }
+      }
+    },
+    {
+      "file": "track07.ogg",
+      "bytes": 8688300,
+      "sha256": "678bd4de20601eb2688596661b6024ae4bc4e943b3538985ec75af4de1500c15",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "vorbis",
+          "codec_type": "audio",
+          "sample_rate": "44100",
+          "channels": 2
+        }
+      ],
+      "format": {
+        "duration": "141.502404"
+      },
+      "export": {
+        "file": "track07.mp3",
+        "bytes": 2930128,
+        "sha256": "f0d8ece6472a503b6b15455b1cfbc4ffe72e718ef22a2a94d96cbf5f994975cf",
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "mp3",
+            "codec_type": "audio",
+            "sample_rate": "44100",
+            "channels": 2
+          }
+        ],
+        "format": {
+          "duration": "141.531429"
+        }
+      }
+    },
+    {
+      "file": "track08.ogg",
+      "bytes": 8018101,
+      "sha256": "0dff6f9b8e5f1aaa05b6bd85986cafcfa3f9b1e89d1e12e2e624a2adb2ef4d44",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "vorbis",
+          "codec_type": "audio",
+          "sample_rate": "44100",
+          "channels": 2
+        }
+      ],
+      "format": {
+        "duration": "137.740771"
+      },
+      "export": {
+        "file": "track08.mp3",
+        "bytes": 2824509,
+        "sha256": "dc11ce5ac398bbf1683c275aba5db6e44681c039085dc006e01d627e2ad47c45",
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "mp3",
+            "codec_type": "audio",
+            "sample_rate": "44100",
+            "channels": 2
+          }
+        ],
+        "format": {
+          "duration": "137.769796"
+        }
+      }
+    },
+    {
+      "file": "track09.ogg",
+      "bytes": 10959441,
+      "sha256": "f1071cb75ad953710a7c984f5c0b234a955b47f4287b77e85e37f8d7d17364d7",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "vorbis",
+          "codec_type": "audio",
+          "sample_rate": "44100",
+          "channels": 2
+        }
+      ],
+      "format": {
+        "duration": "180.047528"
+      },
+      "export": {
+        "file": "track09.mp3",
+        "bytes": 3823025,
+        "sha256": "a61f553d3b2d9169455aead7fd5c84491a89c46fcf3dc0d8c6bf66e45ce4ac89",
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "mp3",
+            "codec_type": "audio",
+            "sample_rate": "44100",
+            "channels": 2
+          }
+        ],
+        "format": {
+          "duration": "180.088163"
+        }
+      }
+    },
+    {
+      "file": "track10.ogg",
+      "bytes": 2625801,
+      "sha256": "da381af6c8d9aae1fa7a735a3b40b7574e44c9e5d2c01a21edc17bfd74c9b294",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "vorbis",
+          "codec_type": "audio",
+          "sample_rate": "44100",
+          "channels": 2
+        }
+      ],
+      "format": {
+        "duration": "48.761905"
+      }
+    },
+    {
+      "file": "track11.ogg",
+      "bytes": 2343199,
+      "sha256": "3e243615838aaf32553b26f4f6a4595da23883079df96fdebd02e6f4de6ec8b0",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "vorbis",
+          "codec_type": "audio",
+          "sample_rate": "44100",
+          "channels": 2
+        }
+      ],
+      "format": {
+        "duration": "48.204626"
+      }
+    },
+    {
+      "file": "track12.ogg",
+      "bytes": 768999,
+      "sha256": "259dfced7fdf26e21d9c201c522f138acbb7fd7ea1040fc7548136c8c4d57a60",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "vorbis",
+          "codec_type": "audio",
+          "sample_rate": "44100",
+          "channels": 2
+        }
+      ],
+      "format": {
+        "duration": "16.625488"
+      }
+    },
+    {
+      "file": "track13.ogg",
+      "bytes": 1974300,
+      "sha256": "1ebcf6183805186b692c0828e1aeafa3a3e94a07f55f4882c9d3ffeaf958611a",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "vorbis",
+          "codec_type": "audio",
+          "sample_rate": "44100",
+          "channels": 2
+        }
+      ],
+      "format": {
+        "duration": "39.241723"
+      }
+    },
+    {
+      "file": "track14.ogg",
+      "bytes": 2870527,
+      "sha256": "908b3aacd68e799429787a9f4b375463c7716aba59cc26c5203442e6fe9a5ffc",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "vorbis",
+          "codec_type": "audio",
+          "sample_rate": "44100",
+          "channels": 2
+        }
+      ],
+      "format": {
+        "duration": "54.520454"
+      }
+    },
+    {
+      "file": "track15.ogg",
+      "bytes": 4463996,
+      "sha256": "21ea252a6d48d5518f2c773dfa5eebd41ad2d791948d9fb5216ec5bd2c756399",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "vorbis",
+          "codec_type": "audio",
+          "sample_rate": "44100",
+          "channels": 2
+        }
+      ],
+      "format": {
+        "duration": "79.180045"
+      }
+    },
+    {
+      "file": "track16.ogg",
+      "bytes": 2654092,
+      "sha256": "f9cf887d19444a1e4ddeeaea376fda2323bd787dfe17b293ac143f81a5d13236",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "vorbis",
+          "codec_type": "audio",
+          "sample_rate": "44100",
+          "channels": 2
+        }
+      ],
+      "format": {
+        "duration": "51.269660"
+      }
+    },
+    {
+      "file": "track17.ogg",
+      "bytes": 3548107,
+      "sha256": "6fbd13f4eb251f67e7689f1ff2a870fda6ea070da4d05602e34b24f4d6339c32",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "vorbis",
+          "codec_type": "audio",
+          "sample_rate": "44100",
+          "channels": 2
+        }
+      ],
+      "format": {
+        "duration": "66.780590"
+      }
+    },
+    {
+      "file": "track18.ogg",
+      "bytes": 1214032,
+      "sha256": "0e618ee0cd5206808ebde999e38ba4d3ab776ba79df2e79b06648f1757a60d1e",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "vorbis",
+          "codec_type": "audio",
+          "sample_rate": "44100",
+          "channels": 2
+        }
+      ],
+      "format": {
+        "duration": "21.733878"
+      }
+    },
+    {
+      "file": "track19.ogg",
+      "bytes": 2375037,
+      "sha256": "c91881b04f2e2ed5937936c54f57f08467c63812b9029d204fcf7e115c6f5820",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "vorbis",
+          "codec_type": "audio",
+          "sample_rate": "44100",
+          "channels": 2
+        }
+      ],
+      "format": {
+        "duration": "41.377959"
+      }
+    },
+    {
+      "file": "track20.ogg",
+      "bytes": 4193041,
+      "sha256": "def65b25f4b36544de30c1bf72acb621d15c6b3546cf1f1c0e0a9e83a38479c8",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "vorbis",
+          "codec_type": "audio",
+          "sample_rate": "44100",
+          "channels": 2
+        }
+      ],
+      "format": {
+        "duration": "69.799184"
+      }
+    },
+    {
+      "file": "track21.ogg",
+      "bytes": 2718025,
+      "sha256": "d277f2a11f1073a17d457d866bf01daa93081b74fd0be5d904128b5d35a93e0b",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "vorbis",
+          "codec_type": "audio",
+          "sample_rate": "44100",
+          "channels": 2
+        }
+      ],
+      "format": {
+        "duration": "45.046712"
+      }
+    },
+    {
+      "file": "track22.ogg",
+      "bytes": 2335767,
+      "sha256": "ab8b060af27a4bdbbd6e72d4d710008e1fe0c411f5e178a9be27b7008a2826c4",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "vorbis",
+          "codec_type": "audio",
+          "sample_rate": "44100",
+          "channels": 2
+        }
+      ],
+      "format": {
+        "duration": "43.374875"
+      }
+    },
+    {
+      "file": "track23.ogg",
+      "bytes": 2243349,
+      "sha256": "5f60d39aa30ab84d5726405a13fb039613d2b33de2f39f5366526f4b562b91c0",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "vorbis",
+          "codec_type": "audio",
+          "sample_rate": "44100",
+          "channels": 2
+        }
+      ],
+      "format": {
+        "duration": "40.077642"
+      }
+    },
+    {
+      "file": "track24.ogg",
+      "bytes": 1069449,
+      "sha256": "5023f04c6a67563e069d4f46364ecbb8141c25a6dfac5a74ae2f2a8baff70d71",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "vorbis",
+          "codec_type": "audio",
+          "sample_rate": "44100",
+          "channels": 2
+        }
+      ],
+      "format": {
+        "duration": "19.876281"
+      }
+    },
+    {
+      "file": "track25.ogg",
+      "bytes": 1273663,
+      "sha256": "6022a8e014fb1274069aadd9cdd0a414ca67647be54bb7acdbd72d1288276338",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "vorbis",
+          "codec_type": "audio",
+          "sample_rate": "44100",
+          "channels": 2
+        }
+      ],
+      "format": {
+        "duration": "21.501678"
+      }
+    },
+    {
+      "file": "track26.ogg",
+      "bytes": 1078183,
+      "sha256": "f5aec874f747eb9d736c9068d874db67d87cc78733253f4bb7c48e7f54516737",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "vorbis",
+          "codec_type": "audio",
+          "sample_rate": "44100",
+          "channels": 2
+        }
+      ],
+      "format": {
+        "duration": "20.712200"
+      }
+    }
+  ],
+  "videos": [
+    {
+      "file": "End.avi",
+      "bytes": 9132618,
+      "sha256": "92e9e67447d5ec4644fed8de3ce4f30593185a21c1508990b078c5717e086eae",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "indeo5",
+          "codec_type": "video",
+          "width": 320,
+          "height": 240
+        },
+        {
+          "codec_name": "adpcm_ima_wav",
+          "codec_type": "audio",
+          "sample_rate": "22050",
+          "channels": 2
+        }
+      ],
+      "format": {
+        "duration": "30.000000"
+      }
+    },
+    {
+      "file": "Flychina.avi",
+      "bytes": 4311702,
+      "sha256": "490ab7fffe7e2fefe8877544eec7687295a403c55a45d731c5e636ba123f7059",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "indeo5",
+          "codec_type": "video",
+          "width": 640,
+          "height": 480
+        },
+        {
+          "codec_name": "adpcm_ima_wav",
+          "codec_type": "audio",
+          "sample_rate": "22050",
+          "channels": 2
+        }
+      ],
+      "format": {
+        "duration": "6.666667"
+      }
+    },
+    {
+      "file": "Flyjp.avi",
+      "bytes": 4517046,
+      "sha256": "e8046aca13e98d4c7934aed3101f20c431b58230b0e9ebe20855b3e678f2a6c2",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "indeo5",
+          "codec_type": "video",
+          "width": 640,
+          "height": 480
+        },
+        {
+          "codec_name": "adpcm_ima_wav",
+          "codec_type": "audio",
+          "sample_rate": "22050",
+          "channels": 2
+        }
+      ],
+      "format": {
+        "duration": "6.666667"
+      }
+    },
+    {
+      "file": "Flytw.avi",
+      "bytes": 4089270,
+      "sha256": "57ba92debb4b1a62b2d30df90fd7f91dea1960dfc10273bbf9ac731c7e4f38e8",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "indeo5",
+          "codec_type": "video",
+          "width": 640,
+          "height": 480
+        },
+        {
+          "codec_name": "adpcm_ima_wav",
+          "codec_type": "audio",
+          "sample_rate": "22050",
+          "channels": 2
+        }
+      ],
+      "format": {
+        "duration": "6.666667"
+      }
+    },
+    {
+      "file": "Flyus.avi",
+      "bytes": 4100194,
+      "sha256": "313ce510d91c07dd0202141e43e49a7ba88deeb7a371573a9a4b1e858335c926",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "indeo5",
+          "codec_type": "video",
+          "width": 640,
+          "height": 480
+        },
+        {
+          "codec_name": "adpcm_ima_wav",
+          "codec_type": "audio",
+          "sample_rate": "22050",
+          "channels": 2
+        }
+      ],
+      "format": {
+        "duration": "6.666667"
+      }
+    },
+    {
+      "file": "Over.avi",
+      "bytes": 85408638,
+      "sha256": "3eb5eb2691412bc122cda8bffb15bfed83194033ea939f6b5fe93eb48b759d85",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "indeo5",
+          "codec_type": "video",
+          "width": 640,
+          "height": 480
+        },
+        {
+          "codec_name": "adpcm_ima_wav",
+          "codec_type": "audio",
+          "sample_rate": "22050",
+          "channels": 2
+        }
+      ],
+      "format": {
+        "duration": "129.500000"
+      }
+    },
+    {
+      "file": "Start.avi",
+      "bytes": 17442278,
+      "sha256": "bffead9ff0dc55d6712544220efcc1b25d463913f079f12251a11eaf6ea84252",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "indeo5",
+          "codec_type": "video",
+          "width": 640,
+          "height": 480
+        },
+        {
+          "codec_name": "adpcm_ima_wav",
+          "codec_type": "audio",
+          "sample_rate": "22050",
+          "channels": 2
+        }
+      ],
+      "format": {
+        "duration": "33.866667"
+      }
+    }
+  ],
+  "effects": [
+    {
+      "index": 43,
+      "file": "effect-43.wav",
+      "bytes": 10288,
+      "sha256": "75aa10c7e8e22648771395b23e903b0655d1e0a8d69a6968ff89345ada8e2f97",
+      "channels": 1,
+      "sampleRate": 22050,
+      "sampleWidth": 1,
+      "frames": 10162,
+      "duration": 0.46086167800453515
+    },
+    {
+      "index": 48,
+      "file": "effect-48.wav",
+      "bytes": 23142,
+      "sha256": "abcd3a949c3fe53939f8499ab7e9c6bedb48ad980acb8045d45af5e76ff1f314",
+      "channels": 1,
+      "sampleRate": 22050,
+      "sampleWidth": 1,
+      "frames": 22932,
+      "duration": 1.04
+    }
+  ],
+  "landingSlots": {
+    "values": [
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      16,
+      16,
+      16,
+      16,
+      10,
+      10,
+      10
+    ],
+    "eventCodeStart": 2,
+    "exeOffset": 466210,
+    "hex": "0a0a0a0a0a0a0a0a101010100a0a0a"
+  },
+  "soundTable": {
+    "values": [
+      7,
+      9,
+      10,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      43,
+      44,
+      45,
+      46,
+      53,
+      47,
+      48
+    ],
+    "eventCodeStart": null,
+    "exeOffset": 516650,
+    "hex": "070000000000000009000000000000000a0000000000000020000000000000002100000000000000220000000000000023000000000000002400000000000000250000000000000026000000000000002b000000000000002c000000000000002d000000000000002e0000000000000035000000000000002f000000000000003000000000000000"
+  },
+  "landingNodes": {
+    "1": {
+      "eventCode": 14,
+      "effect": 43
+    },
+    "2": {
+      "eventCode": 3,
+      "effect": 43
+    },
+    "13": {
+      "eventCode": 2,
+      "effect": 43
+    },
+    "14": {
+      "eventCode": 12,
+      "effect": 48
+    },
+    "16": {
+      "eventCode": 12,
+      "effect": 48
+    },
+    "18": {
+      "eventCode": 12,
+      "effect": 48
+    },
+    "19": {
+      "eventCode": 3,
+      "effect": 43
+    },
+    "20": {
+      "eventCode": 10,
+      "effect": 48
+    },
+    "23": {
+      "eventCode": 11,
+      "effect": 48
+    },
+    "25": {
+      "eventCode": 12,
+      "effect": 48
+    },
+    "27": {
+      "eventCode": 11,
+      "effect": 48
+    },
+    "29": {
+      "eventCode": 12,
+      "effect": 48
+    },
+    "31": {
+      "eventCode": 10,
+      "effect": 48
+    },
+    "33": {
+      "eventCode": 12,
+      "effect": 48
+    },
+    "45": {
+      "eventCode": 3,
+      "effect": 43
+    },
+    "50": {
+      "eventCode": 15,
+      "effect": 43
+    },
+    "61": {
+      "eventCode": 2,
+      "effect": 43
+    },
+    "66": {
+      "eventCode": 3,
+      "effect": 43
+    },
+    "79": {
+      "eventCode": 12,
+      "effect": 48
+    },
+    "81": {
+      "eventCode": 12,
+      "effect": 48
+    },
+    "83": {
+      "eventCode": 11,
+      "effect": 48
+    },
+    "94": {
+      "eventCode": 2,
+      "effect": 43
+    },
+    "107": {
+      "eventCode": 15,
+      "effect": 43
+    }
+  },
+  "unassignedWav": [
+    {
+      "file": "Game/InstOK.wav",
+      "bytes": 16516,
+      "sha256": "504f559c798490c9795bf383a93ef471ecf7ae8c52803025fdd30bf6eac6b856",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "pcm_s16le",
+          "codec_type": "audio",
+          "sample_rate": "22050",
+          "channels": 1
+        }
+      ],
+      "format": {
+        "duration": "0.371655"
+      }
+    },
+    {
+      "file": "Game/InstSel.wav",
+      "bytes": 6280,
+      "sha256": "dcc71f91feed1da7581b5ddf10d61b5c0dedf7bab285092c3a7202278a097a82",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "pcm_s16le",
+          "codec_type": "audio",
+          "sample_rate": "22050",
+          "channels": 1
+        }
+      ],
+      "format": {
+        "duration": "0.139546"
+      }
+    },
+    {
+      "file": "Media/InstOK.wav",
+      "bytes": 16516,
+      "sha256": "504f559c798490c9795bf383a93ef471ecf7ae8c52803025fdd30bf6eac6b856",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "pcm_s16le",
+          "codec_type": "audio",
+          "sample_rate": "22050",
+          "channels": 1
+        }
+      ],
+      "format": {
+        "duration": "0.371655"
+      }
+    },
+    {
+      "file": "Media/InstSel.wav",
+      "bytes": 6280,
+      "sha256": "dcc71f91feed1da7581b5ddf10d61b5c0dedf7bab285092c3a7202278a097a82",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "pcm_s16le",
+          "codec_type": "audio",
+          "sample_rate": "22050",
+          "channels": 1
+        }
+      ],
+      "format": {
+        "duration": "0.139546"
+      }
+    }
+  ]
+}

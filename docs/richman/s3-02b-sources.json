@@ -1,0 +1,324 @@
+{
+  "stage": "S3-02b",
+  "policy": "rent-v1",
+  "preservedPolicies": [
+    "basic-v1",
+    "tools-v1"
+  ],
+  "rulesId": "japan-events-candidate-v44",
+  "fingerprint": "f9dbb7e9",
+  "newGameSemantics": false,
+  "nativeExecution": false,
+  "priorNativeAudit": "s3-01a-sources.json",
+  "sources": [
+    {
+      "path": "frontend/src/features/richman/game/computer-reactions.ts",
+      "sha256": "212ddf0a043aceefe5ae286173f092cbe8b0529ce0ac77721cdec64294f769fa",
+      "anchors": [
+        {
+          "text": "rentRisk",
+          "lines": [
+            10,
+            21,
+            33
+          ]
+        },
+        {
+          "text": "export function decideComputer",
+          "lines": [
+            15
+          ]
+        },
+        {
+          "text": "const targets=",
+          "lines": [
+            28
+          ]
+        },
+        {
+          "text": "const ranked=",
+          "lines": [
+            33
+          ]
+        },
+        {
+          "text": "const item=",
+          "lines": [
+            40
+          ]
+        }
+      ],
+      "grade": "host heuristic/validation; not native AI evidence"
+    },
+    {
+      "path": "frontend/src/features/richman/game/computer-tools.ts",
+      "sha256": "00c5f76c27336c15137c98b0eb27b7cb70626aa3c1befae18b6a7e0fe4bb9e37",
+      "anchors": [
+        {
+          "text": "export function decideComputer",
+          "lines": [
+            67
+          ]
+        }
+      ],
+      "grade": "host heuristic/validation; not native AI evidence"
+    },
+    {
+      "path": "frontend/src/features/richman/game/computer.ts",
+      "sha256": "fc8c2b23a0ca107a85337566460a6ca27b66e630b556ad96cbc1c0462036e1e7",
+      "anchors": [
+        {
+          "text": "decisionPlayer",
+          "lines": [
+            11,
+            20
+          ]
+        },
+        {
+          "text": "export function computerDecision",
+          "lines": [
+            18
+          ]
+        }
+      ],
+      "grade": "host heuristic/validation; not native AI evidence"
+    },
+    {
+      "path": "frontend/src/features/richman/game/session.ts",
+      "sha256": "c75a27704bb2e5eefb4111460231772987a3bdf29eb3e701b3a8c71af49ee2a0",
+      "anchors": [
+        {
+          "text": "computerPolicy",
+          "lines": [
+            79,
+            134,
+            139,
+            328,
+            391
+          ]
+        },
+        {
+          "text": "private send",
+          "lines": [
+            250
+          ]
+        },
+        {
+          "text": "tick(milliseconds",
+          "lines": [
+            379,
+            381
+          ]
+        }
+      ],
+      "grade": "host heuristic/validation; not native AI evidence"
+    },
+    {
+      "path": "frontend/src/features/richman/ComputerPanel.tsx",
+      "sha256": "fbeb995be0d5177b9effe53ed69eaac76abeb84cd7ba996347cb96ff813c1502",
+      "anchors": [
+        {
+          "text": "c.policy==='rent-v1'",
+          "lines": [
+            11
+          ]
+        }
+      ],
+      "grade": "host heuristic/validation; not native AI evidence"
+    },
+    {
+      "path": "frontend/src/pages/RichmanPage.tsx",
+      "sha256": "7ebc738929300b2e0b106d2145f0c39fa1af4714315c6000c3fd74208d4f8116",
+      "anchors": [
+        {
+          "text": "电脑策略",
+          "lines": [
+            342
+          ]
+        }
+      ],
+      "grade": "host heuristic/validation; not native AI evidence"
+    },
+    {
+      "path": "frontend/src/features/richman/game/g3.ts",
+      "sha256": "ea51f1c7c9be00d7ed055e9dd13cb464732992a266eaededf717b60b2e4a69e0",
+      "anchors": [
+        {
+          "text": "offerRent",
+          "lines": [
+            182,
+            208
+          ]
+        },
+        {
+          "text": "reactG3",
+          "lines": [
+            197
+          ]
+        },
+        {
+          "text": "consumeG3",
+          "lines": [
+            81,
+            118,
+            137,
+            162,
+            176,
+            201
+          ]
+        }
+      ],
+      "grade": "preserved v44 game semantics"
+    },
+    {
+      "path": "frontend/src/features/richman/game/g6-market.ts",
+      "sha256": "e41019104edd4b8c5c55f499650526c6af815d42bcc254b6205476ce897e1333",
+      "anchors": [
+        {
+          "text": "tradeAmount =",
+          "lines": [
+            12
+          ]
+        },
+        {
+          "text": "liquidateForRent",
+          "lines": [
+            73
+          ]
+        }
+      ],
+      "grade": "preserved v44 game semantics"
+    },
+    {
+      "path": "frontend/src/features/richman/game/stock-ledger.ts",
+      "sha256": "74c78b81a2a615a0c6e6247443bba2696e0c8b3c52379783d6ebf4566fe205db",
+      "anchors": [
+        {
+          "text": "sellHolding",
+          "lines": [
+            16
+          ]
+        }
+      ],
+      "grade": "preserved v44 game semantics"
+    },
+    {
+      "path": "frontend/src/features/richman/game/shop-acquisition.ts",
+      "sha256": "78667adb5cfab4f0fb8ff828e94ed610ae30bd7fc6e4923070359a4b549c72cc",
+      "anchors": [
+        {
+          "text": "buyFromShelf",
+          "lines": [
+            34
+          ]
+        },
+        {
+          "text": "shopPrice",
+          "lines": [
+            17,
+            36
+          ]
+        }
+      ],
+      "grade": "preserved v44 game semantics"
+    },
+    {
+      "path": "frontend/src/features/richman/game/disposal.ts",
+      "sha256": "26834d495ff970dbe557bd50aaff9b85e8204f524c518672b2ea84e23d10eb3e",
+      "anchors": [
+        {
+          "text": "beginRentDisposal",
+          "lines": [
+            23
+          ]
+        },
+        {
+          "text": "function complete",
+          "lines": [
+            21
+          ]
+        },
+        {
+          "text": "continueDisposal",
+          "lines": [
+            43,
+            46
+          ]
+        }
+      ],
+      "grade": "preserved v44 game semantics"
+    },
+    {
+      "path": "scripts/richman/verify-computer-rent.ts",
+      "sha256": "cf88fb509c894a1114b115214ce125273a45e5d75f57694d57872266ac7830c3",
+      "anchors": [
+        {
+          "text": "verifyComputerRent",
+          "lines": [
+            7
+          ]
+        },
+        {
+          "text": "acquisitions.push",
+          "lines": [
+            18
+          ]
+        },
+        {
+          "text": "replayGame(nodes",
+          "lines": [
+            45,
+            46
+          ]
+        }
+      ],
+      "grade": "host heuristic/validation; not native AI evidence"
+    },
+    {
+      "path": "frontend/src/features/richman/game/computer-reactions.test.ts",
+      "sha256": "cdff336624392a188bcbbb29c97dcf93358df77f69d9108d3bf06d94e44df918",
+      "anchors": [
+        {
+          "text": "Hidden",
+          "lines": [
+            14
+          ]
+        },
+        {
+          "text": "accepted original-map debt prefix",
+          "lines": [
+            36
+          ]
+        },
+        {
+          "text": "human actual payer",
+          "lines": [
+            34
+          ]
+        }
+      ],
+      "grade": "host heuristic/validation; not native AI evidence"
+    }
+  ],
+  "strategyFacts": {
+    "free": "positive outward rent, existing free stage and inventory; prefer waiver before liquidation",
+    "redirect": "current legal living target set; creditor first; otherwise non-ally/min shortfall/no shares/max liquid/seat order; ally only when own total assets insufficient",
+    "stockEstimate": "sum trunc(quantity*current quote/100); excludes land, credit, future dates and public disposal income",
+    "shop": "one free25 then redirect40; empty inventory, actual finite shelf, pool, points, card capacity<15; then tools-v1",
+    "random": "no hidden news/fortune/seed/RNG/checkpoint reads, simulation or draws",
+    "settlement": "actual responder/payer only; engine owns liquidation and exit; public proceeds never rescue/pay prior debt"
+  },
+  "preservation": {
+    "oldFixtureJsonUnchanged": 308,
+    "basicV1DecisionBodyByteUnchanged": true,
+    "toolsV1FileByteUnchanged": true,
+    "engineAndRuleFilesByteUnchanged": true
+  },
+  "differences": [
+    "custom host AI, not native AI/hostility/difficulty",
+    "fallback non-creditor target strategy and live target mutations are domain-only",
+    "AI automatic necessary liquidation/exit in this batch is domain evidence, not claimed new mixed UI",
+    "other active cards/stocks/refinancing/research/bidding deferred",
+    "no per-seat mixed policy or midgame takeover"
+  ]
+}

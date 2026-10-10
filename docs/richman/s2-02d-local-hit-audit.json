@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "source": "map.mkf",
+  "index": 26,
+  "archiveSha256": "717aaa1c1becf277064d29772500027427d39488bad64a7ee42875975c0e7106",
+  "resourceSha256": "a2340ba620ba41519cb63da6d6d1f785366d0945855e8917836868f10998a2b4",
+  "resourceBytes": 15922,
+  "signature": "SMP",
+  "frameCount": 7,
+  "bytesPerPixel": 2,
+  "frames": [
+    {
+      "index": 0,
+      "width": 58,
+      "height": 66,
+      "anchorX": 34,
+      "anchorY": 33,
+      "bytes": 7656
+    },
+    {
+      "index": 1,
+      "width": 28,
+      "height": 32,
+      "anchorX": 15,
+      "anchorY": 15,
+      "bytes": 1792
+    },
+    {
+      "index": 2,
+      "width": 28,
+      "height": 32,
+      "anchorX": 15,
+      "anchorY": 15,
+      "bytes": 1792
+    },
+    {
+      "index": 3,
+      "width": 28,
+      "height": 32,
+      "anchorX": 15,
+      "anchorY": 15,
+      "bytes": 1792
+    },
+    {
+      "index": 4,
+      "width": 28,
+      "height": 32,
+      "anchorX": 16,
+      "anchorY": 15,
+      "bytes": 1792
+    },
+    {
+      "index": 5,
+      "width": 20,
+      "height": 21,
+      "anchorX": 9,
+      "anchorY": 9,
+      "bytes": 840
+    },
+    {
+      "index": 6,
+      "width": 9,
+      "height": 9,
+      "anchorX": 5,
+      "anchorY": 4,
+      "bytes": 162
+    }
+  ],
+  "byteMaskCompatible": false,
+  "semanticMappingConfirmed": false
+}

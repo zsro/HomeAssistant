@@ -1,0 +1,83 @@
+{
+  "date": "2026-10-05",
+  "slice": "S2-03a",
+  "stageComplete": false,
+  "itemsImplemented": 43,
+  "itemsAcceptedHistorical": 43,
+  "newItems": 0,
+  "newMapEvent": "random-card/code13/Japan98",
+  "rulesId": "japan-events-candidate-v14",
+  "fingerprint": "3aab7b48",
+  "previousRulesId": "japan-tools-candidate-v13",
+  "previousFingerprint": "7d7e7415",
+  "checks": {
+    "frontend": {
+      "numTotalTests": 398,
+      "numPassedTests": 398,
+      "numFailedTests": 0,
+      "success": true
+    },
+    "newMapEventTests": 14,
+    "versionPlayerMatrixCases": 42,
+    "lint": "passed",
+    "build": "passed",
+    "scriptSyntax": "passed",
+    "diffCheck": "passed",
+    "referenceSourceHashesVerified": 7,
+    "pythonResourceSuite": "not rerun; previous 24 passing tests remain historical"
+  },
+  "browser": {
+    "normalSpeed": true,
+    "map": "original Japan; real UI commands; auth-only fixture; no game-state injection",
+    "commands": 57,
+    "turn": 7,
+    "players": 2,
+    "completed": [
+      {
+        "id": "card:14",
+        "preview": "本次行动不移动、不掷骰，不重复结算落点；掷骰前仍可用卡。\n\n确认消耗 1 张卡片，取消不消耗。"
+      }
+    ],
+    "cleanup": {
+      "raf": 0,
+      "canvas": 0
+    },
+    "errors": []
+  },
+  "receipts": [
+    {
+      "type": "mapCardReceived",
+      "node": 98,
+      "itemId": "card:14",
+      "discarded": null,
+      "sequence": 79,
+      "commandId": "command-42",
+      "playerId": "player-1",
+      "turn": 5
+    }
+  ],
+  "consumption": [
+    {
+      "type": "effectConsumed",
+      "playerId": "player-1",
+      "itemId": "card:14",
+      "amount": 1,
+      "sequence": 97,
+      "commandId": "command-56",
+      "turn": 7
+    }
+  ],
+  "replay": {
+    "path": "frontend/src/features/richman/game/fixtures/events-v14-replay.json",
+    "golden": "frontend/src/features/richman/game/fixtures/events-v14-golden.json",
+    "stateSha256": "0b84f0f628f59a6f5f4b05d4a1630ceed32f8c71c52ecbc978f4447e85c14ce6",
+    "eventsSha256": "5e80501f637acfd495c9b39da9afc6a124e181615ff1f0d0a59efc7e3ad880b3"
+  },
+  "rawEvidence": "/private/tmp/richman-unified-ui-03a",
+  "limits": [
+    "source candidate, no Windows runtime equivalence",
+    "browser two players seven turns; not full match or all 43 items rerun under v14",
+    "empty pool/full hand/time restore/teleport are domain tests, not browser scenarios",
+    "news/fortune/calendar/interest remain incomplete"
+  ]
+}

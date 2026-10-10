@@ -1,0 +1,719 @@
+{
+  "date": "2026-10-05",
+  "slice": "S2-03e",
+  "stageComplete": false,
+  "newsImplemented": 17,
+  "newsAccepted": 17,
+  "newsTotal": 36,
+  "newNews": [
+    0,
+    1,
+    2,
+    3,
+    16,
+    17
+  ],
+  "itemsImplemented": 43,
+  "itemsHistoricalAccepted": 43,
+  "rulesId": "japan-events-candidate-v18",
+  "fingerprint": "913f964b",
+  "checks": {
+    "newDomainTests": 24,
+    "newComponentCases": 2,
+    "newBrowserGoldenTests": 4,
+    "versionPlayerMatrix": 54,
+    "sourceGitBlobIdentitiesVerified": 7,
+    "pythonResourceSuite": "not rerun; earlier24 historical",
+    "frontend": {
+      "numTotalTests": 517,
+      "numPassedTests": 517,
+      "numFailedTests": 0,
+      "success": true
+    },
+    "lint": "passed",
+    "build": "passed after golden-test TypeScript narrowing fix",
+    "postTypeFixStatusNewsTests": 28
+  },
+  "browsers": [
+    {
+      "group": "prison",
+      "normalSpeed": true,
+      "map": "original Japan; real UI commands; auth-only fixture; no game-state injection",
+      "players": 4,
+      "turn": 84,
+      "commands": 602,
+      "cleanup": {
+        "raf": 0,
+        "canvas": 0
+      },
+      "errors": [],
+      "news": [
+        {
+          "type": "newsResolved",
+          "newsId": 1,
+          "title": "全体在押玩家加刑三次",
+          "node": 61,
+          "skipped": [
+            10
+          ],
+          "money": [],
+          "stocks": [],
+          "publicFund": 0,
+          "cursor": 11,
+          "statusChanges": {
+            "targets": [
+              "player-1"
+            ],
+            "players": [
+              {
+                "playerId": "player-1",
+                "before": {
+                  "stop": 0,
+                  "winter": 0,
+                  "dream": 0,
+                  "prison": 3,
+                  "hospital": 0,
+                  "turtle": 0,
+                  "vehicle": "foot",
+                  "diceCount": 1,
+                  "savedVehicle": "foot",
+                  "savedDice": 1
+                },
+                "after": {
+                  "stop": 0,
+                  "winter": 0,
+                  "dream": 0,
+                  "prison": 6,
+                  "hospital": 0,
+                  "turtle": 0,
+                  "vehicle": "foot",
+                  "diceCount": 1,
+                  "savedVehicle": "foot",
+                  "savedDice": 1
+                }
+              }
+            ],
+            "rosterBefore": {
+              "prison": [
+                "player-1"
+              ],
+              "hospital": []
+            },
+            "rosterAfter": {
+              "prison": [
+                "player-1"
+              ],
+              "hospital": []
+            }
+          },
+          "sequence": 780,
+          "commandId": "command-421",
+          "playerId": "player-3",
+          "turn": 55
+        },
+        {
+          "type": "newsResolved",
+          "newsId": 0,
+          "title": "全体在押玩家获释",
+          "node": 94,
+          "skipped": [
+            13,
+            29,
+            4,
+            21,
+            28,
+            12,
+            26,
+            14
+          ],
+          "money": [],
+          "stocks": [],
+          "publicFund": 0,
+          "cursor": 20,
+          "statusChanges": {
+            "targets": [
+              "player-2"
+            ],
+            "players": [
+              {
+                "playerId": "player-2",
+                "before": {
+                  "stop": 0,
+                  "winter": 0,
+                  "dream": 0,
+                  "prison": 5,
+                  "hospital": 0,
+                  "turtle": 0,
+                  "vehicle": "foot",
+                  "diceCount": 1,
+                  "savedVehicle": "foot",
+                  "savedDice": 1
+                },
+                "after": {
+                  "stop": 0,
+                  "winter": 0,
+                  "dream": 0,
+                  "prison": 128,
+                  "hospital": 0,
+                  "turtle": 0,
+                  "vehicle": "foot",
+                  "diceCount": 1,
+                  "savedVehicle": "foot",
+                  "savedDice": 1
+                }
+              }
+            ],
+            "rosterBefore": {
+              "prison": [
+                "player-2"
+              ],
+              "hospital": []
+            },
+            "rosterAfter": {
+              "prison": [],
+              "hospital": []
+            }
+          },
+          "sequence": 1112,
+          "commandId": "command-601",
+          "playerId": "player-4",
+          "turn": 84
+        }
+      ],
+      "purchases": [
+        {
+          "type": "itemBought",
+          "itemId": "card:17",
+          "cost": 20,
+          "points": 80,
+          "supply": 3,
+          "sequence": 621,
+          "commandId": "command-336",
+          "playerId": "player-4",
+          "turn": 44
+        },
+        {
+          "type": "itemBought",
+          "itemId": "card:17",
+          "cost": 20,
+          "points": 60,
+          "supply": 2,
+          "sequence": 622,
+          "commandId": "command-337",
+          "playerId": "player-4",
+          "turn": 44
+        },
+        {
+          "type": "itemBought",
+          "itemId": "tool:08",
+          "cost": 30,
+          "points": 30,
+          "supply": 9,
+          "sequence": 623,
+          "commandId": "command-338",
+          "playerId": "player-4",
+          "turn": 44
+        },
+        {
+          "type": "itemBought",
+          "itemId": "tool:08",
+          "cost": 30,
+          "points": 0,
+          "supply": 8,
+          "sequence": 624,
+          "commandId": "command-339",
+          "playerId": "player-4",
+          "turn": 44
+        }
+      ],
+      "checks": [
+        "news6: actual same-name or single-facility base-price writes, rounding, unaffected properties and balances",
+        "news5: actual target belongs to full eligible set; single property ownership/level change; other properties and money unchanged",
+        "news1: independent current-traffic/registered-facility target set, exact timer writes, roster and unchanged assets/inventory/RNG",
+        "news0: independent current-traffic/registered-facility target set, exact timer writes, roster and unchanged assets/inventory/RNG"
+      ],
+      "replay": "frontend/src/features/richman/game/fixtures/status-news-v18-prison-replay.json",
+      "golden": "frontend/src/features/richman/game/fixtures/status-news-v18-prison-golden.json",
+      "stateSha256": "50dabcb436ccde0c39bf37cd157f92261d4845871a4cc3ab415349c1517d573c",
+      "eventsSha256": "4316af908375830d2663a949f421c8a69b167a26a2887baa70e8e19a63904ea9"
+    },
+    {
+      "group": "traffic",
+      "normalSpeed": true,
+      "map": "original Japan; real UI commands; auth-only fixture; no game-state injection",
+      "players": 4,
+      "turn": 61,
+      "commands": 497,
+      "cleanup": {
+        "raf": 0,
+        "canvas": 0
+      },
+      "errors": [],
+      "news": [
+        {
+          "type": "newsResolved",
+          "newsId": 17,
+          "title": "乘车玩家停留一次",
+          "node": 61,
+          "skipped": [
+            21
+          ],
+          "money": [],
+          "stocks": [],
+          "publicFund": 0,
+          "cursor": 3,
+          "statusChanges": {
+            "targets": [
+              "player-2"
+            ],
+            "players": [
+              {
+                "playerId": "player-2",
+                "before": {
+                  "stop": 0,
+                  "winter": 0,
+                  "dream": 0,
+                  "prison": 0,
+                  "hospital": 0,
+                  "turtle": 0,
+                  "vehicle": "tool:05",
+                  "diceCount": 2,
+                  "savedVehicle": "foot",
+                  "savedDice": 1
+                },
+                "after": {
+                  "stop": 1,
+                  "winter": 0,
+                  "dream": 0,
+                  "prison": 0,
+                  "hospital": 0,
+                  "turtle": 0,
+                  "vehicle": "tool:05",
+                  "diceCount": 2,
+                  "savedVehicle": "foot",
+                  "savedDice": 1
+                }
+              }
+            ],
+            "rosterBefore": {
+              "prison": [],
+              "hospital": []
+            },
+            "rosterAfter": {
+              "prison": [],
+              "hospital": []
+            }
+          },
+          "sequence": 840,
+          "commandId": "command-456",
+          "playerId": "player-4",
+          "turn": 56
+        },
+        {
+          "type": "newsResolved",
+          "newsId": 16,
+          "title": "步行玩家停留一次",
+          "node": 61,
+          "skipped": [
+            9,
+            5,
+            8,
+            30,
+            2,
+            28
+          ],
+          "money": [],
+          "stocks": [],
+          "publicFund": 0,
+          "cursor": 10,
+          "statusChanges": {
+            "targets": [
+              "player-1",
+              "player-3",
+              "player-4"
+            ],
+            "players": [
+              {
+                "playerId": "player-1",
+                "before": {
+                  "stop": 0,
+                  "winter": 0,
+                  "dream": 0,
+                  "prison": 0,
+                  "hospital": 0,
+                  "turtle": 0,
+                  "vehicle": "foot",
+                  "diceCount": 1,
+                  "savedVehicle": "foot",
+                  "savedDice": 1
+                },
+                "after": {
+                  "stop": 1,
+                  "winter": 0,
+                  "dream": 0,
+                  "prison": 0,
+                  "hospital": 0,
+                  "turtle": 0,
+                  "vehicle": "foot",
+                  "diceCount": 1,
+                  "savedVehicle": "foot",
+                  "savedDice": 1
+                }
+              },
+              {
+                "playerId": "player-3",
+                "before": {
+                  "stop": 0,
+                  "winter": 0,
+                  "dream": 0,
+                  "prison": 0,
+                  "hospital": 0,
+                  "turtle": 0,
+                  "vehicle": "foot",
+                  "diceCount": 1,
+                  "savedVehicle": "foot",
+                  "savedDice": 1
+                },
+                "after": {
+                  "stop": 1,
+                  "winter": 0,
+                  "dream": 0,
+                  "prison": 0,
+                  "hospital": 0,
+                  "turtle": 0,
+                  "vehicle": "foot",
+                  "diceCount": 1,
+                  "savedVehicle": "foot",
+                  "savedDice": 1
+                }
+              },
+              {
+                "playerId": "player-4",
+                "before": {
+                  "stop": 0,
+                  "winter": 0,
+                  "dream": 0,
+                  "prison": 0,
+                  "hospital": 0,
+                  "turtle": 0,
+                  "vehicle": "foot",
+                  "diceCount": 1,
+                  "savedVehicle": "foot",
+                  "savedDice": 1
+                },
+                "after": {
+                  "stop": 1,
+                  "winter": 0,
+                  "dream": 0,
+                  "prison": 0,
+                  "hospital": 0,
+                  "turtle": 0,
+                  "vehicle": "foot",
+                  "diceCount": 1,
+                  "savedVehicle": "foot",
+                  "savedDice": 1
+                }
+              }
+            ],
+            "rosterBefore": {
+              "prison": [],
+              "hospital": []
+            },
+            "rosterAfter": {
+              "prison": [],
+              "hospital": []
+            }
+          },
+          "sequence": 914,
+          "commandId": "command-496",
+          "playerId": "player-1",
+          "turn": 61
+        }
+      ],
+      "purchases": [
+        {
+          "type": "itemBought",
+          "itemId": "tool:05",
+          "cost": 80,
+          "points": 0,
+          "supply": 9,
+          "sequence": 555,
+          "commandId": "command-300",
+          "playerId": "player-2",
+          "turn": 38
+        },
+        {
+          "type": "itemBought",
+          "itemId": "tool:08",
+          "cost": 30,
+          "points": 40,
+          "supply": 9,
+          "sequence": 712,
+          "commandId": "command-387",
+          "playerId": "player-4",
+          "turn": 48
+        },
+        {
+          "type": "itemBought",
+          "itemId": "tool:08",
+          "cost": 30,
+          "points": 10,
+          "supply": 8,
+          "sequence": 713,
+          "commandId": "command-388",
+          "playerId": "player-4",
+          "turn": 48
+        },
+        {
+          "type": "itemBought",
+          "itemId": "tool:08",
+          "cost": 30,
+          "points": 70,
+          "supply": 8,
+          "sequence": 793,
+          "commandId": "command-430",
+          "playerId": "player-1",
+          "turn": 53
+        },
+        {
+          "type": "itemBought",
+          "itemId": "tool:08",
+          "cost": 30,
+          "points": 40,
+          "supply": 7,
+          "sequence": 794,
+          "commandId": "command-431",
+          "playerId": "player-1",
+          "turn": 53
+        }
+      ],
+      "checks": [
+        "news17: independent current-traffic/registered-facility target set, exact timer writes, roster and unchanged assets/inventory/RNG",
+        "news16: independent current-traffic/registered-facility target set, exact timer writes, roster and unchanged assets/inventory/RNG"
+      ],
+      "replay": "frontend/src/features/richman/game/fixtures/status-news-v18-traffic-replay.json",
+      "golden": "frontend/src/features/richman/game/fixtures/status-news-v18-traffic-golden.json",
+      "stateSha256": "6bff61ea80d1873a91755f3754f3110684ca2a0a85ecc5b4fc0a5a6a649fb0cb",
+      "eventsSha256": "7f537b88b992328b5f479a1e68053d9ec29c4744a8912966f01c5d09fc1735ed"
+    },
+    {
+      "group": "hospital-release",
+      "normalSpeed": true,
+      "map": "original Japan; real UI commands; auth-only fixture; no game-state injection",
+      "players": 4,
+      "turn": 59,
+      "commands": 415,
+      "cleanup": {
+        "raf": 0,
+        "canvas": 0
+      },
+      "errors": [],
+      "news": [
+        {
+          "type": "newsResolved",
+          "newsId": 2,
+          "title": "全体住院玩家获准出院",
+          "node": 61,
+          "skipped": [
+            1,
+            29,
+            32,
+            4,
+            26
+          ],
+          "money": [],
+          "stocks": [],
+          "publicFund": 0,
+          "cursor": 10,
+          "statusChanges": {
+            "targets": [
+              "player-2"
+            ],
+            "players": [
+              {
+                "playerId": "player-2",
+                "before": {
+                  "stop": 0,
+                  "winter": 0,
+                  "dream": 0,
+                  "prison": 0,
+                  "hospital": 1,
+                  "turtle": 0,
+                  "vehicle": "foot",
+                  "diceCount": 1,
+                  "savedVehicle": "foot",
+                  "savedDice": 1
+                },
+                "after": {
+                  "stop": 0,
+                  "winter": 0,
+                  "dream": 0,
+                  "prison": 0,
+                  "hospital": 128,
+                  "turtle": 0,
+                  "vehicle": "foot",
+                  "diceCount": 1,
+                  "savedVehicle": "foot",
+                  "savedDice": 1
+                }
+              }
+            ],
+            "rosterBefore": {
+              "prison": [],
+              "hospital": [
+                "player-2"
+              ]
+            },
+            "rosterAfter": {
+              "prison": [],
+              "hospital": []
+            }
+          },
+          "sequence": 752,
+          "commandId": "command-414",
+          "playerId": "player-3",
+          "turn": 59
+        }
+      ],
+      "purchases": [
+        {
+          "type": "itemBought",
+          "itemId": "tool:07",
+          "cost": 100,
+          "points": 20,
+          "supply": 9,
+          "sequence": 615,
+          "commandId": "command-339",
+          "playerId": "player-3",
+          "turn": 47
+        },
+        {
+          "type": "itemBought",
+          "itemId": "tool:07",
+          "cost": 100,
+          "points": 0,
+          "supply": 9,
+          "sequence": 737,
+          "commandId": "command-406",
+          "playerId": "player-1",
+          "turn": 57
+        }
+      ],
+      "checks": [
+        "news2: independent current-traffic/registered-facility target set, exact timer writes, roster and unchanged assets/inventory/RNG"
+      ],
+      "replay": "frontend/src/features/richman/game/fixtures/status-news-v18-hospital-release-replay.json",
+      "golden": "frontend/src/features/richman/game/fixtures/status-news-v18-hospital-release-golden.json",
+      "stateSha256": "b3295328f6be1cc39f0a12af0f1a9b8d05017feb13866f405a6900ae5a6d57eb",
+      "eventsSha256": "f62c0ff0a8c4a152b6463589df421d70dba1b084e13295e1d84021200fa21321"
+    },
+    {
+      "group": "hospital-extend",
+      "normalSpeed": true,
+      "map": "original Japan; real UI commands; auth-only fixture; no game-state injection",
+      "players": 4,
+      "turn": 72,
+      "commands": 487,
+      "cleanup": {
+        "raf": 0,
+        "canvas": 0
+      },
+      "errors": [],
+      "news": [
+        {
+          "type": "newsResolved",
+          "newsId": 3,
+          "title": "全体住院玩家延长三次",
+          "node": 61,
+          "skipped": [
+            19,
+            13
+          ],
+          "money": [],
+          "stocks": [],
+          "publicFund": 0,
+          "cursor": 14,
+          "statusChanges": {
+            "targets": [
+              "player-1"
+            ],
+            "players": [
+              {
+                "playerId": "player-1",
+                "before": {
+                  "stop": 0,
+                  "winter": 0,
+                  "dream": 0,
+                  "prison": 0,
+                  "hospital": 128,
+                  "turtle": 0,
+                  "vehicle": "foot",
+                  "diceCount": 1,
+                  "savedVehicle": "foot",
+                  "savedDice": 1
+                },
+                "after": {
+                  "stop": 0,
+                  "winter": 0,
+                  "dream": 0,
+                  "prison": 0,
+                  "hospital": 3,
+                  "turtle": 0,
+                  "vehicle": "foot",
+                  "diceCount": 1,
+                  "savedVehicle": "foot",
+                  "savedDice": 1
+                }
+              }
+            ],
+            "rosterBefore": {
+              "prison": [],
+              "hospital": [
+                "player-1"
+              ]
+            },
+            "rosterAfter": {
+              "prison": [],
+              "hospital": [
+                "player-1"
+              ]
+            }
+          },
+          "sequence": 876,
+          "commandId": "command-486",
+          "playerId": "player-4",
+          "turn": 72
+        }
+      ],
+      "purchases": [
+        {
+          "type": "itemBought",
+          "itemId": "tool:07",
+          "cost": 100,
+          "points": 30,
+          "supply": 9,
+          "sequence": 571,
+          "commandId": "command-317",
+          "playerId": "player-2",
+          "turn": 46
+        }
+      ],
+      "checks": [
+        "news6: actual same-name or single-facility base-price writes, rounding, unaffected properties and balances",
+        "news3: independent current-traffic/registered-facility target set, exact timer writes, roster and unchanged assets/inventory/RNG"
+      ],
+      "replay": "frontend/src/features/richman/game/fixtures/status-news-v18-hospital-extend-replay.json",
+      "golden": "frontend/src/features/richman/game/fixtures/status-news-v18-hospital-extend-golden.json",
+      "stateSha256": "d12df5bf906118c3eefa10320d43f18d5752e7c2a4506378bf62c07124d50627",
+      "eventsSha256": "f9318637d6e3036476c20e11b73bc158e365a45cc57896d14cad5bff133d0e15"
+    }
+  ],
+  "totalBrowserCommands": 2001,
+  "limits": [
+    "17-event subset skips19; not full original distribution",
+    "four original-map four-player routes, not full match/all43 UI rerun",
+    "release routes stop after news acknowledgement, subsequent full release lifecycle only domain tested",
+    "2/3-player new-news combinations, uint7 overflow, all-player detention, dream/engineer/hotel conflicts, time restore and tax insolvency roster cleanup are domain cases only",
+    "calendar/interest/original forced bankruptcy auction and Windows runtime comparison remain unverified"
+  ]
+}

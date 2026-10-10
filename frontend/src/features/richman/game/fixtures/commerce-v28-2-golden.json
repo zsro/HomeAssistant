@@ -1,0 +1,186 @@
+{
+  "route": "2",
+  "seed": "commerce-2-3",
+  "players": 2,
+  "commands": 1039,
+  "turn": 135,
+  "startDate": "1998-01-07",
+  "endDate": "1998-03-15",
+  "dividends": {
+    "date": "1998-03-15",
+    "companies": [
+      {
+        "companyId": "japan:company:6",
+        "stockId": "jp:24",
+        "name": "富士銀行",
+        "funds": 0,
+        "cumulative": 0,
+        "shares": 0,
+        "after": 0,
+        "allocations": [
+          {
+            "playerId": "player-1",
+            "quantity": 0,
+            "ratio": 0,
+            "amount": 0
+          },
+          {
+            "playerId": "player-2",
+            "quantity": 0,
+            "ratio": 0,
+            "amount": 0
+          }
+        ]
+      },
+      {
+        "companyId": "japan:company:4",
+        "stockId": "jp:25",
+        "name": "三井生命",
+        "funds": 0,
+        "cumulative": 0,
+        "shares": 0,
+        "after": 0,
+        "allocations": [
+          {
+            "playerId": "player-1",
+            "quantity": 0,
+            "ratio": 0,
+            "amount": 0
+          },
+          {
+            "playerId": "player-2",
+            "quantity": 0,
+            "ratio": 0,
+            "amount": 0
+          }
+        ]
+      },
+      {
+        "companyId": "japan:company:1",
+        "stockId": "jp:26",
+        "name": "三越百貨",
+        "funds": 0,
+        "cumulative": 0,
+        "shares": 0,
+        "after": 0,
+        "allocations": [
+          {
+            "playerId": "player-1",
+            "quantity": 0,
+            "ratio": 0,
+            "amount": 0
+          },
+          {
+            "playerId": "player-2",
+            "quantity": 0,
+            "ratio": 0,
+            "amount": 0
+          }
+        ]
+      },
+      {
+        "companyId": "japan:company:3",
+        "stockId": "jp:27",
+        "name": "日產建設",
+        "funds": 1000,
+        "cumulative": -19000,
+        "shares": 111,
+        "after": 0,
+        "allocations": [
+          {
+            "playerId": "player-1",
+            "quantity": 10,
+            "ratio": 0.09009008854627609,
+            "amount": 90
+          },
+          {
+            "playerId": "player-2",
+            "quantity": 101,
+            "ratio": 0.9099099040031433,
+            "amount": 909
+          }
+        ]
+      },
+      {
+        "companyId": "japan:company:5",
+        "stockId": "jp:28",
+        "name": "ＳＥＧＡ",
+        "funds": 0,
+        "cumulative": 0,
+        "shares": 0,
+        "after": 0,
+        "allocations": [
+          {
+            "playerId": "player-1",
+            "quantity": 0,
+            "ratio": 0,
+            "amount": 0
+          },
+          {
+            "playerId": "player-2",
+            "quantity": 0,
+            "ratio": 0,
+            "amount": 0
+          }
+        ]
+      },
+      {
+        "companyId": "japan:company:2",
+        "stockId": "jp:29",
+        "name": "豐田汽車",
+        "funds": 0,
+        "cumulative": 0,
+        "shares": 0,
+        "after": 0,
+        "allocations": [
+          {
+            "playerId": "player-1",
+            "quantity": 0,
+            "ratio": 0,
+            "amount": 0
+          },
+          {
+            "playerId": "player-2",
+            "quantity": 0,
+            "ratio": 0,
+            "amount": 0
+          }
+        ]
+      }
+    ],
+    "payments": [
+      {
+        "playerId": "player-1",
+        "amount": 90,
+        "before": {
+          "cash": 130462,
+          "bank": 176039
+        },
+        "after": {
+          "cash": 130462,
+          "bank": 176129
+        },
+        "unpaid": 0,
+        "bankrupt": false,
+        "returnedShares": 0
+      },
+      {
+        "playerId": "player-2",
+        "amount": 909,
+        "before": {
+          "cash": 144254,
+          "bank": 197970
+        },
+        "after": {
+          "cash": 144254,
+          "bank": 198879
+        },
+        "unpaid": 0,
+        "bankrupt": false,
+        "returnedShares": 0
+      }
+    ]
+  },
+  "state": "b56467cb7412e67a4f7e3b684d40fa7f3c5957f73882cadb3bdc3aff4f41fb3c",
+  "events": "104267835a039b580ec26e0f49f3f8e73378a96313329aa5f0060a53e83ffdfe"
+}

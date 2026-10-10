@@ -1,0 +1,12 @@
+import {expect,it} from 'vitest';
+import {createHash} from 'node:crypto';
+import {replayGame} from './engine';
+import type {Replay} from './engine';
+import nodes from '../japan-topology.fixture.json';
+import effectsReplay from './fixtures/magic-actions-v37-effects-replay.json';
+import effectsGolden from './fixtures/magic-actions-v37-effects-manifest.json';
+import nestedReplay from './fixtures/magic-actions-v37-nested-replay.json';
+import nestedGolden from './fixtures/magic-actions-v37-nested-manifest.json';
+import {verifyMagicActions} from '../../../../../scripts/richman/verify-magic-actions';
+for(const [name,replay,golden,all] of [['four effects',effectsReplay,effectsGolden,true],['building and redirect continuation',nestedReplay,nestedGolden,false]] as const)it(`actual original-map v37 ${name} browser replay preserves hashes and independent command-world accounting`,()=>{const r=verifyMagicActions(replay as Replay,all);expect(r.commands).toBe(golden.commands);expect(r.effects).toEqual(golden.effects);expect(r.reactions).toBe(golden.reactions);expect(r.buildChoices).toBe(golden.buildChoices);for(const key of ['state','events']as const)expect(createHash('sha256').update(JSON.stringify(r[key])).digest('hex')).toBe(golden.hashes[key]);expect(createHash('sha256').update(JSON.stringify(replay)).digest('hex')).toBe(golden.hashes.replay);},20000);
+it('actual browser command prefixes reconstruct waiting rows and continue with identical final events/world',()=>{const r=nestedReplay as Replay,full=replayGame(nodes,r);let checked=0;for(let i=0;i<r.commands.length;i++){if(!['reaction','magicBuild'].includes(r.commands[i].action.type))continue;const e=replayGame(nodes,{...r,commands:r.commands.slice(0,i)});if(!e.state.magic?.current)continue;expect(e.state.magic.current.waiting).toBe(true);expect(e.state.magic.current.row).toBeTruthy();expect(JSON.parse(JSON.stringify(e.state.magic.current))).toEqual(e.state.magic.current);for(const c of r.commands.slice(i))expect(e.dispatch(c).ok).toBe(true);expect(e.state).toEqual(full.state);expect(e.events).toEqual(full.events);checked++;}expect(checked).toBe(2);},20000);

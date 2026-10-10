@@ -1,0 +1,275 @@
+{
+  "players": 3,
+  "commands": 421,
+  "turn": 58,
+  "auto": 127,
+  "human": 60,
+  "acquisitions": [
+    {
+      "id": "player-1",
+      "ai": false,
+      "item": "tool:03",
+      "turn": 46,
+      "action": "buyItem",
+      "events": [
+        {
+          "type": "itemBought",
+          "itemId": "tool:03",
+          "cost": 25,
+          "points": 75,
+          "supply": 9,
+          "sequence": 608,
+          "commandId": "command-331",
+          "playerId": "player-1",
+          "turn": 46
+        }
+      ]
+    },
+    {
+      "id": "player-1",
+      "ai": false,
+      "item": "tool:04",
+      "turn": 46,
+      "action": "buyItem",
+      "events": [
+        {
+          "type": "itemBought",
+          "itemId": "tool:04",
+          "cost": 25,
+          "points": 50,
+          "supply": 9,
+          "sequence": 609,
+          "commandId": "command-332",
+          "playerId": "player-1",
+          "turn": 46
+        }
+      ]
+    }
+  ],
+  "uses": [
+    {
+      "ai": false,
+      "id": "player-1",
+      "item": "tool:03",
+      "target": {
+        "kind": "node",
+        "id": "56"
+      },
+      "turn": 55,
+      "phase": "idle",
+      "affected": null,
+      "properties": [],
+      "events": [
+        {
+          "type": "effectConsumed",
+          "playerId": "player-1",
+          "itemId": "tool:03",
+          "amount": 1,
+          "sequence": 722,
+          "commandId": "command-395",
+          "turn": 55
+        },
+        {
+          "type": "hazardChanged",
+          "hazard": {
+            "id": 1,
+            "itemId": "tool:03",
+            "node": 56,
+            "carrier": null,
+            "remaining": 0
+          },
+          "removed": false,
+          "reason": "放置",
+          "sequence": 723,
+          "commandId": "command-395",
+          "playerId": "player-1",
+          "turn": 55
+        }
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "item": "tool:01",
+      "target": {
+        "kind": "player",
+        "id": "player-2"
+      },
+      "turn": 56,
+      "phase": "idle",
+      "affected": null,
+      "properties": [],
+      "events": [
+        {
+          "type": "effectConsumed",
+          "playerId": "player-2",
+          "itemId": "tool:01",
+          "amount": 1,
+          "sequence": 738,
+          "commandId": "command-408",
+          "turn": 56
+        },
+        {
+          "type": "effectResolved",
+          "definitionId": "tool:01:clear-nine-v1",
+          "sourceId": "player-2",
+          "target": {
+            "kind": "player",
+            "id": "player-2"
+          },
+          "sequence": 739,
+          "commandId": "command-408",
+          "playerId": "player-2",
+          "turn": 56
+        },
+        {
+          "type": "roadSupplyChanged",
+          "itemId": "tool:01",
+          "amount": 1,
+          "supply": 8,
+          "sequence": 740,
+          "commandId": "command-408",
+          "playerId": "player-2",
+          "turn": 56
+        },
+        {
+          "type": "hazardChanged",
+          "hazard": {
+            "id": 1,
+            "itemId": "tool:03",
+            "node": 56,
+            "carrier": null,
+            "remaining": 0
+          },
+          "removed": true,
+          "reason": "机器娃娃清除",
+          "sequence": 741,
+          "commandId": "command-408",
+          "playerId": "player-2",
+          "turn": 56
+        },
+        {
+          "type": "robotCleared",
+          "path": [
+            56,
+            55,
+            54,
+            53,
+            52,
+            51,
+            50,
+            49,
+            48
+          ],
+          "cleared": [],
+          "sequence": 742,
+          "commandId": "command-408",
+          "playerId": "player-2",
+          "turn": 56
+        }
+      ]
+    }
+  ],
+  "cancellations": [
+    {
+      "ai": false,
+      "id": "player-1",
+      "item": "tool:03",
+      "turn": 55
+    }
+  ],
+  "hazardEvents": [
+    {
+      "type": "hazardChanged",
+      "hazard": {
+        "id": 1,
+        "itemId": "tool:03",
+        "node": 56,
+        "carrier": null,
+        "remaining": 0
+      },
+      "removed": false,
+      "reason": "放置",
+      "sequence": 723,
+      "commandId": "command-395",
+      "playerId": "player-1",
+      "turn": 55
+    },
+    {
+      "type": "hazardChanged",
+      "hazard": {
+        "id": 1,
+        "itemId": "tool:03",
+        "node": 56,
+        "carrier": null,
+        "remaining": 0
+      },
+      "removed": true,
+      "reason": "机器娃娃清除",
+      "sequence": 741,
+      "commandId": "command-408",
+      "playerId": "player-2",
+      "turn": 56
+    }
+  ],
+  "stops": [],
+  "prefixes": [
+    "tool:03-acquired",
+    "tool:04-acquired",
+    "cancel-before",
+    "cancel-after",
+    "tool:03-confirm-before",
+    "tool:03-confirm-after",
+    "hazard-放置-before",
+    "hazard-放置-after",
+    "tool:01-paused",
+    "tool:01-resumed",
+    "tool:01-confirm-before",
+    "tool:01-confirm-after",
+    "hazard-机器娃娃清除-before",
+    "hazard-机器娃娃清除-after"
+  ],
+  "report": {
+    "robotPreviews": [
+      {
+        "mines": 1,
+        "bombs": 0
+      }
+    ],
+    "policy": "roads-v1",
+    "toolWindows": [
+      "tool:08",
+      "tool:09",
+      "tool:01"
+    ],
+    "crossChecks": [],
+    "route": "manual",
+    "terminal": false,
+    "players": 3,
+    "normalSpeed": true,
+    "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+    "commands": 421,
+    "auto": 127,
+    "human": 60,
+    "lifecycle": [
+      "pause stops waiting",
+      "resume",
+      "reset dialog cancel",
+      "reset",
+      "replace with humans",
+      "exit cleanup",
+      "fullscreen",
+      "390px"
+    ],
+    "cleanup": {
+      "raf": 0,
+      "canvas": 0
+    },
+    "errors": []
+  },
+  "hashes": {
+    "replay": "c182015f5802ec6aa326553b387c5d2553a6f2d3068fbc9f080d668ed5d6429b",
+    "state": "5849c1987e91995203d53740b31aac13bba9bada646438ec8dcb165d6cb52d13",
+    "events": "b53e8cceeeeb54c92b3d4e8d1c5c1aa796b74804a4cc7a77c43df17322aaba50"
+  }
+}

@@ -1,0 +1,223 @@
+{
+  "kind": "debt",
+  "commands": 3376,
+  "players": 4,
+  "turn": 211,
+  "date": "1998-02-22",
+  "prefixes": [
+    "own-liquidation",
+    "rent-free",
+    "rent-redirect",
+    "substitute-liquidation",
+    "exit-start",
+    "rent-callback",
+    "after-exit-turn"
+  ],
+  "reactions": [
+    {
+      "kind": "rent",
+      "stage": "free",
+      "responderId": "player-3",
+      "choice": "decline",
+      "targetId": null,
+      "turn": 123
+    },
+    {
+      "kind": "rent",
+      "stage": "redirect",
+      "responderId": "player-2",
+      "choice": "use",
+      "targetId": "player-1",
+      "turn": 210
+    }
+  ],
+  "attacks": [],
+  "waivers": [],
+  "forced": [
+    {
+      "type": "stockTraded",
+      "stockId": "jp:24",
+      "traderId": "player-1",
+      "side": "sell",
+      "quantity": 2,
+      "price": 27600,
+      "amount": 552,
+      "forced": true,
+      "sequence": 1456,
+      "commandId": "command-1720",
+      "playerId": "player-1",
+      "turn": 105
+    },
+    {
+      "type": "stockTraded",
+      "stockId": "jp:24",
+      "traderId": "player-1",
+      "side": "sell",
+      "quantity": 3,
+      "price": 8300,
+      "amount": 249,
+      "forced": true,
+      "sequence": 2717,
+      "commandId": "command-3270",
+      "playerId": "player-1",
+      "turn": 197
+    },
+    {
+      "type": "stockTraded",
+      "stockId": "jp:24",
+      "traderId": "player-1",
+      "side": "sell",
+      "quantity": 4,
+      "price": 8300,
+      "amount": 332,
+      "forced": true,
+      "sequence": 2772,
+      "commandId": "command-3301",
+      "playerId": "player-1",
+      "turn": 201
+    },
+    {
+      "type": "stockTraded",
+      "stockId": "jp:24",
+      "traderId": "player-1",
+      "side": "sell",
+      "quantity": 10,
+      "price": 7950,
+      "amount": 795,
+      "forced": true,
+      "sequence": 2906,
+      "commandId": "command-3374",
+      "playerId": "player-2",
+      "turn": 210
+    }
+  ],
+  "disposals": [
+    {
+      "id": "disposal-1",
+      "payerId": "player-1",
+      "recipientId": "player-4",
+      "propertyId": "japan:land:21",
+      "due": 6000,
+      "amount": 876,
+      "unpaid": 5124,
+      "paid": {
+        "cash": 0,
+        "bank": 876
+      },
+      "released": [
+        "japan:land:19",
+        "japan:land:23",
+        "japan:land:24",
+        "japan:land:26",
+        "japan:facility:1"
+      ],
+      "pool": [
+        "japan:land:19",
+        null,
+        null,
+        "japan:land:26",
+        null
+      ],
+      "draws": [
+        2,
+        2,
+        4,
+        1
+      ],
+      "stocks": [],
+      "inventory": [
+        {
+          "itemId": "tool:01",
+          "quantity": 1,
+          "points": 15
+        },
+        {
+          "itemId": "tool:02",
+          "quantity": 1,
+          "points": 30
+        },
+        {
+          "itemId": "card:03",
+          "quantity": 1,
+          "points": 35
+        },
+        {
+          "itemId": "card:07",
+          "quantity": 1,
+          "points": 15
+        },
+        {
+          "itemId": "card:09",
+          "quantity": 1,
+          "points": 160
+        },
+        {
+          "itemId": "card:25",
+          "quantity": 1,
+          "points": 30
+        }
+      ],
+      "ignoredPoints": 285,
+      "auctions": [
+        {
+          "propertyId": "japan:land:24",
+          "winnerId": null,
+          "amount": 0,
+          "reserve": 1500
+        },
+        {
+          "propertyId": "japan:facility:1",
+          "winnerId": null,
+          "amount": 0,
+          "reserve": 4000
+        },
+        {
+          "propertyId": "japan:land:23",
+          "winnerId": null,
+          "amount": 0,
+          "reserve": 2000
+        }
+      ],
+      "finishedGame": false
+    }
+  ],
+  "auctionPaid": 0,
+  "substituteSales": 1,
+  "substituteExits": 1,
+  "paidRent": 20600,
+  "wrongActorChecks": 2,
+  "report": {
+    "normalSpeed": true,
+    "map": "original Japan; real UI commands; auth-only fixture; no game-state injection",
+    "calendarCommon": true,
+    "reactionCommon": true,
+    "reactionChecks": [
+      {
+        "kind": "rent",
+        "stage": "free",
+        "responderId": "player-3",
+        "choice": "decline",
+        "targetId": null,
+        "text": "请玩家 3 应答 · 免费卡\n\n本次应付租金 6,000 元。\n\n使用免费卡免付本次租金；不使用则继续检查嫁祸。\n\n确认才消耗 1 张；不使用保留卡片。\n\n使用免费卡\n不使用免费卡"
+      },
+      {
+        "kind": "rent",
+        "stage": "redirect",
+        "responderId": "player-2",
+        "choice": "use",
+        "targetId": "player-1",
+        "text": "请玩家 2 应答 · 嫁祸卡\n\n本次应付租金 6,000 元。\n\n可转移给任意其他未破产玩家，包括远处或设施中的玩家；不会再次触发对方的反制卡。\n\n嫁祸目标\n请选择目标\n玩家 1\n玩家 3\n玩家 4\n\n由被选玩家承担原额租金；资金不足将由该玩家确认破产。转给业主本人则免付。\n\n使用嫁祸卡\n不使用嫁祸卡"
+      }
+    ],
+    "errors": [],
+    "cleanup": {
+      "raf": 0,
+      "canvas": 0
+    }
+  },
+  "hashes": {
+    "replay": "67fa05dc528cd509fda90e4fc9ae7744fef14d510521ae25ff9025524f09df34",
+    "state": "aadb506ab2d9489a7373ec0c18d7ad320fdfda6570f69a9d33badd8be5cd87bd",
+    "events": "0867bebe02e06dfa6d9f1020941082fd52a6edf7ed75a6667a224941ae71c31e"
+  }
+}

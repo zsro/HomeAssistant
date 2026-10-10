@@ -1,0 +1,697 @@
+{
+  "players": 2,
+  "commands": 873,
+  "auto": 188,
+  "human": 145,
+  "trades": [
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 4,
+      "side": "buy",
+      "stockId": "jp:26",
+      "quantity": 100,
+      "amount": 1980,
+      "balanceBefore": {
+        "cash": 13000,
+        "bank": 15000
+      },
+      "balanceAfter": {
+        "cash": 13000,
+        "bank": 13020
+      },
+      "holdingBefore": {
+        "quantity": 0,
+        "cost": 0,
+        "average": 0
+      },
+      "holdingAfter": {
+        "quantity": 100,
+        "cost": 1979,
+        "average": 19.799999237060547
+      },
+      "ownerBefore": null,
+      "ownerAfter": "player-2",
+      "budget": {
+        "operating": 10000,
+        "debt": 0,
+        "liquid": 28000,
+        "basis": 0,
+        "reserve": 10000,
+        "room": 5600
+      }
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 4,
+      "side": "buy",
+      "stockId": "jp:27",
+      "quantity": 100,
+      "amount": 2520,
+      "balanceBefore": {
+        "cash": 13000,
+        "bank": 13020
+      },
+      "balanceAfter": {
+        "cash": 13000,
+        "bank": 10500
+      },
+      "holdingBefore": {
+        "quantity": 0,
+        "cost": 0,
+        "average": 0
+      },
+      "holdingAfter": {
+        "quantity": 100,
+        "cost": 2520,
+        "average": 25.200000762939453
+      },
+      "ownerBefore": null,
+      "ownerAfter": "player-2",
+      "budget": {
+        "operating": 10000,
+        "debt": 0,
+        "liquid": 26020,
+        "basis": 1979,
+        "reserve": 10000,
+        "room": 3620
+      }
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 6,
+      "side": "buy",
+      "stockId": "jp:30",
+      "quantity": 1,
+      "amount": 441,
+      "balanceBefore": {
+        "cash": 12600,
+        "bank": 10500
+      },
+      "balanceAfter": {
+        "cash": 12600,
+        "bank": 10059
+      },
+      "holdingBefore": {
+        "quantity": 0,
+        "cost": 0,
+        "average": 0
+      },
+      "holdingAfter": {
+        "quantity": 1,
+        "cost": 441,
+        "average": 441
+      },
+      "ownerBefore": null,
+      "ownerAfter": null,
+      "budget": {
+        "operating": 10000,
+        "debt": 0,
+        "liquid": 23100,
+        "basis": 4499,
+        "reserve": 10000,
+        "room": 1020
+      }
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 6,
+      "side": "buy",
+      "stockId": "jp:33",
+      "quantity": 2,
+      "amount": 390,
+      "balanceBefore": {
+        "cash": 5000,
+        "bank": 17659
+      },
+      "balanceAfter": {
+        "cash": 5000,
+        "bank": 17269
+      },
+      "holdingBefore": {
+        "quantity": 0,
+        "cost": 0,
+        "average": 0
+      },
+      "holdingAfter": {
+        "quantity": 2,
+        "cost": 390,
+        "average": 195
+      },
+      "ownerBefore": null,
+      "ownerAfter": null,
+      "budget": {
+        "operating": 10000,
+        "debt": 0,
+        "liquid": 22659,
+        "basis": 4940,
+        "reserve": 10000,
+        "room": 579
+      }
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 8,
+      "side": "buy",
+      "stockId": "jp:35",
+      "quantity": 1,
+      "amount": 126,
+      "balanceBefore": {
+        "cash": 5000,
+        "bank": 17269
+      },
+      "balanceAfter": {
+        "cash": 5000,
+        "bank": 17143
+      },
+      "holdingBefore": {
+        "quantity": 0,
+        "cost": 0,
+        "average": 0
+      },
+      "holdingAfter": {
+        "quantity": 1,
+        "cost": 126,
+        "average": 126
+      },
+      "ownerBefore": null,
+      "ownerAfter": null,
+      "budget": {
+        "operating": 10000,
+        "debt": 0,
+        "liquid": 22269,
+        "basis": 5330,
+        "reserve": 10000,
+        "room": 189
+      }
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 24,
+      "side": "buy",
+      "stockId": "jp:24",
+      "quantity": 2,
+      "amount": 198,
+      "balanceBefore": {
+        "cash": 5808,
+        "bank": 17143
+      },
+      "balanceAfter": {
+        "cash": 5808,
+        "bank": 16945
+      },
+      "holdingBefore": {
+        "quantity": 0,
+        "cost": 0,
+        "average": 0
+      },
+      "holdingAfter": {
+        "quantity": 2,
+        "cost": 198,
+        "average": 99
+      },
+      "ownerBefore": null,
+      "ownerAfter": "player-2",
+      "budget": {
+        "operating": 10000,
+        "debt": 0,
+        "liquid": 22951,
+        "basis": 5456,
+        "reserve": 10000,
+        "room": 225
+      }
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 26,
+      "side": "buy",
+      "stockId": "jp:25",
+      "quantity": 30,
+      "amount": 2010,
+      "balanceBefore": {
+        "cash": 15808,
+        "bank": 16945
+      },
+      "balanceAfter": {
+        "cash": 15808,
+        "bank": 14935
+      },
+      "holdingBefore": {
+        "quantity": 0,
+        "cost": 0,
+        "average": 0
+      },
+      "holdingAfter": {
+        "quantity": 30,
+        "cost": 2010,
+        "average": 67
+      },
+      "ownerBefore": null,
+      "ownerAfter": "player-2",
+      "budget": {
+        "operating": 10000,
+        "debt": 0,
+        "liquid": 32753,
+        "basis": 5654,
+        "reserve": 10000,
+        "room": 2027
+      }
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 58,
+      "side": "sell",
+      "stockId": "jp:24",
+      "quantity": 2,
+      "amount": 238,
+      "balanceBefore": {
+        "cash": 6808,
+        "bank": 17528
+      },
+      "balanceAfter": {
+        "cash": 6808,
+        "bank": 17766
+      },
+      "holdingBefore": {
+        "quantity": 2,
+        "cost": 198,
+        "average": 99
+      },
+      "holdingAfter": {
+        "quantity": 0,
+        "cost": 0,
+        "average": 0
+      },
+      "ownerBefore": "player-2",
+      "ownerAfter": null,
+      "budget": {
+        "operating": 30000,
+        "debt": 0,
+        "liquid": 24336,
+        "basis": 7664,
+        "reserve": 30000,
+        "room": 0
+      }
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 58,
+      "side": "sell",
+      "stockId": "jp:25",
+      "quantity": 30,
+      "amount": 1800,
+      "balanceBefore": {
+        "cash": 6808,
+        "bank": 17766
+      },
+      "balanceAfter": {
+        "cash": 6808,
+        "bank": 19566
+      },
+      "holdingBefore": {
+        "quantity": 30,
+        "cost": 2010,
+        "average": 67
+      },
+      "holdingAfter": {
+        "quantity": 0,
+        "cost": 0,
+        "average": 0
+      },
+      "ownerBefore": "player-2",
+      "ownerAfter": null,
+      "budget": {
+        "operating": 30000,
+        "debt": 0,
+        "liquid": 24574,
+        "basis": 7466,
+        "reserve": 30000,
+        "room": 0
+      }
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 58,
+      "side": "sell",
+      "stockId": "jp:27",
+      "quantity": 100,
+      "amount": 2250,
+      "balanceBefore": {
+        "cash": 6808,
+        "bank": 19566
+      },
+      "balanceAfter": {
+        "cash": 6808,
+        "bank": 21816
+      },
+      "holdingBefore": {
+        "quantity": 100,
+        "cost": 2520,
+        "average": 25.200000762939453
+      },
+      "holdingAfter": {
+        "quantity": 0,
+        "cost": 0,
+        "average": 0
+      },
+      "ownerBefore": "player-2",
+      "ownerAfter": null,
+      "budget": {
+        "operating": 30000,
+        "debt": 0,
+        "liquid": 26374,
+        "basis": 5456,
+        "reserve": 30000,
+        "room": 910
+      }
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 58,
+      "side": "sell",
+      "stockId": "jp:33",
+      "quantity": 2,
+      "amount": 258,
+      "balanceBefore": {
+        "cash": 6808,
+        "bank": 21816
+      },
+      "balanceAfter": {
+        "cash": 6808,
+        "bank": 22074
+      },
+      "holdingBefore": {
+        "quantity": 2,
+        "cost": 390,
+        "average": 195
+      },
+      "holdingAfter": {
+        "quantity": 0,
+        "cost": 0,
+        "average": 0
+      },
+      "ownerBefore": null,
+      "ownerAfter": null,
+      "budget": {
+        "operating": 30000,
+        "debt": 0,
+        "liquid": 28624,
+        "basis": 2936,
+        "reserve": 30000,
+        "room": 3376
+      }
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 58,
+      "side": "sell",
+      "stockId": "jp:35",
+      "quantity": 1,
+      "amount": 99,
+      "balanceBefore": {
+        "cash": 6808,
+        "bank": 22074
+      },
+      "balanceAfter": {
+        "cash": 6808,
+        "bank": 22173
+      },
+      "holdingBefore": {
+        "quantity": 1,
+        "cost": 126,
+        "average": 126
+      },
+      "holdingAfter": {
+        "quantity": 0,
+        "cost": 0,
+        "average": 0
+      },
+      "ownerBefore": null,
+      "ownerAfter": null,
+      "budget": {
+        "operating": 30000,
+        "debt": 0,
+        "liquid": 28882,
+        "basis": 2546,
+        "reserve": 30000,
+        "room": 3739
+      }
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 62,
+      "side": "sell",
+      "stockId": "jp:30",
+      "quantity": 1,
+      "amount": 375,
+      "balanceBefore": {
+        "cash": 5000,
+        "bank": 23981
+      },
+      "balanceAfter": {
+        "cash": 5000,
+        "bank": 24356
+      },
+      "holdingBefore": {
+        "quantity": 1,
+        "cost": 441,
+        "average": 441
+      },
+      "holdingAfter": {
+        "quantity": 0,
+        "cost": 0,
+        "average": 0
+      },
+      "ownerBefore": null,
+      "ownerAfter": null,
+      "budget": {
+        "operating": 30000,
+        "debt": 0,
+        "liquid": 28981,
+        "basis": 2420,
+        "reserve": 30000,
+        "room": 3860
+      }
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 86,
+      "side": "sell",
+      "stockId": "jp:26",
+      "quantity": 100,
+      "amount": 2010,
+      "balanceBefore": {
+        "cash": 529,
+        "bank": 0
+      },
+      "balanceAfter": {
+        "cash": 529,
+        "bank": 2010
+      },
+      "holdingBefore": {
+        "quantity": 100,
+        "cost": 1979,
+        "average": 19.799999237060547
+      },
+      "holdingAfter": {
+        "quantity": 0,
+        "cost": 0,
+        "average": 0
+      },
+      "ownerBefore": "player-2",
+      "ownerAfter": null,
+      "budget": {
+        "operating": 10000,
+        "debt": 0,
+        "liquid": 529,
+        "basis": 1979,
+        "reserve": 10000,
+        "room": 0
+      }
+    }
+  ],
+  "subscriptions": [],
+  "loans": [
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 98,
+      "operation": "borrow",
+      "amount": 2061,
+      "balanceBefore": {
+        "cash": 529,
+        "bank": 2410
+      },
+      "balanceAfter": {
+        "cash": 529,
+        "bank": 4471
+      },
+      "debtBefore": 0,
+      "debtAfter": 2061,
+      "dueBefore": null,
+      "dueAfter": "1998-05-23"
+    }
+  ],
+  "banks": [
+    {
+      "ai": true,
+      "id": "player-2",
+      "operation": "deposit",
+      "amount": 7600
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "operation": "deposit",
+      "amount": 1808
+    },
+    {
+      "ai": false,
+      "id": "player-1",
+      "operation": "withdraw",
+      "amount": 3400
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "operation": "withdraw",
+      "amount": 4471
+    }
+  ],
+  "reds": [],
+  "forcedSales": [],
+  "reactions": [],
+  "exits": [],
+  "rentPayments": [
+    {
+      "ai": true,
+      "active": "player-2",
+      "payer": "player-2",
+      "recipient": "player-1",
+      "amount": 400,
+      "paid": {
+        "cash": 400,
+        "bank": 0
+      }
+    },
+    {
+      "ai": false,
+      "active": "player-1",
+      "payer": "player-1",
+      "recipient": "player-2",
+      "amount": 400,
+      "paid": {
+        "cash": 400,
+        "bank": 0
+      }
+    },
+    {
+      "ai": false,
+      "active": "player-1",
+      "payer": "player-1",
+      "recipient": "player-2",
+      "amount": 600,
+      "paid": {
+        "cash": 600,
+        "bank": 0
+      }
+    },
+    {
+      "ai": false,
+      "active": "player-1",
+      "payer": "player-1",
+      "recipient": "player-2",
+      "amount": 400,
+      "paid": {
+        "cash": 400,
+        "bank": 0
+      }
+    }
+  ],
+  "prefixes": [
+    "market-before",
+    "market-after",
+    "buy-paused",
+    "buy-resumed",
+    "buy-before",
+    "buy-after",
+    "rent-payment-before",
+    "rent-payment-after",
+    "deposit-paused",
+    "deposit-resumed",
+    "deposit-before",
+    "deposit-after",
+    "sell-paused",
+    "sell-resumed",
+    "sell-before",
+    "sell-after",
+    "withdraw-before",
+    "withdraw-after",
+    "borrow-paused",
+    "borrow-resumed",
+    "borrow-before",
+    "borrow-after",
+    "withdraw-paused",
+    "withdraw-resumed"
+  ],
+  "report": {
+    "capitalWindows": [
+      "buy",
+      "deposit",
+      "sell",
+      "borrow",
+      "withdraw"
+    ],
+    "robotPreviews": [],
+    "policy": "capital-v1",
+    "toolWindows": [
+      "tool:08",
+      "tool:09",
+      "tool:02",
+      "tool:05",
+      "card:11"
+    ],
+    "crossChecks": [],
+    "route": "loan",
+    "terminal": false,
+    "players": 2,
+    "normalSpeed": true,
+    "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+    "commands": 873,
+    "auto": 188,
+    "human": 145,
+    "lifecycle": [
+      "pause stops waiting",
+      "resume",
+      "reset dialog cancel",
+      "reset",
+      "replace with humans",
+      "exit cleanup",
+      "fullscreen",
+      "390px"
+    ],
+    "cleanup": {
+      "raf": 0,
+      "canvas": 0
+    },
+    "errors": []
+  },
+  "hashes": {
+    "replay": "1ded42b7c216833f0b06ed0945703f2bd22e3238a1178d0ed8e9061856879dda",
+    "state": "403591c0e1ef71a90ba5d41b47a1ee45fe0f8d13ad2f18d85565e88e47bdc38e",
+    "events": "08b1865014e2fdc7148e6b8f3c7f0b650a3886653ab72213d3693b5f896c1903"
+  }
+}

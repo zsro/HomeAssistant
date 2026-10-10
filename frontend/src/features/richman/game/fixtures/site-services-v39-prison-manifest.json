@@ -1,0 +1,109 @@
+{
+  "stage": "S2-03z",
+  "source": "real original Japan UI; normal speed; auth-only fixture; no world injection",
+  "seed": "site-services-1",
+  "players": 4,
+  "commands": 641,
+  "turn": 88,
+  "date": "1998-01-22",
+  "facilities": 1,
+  "kinds": [
+    "prison"
+  ],
+  "sales": 2,
+  "closings": 3,
+  "purchases": 3,
+  "helpReceipts": [
+    {
+      "facility": "prison",
+      "visitorId": "player-4",
+      "targetId": "player-1",
+      "cost": 30,
+      "before": 2,
+      "after": 128,
+      "pointsBefore": 90,
+      "pointsAfter": 60,
+      "hostility": -200
+    }
+  ],
+  "saleReceipts": [
+    {
+      "itemId": "tool:09",
+      "basePrice": 30,
+      "credit": 27,
+      "pointsBefore": 0,
+      "pointsAfter": 27,
+      "countBefore": 1,
+      "countAfter": 0,
+      "poolReturned": false
+    },
+    {
+      "itemId": "card:06",
+      "basePrice": 20,
+      "credit": 18,
+      "pointsBefore": 7,
+      "pointsAfter": 25,
+      "countBefore": 1,
+      "countAfter": 0,
+      "poolReturned": true
+    }
+  ],
+  "shopReceipts": [
+    {
+      "node": 107,
+      "visitorId": "player-1",
+      "turnover": 250,
+      "sales": [
+        {
+          "itemId": "tool:09",
+          "basePrice": 30,
+          "credit": 27,
+          "pointsBefore": 0,
+          "pointsAfter": 27,
+          "countBefore": 1,
+          "countAfter": 0,
+          "poolReturned": false
+        },
+        {
+          "itemId": "card:06",
+          "basePrice": 20,
+          "credit": 18,
+          "pointsBefore": 7,
+          "pointsAfter": 25,
+          "countBefore": 1,
+          "countAfter": 0,
+          "poolReturned": true
+        }
+      ],
+      "fundsBefore": 0,
+      "fundsAfter": 250,
+      "cumulativeBefore": 0,
+      "cumulativeAfter": 250
+    },
+    {
+      "node": 50,
+      "visitorId": "player-2",
+      "turnover": 300,
+      "sales": [],
+      "fundsBefore": 250,
+      "fundsAfter": 550,
+      "cumulativeBefore": 250,
+      "cumulativeAfter": 550
+    },
+    {
+      "node": 50,
+      "visitorId": "player-4",
+      "turnover": 300,
+      "sales": [],
+      "fundsBefore": 550,
+      "fundsAfter": 850,
+      "cumulativeBefore": 550,
+      "cumulativeAfter": 850
+    }
+  ],
+  "hashes": {
+    "replay": "c60ac22835247551da865847bb5d501a0d6eab721eee9d5096b8a6d0d7bfbe88",
+    "state": "3b2be8edd9d8615bcf1dbcd50b19831090cdb3a7bb512c12ba6d64fe33760eaa",
+    "events": "c9c4be6dd9122a858e021a326f7788f885d44e75bbd7f7a1b3d6d2fa7613376d"
+  }
+}

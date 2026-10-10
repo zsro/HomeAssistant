@@ -1,0 +1,651 @@
+{
+  "stage": "S3-02b",
+  "completed": true,
+  "policy": "rent-v1",
+  "preservedPolicies": [
+    "basic-v1",
+    "tools-v1"
+  ],
+  "rulesId": "japan-events-candidate-v44",
+  "fingerprint": "f9dbb7e9",
+  "newGameSemantics": false,
+  "checks": {
+    "frontend": {
+      "tests": 1862,
+      "files": 130,
+      "passed": true,
+      "log": "/private/tmp/rent-full-final.log",
+      "workers": 2
+    },
+    "newDomainTests": 26,
+    "newActualReplayTests": 3,
+    "versionsPlayers": 132,
+    "lint": true,
+    "build": true,
+    "diffCheck": true,
+    "oldFixtureJsonByteUnchanged": 308,
+    "basicDecisionBodyUnchanged": true,
+    "toolsPolicyFileUnchanged": true,
+    "engineRulesUnchanged": true
+  },
+  "browser": {
+    "routes": [
+      {
+        "players": 2,
+        "commands": 2242,
+        "turn": 313,
+        "auto": 475,
+        "human": 400,
+        "reactions": [
+          {
+            "ai": true,
+            "id": "player-2",
+            "stage": "redirect",
+            "choice": "use",
+            "target": "player-1",
+            "amount": 1200,
+            "turn": 286
+          },
+          {
+            "ai": true,
+            "id": "player-2",
+            "stage": "free",
+            "choice": "use",
+            "target": null,
+            "amount": 700,
+            "turn": 312
+          }
+        ],
+        "purchases": [
+          {
+            "id": "player-2",
+            "item": "card:20",
+            "turn": 292
+          }
+        ],
+        "acquisitions": [
+          {
+            "id": "player-2",
+            "item": "card:19",
+            "turn": 274,
+            "command": "animationDone",
+            "node": 30,
+            "evidence": [
+              "玩家2附身大福神，期限7次自身行动边界。",
+              "玩家2获得card:19。",
+              "玩家2获得card:14。"
+            ]
+          },
+          {
+            "id": "player-2",
+            "item": "card:20",
+            "turn": 292,
+            "command": "buyItem",
+            "node": 107,
+            "evidence": [
+              "card:20"
+            ]
+          }
+        ],
+        "payments": [],
+        "forced": [],
+        "disposals": [],
+        "prefixes": [
+          "card:19-acquired",
+          "reaction-paused",
+          "reaction-resumed",
+          "redirect-before-true",
+          "redirect-after-true",
+          "card:20-acquired",
+          "card:20-buy",
+          "free-before-true",
+          "free-after-true"
+        ],
+        "report": {
+          "policy": "rent-v1",
+          "toolWindows": [
+            "tool:08",
+            "tool:09"
+          ],
+          "crossChecks": [
+            {
+              "index": 597,
+              "kind": "property",
+              "computer": true,
+              "active": "player-2",
+              "actor": "player-2"
+            },
+            {
+              "index": 821,
+              "kind": "property",
+              "computer": false,
+              "active": "player-1",
+              "actor": "player-1"
+            },
+            {
+              "index": 2009,
+              "kind": "reaction",
+              "computer": true,
+              "active": "player-2",
+              "actor": "player-2"
+            }
+          ],
+          "route": "2",
+          "terminal": false,
+          "players": 2,
+          "normalSpeed": true,
+          "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+          "commands": 2242,
+          "auto": 475,
+          "human": 400,
+          "lifecycle": [
+            "pause stops waiting",
+            "resume",
+            "reset dialog cancel",
+            "reset",
+            "replace with humans",
+            "exit cleanup",
+            "fullscreen",
+            "390px"
+          ],
+          "cleanup": {
+            "raf": 0,
+            "canvas": 0
+          },
+          "errors": []
+        },
+        "hashes": {
+          "replay": "e404140492d1ca8695f69d04d6aaf14058be629f0269fcaf4a93ab8b0af2ebc9",
+          "state": "572187f53a95b1f301b6546aba7cd49e0a28db4212fc90172740dcdfe43fc5db",
+          "events": "9ce3270c6c230bb4cfbfcfcdc2cbad1c15a3e9f4939791cf78e2d1963df8c0ec"
+        }
+      },
+      {
+        "players": 3,
+        "commands": 1883,
+        "turn": 261,
+        "auto": 255,
+        "human": 481,
+        "reactions": [
+          {
+            "ai": true,
+            "id": "player-2",
+            "stage": "redirect",
+            "choice": "use",
+            "target": "player-3",
+            "amount": 2000,
+            "turn": 260
+          }
+        ],
+        "purchases": [],
+        "acquisitions": [
+          {
+            "id": "player-2",
+            "item": "card:20",
+            "turn": 47,
+            "command": "animationDone",
+            "node": 52,
+            "evidence": [
+              "玩家2附身大福神，期限7次自身行动边界。",
+              "玩家2获得card:30。",
+              "玩家2获得card:20。"
+            ]
+          },
+          {
+            "id": "player-2",
+            "item": "card:19",
+            "turn": 176,
+            "command": "animationDone",
+            "node": 10,
+            "evidence": [
+              "玩家2附身小福神，期限7次自身行动边界。",
+              "玩家2获得card:19。"
+            ]
+          }
+        ],
+        "payments": [],
+        "forced": [],
+        "disposals": [],
+        "prefixes": [
+          "card:20-acquired",
+          "card:19-acquired",
+          "reaction-paused",
+          "reaction-resumed",
+          "redirect-before-true",
+          "redirect-after-true"
+        ],
+        "report": {
+          "policy": "rent-v1",
+          "toolWindows": [
+            "tool:08",
+            "tool:09"
+          ],
+          "crossChecks": [
+            {
+              "index": 27,
+              "kind": "property",
+              "computer": false,
+              "active": "player-1",
+              "actor": "player-1"
+            },
+            {
+              "index": 369,
+              "kind": "property",
+              "computer": true,
+              "active": "player-2",
+              "actor": "player-2"
+            },
+            {
+              "index": 1857,
+              "kind": "reaction",
+              "computer": true,
+              "active": "player-2",
+              "actor": "player-2"
+            }
+          ],
+          "route": "3a",
+          "terminal": false,
+          "players": 3,
+          "normalSpeed": true,
+          "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+          "commands": 1883,
+          "auto": 255,
+          "human": 481,
+          "lifecycle": [
+            "pause stops waiting",
+            "resume",
+            "reset dialog cancel",
+            "reset",
+            "replace with humans",
+            "exit cleanup",
+            "fullscreen",
+            "390px"
+          ],
+          "cleanup": {
+            "raf": 0,
+            "canvas": 0
+          },
+          "errors": []
+        },
+        "hashes": {
+          "replay": "2f13ec919ebe3658ce24c57112bb4a40a819cd93f32cb3b852ce528ba5d5fec2",
+          "state": "43df94e84a2f71577a282282f728c17eca21db06f50fd091192766eba732746c",
+          "events": "62829d2ccc5efa6e87f07a747d3c97b26d49801b508e09d686dad8471d8cc531"
+        }
+      },
+      {
+        "players": 4,
+        "commands": 2391,
+        "turn": 331,
+        "auto": 263,
+        "human": 688,
+        "reactions": [
+          {
+            "ai": true,
+            "id": "player-3",
+            "stage": "free",
+            "choice": "use",
+            "target": null,
+            "amount": 2900,
+            "turn": 307
+          },
+          {
+            "ai": false,
+            "id": "player-2",
+            "stage": "free",
+            "choice": "decline",
+            "target": null,
+            "amount": 1050,
+            "turn": 330
+          },
+          {
+            "ai": false,
+            "id": "player-2",
+            "stage": "redirect",
+            "choice": "use",
+            "target": "player-3",
+            "amount": 1050,
+            "turn": 330
+          }
+        ],
+        "purchases": [
+          {
+            "id": "player-3",
+            "item": "card:20",
+            "turn": 253
+          }
+        ],
+        "acquisitions": [
+          {
+            "id": "player-3",
+            "item": "card:20",
+            "turn": 253,
+            "command": "buyItem",
+            "node": 50,
+            "evidence": [
+              "card:20"
+            ]
+          }
+        ],
+        "payments": [
+          {
+            "id": "player-3",
+            "ai": true,
+            "amount": 1050,
+            "turn": 330
+          }
+        ],
+        "forced": [
+          {
+            "type": "stockTraded",
+            "stockId": "jp:30",
+            "traderId": "player-1",
+            "side": "sell",
+            "quantity": 9,
+            "price": 29300,
+            "amount": 2637,
+            "forced": true,
+            "sequence": 1658,
+            "commandId": "command-899",
+            "playerId": "player-1",
+            "turn": 121
+          },
+          {
+            "type": "stockTraded",
+            "stockId": "jp:30",
+            "traderId": "player-1",
+            "side": "sell",
+            "quantity": 2,
+            "price": 32200,
+            "amount": 644,
+            "forced": true,
+            "sequence": 1771,
+            "commandId": "command-959",
+            "playerId": "player-1",
+            "turn": 129
+          },
+          {
+            "type": "stockTraded",
+            "stockId": "jp:30",
+            "traderId": "player-1",
+            "side": "sell",
+            "quantity": 3,
+            "price": 35400,
+            "amount": 1062,
+            "forced": true,
+            "sequence": 1827,
+            "commandId": "command-988",
+            "playerId": "player-1",
+            "turn": 133
+          },
+          {
+            "type": "stockTraded",
+            "stockId": "jp:30",
+            "traderId": "player-1",
+            "side": "sell",
+            "quantity": 2,
+            "price": 33600,
+            "amount": 672,
+            "forced": true,
+            "sequence": 2473,
+            "commandId": "command-1338",
+            "playerId": "player-1",
+            "turn": 181
+          },
+          {
+            "type": "stockTraded",
+            "stockId": "jp:30",
+            "traderId": "player-1",
+            "side": "sell",
+            "quantity": 2,
+            "price": 30000,
+            "amount": 600,
+            "forced": true,
+            "sequence": 2576,
+            "commandId": "command-1393",
+            "playerId": "player-1",
+            "turn": 189
+          },
+          {
+            "type": "stockTraded",
+            "stockId": "jp:30",
+            "traderId": "player-1",
+            "side": "sell",
+            "quantity": 1,
+            "price": 29600,
+            "amount": 296,
+            "forced": true,
+            "sequence": 2627,
+            "commandId": "command-1420",
+            "playerId": "player-1",
+            "turn": 193
+          }
+        ],
+        "disposals": [
+          {
+            "type": "disposalCompleted",
+            "receipt": {
+              "id": "disposal-1",
+              "payerId": "player-1",
+              "recipientId": "player-4",
+              "propertyId": "japan:land:48",
+              "due": 450,
+              "amount": 282,
+              "unpaid": 168,
+              "paid": {
+                "cash": 0,
+                "bank": 282
+              },
+              "released": [
+                "japan:land:19",
+                "japan:land:24",
+                "japan:land:29",
+                "japan:land:31"
+              ],
+              "pool": [
+                null,
+                null,
+                null,
+                "japan:land:31"
+              ],
+              "draws": [
+                1,
+                1,
+                2,
+                1,
+                1,
+                1,
+                0
+              ],
+              "stocks": [],
+              "inventory": [
+                {
+                  "itemId": "tool:08",
+                  "quantity": 1,
+                  "points": 30
+                },
+                {
+                  "itemId": "tool:01",
+                  "quantity": 1,
+                  "points": 15
+                },
+                {
+                  "itemId": "tool:02",
+                  "quantity": 1,
+                  "points": 30
+                }
+              ],
+              "ignoredPoints": 75,
+              "auctions": [
+                {
+                  "propertyId": "japan:land:24",
+                  "winnerId": "player-2",
+                  "amount": 1600,
+                  "reserve": 1500
+                },
+                {
+                  "propertyId": "japan:land:29",
+                  "winnerId": "player-2",
+                  "amount": 1100,
+                  "reserve": 1000
+                },
+                {
+                  "propertyId": "japan:land:19",
+                  "winnerId": "player-2",
+                  "amount": 2100,
+                  "reserve": 2000
+                }
+              ],
+              "finishedGame": false
+            },
+            "sequence": 2710,
+            "commandId": "command-1458",
+            "playerId": "player-1",
+            "turn": 197
+          }
+        ],
+        "prefixes": [
+          "forced-stock-before",
+          "forced-stock-after",
+          "exit-before",
+          "exit-after",
+          "public-disposal",
+          "card:20-acquired",
+          "card:20-buy",
+          "free-before-true",
+          "free-after-true",
+          "free-before-false",
+          "free-after-false",
+          "redirect-before-false",
+          "redirect-after-false",
+          "alternate-payer-before-true",
+          "alternate-payer-after-true"
+        ],
+        "report": {
+          "policy": "rent-v1",
+          "toolWindows": [
+            "tool:08",
+            "tool:09"
+          ],
+          "crossChecks": [
+            {
+              "index": 1436,
+              "active": "player-1",
+              "actor": "player-2",
+              "kind": "auction",
+              "computer": false
+            },
+            {
+              "index": 2369,
+              "active": "player-2",
+              "actor": "player-3",
+              "kind": "property",
+              "computer": true
+            }
+          ],
+          "route": "payer",
+          "terminal": false,
+          "players": 4,
+          "normalSpeed": true,
+          "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+          "commands": 2391,
+          "auto": 263,
+          "human": 688,
+          "lifecycle": [
+            "pause stops waiting",
+            "resume",
+            "reset dialog cancel",
+            "reset",
+            "replace with humans",
+            "exit cleanup",
+            "fullscreen",
+            "390px"
+          ],
+          "cleanup": {
+            "raf": 0,
+            "canvas": 0
+          },
+          "errors": []
+        },
+        "hashes": {
+          "replay": "b08ac9e9886a56cbd50529ed485ecb40f23313b1c4b60ead66fe4084bfea4e77",
+          "state": "7eccbf73f451178b8fd6da719c72c0ba5d02dbce02751a299483be9fa9d1c3f3",
+          "events": "bece5375927dc960626421a43c096811386a39b8d2e156433cbda4b168761d24"
+        }
+      }
+    ],
+    "totalCommands": 6516,
+    "totalComputerDecisions": 993,
+    "namedPrefixes": 30,
+    "normalSpeed": true,
+    "injection": "auth only; no game state injection"
+  },
+  "builtUI": {
+    "built": true,
+    "normalSpeed": true,
+    "defaultHuman": true,
+    "defaultBasic": true,
+    "toolsEffect": true,
+    "policyMetadata": true,
+    "resetPreservesPolicy": true,
+    "switchBackToBasic": true,
+    "switchBackToTools": true,
+    "humanReplacement": true,
+    "exitWhileToolsWaiting": true,
+    "setup390": true,
+    "cleanup": {
+      "raf": 0,
+      "canvas": 0
+    },
+    "errors": []
+  },
+  "failedAttempts": [
+    {
+      "scope": "initial domain probe",
+      "reason": "wrong Session method name settle; corrected to settleDebt"
+    },
+    {
+      "scope": "historical debt probe",
+      "reason": "assumed paid auction; actual three auctions no eligible bidders; corrected expectation to actual receipt, no engine/policy changes"
+    },
+    {
+      "scope": "test compilation",
+      "reason": "findLast unavailable in project TS target; used reverse/find; no product changes"
+    },
+    {
+      "scope": "Chrome launch",
+      "reason": "sandbox launch SIGABRT/EPERM; approved local browser escalation then ran"
+    },
+    {
+      "scope": "first full regression",
+      "passed": 1858,
+      "failed": 1,
+      "errors": 3,
+      "reason": "old 3p site replay exceeded30s under parallel load; vitest worker onTaskUpdate timeouts",
+      "recheck": "same4site tests passed single worker; final full suite run with2workers, old tests/timeouts unchanged"
+    }
+  ],
+  "notClaimed": [
+    "native AI/hostility/difficulty parity",
+    "browser target mutation or absent-creditor fallback; domain only",
+    "automatic AI necessary stock liquidation/exit on new browser route; historical prefix/domain evidence only",
+    "all characters/seat configurations/terminal or save-load/background throttling",
+    "other active cards/stocks/financing/research/bidding",
+    "per-seat policy mix or midgame takeover"
+  ],
+  "retainedDifferences": [
+    "native precision/RNG/chart",
+    "other asset sales",
+    "special actors",
+    "original wheel",
+    "original exit stack/endgame",
+    "minigame presentation/collision",
+    "native snapshot"
+  ],
+  "next": "S3-02c: optional detention attack redirect target/return risk; distinguish automatic absolution/revenge from host policy; separately version, retain basic-v1/tools-v1/rent-v1 and v44",
+  "git": {
+    "committed": false,
+    "pushed": false,
+    "deployed": false
+  }
+}

@@ -1,0 +1,343 @@
+{
+  "stage": "S2-03ab",
+  "date": "2026-10-06",
+  "rulesId": "japan-events-candidate-v41",
+  "fingerprint": "31214035",
+  "defaultMode": "minigames",
+  "status": "three actual playable minigame candidates; original-map basic UI accepted; native art/input equivalence and S2-03 group closure incomplete",
+  "progress": {
+    "itemsHistorical": {
+      "implemented": 43,
+      "accepted": 43,
+      "total": 43
+    },
+    "newsHistorical": 36,
+    "japanFortuneHistorical": 37,
+    "magicEffectsHistorical": 12,
+    "minigames": {
+      "implementedCandidates": 3,
+      "basicUiCovered": 3,
+      "total": 3
+    },
+    "shopAcquisitionV40Retained": true
+  },
+  "sourceAudit": {
+    "files": 2,
+    "anchors": 33,
+    "validPenguinCells": 64,
+    "referenceCommit": "ec7d70e693059d1e781d9d1cc2ad7f36d360d39e",
+    "nativeExecution": false
+  },
+  "checks": {
+    "tests": 1521,
+    "files": 107,
+    "newDomain": 40,
+    "newComponent": 6,
+    "newRealReplay": 3,
+    "newMatrix": 3,
+    "versionPlayerMatrix": 123,
+    "versions": "v1-v41",
+    "players": [
+      2,
+      3,
+      4
+    ],
+    "execution": "full1521/107 passed",
+    "lint": "passed",
+    "build": "passed; retained chunk-size and mixed import warnings",
+    "diffCheck": "passed"
+  },
+  "browser": {
+    "actualCommands": 1106,
+    "actualInputs": 150,
+    "actualTicks": 703,
+    "normalSpeed": true,
+    "map": "original Japan",
+    "worldInjection": false,
+    "authFixtureOnly": true,
+    "routes": [
+      {
+        "commands": 223,
+        "inputs": 18,
+        "ticks": 150,
+        "settlements": 1,
+        "prefixes": [
+          "beforeStart",
+          "beforeInput",
+          "midplay",
+          "beforeAck"
+        ],
+        "receipts": [
+          {
+            "type": "minigameFinished",
+            "game": "penguin",
+            "node": 22,
+            "score": 63,
+            "amount": 63,
+            "before": 10,
+            "balance": 73,
+            "reason": "time",
+            "ticks": 150,
+            "sequence": 101,
+            "commandId": "command-222",
+            "playerId": "player-2",
+            "turn": 6
+          }
+        ],
+        "report": {
+          "group": "03ab-22",
+          "normalSpeed": true,
+          "map": "original Japan; legal route and real input; auth-only fixture; no game-state injection",
+          "rulesId": "japan-events-candidate-v41",
+          "fingerprint": "31214035",
+          "commands": 223,
+          "turn": 7,
+          "players": 2,
+          "shots": 0,
+          "digs": 18,
+          "moves": 0,
+          "receipts": [
+            {
+              "type": "minigameFinished",
+              "game": "penguin",
+              "node": 22,
+              "score": 63,
+              "amount": 63,
+              "before": 10,
+              "balance": 73,
+              "reason": "time",
+              "ticks": 150,
+              "sequence": 101,
+              "commandId": "command-222",
+              "playerId": "player-2",
+              "turn": 6
+            }
+          ],
+          "checks": [
+            "ready",
+            "pause-freezes-ticks",
+            "fullscreen",
+            "reset-cancel",
+            "390px-playing",
+            "positive-score",
+            "natural-end",
+            "ack-once",
+            "next-turn",
+            "replay",
+            "reset-clears",
+            "cleanup"
+          ],
+          "cleanup": {
+            "raf": 0,
+            "canvas": 0
+          },
+          "errors": []
+        }
+      },
+      {
+        "commands": 292,
+        "inputs": 57,
+        "ticks": 152,
+        "settlements": 1,
+        "prefixes": [
+          "beforeStart",
+          "beforeInput",
+          "midplay",
+          "beforeAck"
+        ],
+        "receipts": [
+          {
+            "type": "minigameFinished",
+            "game": "balloon",
+            "node": 24,
+            "score": 260,
+            "amount": 260,
+            "before": 10,
+            "balance": 270,
+            "reason": "time",
+            "ticks": 152,
+            "sequence": 145,
+            "commandId": "command-291",
+            "playerId": "player-2",
+            "turn": 8
+          }
+        ],
+        "report": {
+          "group": "03ab-24",
+          "normalSpeed": true,
+          "map": "original Japan; legal route and real input; auth-only fixture; no game-state injection",
+          "rulesId": "japan-events-candidate-v41",
+          "fingerprint": "31214035",
+          "commands": 292,
+          "turn": 9,
+          "players": 3,
+          "shots": 57,
+          "digs": 0,
+          "moves": 0,
+          "receipts": [
+            {
+              "type": "minigameFinished",
+              "game": "balloon",
+              "node": 24,
+              "score": 260,
+              "amount": 260,
+              "before": 10,
+              "balance": 270,
+              "reason": "time",
+              "ticks": 152,
+              "sequence": 145,
+              "commandId": "command-291",
+              "playerId": "player-2",
+              "turn": 8
+            }
+          ],
+          "checks": [
+            "ready",
+            "pause-freezes-ticks",
+            "fullscreen",
+            "reset-cancel",
+            "390px-playing",
+            "positive-score",
+            "natural-end",
+            "ack-once",
+            "next-turn",
+            "replay",
+            "reset-clears",
+            "cleanup"
+          ],
+          "cleanup": {
+            "raf": 0,
+            "canvas": 0
+          },
+          "errors": []
+        }
+      },
+      {
+        "commands": 591,
+        "inputs": 75,
+        "ticks": 401,
+        "settlements": 1,
+        "prefixes": [
+          "beforeStart",
+          "midplay",
+          "beforeInput",
+          "beforeAck"
+        ],
+        "receipts": [
+          {
+            "type": "minigameFinished",
+            "game": "sky",
+            "node": 26,
+            "score": 43,
+            "amount": 43,
+            "before": 10,
+            "balance": 53,
+            "reason": "time",
+            "ticks": 401,
+            "sequence": 207,
+            "commandId": "command-590",
+            "playerId": "player-2",
+            "turn": 14
+          }
+        ],
+        "report": {
+          "group": "03ab-26",
+          "normalSpeed": true,
+          "map": "original Japan; legal route and real input; auth-only fixture; no game-state injection",
+          "rulesId": "japan-events-candidate-v41",
+          "fingerprint": "31214035",
+          "commands": 591,
+          "turn": 15,
+          "players": 4,
+          "shots": 0,
+          "digs": 0,
+          "moves": 242,
+          "receipts": [
+            {
+              "type": "minigameFinished",
+              "game": "sky",
+              "node": 26,
+              "score": 43,
+              "amount": 43,
+              "before": 10,
+              "balance": 53,
+              "reason": "time",
+              "ticks": 401,
+              "sequence": 207,
+              "commandId": "command-590",
+              "playerId": "player-2",
+              "turn": 14
+            }
+          ],
+          "checks": [
+            "ready",
+            "pause-freezes-ticks",
+            "fullscreen",
+            "reset-cancel",
+            "390px-playing",
+            "positive-score",
+            "natural-end",
+            "ack-once",
+            "next-turn",
+            "replay",
+            "reset-clears",
+            "cleanup"
+          ],
+          "cleanup": {
+            "raf": 0,
+            "canvas": 0
+          },
+          "errors": []
+        }
+      }
+    ]
+  },
+  "verification": {
+    "accounting": "each minigame command preserves money/inventory/all supply/company/date/status; independent16bit point settlement; current player only; exactly once",
+    "replay": "exact full state/events, four real prefixes resumed, SHA256 golden fixtures",
+    "defaultDevelopment": {
+      "rulesId": "japan-events-candidate-v41",
+      "fingerprint": "31214035",
+      "defaultMode": "minigames",
+      "cleanup": {
+        "raf": 0,
+        "canvas": 0
+      },
+      "errors": []
+    },
+    "defaultBuild": {
+      "rulesId": "japan-events-candidate-v41",
+      "fingerprint": "31214035",
+      "defaultMode": "minigames",
+      "cleanup": {
+        "raf": 0,
+        "canvas": 0
+      },
+      "errors": []
+    }
+  },
+  "candidateDifferences": [
+    "Existing seeded range sampler, not libc rand or sound/animation draws",
+    "Procedural SVG replaces original panels/sprites/hitmask and sound; no pixel-equivalence claim",
+    "Sky fixed rectangle x±24,y320..380 instead of per-character animated sprite bounding box; initial source dropFrame reset0 instead of native persistent global",
+    "Penguin safe valid-neighbor detour at hole instead of native fixed-point hole correction; floating DDA instead of16.16 quantization; foreground cover not reproduced",
+    "Sky waits for pending bomb animation during drain; native drain and final bomb-animation ordering retained as difference",
+    "Balloon offscreen removal based on known hitbox extent instead of native sprite blit visibility result",
+    "Web explicit start/ack/quit score retention; skips native intro/result delay; pause freezes without catch-up",
+    "No native Windows run, AI/special-role branch, resource re-export or original art matching"
+  ],
+  "browserNotCovered": [
+    "penguin trap",
+    "sky bomb termination",
+    "question six effects/halving",
+    "extreme integer wrap",
+    "voluntary quit",
+    "touch drag and balloon pointer-specific interaction",
+    "non-player2 or all three minigames in same session",
+    "G7 actual input",
+    "same-day lottery/debt/dividend bankruptcy combination",
+    "all43 items/36news/37fortune UI in v41"
+  ],
+  "next": "S2-03ac:17-code current coverage/differences matrix and original-map2-4player cross-site/state/calendar/replay combination closure; preservev41 or new semanticsv42",
+  "git": "not committed, pushed or deployed"
+}

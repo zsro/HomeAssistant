@@ -1,0 +1,121 @@
+{
+  "displayChecks": [
+    {
+      "index": 16,
+      "gods": [
+        {
+          "carrier": "player-1",
+          "text": "衰神 · 剩余13次自身行动开始结算"
+        }
+      ]
+    },
+    {
+      "index": 46,
+      "gods": [
+        {
+          "carrier": "player-2",
+          "text": "小穷神 · 剩余7次自身行动开始结算"
+        },
+        {
+          "carrier": "player-1",
+          "text": "衰神 · 剩余11次自身行动开始结算"
+        }
+      ]
+    },
+    {
+      "index": 156,
+      "gods": [
+        {
+          "carrier": "player-1",
+          "text": "衰神 · 剩余4次自身行动开始结算"
+        }
+      ]
+    },
+    {
+      "index": 215,
+      "gods": []
+    },
+    {
+      "index": 238,
+      "gods": [
+        {
+          "carrier": "player-1",
+          "text": "天使 · 剩余7次自身行动开始结算"
+        }
+      ]
+    },
+    {
+      "index": 251,
+      "gods": [
+        {
+          "carrier": "player-1",
+          "text": "小衰神 · 剩余7次自身行动开始结算"
+        }
+      ]
+    }
+  ],
+  "robotPreviews": [],
+  "policy": "research-v1",
+  "toolWindows": [
+    "tool:08",
+    "tool:09"
+  ],
+  "crossChecks": [],
+  "route": "2",
+  "terminal": false,
+  "players": 2,
+  "normalSpeed": true,
+  "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+  "commands": 285,
+  "auto": 56,
+  "human": 51,
+  "lifecycle": [
+    "pause stops waiting",
+    "resume",
+    "reset dialog cancel",
+    "reset",
+    "replace with humans",
+    "exit cleanup",
+    "fullscreen",
+    "390px"
+  ],
+  "cleanup": {
+    "raf": 0,
+    "canvas": 0
+  },
+  "errors": [],
+  "pairNotices": [
+    {
+      "type": "g6Notice",
+      "message": "配对补位：6号槽出现在109号路格。",
+      "sequence": 305,
+      "commandId": "command-166",
+      "playerId": "player-2",
+      "turn": 20
+    },
+    {
+      "type": "g6Notice",
+      "message": "配对补位：10号槽出现在43号路格。",
+      "sequence": 502,
+      "commandId": "command-273",
+      "playerId": "player-1",
+      "turn": 33
+    }
+  ],
+  "prefixes": [
+    24,
+    59,
+    166,
+    233,
+    258,
+    273
+  ],
+  "fullReplay": true,
+  "prefixReplay": true,
+  "commandsMatchPriorLegalRoute": true,
+  "hashes": {
+    "replay": "749e10e624bdb413c806628e950ae4657a5bf8b45789879936b9de18873a91aa",
+    "state": "4732ac85a7f6652440e2e967a2d20894ec4ff443077c95aa35ca5d56c7deff46",
+    "events": "461d8d0dc2b8556c719a876ec3e23121c5fa28c63ac31ce2b436e1e3bbf62b44"
+  }
+}

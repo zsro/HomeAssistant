@@ -1,0 +1,442 @@
+{
+  "players": 4,
+  "commands": 925,
+  "turn": 129,
+  "auto": 305,
+  "human": 82,
+  "acquisitions": [
+    {
+      "id": "player-3",
+      "ai": true,
+      "item": "tool:03",
+      "turn": 123,
+      "action": "buyItem",
+      "events": [
+        {
+          "type": "itemBought",
+          "itemId": "tool:03",
+          "cost": 25,
+          "points": 145,
+          "supply": 9,
+          "sequence": 1645,
+          "commandId": "command-872",
+          "playerId": "player-3",
+          "turn": 123
+        }
+      ]
+    },
+    {
+      "id": "player-3",
+      "ai": true,
+      "item": "tool:04",
+      "turn": 123,
+      "action": "buyItem",
+      "events": [
+        {
+          "type": "itemBought",
+          "itemId": "tool:04",
+          "cost": 25,
+          "points": 120,
+          "supply": 9,
+          "sequence": 1646,
+          "commandId": "command-873",
+          "playerId": "player-3",
+          "turn": 123
+        }
+      ]
+    },
+    {
+      "id": "player-3",
+      "ai": true,
+      "item": "tool:07",
+      "turn": 123,
+      "action": "buyItem",
+      "events": [
+        {
+          "type": "itemBought",
+          "itemId": "tool:07",
+          "cost": 100,
+          "points": 20,
+          "supply": 9,
+          "sequence": 1647,
+          "commandId": "command-874",
+          "playerId": "player-3",
+          "turn": 123
+        }
+      ]
+    }
+  ],
+  "uses": [
+    {
+      "ai": true,
+      "id": "player-3",
+      "item": "tool:07",
+      "target": {
+        "kind": "node",
+        "id": "2"
+      },
+      "turn": 127,
+      "phase": "idle",
+      "affected": {
+        "properties": [
+          "japan:land:23",
+          "japan:land:24"
+        ],
+        "players": [
+          "player-4"
+        ],
+        "hazards": [],
+        "blocks": []
+      },
+      "properties": [
+        {
+          "before": {
+            "id": "japan:land:23",
+            "ownerId": "player-2",
+            "level": 1,
+            "basePrice": 2000,
+            "buildingType": 0,
+            "priceStatus": 0,
+            "research": null
+          },
+          "after": {
+            "id": "japan:land:23",
+            "ownerId": "player-2",
+            "level": 0,
+            "basePrice": 2000,
+            "buildingType": 0,
+            "priceStatus": 0,
+            "research": null
+          }
+        },
+        {
+          "before": {
+            "id": "japan:land:24",
+            "ownerId": null,
+            "level": 0,
+            "basePrice": 1500,
+            "buildingType": 0,
+            "priceStatus": 0,
+            "research": null
+          },
+          "after": {
+            "id": "japan:land:24",
+            "ownerId": null,
+            "level": 0,
+            "basePrice": 1500,
+            "buildingType": 0,
+            "priceStatus": 0,
+            "research": null
+          }
+        }
+      ],
+      "events": [
+        {
+          "type": "effectConsumed",
+          "playerId": "player-3",
+          "itemId": "tool:07",
+          "amount": 1,
+          "sequence": 1692,
+          "commandId": "command-901",
+          "turn": 127
+        },
+        {
+          "type": "g4PropertyChanged",
+          "property": {
+            "id": "japan:land:23",
+            "ownerId": "player-2",
+            "level": 0,
+            "basePrice": 2000,
+            "buildingType": 0,
+            "priceStatus": 0,
+            "research": null
+          },
+          "reason": "飞弹",
+          "sequence": 1693,
+          "commandId": "command-901",
+          "playerId": "player-3",
+          "turn": 127
+        },
+        {
+          "type": "g4PropertyChanged",
+          "property": {
+            "id": "japan:land:24",
+            "ownerId": null,
+            "level": 0,
+            "basePrice": 1500,
+            "buildingType": 0,
+            "priceStatus": 0,
+            "research": null
+          },
+          "reason": "飞弹",
+          "sequence": 1694,
+          "commandId": "command-901",
+          "playerId": "player-3",
+          "turn": 127
+        },
+        {
+          "type": "mobilityChanged",
+          "targetId": "player-4",
+          "mobility": {
+            "stop": 0,
+            "winter": 0,
+            "dream": 0,
+            "prison": 0,
+            "hospital": 3,
+            "turtle": 0,
+            "vehicle": "foot",
+            "diceCount": 1,
+            "savedVehicle": "foot",
+            "savedDice": 1,
+            "travel": 0
+          },
+          "reason": "爆炸住院3次，车辆损毁",
+          "sequence": 1695,
+          "commandId": "command-901",
+          "playerId": "player-3",
+          "turn": 127
+        }
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-3",
+      "item": "tool:02",
+      "target": {
+        "kind": "node",
+        "id": "9"
+      },
+      "turn": 127,
+      "phase": "idle",
+      "affected": null,
+      "properties": [],
+      "events": [
+        {
+          "type": "effectConsumed",
+          "playerId": "player-3",
+          "itemId": "tool:02",
+          "amount": 1,
+          "sequence": 1701,
+          "commandId": "command-907",
+          "turn": 127
+        },
+        {
+          "type": "effectResolved",
+          "definitionId": "tool:02:place-anchor-v1",
+          "sourceId": "player-3",
+          "target": {
+            "kind": "node",
+            "id": "9"
+          },
+          "sequence": 1702,
+          "commandId": "command-907",
+          "playerId": "player-3",
+          "turn": 127
+        },
+        {
+          "type": "roadblockPlaced",
+          "node": 9,
+          "sequence": 1703,
+          "commandId": "command-907",
+          "playerId": "player-3",
+          "turn": 127
+        }
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-3",
+      "item": "tool:03",
+      "target": {
+        "kind": "node",
+        "id": "53"
+      },
+      "turn": 127,
+      "phase": "idle",
+      "affected": null,
+      "properties": [],
+      "events": [
+        {
+          "type": "effectConsumed",
+          "playerId": "player-3",
+          "itemId": "tool:03",
+          "amount": 1,
+          "sequence": 1709,
+          "commandId": "command-913",
+          "turn": 127
+        },
+        {
+          "type": "hazardChanged",
+          "hazard": {
+            "id": 1,
+            "itemId": "tool:03",
+            "node": 53,
+            "carrier": null,
+            "remaining": 0
+          },
+          "removed": false,
+          "reason": "放置",
+          "sequence": 1710,
+          "commandId": "command-913",
+          "playerId": "player-3",
+          "turn": 127
+        }
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-3",
+      "item": "tool:04",
+      "target": {
+        "kind": "node",
+        "id": "52"
+      },
+      "turn": 127,
+      "phase": "idle",
+      "affected": null,
+      "properties": [],
+      "events": [
+        {
+          "type": "effectConsumed",
+          "playerId": "player-3",
+          "itemId": "tool:04",
+          "amount": 1,
+          "sequence": 1716,
+          "commandId": "command-919",
+          "turn": 127
+        },
+        {
+          "type": "hazardChanged",
+          "hazard": {
+            "id": 2,
+            "itemId": "tool:04",
+            "node": 52,
+            "carrier": null,
+            "remaining": 0
+          },
+          "removed": false,
+          "reason": "放置",
+          "sequence": 1717,
+          "commandId": "command-919",
+          "playerId": "player-3",
+          "turn": 127
+        }
+      ]
+    }
+  ],
+  "cancellations": [
+    {
+      "ai": false,
+      "id": "player-1",
+      "item": "tool:02",
+      "turn": 13
+    }
+  ],
+  "hazardEvents": [
+    {
+      "type": "hazardChanged",
+      "hazard": {
+        "id": 1,
+        "itemId": "tool:03",
+        "node": 53,
+        "carrier": null,
+        "remaining": 0
+      },
+      "removed": false,
+      "reason": "放置",
+      "sequence": 1710,
+      "commandId": "command-913",
+      "playerId": "player-3",
+      "turn": 127
+    },
+    {
+      "type": "hazardChanged",
+      "hazard": {
+        "id": 2,
+        "itemId": "tool:04",
+        "node": 52,
+        "carrier": null,
+        "remaining": 0
+      },
+      "removed": false,
+      "reason": "放置",
+      "sequence": 1717,
+      "commandId": "command-919",
+      "playerId": "player-3",
+      "turn": 127
+    }
+  ],
+  "stops": [],
+  "prefixes": [
+    "cancel-before",
+    "cancel-after",
+    "tool:03-acquired",
+    "tool:04-acquired",
+    "tool:07-acquired",
+    "tool:07-paused",
+    "tool:07-resumed",
+    "tool:07-confirm-before",
+    "tool:07-confirm-after",
+    "tool:02-paused",
+    "tool:02-resumed",
+    "tool:02-confirm-before",
+    "tool:02-confirm-after",
+    "tool:03-paused",
+    "tool:03-resumed",
+    "tool:03-confirm-before",
+    "tool:03-confirm-after",
+    "hazard-放置-before",
+    "hazard-放置-after",
+    "tool:04-paused",
+    "tool:04-resumed",
+    "tool:04-confirm-before",
+    "tool:04-confirm-after"
+  ],
+  "report": {
+    "policy": "roads-v1",
+    "toolWindows": [
+      "tool:08",
+      "tool:09",
+      "card:28",
+      "card:17",
+      "card:29",
+      "card:14",
+      "card:03",
+      "card:09",
+      "card:30",
+      "tool:07",
+      "tool:02",
+      "tool:03",
+      "tool:04"
+    ],
+    "crossChecks": [],
+    "route": "4",
+    "terminal": false,
+    "players": 4,
+    "normalSpeed": true,
+    "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+    "commands": 925,
+    "auto": 305,
+    "human": 82,
+    "lifecycle": [
+      "pause stops waiting",
+      "resume",
+      "reset dialog cancel",
+      "reset",
+      "replace with humans",
+      "exit cleanup",
+      "fullscreen",
+      "390px"
+    ],
+    "cleanup": {
+      "raf": 0,
+      "canvas": 0
+    },
+    "errors": []
+  },
+  "hashes": {
+    "replay": "3eb8e3270dacaa0e7767f7d324ba559e632447c91c21077ff707a72eb122c233",
+    "state": "639359f528e768c80366413371bcfe0a319777520ee5d266dbfe4f0a86dd94e7",
+    "events": "a47301c32f013a307e90383787655e7d6d76ef719449d1e3eecae636ac6677ca"
+  }
+}

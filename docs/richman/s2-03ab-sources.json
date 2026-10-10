@@ -1,0 +1,280 @@
+{
+  "stage": "S2-03ab",
+  "referenceCommit": "ec7d70e693059d1e781d9d1cc2ad7f36d360d39e",
+  "grade": "fixed cross-version source; no native Windows execution",
+  "inheritedSource": "s2-03aa-sources.json",
+  "verifiedFiles": 2,
+  "sources": [
+    {
+      "path": "asm/rich4_small_games.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_small_games.asm",
+      "gitBlobSha1": "26da0af93b790bf6320438cb30599e5c440e2fbc",
+      "sha256": "62888c52a2266cf5f7a25ec7a5ca03b0e5988b0d1e57f98d102332abf99d3c43"
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_core_actions.asm",
+      "gitBlobSha1": "ebfde6c820e8a430b856d9816a926b636e0db1dc",
+      "sha256": "2874c1a3e0ca1d0da5afe4cb93e42cf2d6f6fa864dbee11d7bcaa028af07d94a"
+    }
+  ],
+  "references": [
+    {
+      "path": "asm/rich4_small_games.asm",
+      "anchor": "fcn_00412014:",
+      "lines": [
+        98
+      ]
+    },
+    {
+      "path": "asm/rich4_small_games.asm",
+      "anchor": "fcn_0041211c:",
+      "lines": [
+        217
+      ]
+    },
+    {
+      "path": "asm/rich4_small_games.asm",
+      "anchor": "fcn_00412287:",
+      "lines": [
+        339
+      ]
+    },
+    {
+      "path": "asm/rich4_small_games.asm",
+      "anchor": "fcn_004123d7:",
+      "lines": [
+        447
+      ]
+    },
+    {
+      "path": "asm/rich4_small_games.asm",
+      "anchor": "fcn_004124c8:",
+      "lines": [
+        536
+      ]
+    },
+    {
+      "path": "asm/rich4_small_games.asm",
+      "anchor": "loc_004129ab:",
+      "lines": [
+        926
+      ]
+    },
+    {
+      "path": "asm/rich4_small_games.asm",
+      "anchor": "fcn_00412f6f:",
+      "lines": [
+        1404
+      ]
+    },
+    {
+      "path": "asm/rich4_small_games.asm",
+      "anchor": "fcn_00413248:",
+      "lines": [
+        1671
+      ]
+    },
+    {
+      "path": "asm/rich4_small_games.asm",
+      "anchor": "loc_00413436:",
+      "lines": [
+        1811
+      ]
+    },
+    {
+      "path": "asm/rich4_small_games.asm",
+      "anchor": "loc_0041364d:",
+      "lines": [
+        1964
+      ]
+    },
+    {
+      "path": "asm/rich4_small_games.asm",
+      "anchor": "loc_0041378d:",
+      "lines": [
+        2059
+      ]
+    },
+    {
+      "path": "asm/rich4_small_games.asm",
+      "anchor": "fcn_00413a4a:",
+      "lines": [
+        2272
+      ]
+    },
+    {
+      "path": "asm/rich4_small_games.asm",
+      "anchor": "fcn_0041417e:",
+      "lines": [
+        2856
+      ]
+    },
+    {
+      "path": "asm/rich4_small_games.asm",
+      "anchor": "fcn_00414858:",
+      "lines": [
+        3448
+      ]
+    },
+    {
+      "path": "asm/rich4_small_games.asm",
+      "anchor": "fcn_00414bbc:",
+      "lines": [
+        3717
+      ]
+    },
+    {
+      "path": "asm/rich4_small_games.asm",
+      "anchor": "loc_00414dd2:",
+      "lines": [
+        3880
+      ]
+    },
+    {
+      "path": "asm/rich4_small_games.asm",
+      "anchor": "loc_00414e36:",
+      "lines": [
+        3909
+      ]
+    },
+    {
+      "path": "asm/rich4_small_games.asm",
+      "anchor": "loc_00414e5c:",
+      "lines": [
+        3923
+      ]
+    },
+    {
+      "path": "asm/rich4_small_games.asm",
+      "anchor": "fcn_00414fcd:",
+      "lines": [
+        4039
+      ]
+    },
+    {
+      "path": "asm/rich4_small_games.asm",
+      "anchor": "_rich4_ui_game_penguin_treasure:",
+      "lines": [
+        4223
+      ]
+    },
+    {
+      "path": "asm/rich4_small_games.asm",
+      "anchor": "loc_00415457:",
+      "lines": [
+        4389
+      ]
+    },
+    {
+      "path": "asm/rich4_small_games.asm",
+      "anchor": "_rich4_ui_game_balloon:",
+      "lines": [
+        4429
+      ]
+    },
+    {
+      "path": "asm/rich4_small_games.asm",
+      "anchor": "loc_004155ec:",
+      "lines": [
+        4506
+      ]
+    },
+    {
+      "path": "asm/rich4_small_games.asm",
+      "anchor": "_rich4_ui_game_xicongtianjiang:",
+      "lines": [
+        4515
+      ]
+    },
+    {
+      "path": "asm/rich4_small_games.asm",
+      "anchor": "ref_00475004:",
+      "lines": [
+        4889
+      ]
+    },
+    {
+      "path": "asm/rich4_small_games.asm",
+      "anchor": "ref_00475010:",
+      "lines": [
+        4894
+      ]
+    },
+    {
+      "path": "asm/rich4_small_games.asm",
+      "anchor": "ref_00475039:",
+      "lines": [
+        4912
+      ]
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "anchor": "_rich4_handle_player_land_on_node:",
+      "lines": [
+        322
+      ]
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "anchor": "loc_00419884:",
+      "lines": [
+        346
+      ]
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "anchor": "loc_0041b146:",
+      "lines": [
+        2366
+      ]
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "anchor": "loc_0041b152:",
+      "lines": [
+        2370
+      ]
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "anchor": "loc_0041b15e:",
+      "lines": [
+        2374
+      ]
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "anchor": "loc_0041b16c:",
+      "lines": [
+        2379
+      ]
+    }
+  ],
+  "rules": {
+    "R12-04ab": "Japan node22/code6 penguin,24/code7 balloon,26/code8 sky; current seat only on normal landing, nonzero event skipped under dream, no passing service. Native human byte+21==1 AND cfg+1 enables game; otherwise rand%20+50. Web human hotseat actual game; no fallback-only claim. No entry payment, company owner test or inventory reward in these entries.",
+    "R12-05ab": "Penguin:81 grid cells,64 valid; starting(2,6); hidden types1..5 counts3/12/3/9/1 uniformly without replacement. Click different valid cell, move via fixed-point DDA with4 ticks per segment and4dig ticks, only destination removes item. Type1 trap ends,2/3/4/5 awards5/12/8/20. 150*100ms; time expiry cancels unfinished movement/dig. Native postgame character animation/delay does not award inventory.",
+    "R12-06ab": "Balloon:150*100ms spawn period,16 slots,8 lanes40+80j blocking y>300. Per empty slot rand%1000:0..19 typefloor(r/4),20..27 floor((27-r)/2)+5,28/29 weighted special9/10/11=2/5/3;otherwise none. Spawn y420, speed15/18/24 table. Click inclusive halfwidth22,height30 types<6 else18/26, all overlapping slots. Type0..8 adds1..9 capped999;9 doubles signed32;10 arithmetic halves;11 clears old freeze/speed then rand6:nexttick stopspawn/freeze20/double-speed/half-speed/zero/double-score. Burst3ticks, time end drains remaining targets and permits clicks.",
+    "R12-07ab": "Sky:360*50ms spawn period; source starts110 with mode3/frame4, moves12 via directional5frame runs110..530 and probabilistic turns beyond center. 16slots. Four treasure probabilities2/3/6/9 of20 award10/5/3/1; bombtype4 ends play and preserves score. Launchy100,velocity-16 rises by2 cap16 until y130,then speeds24/18/15/12/15; horizontal drift trunc((source-320)/210*260-(source-320)), scaled by(y-130)/250. Cursor target follows10px if difference>8; native collision uses current moving sprite bounds. Miss y>380 removed, timer expiry drains. Bomb0..12 frame machine spawns at8 from opposite-side160..299 or360..499.",
+    "R07-06ab": "Native outer land handler adds returnedAX to current player word+48. Web score low16 + prior points mod65536, settled once after explicit result acknowledgement. No bag/pool/cash/bank/company funds/cumulative mutation; no15day dividend amount from minigames. Failure is local minigame failure, no board hospitalization/insurance payment.",
+    "R13-14ab": "v41 serializes pending game,score,grid/projectiles,input and ordered ticks; same actor/revision/decision/pause guards. Tick logging independent of wall time preserves replay/prefix. No endTurn before result ack; date only existing outer turn order. Explicit start and acknowledgement and voluntary quit-with-earned-score are Web interaction additions, not verified native Escape settlement."
+  },
+  "gridSha256": "bfa1e8f99d4c6946b84906d2f3187b5450e66b8dd45f06366f43720b531bcd65",
+  "candidateDifferences": [
+    "Existing seeded range sampler, not libc rand or sound/animation draws",
+    "Procedural SVG replaces original panels/sprites/hitmask and sound; no pixel-equivalence claim",
+    "Sky fixed rectangle x±24,y320..380 instead of per-character animated sprite bounding box; initial source dropFrame reset0 instead of native persistent global",
+    "Penguin safe valid-neighbor detour at hole instead of native fixed-point hole correction; floating DDA instead of16.16 quantization; foreground cover not reproduced",
+    "Sky waits for pending bomb animation during drain; native drain and final bomb-animation ordering retained as difference",
+    "Balloon offscreen removal based on known hitbox extent instead of native sprite blit visibility result",
+    "Web explicit start/ack/quit score retention; skips native intro/result delay; pause freezes without catch-up",
+    "No native Windows run, AI/special-role branch, resource re-export or original art matching"
+  ],
+  "deferred": [
+    "other asset listings",
+    "special actors",
+    "native roulette",
+    "post-exit stack and ending",
+    "native sprite and input equivalence"
+  ]
+}

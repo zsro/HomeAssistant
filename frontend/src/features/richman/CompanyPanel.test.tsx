@@ -1,0 +1,15 @@
+import {ReactionPanel} from './G3Choice';
+import {cleanup,fireEvent,render,screen} from '@testing-library/react';
+import {afterEach,expect,it,vi} from 'vitest';
+import {CompanyPanel} from './CompanyPanel';
+import {GameSession} from './game/session';
+import type {Manifest} from './types';
+import nodes from './japan-topology.fixture.json';
+afterEach(cleanup);
+const manifest:Manifest={version:1,map:{name:'日本',width:2304,height:2304,nodes,scenery:[]},sprites:{},characters:['a','b','c','d'].map(id=>({id,name:id,color:'#fff',idle:[],walk:[],walkFramesPerDirection:10}))};
+function snapshot(){const session=new GameSession(manifest,{id:()=> 'company-ui',seed:()=> 'company-ui'},'company');session.start({mode:'company',characterIds:['b','d'],seed:'company-ui',startDate:'1998-01-07'});return session.snapshot();}
+it('company mode keeps inherited lottery/calendar/dividends and initially empty service ledger',()=>{const s=snapshot();expect(s.mode).toBe('company');expect(s.lottery).toBeDefined();expect(s.news!.business!.dividends).toBeNull();render(<CompanyPanel snapshot={s} ack={vi.fn()}/>);expect(screen.getByText(/尚未发生营业结算/)).toBeInTheDocument();});
+it('receipt names visitor and real payer; pending token acknowledges once; pause disables',()=>{const s=snapshot(),ack=vi.fn();s.companyDecision={kind:'company',id:'receipt-1',receipt:{kind:'companyFee',companyId:'japan:company:2',name:'豐田汽車',node:59,visitorId:'player-1',ownerId:'player-2',payerId:'player-2',base:2100,amount:2100,factor:1,dice:3,days:8,reason:'700 × 1 × 3',free:false,redirected:true,godPayer:false,cash:100,bank:200,paid:300,unpaid:1800,bankrupt:true,fundsBefore:0,fundsAfter:300,cumulativeBefore:0,cumulativeAfter:300}};const{rerender}=render(<CompanyPanel snapshot={s} ack={ack}/>);expect(screen.getByLabelText('最近营业账单')).toHaveTextContent('最终付款人：玩家 2');expect(screen.getByRole('status')).toHaveTextContent('尚欠 1,800 元');fireEvent.click(screen.getByRole('button',{name:'确认营业结算'}));expect(ack).toHaveBeenCalledExactlyOnceWith('receipt-1');s.paused=true;rerender(<CompanyPanel snapshot={s} ack={ack}/>);expect(screen.getByRole('button')).toBeDisabled();s.news!.business!.service=s.companyDecision.receipt;s.companyDecision=null;rerender(<CompanyPanel snapshot={s} ack={ack}/>);expect(screen.queryByRole('button')).toBeNull();});
+it('old mode has no company service UI',()=>{const s=snapshot();delete s.news!.business!.service;const{container}=render(<CompanyPanel snapshot={s} ack={vi.fn()}/>);expect(container).toBeEmptyDOMElement();});
+
+it('company redirect explains company recipient and no owner waiver',()=>{const s=snapshot();s.reaction={kind:'reaction',id:'r',stage:'redirect',responderId:'player-1',targets:['player-2'],continuation:{kind:'companyFee',companyId:'japan:company:2',name:'豐田汽車',node:59,visitorId:'player-1',ownerId:'player-2',base:2100,amount:2100,factor:1,dice:3,days:8,reason:'700 × 1 × 3'}};render(<ReactionPanel snapshot={s} respond={vi.fn()}/>);expect(screen.getByText(/转给经营者本人也不免付/)).toBeInTheDocument();expect(screen.queryByText(/转给业主本人则免付/)).toBeNull();});

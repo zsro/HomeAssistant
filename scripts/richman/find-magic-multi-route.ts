@@ -1,0 +1,2 @@
+import fs from 'node:fs';import {planMagicNested} from './plan-magic-nested-journey';
+for(let i=1;i<=30;i++){const p=planMagicNested('nested-chain-'+i,4,650,true);if(p){fs.writeFileSync('/private/tmp/richman-unified-03y-multi.json',JSON.stringify(p,null,2));console.log(JSON.stringify({seed:p.state.seed,commands:p.replay.commands.length,turn:p.state.turn,magic:p.events.filter(e=>e.type==='magicResolved').map(e=>({effect:e.receipt.effect,targets:e.receipt.targets,fortunes:e.receipt.rows.map(r=>r.nested?.fortunes)}))}));break;}}

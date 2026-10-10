@@ -1,0 +1,228 @@
+{
+  "mode": "tools",
+  "map": "original Japan, no modified roads/assets/state",
+  "animation": "test-only repeated original 50 ms session ticks",
+  "games": [
+    {
+      "count": 2,
+      "bankArrivals": {
+        "passing": 5,
+        "landing": 0
+      },
+      "eliminations": [
+        {
+          "turn": 183,
+          "playerId": "player-1",
+          "released": 18,
+          "built": 6
+        }
+      ],
+      "repurchases": [],
+      "seed": "s1-04-loop",
+      "turns": 183,
+      "finance": {
+        "eliminated": [
+          "player-1"
+        ],
+        "winnerId": "player-2",
+        "round": 92
+      },
+      "uiCommands": 484,
+      "replayCommands": 1298,
+      "histogram": {
+        "effectOffered": 8,
+        "effectConsumed": 8,
+        "effectResolved": 8,
+        "itemSupplyChanged": 9,
+        "rolled": 183,
+        "branchOffered": 11,
+        "branchChosen": 11,
+        "segmentStarted": 631,
+        "nodeEntered": 631,
+        "landed": 183,
+        "propertyOffered": 77,
+        "propertySettled": 70,
+        "turnStarted": 182,
+        "bankOffered": 5,
+        "bankTransferred": 5,
+        "bankClosed": 5,
+        "pointsAwarded": 24,
+        "shopOffered": 6,
+        "itemBought": 6,
+        "shopClosed": 6,
+        "propertySkipped": 7,
+        "debtOffered": 1,
+        "debtSettled": 1,
+        "bankrupt": 1,
+        "pointsCleared": 1,
+        "inventoryCleared": 1,
+        "gameEnded": 1
+      },
+      "cleanup": {
+        "raf": 0,
+        "canvas": 0
+      }
+    },
+    {
+      "count": 3,
+      "bankArrivals": {
+        "passing": 8,
+        "landing": 2
+      },
+      "eliminations": [
+        {
+          "turn": 333,
+          "playerId": "player-3",
+          "released": 15,
+          "built": 6
+        },
+        {
+          "turn": 346,
+          "playerId": "player-1",
+          "released": 14,
+          "built": 8
+        }
+      ],
+      "repurchases": [],
+      "seed": "s1-04-loop",
+      "turns": 346,
+      "finance": {
+        "eliminated": [
+          "player-3",
+          "player-1"
+        ],
+        "winnerId": "player-2",
+        "round": 118
+      },
+      "uiCommands": 889,
+      "replayCommands": 2422,
+      "histogram": {
+        "effectOffered": 8,
+        "effectConsumed": 8,
+        "effectResolved": 8,
+        "itemSupplyChanged": 10,
+        "rolled": 346,
+        "branchOffered": 19,
+        "branchChosen": 19,
+        "segmentStarted": 1187,
+        "nodeEntered": 1187,
+        "landed": 346,
+        "propertyOffered": 140,
+        "propertySettled": 132,
+        "turnStarted": 345,
+        "bankOffered": 10,
+        "bankTransferred": 9,
+        "bankClosed": 10,
+        "pointsAwarded": 41,
+        "shopOffered": 5,
+        "itemBought": 5,
+        "shopClosed": 5,
+        "propertySkipped": 8,
+        "debtOffered": 2,
+        "debtSettled": 2,
+        "bankrupt": 2,
+        "pointsCleared": 2,
+        "inventoryCleared": 2,
+        "gameEnded": 1
+      },
+      "cleanup": {
+        "raf": 0,
+        "canvas": 0
+      }
+    },
+    {
+      "count": 4,
+      "bankArrivals": {
+        "passing": 17,
+        "landing": 3
+      },
+      "eliminations": [
+        {
+          "turn": 467,
+          "playerId": "player-3",
+          "released": 10,
+          "built": 6
+        },
+        {
+          "turn": 636,
+          "playerId": "player-4",
+          "released": 13,
+          "built": 13
+        },
+        {
+          "turn": 651,
+          "playerId": "player-1",
+          "released": 17,
+          "built": 11
+        }
+      ],
+      "repurchases": [
+        {
+          "turn": 539,
+          "propertyId": "japan:land:11",
+          "level": 1,
+          "amount": 3000
+        },
+        {
+          "turn": 550,
+          "propertyId": "japan:land:7",
+          "level": 2,
+          "amount": 2100
+        },
+        {
+          "turn": 582,
+          "propertyId": "japan:land:35",
+          "level": 1,
+          "amount": 2400
+        }
+      ],
+      "seed": "s1-04-loop",
+      "turns": 651,
+      "finance": {
+        "eliminated": [
+          "player-3",
+          "player-4",
+          "player-1"
+        ],
+        "winnerId": "player-2",
+        "round": 181
+      },
+      "uiCommands": 1688,
+      "replayCommands": 4591,
+      "histogram": {
+        "effectOffered": 8,
+        "effectConsumed": 8,
+        "effectResolved": 8,
+        "itemSupplyChanged": 11,
+        "rolled": 651,
+        "branchOffered": 36,
+        "branchChosen": 36,
+        "segmentStarted": 2252,
+        "nodeEntered": 2252,
+        "landed": 651,
+        "propertyOffered": 290,
+        "propertySettled": 279,
+        "turnStarted": 650,
+        "bankOffered": 20,
+        "bankTransferred": 20,
+        "bankClosed": 20,
+        "pointsAwarded": 72,
+        "shopOffered": 6,
+        "shopClosed": 6,
+        "itemBought": 4,
+        "propertySkipped": 11,
+        "debtOffered": 3,
+        "debtSettled": 3,
+        "bankrupt": 3,
+        "pointsCleared": 3,
+        "inventoryCleared": 3,
+        "gameEnded": 1
+      },
+      "cleanup": {
+        "raf": 0,
+        "canvas": 0
+      }
+    }
+  ],
+  "errors": []
+}

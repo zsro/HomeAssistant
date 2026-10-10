@@ -1,0 +1,237 @@
+{
+  "route": "3",
+  "seed": "insurance-3-0",
+  "players": 3,
+  "commands": 887,
+  "turn": 118,
+  "startDate": "1998-01-07",
+  "endDate": "1998-02-15",
+  "dividends": {
+    "date": "1998-02-15",
+    "companies": [
+      {
+        "companyId": "japan:company:6",
+        "stockId": "jp:24",
+        "name": "富士銀行",
+        "funds": 0,
+        "cumulative": 0,
+        "shares": 0,
+        "after": 0,
+        "allocations": [
+          {
+            "playerId": "player-1",
+            "quantity": 0,
+            "ratio": 0,
+            "amount": 0
+          },
+          {
+            "playerId": "player-2",
+            "quantity": 0,
+            "ratio": 0,
+            "amount": 0
+          },
+          {
+            "playerId": "player-3",
+            "quantity": 0,
+            "ratio": 0,
+            "amount": 0
+          }
+        ]
+      },
+      {
+        "companyId": "japan:company:4",
+        "stockId": "jp:25",
+        "name": "三井生命",
+        "funds": -20000,
+        "cumulative": 25000,
+        "shares": 112,
+        "after": 0,
+        "allocations": [
+          {
+            "playerId": "player-1",
+            "quantity": 10,
+            "ratio": 0.0892857164144516,
+            "amount": -1785
+          },
+          {
+            "playerId": "player-2",
+            "quantity": 101,
+            "ratio": 0.9017857313156128,
+            "amount": -18035
+          },
+          {
+            "playerId": "player-3",
+            "quantity": 1,
+            "ratio": 0.008928571827709675,
+            "amount": -178
+          }
+        ]
+      },
+      {
+        "companyId": "japan:company:1",
+        "stockId": "jp:26",
+        "name": "三越百貨",
+        "funds": -5000,
+        "cumulative": -5000,
+        "shares": 0,
+        "after": -5000,
+        "allocations": [
+          {
+            "playerId": "player-1",
+            "quantity": 0,
+            "ratio": 0,
+            "amount": 0
+          },
+          {
+            "playerId": "player-2",
+            "quantity": 0,
+            "ratio": 0,
+            "amount": 0
+          },
+          {
+            "playerId": "player-3",
+            "quantity": 0,
+            "ratio": 0,
+            "amount": 0
+          }
+        ]
+      },
+      {
+        "companyId": "japan:company:3",
+        "stockId": "jp:27",
+        "name": "日產建設",
+        "funds": 0,
+        "cumulative": 0,
+        "shares": 0,
+        "after": 0,
+        "allocations": [
+          {
+            "playerId": "player-1",
+            "quantity": 0,
+            "ratio": 0,
+            "amount": 0
+          },
+          {
+            "playerId": "player-2",
+            "quantity": 0,
+            "ratio": 0,
+            "amount": 0
+          },
+          {
+            "playerId": "player-3",
+            "quantity": 0,
+            "ratio": 0,
+            "amount": 0
+          }
+        ]
+      },
+      {
+        "companyId": "japan:company:5",
+        "stockId": "jp:28",
+        "name": "ＳＥＧＡ",
+        "funds": 0,
+        "cumulative": 0,
+        "shares": 0,
+        "after": 0,
+        "allocations": [
+          {
+            "playerId": "player-1",
+            "quantity": 0,
+            "ratio": 0,
+            "amount": 0
+          },
+          {
+            "playerId": "player-2",
+            "quantity": 0,
+            "ratio": 0,
+            "amount": 0
+          },
+          {
+            "playerId": "player-3",
+            "quantity": 0,
+            "ratio": 0,
+            "amount": 0
+          }
+        ]
+      },
+      {
+        "companyId": "japan:company:2",
+        "stockId": "jp:29",
+        "name": "豐田汽車",
+        "funds": 0,
+        "cumulative": 0,
+        "shares": 0,
+        "after": 0,
+        "allocations": [
+          {
+            "playerId": "player-1",
+            "quantity": 0,
+            "ratio": 0,
+            "amount": 0
+          },
+          {
+            "playerId": "player-2",
+            "quantity": 0,
+            "ratio": 0,
+            "amount": 0
+          },
+          {
+            "playerId": "player-3",
+            "quantity": 0,
+            "ratio": 0,
+            "amount": 0
+          }
+        ]
+      }
+    ],
+    "payments": [
+      {
+        "playerId": "player-1",
+        "amount": -1785,
+        "before": {
+          "cash": 151182,
+          "bank": 168329
+        },
+        "after": {
+          "cash": 151182,
+          "bank": 166544
+        },
+        "unpaid": 0,
+        "bankrupt": false,
+        "returnedShares": 0
+      },
+      {
+        "playerId": "player-2",
+        "amount": -18035,
+        "before": {
+          "cash": 112954,
+          "bank": 210353
+        },
+        "after": {
+          "cash": 112954,
+          "bank": 192318
+        },
+        "unpaid": 0,
+        "bankrupt": false,
+        "returnedShares": 0
+      },
+      {
+        "playerId": "player-3",
+        "amount": -178,
+        "before": {
+          "cash": 127898,
+          "bank": 166156
+        },
+        "after": {
+          "cash": 127898,
+          "bank": 165978
+        },
+        "unpaid": 0,
+        "bankrupt": false,
+        "returnedShares": 0
+      }
+    ]
+  },
+  "state": "19309742070ad45093ac5df49f604e0977e03dd617fda10ead1c728ff2f81697",
+  "events": "0f77ccf4da8fbc67dcc57bee7b99b910c8da4eaec1c35a806a79b21f1f682a3c"
+}

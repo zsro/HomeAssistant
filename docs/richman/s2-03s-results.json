@@ -1,0 +1,230 @@
+{
+  "stage": "S2-03s",
+  "date": "2026-10-06",
+  "status": "estate-sales-and-auction-candidate-subset-accepted",
+  "mode": "estateSales",
+  "rulesId": "japan-events-candidate-v32",
+  "fingerprint": "ebd6105c",
+  "baseline": {
+    "items": "43/43 historical",
+    "news": "36/36 historical; later eligibility omission found and corrected only in v32",
+    "japanFortune": "37/37 historical",
+    "oldRules": "v1-v31 frozen fingerprints and golden replays"
+  },
+  "checks": {
+    "tests": 1170,
+    "testFiles": 83,
+    "newDomainTests": 43,
+    "newPanelTests": 2,
+    "newMatrixTests": 3,
+    "newActualBrowserReplayTests": 1,
+    "versionPlayersMatrix": 96,
+    "lint": "passed",
+    "build": "passed; pre-existing mixed import/chunk-size warnings",
+    "diffCheck": "passed",
+    "sourceFiles": 8,
+    "sourceEntryAnchors": 19
+  },
+  "browser": {
+    "routes": [
+      {
+        "route": "3",
+        "seed": "estate-73",
+        "players": 3,
+        "commands": 100,
+        "turn": 7,
+        "endDate": "1998-01-03",
+        "state": "0ed6c8e85466b296c50bddc9a72f7ee3651b3e35bbe1d69e0b4c1fb1e29aaa7b",
+        "events": "d381d0be884711b089cb8ad87c5a89015ca2d0b507b715031c6eaf3753b9ec0b",
+        "checks": [
+          "auction reserve: truncate half-level base then index",
+          "auction receipt: winner cash to public/source bank",
+          "listing/reprice: valid quote, no escrow, seven slots",
+          "sale: exact cash -> seller bank, unchanged building, record removed",
+          "daily listing byte age"
+        ]
+      }
+    ],
+    "map": "original Japan; real UI commands; auth-only fixture; no game-state injection",
+    "normalSpeed": true,
+    "planCommands": 78,
+    "actualCommands": 100,
+    "receipts": [
+      {
+        "type": "auctionSettled",
+        "propertyId": "japan:land:18",
+        "winnerId": "player-1",
+        "sourceId": "public",
+        "amount": 1600,
+        "sequence": 50,
+        "commandId": "command-30",
+        "playerId": "player-2",
+        "turn": 2
+      },
+      {
+        "type": "propertyListed",
+        "record": {
+          "id": "sale-1",
+          "sellerId": "player-1",
+          "propertyId": "japan:land:18",
+          "price": 1000,
+          "level": 0,
+          "buildingType": 0,
+          "age": 0
+        },
+        "replaced": null,
+        "sequence": 79,
+        "commandId": "command-49",
+        "playerId": "player-1",
+        "turn": 4
+      },
+      {
+        "type": "propertyListed",
+        "record": {
+          "id": "sale-2",
+          "sellerId": "player-1",
+          "propertyId": "japan:land:18",
+          "price": 1200,
+          "level": 0,
+          "buildingType": 0,
+          "age": 0
+        },
+        "replaced": "sale-1",
+        "sequence": 82,
+        "commandId": "command-52",
+        "playerId": "player-1",
+        "turn": 4
+      },
+      {
+        "type": "listingRemoved",
+        "listingId": "sale-2",
+        "reason": "cancelled",
+        "sequence": 83,
+        "commandId": "command-53",
+        "playerId": "player-1",
+        "turn": 4
+      },
+      {
+        "type": "propertyListed",
+        "record": {
+          "id": "sale-3",
+          "sellerId": "player-1",
+          "propertyId": "japan:land:18",
+          "price": 1500,
+          "level": 0,
+          "buildingType": 0,
+          "age": 0
+        },
+        "replaced": null,
+        "sequence": 86,
+        "commandId": "command-56",
+        "playerId": "player-1",
+        "turn": 4
+      },
+      {
+        "type": "saleCompleted",
+        "receipt": {
+          "listing": {
+            "id": "sale-3",
+            "sellerId": "player-1",
+            "propertyId": "japan:land:18",
+            "price": 1500,
+            "level": 0,
+            "buildingType": 0,
+            "age": 0
+          },
+          "buyerId": "player-2",
+          "cashBefore": 150000,
+          "cashAfter": 148500,
+          "bankBefore": 150000,
+          "bankAfter": 151500
+        },
+        "sequence": 103,
+        "commandId": "command-67",
+        "playerId": "player-2",
+        "turn": 5
+      },
+      {
+        "type": "listingRemoved",
+        "listingId": "sale-3",
+        "reason": "sold",
+        "sequence": 104,
+        "commandId": "command-67",
+        "playerId": "player-2",
+        "turn": 5
+      },
+      {
+        "type": "propertyListed",
+        "record": {
+          "id": "sale-4",
+          "sellerId": "player-2",
+          "propertyId": "japan:land:18",
+          "price": 1600,
+          "level": 0,
+          "buildingType": 0,
+          "age": 0
+        },
+        "replaced": null,
+        "sequence": 107,
+        "commandId": "command-70",
+        "playerId": "player-2",
+        "turn": 5
+      },
+      {
+        "type": "salesAged",
+        "date": "1998-01-03",
+        "records": [
+          {
+            "id": "sale-4",
+            "age": 1
+          }
+        ],
+        "sequence": 147,
+        "commandId": "command-91",
+        "playerId": "player-3",
+        "turn": 6
+      }
+    ],
+    "controls": [
+      "purchase cancel",
+      "pause disables listing and buy confirmation",
+      "reset cancel",
+      "fullscreen",
+      "390px no horizontal overflow; screenshot inspected",
+      "reset clears records and last receipt",
+      "unmount cleanup"
+    ],
+    "cleanup": {
+      "raf": 0,
+      "canvas": 0
+    },
+    "errors": [],
+    "localArtifacts": "/private/tmp/richman-unified-ui-03s/",
+    "replay": "frontend/src/features/richman/game/fixtures/estate-sales-v32-3-replay.json"
+  },
+  "actualFixes": [
+    "v32 public-auction stop-only status participates; original byte56 not among excluded50..55",
+    "v32 restores news6/7/12 and0/1/2/3/16/17 eligibility omitted afterv21; old versions remain frozen"
+  ],
+  "notBrowserVerified": [
+    "index>1 auction",
+    "auction-card source-bank transfer and no-bid release",
+    "seven-slot boundary and insufficient cash",
+    "research ownership and G7 restore",
+    "debt/exit cleanup",
+    "eight restored news gates other than7",
+    "2/4-player estate-specific UI; matrix only"
+  ],
+  "deferred": [
+    "original complete insolvency disposal and random-three forced public auctions",
+    "stock/tool/card sale categories, AI pricing",
+    "original auction UI timing/increments",
+    "special actors, original wheel/magic house",
+    "large-money original int32/f32 overflow differences"
+  ],
+  "next": {
+    "stage": "S2-03t",
+    "version": "v33",
+    "task": "original bankruptcy exit/disposal/random-three auction/payment continuations; do not model forced auction as rescuing the bankrupt player"
+  }
+}

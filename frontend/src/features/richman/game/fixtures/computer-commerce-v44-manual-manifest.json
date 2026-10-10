@@ -1,0 +1,287 @@
+{
+  "players": 3,
+  "commands": 393,
+  "turn": 52,
+  "auto": 110,
+  "human": 56,
+  "acquisitions": [
+    {
+      "id": "player-1",
+      "ai": false,
+      "item": "card:07",
+      "turn": 40,
+      "action": "buyItem",
+      "events": [
+        {
+          "type": "itemBought",
+          "itemId": "card:07",
+          "cost": 15,
+          "points": 95,
+          "supply": 7,
+          "sequence": 569,
+          "commandId": "command-307",
+          "playerId": "player-1",
+          "turn": 40
+        }
+      ]
+    },
+    {
+      "id": "player-1",
+      "ai": false,
+      "item": "card:27",
+      "turn": 40,
+      "action": "buyItem",
+      "events": [
+        {
+          "type": "itemBought",
+          "itemId": "card:27",
+          "cost": 35,
+          "points": 60,
+          "supply": 2,
+          "sequence": 570,
+          "commandId": "command-308",
+          "playerId": "player-1",
+          "turn": 40
+        }
+      ]
+    },
+    {
+      "id": "player-1",
+      "ai": false,
+      "item": "card:28",
+      "turn": 40,
+      "action": "buyItem",
+      "events": [
+        {
+          "type": "itemBought",
+          "itemId": "card:28",
+          "cost": 35,
+          "points": 25,
+          "supply": 2,
+          "sequence": 571,
+          "commandId": "command-309",
+          "playerId": "player-1",
+          "turn": 40
+        }
+      ]
+    }
+  ],
+  "uses": [
+    {
+      "ai": false,
+      "id": "player-1",
+      "item": "card:28",
+      "target": "japan:land:42",
+      "turn": 49,
+      "phase": "idle",
+      "changes": [
+        {
+          "before": {
+            "id": "japan:land:42",
+            "ownerId": "player-2",
+            "level": 0,
+            "basePrice": 1000,
+            "buildingType": 0,
+            "priceStatus": 0,
+            "research": null
+          },
+          "after": {
+            "id": "japan:land:42",
+            "ownerId": "player-2",
+            "level": 0,
+            "basePrice": 1000,
+            "buildingType": 0,
+            "priceStatus": 81,
+            "research": null
+          }
+        },
+        {
+          "before": {
+            "id": "japan:land:43",
+            "ownerId": null,
+            "level": 0,
+            "basePrice": 1000,
+            "buildingType": 0,
+            "priceStatus": 0,
+            "research": null
+          },
+          "after": {
+            "id": "japan:land:43",
+            "ownerId": null,
+            "level": 0,
+            "basePrice": 1000,
+            "buildingType": 0,
+            "priceStatus": 81,
+            "research": null
+          }
+        },
+        {
+          "before": {
+            "id": "japan:land:44",
+            "ownerId": null,
+            "level": 0,
+            "basePrice": 1000,
+            "buildingType": 0,
+            "priceStatus": 0,
+            "research": null
+          },
+          "after": {
+            "id": "japan:land:44",
+            "ownerId": null,
+            "level": 0,
+            "basePrice": 1000,
+            "buildingType": 0,
+            "priceStatus": 81,
+            "research": null
+          }
+        },
+        {
+          "before": {
+            "id": "japan:land:45",
+            "ownerId": null,
+            "level": 0,
+            "basePrice": 1000,
+            "buildingType": 0,
+            "priceStatus": 0,
+            "research": null
+          },
+          "after": {
+            "id": "japan:land:45",
+            "ownerId": null,
+            "level": 0,
+            "basePrice": 1000,
+            "buildingType": 0,
+            "priceStatus": 81,
+            "research": null
+          }
+        }
+      ]
+    }
+  ],
+  "cancellations": [
+    {
+      "ai": false,
+      "id": "player-1",
+      "item": "card:28",
+      "turn": 49
+    }
+  ],
+  "auctions": [],
+  "clocks": [
+    {
+      "type": "g4PropertyChanged",
+      "property": {
+        "id": "japan:land:42",
+        "ownerId": "player-2",
+        "level": 0,
+        "basePrice": 1000,
+        "buildingType": 0,
+        "priceStatus": 65,
+        "research": null
+      },
+      "reason": "价格状态轮次计时",
+      "sequence": 730,
+      "commandId": "command-393",
+      "playerId": "player-3",
+      "turn": 51
+    },
+    {
+      "type": "g4PropertyChanged",
+      "property": {
+        "id": "japan:land:43",
+        "ownerId": null,
+        "level": 0,
+        "basePrice": 1000,
+        "buildingType": 0,
+        "priceStatus": 65,
+        "research": null
+      },
+      "reason": "价格状态轮次计时",
+      "sequence": 731,
+      "commandId": "command-393",
+      "playerId": "player-3",
+      "turn": 51
+    },
+    {
+      "type": "g4PropertyChanged",
+      "property": {
+        "id": "japan:land:44",
+        "ownerId": null,
+        "level": 0,
+        "basePrice": 1000,
+        "buildingType": 0,
+        "priceStatus": 65,
+        "research": null
+      },
+      "reason": "价格状态轮次计时",
+      "sequence": 732,
+      "commandId": "command-393",
+      "playerId": "player-3",
+      "turn": 51
+    },
+    {
+      "type": "g4PropertyChanged",
+      "property": {
+        "id": "japan:land:45",
+        "ownerId": null,
+        "level": 0,
+        "basePrice": 1000,
+        "buildingType": 0,
+        "priceStatus": 65,
+        "research": null
+      },
+      "reason": "价格状态轮次计时",
+      "sequence": 733,
+      "commandId": "command-393",
+      "playerId": "player-3",
+      "turn": 51
+    }
+  ],
+  "prefixes": [
+    "card:07-acquired",
+    "card:27-acquired",
+    "card:28-acquired",
+    "cancel-before",
+    "cancel-after",
+    "card:28-confirm-before",
+    "card:28-confirm-after",
+    "price-clock-before",
+    "price-clock-after"
+  ],
+  "report": {
+    "policy": "commerce-v1",
+    "toolWindows": [
+      "tool:08",
+      "tool:09"
+    ],
+    "crossChecks": [],
+    "route": "manual",
+    "terminal": false,
+    "players": 3,
+    "normalSpeed": true,
+    "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+    "commands": 393,
+    "auto": 110,
+    "human": 56,
+    "lifecycle": [
+      "pause stops waiting",
+      "resume",
+      "reset dialog cancel",
+      "reset",
+      "replace with humans",
+      "exit cleanup",
+      "fullscreen",
+      "390px"
+    ],
+    "cleanup": {
+      "raf": 0,
+      "canvas": 0
+    },
+    "errors": []
+  },
+  "hashes": {
+    "replay": "29271f0d4dfde33345327a7c1456669838ba10856d7020753db54ff2a58e515b",
+    "state": "5dcd66402c9244b159ba088d679627d4e05cd1326254f0208ab7b22ac4de9ab0",
+    "events": "c029cee075279f99196a1365c24aea87b054881016a20f226f6cd913067356cb"
+  }
+}

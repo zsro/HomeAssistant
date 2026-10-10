@@ -1,0 +1,22 @@
+{
+  "character": "tuu",
+  "targetPlayerId": "player-1",
+  "voice": "1173",
+  "actualCommands": 3772,
+  "businessCommands": 3770,
+  "upgradeCommandIndex": 3772,
+  "paidAmount": 400,
+  "paidOrdinaryUpgrade4to5": true,
+  "voiceCues": 1,
+  "voicePlayingEvents": 1,
+  "commandsMatchLegalPlan": true,
+  "fullReplay": true,
+  "prefixReplay": true,
+  "mediaReleased": true,
+  "cleanup": {
+    "raf": 0,
+    "canvas": 0
+  },
+  "errors": [],
+  "replaySHA256": "0cdcc27bab3784749686a489ba66b03a85253a89acb3420f2eb9310d68c1fb9c"
+}

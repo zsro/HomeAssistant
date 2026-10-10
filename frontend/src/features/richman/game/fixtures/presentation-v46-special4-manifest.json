@@ -1,0 +1,113 @@
+{
+  "media": {
+    "playing": 12,
+    "sources": [
+      "http://127.0.0.1:5177/richman/generated/audio/track02.mp3",
+      "http://127.0.0.1:5177/richman/generated/audio/effect-43.wav",
+      "http://127.0.0.1:5177/richman/generated/audio/effect-49.wav",
+      "http://127.0.0.1:5177/richman/generated/audio/effect-48.wav"
+    ],
+    "released": true,
+    "headlessOutputMuted": true
+  },
+  "route": "special4",
+  "players": 4,
+  "normalSpeed": true,
+  "map": "original Japan; real human UI + actual automatic seats; auth fixture only",
+  "computerCommands": 54,
+  "commands": 110,
+  "human": 7,
+  "auto": 101,
+  "displayChecks": [
+    {
+      "index": 0,
+      "kinds": []
+    }
+  ],
+  "lifecycle": [
+    "pause/resume",
+    "reset dialog cancel",
+    "reset",
+    "replace",
+    "exit",
+    "fullscreen",
+    "390px"
+  ],
+  "cleanup": {
+    "raf": 0,
+    "canvas": 0
+  },
+  "errors": [],
+  "prefixes": [
+    {
+      "index": 41,
+      "kind": "specialObjectsRefreshed"
+    },
+    {
+      "index": 59,
+      "kind": "g6Notice"
+    },
+    {
+      "index": 109,
+      "kind": "specialObjectResolved"
+    }
+  ],
+  "facts": [
+    {
+      "index": 41,
+      "event": {
+        "type": "specialObjectsRefreshed",
+        "date": "1998-02-01",
+        "objects": [
+          {
+            "type": 13,
+            "node": 73
+          },
+          {
+            "type": 14,
+            "node": 109
+          }
+        ],
+        "sequence": 78,
+        "commandId": "command-43",
+        "playerId": "player-4",
+        "turn": 4
+      }
+    },
+    {
+      "index": 59,
+      "event": {
+        "type": "g6Notice",
+        "message": "玩家3附身小穷神，期限7次自身行动边界。",
+        "sequence": 113,
+        "commandId": "command-61",
+        "playerId": "player-3",
+        "turn": 7
+      }
+    },
+    {
+      "index": 109,
+      "event": {
+        "type": "specialObjectResolved",
+        "objectType": 11,
+        "node": 103,
+        "targetId": "player-4",
+        "outcome": "hospital",
+        "sequence": 208,
+        "commandId": "command-111",
+        "playerId": "player-4",
+        "turn": 16
+      }
+    }
+  ],
+  "expectedVoices": [],
+  "playedVoices": [],
+  "fullReplay": true,
+  "prefixReplay": true,
+  "commandsMatchLegalPlan": true,
+  "hashes": {
+    "replay": "56684963731604fc72c512196d523af00162258b979845fd25cc3a6f67a479ea",
+    "state": "6efa2f992984e360cfc6643af8161cfade9b8d47164debeffccf4f166c358a7e",
+    "events": "8dd9dc74cab6f6997737dceaf4f818204d3a0c6a242e82a0d118959aac978f84"
+  }
+}

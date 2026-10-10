@@ -1,0 +1,366 @@
+{
+  "trades": [
+    {
+      "player": "player-2",
+      "side": "buy",
+      "amount": 1980,
+      "stock": "jp:26",
+      "quantity": 100
+    },
+    {
+      "player": "player-2",
+      "side": "buy",
+      "amount": 2520,
+      "stock": "jp:27",
+      "quantity": 100
+    },
+    {
+      "player": "player-3",
+      "side": "buy",
+      "amount": 1980,
+      "stock": "jp:26",
+      "quantity": 100
+    },
+    {
+      "player": "player-3",
+      "side": "buy",
+      "amount": 2520,
+      "stock": "jp:27",
+      "quantity": 100
+    },
+    {
+      "player": "player-2",
+      "side": "buy",
+      "amount": 4978,
+      "stock": "jp:28",
+      "quantity": 19
+    },
+    {
+      "player": "player-3",
+      "side": "buy",
+      "amount": 4978,
+      "stock": "jp:28",
+      "quantity": 19
+    },
+    {
+      "player": "player-2",
+      "side": "buy",
+      "amount": 262,
+      "stock": "jp:34",
+      "quantity": 1
+    },
+    {
+      "player": "player-3",
+      "side": "buy",
+      "amount": 262,
+      "stock": "jp:34",
+      "quantity": 1
+    },
+    {
+      "player": "player-2",
+      "side": "buy",
+      "amount": 143,
+      "stock": "jp:24",
+      "quantity": 1
+    },
+    {
+      "player": "player-3",
+      "side": "sell",
+      "amount": 2570,
+      "stock": "jp:26",
+      "quantity": 100
+    },
+    {
+      "player": "player-3",
+      "side": "buy",
+      "amount": 2145,
+      "stock": "jp:24",
+      "quantity": 15
+    },
+    {
+      "player": "player-3",
+      "side": "sell",
+      "amount": 6593,
+      "stock": "jp:28",
+      "quantity": 19
+    },
+    {
+      "player": "player-3",
+      "side": "buy",
+      "amount": 4940,
+      "stock": "jp:32",
+      "quantity": 19
+    },
+    {
+      "player": "player-3",
+      "side": "buy",
+      "amount": 128,
+      "stock": "jp:26",
+      "quantity": 7
+    },
+    {
+      "player": "player-3",
+      "side": "sell",
+      "amount": 6118,
+      "stock": "jp:32",
+      "quantity": 19
+    },
+    {
+      "player": "player-3",
+      "side": "buy",
+      "amount": 4774,
+      "stock": "jp:30",
+      "quantity": 14
+    },
+    {
+      "player": "player-3",
+      "side": "sell",
+      "amount": 3080,
+      "stock": "jp:27",
+      "quantity": 100
+    },
+    {
+      "player": "player-3",
+      "side": "buy",
+      "amount": 2193,
+      "stock": "jp:31",
+      "quantity": 3
+    },
+    {
+      "player": "player-3",
+      "side": "buy",
+      "amount": 476,
+      "stock": "jp:27",
+      "quantity": 19
+    },
+    {
+      "player": "player-3",
+      "side": "sell",
+      "amount": 2727,
+      "stock": "jp:31",
+      "quantity": 3
+    },
+    {
+      "player": "player-3",
+      "side": "buy",
+      "amount": 2097,
+      "stock": "jp:32",
+      "quantity": 9
+    },
+    {
+      "player": "player-2",
+      "side": "buy",
+      "amount": 116,
+      "stock": "jp:25",
+      "quantity": 2
+    },
+    {
+      "player": "player-3",
+      "side": "buy",
+      "amount": 116,
+      "stock": "jp:25",
+      "quantity": 2
+    },
+    {
+      "player": "player-3",
+      "side": "sell",
+      "amount": 6020,
+      "stock": "jp:30",
+      "quantity": 14
+    },
+    {
+      "player": "player-3",
+      "side": "buy",
+      "amount": 4680,
+      "stock": "jp:28",
+      "quantity": 24
+    }
+  ],
+  "restores": [
+    {
+      "index": 2329,
+      "player": "player-2",
+      "from": "1998-04-15",
+      "to": "1998-04-14",
+      "observation": {
+        "value": {
+          "player-1": 363602,
+          "player-2": 384954,
+          "player-3": 361381
+        },
+        "protected": {
+          "player-1": "{\"inventory\":{\"tool:08\":0,\"tool:09\":0,\"tool:01\":0,\"tool:02\":0,\"card:02\":0,\"card:01\":0,\"card:03\":0,\"card:04\":0,\"card:05\":0,\"card:06\":0,\"card:12\":0,\"card:14\":0,\"card:15\":0,\"card:16\":0,\"card:17\":0,\"card:30\":0,\"tool:05\":0,\"tool:06\":0,\"card:13\":0,\"card:18\":1,\"card:19\":0,\"card:20\":0,\"card:21\":0,\"card:29\":0,\"card:07\":0,\"card:08\":0,\"card:26\":0,\"card:27\":0,\"card:28\":0,\"card:09\":0,\"card:10\":0,\"card:11\":0,\"tool:03\":0,\"tool:04\":0,\"tool:07\":0,\"tool:12\":0,\"card:22\":0,\"card:23\":0,\"card:24\":0,\"card:25\":0,\"tool:10\":0,\"tool:11\":0,\"tool:13\":0},\"status\":{\"stop\":0,\"winter\":0,\"dream\":0,\"prison\":0,\"hospital\":0,\"turtle\":0,\"vehicle\":\"foot\",\"diceCount\":1,\"savedVehicle\":\"foot\",\"savedDice\":1,\"travel\":0},\"engineer\":null,\"gods\":[],\"research\":[]}",
+          "player-2": "{\"inventory\":{\"tool:08\":0,\"tool:09\":0,\"tool:01\":0,\"tool:02\":0,\"card:02\":0,\"card:01\":0,\"card:03\":0,\"card:04\":0,\"card:05\":0,\"card:06\":0,\"card:12\":0,\"card:14\":0,\"card:15\":0,\"card:16\":0,\"card:17\":0,\"card:30\":0,\"tool:05\":0,\"tool:06\":0,\"card:13\":0,\"card:18\":0,\"card:19\":0,\"card:20\":0,\"card:21\":0,\"card:29\":0,\"card:07\":0,\"card:08\":0,\"card:26\":0,\"card:27\":0,\"card:28\":0,\"card:09\":0,\"card:10\":0,\"card:11\":0,\"tool:03\":0,\"tool:04\":0,\"tool:07\":0,\"tool:12\":0,\"card:22\":0,\"card:23\":0,\"card:24\":0,\"card:25\":0,\"tool:10\":1,\"tool:11\":0,\"tool:13\":0},\"status\":{\"stop\":0,\"winter\":0,\"dream\":0,\"prison\":0,\"hospital\":0,\"turtle\":0,\"vehicle\":\"foot\",\"diceCount\":1,\"savedVehicle\":\"foot\",\"savedDice\":1,\"travel\":0},\"engineer\":null,\"gods\":[],\"research\":[]}",
+          "player-3": "{\"inventory\":{\"tool:08\":0,\"tool:09\":0,\"tool:01\":1,\"tool:02\":0,\"card:02\":0,\"card:01\":0,\"card:03\":0,\"card:04\":0,\"card:05\":0,\"card:06\":0,\"card:12\":0,\"card:14\":0,\"card:15\":0,\"card:16\":0,\"card:17\":0,\"card:30\":0,\"tool:05\":0,\"tool:06\":0,\"card:13\":0,\"card:18\":0,\"card:19\":0,\"card:20\":0,\"card:21\":0,\"card:29\":0,\"card:07\":0,\"card:08\":0,\"card:26\":0,\"card:27\":0,\"card:28\":0,\"card:09\":0,\"card:10\":0,\"card:11\":0,\"tool:03\":0,\"tool:04\":0,\"tool:07\":0,\"tool:12\":0,\"card:22\":0,\"card:23\":0,\"card:24\":0,\"card:25\":0,\"tool:10\":0,\"tool:11\":0,\"tool:13\":0},\"status\":{\"stop\":0,\"winter\":0,\"dream\":0,\"prison\":0,\"hospital\":0,\"turtle\":0,\"vehicle\":\"tool:05\",\"diceCount\":2,\"savedVehicle\":\"foot\",\"savedDice\":1,\"travel\":0},\"engineer\":null,\"gods\":[],\"research\":[]}"
+        },
+        "allies": "{\"player-1\":null,\"player-2\":null,\"player-3\":null}",
+        "eliminated": "[]"
+      },
+      "current": {
+        "value": {
+          "player-1": 363602,
+          "player-2": 377829,
+          "player-3": 371941
+        },
+        "protected": {
+          "player-1": "{\"inventory\":{\"tool:08\":0,\"tool:09\":0,\"tool:01\":0,\"tool:02\":0,\"card:02\":0,\"card:01\":0,\"card:03\":0,\"card:04\":0,\"card:05\":0,\"card:06\":0,\"card:12\":0,\"card:14\":0,\"card:15\":0,\"card:16\":0,\"card:17\":0,\"card:30\":0,\"tool:05\":0,\"tool:06\":0,\"card:13\":0,\"card:18\":1,\"card:19\":0,\"card:20\":0,\"card:21\":0,\"card:29\":0,\"card:07\":0,\"card:08\":0,\"card:26\":0,\"card:27\":0,\"card:28\":0,\"card:09\":0,\"card:10\":0,\"card:11\":0,\"tool:03\":0,\"tool:04\":0,\"tool:07\":0,\"tool:12\":0,\"card:22\":0,\"card:23\":0,\"card:24\":0,\"card:25\":0,\"tool:10\":0,\"tool:11\":0,\"tool:13\":0},\"status\":{\"stop\":0,\"winter\":0,\"dream\":0,\"prison\":0,\"hospital\":0,\"turtle\":0,\"vehicle\":\"foot\",\"diceCount\":1,\"savedVehicle\":\"foot\",\"savedDice\":1,\"travel\":0},\"engineer\":null,\"gods\":[],\"research\":[]}",
+          "player-2": "{\"inventory\":{\"tool:08\":0,\"tool:09\":0,\"tool:01\":0,\"tool:02\":0,\"card:02\":0,\"card:01\":0,\"card:03\":0,\"card:04\":0,\"card:05\":0,\"card:06\":0,\"card:12\":0,\"card:14\":0,\"card:15\":0,\"card:16\":0,\"card:17\":0,\"card:30\":0,\"tool:05\":0,\"tool:06\":0,\"card:13\":0,\"card:18\":0,\"card:19\":0,\"card:20\":0,\"card:21\":0,\"card:29\":0,\"card:07\":0,\"card:08\":0,\"card:26\":0,\"card:27\":0,\"card:28\":0,\"card:09\":0,\"card:10\":0,\"card:11\":0,\"tool:03\":0,\"tool:04\":0,\"tool:07\":0,\"tool:12\":0,\"card:22\":0,\"card:23\":0,\"card:24\":0,\"card:25\":0,\"tool:10\":1,\"tool:11\":0,\"tool:13\":0},\"status\":{\"stop\":0,\"winter\":0,\"dream\":0,\"prison\":0,\"hospital\":0,\"turtle\":0,\"vehicle\":\"foot\",\"diceCount\":1,\"savedVehicle\":\"foot\",\"savedDice\":1,\"travel\":0},\"engineer\":null,\"gods\":[],\"research\":[]}",
+          "player-3": "{\"inventory\":{\"tool:08\":0,\"tool:09\":0,\"tool:01\":1,\"tool:02\":0,\"card:02\":0,\"card:01\":0,\"card:03\":0,\"card:04\":0,\"card:05\":0,\"card:06\":0,\"card:12\":0,\"card:14\":0,\"card:15\":0,\"card:16\":0,\"card:17\":0,\"card:30\":0,\"tool:05\":0,\"tool:06\":0,\"card:13\":0,\"card:18\":0,\"card:19\":0,\"card:20\":0,\"card:21\":0,\"card:29\":0,\"card:07\":0,\"card:08\":0,\"card:26\":0,\"card:27\":0,\"card:28\":0,\"card:09\":0,\"card:10\":0,\"card:11\":0,\"tool:03\":0,\"tool:04\":0,\"tool:07\":0,\"tool:12\":0,\"card:22\":0,\"card:23\":0,\"card:24\":0,\"card:25\":0,\"tool:10\":0,\"tool:11\":0,\"tool:13\":0},\"status\":{\"stop\":0,\"winter\":0,\"dream\":0,\"prison\":0,\"hospital\":0,\"turtle\":0,\"vehicle\":\"tool:05\",\"diceCount\":2,\"savedVehicle\":\"foot\",\"savedDice\":1,\"travel\":0},\"engineer\":null,\"gods\":[{\"id\":\"god-35\",\"type\":8,\"node\":60,\"carrier\":\"player-3\",\"remaining\":7}],\"research\":[]}"
+        },
+        "allies": "{\"player-1\":null,\"player-2\":null,\"player-3\":null}",
+        "eliminated": "[]"
+      }
+    }
+  ],
+  "productions": [
+    {
+      "player": "player-2",
+      "action": {
+        "type": "research",
+        "propertyId": "japan:facility:3",
+        "itemId": "tool:10"
+      }
+    }
+  ],
+  "observations": [
+    {
+      "index": 2006,
+      "player": "player-2"
+    },
+    {
+      "index": 2029,
+      "player": "player-2"
+    },
+    {
+      "index": 2058,
+      "player": "player-2"
+    },
+    {
+      "index": 2094,
+      "player": "player-2"
+    },
+    {
+      "index": 2126,
+      "player": "player-2"
+    },
+    {
+      "index": 2141,
+      "player": "player-2"
+    },
+    {
+      "index": 2162,
+      "player": "player-2"
+    },
+    {
+      "index": 2186,
+      "player": "player-2"
+    },
+    {
+      "index": 2204,
+      "player": "player-2"
+    },
+    {
+      "index": 2225,
+      "player": "player-2"
+    },
+    {
+      "index": 2241,
+      "player": "player-2"
+    },
+    {
+      "index": 2264,
+      "player": "player-2"
+    },
+    {
+      "index": 2291,
+      "player": "player-2"
+    }
+  ],
+  "memory": {},
+  "players": 3,
+  "commands": 2556,
+  "turn": 328,
+  "phase": "idle",
+  "winner": null,
+  "auto": 672,
+  "human": 324,
+  "dates": 110,
+  "cross": [],
+  "reactions": [],
+  "forced": [],
+  "exits": [],
+  "publicAuctions": 0,
+  "negativeChecks": 0,
+  "prefixes": [
+    "paused",
+    "resumed",
+    "computer-first",
+    "date-before",
+    "date-after",
+    "trade-buy-before",
+    "trade-buy-after",
+    "trade-sell-before",
+    "trade-sell-after",
+    "research-before",
+    "research-after",
+    "first-observation",
+    "time-before",
+    "time-after",
+    "date-after-restore",
+    "date-after-restore-done"
+  ],
+  "report": {
+    "researchWindows": [
+      "tool:10"
+    ],
+    "robotPreviews": [],
+    "policy": "research-v1",
+    "toolWindows": [
+      "tool:08",
+      "tool:09",
+      "card:17",
+      "card:04",
+      "card:03",
+      "card:28",
+      "card:25",
+      "tool:05",
+      "card:02",
+      "card:06",
+      "card:12",
+      "card:07",
+      "card:13",
+      "card:30",
+      "tool:02",
+      "tool:10"
+    ],
+    "crossChecks": [],
+    "route": "restore-3",
+    "terminal": false,
+    "players": 3,
+    "normalSpeed": true,
+    "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+    "commands": 2556,
+    "auto": 672,
+    "human": 324,
+    "lifecycle": [
+      "pause stops waiting",
+      "resume",
+      "reset dialog cancel",
+      "reset",
+      "replace with humans",
+      "exit cleanup",
+      "fullscreen",
+      "390px"
+    ],
+    "cleanup": {
+      "raf": 0,
+      "canvas": 0
+    },
+    "errors": []
+  },
+  "hashes": {
+    "replay": "09411811f9a66934ffa90755dbaff0fa755611a7567c55128d026daa95245d08",
+    "state": "57d7f046145dcf71480c93ed51e6d875644608f46d02fb57685e99dfa5a7cf18",
+    "events": "08a25f18222f6e62178b236c7741ed5e622b1e515882d3efb1edfa2f71de1538"
+  }
+}

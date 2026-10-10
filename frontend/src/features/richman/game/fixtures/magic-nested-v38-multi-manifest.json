@@ -1,0 +1,332 @@
+{
+  "stage": "S2-03y",
+  "source": "real original Japan UI; normal speed; auth-only fixture; no world injection",
+  "seed": "nested-chain-1",
+  "players": 4,
+  "commands": 568,
+  "turn": 87,
+  "date": "1998-01-22",
+  "calls": 15,
+  "collections": 1,
+  "reactions": 0,
+  "auctions": 2,
+  "transfers": 2,
+  "multiSeats": 2,
+  "continuationCommands": 27,
+  "receipts": [
+    {
+      "node": 73,
+      "group": 5,
+      "targets": [
+        "player-3"
+      ],
+      "effect": 1,
+      "title": "接连三次命运",
+      "rows": [
+        {
+          "playerId": "player-3",
+          "lines": [
+            "第1次命运：掉入水沟住院。",
+            "第2次命运：宠物违规罚款。",
+            "第3次命运：中奖奖金。"
+          ],
+          "pointsBefore": 40,
+          "pointsAfter": 40,
+          "cashBefore": 51400,
+          "cashAfter": 55900,
+          "bankBefore": 65141,
+          "bankAfter": 65141,
+          "stopBefore": 0,
+          "stopAfter": 0,
+          "previousBefore": 22,
+          "previousAfter": null,
+          "nested": {
+            "fortunes": [
+              {
+                "id": 12,
+                "title": "掉入水沟住院",
+                "bankrupt": false,
+                "cursor": 4
+              },
+              {
+                "id": 19,
+                "title": "宠物违规罚款",
+                "bankrupt": false,
+                "cursor": 5
+              },
+              {
+                "id": 28,
+                "title": "中奖奖金",
+                "bankrupt": false,
+                "cursor": 6
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "node": 35,
+      "group": 4,
+      "targets": [
+        "player-3"
+      ],
+      "effect": 1,
+      "title": "接连三次命运",
+      "rows": [
+        {
+          "playerId": "player-3",
+          "lines": [
+            "第1次命运：遗失钱包。",
+            "第2次命运：诱骗案件拘留。",
+            "第3次命运：遗失钱包。"
+          ],
+          "pointsBefore": 40,
+          "pointsAfter": 40,
+          "cashBefore": 55900,
+          "cashAfter": 52900,
+          "bankBefore": 65141,
+          "bankAfter": 65141,
+          "stopBefore": 0,
+          "stopAfter": 0,
+          "previousBefore": null,
+          "previousAfter": null,
+          "nested": {
+            "fortunes": [
+              {
+                "id": 24,
+                "title": "遗失钱包",
+                "bankrupt": false,
+                "cursor": 7
+              },
+              {
+                "id": 41,
+                "title": "诱骗案件拘留",
+                "bankrupt": false,
+                "cursor": 8
+              },
+              {
+                "id": 23,
+                "title": "遗失钱包",
+                "bankrupt": false,
+                "cursor": 9
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "node": 73,
+      "group": 0,
+      "targets": [
+        "player-3"
+      ],
+      "effect": 1,
+      "title": "接连三次命运",
+      "rows": [
+        {
+          "playerId": "player-3",
+          "lines": [
+            "第1次命运：被外星人绑架。",
+            "第2次命运：妨害风化拘留。",
+            "第3次命运：违规穿越道路罚款。"
+          ],
+          "pointsBefore": 80,
+          "pointsAfter": 80,
+          "cashBefore": 52900,
+          "cashAfter": 49900,
+          "bankBefore": 65141,
+          "bankAfter": 65141,
+          "stopBefore": 0,
+          "stopAfter": 0,
+          "previousBefore": 79,
+          "previousAfter": null,
+          "nested": {
+            "fortunes": [
+              {
+                "id": 7,
+                "title": "被外星人绑架",
+                "bankrupt": false,
+                "cursor": 12
+              },
+              {
+                "id": 42,
+                "title": "妨害风化拘留",
+                "bankrupt": false,
+                "cursor": 13
+              },
+              {
+                "id": 14,
+                "title": "违规穿越道路罚款",
+                "bankrupt": false,
+                "cursor": 14
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "node": 73,
+      "group": 10,
+      "targets": [
+        "player-2",
+        "player-4"
+      ],
+      "effect": 1,
+      "title": "接连三次命运",
+      "rows": [
+        {
+          "playerId": "player-2",
+          "lines": [
+            "第1次命运：乱丢垃圾罚款。",
+            "第2次命运：人头被盗用冒贷。",
+            "第3次命运：变卖全部卡片道具。"
+          ],
+          "pointsBefore": 10,
+          "pointsAfter": 110,
+          "cashBefore": 28700,
+          "cashAfter": 28100,
+          "bankBefore": 46103,
+          "bankAfter": 46103,
+          "stopBefore": 0,
+          "stopAfter": 0,
+          "previousBefore": 72,
+          "previousAfter": 72,
+          "nested": {
+            "fortunes": [
+              {
+                "id": 18,
+                "title": "乱丢垃圾罚款",
+                "bankrupt": false,
+                "cursor": 16
+              },
+              {
+                "id": 2,
+                "title": "人头被盗用冒贷",
+                "bankrupt": false,
+                "cursor": 17
+              },
+              {
+                "id": 32,
+                "title": "变卖全部卡片道具",
+                "bankrupt": false,
+                "cursor": 18
+              }
+            ]
+          }
+        },
+        {
+          "playerId": "player-4",
+          "lines": [
+            "第1次命运：违禁药物拘留。",
+            "第2次命运：领取保险金。",
+            "第3次命运：向其他玩家各取一张卡。"
+          ],
+          "pointsBefore": 10,
+          "pointsAfter": 10,
+          "cashBefore": 42700,
+          "cashAfter": 47700,
+          "bankBefore": 45063,
+          "bankAfter": 45063,
+          "stopBefore": 0,
+          "stopAfter": 0,
+          "previousBefore": 50,
+          "previousAfter": 50,
+          "nested": {
+            "fortunes": [
+              {
+                "id": 43,
+                "title": "违禁药物拘留",
+                "bankrupt": false,
+                "cursor": 21
+              },
+              {
+                "id": 31,
+                "title": "领取保险金",
+                "bankrupt": false,
+                "cursor": 22
+              },
+              {
+                "id": 5,
+                "title": "向其他玩家各取一张卡",
+                "bankrupt": false,
+                "cursor": 23
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "node": 73,
+      "group": 10,
+      "targets": [
+        "player-2",
+        "player-4"
+      ],
+      "effect": 11,
+      "title": "拍卖脚下地产",
+      "rows": [
+        {
+          "playerId": "player-2",
+          "lines": [
+            "玩家 1现金支付 5100 元，存入本位玩家银行。"
+          ],
+          "pointsBefore": 110,
+          "pointsAfter": 110,
+          "cashBefore": 23100,
+          "cashAfter": 23100,
+          "bankBefore": 46103,
+          "bankAfter": 51203,
+          "stopBefore": 0,
+          "stopAfter": 0,
+          "previousBefore": 73,
+          "previousAfter": 73,
+          "nested": {
+            "fortunes": [],
+            "auction": {
+              "propertyId": "japan:facility:4",
+              "originalOwner": "player-2",
+              "ownerAfter": "player-1",
+              "winnerId": "player-1",
+              "amount": 5100
+            }
+          }
+        },
+        {
+          "playerId": "player-4",
+          "lines": [
+            "玩家 1现金支付 6100 元，存入本位玩家银行。"
+          ],
+          "pointsBefore": 10,
+          "pointsAfter": 10,
+          "cashBefore": 47700,
+          "cashAfter": 47700,
+          "bankBefore": 45063,
+          "bankAfter": 51163,
+          "stopBefore": 0,
+          "stopAfter": 0,
+          "previousBefore": 47,
+          "previousAfter": 47,
+          "nested": {
+            "fortunes": [],
+            "auction": {
+              "propertyId": "japan:facility:1",
+              "originalOwner": "player-2",
+              "ownerAfter": "player-1",
+              "winnerId": "player-1",
+              "amount": 6100
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "hashes": {
+    "replay": "20c6508476353cfeaeadb717c7bf4d3f9ad65ff26b9842180fa9fe3bef7436e8",
+    "state": "5c627384246f59dd31918906f1ba62b327128094eaeded8121228cce9ce7f788",
+    "events": "d08fb57168e9fc47407219d8b9477fcb92c3ef87d22b17b400501ea3701a5fa1"
+  }
+}

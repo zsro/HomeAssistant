@@ -1,0 +1,306 @@
+{
+  "referenceCommit": "ec7d70e693059d1e781d9d1cc2ad7f36d360d39e",
+  "sources": [
+    {
+      "path": "asm/rich4_news.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_news.asm",
+      "gitBlobSha1": "31601ae8258b6f9074c348ae17d52295c5f94b8e",
+      "sha256": "a2172acdbbfe52fbc57672e40a8f0d669b3c8fb6cabb1f3d5d7dd8e72ebc458a"
+    },
+    {
+      "path": "asm/rich4.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4.asm",
+      "gitBlobSha1": "d11a64755094435fa9953652a5a4951871fd9697",
+      "sha256": "30904cbb4f23a6b74fc1b80ad023bd7dff11b441c2c1978f768f9891d099d64a"
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_core_actions.asm",
+      "gitBlobSha1": "ebfde6c820e8a430b856d9816a926b636e0db1dc",
+      "sha256": "2874c1a3e0ca1d0da5afe4cb93e42cf2d6f6fa864dbee11d7bcaa028af07d94a"
+    },
+    {
+      "path": "asm/rich4_player_utils.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_utils.asm",
+      "gitBlobSha1": "4bdaafa1f87f9fcd5f71dcf50f1aebd7e795d6be",
+      "sha256": "17479913576a004458908f124c4d7e94361dab41a501830d2ecb87eb7b438f01"
+    },
+    {
+      "path": "csrc/news.c",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/csrc/news.c",
+      "gitBlobSha1": "816ddea9cd826361d56d2e480f474726e2a834d5",
+      "sha256": "f9fd0ee17badef0441c1799f1ad2a529bdfcd9bef4be52b452b15982c5c28361"
+    }
+  ],
+  "dispatch": [
+    {
+      "id": 0,
+      "handler": "fcn_00448eca",
+      "eligibleCondition": "ref_00496b30 != 0",
+      "enabled": false
+    },
+    {
+      "id": 1,
+      "handler": "fcn_00448f45",
+      "eligibleCondition": "ref_00496b30 != 0",
+      "enabled": false
+    },
+    {
+      "id": 2,
+      "handler": "fcn_00449006",
+      "eligibleCondition": "ref_00496b60 != 0",
+      "enabled": false
+    },
+    {
+      "id": 3,
+      "handler": "fcn_00449081",
+      "eligibleCondition": "ref_00496b60 != 0",
+      "enabled": false
+    },
+    {
+      "id": 4,
+      "handler": "fcn_0044913d",
+      "eligibleCondition": "any ordinary/facility building level != 0",
+      "enabled": false
+    },
+    {
+      "id": 5,
+      "handler": "fcn_004492a0",
+      "eligibleCondition": "any ordinary/facility building level != 0",
+      "enabled": true
+    },
+    {
+      "id": 6,
+      "handler": "fcn_004494e0",
+      "eligibleCondition": "always eligible (default branch)",
+      "enabled": false
+    },
+    {
+      "id": 7,
+      "handler": "fcn_00449735",
+      "eligibleCondition": "any ordinary/facility owner == 0",
+      "enabled": false
+    },
+    {
+      "id": 8,
+      "handler": "fcn_004498b3",
+      "eligibleCondition": "any ordinary/facility owner != 0",
+      "enabled": true
+    },
+    {
+      "id": 9,
+      "handler": "fcn_00449a8a",
+      "eligibleCondition": "any ordinary/facility owner != 0",
+      "enabled": true
+    },
+    {
+      "id": 10,
+      "handler": "fcn_00449b9c",
+      "eligibleCondition": "any active player holding shares",
+      "enabled": false
+    },
+    {
+      "id": 11,
+      "handler": "fcn_00449c7c",
+      "eligibleCondition": "always eligible (default branch)",
+      "enabled": true
+    },
+    {
+      "id": 12,
+      "handler": "fcn_00449de6",
+      "eligibleCondition": "any ordinary/facility owner != 0",
+      "enabled": false
+    },
+    {
+      "id": 13,
+      "handler": "fcn_0044a029",
+      "eligibleCondition": "any active player holding shares",
+      "enabled": false
+    },
+    {
+      "id": 14,
+      "handler": "fcn_0044a220",
+      "eligibleCondition": "always eligible (default branch)",
+      "enabled": false
+    },
+    {
+      "id": 15,
+      "handler": "fcn_0044a453",
+      "eligibleCondition": "any ordinary/facility building level != 0",
+      "enabled": true
+    },
+    {
+      "id": 16,
+      "handler": "fcn_0044a5d6",
+      "eligibleCondition": "any active player walking",
+      "enabled": false
+    },
+    {
+      "id": 17,
+      "handler": "fcn_0044a657",
+      "eligibleCondition": "any active player using vehicle",
+      "enabled": false
+    },
+    {
+      "id": 18,
+      "handler": "fcn_0044a6e0",
+      "eligibleCondition": "always eligible (default branch)",
+      "enabled": false
+    },
+    {
+      "id": 19,
+      "handler": "fcn_0044a91e",
+      "eligibleCondition": "always eligible (default branch)",
+      "enabled": false
+    },
+    {
+      "id": 20,
+      "handler": "fcn_0044ab2c",
+      "eligibleCondition": "always eligible (default branch)",
+      "enabled": false
+    },
+    {
+      "id": 21,
+      "handler": "fcn_0044ac99",
+      "eligibleCondition": "always eligible (default branch)",
+      "enabled": false
+    },
+    {
+      "id": 22,
+      "handler": "fcn_0044ae89",
+      "eligibleCondition": "always eligible (default branch)",
+      "enabled": false
+    },
+    {
+      "id": 23,
+      "handler": "fcn_0044aedb",
+      "eligibleCondition": "always eligible (default branch)",
+      "enabled": true
+    },
+    {
+      "id": 24,
+      "handler": "fcn_0044b00a",
+      "eligibleCondition": "always eligible (default branch)",
+      "enabled": true
+    },
+    {
+      "id": 25,
+      "handler": "fcn_0044b055",
+      "eligibleCondition": "always eligible (default branch)",
+      "enabled": true
+    },
+    {
+      "id": 26,
+      "handler": "fcn_0044b0a0",
+      "eligibleCondition": "always eligible (default branch)",
+      "enabled": false
+    },
+    {
+      "id": 27,
+      "handler": "fcn_0044b0d1",
+      "eligibleCondition": "always eligible (default branch)",
+      "enabled": false
+    },
+    {
+      "id": 28,
+      "handler": "fcn_0044b1a3",
+      "eligibleCondition": "any stock byte+6 != 0",
+      "enabled": false
+    },
+    {
+      "id": 29,
+      "handler": "fcn_0044b25b",
+      "eligibleCondition": "owned commercial + owner passes fcn_0040d73f",
+      "enabled": false
+    },
+    {
+      "id": 30,
+      "handler": "fcn_0044b374",
+      "eligibleCondition": "always eligible (default branch)",
+      "enabled": false
+    },
+    {
+      "id": 31,
+      "handler": "fcn_0044b419",
+      "eligibleCondition": "always eligible (default branch)",
+      "enabled": false
+    },
+    {
+      "id": 32,
+      "handler": "fcn_0044b4a8",
+      "eligibleCondition": "always eligible (default branch)",
+      "enabled": false
+    },
+    {
+      "id": 33,
+      "handler": "fcn_0044b53f",
+      "eligibleCondition": "always eligible (default branch)",
+      "enabled": false
+    },
+    {
+      "id": 34,
+      "handler": "fcn_0044b57d",
+      "eligibleCondition": "always eligible (default branch)",
+      "enabled": false
+    },
+    {
+      "id": 35,
+      "handler": "fcn_0044b5f5",
+      "eligibleCondition": "any commercial funds+0x28 > 10000",
+      "enabled": false
+    }
+  ],
+  "newEvents": [
+    {
+      "id": 5,
+      "handler": "fcn_004492a0",
+      "condition": "any ordinary/facility level!=0",
+      "targets": "built ordinary indices1..N then built facility indices1..M; ownership unrestricted; rand()%count",
+      "effect": "fcn_0040ab4a(target,1): owner/level/type/extra field cleared; facility calls fcn_0040dffa",
+      "money": "none; no payment or compensation call",
+      "WebDifference": "seeded unbiased sampler; coherent research null; cosmetic speech RNG omitted"
+    },
+    {
+      "id": 15,
+      "handler": "fcn_0044a453",
+      "condition": "check_news allows ordinary OR facility, but handler enumerates ordinary built lands only",
+      "targets": "ordinary built indices1..N only, any owner",
+      "effect": "fcn_0040ab4a(target,0): normal level-1; nonzero ordinary type clears level/type; ownership stays",
+      "WebDifference": "eligibility narrowed to built ordinary to avoid rand modulo0 when only facilities exist; seeded sampler; omit cosmetic speech RNG"
+    },
+    {
+      "id": 8,
+      "handler": "fcn_004498b3",
+      "condition": "any owned land or facility",
+      "selection": "count each ordinary/facility owner; active who_plays!=0; strict greater max, first seat on ties",
+      "amount": "10000*priceIndex = (((((p*4+p)*8-p)*16+p)*16))",
+      "receipt": "loc_00449a24 calls fcn_0041d3f4(player,amount,1), cash +28 not bank +32",
+      "WebDifference": "priceIndex fixed1; cumulative statistics not implemented"
+    },
+    {
+      "id": 9,
+      "handler": "fcn_00449a8a",
+      "condition": "any owned land or facility",
+      "selection": "same counts, active who_plays!=0; strict less minimum initialized10000; zero-owner seats included; first tie",
+      "amount": "5000*priceIndex; same arithmetic as8 with final shift3 rather than4",
+      "receipt": "shared loc_00449a24; cash",
+      "WebDifference": "priceIndex fixed1; inactive special players not modeled"
+    }
+  ],
+  "helpers": {
+    "demolition": "rich4.asm:fcn_0040ab4a mode1 zeros ordinary owner+19,level+1a,type+18,dword+30; facility owner/level/type and dword+34. Does not touch price-status fields. mode0 ordinary lowers level and zeroes nonzero type.",
+    "hotel": "rich4_player_utils.asm:fcn_0040dffa writes active nonzero player hotel byte+50 to0x80; every facility mode1 invokes it, regardless facility type. Web hotel128 clears at next own turn.",
+    "research": "Web inherits G5/G7 research invalidation on loss of owner/level/type; explicitly candidate interpretation, not asserting raw cleared dword is research.",
+    "receipt": "rich4_player_core_actions.asm:fcn_0041d3f4 flags&1 routes to cash+28; else bank+32."
+  },
+  "unknown": [
+    "news4 range catastrophe effects",
+    "news6 mutable base price and its downstream valuation",
+    "news7 government auction caller settlement",
+    "news12 property tax payment/debt",
+    "remaining28 news effects",
+    "calendar/interest/loans/lottery payout",
+    "original Windows runtime and exact speech RNG/order equivalence"
+  ],
+  "labels": "Web descriptive titles based on audited effects; not claimed original Big5 captions"
+}

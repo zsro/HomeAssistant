@@ -1,0 +1,191 @@
+{
+  "players": 4,
+  "commands": 2102,
+  "turn": 290,
+  "auto": 216,
+  "human": 615,
+  "acquisitions": [
+    {
+      "id": "player-4",
+      "item": "card:18",
+      "ai": true,
+      "turn": 26,
+      "action": "magic",
+      "node": 88,
+      "evidence": [
+        {
+          "node": 35,
+          "group": 10,
+          "targets": [
+            "player-2",
+            "player-4"
+          ],
+          "effect": 6,
+          "title": "得一张卡片",
+          "rows": [
+            {
+              "playerId": "player-2",
+              "lines": [
+                "获得改建卡。"
+              ],
+              "pointsBefore": 110,
+              "pointsAfter": 110,
+              "cashBefore": 13500,
+              "cashAfter": 13500,
+              "bankBefore": 15000,
+              "bankAfter": 15000,
+              "stopBefore": 0,
+              "stopAfter": 0,
+              "previousBefore": 34,
+              "previousAfter": 34,
+              "received": {
+                "itemId": "card:07",
+                "discarded": null
+              }
+            },
+            {
+              "playerId": "player-4",
+              "lines": [
+                "获得复仇卡。"
+              ],
+              "pointsBefore": 0,
+              "pointsAfter": 0,
+              "cashBefore": 1000,
+              "cashAfter": 1000,
+              "bankBefore": 25000,
+              "bankAfter": 25000,
+              "stopBefore": 0,
+              "stopAfter": 0,
+              "previousBefore": 89,
+              "previousAfter": 89,
+              "received": {
+                "itemId": "card:18",
+                "discarded": null
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "player-1",
+      "item": "card:17",
+      "ai": false,
+      "turn": 41,
+      "action": "buyItem",
+      "node": 50,
+      "evidence": [
+        "card:17"
+      ]
+    },
+    {
+      "id": "player-2",
+      "item": "card:17",
+      "ai": false,
+      "turn": 94,
+      "action": "buyItem",
+      "node": 107,
+      "evidence": [
+        "card:17"
+      ]
+    },
+    {
+      "id": "player-1",
+      "item": "card:17",
+      "ai": false,
+      "turn": 101,
+      "action": "buyItem",
+      "node": 107,
+      "evidence": [
+        "card:17"
+      ]
+    },
+    {
+      "id": "player-4",
+      "item": "card:19",
+      "ai": true,
+      "turn": 288,
+      "action": "buyItem",
+      "node": 50,
+      "evidence": [
+        "card:19"
+      ]
+    }
+  ],
+  "attacks": [
+    {
+      "id": "player-1",
+      "target": "player-4",
+      "item": "card:17",
+      "turn": 289
+    }
+  ],
+  "reactions": [
+    {
+      "ai": true,
+      "id": "player-4",
+      "item": "card:17",
+      "target": "player-1",
+      "source": "player-1",
+      "choice": "use",
+      "turn": 289,
+      "turns": 4,
+      "phase": "turnEnd"
+    }
+  ],
+  "automatic": [],
+  "prefixes": [
+    "acquired-card:17",
+    "acquired-card:19",
+    "card:17-confirm-before",
+    "card:17-confirm-after",
+    "defense-paused",
+    "defense-resumed",
+    "reaction-before",
+    "reaction-after"
+  ],
+  "report": {
+    "policy": "defense-v1",
+    "toolWindows": [
+      "tool:08"
+    ],
+    "crossChecks": [
+      {
+        "index": 2088,
+        "active": "player-1",
+        "actor": "player-4",
+        "kind": "reaction",
+        "computer": true,
+        "item": "card:17"
+      }
+    ],
+    "route": "4",
+    "terminal": false,
+    "players": 4,
+    "normalSpeed": true,
+    "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+    "commands": 2102,
+    "auto": 216,
+    "human": 615,
+    "lifecycle": [
+      "pause stops waiting",
+      "resume",
+      "reset dialog cancel",
+      "reset",
+      "replace with humans",
+      "exit cleanup",
+      "fullscreen",
+      "390px"
+    ],
+    "cleanup": {
+      "raf": 0,
+      "canvas": 0
+    },
+    "errors": []
+  },
+  "hashes": {
+    "replay": "0a3d675c9774b31de5310ab30b15d49985c477617b18d6ed4104d20486435c9f",
+    "state": "fb714815e07b06138dfcc05648112f85c221eb9876c2423e56ff58a40576ad14",
+    "events": "828126706541670ed3e3db69fd471ef7f02c582205de7f8cbe03e9526777cb92"
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "stage": "S3-02n",
+  "rulesId": "japan-events-candidate-v44",
+  "fingerprint": "f9dbb7e9",
+  "policy": "research-v1",
+  "newGameSemantics": false,
+  "nativeExecution": false,
+  "referenceCommit": "ec7d70e693059d1e781d9d1cc2ad7f36d360d39e",
+  "preservedPolicies": [
+    "basic-v1",
+    "tools-v1",
+    "rent-v1",
+    "defense-v1",
+    "estate-v1",
+    "cash-v1",
+    "status-v1",
+    "inventory-v1",
+    "commerce-v1",
+    "area-v1",
+    "roads-v1",
+    "mobility-v1",
+    "gods-v1",
+    "capital-v1"
+  ],
+  "nativeReread": [
+    {
+      "path": "asm/rich4_tool_shiguangji.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_tool_shiguangji.asm",
+      "sha256": "cf7d61f898bb06d9b0f26abd90c2b1ff0d0f370c563a78f566fbb374daa1277b",
+      "provenance": "downloaded-fixed-reference",
+      "localPath": "/private/tmp/rich4-g7/rich4_tool_shiguangji.asm",
+      "reread": [
+        "lines17–79: restore succeeds before tool10 consumption"
+      ]
+    },
+    {
+      "path": "asm/rich4_player_save_state.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_save_state.asm",
+      "sha256": "8c3d6b7432e81703520465e7785b8293527402e0332f32374ba81848e142e459",
+      "provenance": "downloaded-fixed-reference",
+      "localPath": "/private/tmp/rich4-g7/rich4_player_save_state.asm",
+      "reread": [
+        "lines47–83: player<4 and flag1 native checkpoint gate"
+      ]
+    },
+    {
+      "path": "asm/rich4_tool_chuansongji.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_tool_chuansongji.asm",
+      "sha256": "0198b74da766617974d63a5f26c3614e260b9af995f7938f5c8aca5cae38bed4",
+      "provenance": "downloaded-fixed-reference",
+      "localPath": "/private/tmp/rich4-g7/rich4_tool_chuansongji.asm",
+      "reread": [
+        "lines295–380: self move saves first; node/direction and attachments"
+      ]
+    },
+    {
+      "path": "asm/rich4_tool_hezifeidan.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_tool_hezifeidan.asm",
+      "sha256": "8a5c6bb9c9a1e5b0c6850e72ba6a9ec484b7c1c0b316f0630dcaf30bf62655e1",
+      "provenance": "downloaded-fixed-reference",
+      "localPath": "/private/tmp/rich4-g7/rich4_tool_hezifeidan.asm",
+      "reread": [
+        "lines24–145: selected area attack, consume13, flag0x40 hit players hospital3"
+      ]
+    },
+    {
+      "path": "asm/rich4_tool_table.c",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_tool_table.c",
+      "sha256": "d19259524990ed8b9bf13c85dbf7220d9166b11536f91df9c8ed904f5f4e3158",
+      "provenance": "previous-audit-cache",
+      "localPath": "/private/tmp/richman-price-reference/rich4_tool_table.c",
+      "reread": [
+        "full13tool table; research tools zero initial category2"
+      ]
+    }
+  ],
+  "priorNativeAudit": [
+    "s2-02n-sources.json",
+    "s2-05c-sources.json",
+    "s3-02m-sources.json"
+  ],
+  "engineReused": {
+    "production": "owned unsealed type4 facility levels2/3/5, free five owner actions, cap9, zero initial/nonshop/no finite pool",
+    "time": "last departure world restore and historical time-tool consumption; protocol/RNG/logs do not rewind; all checkpoints invalidate",
+    "teleport": "self saves before consumption then normal landing; legal target/destination/heading reused",
+    "nuclear": "440 projection area, clear property owner/level/type/research without price rewrite, hospital3 and vehicle loss, remove objects/gods; no reaction",
+    "observationVsOracle": "Verifier may inspect saved world to assert effects; policy uses only current public state and observed departure records."
+  },
+  "webPolicy": {
+    "production": "highest unlocked missing advanced tool, avoid owned duplicate task; idle/turnEnd legal options",
+    "labAccess": "public BFS branch/remote direct landing; cash after optional facility investment>=3000 and liquid>=capital reserve; lab bank cash target<=15000 without debt-funded construction",
+    "timeObservation": "only accepted rolled/self-teleport commands observe current public values and protected fields; no hidden checkpoint copying; all observations cleared after confirmed time machine and game reset",
+    "timeDecision": "public own asset loss>=5000 and net after enemy restoration gains>=3000, own inventory/status/gods/research plus global relations/exits unchanged, ally protected fields unchanged and no public asset decrease",
+    "teleport": "self-only to own idle safe unsealed lab with available missing advanced production; skip carrying bomb/engineer, hazards/blocks/gods at destination",
+    "nuclear": "exclude own/ally players/properties/research and helpful gods; enemy visible damage score>=5000",
+    "information": "current public state and host observation only; no future decks, seed/RNG use or checkpoint gain forecast"
+  },
+  "deferred": [
+    "native AI equivalence, native checkpoint flag1 role gate differs from established Web world rules",
+    "time heuristic is not full saved-world prediction; unobserved checkpoint after fresh host does not trigger",
+    "other entity/property/object/god teleport optimization",
+    "future events, prices, long-range traps and guaranteed safety",
+    "all old precision/RNG/chart, other asset listing, special roles, wheel, native exit/endgame, minigame presentation/collision differences"
+  ],
+  "evidence": "B: fixed native cache hashes checked, no new Windows execution; policy weights and public observation guards are Web heuristics",
+  "implementationFiles": [
+    "frontend/src/features/richman/game/computer-research.ts",
+    "frontend/src/features/richman/game/session.ts"
+  ],
+  "verificationFiles": [
+    "frontend/src/features/richman/game/computer-research.test.ts",
+    "scripts/richman/verify-computer-research.ts",
+    "frontend/src/features/richman/game/computer-research-browser.test.ts"
+  ]
+}

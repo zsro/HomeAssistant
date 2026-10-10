@@ -1,0 +1,130 @@
+{
+  "stage": "S3-02k",
+  "rulesId": "japan-events-candidate-v44",
+  "fingerprint": "f9dbb7e9",
+  "policy": "mobility-v1",
+  "newGameSemantics": false,
+  "nativeExecution": false,
+  "referenceCommit": "ec7d70e693059d1e781d9d1cc2ad7f36d360d39e",
+  "preservedPolicies": [
+    "basic-v1",
+    "tools-v1",
+    "rent-v1",
+    "defense-v1",
+    "estate-v1",
+    "cash-v1",
+    "status-v1",
+    "inventory-v1",
+    "commerce-v1",
+    "area-v1",
+    "roads-v1"
+  ],
+  "priorNativeAudit": [
+    "s2-02h-sources.json",
+    "s2-02i-sources.json",
+    "s2-02l-sources.json",
+    "s3-02j-sources.json"
+  ],
+  "nativeReread": [
+    {
+      "path": "asm/rich4_card_zhuanxiangka.c",
+      "sha256": "e9bbbea320b4c702281c4475e3b8d77234e699a942fb9859130ba07d715b4e32",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_card_zhuanxiangka.c",
+      "localPath": "/private/tmp/richman-price-reference/rich4_card_zhuanxiangka.c",
+      "reread": true
+    },
+    {
+      "path": "asm/rich4_tool_jiche.asm",
+      "sha256": "bc74fbda422507fb79ba47f8cff770840af21223245713b60a5b1014ec5fa25d",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_tool_jiche.asm",
+      "localPath": "/private/tmp/richman-price-reference/rich4_tool_jiche.asm",
+      "reread": true
+    },
+    {
+      "path": "asm/rich4_tool_qiche.asm",
+      "sha256": "d701426fe774a3fa06286303a0a4093f38d8322f0704f4d5271b53e51ebbbff2",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_tool_qiche.asm",
+      "localPath": "/private/tmp/richman-price-reference/rich4_tool_qiche.asm",
+      "reread": true
+    },
+    {
+      "path": "asm/rich4_tool_gongchengche.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_tool_gongchengche.asm",
+      "sha256": "59198ff193a5ec99e61cec80d41654097e13ed910267286ee8bd104ac7d10ee9",
+      "localPath": "/private/tmp/richman-price-reference/rich4_tool_gongchengche.asm",
+      "reread": true
+    }
+  ],
+  "localEvidence": [
+    {
+      "path": "frontend/src/features/richman/game/computer-mobility.ts",
+      "sha256": "540b968ca501f8c624b29cbc706b6be89bb918b95d40115c9c127dd761e754b0"
+    },
+    {
+      "path": "frontend/src/features/richman/game/computer-mobility.test.ts",
+      "sha256": "0005a9b8e60c9f97222b2f41956b01aad3cf884515a1ffcfb71c5e3fad361202"
+    },
+    {
+      "path": "frontend/src/features/richman/game/computer-mobility-browser.test.ts",
+      "sha256": "22d51343542aa3e094b6cba61a473983a8fcaf91189bb4f4ba985ead707d5762"
+    },
+    {
+      "path": "frontend/src/features/richman/game/g1.ts",
+      "sha256": "6f638af0b87346833b0997ad2d5b577a408d7d00fc51f867a552171b66fa91fe"
+    },
+    {
+      "path": "frontend/src/features/richman/game/g2.ts",
+      "sha256": "639f9fdaadfafa0c6fed745c65f42018c9cc9bfce8a9d99db06e6e51f1ff9c17"
+    },
+    {
+      "path": "frontend/src/features/richman/game/g5.ts",
+      "sha256": "b2768b2f307d7088d83fd85827e7d80291455571e305eabd5b1179f83dfa6618"
+    },
+    {
+      "path": "frontend/src/features/richman/game/engine.ts",
+      "sha256": "edb72546f0f2c7269d77867855f24b764457c3b9f6a658632f50444eedada425"
+    },
+    {
+      "path": "frontend/src/features/richman/game/session.ts",
+      "sha256": "c7a4c1fb968db8a9e43a0d9971279a8db03d33f3c6724f51e7a8ead9917758e1"
+    },
+    {
+      "path": "scripts/richman/plan-computer-mobility.ts",
+      "sha256": "d89e71a27a7695b22d609b4c7d723a82c9526c99ede27b7d2ae07ea8f6a09b42"
+    },
+    {
+      "path": "scripts/richman/plan-computer-mobility-engineer.ts",
+      "sha256": "61924e580bf5a93ddcb2060a6cb774fe6b195bec7e90c32c6fa83401f066318e"
+    },
+    {
+      "path": "scripts/richman/prepare-mobility-routes.ts",
+      "sha256": "6138623f86275eb165e2ce83ef9cf8d701cd37b4c3493a3f9656cde72bb36d71"
+    },
+    {
+      "path": "scripts/richman/verify-computer-mobility.ts",
+      "sha256": "14bbd20a0acf00b77c18e18349b603ace1bb2ed04b719d32d5884f3bee0d1076"
+    },
+    {
+      "path": "scripts/richman/archive-computer-mobility.ts",
+      "sha256": "148bac1144d57fd813a428288a06a8f5bb5ea7fa7ec73ec795982fd1595a20a0"
+    },
+    {
+      "path": "scripts/richman/computer-mobility-ui-browser.cjs",
+      "sha256": "b5829b73ae08f58e1fa241d7ee472b14ed84676effc570533579d5374fb6bc93"
+    },
+    {
+      "path": "scripts/richman/computer-mobility-built-browser.cjs",
+      "sha256": "f3b280a24f9acc57207abee27f677f97545835f006e49eeeb9fbd6331ee7a4cf"
+    }
+  ],
+  "claims": [
+    "Independent host policy; all eleven old policies delegated unchanged",
+    "Self reverse compares every legal next previous without reading seeded outcome",
+    "Vehicle choice only increases maximum dice; public convolution chooses dice independently",
+    "Engineer produced only in an existing standing eligible level4 lab; no automatic lab investment strategy",
+    "Current friendly six-step envelope and engineering branch safety are local heuristics, not seven-turn guarantees",
+    "Original pay/decision first, endTurn demolish second, then own-action engineer clock",
+    "Manual Nissan-assisted lab route is a test participant strategy, not attributed to computer AI",
+    "Equipment return may exceed shop inventory cap9; no discard introduced"
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "players": 2,
+  "commands": 2242,
+  "turn": 313,
+  "auto": 475,
+  "human": 400,
+  "reactions": [
+    {
+      "ai": true,
+      "id": "player-2",
+      "stage": "redirect",
+      "choice": "use",
+      "target": "player-1",
+      "amount": 1200,
+      "turn": 286
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "stage": "free",
+      "choice": "use",
+      "target": null,
+      "amount": 700,
+      "turn": 312
+    }
+  ],
+  "purchases": [
+    {
+      "id": "player-2",
+      "item": "card:20",
+      "turn": 292
+    }
+  ],
+  "acquisitions": [
+    {
+      "id": "player-2",
+      "item": "card:19",
+      "turn": 274,
+      "command": "animationDone",
+      "node": 30,
+      "evidence": [
+        "玩家2附身大福神，期限7次自身行动边界。",
+        "玩家2获得card:19。",
+        "玩家2获得card:14。"
+      ]
+    },
+    {
+      "id": "player-2",
+      "item": "card:20",
+      "turn": 292,
+      "command": "buyItem",
+      "node": 107,
+      "evidence": [
+        "card:20"
+      ]
+    }
+  ],
+  "payments": [],
+  "forced": [],
+  "disposals": [],
+  "prefixes": [
+    "card:19-acquired",
+    "reaction-paused",
+    "reaction-resumed",
+    "redirect-before-true",
+    "redirect-after-true",
+    "card:20-acquired",
+    "card:20-buy",
+    "free-before-true",
+    "free-after-true"
+  ],
+  "report": {
+    "policy": "rent-v1",
+    "toolWindows": [
+      "tool:08",
+      "tool:09"
+    ],
+    "crossChecks": [
+      {
+        "index": 597,
+        "kind": "property",
+        "computer": true,
+        "active": "player-2",
+        "actor": "player-2"
+      },
+      {
+        "index": 821,
+        "kind": "property",
+        "computer": false,
+        "active": "player-1",
+        "actor": "player-1"
+      },
+      {
+        "index": 2009,
+        "kind": "reaction",
+        "computer": true,
+        "active": "player-2",
+        "actor": "player-2"
+      }
+    ],
+    "route": "2",
+    "terminal": false,
+    "players": 2,
+    "normalSpeed": true,
+    "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+    "commands": 2242,
+    "auto": 475,
+    "human": 400,
+    "lifecycle": [
+      "pause stops waiting",
+      "resume",
+      "reset dialog cancel",
+      "reset",
+      "replace with humans",
+      "exit cleanup",
+      "fullscreen",
+      "390px"
+    ],
+    "cleanup": {
+      "raf": 0,
+      "canvas": 0
+    },
+    "errors": []
+  },
+  "hashes": {
+    "replay": "e404140492d1ca8695f69d04d6aaf14058be629f0269fcaf4a93ab8b0af2ebc9",
+    "state": "572187f53a95b1f301b6546aba7cd49e0a28db4212fc90172740dcdfe43fc5db",
+    "events": "9ce3270c6c230bb4cfbfcfcdc2cbad1c15a3e9f4939791cf78e2d1963df8c0ec"
+  }
+}

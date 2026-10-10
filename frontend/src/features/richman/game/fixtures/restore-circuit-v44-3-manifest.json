@@ -1,0 +1,111 @@
+{
+  "players": 3,
+  "commands": 2535,
+  "turn": 126,
+  "date": "1998-02-18",
+  "deliveries": 1,
+  "researchStarted": 2,
+  "trades": 37,
+  "dateSteps": 41,
+  "afterRestore": 1,
+  "prefixes": [
+    "calendar",
+    "research-start",
+    "research-delivery",
+    "before-time-confirm",
+    "after-time-confirm",
+    "next-departure"
+  ],
+  "restores": [
+    {
+      "playerId": "player-2",
+      "turn": 125,
+      "checkpointTurn": 122,
+      "round": [
+        42,
+        41
+      ],
+      "date": [
+        "1998-02-19",
+        "1998-02-18"
+      ],
+      "changed": [
+        "balances",
+        "holdings",
+        "market",
+        "date",
+        "research",
+        "companies",
+        "finance"
+      ],
+      "inventory": [
+        1,
+        1,
+        0
+      ],
+      "research": [
+        [
+          {
+            "id": "japan:facility:2",
+            "ownerId": "player-2",
+            "level": 3,
+            "basePrice": 6000,
+            "buildingType": 4,
+            "priceStatus": 0,
+            "research": {
+              "itemId": "tool:09",
+              "remaining": 5,
+              "ownerId": "player-2"
+            }
+          }
+        ],
+        [
+          {
+            "id": "japan:facility:2",
+            "ownerId": "player-2",
+            "level": 3,
+            "basePrice": 6000,
+            "buildingType": 4,
+            "priceStatus": 0,
+            "research": {
+              "itemId": "tool:09",
+              "remaining": 4,
+              "ownerId": "player-2"
+            }
+          }
+        ]
+      ],
+      "rng": 3422784935,
+      "revision": [
+        2530,
+        2531
+      ],
+      "logs": [
+        1872,
+        1874
+      ]
+    }
+  ],
+  "report": {
+    "normalSpeed": true,
+    "map": "original Japan; real UI commands; auth-only fixture; no game-state injection",
+    "circuitCommon": true,
+    "calendarCommon": true,
+    "completed": [
+      {
+        "id": "tool:10",
+        "preview": "恢复全体玩家位置、现金/存款、地产、库存/供应、研究、车辆/状态、神仙、道路物件及股票持仓/行情。随机序列和操作日志不倒退；从历史背包扣1台，所有旧历史清除。取消不改变任何状态。"
+      }
+    ],
+    "errors": [],
+    "cleanup": {
+      "raf": 0,
+      "canvas": 0
+    }
+  },
+  "hashes": {
+    "replay": "f5446193df9b3911256082068584905c0150e82a7a33e33afdd04fea7d12f2de",
+    "state": "f12857728e60a08ad99cc33a92aaf08d7bc7f889e3ccd4007d0bef65606e9cdf",
+    "events": "77e8cec5fc65dfcaa210a33d2d3538ed750cef8126d6a4c6ef8dc5475732d6e8"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-05",
+  "status": "implemented-awaiting-unified-acceptance",
+  "rulesId": "japan-tools-candidate-v12",
+  "itemFingerprint": "942f4ae7",
+  "previousFingerprints": {
+    "v11": "a23a792b",
+    "v10": "d9e59846",
+    "v9": "6be76c90",
+    "v8": "717e58c0",
+    "v7": "e2ec2345"
+  },
+  "implementedThisGroup": 4,
+  "acceptedThisGroup": 0,
+  "implementedTotal": 40,
+  "acceptedTotal": 18,
+  "pendingAcceptance": 22,
+  "unimplemented": 3,
+  "staticTypecheck": {
+    "command": "node frontend/node_modules/typescript/bin/tsc -p frontend/tsconfig.app.json --noEmit --pretty false",
+    "exitCode": 0
+  },
+  "registryConstantsRead": true,
+  "automatedTests": {
+    "executed": false,
+    "reason": "User deferred until all 43 items implemented"
+  },
+  "browser": {
+    "executed": false,
+    "replay": null,
+    "screenshots": []
+  },
+  "gameplayExecuted": false,
+  "oldReplaysRerun": false,
+  "next": "G7 three research tools with new v13; then unified acceptance",
+  "limitations": [
+    "seeded god placement/replenishment; anchor targets instead of pixel hitmaps",
+    "seeded deity wheel and capped payments; no deity debt",
+    "ordinary rent deity modifiers only; empty facility angel defaults to hotel",
+    "round-based market instead of original calendar; no company control, dividends or weekends",
+    "stock liquidation in stable catalog order after final rent reactions",
+    "deity stats/insurance/animations and original Windows comparison deferred"
+  ]
+}

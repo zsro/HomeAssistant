@@ -1,0 +1,124 @@
+{
+  "players": 2,
+  "commands": 313,
+  "turn": 47,
+  "auto": 74,
+  "human": 49,
+  "acquisitions": [
+    {
+      "id": "player-2",
+      "ai": true,
+      "item": "card:11",
+      "turn": 12,
+      "action": "animationDone",
+      "events": [
+        {
+          "type": "g6Notice",
+          "message": "玩家2附身衰神，期限13次自身行动边界。",
+          "sequence": 188,
+          "commandId": "command-107",
+          "playerId": "player-2",
+          "turn": 12
+        },
+        {
+          "type": "g6Notice",
+          "message": "衰神清空背包，不返还点数；装备和已放物件保留。",
+          "sequence": 189,
+          "commandId": "command-107",
+          "playerId": "player-2",
+          "turn": 12
+        },
+        {
+          "type": "mapCardReceived",
+          "node": 98,
+          "itemId": "card:11",
+          "discarded": null,
+          "sequence": 191,
+          "commandId": "command-107",
+          "playerId": "player-2",
+          "turn": 12
+        }
+      ]
+    }
+  ],
+  "uses": [
+    {
+      "ai": true,
+      "id": "player-2",
+      "item": "card:11",
+      "target": "japan:facility:2",
+      "turn": 38,
+      "phase": "idle",
+      "affected": [
+        "japan:facility:2"
+      ],
+      "changes": [
+        {
+          "before": {
+            "id": "japan:facility:2",
+            "ownerId": "player-1",
+            "level": 1,
+            "basePrice": 6000,
+            "buildingType": 1,
+            "priceStatus": 0,
+            "research": null
+          },
+          "after": {
+            "id": "japan:facility:2",
+            "ownerId": "player-1",
+            "level": 0,
+            "basePrice": 6000,
+            "buildingType": 0,
+            "priceStatus": 0,
+            "research": null
+          }
+        }
+      ]
+    }
+  ],
+  "cancellations": [],
+  "prefixes": [
+    "card:11-acquired",
+    "card:11-paused",
+    "card:11-resumed",
+    "card:11-confirm-before",
+    "card:11-confirm-after"
+  ],
+  "report": {
+    "policy": "area-v1",
+    "toolWindows": [
+      "tool:08",
+      "tool:09",
+      "card:11"
+    ],
+    "crossChecks": [],
+    "route": "2",
+    "terminal": false,
+    "players": 2,
+    "normalSpeed": true,
+    "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+    "commands": 313,
+    "auto": 74,
+    "human": 49,
+    "lifecycle": [
+      "pause stops waiting",
+      "resume",
+      "reset dialog cancel",
+      "reset",
+      "replace with humans",
+      "exit cleanup",
+      "fullscreen",
+      "390px"
+    ],
+    "cleanup": {
+      "raf": 0,
+      "canvas": 0
+    },
+    "errors": []
+  },
+  "hashes": {
+    "replay": "89934044d3742ed4ac74b8595ebf488a73c5ec078dad57bd00961491f33907f5",
+    "state": "f430c8fe6e4c60e5863c4b72a597e801386a4e281a5a1cb6244f497e641b18b7",
+    "events": "7ecd936bd80d170895a155a6f37a7599bfef11e32d74b45107f22e0f1fb24db9"
+  }
+}

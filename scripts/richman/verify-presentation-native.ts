@@ -1,0 +1,35 @@
+/** Verify and archive the native-tab receipt; no browser or saved-world injection. */
+import {readFileSync,writeFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import assert from 'node:assert/strict';
+import {GameEngine,replayGame} from '../../frontend/src/features/richman/game/engine';
+import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+const dir='/private/tmp/richman-native-tab';
+const media=JSON.parse(readFileSync(dir+'/final.json','utf8'));
+const replay=JSON.parse(readFileSync(dir+'/replay.json','utf8'));
+assert.equal(replay.rulesId,'japan-events-candidate-v47');
+assert.equal(replay.commands.length,6);
+const engine=new GameEngine(nodes,replay.config);
+for(const c of replay.commands)assert.ok(engine.dispatch(c).ok);
+assert.ok(engine.events.some(e=>e.type==='propertySettled'&&e.operation==='buy'&&e.amount===2000));
+const full=replayGame(nodes,replay);assert.deepEqual(full.state,engine.state);assert.deepEqual(full.events,engine.events);
+for(const n of [1,3,5]){const partial=replayGame(nodes,{...replay,commands:replay.commands.slice(0,n)});for(const c of replay.commands.slice(n))assert.ok(partial.dispatch(c).ok);assert.deepEqual(partial.state,engine.state);assert.deepEqual(partial.events,engine.events)}
+const transitions=media.visibility.filter((x:{kind:string})=>x.kind==='event');
+assert.deepEqual(transitions.map((x:{hidden:boolean;trusted:boolean})=>[x.hidden,x.trusted]),[[true,true],[false,true],[true,true],[false,true]]);
+const settled=media.visibility.filter((x:{kind:string})=>x.kind==='settled');
+for(const x of settled.filter((x:{hidden:boolean})=>x.hidden))assert.ok(x.ports.every((p:{paused:boolean})=>p.paused));
+for(const x of settled.filter((x:{hidden:boolean})=>!x.hidden))assert.ok(x.ports.some((p:{paused:boolean;time:number})=>!p.paused&&p.time>0));
+assert.equal(transitions[2].ports[0].id,transitions[3].ports[0].id);
+assert.ok(Math.abs(transitions[3].ports[0].time-settled[2].ports[0].time)<.001);
+assert.ok(transitions[3].at-transitions[2].at>1000);
+assert.ok(media.events.some((e:{type:string;src:string})=>e.type==='playing'&&e.src.endsWith('effect-49.wav')));
+assert.ok(media.outcomes.some((e:{result:string;src:string})=>e.result==='resolved'&&e.src.endsWith('effect-49.wav')));
+assert.ok(!media.outcomes.some((e:{name:string})=>e.name==='NotAllowedError'));
+assert.ok(media.ports.every((p:{paused:boolean;attribute:null|string})=>p.paused&&p.attribute===null));assert.deepEqual(media.errors,[]);
+const hash=(x:string)=>createHash('sha256').update(x).digest('hex');
+const competition=JSON.parse(readFileSync(dir+'/competition-audit.json','utf8'));
+const receipt={stage:'S3-04d-native-final',date:'2026-10-10',rulesId:replay.rulesId,scope:'actual native Chrome original Japan; passive media promises/visibility and auth-only fixture; no synthetic event or error',actualCommands:6,prefixes:[1,3,5],fullReplay:true,prefixReplay:true,replaySHA256:hash(JSON.stringify(replay)),realHiddenRestore:{status:'passed-native-tab-music-loading-and-playing',transitions:transitions.map(({ports,...x}: {ports:unknown[]})=>({...x,ports})),settled,playingHiddenDurationMs:transitions[3].at-transitions[2].at,positionAtHidden:settled[2].ports[0].time,positionBeforeRestore:transitions[3].ports[0].time,limitation:'idle music/loading boundaries only; no active transient/G7 or moving-scene hidden case claimed'},naturalShortRefusal:{status:'not-triggered',effect:'49',result:'resolved-and-playing',policyErrors:0,abortErrors:media.outcomes.filter((x:{name:string})=>x.name==='AbortError').length,note:'AbortError during music load interrupted by real hiding is not NotAllowedError'},sameTurnCompetition:{status:'not-triggered',savedRoutes:competition.routes.length,savedCommands:competition.commands,potentialCompetitors:competition.potentialCompetitors,note:'read-only cues from actual replays; no timed queue acceptance'},cleanup:{ports:media.ports.length,allReleased:true},errors:media.errors};
+writeFileSync('docs/richman/s3-04d-native-final.json',JSON.stringify({receipt,media,competition},null,2)+'\n');
+writeFileSync('frontend/src/features/richman/game/fixtures/presentation-v47-native-final-replay.json',JSON.stringify(replay));
+writeFileSync('frontend/src/features/richman/game/fixtures/presentation-v47-native-final-manifest.json',JSON.stringify(receipt,null,2)+'\n');
+console.log(JSON.stringify(receipt));

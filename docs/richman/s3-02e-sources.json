@@ -1,0 +1,602 @@
+{
+  "stage": "S3-02e",
+  "policy": "cash-v1",
+  "preservedPolicies": [
+    "basic-v1",
+    "tools-v1",
+    "rent-v1",
+    "defense-v1",
+    "estate-v1"
+  ],
+  "rulesId": "japan-events-candidate-v44",
+  "fingerprint": "f9dbb7e9",
+  "newGameSemantics": false,
+  "nativeExecution": false,
+  "priorNativeAudit": [
+    "s2-02f-sources.json",
+    "s2-02g-sources.json",
+    "s2-02k-sources.json",
+    "s3-01a-sources.json"
+  ],
+  "sources": [
+    {
+      "path": "frontend/src/features/richman/game/computer-cash.ts",
+      "sha256": "a82370fc28ddb666299136056f7c8ab609c8e18e09ce7a1f29dcc681afe3eaa6",
+      "anchors": [
+        {
+          "text": "CASH_POLICY",
+          "lines": [
+            13,
+            40
+          ]
+        },
+        {
+          "text": "function cashChoices",
+          "lines": [
+            17
+          ]
+        },
+        {
+          "text": "CASH_MIN_GAIN",
+          "lines": [
+            15,
+            37
+          ]
+        },
+        {
+          "text": "function decideComputer",
+          "lines": [
+            39
+          ]
+        },
+        {
+          "text": "p.continuation.kind",
+          "lines": [
+            44
+          ]
+        }
+      ],
+      "grade": "host heuristic/validation; not native AI evidence"
+    },
+    {
+      "path": "frontend/src/features/richman/game/computer-estate.ts",
+      "sha256": "bcce6e5aae10a0183c5b2c8af51420ab00614976d6d4ee3f40b0277409f95d30",
+      "anchors": [
+        {
+          "text": "function decideComputer",
+          "lines": [
+            41
+          ]
+        }
+      ],
+      "grade": "host heuristic/validation; not native AI evidence"
+    },
+    {
+      "path": "frontend/src/features/richman/game/computer-defense.ts",
+      "sha256": "34b21482dad7bd9684162ba5b75cffab780338ffe535f7b51832164fc412e5de",
+      "anchors": [
+        {
+          "text": "function decideComputer",
+          "lines": [
+            8
+          ]
+        }
+      ],
+      "grade": "host heuristic/validation; not native AI evidence"
+    },
+    {
+      "path": "frontend/src/features/richman/game/computer-reactions.ts",
+      "sha256": "212ddf0a043aceefe5ae286173f092cbe8b0529ce0ac77721cdec64294f769fa",
+      "anchors": [
+        {
+          "text": "function decideComputer",
+          "lines": [
+            15
+          ]
+        }
+      ],
+      "grade": "host heuristic/validation; not native AI evidence"
+    },
+    {
+      "path": "frontend/src/features/richman/game/computer-tools.ts",
+      "sha256": "00c5f76c27336c15137c98b0eb27b7cb70626aa3c1befae18b6a7e0fe4bb9e37",
+      "anchors": [
+        {
+          "text": "function decideComputer",
+          "lines": [
+            67
+          ]
+        }
+      ],
+      "grade": "host heuristic/validation; not native AI evidence"
+    },
+    {
+      "path": "frontend/src/features/richman/game/computer.ts",
+      "sha256": "d1e8ee9a1fcd2faf677c75b395f617d2d78532a6ecc216a93b6dce47dbe1e085",
+      "anchors": [
+        {
+          "text": "ComputerPolicy=",
+          "lines": [
+            7
+          ]
+        },
+        {
+          "text": "function computerDecision",
+          "lines": [
+            18
+          ]
+        }
+      ],
+      "grade": "host heuristic/validation; not native AI evidence"
+    },
+    {
+      "path": "frontend/src/features/richman/game/session.ts",
+      "sha256": "d25f743ab59779b8d05bc26770a4d5ff1d90e027042966543cf88402b5971976",
+      "anchors": [
+        {
+          "text": "computerPolicy",
+          "lines": [
+            79,
+            134,
+            139,
+            328,
+            391
+          ]
+        },
+        {
+          "text": "private send",
+          "lines": [
+            250
+          ]
+        },
+        {
+          "text": "tick(milliseconds",
+          "lines": [
+            379,
+            381
+          ]
+        },
+        {
+          "text": "react(decisionId",
+          "lines": [
+            408
+          ]
+        }
+      ],
+      "grade": "host heuristic/validation; not native AI evidence"
+    },
+    {
+      "path": "frontend/src/features/richman/ComputerPanel.tsx",
+      "sha256": "7ddd2dd8b0e9e506c977e21ab4f6b5f276a022d6a5b477dc378425bed46802f1",
+      "anchors": [
+        {
+          "text": "c.policy==='cash-v1'",
+          "lines": [
+            11
+          ]
+        }
+      ],
+      "grade": "host heuristic/validation; not native AI evidence"
+    },
+    {
+      "path": "frontend/src/pages/RichmanPage.tsx",
+      "sha256": "4e5626543b07614fb023be2f65409fa0d4b50330a09b538b86d3d6b9c24cf63b",
+      "anchors": [
+        {
+          "text": "value=\"cash-v1\"",
+          "lines": [
+            342
+          ]
+        }
+      ],
+      "grade": "host heuristic/validation; not native AI evidence"
+    },
+    {
+      "path": "frontend/src/features/richman/game/cards.ts",
+      "sha256": "53325a5fb079c8f79e9c40f16e00fe770dd77ec27c52f5f9a6d7c700caf5e9cc",
+      "anchors": [
+        {
+          "text": "equalCashTargets",
+          "lines": [
+            33
+          ]
+        },
+        {
+          "text": "equalCashPreview",
+          "lines": [
+            27
+          ]
+        }
+      ],
+      "grade": "preserved existing semantic evidence"
+    },
+    {
+      "path": "frontend/src/features/richman/game/wealth.ts",
+      "sha256": "aab5e79eff4808ded8626e80060c01bae9167bce13edef7c4d796d2b4cf3ef2a",
+      "anchors": [
+        {
+          "text": "wealthParticipants",
+          "lines": [
+            23
+          ]
+        },
+        {
+          "text": "wealthPreview",
+          "lines": [
+            26
+          ]
+        }
+      ],
+      "grade": "preserved existing semantic evidence"
+    },
+    {
+      "path": "frontend/src/features/richman/game/g4.ts",
+      "sha256": "78e38e9e287cff11a645a45c99a5e632777bc842e2029526b18096184f28184c",
+      "anchors": [
+        {
+          "text": "settleTax",
+          "lines": [
+            129,
+            140,
+            142,
+            156
+          ]
+        },
+        {
+          "text": "reactTax",
+          "lines": [
+            134
+          ]
+        },
+        {
+          "text": "card:26",
+          "lines": [
+            55,
+            150
+          ]
+        }
+      ],
+      "grade": "preserved existing semantic evidence"
+    },
+    {
+      "path": "frontend/src/features/richman/game/engine.ts",
+      "sha256": "edb72546f0f2c7269d77867855f24b764457c3b9f6a658632f50444eedada425",
+      "anchors": [
+        {
+          "text": "wealthEqualized",
+          "lines": [
+            188,
+            820
+          ]
+        },
+        {
+          "text": "cashEqualized",
+          "lines": [
+            190,
+            843
+          ]
+        },
+        {
+          "text": "equalCashPreview(source.cash",
+          "lines": [
+            835
+          ]
+        }
+      ],
+      "grade": "preserved existing semantic evidence"
+    },
+    {
+      "path": "frontend/src/features/richman/game/shop-acquisition.ts",
+      "sha256": "78667adb5cfab4f0fb8ff828e94ed610ae30bd7fc6e4923070359a4b549c72cc",
+      "anchors": [
+        {
+          "text": "shopPrice",
+          "lines": [
+            17,
+            36
+          ]
+        },
+        {
+          "text": "shopSupply",
+          "lines": [
+            16,
+            19,
+            32,
+            37,
+            38
+          ]
+        },
+        {
+          "text": "buyFromShelf",
+          "lines": [
+            34
+          ]
+        }
+      ],
+      "grade": "preserved existing semantic evidence"
+    },
+    {
+      "path": "frontend/src/features/richman/game/computer-cash.test.ts",
+      "sha256": "41cea8e0752fd8ee17e499c6cbb6afa9e0fcf73b191a5ab9e66e3cdeb33fda0d",
+      "anchors": [
+        {
+          "text": "Hidden",
+          "lines": [
+            19
+          ]
+        },
+        {
+          "text": "pending %s",
+          "lines": [
+            24
+          ]
+        },
+        {
+          "text": "non-current tax",
+          "lines": [
+            26,
+            38
+          ]
+        },
+        {
+          "text": "third-party",
+          "lines": [
+            27
+          ]
+        }
+      ],
+      "grade": "host heuristic/validation; not native AI evidence"
+    },
+    {
+      "path": "frontend/src/features/richman/game/computer-cash-browser.test.ts",
+      "sha256": "d956166bdcf63811e37fcc3c5917636969576bb43abf045b1a5d51465d32d185",
+      "anchors": [
+        {
+          "text": "actual cash-v1",
+          "lines": [
+            5
+          ]
+        },
+        {
+          "text": "tax-",
+          "lines": [
+            9
+          ]
+        }
+      ],
+      "grade": "host heuristic/validation; not native AI evidence"
+    },
+    {
+      "path": "scripts/richman/verify-computer-cash.ts",
+      "sha256": "86fc01188dfb8569a1e2c10b2d6ae30dd8fc80ead0fa19f346149396081fd5d1",
+      "anchors": [
+        {
+          "text": "verifyComputerCash",
+          "lines": [
+            11
+          ]
+        },
+        {
+          "text": "BigInt",
+          "lines": [
+            34,
+            36
+          ]
+        },
+        {
+          "text": "taxSettled",
+          "lines": [
+            31
+          ]
+        },
+        {
+          "text": "replayGame",
+          "lines": [
+            2,
+            49,
+            50
+          ]
+        }
+      ],
+      "grade": "host heuristic/validation; not native AI evidence"
+    },
+    {
+      "path": "scripts/richman/plan-computer-cash.ts",
+      "sha256": "2c5e4b2b5c0cc8bd4a8f7e686df4b67b8a956f88e5747096cb8a8e188d557425",
+      "anchors": [
+        {
+          "text": "planComputerCash",
+          "lines": [
+            8,
+            25
+          ]
+        },
+        {
+          "text": "cancelGood",
+          "lines": [
+            16,
+            17
+          ]
+        }
+      ],
+      "grade": "host heuristic/validation; not native AI evidence"
+    },
+    {
+      "path": "scripts/richman/plan-computer-cash-reaction.ts",
+      "sha256": "13ef912bbe6d116c3210955d808550ad90d62f132706ed45c957a330a65e5802",
+      "anchors": [
+        {
+          "text": "planComputerCashReaction",
+          "lines": [
+            16,
+            52
+          ]
+        },
+        {
+          "text": "cancelled",
+          "lines": [
+            19,
+            23,
+            39
+          ]
+        }
+      ],
+      "grade": "host heuristic/validation; not native AI evidence"
+    },
+    {
+      "path": "scripts/richman/prepare-cash-routes.ts",
+      "sha256": "bd960a788ea5bbd942b9089a0712d23e52783a7bfe122cade146ddf9c9458612",
+      "anchors": [
+        {
+          "text": "cash-2-1",
+          "lines": [
+            2
+          ]
+        },
+        {
+          "text": "cash-free-3-1",
+          "lines": [
+            3
+          ]
+        },
+        {
+          "text": "cash-redirect-3-28",
+          "lines": [
+            4
+          ]
+        }
+      ],
+      "grade": "host heuristic/validation; not native AI evidence"
+    },
+    {
+      "path": "scripts/richman/computer-cash-ui-browser.cjs",
+      "sha256": "90429a665b6c0d23a63917f8169cfe2bdd7ba2c109abb9dc59c70d136d6c8e57",
+      "anchors": [
+        {
+          "text": "const report=",
+          "lines": [
+            115
+          ]
+        },
+        {
+          "text": "toolWindows.includes",
+          "lines": [
+            83
+          ]
+        },
+        {
+          "text": "const cross=",
+          "lines": [
+            75
+          ]
+        }
+      ],
+      "grade": "host heuristic/validation; not native AI evidence"
+    },
+    {
+      "path": "scripts/richman/computer-cash-built-browser.cjs",
+      "sha256": "a1c9545a773fe938cffb3d4750913e3b65b3f51b71cdf98937365e54b607db49",
+      "anchors": [
+        {
+          "text": "const report=",
+          "lines": [
+            44
+          ]
+        }
+      ],
+      "grade": "host heuristic/validation; not native AI evidence"
+    },
+    {
+      "path": "scripts/richman/archive-computer-cash.ts",
+      "sha256": "b4066dd8a1a8cb4a49a99dd75cdeb5ee014c9a5eb6fe3da2a218be20c86a98a1",
+      "anchors": [
+        {
+          "text": "verifyComputerCash(replay)",
+          "lines": [
+            9
+          ]
+        }
+      ],
+      "grade": "host heuristic/validation; not native AI evidence"
+    },
+    {
+      "path": "docs/richman/s2-02f-cards.md",
+      "sha256": "21d6b38d85c07284801d59c63f135821429e6f20a67d01b3bcdffb78ae6807b8",
+      "anchors": [
+        {
+          "text": "R07-06f",
+          "lines": [
+            24
+          ]
+        }
+      ],
+      "grade": "preserved existing semantic evidence"
+    },
+    {
+      "path": "docs/richman/s2-02g-wealth.md",
+      "sha256": "502dfb72511085e634122e8c859a4496211b43d699f14f4415ad2a8114088ce0",
+      "anchors": [
+        {
+          "text": "R07-02g",
+          "lines": [
+            18
+          ]
+        },
+        {
+          "text": "R07-04g",
+          "lines": [
+            20
+          ]
+        }
+      ],
+      "grade": "preserved existing semantic evidence"
+    },
+    {
+      "path": "docs/richman/s2-02k-g4.md",
+      "sha256": "a234099f343364d815e4e9bf663dc8741696c4be3c4e7606c30980a733166f34",
+      "anchors": [
+        {
+          "text": "R07-06k",
+          "lines": [
+            21
+          ]
+        },
+        {
+          "text": "R07-07k",
+          "lines": [
+            22
+          ]
+        }
+      ],
+      "grade": "preserved existing semantic evidence"
+    }
+  ],
+  "strategyFacts": {
+    "cards": [
+      "card:01",
+      "card:02",
+      "card:26"
+    ],
+    "participants": "01 all non-eliminated including source;02/26 existing nearby targets excluding detained/hotel",
+    "gain": "01/02 floored current cash delta;26 floor(current target cash/5) into own bank, not own cash; require>=100",
+    "risk": "avoid ally cash loss; tax skip free or amount>2000 with redirect, and unsafe bank addition",
+    "shop": "empty inventory one each;200/200/35 points; actual finite shelf/supply/capacity, new group before inherited restock",
+    "reaction": "actual responder; use free against positive amount; redirect back to source waives, fallback minimizes receipt among legal non-allies; no recursive defense or new debt",
+    "recheck": "recompute current cash/inventory/ally/defense/targets at confirmation; cancel with no consumption when no candidate remains",
+    "random": "no hidden sequence/seed/RNG/checkpoint reads, world simulation or game RNG draw",
+    "rounding": "BigInt aggregate floor average, discarded remainder not public; no price-index scaling for cash cards"
+  },
+  "preservation": {
+    "oldFixtureJsonUnchanged": 326,
+    "basicDecisionBodyByteUnchanged": true,
+    "oldPolicyFilesByteUnchanged": true,
+    "engineAndRuleFilesByteUnchanged": true
+  },
+  "differences": [
+    "custom host policy, not native AI/difficulty/hostility",
+    "100-unit threshold and deterministic order are heuristic, no point opportunity cost or future returns",
+    "artificial mutation/cancel, ally/threshold/capacity and third-party nonzero redirected tax are domain only",
+    "remaining proactive cards/stocks/financing/research deferred",
+    "no per-seat policy mix or midgame takeover"
+  ]
+}

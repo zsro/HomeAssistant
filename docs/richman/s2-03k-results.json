@@ -1,0 +1,520 @@
+{
+  "date": "2026-10-06",
+  "stage": "S2-03k",
+  "mode": "calendar",
+  "rulesId": "japan-events-candidate-v24",
+  "fingerprint": "c1c0e4ae",
+  "implementedNew": [
+    "date progression",
+    "Japan trading-day table",
+    "monthly bank interest",
+    "90-day loan due dates",
+    "3/2/1 reminders and maturity collection",
+    "calendar UI and G7 world integration"
+  ],
+  "implementedFortuneTotal": 37,
+  "acceptedFortuneHistorical": 37,
+  "japanSlots": 37,
+  "globalHandlers": 49,
+  "otherMapHandlersNotImplemented": 12,
+  "implementedNews": 36,
+  "acceptedNewsHistorical": 36,
+  "itemsImplemented": 43,
+  "itemsAcceptedHistorical": 43,
+  "s2_03Complete": false,
+  "sourceBlobsVerified": 7,
+  "sourceHolidayTable": {
+    "rows": 24,
+    "closedEntries": 15,
+    "constantsVerified": [
+      1.1,
+      0.1
+    ]
+  },
+  "tests": {
+    "total": 804,
+    "passed": 804,
+    "files": 60,
+    "newDomain": 38,
+    "newPanels": 3,
+    "newVersionMatrix": 3,
+    "actualBrowserReplays": 3,
+    "allVersionsMatrix": 72
+  },
+  "lint": "passed",
+  "typescriptBuild": "passed",
+  "buildWarning": "existing large chunks and mixed static/dynamic math-printables import notices",
+  "browser": {
+    "routeCount": 3,
+    "actualCommands": 1846,
+    "normalSpeed": true,
+    "originalMap": true,
+    "authFixtureOnly": true,
+    "gameStateInjection": false,
+    "routes": [
+      {
+        "route": "loan",
+        "seed": "calendar-loan-0",
+        "players": 2,
+        "commands": 1559,
+        "turn": 236,
+        "startDate": "1998-01-28",
+        "endDate": "1998-05-25",
+        "elapsedDays": 117,
+        "state": "c8973ea41e49a18aa8398bab0e212b2b2397f2ca102d154ddd8ae50dbafe92b9",
+        "events": "767eac50f6a07144f04189b9dbf376e686b81ead0a4b2af7363b3f00e511a4ee",
+        "checks": [
+          "actual trade occurs on open day",
+          "one calendar day at solvent seat wrap",
+          "monthly interest all solvent seats, debt gate and integer truncation",
+          "closed day preserves every price and history",
+          "first positive debt+90 with fixed closure roll",
+          "non-paying reminder at3/2/1 calendar days",
+          "maturity bank-first then cash; clear principal and due"
+        ],
+        "normalSpeed": true,
+        "map": "original Japan; real UI commands; auth-only fixture; no game-state injection",
+        "cleanup": {
+          "raf": 0,
+          "canvas": 0
+        },
+        "errors": [],
+        "screenshots": "/private/tmp/richman-unified-ui-03k-loan",
+        "calendarEvents": [
+          {
+            "type": "monthlyInterest",
+            "date": "1998-02-01",
+            "rows": [
+              {
+                "playerId": "player-1",
+                "before": 149840,
+                "after": 164824,
+                "amount": 14984,
+                "debt": 0
+              },
+              {
+                "playerId": "player-2",
+                "before": 150000,
+                "after": 165000,
+                "amount": 15000,
+                "debt": 0
+              }
+            ],
+            "sequence": 120,
+            "commandId": "command-66",
+            "playerId": "player-2",
+            "turn": 8
+          },
+          {
+            "type": "loanChanged",
+            "targetId": "player-2",
+            "operation": "borrow",
+            "amount": 10000,
+            "debt": 10000,
+            "balance": {
+              "cash": 152010,
+              "bank": 158500
+            },
+            "sequence": 707,
+            "commandId": "command-377",
+            "playerId": "player-2",
+            "turn": 54
+          },
+          {
+            "type": "loanDateChanged",
+            "targetId": "player-2",
+            "due": "1998-05-25",
+            "sequence": 708,
+            "commandId": "command-377",
+            "playerId": "player-2",
+            "turn": 54
+          },
+          {
+            "type": "monthlyInterest",
+            "date": "1998-03-01",
+            "rows": [
+              {
+                "playerId": "player-1",
+                "before": 181324,
+                "after": 199456,
+                "amount": 18132,
+                "debt": 0
+              },
+              {
+                "playerId": "player-2",
+                "before": 158500,
+                "after": 158500,
+                "amount": 0,
+                "debt": 10000
+              }
+            ],
+            "sequence": 867,
+            "commandId": "command-459",
+            "playerId": "player-2",
+            "turn": 64
+          },
+          {
+            "type": "monthlyInterest",
+            "date": "1998-04-01",
+            "rows": [
+              {
+                "playerId": "player-1",
+                "before": 199906,
+                "after": 219896,
+                "amount": 19990,
+                "debt": 0
+              },
+              {
+                "playerId": "player-2",
+                "before": 158500,
+                "after": 158500,
+                "amount": 0,
+                "debt": 10000
+              }
+            ],
+            "sequence": 1690,
+            "commandId": "command-890",
+            "playerId": "player-2",
+            "turn": 126
+          },
+          {
+            "type": "monthlyInterest",
+            "date": "1998-05-01",
+            "rows": [
+              {
+                "playerId": "player-1",
+                "before": 219896,
+                "after": 241885,
+                "amount": 21989,
+                "debt": 0
+              },
+              {
+                "playerId": "player-2",
+                "before": 159300,
+                "after": 159300,
+                "amount": 0,
+                "debt": 10000
+              }
+            ],
+            "sequence": 2383,
+            "commandId": "command-1239",
+            "playerId": "player-2",
+            "turn": 186
+          },
+          {
+            "type": "loanDateChanged",
+            "targetId": "player-1",
+            "due": "1998-08-04",
+            "sequence": 2521,
+            "commandId": "command-1310",
+            "playerId": "player-1",
+            "turn": 197
+          },
+          {
+            "type": "loanNotice",
+            "notice": {
+              "playerId": "player-2",
+              "date": "1998-05-22",
+              "due": "1998-05-25",
+              "kind": "reminder",
+              "days": 3,
+              "principal": 10000,
+              "bank": 0,
+              "cash": 0,
+              "unpaid": 0
+            },
+            "sequence": 2917,
+            "commandId": "command-1513",
+            "playerId": "player-2",
+            "turn": 230
+          },
+          {
+            "type": "loanNotice",
+            "notice": {
+              "playerId": "player-2",
+              "date": "1998-05-23",
+              "due": "1998-05-25",
+              "kind": "reminder",
+              "days": 2,
+              "principal": 10000,
+              "bank": 0,
+              "cash": 0,
+              "unpaid": 0
+            },
+            "sequence": 2946,
+            "commandId": "command-1527",
+            "playerId": "player-2",
+            "turn": 232
+          },
+          {
+            "type": "loanNotice",
+            "notice": {
+              "playerId": "player-2",
+              "date": "1998-05-24",
+              "due": "1998-05-25",
+              "kind": "reminder",
+              "days": 1,
+              "principal": 10000,
+              "bank": 0,
+              "cash": 0,
+              "unpaid": 0
+            },
+            "sequence": 2980,
+            "commandId": "command-1544",
+            "playerId": "player-2",
+            "turn": 234
+          },
+          {
+            "type": "loanNotice",
+            "notice": {
+              "playerId": "player-2",
+              "date": "1998-05-25",
+              "due": "1998-05-25",
+              "kind": "collected",
+              "days": 0,
+              "principal": 10000,
+              "bank": 10000,
+              "cash": 0,
+              "unpaid": 0
+            },
+            "sequence": 2999,
+            "commandId": "command-1554",
+            "playerId": "player-2",
+            "turn": 236
+          }
+        ],
+        "tradeEvents": [
+          {
+            "type": "stockTraded",
+            "stockId": "jp:24",
+            "traderId": "player-1",
+            "side": "buy",
+            "quantity": 1,
+            "price": 16000,
+            "amount": 160,
+            "forced": false,
+            "sequence": 5,
+            "commandId": "command-5",
+            "playerId": "player-1",
+            "turn": 1
+          }
+        ]
+      },
+      {
+        "route": "year",
+        "seed": "calendar-year-0",
+        "players": 3,
+        "commands": 123,
+        "turn": 16,
+        "startDate": "1998-12-31",
+        "endDate": "1999-01-05",
+        "elapsedDays": 5,
+        "state": "5bdeaa5ddcfa99b7db76b1c19e2e192ea16725fcd8b569c4737fd5d56948ffeb",
+        "events": "a4350f498da488942e2a390146a0e4deafaf2003daccbba1dddba4055471c762",
+        "checks": [
+          "actual trade occurs on open day",
+          "one calendar day at solvent seat wrap",
+          "monthly interest all solvent seats, debt gate and integer truncation",
+          "closed day preserves every price and history"
+        ],
+        "normalSpeed": true,
+        "map": "original Japan; real UI commands; auth-only fixture; no game-state injection",
+        "cleanup": {
+          "raf": 0,
+          "canvas": 0
+        },
+        "errors": [],
+        "screenshots": "/private/tmp/richman-unified-ui-03k-year",
+        "calendarEvents": [
+          {
+            "type": "monthlyInterest",
+            "date": "1999-01-01",
+            "rows": [
+              {
+                "playerId": "player-1",
+                "before": 149840,
+                "after": 164824,
+                "amount": 14984,
+                "debt": 0
+              },
+              {
+                "playerId": "player-2",
+                "before": 150000,
+                "after": 165000,
+                "amount": 15000,
+                "debt": 0
+              },
+              {
+                "playerId": "player-3",
+                "before": 150000,
+                "after": 165000,
+                "amount": 15000,
+                "debt": 0
+              }
+            ],
+            "sequence": 45,
+            "commandId": "command-27",
+            "playerId": "player-3",
+            "turn": 3
+          }
+        ],
+        "tradeEvents": [
+          {
+            "type": "stockTraded",
+            "stockId": "jp:24",
+            "traderId": "player-1",
+            "side": "buy",
+            "quantity": 1,
+            "price": 16000,
+            "amount": 160,
+            "forced": false,
+            "sequence": 5,
+            "commandId": "command-5",
+            "playerId": "player-1",
+            "turn": 1
+          }
+        ]
+      },
+      {
+        "route": "leap",
+        "seed": "calendar-leap-0",
+        "players": 4,
+        "commands": 164,
+        "turn": 21,
+        "startDate": "2000-02-28",
+        "endDate": "2000-03-04",
+        "elapsedDays": 5,
+        "state": "37b8be580934fcd1a9ecb41b27f4dca6fd973dc9bc38fcbe413cf6db3b65c7dd",
+        "events": "2b271c735e78c874eaed3302599674ae484a2c60e10e04d5cf10d664bafc0fa9",
+        "checks": [
+          "actual trade occurs on open day",
+          "one calendar day at solvent seat wrap",
+          "monthly interest all solvent seats, debt gate and integer truncation"
+        ],
+        "normalSpeed": true,
+        "map": "original Japan; real UI commands; auth-only fixture; no game-state injection",
+        "cleanup": {
+          "raf": 0,
+          "canvas": 0
+        },
+        "errors": [],
+        "screenshots": "/private/tmp/richman-unified-ui-03k-leap",
+        "calendarEvents": [
+          {
+            "type": "monthlyInterest",
+            "date": "2000-03-01",
+            "rows": [
+              {
+                "playerId": "player-1",
+                "before": 149840,
+                "after": 164824,
+                "amount": 14984,
+                "debt": 0
+              },
+              {
+                "playerId": "player-2",
+                "before": 150000,
+                "after": 165000,
+                "amount": 15000,
+                "debt": 0
+              },
+              {
+                "playerId": "player-3",
+                "before": 150000,
+                "after": 165000,
+                "amount": 15000,
+                "debt": 0
+              },
+              {
+                "playerId": "player-4",
+                "before": 150000,
+                "after": 165000,
+                "amount": 15000,
+                "debt": 0
+              }
+            ],
+            "sequence": 121,
+            "commandId": "command-73",
+            "playerId": "player-4",
+            "turn": 8
+          }
+        ],
+        "tradeEvents": [
+          {
+            "type": "stockTraded",
+            "stockId": "jp:24",
+            "traderId": "player-1",
+            "side": "buy",
+            "quantity": 1,
+            "price": 16000,
+            "amount": 160,
+            "forced": false,
+            "sequence": 5,
+            "commandId": "command-5",
+            "playerId": "player-1",
+            "turn": 1
+          }
+        ]
+      }
+    ],
+    "commonChecks": [
+      "configured start date",
+      "calendar panel",
+      "Sunday/fixed closure disables buy",
+      "monthly interest panel",
+      "pause/resume",
+      "reset dialog cancel",
+      "fullscreen",
+      "390px no horizontal overflow",
+      "exact world vs legal plan",
+      "actual replay independent per-command accounting",
+      "reset and teardown raf0/canvas0",
+      "errors empty"
+    ],
+    "visualInspection": [
+      "calendar-final.png for loan and leap checked; date, debt, interest and reminders legible"
+    ]
+  },
+  "browserNotCovered": [
+    "maturity insufficient funds and elimination/winner",
+    "all hotel/travel/detention/rejected/noLoans combinations at maturity",
+    "all fifteen fixed holidays and every calendar century boundary",
+    "time machine calendar rewind",
+    "all 43 item UI under new date mode",
+    "original Windows runtime equivalence"
+  ],
+  "domainOnly": [
+    "insufficient loan collection with cash supplement and bankruptcy/share return",
+    "month-interest-before-maturity",
+    "paused/repeated/stale commands",
+    "top-up/partial/full manual loan repayment term management",
+    "own action clock hotel/highbit versus v23",
+    "calendar/G7 checkpoint restoration",
+    "bank refusal and detention cannot block due collection",
+    "all declared start-date constraints and source leap rule"
+  ],
+  "failuresAndRepairs": [
+    {
+      "kind": "build",
+      "detail": "Initial calendar helper split left month check referring to unavailable parts; replaced with date month-boundary suffix check before acceptance."
+    },
+    {
+      "kind": "typecheck",
+      "detail": "New tests required explicit successful-result narrowing and characterIds; independent verifier trade narrowing corrected. Final TypeScript/Vite build passed."
+    }
+  ],
+  "browserFailures": [],
+  "preserved": [
+    "v1-v23 fingerprints and all historical replay goldens",
+    "37 Japan fortune slots / 36 news / 43 item historical acceptance"
+  ],
+  "deferred": [
+    "original bankruptcy forced auction and liquidation proceeds",
+    "complete company/insurance",
+    "daily price index / special players / holiday rewards / annual statistics",
+    "lottery and date15 draw",
+    "other-map 12 fortune handlers"
+  ],
+  "next": "S2-03l: lottery location acquisition, number/pool/cost, date15 draw, prize/public fund/carryover and bankruptcy; new semantics v25",
+  "workspace": "Pre-existing cumulative changes preserved; no commit/push/deploy/database/asset export."
+}

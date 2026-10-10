@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-03",
+  "rulesId": "japan-tools-candidate-v5",
+  "itemFingerprint": "4df2b87b",
+  "playableItems": {
+    "before": 4,
+    "after": 5,
+    "cards": 1,
+    "tools": 4,
+    "catalog": 43,
+    "remaining": 38,
+    "stageComplete": false
+  },
+  "frontendTests": {
+    "files": 26,
+    "passed": 188,
+    "postNullTargetGuardFocusedTests": 16
+  },
+  "lint": "passed",
+  "build": "passed; pre-existing PDF bundling warnings",
+  "browser": "s2-02f-browser-results.json",
+  "legacyV4": {
+    "fixture": "frontend/src/features/richman/game/fixtures/tools-v4-replay.json",
+    "golden": "frontend/src/features/richman/game/fixtures/tools-v4-golden.json",
+    "comparison": "state/events JSON SHA-256 from before sixth-batch implementation match after changes"
+  },
+  "scope": {
+    "browserNormalSpeed": true,
+    "browserGameStateInjection": false,
+    "v5FullGameToVictoryTested": false,
+    "legacyS1V1V4FullEngineGamesPassed": [
+      2,
+      3,
+      4
+    ],
+    "resourceRescan": false,
+    "databaseChange": false,
+    "commitPushDeploy": false
+  }
+}

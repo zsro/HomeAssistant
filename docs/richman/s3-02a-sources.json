@@ -1,0 +1,339 @@
+{
+  "stage": "S3-02a",
+  "rulesId": "japan-events-candidate-v44",
+  "fingerprint": "f9dbb7e9",
+  "policy": "tools-v1",
+  "preservedPolicy": "basic-v1",
+  "newGameSemantics": false,
+  "nativeExecution": false,
+  "priorNativeAudit": "s3-01a-sources.json",
+  "referenceCommitFromPriorAudit": "ec7d70e693059d1e781d9d1cc2ad7f36d360d39e",
+  "sources": [
+    {
+      "path": "frontend/src/features/richman/game/computer.ts",
+      "sha256": "0c68047ad00f90678594f0720ea306f4373e301b20f74417c0d4bf4d3ed0fbe3",
+      "anchors": [
+        {
+          "text": "ComputerPolicy",
+          "lines": [
+            7,
+            8
+          ]
+        },
+        {
+          "text": "export function computerDecision",
+          "lines": [
+            18
+          ]
+        }
+      ],
+      "grade": "host policy or acceptance implementation; not native AI evidence"
+    },
+    {
+      "path": "frontend/src/features/richman/game/computer-tools.ts",
+      "sha256": "00c5f76c27336c15137c98b0eb27b7cb70626aa3c1befae18b6a7e0fe4bb9e37",
+      "anchors": [
+        {
+          "text": "workerChoice",
+          "lines": [
+            16,
+            82,
+            95
+          ]
+        },
+        {
+          "text": "toolRouteScores",
+          "lines": [
+            26,
+            63,
+            99
+          ]
+        },
+        {
+          "text": "remoteChoice",
+          "lines": [
+            60,
+            89,
+            96
+          ]
+        },
+        {
+          "text": "export function decideComputer",
+          "lines": [
+            67
+          ]
+        },
+        {
+          "text": "shopPrice(REMOTE_DICE)",
+          "lines": [
+            103
+          ]
+        },
+        {
+          "text": "const pending =",
+          "lines": [
+            77
+          ]
+        }
+      ],
+      "grade": "host policy or acceptance implementation; not native AI evidence"
+    },
+    {
+      "path": "frontend/src/features/richman/game/session.ts",
+      "sha256": "4182693d8d57e6352bba57034a27df854597aa45c1e61693eb9a560c9d6dc101",
+      "anchors": [
+        {
+          "text": "computerPolicy",
+          "lines": [
+            79,
+            134,
+            139,
+            328,
+            391
+          ]
+        },
+        {
+          "text": "private send",
+          "lines": [
+            250
+          ]
+        },
+        {
+          "text": "tick(milliseconds",
+          "lines": [
+            379,
+            381
+          ]
+        },
+        {
+          "text": "dispose()",
+          "lines": [
+            377
+          ]
+        }
+      ],
+      "grade": "host policy or acceptance implementation; not native AI evidence"
+    },
+    {
+      "path": "frontend/src/pages/RichmanPage.tsx",
+      "sha256": "accfca92c9b7ba3726baf21d76b16a73ba8b64ce0b6a7df84ffda0c62c244927",
+      "anchors": [
+        {
+          "text": "setupPolicy",
+          "lines": [
+            57,
+            175,
+            342
+          ]
+        },
+        {
+          "text": "电脑策略",
+          "lines": [
+            342
+          ]
+        }
+      ],
+      "grade": "host policy or acceptance implementation; not native AI evidence"
+    },
+    {
+      "path": "frontend/src/features/richman/ComputerPanel.tsx",
+      "sha256": "15c1771430178d3918196039d89c255c4660df1e34fe4f4c1b4e935e9586b28c",
+      "anchors": [
+        {
+          "text": "道具电脑",
+          "lines": [
+            11
+          ]
+        }
+      ],
+      "grade": "host policy or acceptance implementation; not native AI evidence"
+    },
+    {
+      "path": "frontend/src/features/richman/game/engine.ts",
+      "sha256": "edb72546f0f2c7269d77867855f24b764457c3b9f6a658632f50444eedada425",
+      "anchors": [
+        {
+          "text": "case 'item'",
+          "lines": [
+            630
+          ]
+        },
+        {
+          "text": "const amount = operation",
+          "lines": [
+            512
+          ]
+        },
+        {
+          "text": "nearbyWorkerTargets(this.nodes",
+          "lines": [
+            555
+          ]
+        },
+        {
+          "text": "property.level++",
+          "lines": [
+            899,
+            1090
+          ]
+        },
+        {
+          "text": "state.items.supply++",
+          "lines": [
+            903
+          ]
+        }
+      ],
+      "grade": "existing v44 command/rule evidence"
+    },
+    {
+      "path": "frontend/src/features/richman/game/nearby-construction.ts",
+      "sha256": "0eccb5b13e3d8739e74504b6b2490c758803497690c5ccecd4b1849d5dc27f6e",
+      "anchors": [
+        {
+          "text": "nearbyWorkerTargets",
+          "lines": [
+            41
+          ]
+        }
+      ],
+      "grade": "existing v44 command/rule evidence"
+    },
+    {
+      "path": "frontend/src/features/richman/game/shop-acquisition.ts",
+      "sha256": "78667adb5cfab4f0fb8ff828e94ed610ae30bd7fc6e4923070359a4b549c72cc",
+      "anchors": [
+        {
+          "text": "buyFromShelf",
+          "lines": [
+            34
+          ]
+        },
+        {
+          "text": "shopPrice",
+          "lines": [
+            17,
+            36
+          ]
+        },
+        {
+          "text": "SHOP_TOOLS",
+          "lines": [
+            15,
+            26,
+            32
+          ]
+        }
+      ],
+      "grade": "existing v44 command/rule evidence"
+    },
+    {
+      "path": "frontend/src/features/richman/game/effects.ts",
+      "sha256": "73eaff3db3621ee05d7f3c01b9dc110e6b968ac5ebc98dead3d053d838c91b42",
+      "anchors": [
+        {
+          "text": "action.type === 'cancel'",
+          "lines": [
+            115
+          ]
+        },
+        {
+          "text": "insufficient-items",
+          "lines": [
+            107,
+            124
+          ]
+        }
+      ],
+      "grade": "existing v44 command/rule evidence"
+    },
+    {
+      "path": "frontend/src/features/richman/G5Panel.tsx",
+      "sha256": "9564e124052dab45105e7d6df30b50b1c93d371d663741ee26b2ef06f05a8e9a",
+      "anchors": [
+        {
+          "text": "s.g5.hazards.length",
+          "lines": [
+            21
+          ]
+        }
+      ],
+      "grade": "existing v44 command/rule evidence"
+    },
+    {
+      "path": "scripts/richman/verify-computer-tools.ts",
+      "sha256": "a7f37e5e5bda58cc4d249c19806c6a9bdb6a6141f11e1af0253cd7dcc062ad8b",
+      "anchors": [
+        {
+          "text": "export async function",
+          "lines": [
+            10
+          ]
+        },
+        {
+          "text": "replayGame(nodes",
+          "lines": [
+            41,
+            42
+          ]
+        },
+        {
+          "text": "s.items!.supply",
+          "lines": [
+            31,
+            32,
+            37
+          ]
+        }
+      ],
+      "grade": "host policy or acceptance implementation; not native AI evidence"
+    },
+    {
+      "path": "frontend/src/features/richman/game/computer-tools.test.ts",
+      "sha256": "6cd820b8d52f9415b42506148c1cd1569b28032fb7fb388d3cf1527035cd945b",
+      "anchors": [
+        {
+          "text": "Hidden",
+          "lines": [
+            18
+          ]
+        },
+        {
+          "text": "artificial",
+          "lines": [
+            46
+          ]
+        },
+        {
+          "text": "non-current",
+          "lines": [
+            37,
+            44
+          ]
+        }
+      ],
+      "grade": "host policy or acceptance implementation; not native AI evidence"
+    }
+  ],
+  "strategyFacts": {
+    "worker": "owned legal ordinary land only; rank positive raw rent increment then lexical id; free existing command",
+    "remote": "walking single die; at most six edges; score affordable land 40/30/10 after 1000 cash reserve; points20/unknown0/opponent-100/hazard-path-1000; best>=30 and spread>=10; ties smallest dice/node",
+    "cashQuote": "raw dynamic base + level * build cost, then index exactly once; upgrade cost * index; heuristic only",
+    "acquisition": "one initial remote/worker from existing v44; refill one remote at existing shop price30 points, shelf and pool; no worker sale or synthetic production",
+    "decisionSafety": "recompute confirmation; invalid target cancels without consume; impossible mid-selection mobility conflicts stop rather than dispatch illegal action",
+    "random": "policy does not access randomState/seed/hidden news/fortune/G7 snapshots; no engine simulation or random draw",
+    "replay": "control policy is host metadata; actual commands drive replay; engine/world snapshots unchanged"
+  },
+  "preservation": {
+    "oldFixtureJsonUnchanged": 300,
+    "basicV1DecisionBodyByteUnchanged": true,
+    "engineAndRuleFilesByteUnchanged": true
+  },
+  "differences": [
+    "custom heuristic, not native AI/RNG/hostility/difficulty",
+    "no other active cards/stocks/refinance/research/bidding",
+    "conservative enemy/hazard treatment; no exact long-horizon rent or god forecasts",
+    "no per-seat mixed policy or midgame takeover",
+    "target mutation probes are domain evidence, not original-map UI"
+  ]
+}

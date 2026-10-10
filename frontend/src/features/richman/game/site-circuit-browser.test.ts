@@ -1,0 +1,15 @@
+import {GameEngine} from './engine';
+import type {Replay} from './engine';
+import {expect,it} from 'vitest';
+import {createHash} from 'node:crypto';
+import {verifySiteCircuit} from '../../../../../scripts/richman/verify-site-circuits';
+import r2 from './fixtures/site-circuit-v41-2-replay.json';
+import m2 from './fixtures/site-circuit-v41-2-manifest.json';
+import r3 from './fixtures/site-circuit-v41-3-replay.json';
+import m3 from './fixtures/site-circuit-v41-3-manifest.json';
+import r4 from './fixtures/site-circuit-v41-4-replay.json';
+import m4 from './fixtures/site-circuit-v41-4-manifest.json';
+import rd from './fixtures/site-circuit-v41-dream-replay.json';
+import md from './fixtures/site-circuit-v41-dream-manifest.json';
+void GameEngine;
+for(const [replay,golden]of[[r2,m2],[r3,m3],[r4,m4],[rd,md]]as const)it(`actual ${golden.players}p site circuit: accounting, day15 order, prefix continuation and frozen hashes`,()=>{const r=verifySiteCircuit(replay as Replay,replay.config.seed.startsWith('dream-')?'dream':'circuit');for(const key of['commands','players','turn','date','miniCommands','dreamArrivals','dreamLandings','passingBank','displacements','receipts','turnovers','helps','dividends','landings','passes','prefixes']as const)expect(r[key]).toEqual(golden[key]);for(const key of['state','events']as const)expect(createHash('sha256').update(JSON.stringify(r[key])).digest('hex')).toBe(golden.hashes[key]);expect(createHash('sha256').update(JSON.stringify(replay)).digest('hex')).toBe(golden.hashes.replay);expect(golden.report.errors).toEqual([]);expect(golden.report.cleanup).toEqual({raf:0,canvas:0});},30000);

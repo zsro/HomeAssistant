@@ -1,0 +1,866 @@
+{
+  "date": "2026-10-05",
+  "slice": "S2-03d",
+  "stageComplete": false,
+  "newsImplemented": 11,
+  "newsAccepted": 11,
+  "newsTotal": 36,
+  "newNews": [
+    6,
+    7,
+    12
+  ],
+  "itemsImplemented": 43,
+  "itemsHistoricalAccepted": 43,
+  "rulesId": "japan-events-candidate-v17",
+  "fingerprint": "b5107cf3",
+  "checks": {
+    "frontend": {
+      "numTotalTests": 484,
+      "numPassedTests": 484,
+      "numFailedTests": 0,
+      "success": true
+    },
+    "newDomainTests": 28,
+    "newComponentCases": 3,
+    "newBrowserGoldenTests": 1,
+    "versionPlayerMatrix": 51,
+    "lint": "passed",
+    "build": "passed",
+    "sourceGitBlobIdentitiesVerified": 6,
+    "pythonResourceSuite": "not rerun; earlier24 historical"
+  },
+  "browser": {
+    "normalSpeed": true,
+    "map": "original Japan; real UI commands; auth-only fixture; no game-state injection",
+    "commands": 735,
+    "turn": 102,
+    "players": 3,
+    "completedNews": [
+      7,
+      7,
+      15,
+      12,
+      25,
+      6
+    ],
+    "cleanup": {
+      "raf": 0,
+      "canvas": 0
+    },
+    "errors": []
+  },
+  "news": [
+    {
+      "type": "newsAuctionPrepared",
+      "decision": {
+        "kind": "news",
+        "id": "dfd0818d-3259-48b2-8655-b2644ad26f26:14",
+        "node": 13,
+        "newsId": 7,
+        "title": "公共土地拍卖",
+        "lines": [
+          "東京（106号）待售地产将公开竞价；款项进入公共资金，建筑保留。"
+        ],
+        "auction": {
+          "propertyId": "japan:land:15",
+          "candidates": [
+            "japan:land:1",
+            "japan:land:2",
+            "japan:land:3",
+            "japan:land:4",
+            "japan:land:5",
+            "japan:land:6",
+            "japan:land:7",
+            "japan:land:8",
+            "japan:land:9",
+            "japan:land:10",
+            "japan:land:11",
+            "japan:land:12",
+            "japan:land:13",
+            "japan:land:14",
+            "japan:land:15",
+            "japan:land:16",
+            "japan:land:17",
+            "japan:land:18",
+            "japan:land:19",
+            "japan:land:21",
+            "japan:land:22",
+            "japan:land:23",
+            "japan:land:24",
+            "japan:land:25",
+            "japan:land:26",
+            "japan:land:27",
+            "japan:land:28",
+            "japan:land:29",
+            "japan:land:30",
+            "japan:land:31",
+            "japan:land:32",
+            "japan:land:33",
+            "japan:land:34",
+            "japan:land:35",
+            "japan:land:36",
+            "japan:land:37",
+            "japan:land:38",
+            "japan:land:39",
+            "japan:land:40",
+            "japan:land:41",
+            "japan:land:42",
+            "japan:land:43",
+            "japan:land:44",
+            "japan:land:45",
+            "japan:land:46",
+            "japan:land:47",
+            "japan:land:48",
+            "japan:land:49",
+            "japan:facility:1",
+            "japan:facility:2",
+            "japan:facility:3",
+            "japan:facility:4",
+            "japan:facility:5"
+          ],
+          "skipped": [
+            1,
+            20,
+            34
+          ]
+        },
+        "scope": "当前开放十一条新闻；其余候选暂跳过。公共拍卖和地产税实收进入公共资金，日期/结息仍未实现。"
+      },
+      "skipped": [
+        1,
+        20,
+        34
+      ],
+      "sequence": 41,
+      "commandId": "command-21",
+      "playerId": "player-2",
+      "turn": 2
+    },
+    {
+      "type": "newsResolved",
+      "newsId": 7,
+      "title": "公共土地拍卖",
+      "node": 13,
+      "skipped": [
+        1,
+        20,
+        34
+      ],
+      "money": [],
+      "stocks": [],
+      "publicFund": 2600,
+      "cursor": 4,
+      "operatingChanges": {
+        "candidates": [
+          "japan:land:1",
+          "japan:land:2",
+          "japan:land:3",
+          "japan:land:4",
+          "japan:land:5",
+          "japan:land:6",
+          "japan:land:7",
+          "japan:land:8",
+          "japan:land:9",
+          "japan:land:10",
+          "japan:land:11",
+          "japan:land:12",
+          "japan:land:13",
+          "japan:land:14",
+          "japan:land:15",
+          "japan:land:16",
+          "japan:land:17",
+          "japan:land:18",
+          "japan:land:19",
+          "japan:land:21",
+          "japan:land:22",
+          "japan:land:23",
+          "japan:land:24",
+          "japan:land:25",
+          "japan:land:26",
+          "japan:land:27",
+          "japan:land:28",
+          "japan:land:29",
+          "japan:land:30",
+          "japan:land:31",
+          "japan:land:32",
+          "japan:land:33",
+          "japan:land:34",
+          "japan:land:35",
+          "japan:land:36",
+          "japan:land:37",
+          "japan:land:38",
+          "japan:land:39",
+          "japan:land:40",
+          "japan:land:41",
+          "japan:land:42",
+          "japan:land:43",
+          "japan:land:44",
+          "japan:land:45",
+          "japan:land:46",
+          "japan:land:47",
+          "japan:land:48",
+          "japan:land:49",
+          "japan:facility:1",
+          "japan:facility:2",
+          "japan:facility:3",
+          "japan:facility:4",
+          "japan:facility:5"
+        ],
+        "auction": {
+          "propertyId": "japan:land:15",
+          "winnerId": "player-1",
+          "amount": 2600,
+          "reserve": 2500
+        }
+      },
+      "sequence": 53,
+      "commandId": "command-29",
+      "playerId": "player-2",
+      "turn": 2
+    },
+    {
+      "type": "newsResolved",
+      "newsId": 15,
+      "title": "随机普通地产建筑降级",
+      "node": 13,
+      "skipped": [],
+      "money": [],
+      "stocks": [],
+      "publicFund": 2600,
+      "cursor": 5,
+      "propertyChanges": {
+        "candidates": [
+          "japan:land:16",
+          "japan:land:17",
+          "japan:land:21"
+        ],
+        "properties": [
+          {
+            "before": {
+              "id": "japan:land:21",
+              "ownerId": null,
+              "level": 1,
+              "basePrice": 2000,
+              "buildingType": 0,
+              "priceStatus": 0,
+              "research": null
+            },
+            "after": {
+              "id": "japan:land:21",
+              "ownerId": null,
+              "level": 0,
+              "basePrice": 2000,
+              "buildingType": 0,
+              "priceStatus": 0,
+              "research": null
+            }
+          }
+        ],
+        "counts": [],
+        "hotel": []
+      },
+      "sequence": 114,
+      "commandId": "command-62",
+      "playerId": "player-3",
+      "turn": 6
+    },
+    {
+      "type": "newsResolved",
+      "newsId": 12,
+      "title": "全员缴交地产税5%",
+      "node": 13,
+      "skipped": [
+        29,
+        16,
+        3,
+        21
+      ],
+      "money": [
+        {
+          "playerId": "player-1",
+          "cashBefore": 141900,
+          "cashAfter": 141500,
+          "bankBefore": 150626,
+          "bankAfter": 150626
+        },
+        {
+          "playerId": "player-2",
+          "cashBefore": 150000,
+          "cashAfter": 150000,
+          "bankBefore": 150626,
+          "bankAfter": 150626
+        },
+        {
+          "playerId": "player-3",
+          "cashBefore": 148748,
+          "cashAfter": 148748,
+          "bankBefore": 150000,
+          "bankAfter": 150000
+        }
+      ],
+      "stocks": [],
+      "publicFund": 3000,
+      "cursor": 10,
+      "operatingChanges": {
+        "taxes": [
+          {
+            "playerId": "player-1",
+            "base": 8000,
+            "due": 400,
+            "cash": 400,
+            "bank": 0,
+            "unpaid": 0,
+            "bankrupt": false,
+            "returnedShares": 0
+          },
+          {
+            "playerId": "player-2",
+            "base": 0,
+            "due": 0,
+            "cash": 0,
+            "bank": 0,
+            "unpaid": 0,
+            "bankrupt": false,
+            "returnedShares": 0
+          },
+          {
+            "playerId": "player-3",
+            "base": 0,
+            "due": 0,
+            "cash": 0,
+            "bank": 0,
+            "unpaid": 0,
+            "bankrupt": false,
+            "returnedShares": 0
+          }
+        ]
+      },
+      "sequence": 168,
+      "commandId": "command-90",
+      "playerId": "player-1",
+      "turn": 10
+    },
+    {
+      "type": "newsResolved",
+      "newsId": 25,
+      "title": "股市全面上涨",
+      "node": 94,
+      "skipped": [
+        2,
+        31
+      ],
+      "money": [],
+      "stocks": [
+        {
+          "id": "jp:24",
+          "before": 13500,
+          "after": 14700
+        },
+        {
+          "id": "jp:25",
+          "before": 9500,
+          "after": 10700
+        },
+        {
+          "id": "jp:26",
+          "before": 4450,
+          "after": 4450
+        },
+        {
+          "id": "jp:27",
+          "before": 3070,
+          "after": 3430
+        },
+        {
+          "id": "jp:28",
+          "before": 27400,
+          "after": 27500
+        },
+        {
+          "id": "jp:29",
+          "before": 2870,
+          "after": 3110
+        },
+        {
+          "id": "jp:30",
+          "before": 72000,
+          "after": 72800
+        },
+        {
+          "id": "jp:31",
+          "before": 95000,
+          "after": 95800
+        },
+        {
+          "id": "jp:32",
+          "before": 27800,
+          "after": 33800
+        },
+        {
+          "id": "jp:33",
+          "before": 17300,
+          "after": 18500
+        },
+        {
+          "id": "jp:34",
+          "before": 35100,
+          "after": 36600
+        },
+        {
+          "id": "jp:35",
+          "before": 19550,
+          "after": 20250
+        }
+      ],
+      "publicFund": 3000,
+      "cursor": 13,
+      "sequence": 955,
+      "commandId": "command-521",
+      "playerId": "player-2",
+      "turn": 71
+    },
+    {
+      "type": "newsResolved",
+      "newsId": 6,
+      "title": "地区基础地价上涨30%",
+      "node": 13,
+      "skipped": [
+        14
+      ],
+      "money": [],
+      "stocks": [],
+      "publicFund": 3000,
+      "cursor": 15,
+      "operatingChanges": {
+        "candidates": [
+          "japan:land:1",
+          "japan:land:2",
+          "japan:land:3",
+          "japan:land:4",
+          "japan:land:5",
+          "japan:land:6",
+          "japan:land:7",
+          "japan:land:8",
+          "japan:land:9",
+          "japan:land:10",
+          "japan:land:11",
+          "japan:land:12",
+          "japan:land:13",
+          "japan:land:14",
+          "japan:land:15",
+          "japan:land:16",
+          "japan:land:17",
+          "japan:land:18",
+          "japan:land:19",
+          "japan:land:20",
+          "japan:land:21",
+          "japan:land:22",
+          "japan:land:23",
+          "japan:land:24",
+          "japan:land:25",
+          "japan:land:26",
+          "japan:land:27",
+          "japan:land:28",
+          "japan:land:29",
+          "japan:land:30",
+          "japan:land:31",
+          "japan:land:32",
+          "japan:land:33",
+          "japan:land:34",
+          "japan:land:35",
+          "japan:land:36",
+          "japan:land:37",
+          "japan:land:38",
+          "japan:land:39",
+          "japan:land:40",
+          "japan:land:41",
+          "japan:land:42",
+          "japan:land:43",
+          "japan:land:44",
+          "japan:land:45",
+          "japan:land:46",
+          "japan:land:47",
+          "japan:land:48",
+          "japan:land:49",
+          "japan:facility:1",
+          "japan:facility:2",
+          "japan:facility:3",
+          "japan:facility:4",
+          "japan:facility:5"
+        ],
+        "prices": [
+          {
+            "id": "japan:land:1",
+            "before": 500,
+            "after": 650
+          },
+          {
+            "id": "japan:land:2",
+            "before": 500,
+            "after": 650
+          },
+          {
+            "id": "japan:land:3",
+            "before": 500,
+            "after": 650
+          }
+        ]
+      },
+      "sequence": 1346,
+      "commandId": "command-734",
+      "playerId": "player-3",
+      "turn": 102
+    }
+  ],
+  "auctions": [
+    {
+      "type": "auctionOffered",
+      "decision": {
+        "kind": "auction",
+        "id": "dfd0818d-3259-48b2-8655-b2644ad26f26:15",
+        "propertyId": "japan:land:15",
+        "sourceId": "public",
+        "originalOwner": null,
+        "reserve": 2500,
+        "bid": 2500,
+        "leader": null,
+        "responderId": "player-1",
+        "remaining": [
+          "player-1",
+          "player-2",
+          "player-3"
+        ],
+        "publicNews": {
+          "kind": "news",
+          "id": "dfd0818d-3259-48b2-8655-b2644ad26f26:16",
+          "node": 13,
+          "newsId": 7,
+          "title": "公共土地拍卖",
+          "lines": [
+            "東京（106号）待售地产将公开竞价；款项进入公共资金，建筑保留。"
+          ],
+          "auction": {
+            "propertyId": "japan:land:15",
+            "candidates": [
+              "japan:land:1",
+              "japan:land:2",
+              "japan:land:3",
+              "japan:land:4",
+              "japan:land:5",
+              "japan:land:6",
+              "japan:land:7",
+              "japan:land:8",
+              "japan:land:9",
+              "japan:land:10",
+              "japan:land:11",
+              "japan:land:12",
+              "japan:land:13",
+              "japan:land:14",
+              "japan:land:15",
+              "japan:land:16",
+              "japan:land:17",
+              "japan:land:18",
+              "japan:land:19",
+              "japan:land:21",
+              "japan:land:22",
+              "japan:land:23",
+              "japan:land:24",
+              "japan:land:25",
+              "japan:land:26",
+              "japan:land:27",
+              "japan:land:28",
+              "japan:land:29",
+              "japan:land:30",
+              "japan:land:31",
+              "japan:land:32",
+              "japan:land:33",
+              "japan:land:34",
+              "japan:land:35",
+              "japan:land:36",
+              "japan:land:37",
+              "japan:land:38",
+              "japan:land:39",
+              "japan:land:40",
+              "japan:land:41",
+              "japan:land:42",
+              "japan:land:43",
+              "japan:land:44",
+              "japan:land:45",
+              "japan:land:46",
+              "japan:land:47",
+              "japan:land:48",
+              "japan:land:49",
+              "japan:facility:1",
+              "japan:facility:2",
+              "japan:facility:3",
+              "japan:facility:4",
+              "japan:facility:5"
+            ],
+            "skipped": [
+              1,
+              20,
+              34
+            ]
+          },
+          "scope": "当前开放十一条新闻；其余候选暂跳过。公共拍卖和地产税实收进入公共资金，日期/结息仍未实现。"
+        }
+      },
+      "sequence": 46,
+      "commandId": "command-26",
+      "playerId": "player-2",
+      "turn": 2
+    },
+    {
+      "type": "auctionBid",
+      "playerId": "player-1",
+      "amount": 2600,
+      "sequence": 47,
+      "commandId": "command-27",
+      "turn": 2
+    },
+    {
+      "type": "auctionOffered",
+      "decision": {
+        "kind": "auction",
+        "id": "dfd0818d-3259-48b2-8655-b2644ad26f26:17",
+        "propertyId": "japan:land:15",
+        "sourceId": "public",
+        "originalOwner": null,
+        "reserve": 2500,
+        "bid": 2600,
+        "leader": "player-1",
+        "responderId": "player-2",
+        "remaining": [
+          "player-1",
+          "player-2",
+          "player-3"
+        ],
+        "publicNews": {
+          "kind": "news",
+          "id": "dfd0818d-3259-48b2-8655-b2644ad26f26:16",
+          "node": 13,
+          "newsId": 7,
+          "title": "公共土地拍卖",
+          "lines": [
+            "東京（106号）待售地产将公开竞价；款项进入公共资金，建筑保留。"
+          ],
+          "auction": {
+            "propertyId": "japan:land:15",
+            "candidates": [
+              "japan:land:1",
+              "japan:land:2",
+              "japan:land:3",
+              "japan:land:4",
+              "japan:land:5",
+              "japan:land:6",
+              "japan:land:7",
+              "japan:land:8",
+              "japan:land:9",
+              "japan:land:10",
+              "japan:land:11",
+              "japan:land:12",
+              "japan:land:13",
+              "japan:land:14",
+              "japan:land:15",
+              "japan:land:16",
+              "japan:land:17",
+              "japan:land:18",
+              "japan:land:19",
+              "japan:land:21",
+              "japan:land:22",
+              "japan:land:23",
+              "japan:land:24",
+              "japan:land:25",
+              "japan:land:26",
+              "japan:land:27",
+              "japan:land:28",
+              "japan:land:29",
+              "japan:land:30",
+              "japan:land:31",
+              "japan:land:32",
+              "japan:land:33",
+              "japan:land:34",
+              "japan:land:35",
+              "japan:land:36",
+              "japan:land:37",
+              "japan:land:38",
+              "japan:land:39",
+              "japan:land:40",
+              "japan:land:41",
+              "japan:land:42",
+              "japan:land:43",
+              "japan:land:44",
+              "japan:land:45",
+              "japan:land:46",
+              "japan:land:47",
+              "japan:land:48",
+              "japan:land:49",
+              "japan:facility:1",
+              "japan:facility:2",
+              "japan:facility:3",
+              "japan:facility:4",
+              "japan:facility:5"
+            ],
+            "skipped": [
+              1,
+              20,
+              34
+            ]
+          },
+          "scope": "当前开放十一条新闻；其余候选暂跳过。公共拍卖和地产税实收进入公共资金，日期/结息仍未实现。"
+        }
+      },
+      "sequence": 48,
+      "commandId": "command-27",
+      "playerId": "player-2",
+      "turn": 2
+    },
+    {
+      "type": "auctionBid",
+      "playerId": "player-2",
+      "amount": null,
+      "sequence": 49,
+      "commandId": "command-28",
+      "turn": 2
+    },
+    {
+      "type": "auctionOffered",
+      "decision": {
+        "kind": "auction",
+        "id": "dfd0818d-3259-48b2-8655-b2644ad26f26:18",
+        "propertyId": "japan:land:15",
+        "sourceId": "public",
+        "originalOwner": null,
+        "reserve": 2500,
+        "bid": 2600,
+        "leader": "player-1",
+        "responderId": "player-3",
+        "remaining": [
+          "player-1",
+          "player-3"
+        ],
+        "publicNews": {
+          "kind": "news",
+          "id": "dfd0818d-3259-48b2-8655-b2644ad26f26:16",
+          "node": 13,
+          "newsId": 7,
+          "title": "公共土地拍卖",
+          "lines": [
+            "東京（106号）待售地产将公开竞价；款项进入公共资金，建筑保留。"
+          ],
+          "auction": {
+            "propertyId": "japan:land:15",
+            "candidates": [
+              "japan:land:1",
+              "japan:land:2",
+              "japan:land:3",
+              "japan:land:4",
+              "japan:land:5",
+              "japan:land:6",
+              "japan:land:7",
+              "japan:land:8",
+              "japan:land:9",
+              "japan:land:10",
+              "japan:land:11",
+              "japan:land:12",
+              "japan:land:13",
+              "japan:land:14",
+              "japan:land:15",
+              "japan:land:16",
+              "japan:land:17",
+              "japan:land:18",
+              "japan:land:19",
+              "japan:land:21",
+              "japan:land:22",
+              "japan:land:23",
+              "japan:land:24",
+              "japan:land:25",
+              "japan:land:26",
+              "japan:land:27",
+              "japan:land:28",
+              "japan:land:29",
+              "japan:land:30",
+              "japan:land:31",
+              "japan:land:32",
+              "japan:land:33",
+              "japan:land:34",
+              "japan:land:35",
+              "japan:land:36",
+              "japan:land:37",
+              "japan:land:38",
+              "japan:land:39",
+              "japan:land:40",
+              "japan:land:41",
+              "japan:land:42",
+              "japan:land:43",
+              "japan:land:44",
+              "japan:land:45",
+              "japan:land:46",
+              "japan:land:47",
+              "japan:land:48",
+              "japan:land:49",
+              "japan:facility:1",
+              "japan:facility:2",
+              "japan:facility:3",
+              "japan:facility:4",
+              "japan:facility:5"
+            ],
+            "skipped": [
+              1,
+              20,
+              34
+            ]
+          },
+          "scope": "当前开放十一条新闻；其余候选暂跳过。公共拍卖和地产税实收进入公共资金，日期/结息仍未实现。"
+        }
+      },
+      "sequence": 50,
+      "commandId": "command-28",
+      "playerId": "player-2",
+      "turn": 2
+    },
+    {
+      "type": "auctionBid",
+      "playerId": "player-3",
+      "amount": null,
+      "sequence": 51,
+      "commandId": "command-29",
+      "turn": 2
+    },
+    {
+      "type": "auctionSettled",
+      "propertyId": "japan:land:15",
+      "winnerId": "player-1",
+      "sourceId": "public",
+      "amount": 2600,
+      "sequence": 52,
+      "commandId": "command-29",
+      "playerId": "player-2",
+      "turn": 2
+    }
+  ],
+  "independentReplayChecks": [
+    "public auction: winner cash paid to public fund, no player bank receipt",
+    "news15: actual target belongs to full eligible set; single property ownership/level change; other properties and money unchanged",
+    "news12: actual property tax bases, per-owner rounding, cash-first/bank-second amounts and public receipt",
+    "news6: actual same-name or single-facility base-price writes, rounding, unaffected properties and balances"
+  ],
+  "replay": {
+    "path": "frontend/src/features/richman/game/fixtures/operating-news-v17-replay.json",
+    "golden": "frontend/src/features/richman/game/fixtures/operating-news-v17-golden.json",
+    "stateSha256": "5fcd07a69ef762fa46e2a662512608505e87cecca334aef73b6d16612431c6ac",
+    "eventsSha256": "8d430a425edaf217964825e3f402885c65a4b6c52638a33f9824a8f2beaaab33"
+  },
+  "rawEvidence": "/private/tmp/richman-unified-ui-03d",
+  "plannedCommands": 731,
+  "limits": [
+    "eleven-event subset skips25 unsupported candidates; not full original distribution",
+    "browser auction ordinary empty land cash2600; tax player1 cash400; three same-name land prices500to650",
+    "facility price/first construction, dynamic-priced subsequent purchases/auctions, no-bid auction, tax bank fallback/insolvency/stocks and time/teleport are domain cases only",
+    "102-turn three-player route, not full match or all43 UI rerun",
+    "original bankrupt forced auctions and disposal proceeds deliberately deferred; candidate shares return to pool without proceeds",
+    "calendar/interest/loans/land expiration and Windows runtime remain unverified",
+    "final auction-result wording adjusted after browser run; settlement/replay and final test/build verified"
+  ]
+}

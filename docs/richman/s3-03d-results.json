@@ -1,0 +1,944 @@
+{
+  "stage": "S3-03d",
+  "date": "2026-10-09",
+  "status": "audit-and-scoped-original-map-circuits-accepted",
+  "rulesId": "japan-events-candidate-v46",
+  "fingerprint": "249e82f7",
+  "mode": "specialObjects",
+  "S3_03Closed": false,
+  "newGameSemantics": false,
+  "newPolicyVersion": false,
+  "nativeExecution": false,
+  "preservedPolicies": [
+    "basic-v1",
+    "tools-v1",
+    "rent-v1",
+    "defense-v1",
+    "estate-v1",
+    "cash-v1",
+    "status-v1",
+    "inventory-v1",
+    "commerce-v1",
+    "area-v1",
+    "roads-v1",
+    "mobility-v1",
+    "gods-v1",
+    "capital-v1",
+    "research-v1"
+  ],
+  "historicalCapabilities": {
+    "items": 43,
+    "news": 36,
+    "japanFortuneSlots": 37
+  },
+  "audit": {
+    "files": 13,
+    "facts": 18,
+    "boundedCallSites": 19,
+    "native15Source": "surrender then ordinary-seat selection; not every bankruptcy",
+    "candidate15Gaps": [
+      "initial/five-round acquisition",
+      "single slot versus native two",
+      "candidate retains equipped vehicle"
+    ],
+    "wandering": "no autonomous node scheduler found in audited chains; not a whole-executable absence proof",
+    "nativeCancel": "message0x205 kills selector timer/posts0; skips attachment, does not undo surrendered exit; Escape not established"
+  },
+  "checks": {
+    "targeted": {
+      "passed": true,
+      "uniqueTests": 260,
+      "files": 11,
+      "breakdown": {
+        "newDomain": 9,
+        "godTrafficDisplay": 5,
+        "oldPairDomain": 21,
+        "specialDomain": 23,
+        "specialCircuitAndPolicies": 4,
+        "v1To44MatrixAndV9Golden": 133,
+        "v45BrowserGoldens": 3,
+        "v46BrowserGoldens": 3,
+        "researchPolicy": 45,
+        "g7": 11,
+        "newBrowserGoldens": 3
+      },
+      "scope": "related tests, not full frontend suite"
+    },
+    "build": {
+      "passed": true,
+      "knownWarnings": [
+        "existing chunks over500kB"
+      ]
+    },
+    "lint": {
+      "passed": true
+    },
+    "oldFixtures": {
+      "count": 440,
+      "byteUnchanged": true
+    },
+    "existingFeatureFilesChanged": [
+      "GodTrafficPanel.tsx",
+      "GodTrafficPanel.test.tsx"
+    ],
+    "readOnlyDisplayBrowser": {
+      "readOnly": true,
+      "revisionUnchanged": true,
+      "widths": [
+        1440,
+        390
+      ],
+      "errors": [],
+      "cleanup": {
+        "raf": 0,
+        "canvas": 0
+      }
+    },
+    "newFixtures": 6,
+    "existingRuntimeChanges": "read-only GodTrafficPanel only; all prior engine/rules/policy files byte-identical"
+  },
+  "browser": {
+    "totalActualCommands": 10002,
+    "totalLegalPlanCommands": 9974,
+    "controlPauseCommands": 28,
+    "keyPrefixes": 11,
+    "worldDisplayCaptures": 14,
+    "seatControl": "2/3/4 all-human hotseat, every choice through real UI; no AI behavior change",
+    "authOnlyFixture": true,
+    "gameStateInjection": false,
+    "normalSpeed": true,
+    "routes": {
+      "pair": {
+        "route": "pair",
+        "players": 2,
+        "normalSpeed": true,
+        "map": "original Japan; hotseat UI commands; auth fixture only",
+        "commands": 1761,
+        "human": 584,
+        "auto": 1169,
+        "displayChecks": [
+          {
+            "index": 0,
+            "kinds": []
+          },
+          {
+            "index": 1472,
+            "kinds": [
+              "vehicle-avoid11"
+            ]
+          },
+          {
+            "index": 1644,
+            "kinds": [
+              "attach12"
+            ]
+          },
+          {
+            "index": 1753,
+            "kinds": [
+              "pair-back11"
+            ]
+          }
+        ],
+        "lifecycle": [
+          "pause/resume",
+          "reset dialog cancel",
+          "reset",
+          "replace",
+          "exit",
+          "fullscreen",
+          "390px"
+        ],
+        "cleanup": {
+          "raf": 0,
+          "canvas": 0
+        },
+        "errors": [],
+        "facts": [
+          {
+            "type": "specialObjectsRefreshed",
+            "date": "1998-02-01",
+            "objects": [
+              {
+                "type": 13,
+                "node": 106
+              },
+              {
+                "type": 14,
+                "node": 102
+              }
+            ],
+            "sequence": 210,
+            "commandId": "command-113",
+            "playerId": "player-2",
+            "turn": 14
+          },
+          {
+            "type": "specialObjectsRefreshed",
+            "date": "1998-03-01",
+            "objects": [
+              {
+                "type": 13,
+                "node": 8
+              },
+              {
+                "type": 14,
+                "node": 53
+              }
+            ],
+            "sequence": 1120,
+            "commandId": "command-582",
+            "playerId": "player-2",
+            "turn": 70
+          },
+          {
+            "type": "specialObjectResolved",
+            "objectType": 13,
+            "node": 8,
+            "targetId": "player-1",
+            "outcome": "tool",
+            "itemId": "tool:02",
+            "before": 1,
+            "after": 2,
+            "sequence": 1851,
+            "commandId": "command-959",
+            "playerId": "player-1",
+            "turn": 111
+          },
+          {
+            "type": "specialObjectsRefreshed",
+            "date": "1998-04-01",
+            "objects": [
+              {
+                "type": 13,
+                "node": 15
+              },
+              {
+                "type": 14,
+                "node": 84
+              }
+            ],
+            "sequence": 2209,
+            "commandId": "command-1142",
+            "playerId": "player-2",
+            "turn": 132
+          },
+          {
+            "type": "specialObjectResolved",
+            "objectType": 11,
+            "node": 12,
+            "targetId": "player-1",
+            "outcome": "vehicle",
+            "sequence": 2867,
+            "commandId": "command-1476",
+            "playerId": "player-1",
+            "turn": 167
+          },
+          {
+            "type": "specialObjectResolved",
+            "objectType": 13,
+            "node": 15,
+            "targetId": "player-2",
+            "outcome": "tool",
+            "itemId": "tool:02",
+            "before": 1,
+            "after": 2,
+            "sequence": 3106,
+            "commandId": "command-1604",
+            "playerId": "player-2",
+            "turn": 180
+          },
+          {
+            "type": "g6Notice",
+            "message": "玩家1附身土地公，期限7次自身行动边界。",
+            "sequence": 3200,
+            "commandId": "command-1652",
+            "playerId": "player-1",
+            "turn": 185
+          },
+          {
+            "type": "specialObjectsRefreshed",
+            "date": "1998-05-01",
+            "objects": [
+              {
+                "type": 13,
+                "node": 99
+              },
+              {
+                "type": 14,
+                "node": 53
+              }
+            ],
+            "sequence": 3323,
+            "commandId": "command-1712",
+            "playerId": "player-2",
+            "turn": 192
+          },
+          {
+            "type": "g6Notice",
+            "message": "配对补位：11号槽出现在1号路格。",
+            "sequence": 3426,
+            "commandId": "command-1765",
+            "playerId": "player-1",
+            "turn": 199
+          }
+        ],
+        "prefixes": [
+          {
+            "index": 1474,
+            "kind": "vehicle-avoid11"
+          },
+          {
+            "index": 1648,
+            "kind": "attach12"
+          },
+          {
+            "index": 1759,
+            "kind": "pair-back11"
+          }
+        ],
+        "fullReplay": true,
+        "prefixReplay": true,
+        "commandsMatchLegalPlan": true,
+        "hashes": {
+          "replay": "4f6df988030103945fa57d64efa99caeb93e08d6536fb9c2e48c2f382899b54b",
+          "state": "96840a66d70dbb4dcf2591e25a0ba0577da737d752141ef1493394c21794cf8c",
+          "events": "fb571189381342e8147499e598fcb04ae330d8bab44599af75d5190497305c4d"
+        }
+      },
+      "full-known": {
+        "route": "full-known",
+        "players": 3,
+        "normalSpeed": true,
+        "map": "original Japan; hotseat UI commands; auth fixture only",
+        "commands": 3625,
+        "human": 1414,
+        "auto": 2197,
+        "displayChecks": [
+          {
+            "index": 0,
+            "kinds": []
+          },
+          {
+            "index": 1276,
+            "kinds": [
+              "attach12"
+            ]
+          },
+          {
+            "index": 1420,
+            "kinds": [
+              "pair-back11"
+            ]
+          },
+          {
+            "index": 2388,
+            "kinds": [
+              "attach12"
+            ]
+          },
+          {
+            "index": 2542,
+            "kinds": [
+              "pair-back11"
+            ]
+          },
+          {
+            "index": 3559,
+            "kinds": [
+              "attach12"
+            ]
+          },
+          {
+            "index": 3610,
+            "kinds": [
+              "tool13-full"
+            ]
+          }
+        ],
+        "lifecycle": [
+          "pause/resume",
+          "reset dialog cancel",
+          "reset",
+          "replace",
+          "exit",
+          "fullscreen",
+          "390px"
+        ],
+        "cleanup": {
+          "raf": 0,
+          "canvas": 0
+        },
+        "errors": [],
+        "facts": [
+          {
+            "type": "specialObjectsRefreshed",
+            "date": "1998-02-01",
+            "objects": [
+              {
+                "type": 13,
+                "node": 57
+              },
+              {
+                "type": 14,
+                "node": 50
+              }
+            ],
+            "sequence": 262,
+            "commandId": "command-140",
+            "playerId": "player-3",
+            "turn": 21
+          },
+          {
+            "type": "specialObjectResolved",
+            "objectType": 14,
+            "node": 50,
+            "targetId": "player-1",
+            "outcome": "points",
+            "before": 100,
+            "after": 600,
+            "sequence": 585,
+            "commandId": "command-316",
+            "playerId": "player-1",
+            "turn": 46
+          },
+          {
+            "type": "specialObjectsRefreshed",
+            "date": "1998-03-01",
+            "objects": [
+              {
+                "type": 13,
+                "node": 87
+              },
+              {
+                "type": 14,
+                "node": 30
+              }
+            ],
+            "sequence": 1485,
+            "commandId": "command-780",
+            "playerId": "player-3",
+            "turn": 105
+          },
+          {
+            "type": "specialObjectResolved",
+            "objectType": 11,
+            "node": 98,
+            "targetId": "player-2",
+            "outcome": "hospital",
+            "sequence": 2336,
+            "commandId": "command-1234",
+            "playerId": "player-2",
+            "turn": 164
+          },
+          {
+            "type": "g6Notice",
+            "message": "玩家1附身土地公，期限7次自身行动边界。",
+            "sequence": 2425,
+            "commandId": "command-1280",
+            "playerId": "player-1",
+            "turn": 172
+          },
+          {
+            "type": "g6Notice",
+            "message": "配对补位：11号槽出现在104号路格。",
+            "sequence": 2703,
+            "commandId": "command-1428",
+            "playerId": "player-1",
+            "turn": 193
+          },
+          {
+            "type": "specialObjectsRefreshed",
+            "date": "1998-04-01",
+            "objects": [
+              {
+                "type": 13,
+                "node": 2
+              },
+              {
+                "type": 14,
+                "node": 15
+              }
+            ],
+            "sequence": 2802,
+            "commandId": "command-1482",
+            "playerId": "player-3",
+            "turn": 198
+          },
+          {
+            "type": "specialObjectResolved",
+            "objectType": 14,
+            "node": 15,
+            "targetId": "player-2",
+            "outcome": "points",
+            "before": 150,
+            "after": 650,
+            "sequence": 2946,
+            "commandId": "command-1558",
+            "playerId": "player-2",
+            "turn": 209
+          },
+          {
+            "type": "specialObjectResolved",
+            "objectType": 11,
+            "node": 104,
+            "targetId": "player-1",
+            "outcome": "hospital",
+            "sequence": 3518,
+            "commandId": "command-1861",
+            "playerId": "player-1",
+            "turn": 250
+          },
+          {
+            "type": "specialObjectsRefreshed",
+            "date": "1998-05-01",
+            "objects": [
+              {
+                "type": 13,
+                "node": 37
+              },
+              {
+                "type": 14,
+                "node": 81
+              }
+            ],
+            "sequence": 4031,
+            "commandId": "command-2136",
+            "playerId": "player-3",
+            "turn": 288
+          },
+          {
+            "type": "g6Notice",
+            "message": "玩家1附身土地公，期限7次自身行动边界。",
+            "sequence": 4520,
+            "commandId": "command-2400",
+            "playerId": "player-1",
+            "turn": 325
+          },
+          {
+            "type": "g6Notice",
+            "message": "配对补位：11号槽出现在89号路格。",
+            "sequence": 4815,
+            "commandId": "command-2558",
+            "playerId": "player-1",
+            "turn": 346
+          },
+          {
+            "type": "specialObjectResolved",
+            "objectType": 14,
+            "node": 81,
+            "targetId": "player-3",
+            "outcome": "points",
+            "before": 180,
+            "after": 680,
+            "sequence": 5048,
+            "commandId": "command-2680",
+            "playerId": "player-3",
+            "turn": 366
+          },
+          {
+            "type": "specialObjectResolved",
+            "objectType": 13,
+            "node": 37,
+            "targetId": "player-1",
+            "outcome": "tool",
+            "itemId": "tool:06",
+            "before": 0,
+            "after": 1,
+            "sequence": 5231,
+            "commandId": "command-2774",
+            "playerId": "player-1",
+            "turn": 379
+          },
+          {
+            "type": "specialObjectsRefreshed",
+            "date": "1998-06-01",
+            "objects": [
+              {
+                "type": 13,
+                "node": 56
+              },
+              {
+                "type": 14,
+                "node": 16
+              }
+            ],
+            "sequence": 5266,
+            "commandId": "command-2792",
+            "playerId": "player-3",
+            "turn": 381
+          },
+          {
+            "type": "specialObjectResolved",
+            "objectType": 14,
+            "node": 16,
+            "targetId": "player-2",
+            "outcome": "points",
+            "before": 720,
+            "after": 1220,
+            "sequence": 5328,
+            "commandId": "command-2824",
+            "playerId": "player-2",
+            "turn": 386
+          },
+          {
+            "type": "specialObjectResolved",
+            "objectType": 13,
+            "node": 56,
+            "targetId": "player-3",
+            "outcome": "tool",
+            "itemId": "tool:04",
+            "before": 0,
+            "after": 1,
+            "sequence": 5423,
+            "commandId": "command-2873",
+            "playerId": "player-3",
+            "turn": 393
+          },
+          {
+            "type": "specialObjectResolved",
+            "objectType": 11,
+            "node": 89,
+            "targetId": "player-2",
+            "outcome": "hospital",
+            "sequence": 5701,
+            "commandId": "command-3016",
+            "playerId": "player-2",
+            "turn": 410
+          },
+          {
+            "type": "specialObjectsRefreshed",
+            "date": "1998-07-01",
+            "objects": [
+              {
+                "type": 13,
+                "node": 7
+              },
+              {
+                "type": 14,
+                "node": 11
+              }
+            ],
+            "sequence": 6547,
+            "commandId": "command-3462",
+            "playerId": "player-3",
+            "turn": 471
+          },
+          {
+            "type": "g6Notice",
+            "message": "玩家1附身土地公，期限7次自身行动边界。",
+            "sequence": 6752,
+            "commandId": "command-3579",
+            "playerId": "player-1",
+            "turn": 487
+          },
+          {
+            "type": "specialObjectResolved",
+            "objectType": 14,
+            "node": 11,
+            "targetId": "player-1",
+            "outcome": "points",
+            "before": 365,
+            "after": 865,
+            "sequence": 6801,
+            "commandId": "command-3607",
+            "playerId": "player-1",
+            "turn": 490
+          },
+          {
+            "type": "specialObjectResolved",
+            "objectType": 13,
+            "node": 7,
+            "targetId": "player-1",
+            "outcome": "full",
+            "itemId": "tool:03",
+            "before": 9,
+            "after": 9,
+            "sequence": 6857,
+            "commandId": "command-3634",
+            "playerId": "player-1",
+            "turn": 493
+          },
+          {
+            "type": "verifiedFullReceipt",
+            "itemId": "tool:03",
+            "supplyUnchanged": 1,
+            "bagUnchanged": 9,
+            "objectRemoved": true,
+            "rngAdvanced": true
+          }
+        ],
+        "prefixes": [
+          {
+            "index": 1278,
+            "kind": "attach12"
+          },
+          {
+            "index": 1424,
+            "kind": "pair-back11"
+          },
+          {
+            "index": 2394,
+            "kind": "attach12"
+          },
+          {
+            "index": 2550,
+            "kind": "pair-back11"
+          },
+          {
+            "index": 3569,
+            "kind": "attach12"
+          },
+          {
+            "index": 3622,
+            "kind": "tool13-full"
+          }
+        ],
+        "fullReplay": true,
+        "prefixReplay": true,
+        "commandsMatchLegalPlan": true,
+        "hashes": {
+          "replay": "d8d13af5d4ebcb2773e5bdde8a4faf4546b374607b9a530c8e198b03d56caca0",
+          "state": "51da0f38d9b82583db6824c566b881740ea128ed08dcb621b05602f3291ef5fd",
+          "events": "5ea4cf055285770e82eda9e5abe4aecfe26c6797c5f71124fbeeaad12c2e7621"
+        }
+      },
+      "restore": {
+        "route": "restore",
+        "players": 4,
+        "normalSpeed": true,
+        "map": "original Japan; hotseat UI commands; auth fixture only",
+        "commands": 4616,
+        "human": 940,
+        "auto": 3670,
+        "displayChecks": [
+          {
+            "index": 0,
+            "kinds": []
+          },
+          {
+            "index": 4451,
+            "kinds": [
+              "before-time-special-world"
+            ]
+          },
+          {
+            "index": 4452,
+            "kinds": [
+              "after-time-special-world"
+            ]
+          }
+        ],
+        "lifecycle": [
+          "pause/resume",
+          "reset dialog cancel",
+          "reset",
+          "replace",
+          "exit",
+          "fullscreen",
+          "390px"
+        ],
+        "cleanup": {
+          "raf": 0,
+          "canvas": 0
+        },
+        "errors": [],
+        "facts": [
+          {
+            "type": "specialObjectResolved",
+            "objectType": 11,
+            "node": 30,
+            "targetId": "player-2",
+            "outcome": "hospital",
+            "sequence": 368,
+            "commandId": "command-374",
+            "playerId": "player-2",
+            "turn": 22
+          },
+          {
+            "type": "specialObjectResolved",
+            "objectType": 13,
+            "node": 76,
+            "targetId": "player-3",
+            "outcome": "tool",
+            "itemId": "tool:08",
+            "before": 0,
+            "after": 1,
+            "sequence": 429,
+            "commandId": "command-404",
+            "playerId": "player-3",
+            "turn": 27
+          },
+          {
+            "type": "specialObjectsRefreshed",
+            "date": "1998-02-01",
+            "objects": [
+              {
+                "type": 13,
+                "node": 74
+              },
+              {
+                "type": 14,
+                "node": 93
+              }
+            ],
+            "sequence": 1320,
+            "commandId": "command-1455",
+            "playerId": "player-4",
+            "turn": 92
+          },
+          {
+            "type": "specialObjectResolved",
+            "objectType": 14,
+            "node": 93,
+            "targetId": "player-2",
+            "outcome": "points",
+            "before": 120,
+            "after": 620,
+            "sequence": 1568,
+            "commandId": "command-1588",
+            "playerId": "player-2",
+            "turn": 110
+          },
+          {
+            "type": "g6Notice",
+            "message": "玩家1附身土地公，期限7次自身行动边界。",
+            "sequence": 1640,
+            "commandId": "command-1626",
+            "playerId": "player-1",
+            "turn": 117
+          },
+          {
+            "type": "specialObjectResolved",
+            "objectType": 13,
+            "node": 74,
+            "targetId": "player-2",
+            "outcome": "tool",
+            "itemId": "tool:06",
+            "before": 0,
+            "after": 1,
+            "sequence": 1704,
+            "commandId": "command-1657",
+            "playerId": "player-2",
+            "turn": 122
+          },
+          {
+            "type": "g6Notice",
+            "message": "配对补位：11号槽出现在94号路格。",
+            "sequence": 2031,
+            "commandId": "command-1826",
+            "playerId": "player-1",
+            "turn": 145
+          },
+          {
+            "type": "specialObjectsRefreshed",
+            "date": "1998-03-01",
+            "objects": [
+              {
+                "type": 13,
+                "node": 40
+              },
+              {
+                "type": 14,
+                "node": 102
+              }
+            ],
+            "sequence": 2887,
+            "commandId": "command-3207",
+            "playerId": "player-4",
+            "turn": 204
+          },
+          {
+            "type": "specialObjectResolved",
+            "objectType": 13,
+            "node": 40,
+            "targetId": "player-1",
+            "outcome": "tool",
+            "itemId": "tool:02",
+            "before": 1,
+            "after": 2,
+            "sequence": 2897,
+            "commandId": "command-3212",
+            "playerId": "player-1",
+            "turn": 205
+          },
+          {
+            "type": "specialObjectResolved",
+            "objectType": 14,
+            "node": 102,
+            "targetId": "player-2",
+            "outcome": "points",
+            "before": 680,
+            "after": 1180,
+            "sequence": 2977,
+            "commandId": "command-3251",
+            "playerId": "player-2",
+            "turn": 210
+          },
+          {
+            "type": "specialObjectResolved",
+            "objectType": 11,
+            "node": 94,
+            "targetId": "player-1",
+            "outcome": "hospital",
+            "sequence": 4256,
+            "commandId": "command-4452",
+            "playerId": "player-1",
+            "turn": 305
+          },
+          {
+            "type": "verifiedG7Restore",
+            "before": [],
+            "after": [
+              {
+                "id": "god-17",
+                "type": 11,
+                "node": 94,
+                "carrier": null,
+                "remaining": 0
+              }
+            ],
+            "rngUnchanged": true,
+            "worldGodsAndSpecialsRestored": true,
+            "historicalTimeConsumed": 1
+          }
+        ],
+        "prefixes": [
+          {
+            "index": 4453,
+            "kind": "before-time-special-world"
+          },
+          {
+            "index": 4456,
+            "kind": "after-time-special-world"
+          }
+        ],
+        "fullReplay": true,
+        "prefixReplay": true,
+        "commandsMatchLegalPlan": true,
+        "hashes": {
+          "replay": "59d467104a732eff0b687d40a0459d183bb511146d32a1a50e0148003a9b308d",
+          "state": "97f311be49d9acdfec01a1b8e9317cd0f2564f3c708dc496f85b7bd4b591e5af",
+          "events": "2a09fd505be3cd23dd322965222041bd7efde7db07fe599be29003a59b76a12a"
+        }
+      }
+    }
+  },
+  "failuresAndRepairs": [
+    "new domain test used paused instead of value; test corrected and14 tests rerun passed",
+    "UI strict revision check could lag behind automatic minigame ticks; allow only planned automatic catch-up, still require exact revision for human actions and exact exported replay",
+    "discarded exploratory card route omitted capacity; rejected search command is not a product bug or accepted browser evidence; final fixed route uses only tools",
+    "new four-person golden exceeded default5s timeout under parallel browser/search load; use per-long-replay60s budget, all three accepted goldens rerun passed; independent full/prefix equality also passed",
+    "exploratory three-seat acquisition-prefix UI stopped before reaching the target; excluded from acceptance; final selected full-29 legal route uses9 mine purchases and remote dice, not experimental card/direction planning"
+  ],
+  "untested": [
+    "Windows original execution",
+    "native surrender/15 dual slots/equipment clearing implementation",
+    "all engineering/dream/insurance UI combinations",
+    "13 empty pool and full-tool kinds other than mine03 UI",
+    "14 overflow UI",
+    "special object nuclear attack UI and every auction-suspended month combination"
+  ],
+  "next": "S3-03e: scoped surrender/death acquisition and dual-slot/equipment/expiry/G7; new semantics v47; retain original exit-stack gaps",
+  "completedDate": "2026-10-09"
+}

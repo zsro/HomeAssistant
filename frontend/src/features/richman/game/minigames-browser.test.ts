@@ -1,0 +1,13 @@
+import {GameEngine} from './engine';
+import type {Replay} from './engine';
+import {expect,it} from 'vitest';
+import {createHash} from 'node:crypto';
+import {verifyMinigames} from '../../../../../scripts/richman/verify-minigames';
+import r22 from './fixtures/minigames-v41-22-replay.json';
+import m22 from './fixtures/minigames-v41-22-manifest.json';
+import r24 from './fixtures/minigames-v41-24-replay.json';
+import m24 from './fixtures/minigames-v41-24-manifest.json';
+import r26 from './fixtures/minigames-v41-26-replay.json';
+import m26 from './fixtures/minigames-v41-26-manifest.json';
+void GameEngine;
+for(const [replay,golden]of[[r22,m22],[r24,m24],[r26,m26]]as const)it(`actual original-map node${golden.receipts[0].node} input,score settlement,unaffected world,prefix replay and hashes`,()=>{const r=verifyMinigames(replay as Replay);for(const key of['commands','inputs','ticks','settlements','prefixes','receipts']as const)expect(r[key]).toEqual(golden[key]);for(const key of['state','events']as const)expect(createHash('sha256').update(JSON.stringify(r[key])).digest('hex')).toBe(golden.hashes[key]);expect(createHash('sha256').update(JSON.stringify(replay)).digest('hex')).toBe(golden.hashes.replay);expect(golden.report.errors).toEqual([]);expect(golden.report.cleanup).toEqual({raf:0,canvas:0});},15000);

@@ -1,0 +1,13 @@
+{
+  "route": "3-bank",
+  "seed": "final-group-42",
+  "commands": 381,
+  "turn": 49,
+  "players": 2,
+  "state": "7401ebdedb4ea2d1526d818c254589caeeca595f163e0e8d07a23bf763a7044e",
+  "events": "c774e17dcbf846f8b51d53849a498f234035acb2a6fe78ad31311c6827987a06",
+  "fortune": [
+    3,
+    4
+  ]
+}

@@ -1,0 +1,3 @@
+import {planMinigame} from './plan-minigame-journey';
+import {writeFileSync} from 'node:fs';
+for(const node of[22,24,26]){let best:ReturnType<typeof planMinigame>=null;for(let i=0;i<30;i++){const r=planMinigame(`minigames-${i}`,node===22?2:node===24?3:4,400,node);if(r&&(!best||r.replay.commands.length<best.replay.commands.length))best=r;if(best&&best.state.turn<=4)break;}if(!best)throw Error(String(node));writeFileSync(`/private/tmp/richman-unified-03ab-${node}.json`,JSON.stringify(best));console.log(node,best.replay.config.seed,best.state.turn,best.replay.commands.length,best.state.items!.fingerprint);}

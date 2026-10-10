@@ -1,0 +1,350 @@
+{
+  "stage": "S3-01a",
+  "date": "2026-10-07",
+  "rulesId": "japan-events-candidate-v44",
+  "fingerprint": "f9dbb7e9",
+  "policy": "basic-v1",
+  "semanticIncrement": false,
+  "runtimeChanged": true,
+  "basicComputerImplemented": true,
+  "s3_01Closed": false,
+  "nativeComplete": false,
+  "preserved": {
+    "s2_03CandidateClosed": true,
+    "s2_04CandidateClosed": true,
+    "s2_05CandidateClosed": true,
+    "items": 43,
+    "news": 36,
+    "japanFortuneSlots": 37,
+    "oldFixtureJsonUnchanged": 280,
+    "allVersionPlayerCases": 132,
+    "workerUIFixUnchanged": true
+  },
+  "checks": {
+    "frontend": {
+      "passed": 1786,
+      "files": 124,
+      "newDomain": 10,
+      "newActualReplay": 3,
+      "maxWorkers": 2,
+      "errors": 0
+    },
+    "lint": "passed",
+    "build": "passed; existing chunk size/mixed import warnings",
+    "firstFullRun": "1783 assertions passed, 1 onTaskUpdate RPC timeout; not accepted as clean run; final clean rerun includes 3 new browser replay tests"
+  },
+  "originalMapBrowser": {
+    "routes": [
+      {
+        "players": 2,
+        "commands": 466,
+        "computer": 88,
+        "human": 91,
+        "dates": 32,
+        "alternate": 0,
+        "turn": 65,
+        "phase": "idle",
+        "kinds": {
+          "idle": 64,
+          "branch": 2,
+          "buy": 24,
+          "turnEnd": 64,
+          "news": 2,
+          "bank": 4,
+          "minigame": 2,
+          "subscription": 5,
+          "magic": 3,
+          "shop": 2,
+          "company": 2,
+          "rent": 2,
+          "fortune": 2,
+          "upgrade": 1
+        },
+        "prefixes": [
+          "paused",
+          "resumed",
+          "computer-first",
+          "date",
+          "return-human",
+          "computer-bank",
+          "computer-upgrade"
+        ],
+        "report": {
+          "players": 2,
+          "normalSpeed": true,
+          "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+          "commands": 466,
+          "auto": 88,
+          "human": 91,
+          "lifecycle": [
+            "pause stops waiting",
+            "resume",
+            "reset dialog cancel",
+            "reset",
+            "replace with humans",
+            "exit cleanup",
+            "fullscreen",
+            "390px"
+          ],
+          "cleanup": {
+            "raf": 0,
+            "canvas": 0
+          },
+          "errors": []
+        },
+        "hashes": {
+          "replay": "793888640e8b77da25de79314481c28eee18d8777697f07bf1e322de80d592dc",
+          "state": "c6165f2cf764baa13a10f9a9698fdc779316fc7518255e0e6679c6a9cf99830b",
+          "events": "1caa01b4a92d0cf38bb9f069f9f9b6d506476236b18471c88c8b334ab6648689"
+        }
+      },
+      {
+        "players": 3,
+        "commands": 482,
+        "computer": 68,
+        "human": 129,
+        "dates": 21,
+        "alternate": 0,
+        "turn": 66,
+        "phase": "idle",
+        "kinds": {
+          "idle": 62,
+          "branch": 4,
+          "buy": 38,
+          "turnEnd": 65,
+          "bank": 5,
+          "fortune": 2,
+          "rent": 4,
+          "company": 2,
+          "subscription": 2,
+          "news": 5,
+          "lottery": 2,
+          "magic": 3,
+          "minigame": 2,
+          "auction": 1
+        },
+        "prefixes": [
+          "paused",
+          "resumed",
+          "computer-first",
+          "return-human",
+          "date",
+          "computer-bank",
+          "auction"
+        ],
+        "report": {
+          "players": 3,
+          "normalSpeed": true,
+          "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+          "commands": 482,
+          "auto": 68,
+          "human": 129,
+          "lifecycle": [
+            "pause stops waiting",
+            "resume",
+            "reset dialog cancel",
+            "reset",
+            "replace with humans",
+            "exit cleanup",
+            "fullscreen",
+            "390px"
+          ],
+          "cleanup": {
+            "raf": 0,
+            "canvas": 0
+          },
+          "errors": []
+        },
+        "hashes": {
+          "replay": "f484e8323ff343112c927e07fe9286b88b2a5fc9e2eaa06c7a4823bcca1749c2",
+          "state": "18ffb5f1d87526a5a03f4560a535a869bffb2fb04b4e33a23639ee7e0aa43a8f",
+          "events": "53ce7828daff92a183fc908b8a256988522428bb03573e11d9194ccdfba8dc66"
+        }
+      },
+      {
+        "players": 4,
+        "commands": 506,
+        "computer": 101,
+        "human": 95,
+        "dates": 16,
+        "alternate": 0,
+        "turn": 65,
+        "phase": "idle",
+        "kinds": {
+          "idle": 64,
+          "branch": 4,
+          "fortune": 4,
+          "turnEnd": 64,
+          "buy": 38,
+          "bank": 4,
+          "rent": 3,
+          "company": 2,
+          "subscription": 4,
+          "minigame": 4,
+          "news": 3,
+          "auction": 2
+        },
+        "prefixes": [
+          "paused",
+          "resumed",
+          "computer-first",
+          "return-human",
+          "computer-bank",
+          "date",
+          "auction"
+        ],
+        "report": {
+          "players": 4,
+          "normalSpeed": true,
+          "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+          "commands": 506,
+          "auto": 101,
+          "human": 95,
+          "lifecycle": [
+            "pause stops waiting",
+            "resume",
+            "reset dialog cancel",
+            "reset",
+            "replace with humans",
+            "exit cleanup",
+            "fullscreen",
+            "390px"
+          ],
+          "cleanup": {
+            "raf": 0,
+            "canvas": 0
+          },
+          "errors": []
+        },
+        "hashes": {
+          "replay": "d60208dee7a96160ad2bb1fe87280103dfd7b468445ab557d5fe88c0651dafcd",
+          "state": "02691d3982414a45ff2975b5eb20354972a64f6d53f321aefb828f6160297fe8",
+          "events": "6944e3e2d71168768ef2148903307a69bf3b2817af4f6819fa14d56ff8543a93"
+        }
+      }
+    ],
+    "totalCommands": 1454,
+    "totalComputerDecisions": 257,
+    "normalSpeed": true,
+    "injection": "auth only; no game state injection",
+    "terminalUI": false,
+    "alternateResponderUI": false
+  },
+  "domainLongGames": [
+    {
+      "players": 2,
+      "commands": 697,
+      "turn": 96,
+      "phase": "finished",
+      "winner": "player-1",
+      "kinds": {
+        "idle": 96,
+        "roll": 96,
+        "branch": 2,
+        "segment": 330,
+        "buy": 37,
+        "turnEnd": 95,
+        "news": 3,
+        "bank": 6,
+        "minigame": 4,
+        "subscription": 5,
+        "magic": 9,
+        "shop": 3,
+        "company": 3,
+        "rent": 4,
+        "fortune": 3,
+        "upgrade": 1
+      }
+    },
+    {
+      "players": 3,
+      "commands": 1251,
+      "turn": 175,
+      "phase": "finished",
+      "winner": "player-1",
+      "kinds": {
+        "idle": 164,
+        "roll": 164,
+        "branch": 4,
+        "segment": 585,
+        "buy": 79,
+        "turnEnd": 174,
+        "bank": 13,
+        "fortune": 7,
+        "rent": 12,
+        "company": 5,
+        "subscription": 11,
+        "news": 6,
+        "lottery": 3,
+        "magic": 6,
+        "minigame": 12,
+        "auction": 2,
+        "debt": 1,
+        "shop": 2,
+        "upgrade": 1
+      }
+    },
+    {
+      "players": 4,
+      "commands": 1982,
+      "turn": 291,
+      "phase": "finished",
+      "winner": "player-3",
+      "kinds": {
+        "idle": 255,
+        "roll": 255,
+        "branch": 10,
+        "segment": 932,
+        "fortune": 18,
+        "turnEnd": 290,
+        "buy": 105,
+        "bank": 14,
+        "rent": 14,
+        "company": 10,
+        "subscription": 14,
+        "minigame": 26,
+        "news": 8,
+        "auction": 2,
+        "magic": 15,
+        "lottery": 3,
+        "upgrade": 6,
+        "shop": 2,
+        "facility": 1,
+        "debt": 2
+      }
+    }
+  ],
+  "builtUI": {
+    "built": true,
+    "normalSpeed": true,
+    "defaultHuman": true,
+    "allComputer": true,
+    "pause": true,
+    "replacementCancels": true,
+    "exitWhileComputerWaiting": true,
+    "cleanup": {
+      "raf": 0,
+      "canvas": 0
+    },
+    "errors": []
+  },
+  "fixes": [
+    "bank rejection skips transfer",
+    "browser harness return link corrected and full mixed routes rerun"
+  ],
+  "notClaimed": [
+    "native AI equivalence or difficulty tuning",
+    "terminal winner mixed-seat UI",
+    "actual AI alternate responder reaction/debt/magic-build UI",
+    "all seat/character permutations",
+    "browser background throttling",
+    "advanced card/stock/research/bidding strategies",
+    "loading control metadata as a saved session"
+  ],
+  "next": "S3-01b: legal mixed-seat terminal and alternate responder UI/replay acceptance, then S3-02 grouped strategy",
+  "git": {
+    "committed": false,
+    "pushed": false,
+    "deployed": false
+  }
+}

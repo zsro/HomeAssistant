@@ -1,0 +1,718 @@
+{
+  "loading": {
+    "browser": "Chrome headless, actual media ports, default muted output; no listening claim",
+    "results": [
+      {
+        "scenario": "normal",
+        "passed": true,
+        "media": {
+          "ports": [
+            {
+              "id": 0,
+              "src": "http://127.0.0.1:5177/richman/generated/audio/track02.mp3",
+              "attribute": null,
+              "paused": true,
+              "time": 0,
+              "volume": 0.22,
+              "ready": 0
+            }
+          ],
+          "events": [
+            {
+              "type": "volumechange",
+              "id": 0,
+              "src": "http://127.0.0.1:5177/richman/generated/audio/track02.mp3",
+              "time": 0,
+              "volume": 0.35,
+              "at": 1530.5
+            },
+            {
+              "type": "play",
+              "id": 0,
+              "src": "http://127.0.0.1:5177/richman/generated/audio/track02.mp3",
+              "time": 0,
+              "volume": 0.35,
+              "at": 1530.5
+            },
+            {
+              "type": "playing",
+              "id": 0,
+              "src": "http://127.0.0.1:5177/richman/generated/audio/track02.mp3",
+              "time": 0,
+              "volume": 0.35,
+              "at": 1698.7000000476837
+            },
+            {
+              "type": "volumechange",
+              "id": 0,
+              "src": "http://127.0.0.1:5177/richman/generated/audio/track02.mp3",
+              "time": 0.012944,
+              "volume": 0.22,
+              "at": 1798.9000000953674
+            },
+            {
+              "type": "pause",
+              "id": 0,
+              "src": "http://127.0.0.1:5177/richman/generated/audio/track02.mp3",
+              "time": 0.117228,
+              "volume": 0.22,
+              "at": 1950.9000000953674
+            },
+            {
+              "type": "play",
+              "id": 0,
+              "src": "http://127.0.0.1:5177/richman/generated/audio/track02.mp3",
+              "time": 0.193125,
+              "volume": 0.22,
+              "at": 2104.300000190735
+            },
+            {
+              "type": "playing",
+              "id": 0,
+              "src": "http://127.0.0.1:5177/richman/generated/audio/track02.mp3",
+              "time": 0.193136,
+              "volume": 0.22,
+              "at": 2104.300000190735
+            },
+            {
+              "type": "pause",
+              "id": 0,
+              "src": "http://127.0.0.1:5177/richman/generated/audio/track02.mp3",
+              "time": 0.255193,
+              "volume": 0.22,
+              "at": 2224.800000190735
+            },
+            {
+              "type": "play",
+              "id": 0,
+              "src": "http://127.0.0.1:5177/richman/generated/audio/track02.mp3",
+              "time": 0.313469,
+              "volume": 0.22,
+              "at": 2382.2000000476837
+            },
+            {
+              "type": "playing",
+              "id": 0,
+              "src": "http://127.0.0.1:5177/richman/generated/audio/track02.mp3",
+              "time": 0.313469,
+              "volume": 0.22,
+              "at": 2382.2000000476837
+            }
+          ]
+        },
+        "canvasAfterExit": 0,
+        "errors": []
+      },
+      {
+        "scenario": "missing-art",
+        "passed": true,
+        "media": {
+          "ports": [
+            {
+              "id": 0,
+              "src": "http://127.0.0.1:5177/richman/generated/audio/track02.mp3",
+              "attribute": null,
+              "paused": true,
+              "time": 0,
+              "volume": 0.22,
+              "ready": 0
+            }
+          ],
+          "events": [
+            {
+              "type": "volumechange",
+              "id": 0,
+              "src": "http://127.0.0.1:5177/richman/generated/audio/track02.mp3",
+              "time": 0,
+              "volume": 0.35,
+              "at": 1330.2000000476837
+            },
+            {
+              "type": "play",
+              "id": 0,
+              "src": "http://127.0.0.1:5177/richman/generated/audio/track02.mp3",
+              "time": 0,
+              "volume": 0.35,
+              "at": 1330.2999999523163
+            },
+            {
+              "type": "playing",
+              "id": 0,
+              "src": "http://127.0.0.1:5177/richman/generated/audio/track02.mp3",
+              "time": 0,
+              "volume": 0.35,
+              "at": 1336.5999999046326
+            },
+            {
+              "type": "volumechange",
+              "id": 0,
+              "src": "http://127.0.0.1:5177/richman/generated/audio/track02.mp3",
+              "time": 0.013086,
+              "volume": 0.22,
+              "at": 1395.7999999523163
+            },
+            {
+              "type": "pause",
+              "id": 0,
+              "src": "http://127.0.0.1:5177/richman/generated/audio/track02.mp3",
+              "time": 0.097247,
+              "volume": 0.22,
+              "at": 1551
+            },
+            {
+              "type": "play",
+              "id": 0,
+              "src": "http://127.0.0.1:5177/richman/generated/audio/track02.mp3",
+              "time": 0.186929,
+              "volume": 0.22,
+              "at": 1737.5999999046326
+            },
+            {
+              "type": "playing",
+              "id": 0,
+              "src": "http://127.0.0.1:5177/richman/generated/audio/track02.mp3",
+              "time": 0.18694,
+              "volume": 0.22,
+              "at": 1737.5999999046326
+            },
+            {
+              "type": "pause",
+              "id": 0,
+              "src": "http://127.0.0.1:5177/richman/generated/audio/track02.mp3",
+              "time": 0.260519,
+              "volume": 0.22,
+              "at": 1867.9000000953674
+            },
+            {
+              "type": "play",
+              "id": 0,
+              "src": "http://127.0.0.1:5177/richman/generated/audio/track02.mp3",
+              "time": 0.336479,
+              "volume": 0.22,
+              "at": 2013.5
+            },
+            {
+              "type": "playing",
+              "id": 0,
+              "src": "http://127.0.0.1:5177/richman/generated/audio/track02.mp3",
+              "time": 0.336498,
+              "volume": 0.22,
+              "at": 2013.5
+            }
+          ]
+        },
+        "canvasAfterExit": 0,
+        "errors": []
+      },
+      {
+        "scenario": "corrupt-art",
+        "passed": true,
+        "media": {
+          "ports": [
+            {
+              "id": 0,
+              "src": "http://127.0.0.1:5177/richman/generated/audio/track02.mp3",
+              "attribute": null,
+              "paused": true,
+              "time": 0,
+              "volume": 0.22,
+              "ready": 0
+            }
+          ],
+          "events": [
+            {
+              "type": "volumechange",
+              "id": 0,
+              "src": "http://127.0.0.1:5177/richman/generated/audio/track02.mp3",
+              "time": 0,
+              "volume": 0.35,
+              "at": 1324.7000000476837
+            },
+            {
+              "type": "play",
+              "id": 0,
+              "src": "http://127.0.0.1:5177/richman/generated/audio/track02.mp3",
+              "time": 0,
+              "volume": 0.35,
+              "at": 1324.7000000476837
+            },
+            {
+              "type": "playing",
+              "id": 0,
+              "src": "http://127.0.0.1:5177/richman/generated/audio/track02.mp3",
+              "time": 0,
+              "volume": 0.35,
+              "at": 1330
+            },
+            {
+              "type": "volumechange",
+              "id": 0,
+              "src": "http://127.0.0.1:5177/richman/generated/audio/track02.mp3",
+              "time": 0.017528,
+              "volume": 0.22,
+              "at": 1393.5999999046326
+            },
+            {
+              "type": "pause",
+              "id": 0,
+              "src": "http://127.0.0.1:5177/richman/generated/audio/track02.mp3",
+              "time": 0.101795,
+              "volume": 0.22,
+              "at": 1548.5
+            },
+            {
+              "type": "play",
+              "id": 0,
+              "src": "http://127.0.0.1:5177/richman/generated/audio/track02.mp3",
+              "time": 0.189276,
+              "volume": 0.22,
+              "at": 1733.2999999523163
+            },
+            {
+              "type": "playing",
+              "id": 0,
+              "src": "http://127.0.0.1:5177/richman/generated/audio/track02.mp3",
+              "time": 0.189288,
+              "volume": 0.22,
+              "at": 1733.2999999523163
+            },
+            {
+              "type": "pause",
+              "id": 0,
+              "src": "http://127.0.0.1:5177/richman/generated/audio/track02.mp3",
+              "time": 0.248279,
+              "volume": 0.22,
+              "at": 1850.9000000953674
+            },
+            {
+              "type": "play",
+              "id": 0,
+              "src": "http://127.0.0.1:5177/richman/generated/audio/track02.mp3",
+              "time": 0.313469,
+              "volume": 0.22,
+              "at": 2010.2000000476837
+            },
+            {
+              "type": "playing",
+              "id": 0,
+              "src": "http://127.0.0.1:5177/richman/generated/audio/track02.mp3",
+              "time": 0.313469,
+              "volume": 0.22,
+              "at": 2010.2000000476837
+            }
+          ]
+        },
+        "canvasAfterExit": 0,
+        "errors": []
+      },
+      {
+        "scenario": "missing-audio",
+        "passed": true,
+        "media": {
+          "ports": [],
+          "events": []
+        },
+        "canvasAfterExit": 0,
+        "errors": []
+      },
+      {
+        "scenario": "failed-track",
+        "passed": true,
+        "media": {
+          "ports": [
+            {
+              "id": 0,
+              "src": "http://127.0.0.1:5177/richman/generated/audio/track02.mp3",
+              "attribute": null,
+              "paused": true,
+              "time": 0,
+              "volume": 0.35,
+              "ready": 0
+            },
+            {
+              "id": 1,
+              "src": "http://127.0.0.1:5177/richman/generated/audio/track02.mp3",
+              "attribute": null,
+              "paused": true,
+              "time": 0,
+              "volume": 0.35,
+              "ready": 0
+            }
+          ],
+          "events": [
+            {
+              "type": "volumechange",
+              "id": 0,
+              "src": "http://127.0.0.1:5177/richman/generated/audio/track02.mp3",
+              "time": 0,
+              "volume": 0.35,
+              "at": 1177.6000001430511
+            },
+            {
+              "type": "play",
+              "id": 0,
+              "src": "http://127.0.0.1:5177/richman/generated/audio/track02.mp3",
+              "time": 0,
+              "volume": 0.35,
+              "at": 1177.6000001430511
+            },
+            {
+              "type": "error",
+              "id": 0,
+              "src": "http://127.0.0.1:5177/richman/generated/audio/track02.mp3",
+              "time": 0,
+              "volume": 0.35,
+              "at": 1179.9000000953674
+            },
+            {
+              "type": "volumechange",
+              "id": 1,
+              "src": "http://127.0.0.1:5177/richman/generated/audio/track02.mp3",
+              "time": 0,
+              "volume": 0.35,
+              "at": 1280.5
+            },
+            {
+              "type": "play",
+              "id": 1,
+              "src": "http://127.0.0.1:5177/richman/generated/audio/track02.mp3",
+              "time": 0,
+              "volume": 0.35,
+              "at": 1280.5
+            },
+            {
+              "type": "playing",
+              "id": 1,
+              "src": "http://127.0.0.1:5177/richman/generated/audio/track02.mp3",
+              "time": 0,
+              "volume": 0.35,
+              "at": 1286.7000000476837
+            }
+          ]
+        },
+        "canvasAfterExit": 0,
+        "errors": []
+      },
+      {
+        "scenario": "late-art-exit",
+        "passed": true,
+        "media": {
+          "ports": [],
+          "events": []
+        },
+        "canvasAfterExit": 0,
+        "errors": []
+      }
+    ],
+    "visibility": {
+      "hiddenObserved": false,
+      "method": "real Chrome window minimized via CDP"
+    }
+  },
+  "headed": {
+    "browser": "Chrome headed visibility check; no listening claim",
+    "results": [
+      {
+        "scenario": "normal",
+        "passed": true,
+        "media": {
+          "ports": [
+            {
+              "id": 0,
+              "src": "http://127.0.0.1:5177/richman/generated/audio/track02.mp3",
+              "attribute": null,
+              "paused": true,
+              "time": 0,
+              "volume": 0.22,
+              "ready": 0
+            }
+          ],
+          "events": [
+            {
+              "type": "volumechange",
+              "id": 0,
+              "src": "http://127.0.0.1:5177/richman/generated/audio/track02.mp3",
+              "time": 0,
+              "volume": 0.35,
+              "at": 1422
+            },
+            {
+              "type": "play",
+              "id": 0,
+              "src": "http://127.0.0.1:5177/richman/generated/audio/track02.mp3",
+              "time": 0,
+              "volume": 0.35,
+              "at": 1422
+            },
+            {
+              "type": "playing",
+              "id": 0,
+              "src": "http://127.0.0.1:5177/richman/generated/audio/track02.mp3",
+              "time": 0,
+              "volume": 0.35,
+              "at": 1595.9000000953674
+            },
+            {
+              "type": "volumechange",
+              "id": 0,
+              "src": "http://127.0.0.1:5177/richman/generated/audio/track02.mp3",
+              "time": 0.016425,
+              "volume": 0.22,
+              "at": 1672.0999999046326
+            },
+            {
+              "type": "pause",
+              "id": 0,
+              "src": "http://127.0.0.1:5177/richman/generated/audio/track02.mp3",
+              "time": 0.121983,
+              "volume": 0.22,
+              "at": 1851.5999999046326
+            },
+            {
+              "type": "play",
+              "id": 0,
+              "src": "http://127.0.0.1:5177/richman/generated/audio/track02.mp3",
+              "time": 0.209545,
+              "volume": 0.22,
+              "at": 2017.7000000476837
+            },
+            {
+              "type": "playing",
+              "id": 0,
+              "src": "http://127.0.0.1:5177/richman/generated/audio/track02.mp3",
+              "time": 0.209554,
+              "volume": 0.22,
+              "at": 2017.7999999523163
+            },
+            {
+              "type": "pause",
+              "id": 0,
+              "src": "http://127.0.0.1:5177/richman/generated/audio/track02.mp3",
+              "time": 0.291324,
+              "volume": 0.22,
+              "at": 2155.7000000476837
+            },
+            {
+              "type": "play",
+              "id": 0,
+              "src": "http://127.0.0.1:5177/richman/generated/audio/track02.mp3",
+              "time": 0.359477,
+              "volume": 0.22,
+              "at": 2315.4000000953674
+            },
+            {
+              "type": "playing",
+              "id": 0,
+              "src": "http://127.0.0.1:5177/richman/generated/audio/track02.mp3",
+              "time": 0.359496,
+              "volume": 0.22,
+              "at": 2315.4000000953674
+            }
+          ]
+        },
+        "canvasAfterExit": 0,
+        "errors": []
+      }
+    ],
+    "visibility": {
+      "hiddenObserved": false,
+      "method": "real Chrome window minimized via CDP"
+    }
+  },
+  "codecs": {
+    "browser": "154.0.8037.98",
+    "autoplayBeforeGesture": "NotAllowedError",
+    "scope": "actual browser media decoding/play advancement; harness button, not game trigger and no listening claim",
+    "receipts": [
+      {
+        "file": "track02.mp3",
+        "duration": 110.712744,
+        "time": 0.205459,
+        "error": null
+      },
+      {
+        "file": "track03.mp3",
+        "duration": 113.127619,
+        "time": 0.001932,
+        "error": null
+      },
+      {
+        "file": "track04.mp3",
+        "duration": 123.158639,
+        "time": 0.185826,
+        "error": null
+      },
+      {
+        "file": "track05.mp3",
+        "duration": 154.459138,
+        "time": 0.197339,
+        "error": null
+      },
+      {
+        "file": "track06.mp3",
+        "duration": 144.520998,
+        "time": 0.200966,
+        "error": null
+      },
+      {
+        "file": "track07.mp3",
+        "duration": 141.502404,
+        "time": 0.189278,
+        "error": null
+      },
+      {
+        "file": "track08.mp3",
+        "duration": 137.740771,
+        "time": 0.175431,
+        "error": null
+      },
+      {
+        "file": "track09.mp3",
+        "duration": 180.047528,
+        "time": 0.185167,
+        "error": null
+      },
+      {
+        "file": "effect-43.wav",
+        "duration": 0.460862,
+        "time": 0.209339,
+        "error": null
+      },
+      {
+        "file": "effect-48.wav",
+        "duration": 1.04,
+        "time": 0.195228,
+        "error": null
+      },
+      {
+        "file": "effect-49.wav",
+        "duration": 0.143991,
+        "time": 0.143991,
+        "error": null
+      },
+      {
+        "file": "effect-50.wav",
+        "duration": 0.901633,
+        "time": 0.189431,
+        "error": null
+      },
+      {
+        "file": "voice-1077.wav",
+        "duration": 3.234649,
+        "time": 0.198487,
+        "error": null
+      },
+      {
+        "file": "voice-1078.wav",
+        "duration": 1.314467,
+        "time": 0.187606,
+        "error": null
+      },
+      {
+        "file": "voice-1079.wav",
+        "duration": 1.579229,
+        "time": 0.196381,
+        "error": null
+      },
+      {
+        "file": "voice-1092.wav",
+        "duration": 2.474104,
+        "time": 0.208047,
+        "error": null
+      },
+      {
+        "file": "voice-1131.wav",
+        "duration": 2.93288,
+        "time": 0.194359,
+        "error": null
+      },
+      {
+        "file": "voice-1132.wav",
+        "duration": 1.850884,
+        "time": 0.205895,
+        "error": null
+      },
+      {
+        "file": "voice-1133.wav",
+        "duration": 0.975737,
+        "time": 0.192588,
+        "error": null
+      },
+      {
+        "file": "voice-1146.wav",
+        "duration": 2.01161,
+        "time": 0.204194,
+        "error": null
+      },
+      {
+        "file": "voice-1158.wav",
+        "duration": 1.584943,
+        "time": 0.189574,
+        "error": null
+      },
+      {
+        "file": "voice-1159.wav",
+        "duration": 1.177234,
+        "time": 0.20169,
+        "error": null
+      },
+      {
+        "file": "voice-1160.wav",
+        "duration": 0.926531,
+        "time": 0.187812,
+        "error": null
+      },
+      {
+        "file": "voice-1173.wav",
+        "duration": 1.315193,
+        "time": 0.197313,
+        "error": null
+      },
+      {
+        "file": "voice-1293.wav",
+        "duration": 1.677823,
+        "time": 0.185692,
+        "error": null
+      },
+      {
+        "file": "voice-1294.wav",
+        "duration": 1.126712,
+        "time": 0.195083,
+        "error": null
+      },
+      {
+        "file": "voice-1295.wav",
+        "duration": 2.085533,
+        "time": 0.206488,
+        "error": null
+      },
+      {
+        "file": "voice-1308.wav",
+        "duration": 1.188299,
+        "time": 0.194079,
+        "error": null
+      }
+    ]
+  },
+  "targetedFollowUp": {
+    "result": "s3-04d-targeted-results.json",
+    "headless": {
+      "hidden": false,
+      "visibilityState": "visible"
+    },
+    "headed": {
+      "hidden": false,
+      "visibilityState": "visible"
+    },
+    "gameShortRefusal": "effect49 legal original-map event plus one directed NotAllowedError; retry passed",
+    "priority": "independent browser media packet; not game trigger",
+    "focusedG7": {
+      "normalSpeed": true,
+      "actualCommands": 2432,
+      "mediaPlayingEvents": 118,
+      "exitPortsReleased": true,
+      "exactBoundaryPorts": "not captured",
+      "spriteInstances": "four browser snapshots match full replay; same visible ID set across restore"
+    }
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "displayChecks": [
+    {
+      "index": 0,
+      "objects": [
+        {
+          "id": "god-6",
+          "type": 11,
+          "node": 99,
+          "carrier": null,
+          "remaining": 0
+        },
+        {
+          "id": "god-7",
+          "type": 13,
+          "node": 50,
+          "carrier": null,
+          "remaining": 0
+        },
+        {
+          "id": "god-8",
+          "type": 14,
+          "node": 107,
+          "carrier": null,
+          "remaining": 0
+        }
+      ],
+      "gods": []
+    }
+  ],
+  "robotPreviews": [],
+  "policy": "research-v1",
+  "toolWindows": [
+    "tool:08",
+    "tool:09",
+    "tool:06"
+  ],
+  "crossChecks": [],
+  "route": "2",
+  "terminal": false,
+  "players": 2,
+  "normalSpeed": true,
+  "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+  "commands": 77,
+  "auto": 21,
+  "human": 10,
+  "lifecycle": [
+    "pause stops waiting",
+    "resume",
+    "reset dialog cancel",
+    "reset",
+    "replace with humans",
+    "exit cleanup",
+    "fullscreen",
+    "390px"
+  ],
+  "cleanup": {
+    "raf": 0,
+    "canvas": 0
+  },
+  "errors": [],
+  "specialReceipts": [
+    {
+      "type": "specialObjectsRefreshed",
+      "date": "1998-02-01",
+      "objects": [
+        {
+          "type": 13,
+          "node": 16
+        },
+        {
+          "type": 14,
+          "node": 77
+        }
+      ],
+      "sequence": 40,
+      "commandId": "command-25",
+      "playerId": "player-2",
+      "turn": 2
+    },
+    {
+      "type": "specialObjectResolved",
+      "objectType": 13,
+      "node": 16,
+      "targetId": "player-2",
+      "outcome": "tool",
+      "itemId": "tool:06",
+      "before": 0,
+      "after": 1,
+      "sequence": 103,
+      "commandId": "command-60",
+      "playerId": "player-2",
+      "turn": 8
+    }
+  ],
+  "pairNotices": [
+    {
+      "type": "g6Notice",
+      "message": "配对补位：13号槽出现在16号路格。",
+      "sequence": 38,
+      "commandId": "command-25",
+      "playerId": "player-2",
+      "turn": 2
+    },
+    {
+      "type": "g6Notice",
+      "message": "配对补位：14号槽出现在77号路格。",
+      "sequence": 39,
+      "commandId": "command-25",
+      "playerId": "player-2",
+      "turn": 2
+    }
+  ],
+  "prefixes": [
+    19,
+    21,
+    54
+  ],
+  "fullReplay": true,
+  "prefixReplay": true,
+  "commandsMatchPriorLegalRoute": true,
+  "hashes": {
+    "replay": "9d41e5349f78eec95d0102e9bad84991ab60ca4e6ccde76d939e2191642081e2",
+    "state": "2ec6fdd61e8192b38abaddfa59bf6933ba34dc8b94e8acbda6279a7264ea7dd4",
+    "events": "a5a1b693d968676672c0a38f1d28d6a0a1a7fa7209fccdcb473ce0a6c84f24de"
+  }
+}

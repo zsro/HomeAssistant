@@ -1,0 +1,265 @@
+{
+  "stage": "S3-03f",
+  "referenceCommit": "ec7d70e693059d1e781d9d1cc2ad7f36d360d39e",
+  "nativeExecution": false,
+  "sources": [
+    {
+      "path": "asm/rich4_load_map.asm",
+      "sha256": "7a555911e15b8c947c6c281b95c23bf536dba92baca20929ab1666ed31df3987",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_load_map.asm"
+    },
+    {
+      "path": "asm/rich4_objects.asm",
+      "sha256": "a2d3c8c9d6946625df6f5b26a981cbae195d445f4b5de6447dea033a11adcaf6",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_objects.asm"
+    },
+    {
+      "path": "asm/rich4_gods.asm",
+      "sha256": "c1128c8e98dbedd828e3d1dc7e0b3aae4bb97f132e618733caaef44ed8534e16",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_gods.asm"
+    },
+    {
+      "path": "asm/rich4_ui_options.asm",
+      "sha256": "9d2aa14cf279688eeb032310224aaa3481855995b8e1fae7440a9a231093caf1",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_ui_options.asm"
+    },
+    {
+      "path": "asm/rich4_magic_house.asm",
+      "sha256": "e22f10bc48ca379482e4a9c03970f96884af7a6dea5c1c0f0cf6b1d51d7bd74b",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_magic_house.asm"
+    },
+    {
+      "path": "asm/rich4_player_utils.asm",
+      "sha256": "17479913576a004458908f124c4d7e94361dab41a501830d2ecb87eb7b438f01",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_utils.asm"
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "sha256": "2874c1a3e0ca1d0da5afe4cb93e42cf2d6f6fa864dbee11d7bcaa028af07d94a",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_core_actions.asm"
+    },
+    {
+      "path": "asm/rich4_tool_utils.c",
+      "sha256": "12fb8cedf2a50efa98cdfbd15f55b8167a4b3d753c6677d5ba787ac50c8d4097",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_tool_utils.c"
+    },
+    {
+      "path": "asm/rich4_player_bankrupt.asm",
+      "sha256": "57c69d347bef382e0045b00855c17293e5cb737ed22359340894ed9b9cf8bf02",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_bankrupt.asm"
+    }
+  ],
+  "inheritedNativeFacts": [
+    {
+      "id": "DEATH-01",
+      "file": "rich4_objects.asm",
+      "lines": [
+        23,
+        137
+      ],
+      "finding": "Type15 scans zero-based object slots14..15 (two). Nonzero carrier invokes attach on carrier-1 with map node0; attach overrides passed duration. Busy slots are skipped, no overwrite. load_map:754..759 initializes object kind bytes1..14,15,15 (little-endian0x0f0f0e0d)."
+    },
+    {
+      "id": "DEATH-02",
+      "file": "rich4_ui_options.asm",
+      "lines": [
+        2745,
+        2778
+      ],
+      "finding": "Surrender calls bankruptcy first, then human/active-human gates, then call_god_of_death_entry; selected one-based target becomes temporary current actor, place15(node0,duration7,carrier=target), then current actor restored. Do not attach this hook to arbitrary rent bankruptcy."
+    },
+    {
+      "id": "DEATH-03",
+      "file": "rich4_magic_house.asm",
+      "lines": [
+        2384,
+        2541
+      ],
+      "finding": "Death selector enumerates active ordinary seats excluding surrendering actor; <=1 other live seat returns0. Selected target returned by message callback; no payment or revival. This is not ordinary magic-house twelve-effect dispatch."
+    },
+    {
+      "id": "DEATH-04",
+      "file": "rich4_gods.asm",
+      "lines": [
+        421,
+        550
+      ],
+      "finding": "Attach accepts type15 as god, detaches previous, assigns carrier/current node; type15 duration becomes13 regardless of place duration7; ordinary types7."
+    },
+    {
+      "id": "DEATH-05",
+      "file": "rich4_gods.asm",
+      "lines": [
+        1147,
+        1194
+      ],
+      "finding": "Death attachment calls sell_all_tools then sell_all_the_card. Return totals are discarded; no point refund. Tool utility moves equipped ordinary vehicle/engineer into inventory, resets traffic/dice, then clears all tool kinds. v44-v46 retain equipment; v47 clears active and saved equipment with explicit Web engineer/dream mapping."
+    },
+    {
+      "id": "DEATH-06",
+      "file": "rich4_tool_utils.c",
+      "lines": [
+        67,
+        100
+      ],
+      "finding": "Sell-all-tools returns equipped traffic class1/2/3 as tool5/6/12 before clearing kinds1..13; direct equipment increment is not the receive_tool stack9 gate; only kinds1..8 replenish finite pool."
+    },
+    {
+      "id": "DEATH-07",
+      "file": "rich4_player_core_actions.asm",
+      "lines": [
+        4464,
+        4488
+      ],
+      "finding": "Attached slot duration decrements on own incoming action, reaches0 calls detach. No day/round countdown claim."
+    },
+    {
+      "id": "DEATH-08",
+      "file": "rich4_objects.asm",
+      "lines": [
+        139,
+        254
+      ],
+      "finding": "Removal clears carrier stats/node/duration; pair creation only zero-based index<12. Both type15 slots are outside pair branch. player_bankrupt:88..100 first clears participation and removes the attached slot when nonzero, including15, before later exit processing."
+    },
+    {
+      "id": "DEATH-09",
+      "file": "rich4_load_map.asm",
+      "lines": [
+        255,
+        307
+      ],
+      "finding": "Original map initialization places odd1..11 then13/14. No type15 placement here."
+    },
+    {
+      "id": "DEATH-10",
+      "file": "rich4_player_core_actions.asm",
+      "lines": [
+        4830,
+        4874
+      ],
+      "finding": "Month entry replaces13/14 only. No15 or periodic five-round all-god refill established."
+    },
+    {
+      "id": "DEATH-11",
+      "file": "rich4_magic_house.asm",
+      "lines": [
+        1650,
+        2182
+      ],
+      "finding": "Death selector callback: message0x205 routes to cancellation, kills timer and posts result0 (2165..2182); confirmed selected one-based seat is posted after stage5 (1815..1820), mapped from ordinary-seat table built at2469..2506. Caller skips place15 on0. Cancel does not undo prior surrender/bankruptcy. Keyboard Escape equivalence not established."
+    },
+    {
+      "id": "DEATH-12",
+      "file": "rich4_player_utils.asm",
+      "lines": [
+        1217,
+        1240
+      ],
+      "finding": "fcn40dfda loops ordinary seats and counts participation bit1 (remaining humans); surrender checks initial num_human_players>1 and this count>0 after bankruptcy."
+    },
+    {
+      "id": "DEATH-13",
+      "file": "rich4_ui_options.asm",
+      "lines": [
+        3040,
+        3070
+      ],
+      "finding": "options result2 calls surrender. Human-only idle/turnEnd command gating is an explicit safe Web menu boundary; native exact caller-phase/human UI stack not claimed identical."
+    }
+  ],
+  "facts": [
+    {
+      "id": "R09-03f-01",
+      "sourceFacts": [
+        "DEATH-02",
+        "DEATH-12",
+        "DEATH-13"
+      ],
+      "finding": "Only explicit ordinary human surrender triggers selection after exit; selector targets remaining ordinary players including computer. Safe Web command boundary and G7 barrier remain explicit candidates."
+    },
+    {
+      "id": "R09-03f-02",
+      "sourceFacts": [
+        "DEATH-01",
+        "DEATH-05"
+      ],
+      "finding": "Reserve free type15 slot before replacing target god; native current equipment converted to tools then tools/cards discarded. Ordinary tools1..8 return pool, research tools do not mint pool; active/saved engineer mapping is Web adaptation."
+    },
+    {
+      "id": "R09-03f-03",
+      "file": "rich4_player_core_actions.asm",
+      "lines": [
+        4464,
+        4488
+      ],
+      "finding": "Attached god remaining is decremented at own incoming action. Thirteen decrements reach expiry; a G7 world restore can restore earlier remaining and thus increase subsequent total boundaries."
+    },
+    {
+      "id": "R09-03f-04",
+      "evidenceKind": "deduction from current ordinary-seat command gates, verified by legal-command domain test",
+      "sourceFacts": [
+        "DEATH-01",
+        "DEATH-02"
+      ],
+      "finding": "At most two successful gifts in a fresh four-ordinary-seat game: each consumes a source seat and selection requires at least two remaining targets. A third gift while two slots busy is not reachable through fresh ordinary surrender commands. Busy handling remains defensive domain coverage, not invented UI acquisition."
+    },
+    {
+      "id": "R09-03f-05",
+      "file": "rich4_load_map.asm",
+      "lines": [
+        255,
+        307
+      ],
+      "finding": "Native initial odd objects1..11 plus13/14 exclude15; month entry remains13/14. v45/v46/v47 coverage is combined, historical failures/month coverage is not relabeled as new browser execution."
+    },
+    {
+      "id": "R09-03f-06",
+      "finding": "No runtime or policy behavior change this batch. G7 checkpoint after irreversible surrender includes eliminated source and cleared equipment; world restores without command/RNG/log rewind. Exact original G7/exit call stack is not asserted."
+    }
+  ],
+  "historicalEvidence": [
+    {
+      "path": "docs/richman/s3-03b-results.json",
+      "sha256": "b3d40e15000e83fe01d77c40fe43e9d26a9bae4f59b35fd5a3e633a36e1a7ba6",
+      "scope": "ordinary pairs",
+      "evidence": "historical actual UI results; relevant archived golden replays rerun separately"
+    },
+    {
+      "path": "docs/richman/s3-03c-results.json",
+      "sha256": "e438ebc3e02b21bba6deae03b8755c8e4e77ec56c8668d0d7050edf6071f19dc",
+      "scope": "special objects/month",
+      "evidence": "historical actual UI results; relevant archived golden replays rerun separately"
+    },
+    {
+      "path": "docs/richman/s3-03d-results.json",
+      "sha256": "e62ba388d896f47a3c9e9bfe651abaefc57db62ed3f1d0f4d34659fda0d3b5da",
+      "scope": "vehicle dodge/full-tool failure/G7",
+      "evidence": "historical actual UI results; relevant archived golden replays rerun separately"
+    },
+    {
+      "path": "docs/richman/s3-03e-results.json",
+      "sha256": "5ac36ab17383529cec98379c4a0c6f95a4709c4c173e3bf819917c67872d32b3",
+      "scope": "surrender/two slots",
+      "evidence": "historical actual UI results; relevant archived golden replays rerun separately"
+    },
+    {
+      "path": "docs/richman/s3-02k-results.json",
+      "sha256": "03177eda3970c733946345390b17f13379fe6199717bc6ed899f5336c5c3f3c4",
+      "scope": "vehicle policies/restoration",
+      "evidence": "historical actual UI results; relevant archived golden replays rerun separately"
+    }
+  ],
+  "newGameSemantics": false,
+  "newPolicyVersion": false,
+  "auditScope": "Cached primary source hash recheck and local implementation/actual replay analysis; no new native Windows runtime",
+  "deferred": [
+    "original Windows runtime and exit stack/endgame",
+    "special actors, native RNG, animations/spinner",
+    "full native option menu phase reachability and keyboard cancel equivalence",
+    "autonomous walk not located; no invented behavior",
+    "dream/suspended engineer and source-equipped surrender UI combinations",
+    "third busy type15 not reachable in fresh current ordinary four-seat game",
+    "original RNG/spinner and all special actor identities"
+  ]
+}

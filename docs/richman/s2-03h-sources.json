@@ -1,0 +1,125 @@
+{
+  "referenceCommit": "ec7d70e693059d1e781d9d1cc2ad7f36d360d39e",
+  "sources": [
+    {
+      "path": "asm/rich4_fortune.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_fortune.asm",
+      "gitBlobSha1": "32a7a9dff203a46ec3d2906c1e5f1ede22f97e70",
+      "sha256": "d6309c81b0943a38e138bcdf85c8d006ddb0ba53c4d72744c4d3cc4ab63a53fc"
+    },
+    {
+      "path": "asm/rich4_card_utils.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_card_utils.asm",
+      "gitBlobSha1": "23304fd33491d039d9f50d36475fa9794acccdb2",
+      "sha256": "937d2f587f15068f1f1280ac60d4a61c0249dbde0f206bfcc1489a29591d8181"
+    },
+    {
+      "path": "asm/rich4_card_utils_2.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_card_utils_2.asm",
+      "gitBlobSha1": "461daf212cc8056beddaadd4ea6e36c5b9e93ceb",
+      "sha256": "98caa25f4c3cbbfca6cf304caa6485d719b3776ccb701a401d90920828b29ae2"
+    },
+    {
+      "path": "asm/rich4_ui_use_card.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_ui_use_card.asm",
+      "gitBlobSha1": "bcef14ab57b65c3ed247d71862cea43e9e46c16a",
+      "sha256": "d2dfe43bb72cf23c98e602b8415bd4900a2422f16a83c3f51a1a976f8a7f49bd"
+    },
+    {
+      "path": "asm/rich4_stocks.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_stocks.asm",
+      "gitBlobSha1": "c45cd776b51483d17f78972845b8053deeee2433",
+      "sha256": "d55e17af17da2464655f53d3b3dd32224637a37ab131c6cf483db8fbac045ea3"
+    },
+    {
+      "path": "asm/rich4.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4.asm",
+      "gitBlobSha1": "d11a64755094435fa9953652a5a4951871fd9697",
+      "sha256": "30904cbb4f23a6b74fc1b80ad023bd7dff11b441c2c1978f768f9891d099d64a"
+    }
+  ],
+  "eligibility": "monolith fcn0044bb4b:0 own built ordinary;1 own empty ordinary;5 others card count;8/9 any holding. Web skips eliminated card donors (normal elimination clears their cards).",
+  "handlers": {
+    "0": {
+      "address": "0044be16/0044becf",
+      "selection": "ordinary index ascending; owner=current+1;level>0;rand%count",
+      "effect": "cash += unsigned16 land+1e * byte level+1a;level=0;buildingType+18=0;owner kept",
+      "godModifier": false
+    },
+    "1": {
+      "address": "0044bfb1/0044c067",
+      "selection": "ordinary index ascending;owner=current+1;level==0;rand%count",
+      "effect": "cash += unsigned16 land+1c;owner+19=0;expiry+30=0;Web has no calendar expiry field",
+      "godModifier": false
+    },
+    "5": {
+      "address": "0044c3b7/0044c41b",
+      "selection": "seat order;skip self and who_plays0 and zero-card donors;no detention/distance restriction",
+      "human": "who_plays==1 calls0044192a(donor,current,0); card names visible; cancel returns0 and advances",
+      "ai": "who_plays>1 drop_random then receive; no AI in current Web hotseat",
+      "inventory": "consume removes first matching card and returns pool;receive on15 drops first cheapest then append and decrements incoming pool;net incoming pool0;discarded pool+1",
+      "reactions": "no god modifier, hostility or reaction call"
+    },
+    "8": {
+      "address": "0044c7ef/0044c870",
+      "god": "helper0044b896(0,1);code1 cancels;code2 ignored",
+      "effect": "all12 in stock-index order, floor(quantity*float32(.1)), sell_stock(...,flag0); proceeds public fund;even zero requests update company rank",
+      "WebArithmetic": "floor(quantity/10),integer cents;existing total cost prorata floor"
+    },
+    "9": {
+      "address": "0044c91f/0044c978",
+      "god": "helper0044b896(0,1);code1 cancels;code2 ignored",
+      "effect": "stock-index order, nonzero full holdings, sell_stock(...,flag1);proceeds bank"
+    }
+  },
+  "stockHelper": {
+    "address": "00428e23",
+    "fields": "quantity decreases;source average-cost+4 clears only when zero;pool and quota u16 increase;sale amount truncated current price*qty;flag0 public pot/flag1 player bank;update company owner",
+    "WebDifference": "existing total-cost ledger prorates;safe market bounds;not source average-cost binary equivalence;forced bypasses market halt and player manual-trade availability"
+  },
+  "scope": {
+    "implementedNew": [
+      0,
+      1,
+      5,
+      8,
+      9
+    ],
+    "allImplemented": [
+      0,
+      1,
+      5,
+      8,
+      9,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32
+    ],
+    "japanSlots": 37,
+    "globalHandlers": 49,
+    "remainingJapan": 16
+  },
+  "deferred": [
+    "dates and periodic interest",
+    "loan maturity",
+    "original bankruptcy compulsory auctions",
+    "full company operations and insurance policy",
+    "remaining16 Japan fortune slots",
+    "other maps",
+    "calendar seal expiry not newly represented"
+  ],
+  "dateFieldClarification": "land+0x19 is owner in this handler, not Web priceStatus/seal(+0x17). Earlier date inventory describing clear+19 as seal-release is not a verified contract. +30 expiry is cleared by fortune1; full calendar/expiry semantics remain deferred."
+}

@@ -1,0 +1,207 @@
+{
+  "players": 3,
+  "commands": 555,
+  "turn": 85,
+  "auto": 81,
+  "human": 149,
+  "acquisitions": [
+    {
+      "id": "player-2",
+      "ai": false,
+      "item": "card:17",
+      "turn": 32,
+      "action": "buyItem",
+      "evidence": [
+        {
+          "item": "card:17",
+          "cost": 20
+        }
+      ]
+    },
+    {
+      "id": "player-3",
+      "ai": true,
+      "item": "card:19",
+      "turn": 69,
+      "action": "animationDone",
+      "evidence": [
+        "玩家3附身小福神，期限7次自身行动边界。",
+        "玩家3获得card:19。"
+      ]
+    }
+  ],
+  "uses": [
+    {
+      "ai": false,
+      "responderComputer": true,
+      "id": "player-2",
+      "item": "card:17",
+      "targets": [
+        "player-2"
+      ],
+      "original": "player-3",
+      "turn": 83,
+      "phase": "turnEnd",
+      "before": {
+        "player-1": {
+          "stop": 0,
+          "winter": 0,
+          "dream": 0,
+          "prison": 0,
+          "hospital": 0,
+          "turtle": 0,
+          "vehicle": "foot",
+          "diceCount": 1,
+          "savedVehicle": "foot",
+          "savedDice": 1,
+          "travel": 0
+        },
+        "player-2": {
+          "stop": 0,
+          "winter": 0,
+          "dream": 0,
+          "prison": 0,
+          "hospital": 0,
+          "turtle": 0,
+          "vehicle": "foot",
+          "diceCount": 1,
+          "savedVehicle": "foot",
+          "savedDice": 1,
+          "travel": 0
+        },
+        "player-3": {
+          "stop": 0,
+          "winter": 0,
+          "dream": 0,
+          "prison": 0,
+          "hospital": 0,
+          "turtle": 0,
+          "vehicle": "foot",
+          "diceCount": 1,
+          "savedVehicle": "foot",
+          "savedDice": 1,
+          "travel": 0
+        }
+      },
+      "after": {
+        "player-1": {
+          "stop": 0,
+          "winter": 0,
+          "dream": 0,
+          "prison": 0,
+          "hospital": 0,
+          "turtle": 0,
+          "vehicle": "foot",
+          "diceCount": 1,
+          "savedVehicle": "foot",
+          "savedDice": 1,
+          "travel": 0
+        },
+        "player-2": {
+          "stop": 0,
+          "winter": 0,
+          "dream": 0,
+          "prison": 4,
+          "hospital": 0,
+          "turtle": 0,
+          "vehicle": "foot",
+          "diceCount": 1,
+          "savedVehicle": "foot",
+          "savedDice": 1,
+          "travel": 0
+        },
+        "player-3": {
+          "stop": 0,
+          "winter": 0,
+          "dream": 0,
+          "prison": 0,
+          "hospital": 0,
+          "turtle": 0,
+          "vehicle": "foot",
+          "diceCount": 1,
+          "savedVehicle": "foot",
+          "savedDice": 1,
+          "travel": 0
+        }
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "ai": true,
+      "id": "player-3",
+      "active": "player-2",
+      "item": "card:17",
+      "choice": "use",
+      "target": "player-2",
+      "turn": 83
+    }
+  ],
+  "automatic": [],
+  "cancellations": [
+    {
+      "ai": false,
+      "id": "player-2",
+      "item": "card:17",
+      "turn": 83
+    }
+  ],
+  "clocks": [],
+  "prefixes": [
+    "card:17-acquired",
+    "cancel-before",
+    "cancel-after",
+    "card:17-confirm-before",
+    "card:17-confirm-after",
+    "attack-offered",
+    "attack-paused",
+    "attack-resumed",
+    "attack-reaction-before",
+    "attack-reaction-after"
+  ],
+  "report": {
+    "policy": "status-v1",
+    "toolWindows": [
+      "tool:08",
+      "tool:09"
+    ],
+    "crossChecks": [
+      {
+        "index": 530,
+        "active": "player-2",
+        "actor": "player-3",
+        "kind": "reaction",
+        "computer": true,
+        "item": "card:17"
+      }
+    ],
+    "route": "reaction",
+    "terminal": false,
+    "players": 3,
+    "normalSpeed": true,
+    "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+    "commands": 555,
+    "auto": 81,
+    "human": 149,
+    "lifecycle": [
+      "pause stops waiting",
+      "resume",
+      "reset dialog cancel",
+      "reset",
+      "replace with humans",
+      "exit cleanup",
+      "fullscreen",
+      "390px"
+    ],
+    "cleanup": {
+      "raf": 0,
+      "canvas": 0
+    },
+    "errors": []
+  },
+  "hashes": {
+    "replay": "de817bb6bc4c65124059ff2acd9c3ad74bc1a3bdd7b4d41ea9cb3538e7ee992c",
+    "state": "f82cb3f3408e1e90235030aa4a2ca71c0193c4a843aa4d11d40c602c81c2ff51",
+    "events": "c49dfb33481cbf5d503b260ed079b98d747ef8de0a2ef37278c76ebf2dd4ad78"
+  }
+}

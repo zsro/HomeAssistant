@@ -1,0 +1,461 @@
+{
+  "date": "2026-10-05",
+  "stage": "S2-03h",
+  "mode": "assetFortune",
+  "rulesId": "japan-events-candidate-v21",
+  "fingerprint": "26d0dedc",
+  "implementedNewFortune": [
+    0,
+    1,
+    5,
+    8,
+    9
+  ],
+  "implementedFortuneTotal": 21,
+  "acceptedNewFortuneBasicBrowser": 5,
+  "acceptedFortuneHistorical": 16,
+  "acceptedFortuneBasicBrowserTotal": 21,
+  "japanSlots": 37,
+  "globalHandlers": 49,
+  "remainingJapanSlots": 16,
+  "implementedNews": 36,
+  "acceptedNewsHistorical": 36,
+  "itemsImplemented": 43,
+  "itemsAcceptedHistorical": 43,
+  "s2_03Complete": false,
+  "sourceBlobsVerified": 6,
+  "domainAndComponentTests": {
+    "total": 667,
+    "passed": 667,
+    "newFortuneDomain": 17,
+    "newFortuneComponent": 2,
+    "newVersionMatrix": 3,
+    "actualBrowserReplays": 5,
+    "allVersionsMatrix": 63
+  },
+  "lint": "passed",
+  "typescriptBuild": "passed",
+  "buildWarning": "existing large chunk and mixed static/dynamic math-printable import notices",
+  "browser": {
+    "routes": [
+      {
+        "route": "0",
+        "seed": "asset-group-18",
+        "commands": 87,
+        "turn": 11,
+        "players": 2,
+        "state": "eda6b03cf9521ad808175f573ee15f030ce8d1100d9a01f245b763f07bb793f0",
+        "events": "73a8dc4a5f09f58ecd1d187f0080016a8aeb2830df8a8d171a96fa9e7b42d3af",
+        "fortune": [
+          0
+        ],
+        "checks": [
+          {
+            "checks": [
+              "ordinary targets and compensation fields independently verified"
+            ],
+            "fortuneId": 0,
+            "assets": {
+              "candidates": [
+                "japan:land:19"
+              ],
+              "property": {
+                "before": {
+                  "id": "japan:land:19",
+                  "ownerId": "player-1",
+                  "level": 1,
+                  "basePrice": 2000,
+                  "buildingType": 0,
+                  "priceStatus": 0,
+                  "research": null
+                },
+                "after": {
+                  "id": "japan:land:19",
+                  "ownerId": "player-1",
+                  "level": 0,
+                  "basePrice": 2000,
+                  "buildingType": 0,
+                  "priceStatus": 0,
+                  "research": null
+                },
+                "compensation": 400
+              }
+            }
+          }
+        ],
+        "normalSpeed": true,
+        "map": "original Japan; real UI commands; auth-only fixture; no game-state injection",
+        "cleanup": {
+          "raf": 0,
+          "canvas": 0
+        },
+        "errors": [],
+        "screenshots": "/private/tmp/richman-unified-ui-03h-0"
+      },
+      {
+        "route": "1",
+        "seed": "asset-group-3",
+        "commands": 45,
+        "turn": 6,
+        "players": 3,
+        "state": "531413dfbec8478e3abacae1f95c2e4a6e082d6955fed16a3628669a2a9995cb",
+        "events": "c5303ee5df28145f9c2cb50d5b7b8d206f780e3956f3acec7ef70a340e812aff",
+        "fortune": [
+          1
+        ],
+        "checks": [
+          {
+            "checks": [
+              "ordinary targets and compensation fields independently verified"
+            ],
+            "fortuneId": 1,
+            "assets": {
+              "candidates": [
+                "japan:land:20"
+              ],
+              "property": {
+                "before": {
+                  "id": "japan:land:20",
+                  "ownerId": "player-3",
+                  "level": 0,
+                  "basePrice": 2000,
+                  "buildingType": 0,
+                  "priceStatus": 0,
+                  "research": null
+                },
+                "after": {
+                  "id": "japan:land:20",
+                  "ownerId": null,
+                  "level": 0,
+                  "basePrice": 2000,
+                  "buildingType": 0,
+                  "priceStatus": 0,
+                  "research": null
+                },
+                "compensation": 2000
+              }
+            }
+          }
+        ],
+        "normalSpeed": true,
+        "map": "original Japan; real UI commands; auth-only fixture; no game-state injection",
+        "cleanup": {
+          "raf": 0,
+          "canvas": 0
+        },
+        "errors": [],
+        "screenshots": "/private/tmp/richman-unified-ui-03h-1"
+      },
+      {
+        "route": "5",
+        "seed": "asset-group-91",
+        "commands": 239,
+        "turn": 30,
+        "players": 4,
+        "state": "8bc04c36748d394cbedca10129f6d10d6c6c3f8438aa2c1e5aa4ed70784c695a",
+        "events": "6cc7801617b793089a79b0e6ffe4fafc8e3411e42a9ecaf6e2748e948a0904c1",
+        "fortune": [
+          5
+        ],
+        "checks": [
+          {
+            "checks": [
+              "card transfer actual before/after"
+            ]
+          },
+          {
+            "checks": [
+              "card transfer actual before/after",
+              "multi-donor result finalized once; acknowledgement remains"
+            ],
+            "fortuneId": 5,
+            "assets": {
+              "cards": [
+                {
+                  "donorId": "player-1",
+                  "itemId": "card:16",
+                  "discarded": null
+                },
+                {
+                  "donorId": "player-3",
+                  "itemId": "card:10",
+                  "discarded": null
+                }
+              ]
+            }
+          }
+        ],
+        "normalSpeed": true,
+        "map": "original Japan; real UI commands; auth-only fixture; no game-state injection",
+        "cleanup": {
+          "raf": 0,
+          "canvas": 0
+        },
+        "errors": [],
+        "screenshots": "/private/tmp/richman-unified-ui-03h-5"
+      },
+      {
+        "route": "8",
+        "seed": "asset-group-9",
+        "commands": 17,
+        "turn": 1,
+        "players": 2,
+        "state": "3d7ed4df8f96a2e9d005ae34084e779f091db3223c217568f721bbcbb80eb387",
+        "events": "2827916e97619a4487207797c3545a8efa9f9b54d01458a1f80d7cb8f14747aa",
+        "fortune": [
+          8
+        ],
+        "checks": [
+          {
+            "checks": [
+              "stock quantity/value/pool/company and bank vs public independently verified"
+            ],
+            "fortuneId": 8,
+            "assets": {
+              "stocks": [
+                {
+                  "id": "jp:24",
+                  "before": 19,
+                  "after": 18,
+                  "costBefore": 3040,
+                  "costAfter": 2880,
+                  "amount": 160,
+                  "recipient": "public",
+                  "ownerBefore": "player-1",
+                  "ownerAfter": "player-1"
+                },
+                {
+                  "id": "jp:25",
+                  "before": 19,
+                  "after": 18,
+                  "costBefore": 1881,
+                  "costAfter": 1782,
+                  "amount": 99,
+                  "recipient": "public",
+                  "ownerBefore": "player-1",
+                  "ownerAfter": "player-1"
+                },
+                {
+                  "id": "jp:26",
+                  "before": 0,
+                  "after": 0,
+                  "costBefore": 0,
+                  "costAfter": 0,
+                  "amount": 0,
+                  "recipient": "public",
+                  "ownerBefore": null,
+                  "ownerAfter": null
+                },
+                {
+                  "id": "jp:27",
+                  "before": 0,
+                  "after": 0,
+                  "costBefore": 0,
+                  "costAfter": 0,
+                  "amount": 0,
+                  "recipient": "public",
+                  "ownerBefore": null,
+                  "ownerAfter": null
+                },
+                {
+                  "id": "jp:28",
+                  "before": 0,
+                  "after": 0,
+                  "costBefore": 0,
+                  "costAfter": 0,
+                  "amount": 0,
+                  "recipient": "public",
+                  "ownerBefore": null,
+                  "ownerAfter": null
+                },
+                {
+                  "id": "jp:29",
+                  "before": 0,
+                  "after": 0,
+                  "costBefore": 0,
+                  "costAfter": 0,
+                  "amount": 0,
+                  "recipient": "public",
+                  "ownerBefore": null,
+                  "ownerAfter": null
+                },
+                {
+                  "id": "jp:30",
+                  "before": 0,
+                  "after": 0,
+                  "costBefore": 0,
+                  "costAfter": 0,
+                  "amount": 0,
+                  "recipient": "public",
+                  "ownerBefore": null,
+                  "ownerAfter": null
+                },
+                {
+                  "id": "jp:31",
+                  "before": 0,
+                  "after": 0,
+                  "costBefore": 0,
+                  "costAfter": 0,
+                  "amount": 0,
+                  "recipient": "public",
+                  "ownerBefore": null,
+                  "ownerAfter": null
+                },
+                {
+                  "id": "jp:32",
+                  "before": 0,
+                  "after": 0,
+                  "costBefore": 0,
+                  "costAfter": 0,
+                  "amount": 0,
+                  "recipient": "public",
+                  "ownerBefore": null,
+                  "ownerAfter": null
+                },
+                {
+                  "id": "jp:33",
+                  "before": 0,
+                  "after": 0,
+                  "costBefore": 0,
+                  "costAfter": 0,
+                  "amount": 0,
+                  "recipient": "public",
+                  "ownerBefore": null,
+                  "ownerAfter": null
+                },
+                {
+                  "id": "jp:34",
+                  "before": 0,
+                  "after": 0,
+                  "costBefore": 0,
+                  "costAfter": 0,
+                  "amount": 0,
+                  "recipient": "public",
+                  "ownerBefore": null,
+                  "ownerAfter": null
+                },
+                {
+                  "id": "jp:35",
+                  "before": 0,
+                  "after": 0,
+                  "costBefore": 0,
+                  "costAfter": 0,
+                  "amount": 0,
+                  "recipient": "public",
+                  "ownerBefore": null,
+                  "ownerAfter": null
+                }
+              ]
+            }
+          }
+        ],
+        "normalSpeed": true,
+        "map": "original Japan; real UI commands; auth-only fixture; no game-state injection",
+        "cleanup": {
+          "raf": 0,
+          "canvas": 0
+        },
+        "errors": [],
+        "screenshots": "/private/tmp/richman-unified-ui-03h-8"
+      },
+      {
+        "route": "9",
+        "seed": "asset-group-23",
+        "commands": 17,
+        "turn": 1,
+        "players": 3,
+        "state": "899bc4fbc85250dcd30b4f4cee2cc14ea861d1b39fbadb884c55433bc7bf2ebf",
+        "events": "d19cf78ea845d333718e0ce3a1cdab4ec4e7d95b2a709982789fdaf215ff1044",
+        "fortune": [
+          9
+        ],
+        "checks": [
+          {
+            "checks": [
+              "stock quantity/value/pool/company and bank vs public independently verified"
+            ],
+            "fortuneId": 9,
+            "assets": {
+              "stocks": [
+                {
+                  "id": "jp:24",
+                  "before": 19,
+                  "after": 0,
+                  "costBefore": 3040,
+                  "costAfter": 0,
+                  "amount": 3040,
+                  "recipient": "bank",
+                  "ownerBefore": "player-1",
+                  "ownerAfter": null
+                },
+                {
+                  "id": "jp:25",
+                  "before": 19,
+                  "after": 0,
+                  "costBefore": 1881,
+                  "costAfter": 0,
+                  "amount": 1881,
+                  "recipient": "bank",
+                  "ownerBefore": "player-1",
+                  "ownerAfter": null
+                }
+              ]
+            }
+          }
+        ],
+        "normalSpeed": true,
+        "map": "original Japan; real UI commands; auth-only fixture; no game-state injection",
+        "cleanup": {
+          "raf": 0,
+          "canvas": 0
+        },
+        "errors": [],
+        "screenshots": "/private/tmp/richman-unified-ui-03h-9"
+      }
+    ],
+    "totalActualCommands": 405,
+    "normalSpeed": true,
+    "authOnlyFixture": true,
+    "gameStateInjection": false,
+    "commonChecks": [
+      "pause/resume",
+      "cancel reset dialog",
+      "fullscreen",
+      "390px no horizontal overflow",
+      "actual replay export and independent verification",
+      "reset",
+      "leave module RAF0 canvas0"
+    ],
+    "visualInspection": "collection-narrow.png inspected; complete readable controls",
+    "failedAttempts": []
+  },
+  "implementationCorrections": [
+    "legal planner facility choice/affordability and CLI invocation fixed before browser runs",
+    "verifier q number annotation required after adding browser regression import"
+  ],
+  "notBrowserVerified": [
+    "full15 card overflow and first-cheapest ties",
+    "skip donor",
+    "detained/hotel donor",
+    "god cancellation and code2 unchanged stock loss",
+    "zero-quantity stock company tie ranking",
+    "company control transfer to second shareholder",
+    "forced trade during market closure/halt",
+    "loan capacity after asset changes",
+    "time machine after new asset fortunes",
+    "full game to victory",
+    "five events x all three roster sizes"
+  ],
+  "deferred": [
+    "remaining16 Japan fortune slots and other-map regional handlers",
+    "calendar/periodic interest",
+    "loan maturity",
+    "original bankruptcy compulsory auction",
+    "full company/insurance services",
+    "lottery purchase/draw/prize",
+    "minigames and magic house",
+    "original fortune graphics/speech RNG"
+  ],
+  "git": "uncommitted; no push or deploy; existing workspace preserved",
+  "next": "S2-03i: batch-audit traffic10..16 and Japan regional41..44 fortune handlers, status/vehicle/hospital/prison/reaction conflicts; evidence-supported v22"
+}

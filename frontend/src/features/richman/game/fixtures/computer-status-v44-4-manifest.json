@@ -1,0 +1,827 @@
+{
+  "players": 4,
+  "commands": 1120,
+  "turn": 165,
+  "auto": 359,
+  "human": 96,
+  "acquisitions": [
+    {
+      "id": "player-2",
+      "ai": true,
+      "item": "card:18",
+      "turn": 18,
+      "action": "animationDone",
+      "evidence": []
+    },
+    {
+      "id": "player-2",
+      "ai": true,
+      "item": "card:17",
+      "turn": 86,
+      "action": "magic",
+      "evidence": [
+        {
+          "node": 35,
+          "group": 6,
+          "targets": [
+            "player-1",
+            "player-2",
+            "player-3",
+            "player-4"
+          ],
+          "effect": 6,
+          "title": "得一张卡片",
+          "rows": [
+            {
+              "playerId": "player-1",
+              "lines": [
+                "获得改建卡。"
+              ],
+              "pointsBefore": 110,
+              "pointsAfter": 110,
+              "cashBefore": 42081,
+              "cashAfter": 42081,
+              "bankBefore": 51437,
+              "bankAfter": 51437,
+              "stopBefore": 0,
+              "stopAfter": 0,
+              "previousBefore": 37,
+              "previousAfter": 37,
+              "received": {
+                "itemId": "card:07",
+                "discarded": null
+              }
+            },
+            {
+              "playerId": "player-2",
+              "lines": [
+                "获得陷害卡。"
+              ],
+              "pointsBefore": 0,
+              "pointsAfter": 0,
+              "cashBefore": 1066,
+              "cashAfter": 1066,
+              "bankBefore": 93837,
+              "bankAfter": 93837,
+              "stopBefore": 0,
+              "stopAfter": 0,
+              "previousBefore": 36,
+              "previousAfter": 36,
+              "received": {
+                "itemId": "card:17",
+                "discarded": null
+              }
+            },
+            {
+              "playerId": "player-3",
+              "lines": [
+                "获得改建卡。"
+              ],
+              "pointsBefore": 0,
+              "pointsAfter": 0,
+              "cashBefore": 866,
+              "cashAfter": 866,
+              "bankBefore": 95837,
+              "bankAfter": 95837,
+              "stopBefore": 0,
+              "stopAfter": 0,
+              "previousBefore": 35,
+              "previousAfter": 35,
+              "received": {
+                "itemId": "card:07",
+                "discarded": null
+              }
+            },
+            {
+              "playerId": "player-4",
+              "lines": [
+                "获得复仇卡。"
+              ],
+              "pointsBefore": 0,
+              "pointsAfter": 0,
+              "cashBefore": 1055,
+              "cashAfter": 1055,
+              "bankBefore": 93000,
+              "bankAfter": 93000,
+              "stopBefore": 0,
+              "stopAfter": 0,
+              "previousBefore": 38,
+              "previousAfter": 38,
+              "received": {
+                "itemId": "card:18",
+                "discarded": null
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "player-4",
+      "ai": true,
+      "item": "card:18",
+      "turn": 86,
+      "action": "magic",
+      "evidence": [
+        {
+          "node": 35,
+          "group": 6,
+          "targets": [
+            "player-1",
+            "player-2",
+            "player-3",
+            "player-4"
+          ],
+          "effect": 6,
+          "title": "得一张卡片",
+          "rows": [
+            {
+              "playerId": "player-1",
+              "lines": [
+                "获得改建卡。"
+              ],
+              "pointsBefore": 110,
+              "pointsAfter": 110,
+              "cashBefore": 42081,
+              "cashAfter": 42081,
+              "bankBefore": 51437,
+              "bankAfter": 51437,
+              "stopBefore": 0,
+              "stopAfter": 0,
+              "previousBefore": 37,
+              "previousAfter": 37,
+              "received": {
+                "itemId": "card:07",
+                "discarded": null
+              }
+            },
+            {
+              "playerId": "player-2",
+              "lines": [
+                "获得陷害卡。"
+              ],
+              "pointsBefore": 0,
+              "pointsAfter": 0,
+              "cashBefore": 1066,
+              "cashAfter": 1066,
+              "bankBefore": 93837,
+              "bankAfter": 93837,
+              "stopBefore": 0,
+              "stopAfter": 0,
+              "previousBefore": 36,
+              "previousAfter": 36,
+              "received": {
+                "itemId": "card:17",
+                "discarded": null
+              }
+            },
+            {
+              "playerId": "player-3",
+              "lines": [
+                "获得改建卡。"
+              ],
+              "pointsBefore": 0,
+              "pointsAfter": 0,
+              "cashBefore": 866,
+              "cashAfter": 866,
+              "bankBefore": 95837,
+              "bankAfter": 95837,
+              "stopBefore": 0,
+              "stopAfter": 0,
+              "previousBefore": 35,
+              "previousAfter": 35,
+              "received": {
+                "itemId": "card:07",
+                "discarded": null
+              }
+            },
+            {
+              "playerId": "player-4",
+              "lines": [
+                "获得复仇卡。"
+              ],
+              "pointsBefore": 0,
+              "pointsAfter": 0,
+              "cashBefore": 1055,
+              "cashAfter": 1055,
+              "bankBefore": 93000,
+              "bankAfter": 93000,
+              "stopBefore": 0,
+              "stopAfter": 0,
+              "previousBefore": 38,
+              "previousAfter": 38,
+              "received": {
+                "itemId": "card:18",
+                "discarded": null
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "player-2",
+      "ai": true,
+      "item": "card:16",
+      "turn": 118,
+      "action": "buyItem",
+      "evidence": [
+        {
+          "item": "card:16",
+          "cost": 25
+        }
+      ]
+    },
+    {
+      "id": "player-3",
+      "ai": true,
+      "item": "card:16",
+      "turn": 139,
+      "action": "animationDone",
+      "evidence": []
+    },
+    {
+      "id": "player-4",
+      "ai": true,
+      "item": "card:15",
+      "turn": 140,
+      "action": "animationDone",
+      "evidence": [
+        "玩家4附身大福神，期限7次自身行动边界。",
+        "玩家4获得card:15。",
+        "玩家4获得card:21。"
+      ]
+    },
+    {
+      "id": "player-4",
+      "ai": true,
+      "item": "card:21",
+      "turn": 140,
+      "action": "animationDone",
+      "evidence": [
+        "玩家4附身大福神，期限7次自身行动边界。",
+        "玩家4获得card:15。",
+        "玩家4获得card:21。"
+      ]
+    }
+  ],
+  "uses": [
+    {
+      "ai": true,
+      "responderComputer": true,
+      "id": "player-2",
+      "item": "card:17",
+      "targets": [
+        "player-1"
+      ],
+      "original": "player-1",
+      "turn": 90,
+      "phase": "idle",
+      "before": {
+        "player-1": {
+          "stop": 0,
+          "winter": 0,
+          "dream": 0,
+          "prison": 0,
+          "hospital": 0,
+          "turtle": 0,
+          "vehicle": "foot",
+          "diceCount": 1,
+          "savedVehicle": "foot",
+          "savedDice": 1,
+          "travel": 0
+        },
+        "player-2": {
+          "stop": 0,
+          "winter": 0,
+          "dream": 0,
+          "prison": 0,
+          "hospital": 0,
+          "turtle": 0,
+          "vehicle": "foot",
+          "diceCount": 1,
+          "savedVehicle": "foot",
+          "savedDice": 1,
+          "travel": 0
+        },
+        "player-3": {
+          "stop": 0,
+          "winter": 0,
+          "dream": 0,
+          "prison": 0,
+          "hospital": 0,
+          "turtle": 0,
+          "vehicle": "foot",
+          "diceCount": 1,
+          "savedVehicle": "foot",
+          "savedDice": 1,
+          "travel": 0
+        },
+        "player-4": {
+          "stop": 0,
+          "winter": 0,
+          "dream": 0,
+          "prison": 0,
+          "hospital": 0,
+          "turtle": 0,
+          "vehicle": "foot",
+          "diceCount": 1,
+          "savedVehicle": "foot",
+          "savedDice": 1,
+          "travel": 0
+        }
+      },
+      "after": {
+        "player-1": {
+          "stop": 0,
+          "winter": 0,
+          "dream": 0,
+          "prison": 5,
+          "hospital": 0,
+          "turtle": 0,
+          "vehicle": "foot",
+          "diceCount": 1,
+          "savedVehicle": "foot",
+          "savedDice": 1,
+          "travel": 0
+        },
+        "player-2": {
+          "stop": 0,
+          "winter": 0,
+          "dream": 0,
+          "prison": 0,
+          "hospital": 0,
+          "turtle": 0,
+          "vehicle": "foot",
+          "diceCount": 1,
+          "savedVehicle": "foot",
+          "savedDice": 1,
+          "travel": 0
+        },
+        "player-3": {
+          "stop": 0,
+          "winter": 0,
+          "dream": 0,
+          "prison": 0,
+          "hospital": 0,
+          "turtle": 0,
+          "vehicle": "foot",
+          "diceCount": 1,
+          "savedVehicle": "foot",
+          "savedDice": 1,
+          "travel": 0
+        },
+        "player-4": {
+          "stop": 0,
+          "winter": 0,
+          "dream": 0,
+          "prison": 0,
+          "hospital": 0,
+          "turtle": 0,
+          "vehicle": "foot",
+          "diceCount": 1,
+          "savedVehicle": "foot",
+          "savedDice": 1,
+          "travel": 0
+        }
+      }
+    },
+    {
+      "ai": true,
+      "responderComputer": true,
+      "id": "player-2",
+      "item": "card:16",
+      "targets": [
+        "player-4"
+      ],
+      "original": "player-4",
+      "turn": 122,
+      "phase": "idle",
+      "before": {
+        "player-1": {
+          "stop": 0,
+          "winter": 0,
+          "dream": 0,
+          "prison": 0,
+          "hospital": 0,
+          "turtle": 0,
+          "vehicle": "foot",
+          "diceCount": 1,
+          "savedVehicle": "foot",
+          "savedDice": 1,
+          "travel": 0
+        },
+        "player-2": {
+          "stop": 0,
+          "winter": 0,
+          "dream": 0,
+          "prison": 0,
+          "hospital": 0,
+          "turtle": 0,
+          "vehicle": "foot",
+          "diceCount": 1,
+          "savedVehicle": "foot",
+          "savedDice": 1,
+          "travel": 0
+        },
+        "player-3": {
+          "stop": 0,
+          "winter": 0,
+          "dream": 0,
+          "prison": 0,
+          "hospital": 0,
+          "turtle": 0,
+          "vehicle": "foot",
+          "diceCount": 1,
+          "savedVehicle": "foot",
+          "savedDice": 1,
+          "travel": 0
+        },
+        "player-4": {
+          "stop": 0,
+          "winter": 0,
+          "dream": 0,
+          "prison": 0,
+          "hospital": 0,
+          "turtle": 0,
+          "vehicle": "foot",
+          "diceCount": 1,
+          "savedVehicle": "foot",
+          "savedDice": 1,
+          "travel": 0
+        }
+      },
+      "after": {
+        "player-1": {
+          "stop": 0,
+          "winter": 0,
+          "dream": 0,
+          "prison": 0,
+          "hospital": 0,
+          "turtle": 0,
+          "vehicle": "foot",
+          "diceCount": 1,
+          "savedVehicle": "foot",
+          "savedDice": 1,
+          "travel": 0
+        },
+        "player-2": {
+          "stop": 0,
+          "winter": 0,
+          "dream": 0,
+          "prison": 0,
+          "hospital": 0,
+          "turtle": 0,
+          "vehicle": "foot",
+          "diceCount": 1,
+          "savedVehicle": "foot",
+          "savedDice": 1,
+          "travel": 0
+        },
+        "player-3": {
+          "stop": 0,
+          "winter": 0,
+          "dream": 0,
+          "prison": 0,
+          "hospital": 0,
+          "turtle": 0,
+          "vehicle": "foot",
+          "diceCount": 1,
+          "savedVehicle": "foot",
+          "savedDice": 1,
+          "travel": 0
+        },
+        "player-4": {
+          "stop": 0,
+          "winter": 0,
+          "dream": 5,
+          "prison": 0,
+          "hospital": 0,
+          "turtle": 0,
+          "vehicle": "foot",
+          "diceCount": 1,
+          "savedVehicle": "foot",
+          "savedDice": 1,
+          "travel": 0
+        }
+      }
+    },
+    {
+      "ai": true,
+      "id": "player-4",
+      "item": "card:15",
+      "targets": [
+        "player-1",
+        "player-3"
+      ],
+      "turn": 144,
+      "before": {
+        "player-1": {
+          "stop": 0,
+          "winter": 0,
+          "dream": 0,
+          "prison": 0,
+          "hospital": 0,
+          "turtle": 0,
+          "vehicle": "foot",
+          "diceCount": 1,
+          "savedVehicle": "foot",
+          "savedDice": 1,
+          "travel": 0
+        },
+        "player-3": {
+          "stop": 0,
+          "winter": 0,
+          "dream": 0,
+          "prison": 0,
+          "hospital": 0,
+          "turtle": 0,
+          "vehicle": "foot",
+          "diceCount": 1,
+          "savedVehicle": "foot",
+          "savedDice": 1,
+          "travel": 0
+        }
+      },
+      "after": {
+        "player-1": {
+          "stop": 0,
+          "winter": 5,
+          "dream": 0,
+          "prison": 0,
+          "hospital": 0,
+          "turtle": 0,
+          "vehicle": "foot",
+          "diceCount": 1,
+          "savedVehicle": "foot",
+          "savedDice": 1,
+          "travel": 0
+        },
+        "player-3": {
+          "stop": 0,
+          "winter": 5,
+          "dream": 0,
+          "prison": 0,
+          "hospital": 0,
+          "turtle": 0,
+          "vehicle": "foot",
+          "diceCount": 1,
+          "savedVehicle": "foot",
+          "savedDice": 1,
+          "travel": 0
+        }
+      }
+    }
+  ],
+  "reactions": [],
+  "automatic": [],
+  "cancellations": [],
+  "clocks": [
+    {
+      "id": "player-1",
+      "item": "card:17",
+      "field": "prison",
+      "before": 5,
+      "after": 4,
+      "turn": 93
+    },
+    {
+      "id": "player-1",
+      "item": "card:17",
+      "field": "prison",
+      "before": 4,
+      "after": 3,
+      "turn": 97
+    },
+    {
+      "id": "player-1",
+      "item": "card:17",
+      "field": "prison",
+      "before": 3,
+      "after": 2,
+      "turn": 101
+    },
+    {
+      "id": "player-1",
+      "item": "card:17",
+      "field": "prison",
+      "before": 2,
+      "after": 1,
+      "turn": 105
+    },
+    {
+      "id": "player-1",
+      "item": "card:17",
+      "field": "prison",
+      "before": 1,
+      "after": 128,
+      "turn": 109
+    },
+    {
+      "id": "player-1",
+      "item": "card:17",
+      "field": "prison",
+      "before": 128,
+      "after": 0,
+      "turn": 113
+    },
+    {
+      "id": "player-4",
+      "item": "card:16",
+      "field": "dream",
+      "before": 5,
+      "after": 4,
+      "turn": 124
+    },
+    {
+      "id": "player-4",
+      "item": "card:16",
+      "field": "dream",
+      "before": 4,
+      "after": 3,
+      "turn": 128
+    },
+    {
+      "id": "player-4",
+      "item": "card:16",
+      "field": "dream",
+      "before": 3,
+      "after": 2,
+      "turn": 132
+    },
+    {
+      "id": "player-4",
+      "item": "card:16",
+      "field": "dream",
+      "before": 2,
+      "after": 1,
+      "turn": 136
+    },
+    {
+      "id": "player-4",
+      "item": "card:16",
+      "field": "dream",
+      "before": 1,
+      "after": 128,
+      "turn": 140
+    },
+    {
+      "id": "player-4",
+      "item": "card:16",
+      "field": "dream",
+      "before": 128,
+      "after": 0,
+      "turn": 144
+    },
+    {
+      "id": "player-1",
+      "item": "card:15",
+      "field": "winter",
+      "before": 5,
+      "after": 4,
+      "turn": 145
+    },
+    {
+      "id": "player-3",
+      "item": "card:15",
+      "field": "winter",
+      "before": 5,
+      "after": 4,
+      "turn": 147
+    },
+    {
+      "id": "player-1",
+      "item": "card:15",
+      "field": "winter",
+      "before": 4,
+      "after": 3,
+      "turn": 149
+    },
+    {
+      "id": "player-3",
+      "item": "card:15",
+      "field": "winter",
+      "before": 4,
+      "after": 3,
+      "turn": 151
+    },
+    {
+      "id": "player-1",
+      "item": "card:15",
+      "field": "winter",
+      "before": 3,
+      "after": 2,
+      "turn": 153
+    },
+    {
+      "id": "player-3",
+      "item": "card:15",
+      "field": "winter",
+      "before": 3,
+      "after": 2,
+      "turn": 155
+    },
+    {
+      "id": "player-1",
+      "item": "card:15",
+      "field": "winter",
+      "before": 2,
+      "after": 1,
+      "turn": 157
+    },
+    {
+      "id": "player-3",
+      "item": "card:15",
+      "field": "winter",
+      "before": 2,
+      "after": 1,
+      "turn": 159
+    },
+    {
+      "id": "player-1",
+      "item": "card:15",
+      "field": "winter",
+      "before": 1,
+      "after": 128,
+      "turn": 161
+    },
+    {
+      "id": "player-3",
+      "item": "card:15",
+      "field": "winter",
+      "before": 1,
+      "after": 128,
+      "turn": 163
+    },
+    {
+      "id": "player-1",
+      "item": "card:15",
+      "field": "winter",
+      "before": 128,
+      "after": 0,
+      "turn": 165
+    }
+  ],
+  "prefixes": [
+    "card:17-acquired",
+    "card:17-paused",
+    "card:17-resumed",
+    "card:17-confirm-before",
+    "card:17-confirm-after",
+    "card:17-clock-before",
+    "card:17-clock-after",
+    "card:16-acquired",
+    "card:16-paused",
+    "card:16-resumed",
+    "card:16-confirm-before",
+    "card:16-confirm-after",
+    "card:16-clock-before",
+    "card:16-clock-after",
+    "card:15-acquired",
+    "card:15-paused",
+    "card:15-resumed",
+    "card:15-confirm-before",
+    "card:15-confirm-after",
+    "card:15-clock-before",
+    "card:15-clock-after"
+  ],
+  "report": {
+    "policy": "status-v1",
+    "toolWindows": [
+      "tool:08",
+      "tool:09",
+      "card:17",
+      "card:16",
+      "card:15"
+    ],
+    "crossChecks": [],
+    "route": "4",
+    "terminal": false,
+    "players": 4,
+    "normalSpeed": true,
+    "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+    "commands": 1120,
+    "auto": 359,
+    "human": 96,
+    "lifecycle": [
+      "pause stops waiting",
+      "resume",
+      "reset dialog cancel",
+      "reset",
+      "replace with humans",
+      "exit cleanup",
+      "fullscreen",
+      "390px"
+    ],
+    "cleanup": {
+      "raf": 0,
+      "canvas": 0
+    },
+    "errors": []
+  },
+  "hashes": {
+    "replay": "e518edca40601141fb4ff6439260839077ab3fbd7665baa9c4809e5844f9dd1a",
+    "state": "81f35f9eec9a51b756b24e1250d0d6323377f23ba4ce8c9a78b1d20f5044a81a",
+    "events": "5dd914c07636c3116ab42214553b53a1270f1c0f0d6e6fa9148dd74fb713cc6b"
+  }
+}

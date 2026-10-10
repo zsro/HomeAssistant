@@ -1,0 +1,22 @@
+{
+  "character": "salonbus",
+  "targetPlayerId": "player-2",
+  "voice": "1092",
+  "actualCommands": 3490,
+  "businessCommands": 3488,
+  "upgradeCommandIndex": 3490,
+  "paidAmount": 500,
+  "paidOrdinaryUpgrade4to5": true,
+  "voiceCues": 1,
+  "voicePlayingEvents": 1,
+  "commandsMatchLegalPlan": true,
+  "fullReplay": true,
+  "prefixReplay": true,
+  "mediaReleased": true,
+  "cleanup": {
+    "raf": 0,
+    "canvas": 0
+  },
+  "errors": [],
+  "replaySHA256": "291e22ff38344195ab20980030a974ebcbe060ee4015214c912581d83cdf7039"
+}

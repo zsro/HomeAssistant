@@ -1,0 +1,229 @@
+{
+  "stage": "S3-02o",
+  "status": "candidate-scope-accepted",
+  "rulesId": "japan-events-candidate-v44",
+  "fingerprint": "f9dbb7e9",
+  "policy": "research-v1",
+  "newGameSemantics": false,
+  "newPolicyBehavior": false,
+  "nativeExecution": false,
+  "referenceCommit": "ec7d70e693059d1e781d9d1cc2ad7f36d360d39e",
+  "preservedPolicies": [
+    "basic-v1",
+    "tools-v1",
+    "rent-v1",
+    "defense-v1",
+    "estate-v1",
+    "cash-v1",
+    "status-v1",
+    "inventory-v1",
+    "commerce-v1",
+    "area-v1",
+    "roads-v1",
+    "mobility-v1",
+    "gods-v1",
+    "capital-v1",
+    "research-v1"
+  ],
+  "priorNativeAudit": [
+    "s3-02n-sources.json",
+    "s2-05a-sources.json",
+    "s2-05b-sources.json",
+    "s2-05c-sources.json"
+  ],
+  "evidence": "Composition acceptance of the established Web candidate; no new native rule claim and no new Windows run. Historical source records retained.",
+  "historicalGroups": [
+    {
+      "stage": "S3-02a",
+      "policy": "tools-v1",
+      "results": "s3-02a-results.json"
+    },
+    {
+      "stage": "S3-02b",
+      "policy": "rent-v1",
+      "results": "s3-02b-results.json"
+    },
+    {
+      "stage": "S3-02c",
+      "policy": "defense-v1",
+      "results": "s3-02c-results.json"
+    },
+    {
+      "stage": "S3-02d",
+      "policy": "estate-v1",
+      "results": "s3-02d-results.json"
+    },
+    {
+      "stage": "S3-02e",
+      "policy": "cash-v1",
+      "results": "s3-02e-results.json"
+    },
+    {
+      "stage": "S3-02f",
+      "policy": "status-v1",
+      "results": "s3-02f-results.json"
+    },
+    {
+      "stage": "S3-02g",
+      "policy": "inventory-v1",
+      "results": "s3-02g-results.json"
+    },
+    {
+      "stage": "S3-02h",
+      "policy": "commerce-v1",
+      "results": "s3-02h-results.json"
+    },
+    {
+      "stage": "S3-02i",
+      "policy": "area-v1",
+      "results": "s3-02i-results.json"
+    },
+    {
+      "stage": "S3-02j",
+      "policy": "roads-v1",
+      "results": "s3-02j-results.json"
+    },
+    {
+      "stage": "S3-02k",
+      "policy": "mobility-v1",
+      "results": "s3-02k-results.json"
+    },
+    {
+      "stage": "S3-02l",
+      "policy": "gods-v1",
+      "results": "s3-02l-results.json"
+    },
+    {
+      "stage": "S3-02m",
+      "policy": "capital-v1",
+      "results": "s3-02m-results.json"
+    },
+    {
+      "stage": "S3-02n",
+      "policy": "research-v1",
+      "results": "s3-02n-results.json"
+    }
+  ],
+  "inspectedRuntime": [
+    {
+      "path": "frontend/src/features/richman/game/computer-research.ts",
+      "sha256": "042b4f32702b424c3db8d19b1d9ed64413e0d03cebb83e23d5b74da4010ef012"
+    },
+    {
+      "path": "frontend/src/features/richman/game/computer.ts",
+      "sha256": "1bc0e7cf62645dace137d22b898e4e9d660cfff905bb71d3b8d393a114df139f"
+    },
+    {
+      "path": "frontend/src/features/richman/game/session.ts",
+      "sha256": "d3e0e854ba2f4f854428425928419a0371d6bc9298817c1c6c354433259a5861"
+    },
+    {
+      "path": "frontend/src/features/richman/game/g7.ts",
+      "sha256": "6370122e9831d30f90d6bfd871d5f8e7b5283ef8a5f65a9269d351e1d49e72e6"
+    },
+    {
+      "path": "frontend/src/features/richman/game/disposal.ts",
+      "sha256": "26834d495ff970dbe557bd50aaff9b85e8204f524c518672b2ea84e23d10eb3e"
+    },
+    {
+      "path": "frontend/src/features/richman/game/payments.ts",
+      "sha256": "cb611dfcea22ee1c620918632ac099bbfb7d12a95476331c938ea121024d91da"
+    },
+    {
+      "path": "frontend/src/features/richman/game/payment-batches.ts",
+      "sha256": "c2a9185ea75bfc4c7dcfc8bea00f9dec0bed75b3ed00a3fce6fe1e5f23e8a049"
+    },
+    {
+      "path": "frontend/src/features/richman/game/g6-market.ts",
+      "sha256": "e41019104edd4b8c5c55f499650526c6af815d42bcc254b6205476ce897e1333"
+    },
+    {
+      "path": "frontend/src/features/richman/game/g6.ts",
+      "sha256": "9d2c2d33b4f1e4e021fc19442ce4d7cf3fa012fe059e12849fecaaf818760b03"
+    }
+  ],
+  "observationBoundary": "Policy reads publicObservation and fold of accepted departure commands. The independent verifier reads checkpoint world solely to assert actual restoration. No hidden gain oracle in policy.",
+  "routeBoundary": "Original Japan legal commands with mixed seats. Human routes deliberately create business/payment stress; they are not claims of optimal human play. Engine plans are not browser evidence.",
+  "preservation": {
+    "oldFixtures": 412,
+    "changedHistoricalFiles": [],
+    "oldPolicyBodiesUnchanged": true,
+    "runtimeUnchanged": true
+  },
+  "verificationFiles": [
+    "scripts/richman/verify-strategy-circuit.ts",
+    "scripts/richman/strategy-circuit-ui-browser.cjs",
+    "scripts/richman/archive-strategy-circuit.ts",
+    "frontend/src/features/richman/game/strategy-circuit.test.ts",
+    "frontend/src/features/richman/game/strategy-circuit-browser.test.ts"
+  ],
+  "verificationDigests": [
+    {
+      "path": "scripts/richman/verify-strategy-circuit.ts",
+      "sha256": "9b1073bb2e9f9286f7b1c88915476c94fa10e14acdd4cf5bf1ff36e362ce1e33"
+    },
+    {
+      "path": "scripts/richman/strategy-circuit-ui-browser.cjs",
+      "sha256": "5f4d2e296bf6c215ca278d13de027daca613a49ae3786e1e463607a53c97cdc8"
+    },
+    {
+      "path": "scripts/richman/archive-strategy-circuit.ts",
+      "sha256": "7f389aa5fa52b4847b4180d3124f78a6e6ab9924d9e12e7ec40ce1c62c9734dc"
+    },
+    {
+      "path": "frontend/src/features/richman/game/strategy-circuit.test.ts",
+      "sha256": "5232bea53a438f0cfb83783082832b0af922599ac1334724e656a3a063181529"
+    },
+    {
+      "path": "frontend/src/features/richman/game/strategy-circuit-browser.test.ts",
+      "sha256": "f42cfde58ee531536c252b542f87c6cbf250849f0a25a97ec7f251ec6384c0c8"
+    }
+  ],
+  "actualArchives": [
+    {
+      "route": "terminal-2",
+      "path": "frontend/src/features/richman/game/fixtures/strategy-circuit-v44-terminal-2-replay.json",
+      "hashes": {
+        "replay": "16bafb5ad998abd21ecdf1b6f17dbc72f6a4514a022489b7e7473432a3683cee",
+        "state": "e29f6f0dbf8cfa6efd2ae4a4d5e771d3acec5812d0bbbbf573e6ffd7c8ea93d2",
+        "events": "316e70d77c2d3b8cc8c32f3f708a8d635d4cdf07a42da0cb4da5f843e87f8409"
+      }
+    },
+    {
+      "route": "terminal-3",
+      "path": "frontend/src/features/richman/game/fixtures/strategy-circuit-v44-terminal-3-replay.json",
+      "hashes": {
+        "replay": "0c0cf4ca5c0ab3662cea920fb4ee2eb083b88ed0da6ef1ecd80ecac1dc60188f",
+        "state": "63a69e0453103a4bd9e1a14df6e7cef481d5eb6ec70dc538ae9ae56cafc84a03",
+        "events": "8b057d13e077f93996bd641e960477a5832242220223dbba7139a25fca9448cd"
+      }
+    },
+    {
+      "route": "terminal-4",
+      "path": "frontend/src/features/richman/game/fixtures/strategy-circuit-v44-terminal-4-replay.json",
+      "hashes": {
+        "replay": "6f76adf125bce0beffae5d30f7d96b078845fa329610afcdc7658612265b6c3c",
+        "state": "99b271275e67d721606acc7e2a19865c758a3b4f72fb06d46231df3f281d2efd",
+        "events": "d0c26b6f5e3a3a40320181a2ea872d206a5b42a0330fe097acc884de7f39ebb1"
+      }
+    },
+    {
+      "route": "restore-3",
+      "path": "frontend/src/features/richman/game/fixtures/strategy-circuit-v44-restore-3-replay.json",
+      "hashes": {
+        "replay": "09411811f9a66934ffa90755dbaff0fa755611a7567c55128d026daa95245d08",
+        "state": "57d7f046145dcf71480c93ed51e6d875644608f46d02fb57685e99dfa5a7cf18",
+        "events": "08a25f18222f6e62178b236c7741ed5e622b1e515882d3efb1edfa2f71de1538"
+      }
+    },
+    {
+      "route": "liquidation",
+      "path": "frontend/src/features/richman/game/fixtures/strategy-circuit-v44-liquidation-replay.json",
+      "hashes": {
+        "replay": "c795494ce54dc301708dca3356c7937009ba329a8bb0f6cbc21ad71b689efd93",
+        "state": "6ab46d5bdf0d182acffc146cde0e03681ae7d6a0437e1640d1196c963f8ab903",
+        "events": "c4071520d3887ed6b02914a0eed4111c8f9c9f318cf0a6c0f8effae4f0a31cb2"
+      }
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+import fs from 'node:fs';import {planMagicActions} from './plan-magic-actions-journey';
+for(let i=2;i<=25;i++){const p=planMagicActions('magic-actions-'+i,4,700);if(p){fs.writeFileSync('/private/tmp/richman-unified-03x.json',JSON.stringify(p,null,2));console.log(JSON.stringify({seed:p.state.seed,commands:p.replay.commands.length,turn:p.state.turn,build:p.replay.commands.filter(c=>c.action.type==='magicBuild').length,magic:p.events.filter(e=>e.type==='magicResolved').map(e=>e.receipt)}));break;}console.log('No short route',i);}

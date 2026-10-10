@@ -1,0 +1,756 @@
+{
+  "stage": "S3-03e",
+  "date": "2026-10-09",
+  "status": "scoped-surrender-acquisition-implemented-and-accepted",
+  "mode": "surrender",
+  "rulesId": "japan-events-candidate-v47",
+  "fingerprint": "c6d96cc",
+  "S3_03Closed": false,
+  "nativeExecution": false,
+  "newGameSemantics": true,
+  "newPolicyVersion": false,
+  "preservedPolicies": [
+    "basic-v1",
+    "tools-v1",
+    "rent-v1",
+    "defense-v1",
+    "estate-v1",
+    "cash-v1",
+    "status-v1",
+    "inventory-v1",
+    "commerce-v1",
+    "area-v1",
+    "roads-v1",
+    "mobility-v1",
+    "gods-v1",
+    "capital-v1",
+    "research-v1"
+  ],
+  "historicalCapabilities": {
+    "items": 43,
+    "news": 36,
+    "japanFortuneSlots": 37
+  },
+  "audit": {
+    "files": 9,
+    "facts": 13,
+    "hashesVerified": true
+  },
+  "tests": {
+    "uniquePassed": 246,
+    "files": {
+      "src/features/richman/game/g7.test.ts": 11,
+      "src/features/richman/game/payments.test.ts": 33,
+      "src/features/richman/game/special-objects.test.ts": 23,
+      "src/features/richman/game/disposal.test.ts": 23,
+      "src/features/richman/game/surrender.test.ts": 17,
+      "src/features/richman/game/god-pairs.test.ts": 21,
+      "src/features/richman/game/god-circuit-domain.test.ts": 9,
+      "src/features/richman/game/restore-circuit.test.ts": 14,
+      "src/features/richman/game/special-objects-circuit.test.ts": 4,
+      "src/features/richman/game/god-circuit-browser.test.ts": 3,
+      "src/features/richman/game/god-pairs-browser.test.ts": 3,
+      "src/features/richman/game/computer-research.test.ts": 45,
+      "src/features/richman/game/special-objects-browser.test.ts": 3,
+      "src/features/richman/game/surrender-session.test.ts": 3,
+      "src/features/richman/GodTrafficPanel.test.tsx": 5,
+      "src/features/richman/DisposalPanel.test.tsx": 5,
+      "src/features/richman/game/surrender-browser.test.ts": 3,
+      "src/features/richman/game/asset-fortune.test.ts": 17,
+      "src/features/richman/game/surrender-circuit.test.ts": 4
+    },
+    "scope": "targeted domains/session/legacy goldens/engine circuits; not full frontend suite",
+    "logs": [
+      "/private/tmp/03e-regression.log",
+      "/private/tmp/03e-matrix.log",
+      "/private/tmp/03e-final-tests.log",
+      "/private/tmp/03e-inheritance.log",
+      "/private/tmp/03e-boundaries-final.log"
+    ]
+  },
+  "build": {
+    "passed": true,
+    "log": "/private/tmp/03e-build-final.log",
+    "warnings": [
+      "existing large chunks"
+    ]
+  },
+  "lint": {
+    "passed": true,
+    "log": "/private/tmp/03e-lint-final.log"
+  },
+  "historicalFixtureBytes": {
+    "checked": 446,
+    "changed": 0,
+    "newActualUIFiles": 6
+  },
+  "browser": {
+    "routes": [
+      {
+        "route": "2",
+        "players": 2,
+        "normalSpeed": true,
+        "map": "original Japan; hotseat UI commands; auth fixture only",
+        "commands": 3,
+        "human": 1,
+        "auto": 0,
+        "displayChecks": [
+          {
+            "index": 0,
+            "kinds": []
+          }
+        ],
+        "lifecycle": [
+          "pause/resume",
+          "reset dialog cancel",
+          "reset",
+          "replace",
+          "exit",
+          "fullscreen",
+          "390px"
+        ],
+        "cleanup": {
+          "raf": 0,
+          "canvas": 0
+        },
+        "errors": [],
+        "facts": [
+          {
+            "type": "surrenderStarted",
+            "sourceId": "player-1",
+            "sequence": 3,
+            "commandId": "command-5",
+            "playerId": "player-1",
+            "turn": 1
+          },
+          {
+            "type": "disposalCompleted",
+            "receipt": {
+              "continuation": "surrender",
+              "id": "disposal-1",
+              "payerId": "player-1",
+              "recipientId": "public",
+              "propertyId": "surrender",
+              "due": 0,
+              "amount": 0,
+              "unpaid": 0,
+              "paid": {
+                "cash": 0,
+                "bank": 0
+              },
+              "released": [],
+              "pool": [],
+              "draws": [],
+              "stocks": [],
+              "inventory": [],
+              "ignoredPoints": 0,
+              "auctions": [],
+              "finishedGame": true
+            },
+            "sequence": 7,
+            "commandId": "command-5",
+            "playerId": "player-1",
+            "turn": 1
+          },
+          {
+            "type": "surrenderCompleted",
+            "sourceId": "player-1",
+            "targetId": null,
+            "outcome": "gated",
+            "sequence": 8,
+            "commandId": "command-5",
+            "playerId": "player-1",
+            "turn": 1
+          }
+        ],
+        "prefixes": [
+          {
+            "index": 3,
+            "kind": "surrenderStarted"
+          },
+          {
+            "index": 3,
+            "kind": "disposalCompleted"
+          },
+          {
+            "index": 3,
+            "kind": "surrenderCompleted"
+          }
+        ],
+        "fullReplay": true,
+        "prefixReplay": true,
+        "commandsMatchLegalPlan": true,
+        "hashes": {
+          "replay": "9bd50aa637998d22534e70fd2510e16602e0dec39e1743e526fe1c0afbba50a0",
+          "state": "8f95c54f82042321fc12d72a26aad121d41fbf34fbe041f01cb1b37b534d6ec3",
+          "events": "82f7283d5557c6d5ee91b504cdca8d237b00663b39de5b96656f20fbb09c99b3"
+        }
+      },
+      {
+        "route": "3",
+        "players": 3,
+        "normalSpeed": true,
+        "map": "original Japan; hotseat UI commands; auth fixture only",
+        "commands": 9,
+        "human": 3,
+        "auto": 0,
+        "displayChecks": [
+          {
+            "index": 0,
+            "kinds": []
+          },
+          {
+            "index": 1,
+            "kinds": [
+              "surrenderStarted",
+              "disposalCompleted",
+              "surrenderSelection"
+            ]
+          },
+          {
+            "index": 2,
+            "kinds": [
+              "surrenderCompleted"
+            ]
+          }
+        ],
+        "lifecycle": [
+          "pause/resume",
+          "reset dialog cancel",
+          "reset",
+          "replace",
+          "exit",
+          "fullscreen",
+          "390px"
+        ],
+        "cleanup": {
+          "raf": 0,
+          "canvas": 0
+        },
+        "errors": [],
+        "facts": [
+          {
+            "type": "surrenderStarted",
+            "sourceId": "player-1",
+            "sequence": 3,
+            "commandId": "command-5",
+            "playerId": "player-1",
+            "turn": 1
+          },
+          {
+            "type": "disposalCompleted",
+            "receipt": {
+              "continuation": "surrender",
+              "id": "disposal-1",
+              "payerId": "player-1",
+              "recipientId": "public",
+              "propertyId": "surrender",
+              "due": 0,
+              "amount": 0,
+              "unpaid": 0,
+              "paid": {
+                "cash": 0,
+                "bank": 0
+              },
+              "released": [],
+              "pool": [],
+              "draws": [],
+              "stocks": [],
+              "inventory": [
+                {
+                  "itemId": "tool:08",
+                  "quantity": 1,
+                  "points": 30
+                },
+                {
+                  "itemId": "tool:09",
+                  "quantity": 1,
+                  "points": 30
+                },
+                {
+                  "itemId": "tool:01",
+                  "quantity": 1,
+                  "points": 15
+                },
+                {
+                  "itemId": "tool:02",
+                  "quantity": 1,
+                  "points": 30
+                }
+              ],
+              "ignoredPoints": 105,
+              "auctions": [],
+              "finishedGame": false
+            },
+            "sequence": 9,
+            "commandId": "command-5",
+            "playerId": "player-1",
+            "turn": 1
+          },
+          {
+            "type": "surrenderSelection",
+            "decision": {
+              "kind": "surrender",
+              "id": "fe68d2fc-c990-42d1-9561-6577674ec044:2",
+              "sourceId": "player-1",
+              "targets": [
+                "player-2",
+                "player-3"
+              ]
+            },
+            "sequence": 10,
+            "commandId": "command-5",
+            "playerId": "player-1",
+            "turn": 1
+          },
+          {
+            "type": "surrenderCompleted",
+            "sourceId": "player-1",
+            "targetId": null,
+            "outcome": "cancelled",
+            "sequence": 13,
+            "commandId": "command-10",
+            "playerId": "player-1",
+            "turn": 1
+          }
+        ],
+        "prefixes": [
+          {
+            "index": 3,
+            "kind": "surrenderStarted"
+          },
+          {
+            "index": 3,
+            "kind": "disposalCompleted"
+          },
+          {
+            "index": 3,
+            "kind": "surrenderSelection"
+          },
+          {
+            "index": 6,
+            "kind": "surrenderCompleted"
+          }
+        ],
+        "fullReplay": true,
+        "prefixReplay": true,
+        "commandsMatchLegalPlan": true,
+        "hashes": {
+          "replay": "31ad52b4df05def815ccdd2fd2a2a75992935a3d51f2bff320a3d6edba245e33",
+          "state": "1ef69dd27d6f2f1cefa49574e67eb550031649cb35215d85e8455eb09c5ddee4",
+          "events": "05826c120802a945c19d0514c9559308546a7f30b01a689bddb2c53ae2216b76"
+        }
+      },
+      {
+        "route": "4",
+        "players": 4,
+        "normalSpeed": true,
+        "map": "original Japan; hotseat UI commands; auth fixture only",
+        "commands": 431,
+        "human": 176,
+        "auto": 241,
+        "displayChecks": [
+          {
+            "index": 0,
+            "kinds": []
+          },
+          {
+            "index": 397,
+            "kinds": [
+              "surrenderStarted"
+            ]
+          },
+          {
+            "index": 406,
+            "kinds": [
+              "disposalCompleted",
+              "surrenderSelection"
+            ]
+          },
+          {
+            "index": 407,
+            "kinds": [
+              "surrenderCompleted"
+            ]
+          },
+          {
+            "index": 409,
+            "kinds": [
+              "surrenderStarted"
+            ]
+          },
+          {
+            "index": 415,
+            "kinds": [
+              "disposalCompleted",
+              "surrenderSelection"
+            ]
+          },
+          {
+            "index": 416,
+            "kinds": [
+              "surrenderCompleted"
+            ]
+          }
+        ],
+        "lifecycle": [
+          "pause/resume",
+          "reset dialog cancel",
+          "reset",
+          "replace",
+          "exit",
+          "fullscreen",
+          "390px"
+        ],
+        "cleanup": {
+          "raf": 0,
+          "canvas": 0
+        },
+        "errors": [],
+        "facts": [
+          {
+            "type": "surrenderStarted",
+            "sourceId": "player-1",
+            "sequence": 735,
+            "commandId": "command-401",
+            "playerId": "player-1",
+            "turn": 53
+          },
+          {
+            "type": "disposalCompleted",
+            "receipt": {
+              "continuation": "surrender",
+              "id": "disposal-1",
+              "payerId": "player-1",
+              "recipientId": "public",
+              "propertyId": "surrender",
+              "due": 0,
+              "amount": 0,
+              "unpaid": 0,
+              "paid": {
+                "cash": 0,
+                "bank": 0
+              },
+              "released": [
+                "japan:land:25",
+                "japan:land:29",
+                "japan:land:31",
+                "japan:facility:2"
+              ],
+              "pool": [
+                "japan:land:25",
+                null,
+                null,
+                null
+              ],
+              "draws": [
+                1,
+                1,
+                2,
+                1,
+                3
+              ],
+              "stocks": [
+                {
+                  "stockId": "jp:26",
+                  "quantity": 1000,
+                  "price": 1510,
+                  "amount": 15100
+                }
+              ],
+              "inventory": [
+                {
+                  "itemId": "tool:08",
+                  "quantity": 2,
+                  "points": 60
+                },
+                {
+                  "itemId": "tool:09",
+                  "quantity": 1,
+                  "points": 30
+                },
+                {
+                  "itemId": "tool:01",
+                  "quantity": 1,
+                  "points": 15
+                },
+                {
+                  "itemId": "tool:02",
+                  "quantity": 1,
+                  "points": 30
+                }
+              ],
+              "ignoredPoints": 135,
+              "auctions": [
+                {
+                  "propertyId": "japan:land:29",
+                  "winnerId": null,
+                  "amount": 0,
+                  "reserve": 1000
+                },
+                {
+                  "propertyId": "japan:land:31",
+                  "winnerId": null,
+                  "amount": 0,
+                  "reserve": 1000
+                },
+                {
+                  "propertyId": "japan:facility:2",
+                  "winnerId": null,
+                  "amount": 0,
+                  "reserve": 6000
+                }
+              ],
+              "finishedGame": false
+            },
+            "sequence": 769,
+            "commandId": "command-414",
+            "playerId": "player-1",
+            "turn": 53
+          },
+          {
+            "type": "surrenderSelection",
+            "decision": {
+              "kind": "surrender",
+              "id": "67f2a399-a324-427f-b499-8501137e44b5:302",
+              "sourceId": "player-1",
+              "targets": [
+                "player-2",
+                "player-3",
+                "player-4"
+              ]
+            },
+            "sequence": 770,
+            "commandId": "command-414",
+            "playerId": "player-1",
+            "turn": 53
+          },
+          {
+            "type": "surrenderCompleted",
+            "sourceId": "player-1",
+            "targetId": "player-3",
+            "outcome": "attached",
+            "slot": 15,
+            "sequence": 775,
+            "commandId": "command-419",
+            "playerId": "player-1",
+            "turn": 53
+          },
+          {
+            "type": "surrenderStarted",
+            "sourceId": "player-2",
+            "sequence": 779,
+            "commandId": "command-425",
+            "playerId": "player-2",
+            "turn": 54
+          },
+          {
+            "type": "disposalCompleted",
+            "receipt": {
+              "continuation": "surrender",
+              "id": "disposal-2",
+              "payerId": "player-2",
+              "recipientId": "public",
+              "propertyId": "surrender",
+              "due": 0,
+              "amount": 0,
+              "unpaid": 0,
+              "paid": {
+                "cash": 0,
+                "bank": 0
+              },
+              "released": [
+                "japan:land:2",
+                "japan:land:5",
+                "japan:land:8",
+                "japan:land:9",
+                "japan:land:15",
+                "japan:land:18",
+                "japan:land:21",
+                "japan:land:45"
+              ],
+              "pool": [
+                null,
+                null,
+                "japan:land:8",
+                "japan:land:9",
+                "japan:land:15",
+                "japan:land:18",
+                "japan:land:21",
+                null
+              ],
+              "draws": [
+                7,
+                0,
+                1
+              ],
+              "stocks": [],
+              "inventory": [
+                {
+                  "itemId": "tool:08",
+                  "quantity": 1,
+                  "points": 30
+                },
+                {
+                  "itemId": "tool:09",
+                  "quantity": 1,
+                  "points": 30
+                },
+                {
+                  "itemId": "tool:01",
+                  "quantity": 1,
+                  "points": 15
+                },
+                {
+                  "itemId": "tool:02",
+                  "quantity": 1,
+                  "points": 30
+                }
+              ],
+              "ignoredPoints": 105,
+              "auctions": [
+                {
+                  "propertyId": "japan:land:45",
+                  "winnerId": null,
+                  "amount": 0,
+                  "reserve": 1000
+                },
+                {
+                  "propertyId": "japan:land:2",
+                  "winnerId": null,
+                  "amount": 0,
+                  "reserve": 500
+                },
+                {
+                  "propertyId": "japan:land:5",
+                  "winnerId": null,
+                  "amount": 0,
+                  "reserve": 800
+                }
+              ],
+              "finishedGame": false
+            },
+            "sequence": 805,
+            "commandId": "command-435",
+            "playerId": "player-2",
+            "turn": 54
+          },
+          {
+            "type": "surrenderSelection",
+            "decision": {
+              "kind": "surrender",
+              "id": "67f2a399-a324-427f-b499-8501137e44b5:310",
+              "sourceId": "player-2",
+              "targets": [
+                "player-3",
+                "player-4"
+              ]
+            },
+            "sequence": 806,
+            "commandId": "command-435",
+            "playerId": "player-2",
+            "turn": 54
+          },
+          {
+            "type": "surrenderCompleted",
+            "sourceId": "player-2",
+            "targetId": "player-4",
+            "outcome": "attached",
+            "slot": 16,
+            "sequence": 812,
+            "commandId": "command-440",
+            "playerId": "player-2",
+            "turn": 54
+          }
+        ],
+        "prefixes": [
+          {
+            "index": 399,
+            "kind": "surrenderStarted"
+          },
+          {
+            "index": 410,
+            "kind": "disposalCompleted"
+          },
+          {
+            "index": 410,
+            "kind": "surrenderSelection"
+          },
+          {
+            "index": 413,
+            "kind": "surrenderCompleted"
+          },
+          {
+            "index": 417,
+            "kind": "surrenderStarted"
+          },
+          {
+            "index": 425,
+            "kind": "disposalCompleted"
+          },
+          {
+            "index": 425,
+            "kind": "surrenderSelection"
+          },
+          {
+            "index": 428,
+            "kind": "surrenderCompleted"
+          }
+        ],
+        "fullReplay": true,
+        "prefixReplay": true,
+        "commandsMatchLegalPlan": true,
+        "hashes": {
+          "replay": "0ae94216b2344e52e1b3cbac5a3e5eab59f439dcd1166a314995128ad030010e",
+          "state": "422ca63703bbd9faa528e563dc1c73600aa57f2b15710693ca22b03fa844fbae",
+          "events": "b36b99999a832486df43ac8b0e275efb692c3b29dbd71a6859f3178319771d1c"
+        }
+      }
+    ],
+    "commands": 443,
+    "planCommands": 421,
+    "pauseControls": 22,
+    "namedCheckpoints": 15,
+    "distinctCommandPrefixes": 9,
+    "normalSpeed": true,
+    "seats": "all-human hotseat; mixed seats only domain/session/engine coverage",
+    "injection": "auth-only; no game state mutation",
+    "comparison": "actual full replay exact state/events; legal-plan business actions equal; plan-world normalizes gameId/revision/effects.lastBoundary event sequence from inserted pauses",
+    "confirmationLifecycleSmoke": {
+      "checks": [
+        "reset-dialog-cancel-clears-uncommitted-surrender-confirm",
+        "new-game-dialog-cancel-clears-uncommitted-surrender-confirm"
+      ],
+      "errors": [],
+      "cleanup": {
+        "raf": 0,
+        "canvas": 0
+      }
+    }
+  },
+  "webBoundaries": [
+    "current ordinary human idle/turnEnd menu only",
+    "surrender clears all pre-exit G7 checkpoints; post-exit snapshots restore normally",
+    "existing public-disposal and last-survivor candidate retained",
+    "engineer/dream saved vehicle already in bag not returned twice"
+  ],
+  "repairs": [
+    "new compiler adapter missing debt fields fixed",
+    "new Session test called update instead of tick, corrected and rerun passed",
+    "planner initially chose illegal halted/limited quote; filtered through existing trade validation, rejected exploration not UI evidence",
+    "plan comparison now distinguishes pause-added lastBoundary log cursor from restored world; exact actual replay never normalized",
+    "v47 research tools clear without increasing finite supply; inherited asset-fortune array gate extended",
+    "opening reset/new-game dialogs now clears an uncommitted surrender confirmation; actual UI smoke verifies cancellation cannot retain an old confirm button",
+    "surrender source research inventory also skips finite-pool return; ordinary debt exits retain historical semantics"
+  ],
+  "untested": [
+    "original Windows runtime, full exit stack/endgame and special actors",
+    "original-map equipped car/engineer/dream cleanup UI",
+    "busy-slot/replacement UI; normal max4-player reachability of both-busy failure not established",
+    "full13-action expiry UI",
+    "legal research G7 after surrender UI",
+    "positive-bid public receipt UI",
+    "mixed human/computer surrender UI"
+  ],
+  "next": "S3-03f: final candidate acceptance for reachable equipment cleanup and post-exit research restore, coverage/difference matrix; no speculative new acquisition/wandering"
+}

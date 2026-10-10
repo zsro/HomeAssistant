@@ -1,0 +1,186 @@
+{
+  "date": "2026-10-05",
+  "status": "implemented-unified-testing-started-not-complete",
+  "rulesId": "japan-tools-candidate-v13",
+  "itemFingerprint": "7d7e7415",
+  "implementedThisGroup": 3,
+  "acceptedThisGroup": 0,
+  "implementedTotal": 43,
+  "acceptedTotal": 18,
+  "pendingAcceptance": 25,
+  "unimplemented": 0,
+  "tests": {
+    "total": 280,
+    "passed": 280,
+    "failed": 0,
+    "newG7": 12
+  },
+  "engineJourney": {
+    "scope": "custom-map legal engine commands; no injected state; not browser acceptance",
+    "commands": 341,
+    "turn": 47,
+    "fingerprint": "7d7e7415",
+    "researchCompleted": [
+      {
+        "type": "g5Notice",
+        "message": "研究完成：时光机已入包。",
+        "sequence": 303,
+        "commandId": "c159",
+        "playerId": "player-1",
+        "turn": 23
+      },
+      {
+        "type": "g5Notice",
+        "message": "研究完成：传送机已入包。",
+        "sequence": 444,
+        "commandId": "c232",
+        "playerId": "player-1",
+        "turn": 33
+      },
+      {
+        "type": "g5Notice",
+        "message": "研究完成：核子飞弹已入包。",
+        "sequence": 590,
+        "commandId": "c308",
+        "playerId": "player-1",
+        "turn": 43
+      }
+    ],
+    "effects": [
+      {
+        "type": "g7Notice",
+        "message": "时光机：恢复第22轮、行动43出发前的全局资产和状态，扣除历史背包1台；随机序列继续，旧历史已清除。",
+        "sequence": 621,
+        "commandId": "c327",
+        "playerId": "player-1",
+        "turn": 45
+      },
+      {
+        "type": "g7Notice",
+        "message": "玩家 1（20号）已传送至21号路格。",
+        "sequence": 624,
+        "commandId": "c329",
+        "playerId": "player-1",
+        "turn": 45
+      },
+      {
+        "type": "g7Notice",
+        "message": "核子飞弹命中1块地产、2位玩家，移除1位神仙。",
+        "sequence": 649,
+        "commandId": "c340",
+        "playerId": "player-1",
+        "turn": 47
+      }
+    ],
+    "stateHash": "7df76a8fbd78d5d95bec2a0ddb75156b22af1cade7a08975fb0e1caceeb9ab3c",
+    "eventsHash": "1c812dcb4f5ad07f27d0bf57200d96d256bacde0ae4011457f1b9cdcc22d3fdd"
+  },
+  "browserSmoke": {
+    "scope": "original-map browser smoke only; NOT research/time/teleport/nuclear effect acceptance",
+    "map": "original Japan",
+    "normalSpeed": true,
+    "authOnlyMock": true,
+    "checks": [
+      "G7 zero inventory",
+      "stock UI buy",
+      "pause",
+      "fullscreen",
+      "390px no horizontal overflow",
+      "normal roll",
+      "replay parses deterministically",
+      "reset",
+      "G6 mode preserved",
+      "cleanup"
+    ],
+    "verified": {
+      "phase": "choosing",
+      "stocks": {
+        "jp:24": {
+          "quantity": 1,
+          "cost": 160
+        },
+        "jp:25": {
+          "quantity": 0,
+          "cost": 0
+        },
+        "jp:26": {
+          "quantity": 0,
+          "cost": 0
+        },
+        "jp:27": {
+          "quantity": 0,
+          "cost": 0
+        },
+        "jp:28": {
+          "quantity": 0,
+          "cost": 0
+        },
+        "jp:29": {
+          "quantity": 0,
+          "cost": 0
+        },
+        "jp:30": {
+          "quantity": 0,
+          "cost": 0
+        },
+        "jp:31": {
+          "quantity": 0,
+          "cost": 0
+        },
+        "jp:32": {
+          "quantity": 0,
+          "cost": 0
+        },
+        "jp:33": {
+          "quantity": 0,
+          "cost": 0
+        },
+        "jp:34": {
+          "quantity": 0,
+          "cost": 0
+        },
+        "jp:35": {
+          "quantity": 0,
+          "cost": 0
+        }
+      },
+      "fingerprint": "7d7e7415",
+      "commands": 5
+    },
+    "cleanup": {
+      "raf": 0,
+      "canvas": 0
+    },
+    "errors": []
+  },
+  "lintExitCode": 0,
+  "buildExitCode": 0,
+  "diffCheckExitCode": 0,
+  "fullBrowserAcceptance": false,
+  "previousFingerprints": {
+    "v12": "942f4ae7",
+    "v11": "a23a792b",
+    "v10": "d9e59846",
+    "v9": "6be76c90",
+    "v8": "717e58c0",
+    "v7": "e2ec2345"
+  },
+  "artifacts": [
+    {
+      "path": "/private/tmp/richman-s2-02n-engine/replay.json",
+      "sha256": "6566cc462fb081e1f9ad698e268ac9d062d1a3734ac9906460d8c5362a6d17fe"
+    },
+    {
+      "path": "/private/tmp/richman-s2-02n-smoke/replay.json",
+      "sha256": "36a305ea031547a83b9485f8f690104e745d1fa25e8c01af6e3f32acfff71f5e"
+    },
+    {
+      "path": "/private/tmp/richman-s2-02n-smoke/fullscreen.png",
+      "sha256": "c11f4887889c70522a556e6d4198c43475b945a900da9264f6575a12d97d7cb8"
+    },
+    {
+      "path": "/private/tmp/richman-s2-02n-smoke/narrow.png",
+      "sha256": "e0d78b6e2fbb65522563407e7c9c94fa322959c590c2a321fde46d57122ee150"
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "averagedBuys": 122,
+  "partialSales": 69,
+  "clearings": 16,
+  "subscriptions": 0,
+  "players": 3,
+  "commands": 353,
+  "turn": 13,
+  "trades": 253,
+  "buy": 168,
+  "sell": 85,
+  "days": [
+    {
+      "date": "1998-01-10",
+      "index": 30058,
+      "shared": 2.7856967449188232
+    },
+    {
+      "date": "1998-01-12",
+      "index": 29460,
+      "shared": -1.6892848014831543
+    },
+    {
+      "date": "1998-01-13",
+      "index": 29041,
+      "shared": -2.9938979148864746
+    }
+  ],
+  "closed": [
+    "1998-01-11"
+  ],
+  "up": 7,
+  "down": 8,
+  "prefixes": [
+    "buy",
+    "partial-sale",
+    "sell",
+    "market-date",
+    "closed-date",
+    "reopen-date",
+    "clear"
+  ],
+  "report": {
+    "normalSpeed": true,
+    "map": "original Japan; real UI commands; auth-only fixture; no game-state injection",
+    "marketChecks": [
+      {
+        "stock": "jp:26",
+        "blocked": "buy",
+        "oppositeAllowed": true
+      },
+      {
+        "stock": "jp:29",
+        "blocked": "sell",
+        "oppositeAllowed": true
+      },
+      {
+        "stock": "jp:30",
+        "blocked": "buy",
+        "oppositeAllowed": true
+      }
+    ],
+    "errors": [],
+    "cleanup": {
+      "raf": 0,
+      "canvas": 0
+    }
+  },
+  "hashes": {
+    "replay": "89efb1274a29f47d5a744534430165086c366c89b49448a398c29a2b9066180f",
+    "state": "bd6ff610035219b8a8838ce28a6b46e04f3786384758112fadaedc08ff9511e9",
+    "events": "9c060d2a8f463bab17cd06d76efe9c23a60e9a79c5330207afcb935b79f39a3e"
+  }
+}

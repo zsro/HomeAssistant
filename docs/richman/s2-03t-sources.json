@@ -1,0 +1,282 @@
+{
+  "stage": "S2-03t",
+  "referenceCommit": "ec7d70e693059d1e781d9d1cc2ad7f36d360d39e",
+  "grade": "fixed cross-version source, not Windows execution equivalence",
+  "sources": [
+    {
+      "path": "asm/rich4_player_bankrupt.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_bankrupt.asm",
+      "gitBlobSha1": "7d89fe867d86a4b9fc230602da8bc084725310c6",
+      "sha256": "57c69d347bef382e0045b00855c17293e5cb737ed22359340894ed9b9cf8bf02"
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_core_actions.asm",
+      "gitBlobSha1": "ebfde6c820e8a430b856d9816a926b636e0db1dc",
+      "sha256": "2874c1a3e0ca1d0da5afe4cb93e42cf2d6f6fa864dbee11d7bcaa028af07d94a"
+    },
+    {
+      "path": "asm/rich4_stocks.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_stocks.asm",
+      "gitBlobSha1": "c45cd776b51483d17f78972845b8053deeee2433",
+      "sha256": "d55e17af17da2464655f53d3b3dd32224637a37ab131c6cf483db8fbac045ea3"
+    },
+    {
+      "path": "asm/rich4_card_utils_2.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_card_utils_2.asm",
+      "gitBlobSha1": "461daf212cc8056beddaadd4ea6e36c5b9e93ceb",
+      "sha256": "98caa25f4c3cbbfca6cf304caa6485d719b3776ccb701a401d90920828b29ae2"
+    },
+    {
+      "path": "asm/rich4_tool_utils.c",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_tool_utils.c",
+      "gitBlobSha1": "218ab5b0e02204bcdb5a65c4483d8f570ef7265f",
+      "sha256": "12fb8cedf2a50efa98cdfbd15f55b8167a4b3d753c6677d5ba787ac50c8d4097"
+    },
+    {
+      "path": "asm/rich4_player_info.h",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_info.h",
+      "gitBlobSha1": "2f04e6aa425bba2f9345b64ce0ab4c1240ac185f",
+      "sha256": "cc17726ce054de587a42c0f335d84495e66698da2e15eb6a7b7ca28ab38604be"
+    },
+    {
+      "path": "asm/rich4_ui_auction.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_ui_auction.asm",
+      "gitBlobSha1": "7be2a9569b1f5158fe0d393696e11d8a0018a1bf",
+      "sha256": "771ecbbbb5830bee2b5dbc8966e068329525e6f7f090705344f49725a33b816e"
+    },
+    {
+      "path": "asm/rich4_ui_sale.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_ui_sale.asm",
+      "gitBlobSha1": "7596930dc640d065963e1228446165ab27445822",
+      "sha256": "750b782654839143d9b9a0ae53fa1a3a037e51982ea03ae28a1b35a6603dfbde"
+    }
+  ],
+  "verifiedFiles": 8,
+  "references": [
+    {
+      "path": "asm/rich4_player_bankrupt.asm",
+      "anchor": "_rich4_player_bankrupt:",
+      "lines": [
+        50
+      ]
+    },
+    {
+      "path": "asm/rich4_player_bankrupt.asm",
+      "anchor": "loc_0040cefd:",
+      "lines": [
+        170
+      ]
+    },
+    {
+      "path": "asm/rich4_player_bankrupt.asm",
+      "anchor": "loc_0040d002:",
+      "lines": [
+        252
+      ]
+    },
+    {
+      "path": "asm/rich4_player_bankrupt.asm",
+      "anchor": "loc_0040d029:",
+      "lines": [
+        276
+      ]
+    },
+    {
+      "path": "asm/rich4_player_bankrupt.asm",
+      "anchor": "loc_0040d039:",
+      "lines": [
+        282
+      ]
+    },
+    {
+      "path": "asm/rich4_player_bankrupt.asm",
+      "anchor": "loc_0040d089:",
+      "lines": [
+        308
+      ]
+    },
+    {
+      "path": "asm/rich4_player_bankrupt.asm",
+      "anchor": "loc_0040d10d:",
+      "lines": [
+        359
+      ]
+    },
+    {
+      "path": "asm/rich4_player_bankrupt.asm",
+      "anchor": "loc_0040d139:",
+      "lines": [
+        378
+      ]
+    },
+    {
+      "path": "asm/rich4_player_bankrupt.asm",
+      "anchor": "loc_0040d185:",
+      "lines": [
+        411
+      ]
+    },
+    {
+      "path": "asm/rich4_player_bankrupt.asm",
+      "anchor": "loc_0040d1c6:",
+      "lines": [
+        438
+      ]
+    },
+    {
+      "path": "asm/rich4_player_bankrupt.asm",
+      "anchor": "loc_0040d1d9:",
+      "lines": [
+        447
+      ]
+    },
+    {
+      "path": "asm/rich4_player_bankrupt.asm",
+      "anchor": "loc_0040d1f7:",
+      "lines": [
+        461
+      ]
+    },
+    {
+      "path": "asm/rich4_player_bankrupt.asm",
+      "anchor": "loc_0040d282:",
+      "lines": [
+        509
+      ]
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "anchor": "fcn_0041d2c6:",
+      "lines": [
+        5058
+      ]
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "anchor": "loc_0041d375:",
+      "lines": [
+        5116
+      ]
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "anchor": "loc_0041d387:",
+      "lines": [
+        5125
+      ]
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "anchor": "loc_0041d3c1:",
+      "lines": [
+        5148
+      ]
+    },
+    {
+      "path": "asm/rich4_stocks.asm",
+      "anchor": "_rich4_sell_stock:",
+      "lines": [
+        171
+      ]
+    },
+    {
+      "path": "asm/rich4_stocks.asm",
+      "anchor": "loc_00428e5b:",
+      "lines": [
+        191
+      ]
+    },
+    {
+      "path": "asm/rich4_stocks.asm",
+      "anchor": "loc_00428ea4:",
+      "lines": [
+        210
+      ]
+    },
+    {
+      "path": "asm/rich4_card_utils_2.asm",
+      "anchor": "_rich4_player_sell_all_the_card:",
+      "lines": [
+        147
+      ]
+    },
+    {
+      "path": "asm/rich4_tool_utils.c",
+      "anchor": "rich4_player_sell_all_tools(int player)",
+      "lines": [
+        66
+      ]
+    },
+    {
+      "path": "asm/rich4_ui_auction.asm",
+      "anchor": "_rich4_ui_auction_entry:",
+      "lines": [
+        2458
+      ]
+    },
+    {
+      "path": "asm/rich4_ui_auction.asm",
+      "anchor": "loc_0043c110:",
+      "lines": [
+        2696
+      ]
+    },
+    {
+      "path": "asm/rich4_ui_auction.asm",
+      "anchor": "loc_0043c83b:",
+      "lines": [
+        3246
+      ]
+    },
+    {
+      "path": "asm/rich4_ui_sale.asm",
+      "anchor": "fcn_0042483e:",
+      "lines": [
+        451
+      ]
+    }
+  ],
+  "rules": {
+    "R05-01t": {
+      "evidence": "40cd87 alive flag0; remove attached63/64 and ally65;40cefd memset+28..103 zeros funds/loans/points/status; traffic17/dice18 remain.40d039 one alive branches to ending BEFORE40d089 estate release",
+      "implemented": "rent settleDebt only; clear statuses/loans/policy/money and attached effects; last human survivor ends without estate/stock/bag/lottery liquidation; Web prune deceased listing immediately; all-human game, AI defeat menu deferred"
+    },
+    "R05-02t": {
+      "evidence": "40d089 ordinary numeric IDs then facilities; unown and clear tail fields, building type/level retained.40d10d clears owned companies, then stock sale updates ranking",
+      "implemented": "release ordered land/facility, preserve raw base/level/type/price status, cancel research, current company ranking helper retained; no transfer to creditor"
+    },
+    "R09-01t": {
+      "evidence": "40d14d twelve nonzero holdings sell with lastarg0;428e5b trunc(f32 quote*quantity); pool and quota increase;428ea4 proceeds public, not bank; ownership updater afterwards",
+      "implemented": "remaining shares forced public sale bypass halt; no price index; cost zero; stock rescue BEFORE rent insolvency remains older Web rule so normal rent often leaves none"
+    },
+    "R06-01t": {
+      "evidence": "40d185 calls tool sale then card sale and IGNORES both return values; tools returns equipped vehicle to bag then sells13, first8 pool; card sells15slot and pools; points was already zeroed by40cefd",
+      "implemented": "return equipped vehicle/engineering and bag supplies; log calculated returned points but do not credit cash/bank/points; current Web inventory/pool model retained"
+    },
+    "R05-03t": {
+      "evidence": "40d1a8 releases36lottery owners without fund refund; header+36loan,+59bankrefusal,+60noLoans,+62insurance inside memset;63/64attached objects removed before memset",
+      "implemented": "lottery no refund, debt/policy/refusal clear, gods/carried hazard/alliance and detention cleanup, research cancellation and listing invalidation; special actors outside scope"
+    },
+    "R05-04t": {
+      "evidence": "40d1c6 cmpcount3,jle skip;40d1f7 libc_rand()%original count and retry zero entries;40d1d9 source-1,flag0 auction,zero slot then count success; exactly3 irrespective of sale/no-bid",
+      "implemented": "only >3; Web seeded full-size sampler with selected-slot retries; draw next after preceding auction; original C RNG not emulated; stock/auction proceeds only public; v32 indexed reserve/status eligibility inherited"
+    },
+    "R05-05t": {
+      "evidence": "41d33d cash then bank; insufficiency reduces actual ebx;41d375 bankruptcy call;41d387 recipient credit after function return;41d3c1 default bank; auctions43c83b use same paymentflags0",
+      "implemented": "rent freezes actual cash+bank, exit, three optional auctions, then creditor bank credit, original active turnEnd; last survivor completes payment before Web final display; no proceeds rescue"
+    },
+    "R05-06t": {
+      "evidence": "Web continuation/state integration",
+      "implemented": "v33 finance.disposal receipt/current queue; command revision and respondent gate; pause and no roll/day/market during auction; G7 finance snapshot rollback; effect cleanup uses actual alive membership, not detention target eligibility; other callbacks untouched and explicitly deferred"
+    }
+  },
+  "implementedEntry": "rent settleDebt only",
+  "deferred": [
+    "news/fortune/company/dividend/loan insolvency callbacks: earlier credit/share reset and batched iteration require separate continuations",
+    "special actor cleanup and single-human/AI defeat menus",
+    "original libc RNG and timed auction UI",
+    "stock/tool/card listing categories",
+    "unknown tail fields and huge-value native integer overflow"
+  ]
+}

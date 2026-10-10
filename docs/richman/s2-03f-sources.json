@@ -1,0 +1,487 @@
+{
+  "referenceCommit": "ec7d70e693059d1e781d9d1cc2ad7f36d360d39e",
+  "sources": [
+    {
+      "path": "asm/rich4_news.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_news.asm",
+      "gitBlobSha1": "31601ae8258b6f9074c348ae17d52295c5f94b8e",
+      "sha256": "a2172acdbbfe52fbc57672e40a8f0d669b3c8fb6cabb1f3d5d7dd8e72ebc458a"
+    },
+    {
+      "path": "csrc/news.c",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/csrc/news.c",
+      "gitBlobSha1": "816ddea9cd826361d56d2e480f474726e2a834d5",
+      "sha256": "f9fd0ee17badef0441c1799f1ad2a529bdfcd9bef4be52b452b15982c5c28361"
+    },
+    {
+      "path": "asm/rich4_player_info.h",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_info.h",
+      "gitBlobSha1": "2f04e6aa425bba2f9345b64ce0ab4c1240ac185f",
+      "sha256": "cc17726ce054de587a42c0f335d84495e66698da2e15eb6a7b7ca28ab38604be"
+    },
+    {
+      "path": "asm/rich4_prison_utils.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_prison_utils.asm",
+      "gitBlobSha1": "96762e540959c05618816670fe7535e3ab495c97",
+      "sha256": "26984458a39e9fc06941772cc9b34931b32d85f561d08a4bddb88d450863abbc"
+    },
+    {
+      "path": "asm/rich4_hospital_utils.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_hospital_utils.asm",
+      "gitBlobSha1": "a6442121b32fc0380f3a20909590236f8e7dca5e",
+      "sha256": "ba23adbaa7ccc396f3b99d8854285ee222aea8c1b81bcfc0637e72a6e56c145a"
+    },
+    {
+      "path": "asm/rich4_player_utils.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_utils.asm",
+      "gitBlobSha1": "4bdaafa1f87f9fcd5f71dcf50f1aebd7e795d6be",
+      "sha256": "17479913576a004458908f124c4d7e94361dab41a501830d2ecb87eb7b438f01"
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_core_actions.asm",
+      "gitBlobSha1": "ebfde6c820e8a430b856d9816a926b636e0db1dc",
+      "sha256": "2874c1a3e0ca1d0da5afe4cb93e42cf2d6f6fa864dbee11d7bcaa028af07d94a"
+    },
+    {
+      "path": "asm/rich4_ui_bank.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_ui_bank.asm",
+      "gitBlobSha1": "a33182c5fa87f03271e20c43956ad11302f14baa",
+      "sha256": "bd225f868ef673c4052d145223d9564a5ded0c4eec28093811cb439ec9fc230a"
+    },
+    {
+      "path": "asm/rich4_calculate_player_wealth.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_calculate_player_wealth.asm",
+      "gitBlobSha1": "9b142d3a8173c4f7c850cd0786b60d58564f1893",
+      "sha256": "95b68c2bf328121bcb981311a2e1ad226283c0c2a1015386397fa9df5281241c"
+    },
+    {
+      "path": "asm/rich4_stocks.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_stocks.asm",
+      "gitBlobSha1": "c45cd776b51483d17f78972845b8053deeee2433",
+      "sha256": "d55e17af17da2464655f53d3b3dd32224637a37ab131c6cf483db8fbac045ea3"
+    },
+    {
+      "path": "asm/rich4_ui_stock.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_ui_stock.asm",
+      "gitBlobSha1": "cc0913dc550a049781e3b72f2df215ce84df6b28",
+      "sha256": "0e3152263c9886615fa6509fcd005f0db37a9fb850b3124ede51de868fa8ab82"
+    },
+    {
+      "path": "asm/rich4.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4.asm",
+      "gitBlobSha1": "d11a64755094435fa9953652a5a4951871fd9697",
+      "sha256": "30904cbb4f23a6b74fc1b80ad023bd7dff11b441c2c1978f768f9891d099d64a"
+    },
+    {
+      "path": "asm/rich4_card_utils.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_card_utils.asm",
+      "gitBlobSha1": "23304fd33491d039d9f50d36475fa9794acccdb2",
+      "sha256": "937d2f587f15068f1f1280ac60d4a61c0249dbde0f206bfcc1489a29591d8181"
+    }
+  ],
+  "dispatch": [
+    {
+      "id": 0,
+      "handler": "fcn_00448eca",
+      "eligibleCondition": "ref_00496b30 != 0",
+      "enabled": true
+    },
+    {
+      "id": 1,
+      "handler": "fcn_00448f45",
+      "eligibleCondition": "ref_00496b30 != 0",
+      "enabled": true
+    },
+    {
+      "id": 2,
+      "handler": "fcn_00449006",
+      "eligibleCondition": "ref_00496b60 != 0",
+      "enabled": true
+    },
+    {
+      "id": 3,
+      "handler": "fcn_00449081",
+      "eligibleCondition": "ref_00496b60 != 0",
+      "enabled": true
+    },
+    {
+      "id": 4,
+      "handler": "fcn_0044913d",
+      "eligibleCondition": "any ordinary/facility building level != 0",
+      "enabled": true
+    },
+    {
+      "id": 5,
+      "handler": "fcn_004492a0",
+      "eligibleCondition": "any ordinary/facility building level != 0",
+      "enabled": true
+    },
+    {
+      "id": 6,
+      "handler": "fcn_004494e0",
+      "eligibleCondition": "always eligible (default branch)",
+      "enabled": true
+    },
+    {
+      "id": 7,
+      "handler": "fcn_00449735",
+      "eligibleCondition": "any ordinary/facility owner == 0",
+      "enabled": true
+    },
+    {
+      "id": 8,
+      "handler": "fcn_004498b3",
+      "eligibleCondition": "any ordinary/facility owner != 0",
+      "enabled": true
+    },
+    {
+      "id": 9,
+      "handler": "fcn_00449a8a",
+      "eligibleCondition": "any ordinary/facility owner != 0",
+      "enabled": true
+    },
+    {
+      "id": 10,
+      "handler": "fcn_00449b9c",
+      "eligibleCondition": "any active player holding shares",
+      "enabled": true
+    },
+    {
+      "id": 11,
+      "handler": "fcn_00449c7c",
+      "eligibleCondition": "always eligible (default branch)",
+      "enabled": true
+    },
+    {
+      "id": 12,
+      "handler": "fcn_00449de6",
+      "eligibleCondition": "any ordinary/facility owner != 0",
+      "enabled": true
+    },
+    {
+      "id": 13,
+      "handler": "fcn_0044a029",
+      "eligibleCondition": "any active player holding shares",
+      "enabled": true
+    },
+    {
+      "id": 14,
+      "handler": "fcn_0044a220",
+      "eligibleCondition": "always eligible (default branch)",
+      "enabled": true
+    },
+    {
+      "id": 15,
+      "handler": "fcn_0044a453",
+      "eligibleCondition": "any ordinary/facility building level != 0",
+      "enabled": true
+    },
+    {
+      "id": 16,
+      "handler": "fcn_0044a5d6",
+      "eligibleCondition": "any active player walking",
+      "enabled": true
+    },
+    {
+      "id": 17,
+      "handler": "fcn_0044a657",
+      "eligibleCondition": "any active player using vehicle",
+      "enabled": true
+    },
+    {
+      "id": 18,
+      "handler": "fcn_0044a6e0",
+      "eligibleCondition": "always eligible (default branch)",
+      "enabled": true
+    },
+    {
+      "id": 19,
+      "handler": "fcn_0044a91e",
+      "eligibleCondition": "always eligible (default branch)",
+      "enabled": true
+    },
+    {
+      "id": 20,
+      "handler": "fcn_0044ab2c",
+      "eligibleCondition": "always eligible (default branch)",
+      "enabled": true
+    },
+    {
+      "id": 21,
+      "handler": "fcn_0044ac99",
+      "eligibleCondition": "always eligible (default branch)",
+      "enabled": true
+    },
+    {
+      "id": 22,
+      "handler": "fcn_0044ae89",
+      "eligibleCondition": "always eligible (default branch)",
+      "enabled": true
+    },
+    {
+      "id": 23,
+      "handler": "fcn_0044aedb",
+      "eligibleCondition": "always eligible (default branch)",
+      "enabled": true
+    },
+    {
+      "id": 24,
+      "handler": "fcn_0044b00a",
+      "eligibleCondition": "always eligible (default branch)",
+      "enabled": true
+    },
+    {
+      "id": 25,
+      "handler": "fcn_0044b055",
+      "eligibleCondition": "always eligible (default branch)",
+      "enabled": true
+    },
+    {
+      "id": 26,
+      "handler": "fcn_0044b0a0",
+      "eligibleCondition": "always eligible (default branch)",
+      "enabled": true
+    },
+    {
+      "id": 27,
+      "handler": "fcn_0044b0d1",
+      "eligibleCondition": "always eligible (default branch)",
+      "enabled": true
+    },
+    {
+      "id": 28,
+      "handler": "fcn_0044b1a3",
+      "eligibleCondition": "any stock byte+6 != 0",
+      "enabled": true
+    },
+    {
+      "id": 29,
+      "handler": "fcn_0044b25b",
+      "eligibleCondition": "owned commercial + owner passes fcn_0040d73f",
+      "enabled": true
+    },
+    {
+      "id": 30,
+      "handler": "fcn_0044b374",
+      "eligibleCondition": "always eligible (default branch)",
+      "enabled": true
+    },
+    {
+      "id": 31,
+      "handler": "fcn_0044b419",
+      "eligibleCondition": "always eligible (default branch)",
+      "enabled": true
+    },
+    {
+      "id": 32,
+      "handler": "fcn_0044b4a8",
+      "eligibleCondition": "always eligible (default branch)",
+      "enabled": true
+    },
+    {
+      "id": 33,
+      "handler": "fcn_0044b53f",
+      "eligibleCondition": "always eligible (default branch)",
+      "enabled": true
+    },
+    {
+      "id": 34,
+      "handler": "fcn_0044b57d",
+      "eligibleCondition": "always eligible (default branch)",
+      "enabled": true
+    },
+    {
+      "id": 35,
+      "handler": "fcn_0044b5f5",
+      "eligibleCondition": "any commercial funds+0x28 > 10000",
+      "enabled": true
+    }
+  ],
+  "fields": {
+    "prisonRoster": "ref_00496b30[4]",
+    "hospitalRoster": "ref_00496b60[4]",
+    "prison": "player+52 decimal",
+    "hospital": "player+53 decimal",
+    "stop": "player+56 decimal",
+    "traffic": "player+17 decimal",
+    "active": "player+21 decimal",
+    "business": "v19 only: six Japan commercial records stock byte+0x19, owner byte+0x18, maintained holder rank+0x1c; current funds+0x28 and cumulative+0x2c signed32",
+    "halts": "stock+6 byte15; global ref004990dc raw10 with128; player+60 raw15; candidate round/own-turn boundary",
+    "loans": "player+36 balance, borrow into bank+32; maximum calculate_player_wealth minus existing loans; repay bank-first",
+    "news23": "existing v15 bank bonus now skips player+36!=0 in v19 only"
+  },
+  "events": {
+    "0": {
+      "handler": "fcn_00448eca",
+      "condition": "ref_00496b30 != 0"
+    },
+    "1": {
+      "handler": "fcn_00448f45",
+      "condition": "ref_00496b30 != 0"
+    },
+    "2": {
+      "handler": "fcn_00449006",
+      "condition": "ref_00496b60 != 0"
+    },
+    "3": {
+      "handler": "fcn_00449081",
+      "condition": "ref_00496b60 != 0"
+    },
+    "4": {
+      "handler": "fcn_0044913d",
+      "condition": "any ordinary/facility building level != 0"
+    },
+    "5": {
+      "handler": "fcn_004492a0",
+      "condition": "any ordinary/facility building level != 0"
+    },
+    "6": {
+      "handler": "fcn_004494e0",
+      "condition": "always eligible (default branch)"
+    },
+    "7": {
+      "handler": "fcn_00449735",
+      "condition": "any ordinary/facility owner == 0"
+    },
+    "8": {
+      "handler": "fcn_004498b3",
+      "condition": "any ordinary/facility owner != 0"
+    },
+    "9": {
+      "handler": "fcn_00449a8a",
+      "condition": "any ordinary/facility owner != 0"
+    },
+    "10": {
+      "handler": "fcn_00449b9c",
+      "condition": "any active player holding shares"
+    },
+    "11": {
+      "handler": "fcn_00449c7c",
+      "condition": "always eligible (default branch)"
+    },
+    "12": {
+      "handler": "fcn_00449de6",
+      "condition": "any ordinary/facility owner != 0"
+    },
+    "13": {
+      "handler": "fcn_0044a029",
+      "condition": "any active player holding shares"
+    },
+    "14": {
+      "handler": "fcn_0044a220",
+      "condition": "always eligible (default branch)"
+    },
+    "15": {
+      "handler": "fcn_0044a453",
+      "condition": "any ordinary/facility building level != 0"
+    },
+    "16": {
+      "handler": "fcn_0044a5d6",
+      "condition": "any active player walking"
+    },
+    "17": {
+      "handler": "fcn_0044a657",
+      "condition": "any active player using vehicle"
+    },
+    "18": {
+      "handler": "fcn_0044a6e0",
+      "condition": "always eligible (default branch)"
+    },
+    "19": {
+      "handler": "fcn_0044a91e",
+      "condition": "always eligible (default branch)"
+    },
+    "20": {
+      "handler": "fcn_0044ab2c",
+      "condition": "always eligible (default branch)"
+    },
+    "21": {
+      "handler": "fcn_0044ac99",
+      "condition": "always eligible (default branch)"
+    },
+    "22": {
+      "handler": "fcn_0044ae89",
+      "condition": "always eligible (default branch)"
+    },
+    "23": {
+      "handler": "fcn_0044aedb",
+      "condition": "always eligible (default branch)"
+    },
+    "24": {
+      "handler": "fcn_0044b00a",
+      "condition": "always eligible (default branch)"
+    },
+    "25": {
+      "handler": "fcn_0044b055",
+      "condition": "always eligible (default branch)"
+    },
+    "26": {
+      "handler": "fcn_0044b0a0",
+      "condition": "always eligible (default branch)"
+    },
+    "27": {
+      "handler": "fcn_0044b0d1",
+      "condition": "always eligible (default branch)"
+    },
+    "28": {
+      "handler": "fcn_0044b1a3",
+      "condition": "any stock byte+6 != 0"
+    },
+    "29": {
+      "handler": "fcn_0044b25b",
+      "condition": "owned commercial + owner passes fcn_0040d73f"
+    },
+    "30": {
+      "handler": "fcn_0044b374",
+      "condition": "always eligible (default branch)"
+    },
+    "31": {
+      "handler": "fcn_0044b419",
+      "condition": "always eligible (default branch)"
+    },
+    "32": {
+      "handler": "fcn_0044b4a8",
+      "condition": "always eligible (default branch)"
+    },
+    "33": {
+      "handler": "fcn_0044b53f",
+      "condition": "always eligible (default branch)"
+    },
+    "34": {
+      "handler": "fcn_0044b57d",
+      "condition": "always eligible (default branch)"
+    },
+    "35": {
+      "handler": "fcn_0044b5f5",
+      "condition": "any commercial funds+0x28 > 10000"
+    }
+  },
+  "integration": [
+    "All36 dispatch enabled; uniform target lists in source index order; original extra speech RNG omitted as earlier candidates",
+    "36/news business snapshot restored by existing time machine; no extra RNG at initialization",
+    "Companies: ownership by maintained descending share ranking, trader goes after existing equals; no majority threshold",
+    "News4/20 projected200x200 around selected property anchor, no pixel mask recreation; no road objects removed",
+    "News29 condition active owner but draw pool all owned companies; absolution then optional redirect, detention5 no revenge",
+    "Full date/interest/default collection, company service/dividends and original bankrupt auctions are not implemented"
+  ],
+  "unknown": [
+    "Original Windows runtime crosscheck unavailable; static fixed reference candidate only",
+    "Original calendar and periodic interest remain deferred",
+    "Original bankruptcy randomized land auction remains deferred",
+    "Pixel hitmask and full commercial income/service/dividend simulation remain deferred"
+  ],
+  "localMap": {
+    "path": "docs/richman/japan-map-audit.json",
+    "sha256": "e2eba8a3517f1a73fb349a42b0ae06242f8d0df026a886133059704e445a6921",
+    "records": "six 52-byte companies; stock index byte25; initial capital36..39; current40..43 and cumulative44..47 signed little endian"
+  },
+  "differences": {
+    "news27": "Big5文案停牌10天；函数写stock+6=15，v19使用15轮候选",
+    "news29": "condition requires some active owner, candidate list includes all owned companies; retained",
+    "news35": "current funds doubles, cumulative adds doubled value, not the increment; trend byte wraps to uint8",
+    "loanCapacity": "source max is net wealth, then available loan subtracts current debt again; faithfully retained, no interest/maturity",
+    "tax13": "integer-cent deterministic market rather than x87 float, total then floor with fixed price index1",
+    "disaster": "original pixel hit scope replaced by prior 200-square anchor convention; source masks exclude road objects"
+  }
+}

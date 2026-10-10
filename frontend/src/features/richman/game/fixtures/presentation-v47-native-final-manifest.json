@@ -1,0 +1,194 @@
+{
+  "stage": "S3-04d-native-final",
+  "date": "2026-10-10",
+  "rulesId": "japan-events-candidate-v47",
+  "scope": "actual native Chrome original Japan; passive media promises/visibility and auth-only fixture; no synthetic event or error",
+  "actualCommands": 6,
+  "prefixes": [
+    1,
+    3,
+    5
+  ],
+  "fullReplay": true,
+  "prefixReplay": true,
+  "replaySHA256": "b36e1cfb30f59619083dbb6f9033905c409e437aeaee3b689cc3523377d27c82",
+  "realHiddenRestore": {
+    "status": "passed-native-tab-music-loading-and-playing",
+    "transitions": [
+      {
+        "kind": "event",
+        "trusted": true,
+        "hidden": true,
+        "state": "hidden",
+        "at": 26958.20000000298,
+        "phase": "idle",
+        "ports": [
+          {
+            "id": 0,
+            "src": "http://127.0.0.1:5178/richman/generated/audio/track02.mp3",
+            "attribute": "/richman/generated/audio/track02.mp3",
+            "paused": false,
+            "time": 0,
+            "volume": 0.35,
+            "ready": 0
+          }
+        ]
+      },
+      {
+        "kind": "event",
+        "trusted": true,
+        "hidden": false,
+        "state": "visible",
+        "at": 36376.20000000298,
+        "phase": "idle",
+        "ports": [
+          {
+            "id": 0,
+            "src": "http://127.0.0.1:5178/richman/generated/audio/track02.mp3",
+            "attribute": "/richman/generated/audio/track02.mp3",
+            "paused": true,
+            "time": 0,
+            "volume": 0.35,
+            "ready": 0
+          }
+        ]
+      },
+      {
+        "kind": "event",
+        "trusted": true,
+        "hidden": true,
+        "state": "hidden",
+        "at": 54527.29999999702,
+        "phase": "idle",
+        "ports": [
+          {
+            "id": 0,
+            "src": "http://127.0.0.1:5178/richman/generated/audio/track02.mp3",
+            "attribute": "/richman/generated/audio/track02.mp3",
+            "paused": false,
+            "time": 17.976429,
+            "volume": 0.35,
+            "ready": 4
+          }
+        ]
+      },
+      {
+        "kind": "event",
+        "trusted": true,
+        "hidden": false,
+        "state": "visible",
+        "at": 60937.20000000298,
+        "phase": "idle",
+        "ports": [
+          {
+            "id": 0,
+            "src": "http://127.0.0.1:5178/richman/generated/audio/track02.mp3",
+            "attribute": "/richman/generated/audio/track02.mp3",
+            "paused": true,
+            "time": 17.976783,
+            "volume": 0.35,
+            "ready": 4
+          }
+        ]
+      }
+    ],
+    "settled": [
+      {
+        "kind": "settled",
+        "hidden": true,
+        "state": "hidden",
+        "at": 27295.20000000298,
+        "phase": "idle",
+        "ports": [
+          {
+            "id": 0,
+            "src": "http://127.0.0.1:5178/richman/generated/audio/track02.mp3",
+            "attribute": "/richman/generated/audio/track02.mp3",
+            "paused": true,
+            "time": 0,
+            "volume": 0.35,
+            "ready": 0
+          }
+        ]
+      },
+      {
+        "kind": "settled",
+        "hidden": false,
+        "state": "visible",
+        "at": 36556.70000000298,
+        "phase": "idle",
+        "ports": [
+          {
+            "id": 0,
+            "src": "http://127.0.0.1:5178/richman/generated/audio/track02.mp3",
+            "attribute": "/richman/generated/audio/track02.mp3",
+            "paused": false,
+            "time": 0.014634,
+            "volume": 0.35,
+            "ready": 4
+          }
+        ]
+      },
+      {
+        "kind": "settled",
+        "hidden": true,
+        "state": "hidden",
+        "at": 54709,
+        "phase": "idle",
+        "ports": [
+          {
+            "id": 0,
+            "src": "http://127.0.0.1:5178/richman/generated/audio/track02.mp3",
+            "attribute": "/richman/generated/audio/track02.mp3",
+            "paused": true,
+            "time": 17.976783,
+            "volume": 0.35,
+            "ready": 4
+          }
+        ]
+      },
+      {
+        "kind": "settled",
+        "hidden": false,
+        "state": "visible",
+        "at": 61117.70000000298,
+        "phase": "idle",
+        "ports": [
+          {
+            "id": 0,
+            "src": "http://127.0.0.1:5178/richman/generated/audio/track02.mp3",
+            "attribute": "/richman/generated/audio/track02.mp3",
+            "paused": false,
+            "time": 18.170438,
+            "volume": 0.35,
+            "ready": 4
+          }
+        ]
+      }
+    ],
+    "playingHiddenDurationMs": 6409.9000000059605,
+    "positionAtHidden": 17.976783,
+    "positionBeforeRestore": 17.976783,
+    "limitation": "idle music/loading boundaries only; no active transient/G7 or moving-scene hidden case claimed"
+  },
+  "naturalShortRefusal": {
+    "status": "not-triggered",
+    "effect": "49",
+    "result": "resolved-and-playing",
+    "policyErrors": 0,
+    "abortErrors": 1,
+    "note": "AbortError during music load interrupted by real hiding is not NotAllowedError"
+  },
+  "sameTurnCompetition": {
+    "status": "not-triggered",
+    "savedRoutes": 14,
+    "savedCommands": 26845,
+    "potentialCompetitors": 0,
+    "note": "read-only cues from actual replays; no timed queue acceptance"
+  },
+  "cleanup": {
+    "ports": 4,
+    "allReleased": true
+  },
+  "errors": []
+}

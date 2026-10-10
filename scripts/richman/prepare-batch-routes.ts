@@ -1,0 +1,4 @@
+import fs from 'node:fs';
+import {planBatch} from './plan-batch-journey';
+const routes=[['terminal','batch-0',3,'dividend',10000],['dividend','batch-1',4,'dividend',10000],['landTax','batch-67',4,'landTax',10000],['stockTax','batch-21',4,'stockTax',30000]] as const;
+for(const [route,seed,count,kind,funds] of routes){const plan=planBatch(seed,count,kind,funds,3000);if(!plan)throw Error('Route no longer available: '+route);const file='/private/tmp/richman-unified-03v-'+route+'.json';if(process.env.RICHMAN_VERIFY_PLANS){const before=JSON.parse(fs.readFileSync(file,'utf8'));if(JSON.stringify(before.replay)!==JSON.stringify(plan.replay))throw Error('Route differs: '+route);}else fs.writeFileSync(file,JSON.stringify(plan,null,2));console.log(JSON.stringify({route,commands:plan.replay.commands.length,turn:plan.state.turn,kind:plan.state.finance!.batches!.last!.kind}));}

@@ -1,0 +1,12 @@
+{
+  "route": "43",
+  "seed": "traffic-group-60",
+  "commands": 15,
+  "turn": 1,
+  "players": 3,
+  "state": "3921caa2d1b51c6df701c5c97cab14c4d92aa01605261972640534c29b14ff77",
+  "events": "c1c90597d88ba23e85cd27939cd85dd0a74dfa1a0b814c9f9a02ae67c7dd61b5",
+  "fortune": [
+    43
+  ]
+}

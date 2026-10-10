@@ -1,0 +1,216 @@
+{
+  "nodeUtilsPinnedDownload": {
+    "matched": true,
+    "path": "/private/tmp/richman-node-utils-pinned.asm",
+    "sha256": "c49fef7051acf5d605d107e35fad1a580d66b39e468763ffb9e59fc2c1d286ce"
+  },
+  "stage": "S3-03b",
+  "referenceCommit": "ec7d70e693059d1e781d9d1cc2ad7f36d360d39e",
+  "nativeExecution": false,
+  "status": "static-source-audited-Web-candidate",
+  "sources": [
+    {
+      "path": "asm/rich4_node_utils.asm",
+      "sha256": "c49fef7051acf5d605d107e35fad1a580d66b39e468763ffb9e59fc2c1d286ce",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_node_utils.asm"
+    },
+    {
+      "path": "asm/rich4_objects.asm",
+      "sha256": "a2d3c8c9d6946625df6f5b26a981cbae195d445f4b5de6447dea033a11adcaf6",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_objects.asm"
+    },
+    {
+      "path": "asm/rich4_gods.asm",
+      "sha256": "c1128c8e98dbedd828e3d1dc7e0b3aae4bb97f132e618733caaef44ed8534e16",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_gods.asm"
+    },
+    {
+      "path": "asm/rich4_load_map.asm",
+      "sha256": "7a555911e15b8c947c6c281b95c23bf536dba92baca20929ab1666ed31df3987",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_load_map.asm"
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "sha256": "2874c1a3e0ca1d0da5afe4cb93e42cf2d6f6fa864dbee11d7bcaa028af07d94a",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_core_actions.asm"
+    },
+    {
+      "path": "asm/rich4_player_bankrupt.asm",
+      "sha256": "57c69d347bef382e0045b00855c17293e5cb737ed22359340894ed9b9cf8bf02",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_bankrupt.asm"
+    },
+    {
+      "path": "asm/rich4_card_songshenfu.asm",
+      "sha256": "02cac85b39b838474ae642c354a104aceb02559c00de6ee6fec04b18b80971fe",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_card_songshenfu.asm"
+    },
+    {
+      "path": "asm/rich4.asm",
+      "sha256": "30904cbb4f23a6b74fc1b80ad023bd7dff11b441c2c1978f768f9891d099d64a",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4.asm"
+    }
+  ],
+  "mapAuditSHA256": "e2eba8a3517f1a73fb349a42b0ae06242f8d0df026a886133059704e445a6921",
+  "staticBlocked": [
+    {
+      "id": 23,
+      "x": 599,
+      "y": 2063,
+      "statusBits": 2147483659
+    },
+    {
+      "id": 24,
+      "x": 599,
+      "y": 2016,
+      "statusBits": 2147483655
+    },
+    {
+      "id": 25,
+      "x": 552,
+      "y": 1968,
+      "statusBits": 2147483660
+    },
+    {
+      "id": 26,
+      "x": 503,
+      "y": 1968,
+      "statusBits": 2147483656
+    },
+    {
+      "id": 27,
+      "x": 456,
+      "y": 2016,
+      "statusBits": 2147483659
+    },
+    {
+      "id": 28,
+      "x": 408,
+      "y": 2064,
+      "statusBits": 2147483657
+    },
+    {
+      "id": 29,
+      "x": 336,
+      "y": 2065,
+      "statusBits": 2147483660
+    }
+  ],
+  "facts": [
+    {
+      "id": "PAIR-01",
+      "file": "rich4_load_map.asm",
+      "lines": [
+        255,
+        307
+      ],
+      "finding": "Object type table initialized; odd slots1,3,5,7,9,11 then13/14 placed. This increment only ordinary1..10;12/15 preserve prior candidate availability."
+    },
+    {
+      "id": "PAIR-02",
+      "file": "rich4_node_utils.asm",
+      "lines": [
+        52,
+        146
+      ],
+      "finding": "IDs1..numNodes, adjacency required; +0x24 &0x80ffff00 must be zero. Draw full eligible list; reject until |dx|>=300 OR |dy|>=300; origin0 skips distance. No native empty guard."
+    },
+    {
+      "id": "PAIR-03",
+      "file": "rich4_objects.asm",
+      "lines": [
+        24,
+        137
+      ],
+      "finding": "Ordinary type chooses one fixed slot; node nonzero means busy, loop exits without modifying it. Sampler ran in caller before busy check."
+    },
+    {
+      "id": "PAIR-04",
+      "file": "rich4_objects.asm",
+      "lines": [
+        139,
+        254
+      ],
+      "finding": "Removal detaches carrier/modifiers, clears road occupancy for free object, clears object node/time/carrier; zero-based index<12 uses adjacent XOR1 slot after sampling from old node."
+    },
+    {
+      "id": "PAIR-05",
+      "file": "rich4_gods.asm",
+      "lines": [
+        472,
+        550
+      ],
+      "finding": "Attach temporarily zeros incoming slot node before old detach, then assigns current player node, carrier and7/13. Native transient reentrancy retained as a difference for forced double-occupied pairs; ordinary invariant prevents both pair members existing naturally."
+    },
+    {
+      "id": "PAIR-06",
+      "file": "rich4_player_core_actions.asm",
+      "lines": [
+        4459,
+        4484
+      ],
+      "finding": "Expiry uses detach/remove, not calendar five-round replenishment."
+    },
+    {
+      "id": "PAIR-07",
+      "file": "rich4_player_bankrupt.asm",
+      "lines": [
+        82,
+        112
+      ],
+      "finding": "Exit removes attached god then carried bomb before later asset handling; paired placement is not debt payment or revival."
+    },
+    {
+      "id": "PAIR-08",
+      "file": "rich4_card_songshenfu.asm",
+      "lines": [
+        16,
+        64
+      ],
+      "finding": "Dismiss routes carried bomb through remove and applicable god through detach."
+    },
+    {
+      "id": "PAIR-09",
+      "file": "rich4_player_core_actions.asm",
+      "lines": [
+        4830,
+        4873
+      ],
+      "finding": "Day15 dividends/lottery precede month-change13/14 removal/replacement; special objects not ordinary gods."
+    },
+    {
+      "id": "PAIR-11",
+      "file": "rich4_player_core_actions.asm",
+      "lines": [
+        2584,
+        2602
+      ],
+      "finding": "Type11 dispatch differs from attach12;13 dispatches random-tool gift;14 dispatches point gift. Not all first14 slots are attachable gods."
+    },
+    {
+      "id": "PAIR-12",
+      "file": "rich4_player_core_actions.asm",
+      "lines": [
+        2901,
+        3148
+      ],
+      "finding": "11 removes object then branches on ordinary vehicle, on-foot path reaches hospital3;13 ordinary recipient removes object only on successful random-tool receipt;14 ordinary path removes object and adds500 to points+48. Special actor branches and full gates deferred."
+    },
+    {
+      "id": "PAIR-10",
+      "file": "rich4.asm",
+      "lines": [
+        4320,
+        4357
+      ],
+      "finding": "Area destruction calls shared remove object. Web v45 preserves G7 fixed initial hit-set semantics; native mutable road traversal equivalence not claimed."
+    }
+  ],
+  "implemented": "five ordinary pairs1/2,3/4,5/6,7/8,9/10; replacement/dismiss/expiry/exit/G7 remove; seeded full-list rejection; snapshot restore",
+  "differences": [
+    "12/15 retain v44 initialization/refill;11/13/14 and11/12 pair deferred",
+    "seeded RNG is not libc rand; empty/no-distant guard and4096 retry cap are Web safety behavior",
+    "no forced double-pair transient occupancy emulation",
+    "G7 blast fixed hit list, not native mutable road traversal",
+    "no native animations/spinner or autonomous roaming claim"
+  ]
+}

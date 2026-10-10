@@ -1,0 +1,976 @@
+{
+  "players": 2,
+  "commands": 1479,
+  "auto": 301,
+  "human": 296,
+  "acquisitions": [
+    {
+      "ai": true,
+      "id": "player-2",
+      "item": "card:24",
+      "turn": 54,
+      "cost": 50
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "item": "card:22",
+      "turn": 120,
+      "cost": 10
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "item": "card:25",
+      "turn": 120,
+      "cost": 30
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "item": "card:22",
+      "turn": 150,
+      "cost": 10
+    }
+  ],
+  "uses": [
+    {
+      "ai": true,
+      "id": "player-2",
+      "item": "card:25",
+      "turn": 122,
+      "target": {
+        "kind": "stock",
+        "id": "jp:25"
+      },
+      "alliesBefore": {
+        "player-1": null,
+        "player-2": null
+      },
+      "choice": {
+        "target": {
+          "kind": "stock",
+          "id": "jp:25"
+        },
+        "score": 280,
+        "gain": 2800,
+        "own": 0,
+        "friend": 0,
+        "enemy": -2800,
+        "next": 12800
+      },
+      "godBefore": {
+        "id": "god-24",
+        "type": 2,
+        "node": 9,
+        "carrier": "player-2",
+        "remaining": 2
+      },
+      "godAfter": {
+        "id": "god-24",
+        "type": 2,
+        "node": 9,
+        "carrier": "player-2",
+        "remaining": 2
+      },
+      "quoteBefore": {
+        "momentum": 10,
+        "noise": 11.47822380065918,
+        "id": "jp:25",
+        "base": 14200,
+        "price": 15600,
+        "pool": 4900,
+        "quota": 950,
+        "trend": null,
+        "remaining": 0,
+        "history": [
+          9900,
+          9200,
+          8400,
+          7600,
+          8050,
+          8850,
+          8500,
+          7900,
+          8150,
+          8600,
+          9450,
+          9700,
+          9250,
+          8800,
+          9650,
+          10600,
+          11650,
+          12800,
+          14050,
+          14600,
+          14850,
+          13400,
+          12100,
+          10900,
+          9850,
+          10000,
+          11000,
+          12100,
+          13100,
+          12900,
+          13600,
+          12550,
+          11300,
+          10200,
+          9200,
+          8300,
+          7500,
+          6750,
+          6800,
+          7450,
+          8150,
+          8950,
+          9800,
+          10750,
+          11800,
+          12950,
+          14200,
+          15600
+        ]
+      },
+      "quoteAfter": {
+        "momentum": -10,
+        "noise": 11.47822380065918,
+        "id": "jp:25",
+        "base": 14200,
+        "price": 12800,
+        "pool": 4900,
+        "quota": 950,
+        "trend": "black",
+        "remaining": 2,
+        "history": [
+          9900,
+          9200,
+          8400,
+          7600,
+          8050,
+          8850,
+          8500,
+          7900,
+          8150,
+          8600,
+          9450,
+          9700,
+          9250,
+          8800,
+          9650,
+          10600,
+          11650,
+          12800,
+          14050,
+          14600,
+          14850,
+          13400,
+          12100,
+          10900,
+          9850,
+          10000,
+          11000,
+          12100,
+          13100,
+          12900,
+          13600,
+          12550,
+          11300,
+          10200,
+          9200,
+          8300,
+          7500,
+          6750,
+          6800,
+          7450,
+          8150,
+          8950,
+          9800,
+          10750,
+          11800,
+          12950,
+          14200,
+          12800
+        ]
+      }
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "item": "card:25",
+      "turn": 146,
+      "target": {
+        "kind": "stock",
+        "id": "jp:33"
+      },
+      "alliesBefore": {
+        "player-1": null,
+        "player-2": null
+      },
+      "choice": {
+        "target": {
+          "kind": "stock",
+          "id": "jp:33"
+        },
+        "score": 260,
+        "gain": 2600,
+        "own": 0,
+        "friend": 0,
+        "enemy": -2600,
+        "next": 15950
+      },
+      "godBefore": {
+        "id": "god-19",
+        "type": 4,
+        "node": 70,
+        "carrier": "player-2",
+        "remaining": 3
+      },
+      "godAfter": {
+        "id": "god-19",
+        "type": 4,
+        "node": 70,
+        "carrier": "player-2",
+        "remaining": 3
+      },
+      "quoteBefore": {
+        "momentum": 5.477005958557129,
+        "noise": -3.041844606399536,
+        "id": "jp:33",
+        "base": 17650,
+        "price": 18550,
+        "pool": 9900,
+        "quota": 2446,
+        "trend": null,
+        "remaining": 0,
+        "history": [
+          22500,
+          21100,
+          19800,
+          18500,
+          16700,
+          15400,
+          15200,
+          15700,
+          16000,
+          15300,
+          14850,
+          13550,
+          13600,
+          12800,
+          12500,
+          11950,
+          12250,
+          13450,
+          14700,
+          16100,
+          17700,
+          18500,
+          20300,
+          22300,
+          22600,
+          23800,
+          23500,
+          23700,
+          22500,
+          20300,
+          19300,
+          17400,
+          15700,
+          14750,
+          14200,
+          13000,
+          12650,
+          11600,
+          10450,
+          10400,
+          10400,
+          9850,
+          9450,
+          9550,
+          10500,
+          11550,
+          12700,
+          13950,
+          14200,
+          14050,
+          13300,
+          12400,
+          12350,
+          12700,
+          13350,
+          14650,
+          16050,
+          17650,
+          18550
+        ]
+      },
+      "quoteAfter": {
+        "momentum": -10,
+        "noise": -3.041844606399536,
+        "id": "jp:33",
+        "base": 17650,
+        "price": 15950,
+        "pool": 9900,
+        "quota": 2446,
+        "trend": "black",
+        "remaining": 2,
+        "history": [
+          22500,
+          21100,
+          19800,
+          18500,
+          16700,
+          15400,
+          15200,
+          15700,
+          16000,
+          15300,
+          14850,
+          13550,
+          13600,
+          12800,
+          12500,
+          11950,
+          12250,
+          13450,
+          14700,
+          16100,
+          17700,
+          18500,
+          20300,
+          22300,
+          22600,
+          23800,
+          23500,
+          23700,
+          22500,
+          20300,
+          19300,
+          17400,
+          15700,
+          14750,
+          14200,
+          13000,
+          12650,
+          11600,
+          10450,
+          10400,
+          10400,
+          9850,
+          9450,
+          9550,
+          10500,
+          11550,
+          12700,
+          13950,
+          14200,
+          14050,
+          13300,
+          12400,
+          12350,
+          12700,
+          13350,
+          14650,
+          16050,
+          17650,
+          15950
+        ]
+      }
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "item": "card:22",
+      "turn": 194,
+      "target": {
+        "kind": "player",
+        "id": "player-2"
+      },
+      "alliesBefore": {
+        "player-1": null,
+        "player-2": null
+      },
+      "choice": {
+        "target": {
+          "kind": "player",
+          "id": "player-2"
+        },
+        "score": 400
+      },
+      "godBefore": {
+        "id": "god-33",
+        "type": 5,
+        "node": 33,
+        "carrier": "player-2",
+        "remaining": 6
+      },
+      "godAfter": null,
+      "quoteBefore": null,
+      "quoteAfter": null
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "item": "card:23",
+      "turn": 208,
+      "target": {
+        "kind": "god",
+        "id": "god-28"
+      },
+      "alliesBefore": {
+        "player-1": null,
+        "player-2": null
+      },
+      "choice": {
+        "target": {
+          "kind": "god",
+          "id": "god-28"
+        },
+        "score": 100
+      },
+      "godBefore": null,
+      "godAfter": {
+        "id": "god-28",
+        "type": 2,
+        "node": 103,
+        "carrier": "player-2",
+        "remaining": 7
+      },
+      "quoteBefore": null,
+      "quoteAfter": null
+    }
+  ],
+  "cancellations": [],
+  "stockTrades": [
+    {
+      "id": "player-1",
+      "action": {
+        "type": "stockTrade",
+        "stockId": "jp:24",
+        "side": "buy",
+        "quantity": 100
+      }
+    },
+    {
+      "id": "player-1",
+      "action": {
+        "type": "stockTrade",
+        "stockId": "jp:25",
+        "side": "buy",
+        "quantity": 100
+      }
+    },
+    {
+      "id": "player-1",
+      "action": {
+        "type": "stockTrade",
+        "stockId": "jp:27",
+        "side": "buy",
+        "quantity": 100
+      }
+    },
+    {
+      "id": "player-1",
+      "action": {
+        "type": "stockTrade",
+        "stockId": "jp:29",
+        "side": "buy",
+        "quantity": 100
+      }
+    },
+    {
+      "id": "player-1",
+      "action": {
+        "type": "stockTrade",
+        "stockId": "jp:35",
+        "side": "buy",
+        "quantity": 100
+      }
+    },
+    {
+      "id": "player-1",
+      "action": {
+        "type": "stockTrade",
+        "stockId": "jp:26",
+        "side": "buy",
+        "quantity": 100
+      }
+    },
+    {
+      "id": "player-1",
+      "action": {
+        "type": "stockTrade",
+        "stockId": "jp:33",
+        "side": "buy",
+        "quantity": 100
+      }
+    }
+  ],
+  "gains": [
+    {
+      "playerId": "player-2",
+      "item": "card:24",
+      "amount": 1,
+      "turn": 54,
+      "action": "buyItem",
+      "eventTypes": [
+        "itemBought"
+      ],
+      "notices": []
+    },
+    {
+      "playerId": "player-2",
+      "item": "card:22",
+      "amount": 1,
+      "turn": 120,
+      "action": "buyItem",
+      "eventTypes": [
+        "itemBought"
+      ],
+      "notices": []
+    },
+    {
+      "playerId": "player-2",
+      "item": "card:25",
+      "amount": 1,
+      "turn": 120,
+      "action": "buyItem",
+      "eventTypes": [
+        "itemBought"
+      ],
+      "notices": []
+    },
+    {
+      "playerId": "player-2",
+      "item": "card:23",
+      "amount": 1,
+      "turn": 138,
+      "action": "animationDone",
+      "eventTypes": [
+        "nodeEntered",
+        "g6Notice",
+        "landed",
+        "propertyOffered"
+      ],
+      "notices": [
+        {
+          "type": "g6Notice",
+          "message": "玩家2附身大福神，期限7次自身行动边界。",
+          "sequence": 2000,
+          "commandId": "command-1025",
+          "playerId": "player-2",
+          "turn": 138
+        },
+        {
+          "type": "g6Notice",
+          "message": "玩家2获得card:13。",
+          "sequence": 2001,
+          "commandId": "command-1025",
+          "playerId": "player-2",
+          "turn": 138
+        },
+        {
+          "type": "g6Notice",
+          "message": "玩家2获得card:23。",
+          "sequence": 2002,
+          "commandId": "command-1025",
+          "playerId": "player-2",
+          "turn": 138
+        }
+      ]
+    },
+    {
+      "playerId": "player-2",
+      "item": "card:25",
+      "amount": 1,
+      "turn": 145,
+      "action": "magic",
+      "eventTypes": [
+        "magicResolved"
+      ],
+      "notices": []
+    },
+    {
+      "playerId": "player-2",
+      "item": "card:22",
+      "amount": 1,
+      "turn": 150,
+      "action": "buyItem",
+      "eventTypes": [
+        "itemBought"
+      ],
+      "notices": []
+    }
+  ],
+  "relations": [],
+  "notices": [
+    {
+      "type": "g6Notice",
+      "message": "玩家1附身恶魔，期限7次自身行动边界。",
+      "sequence": 7,
+      "commandId": "command-4",
+      "playerId": "player-1",
+      "turn": 1
+    },
+    {
+      "type": "g6Notice",
+      "message": "玩家1的神仙期限结束。",
+      "sequence": 223,
+      "commandId": "command-123",
+      "playerId": "player-1",
+      "turn": 15
+    },
+    {
+      "type": "g6Notice",
+      "message": "玩家1附身小衰神，期限7次自身行动边界。",
+      "sequence": 320,
+      "commandId": "command-175",
+      "playerId": "player-1",
+      "turn": 21
+    },
+    {
+      "type": "g6Notice",
+      "message": "玩家2附身衰神，期限13次自身行动边界。",
+      "sequence": 366,
+      "commandId": "command-200",
+      "playerId": "player-2",
+      "turn": 24
+    },
+    {
+      "type": "g6Notice",
+      "message": "玩家2附身土地公，期限7次自身行动边界。",
+      "sequence": 496,
+      "commandId": "command-265",
+      "playerId": "player-2",
+      "turn": 32
+    },
+    {
+      "type": "g6Notice",
+      "message": "玩家2附身恶魔，期限7次自身行动边界。",
+      "sequence": 529,
+      "commandId": "command-282",
+      "playerId": "player-2",
+      "turn": 34
+    },
+    {
+      "type": "g6Notice",
+      "message": "玩家1的神仙期限结束。",
+      "sequence": 534,
+      "commandId": "command-283",
+      "playerId": "player-1",
+      "turn": 35
+    },
+    {
+      "type": "g6Notice",
+      "message": "玩家2附身大福神，期限7次自身行动边界。",
+      "sequence": 590,
+      "commandId": "command-314",
+      "playerId": "player-2",
+      "turn": 38
+    },
+    {
+      "type": "g6Notice",
+      "message": "玩家1附身小财神，期限7次自身行动边界。",
+      "sequence": 689,
+      "commandId": "command-363",
+      "playerId": "player-1",
+      "turn": 45
+    },
+    {
+      "type": "g6Notice",
+      "message": "玩家1附身土地公，期限7次自身行动边界。",
+      "sequence": 757,
+      "commandId": "command-396",
+      "playerId": "player-1",
+      "turn": 49
+    },
+    {
+      "type": "g6Notice",
+      "message": "玩家2的神仙期限结束。",
+      "sequence": 786,
+      "commandId": "command-411",
+      "playerId": "player-2",
+      "turn": 52
+    },
+    {
+      "type": "g6Notice",
+      "message": "玩家1附身恶魔，期限7次自身行动边界。",
+      "sequence": 882,
+      "commandId": "command-462",
+      "playerId": "player-1",
+      "turn": 57
+    },
+    {
+      "type": "g6Notice",
+      "message": "玩家1的神仙期限结束。",
+      "sequence": 1097,
+      "commandId": "command-575",
+      "playerId": "player-1",
+      "turn": 71
+    },
+    {
+      "type": "g6Notice",
+      "message": "玩家2附身小穷神，期限7次自身行动边界。",
+      "sequence": 1244,
+      "commandId": "command-649",
+      "playerId": "player-2",
+      "turn": 82
+    },
+    {
+      "type": "g6Notice",
+      "message": "玩家1附身小财神，期限7次自身行动边界。",
+      "sequence": 1257,
+      "commandId": "command-655",
+      "playerId": "player-1",
+      "turn": 83
+    },
+    {
+      "type": "g6Notice",
+      "message": "玩家2附身大财神，期限7次自身行动边界。",
+      "sequence": 1300,
+      "commandId": "command-677",
+      "playerId": "player-2",
+      "turn": 86
+    },
+    {
+      "type": "g6Notice",
+      "message": "玩家1的神仙期限结束。",
+      "sequence": 1454,
+      "commandId": "command-753",
+      "playerId": "player-1",
+      "turn": 97
+    },
+    {
+      "type": "g6Notice",
+      "message": "玩家2附身小衰神，期限7次自身行动边界。",
+      "sequence": 1470,
+      "commandId": "command-763",
+      "playerId": "player-2",
+      "turn": 98
+    },
+    {
+      "type": "g6Notice",
+      "message": "玩家1附身大衰神，期限7次自身行动边界。",
+      "sequence": 1490,
+      "commandId": "command-771",
+      "playerId": "player-1",
+      "turn": 99
+    },
+    {
+      "type": "g6Notice",
+      "message": "玩家1附身小财神，期限7次自身行动边界。",
+      "sequence": 1524,
+      "commandId": "command-787",
+      "playerId": "player-1",
+      "turn": 101
+    },
+    {
+      "type": "g6Notice",
+      "message": "玩家2的神仙期限结束。",
+      "sequence": 1660,
+      "commandId": "command-858",
+      "playerId": "player-2",
+      "turn": 112
+    },
+    {
+      "type": "g6Notice",
+      "message": "玩家2附身大财神，期限7次自身行动边界。",
+      "sequence": 1675,
+      "commandId": "command-866",
+      "playerId": "player-2",
+      "turn": 112
+    },
+    {
+      "type": "g6Notice",
+      "message": "玩家1的神仙期限结束。",
+      "sequence": 1719,
+      "commandId": "command-886",
+      "playerId": "player-1",
+      "turn": 115
+    },
+    {
+      "type": "g6Notice",
+      "message": "玩家1附身天使，期限7次自身行动边界。",
+      "sequence": 1752,
+      "commandId": "command-903",
+      "playerId": "player-1",
+      "turn": 117
+    },
+    {
+      "type": "g6Notice",
+      "message": "玩家2的神仙期限结束。",
+      "sequence": 1875,
+      "commandId": "command-968",
+      "playerId": "player-2",
+      "turn": 126
+    },
+    {
+      "type": "g6Notice",
+      "message": "玩家1的神仙期限结束。",
+      "sequence": 1934,
+      "commandId": "command-996",
+      "playerId": "player-1",
+      "turn": 131
+    },
+    {
+      "type": "g6Notice",
+      "message": "玩家2附身小衰神，期限7次自身行动边界。",
+      "sequence": 1964,
+      "commandId": "command-1011",
+      "playerId": "player-2",
+      "turn": 134
+    },
+    {
+      "type": "g6Notice",
+      "message": "玩家2附身大福神，期限7次自身行动边界。",
+      "sequence": 2000,
+      "commandId": "command-1025",
+      "playerId": "player-2",
+      "turn": 138
+    },
+    {
+      "type": "g6Notice",
+      "message": "玩家1附身衰神，期限13次自身行动边界。",
+      "sequence": 2045,
+      "commandId": "command-1045",
+      "playerId": "player-1",
+      "turn": 141
+    },
+    {
+      "type": "g6Notice",
+      "message": "玩家2的神仙期限结束。",
+      "sequence": 2187,
+      "commandId": "command-1118",
+      "playerId": "player-2",
+      "turn": 152
+    },
+    {
+      "type": "g6Notice",
+      "message": "玩家1附身小穷神，期限7次自身行动边界。",
+      "sequence": 2322,
+      "commandId": "command-1181",
+      "playerId": "player-1",
+      "turn": 165
+    },
+    {
+      "type": "g6Notice",
+      "message": "玩家1附身大衰神，期限7次自身行动边界。",
+      "sequence": 2426,
+      "commandId": "command-1235",
+      "playerId": "player-1",
+      "turn": 173
+    },
+    {
+      "type": "g6Notice",
+      "message": "玩家1附身小衰神，期限7次自身行动边界。",
+      "sequence": 2459,
+      "commandId": "command-1249",
+      "playerId": "player-1",
+      "turn": 177
+    },
+    {
+      "type": "g6Notice",
+      "message": "玩家1的神仙期限结束。",
+      "sequence": 2631,
+      "commandId": "command-1330",
+      "playerId": "player-1",
+      "turn": 191
+    },
+    {
+      "type": "g6Notice",
+      "message": "玩家2附身小穷神，期限7次自身行动边界。",
+      "sequence": 2653,
+      "commandId": "command-1342",
+      "playerId": "player-2",
+      "turn": 192
+    },
+    {
+      "type": "g6Notice",
+      "message": "玩家1附身大穷神，期限7次自身行动边界。",
+      "sequence": 2752,
+      "commandId": "command-1392",
+      "playerId": "player-1",
+      "turn": 199
+    },
+    {
+      "type": "g6Notice",
+      "message": "玩家2附身大财神，期限7次自身行动边界。",
+      "sequence": 2900,
+      "commandId": "command-1471",
+      "playerId": "player-2",
+      "turn": 208
+    }
+  ],
+  "prefixes": [
+    "god-attached",
+    "daily-market-before",
+    "daily-market-after",
+    "human-stock-before",
+    "human-stock-after",
+    "god-expired",
+    "card:24-received",
+    "card:24-bought",
+    "card:22-received",
+    "card:22-bought",
+    "card:25-received",
+    "card:25-bought",
+    "card:25-paused",
+    "card:25-resumed",
+    "card:25-confirm-before",
+    "card:25-confirm-after",
+    "card:23-received",
+    "card:22-paused",
+    "card:22-resumed",
+    "card:22-confirm-before",
+    "card:22-confirm-after",
+    "card:23-paused",
+    "card:23-resumed",
+    "card:23-confirm-before",
+    "card:23-confirm-after"
+  ],
+  "report": {
+    "robotPreviews": [],
+    "policy": "gods-v1",
+    "toolWindows": [
+      "tool:08",
+      "tool:09",
+      "card:13",
+      "card:25",
+      "card:07",
+      "card:22",
+      "card:23"
+    ],
+    "crossChecks": [],
+    "route": "2",
+    "terminal": false,
+    "players": 2,
+    "normalSpeed": true,
+    "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+    "commands": 1479,
+    "auto": 301,
+    "human": 296,
+    "lifecycle": [
+      "pause stops waiting",
+      "resume",
+      "reset dialog cancel",
+      "reset",
+      "replace with humans",
+      "exit cleanup",
+      "fullscreen",
+      "390px"
+    ],
+    "cleanup": {
+      "raf": 0,
+      "canvas": 0
+    },
+    "errors": []
+  },
+  "hashes": {
+    "replay": "2aab86e8c7aeff7a700fc554c178f58634cba89a83f0e756e57f9ad6badecab1",
+    "state": "c13567ce5127b65f2c7791eee0ffa747d310e2584b0371a8a97f03855ea2a928",
+    "events": "019c6076854e0d3d026c68fccb31cb54ad9c344e055b9bd3f56a1a1dddf2f1dc"
+  }
+}

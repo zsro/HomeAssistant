@@ -1,0 +1,364 @@
+{
+  "stage": "S3-01b",
+  "rulesId": "japan-events-candidate-v44",
+  "fingerprint": "f9dbb7e9",
+  "policy": "basic-v1",
+  "semanticIncrement": false,
+  "runtimeChanged": false,
+  "nativeExecution": false,
+  "priorNativeAudit": "s3-01a-sources.json",
+  "referenceCommitFromPriorAudit": "ec7d70e693059d1e781d9d1cc2ad7f36d360d39e",
+  "sources": [
+    {
+      "path": "frontend/src/features/richman/game/computer.ts",
+      "sha256": "46a49196cd6f64565c202fcc08fe6102eb0bb435207977231c9a2b20c45a40a7",
+      "anchors": [
+        {
+          "text": "decisionPlayer",
+          "lines": [
+            10,
+            19
+          ]
+        },
+        {
+          "text": "COMPUTER_DELAY",
+          "lines": [
+            6
+          ]
+        },
+        {
+          "text": "case 'debt'",
+          "lines": [
+            30
+          ]
+        },
+        {
+          "text": "case 'reaction'",
+          "lines": [
+            32
+          ]
+        },
+        {
+          "text": "case 'auction'",
+          "lines": [
+            31
+          ]
+        }
+      ],
+      "grade": "workspace code audit; unchanged from S3-01a baseline"
+    },
+    {
+      "path": "frontend/src/features/richman/game/session.ts",
+      "sha256": "815a599a89d0cf6158c110483b95166e959820ce3ee8eedb969ccca99e8aecd7",
+      "anchors": [
+        {
+          "text": "private send",
+          "lines": [
+            247
+          ]
+        },
+        {
+          "text": "dispose()",
+          "lines": [
+            374
+          ]
+        },
+        {
+          "text": "tick(milliseconds",
+          "lines": [
+            376,
+            378
+          ]
+        },
+        {
+          "text": "bid(decisionId",
+          "lines": [
+            404
+          ]
+        },
+        {
+          "text": "react(decisionId",
+          "lines": [
+            405
+          ]
+        }
+      ],
+      "grade": "workspace code audit; unchanged from S3-01a baseline"
+    },
+    {
+      "path": "frontend/src/features/richman/game/disposal.ts",
+      "sha256": "26834d495ff970dbe557bd50aaff9b85e8204f524c518672b2ea84e23d10eb3e",
+      "anchors": [
+        {
+          "text": "function complete",
+          "lines": [
+            21
+          ]
+        },
+        {
+          "text": "beginRentDisposal",
+          "lines": [
+            23
+          ]
+        },
+        {
+          "text": "continueDisposal",
+          "lines": [
+            43,
+            46
+          ]
+        },
+        {
+          "text": "publicFund+=amount",
+          "lines": [
+            39
+          ]
+        }
+      ],
+      "grade": "workspace code audit; unchanged from S3-01a baseline"
+    },
+    {
+      "path": "frontend/src/features/richman/game/payments.ts",
+      "sha256": "cb611dfcea22ee1c620918632ac099bbfb7d12a95476331c938ea121024d91da",
+      "anchors": [
+        {
+          "text": "resumePayment",
+          "lines": [
+            38
+          ]
+        },
+        {
+          "text": "paymentCompleted",
+          "lines": [
+            13,
+            64
+          ]
+        }
+      ],
+      "grade": "workspace code audit; unchanged from S3-01a baseline"
+    },
+    {
+      "path": "frontend/src/features/richman/game/g3.ts",
+      "sha256": "ea51f1c7c9be00d7ed055e9dd13cb464732992a266eaededf717b60b2e4a69e0",
+      "anchors": [
+        {
+          "text": "applyAttack",
+          "lines": [
+            149,
+            180,
+            204
+          ]
+        },
+        {
+          "text": "offerRent",
+          "lines": [
+            182,
+            208
+          ]
+        },
+        {
+          "text": "reactionAnswered",
+          "lines": [
+            202
+          ]
+        }
+      ],
+      "grade": "workspace code audit; unchanged from S3-01a baseline"
+    },
+    {
+      "path": "frontend/src/pages/RichmanPage.tsx",
+      "sha256": "ae5024ef544624fdebc0380b2edbc0819eb87c8f1f80d53ab53d542826e1e9a7",
+      "anchors": [
+        {
+          "text": "rm-controlled-actions",
+          "lines": [
+            245
+          ]
+        },
+        {
+          "text": "openSetup",
+          "lines": [
+            152,
+            203,
+            238,
+            281
+          ]
+        }
+      ],
+      "grade": "workspace code audit; unchanged from S3-01a baseline"
+    },
+    {
+      "path": "frontend/src/features/richman/scene.ts",
+      "sha256": "fda01f83f1dbbf08a634c80bcc6214ade43ef0d4d217894cd894366c3bee91f2",
+      "anchors": [
+        {
+          "text": "this.model.dispose()",
+          "lines": [
+            457
+          ]
+        }
+      ],
+      "grade": "workspace code audit; unchanged from S3-01a baseline"
+    },
+    {
+      "path": "frontend/src/features/richman/game/engine.ts",
+      "sha256": "edb72546f0f2c7269d77867855f24b764457c3b9f6a658632f50444eedada425",
+      "anchors": [
+        {
+          "text": "command.expectedRevision",
+          "lines": [
+            351
+          ]
+        },
+        {
+          "text": "command.playerId !==",
+          "lines": [
+            356
+          ]
+        },
+        {
+          "text": "case 'settleDebt'",
+          "lines": [
+            1124
+          ]
+        },
+        {
+          "text": "resumePayment(state",
+          "lines": [
+            1219
+          ]
+        }
+      ],
+      "grade": "workspace implementation audit"
+    },
+    {
+      "path": "frontend/src/features/richman/game/g6-market.ts",
+      "sha256": "e41019104edd4b8c5c55f499650526c6af815d42bcc254b6205476ce897e1333",
+      "anchors": [
+        {
+          "text": "Math.ceil(deficit",
+          "lines": [
+            79
+          ]
+        },
+        {
+          "text": "stockTraded",
+          "lines": [
+            60
+          ]
+        }
+      ],
+      "grade": "workspace implementation audit"
+    },
+    {
+      "path": "scripts/richman/verify-computer-circuit.ts",
+      "sha256": "5770391315a51506b6e1c8f3d9c3312f29fd05125b93e21e076f8fa5f475aa5a",
+      "anchors": [
+        {
+          "text": "computerDecision(b)",
+          "lines": [
+            18
+          ]
+        },
+        {
+          "text": "exitContext",
+          "lines": [
+            10,
+            43,
+            52,
+            58
+          ]
+        },
+        {
+          "text": "necessary-stock-sale",
+          "lines": [
+            37
+          ]
+        },
+        {
+          "text": "replayGame(nodes",
+          "lines": [
+            64,
+            65
+          ]
+        }
+      ],
+      "grade": "new acceptance implementation; not native-rule evidence"
+    },
+    {
+      "path": "scripts/richman/computer-circuit-ui-browser.cjs",
+      "sha256": "5e433bccfe0a21f8bc51f505d028ee43f4765ab3597dde4eac3dd3389de463a6",
+      "anchors": [
+        {
+          "text": "crossChecks",
+          "lines": [
+            29,
+            74,
+            76,
+            102
+          ]
+        },
+        {
+          "text": "terminal",
+          "lines": [
+            4,
+            102
+          ]
+        },
+        {
+          "text": "failure-replay",
+          "lines": [
+            103
+          ]
+        }
+      ],
+      "grade": "new acceptance implementation; not native-rule evidence"
+    },
+    {
+      "path": "frontend/src/features/richman/game/computer-circuit.test.ts",
+      "sha256": "d2c47e3c886d1c10ab72af71b6271927843b246961b6d18d557890488a72b496",
+      "anchors": [
+        {
+          "text": "atCross",
+          "lines": [
+            6,
+            11,
+            14,
+            15,
+            17
+          ]
+        },
+        {
+          "text": "pause(false)",
+          "lines": [
+            13
+          ]
+        },
+        {
+          "text": "dispose()",
+          "lines": [
+            15
+          ]
+        }
+      ],
+      "grade": "new acceptance implementation; not native-rule evidence"
+    }
+  ],
+  "evidenceMethod": [
+    "Read controller ownership, session guards and lifecycle directly",
+    "Plan only legal original-Japan commands, with computerDecision for every computer responder",
+    "Run normal-speed browser via auth-only fixture; human UI clicks, actual session AI, no game-state injection",
+    "Archive only successful UI report plus actual downloaded replay; independently check responder, quoted debts, share quantities/averages, public receipts and prefix/full replay"
+  ],
+  "preservation": {
+    "oldFixtureJsonByteUnchanged": 286,
+    "oldRichmanFilesChanged": [],
+    "pageUnchanged": true
+  },
+  "differences": [
+    "Web basic-v1 is not native AI or difficulty parity",
+    "No active card/stock/research/refinancing/bidding strategy; S3-02",
+    "No saved session loader, background-throttling guarantee or every seat/character permutation",
+    "Native precision/RNG/chart/input, other asset sales, special actors, wheel, exit stack/endgame, minigame presentation/collision and native memory restore differences retained"
+  ]
+}

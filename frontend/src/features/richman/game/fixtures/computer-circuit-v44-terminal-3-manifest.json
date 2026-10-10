@@ -1,0 +1,134 @@
+{
+  "players": 3,
+  "commands": 511,
+  "turn": 69,
+  "phase": "finished",
+  "winner": "player-1",
+  "auto": 72,
+  "human": 123,
+  "dates": 25,
+  "cross": [],
+  "reactions": [],
+  "forced": [],
+  "exits": [
+    {
+      "continuation": "payment",
+      "id": "disposal-1",
+      "payerId": "player-3",
+      "recipientId": "public",
+      "propertyId": "fortune:30",
+      "due": 10000,
+      "amount": 3814,
+      "unpaid": 6186,
+      "paid": {
+        "cash": 0,
+        "bank": 3814
+      },
+      "released": [
+        "japan:land:24",
+        "japan:land:31",
+        "japan:land:32"
+      ],
+      "pool": [
+        "japan:land:24",
+        "japan:land:31",
+        "japan:land:32"
+      ],
+      "draws": [],
+      "stocks": [],
+      "inventory": [
+        {
+          "itemId": "tool:08",
+          "quantity": 1,
+          "points": 30
+        },
+        {
+          "itemId": "tool:09",
+          "quantity": 1,
+          "points": 30
+        },
+        {
+          "itemId": "tool:01",
+          "quantity": 1,
+          "points": 15
+        },
+        {
+          "itemId": "tool:02",
+          "quantity": 1,
+          "points": 30
+        },
+        {
+          "itemId": "card:07",
+          "quantity": 1,
+          "points": 15
+        }
+      ],
+      "ignoredPoints": 120,
+      "auctions": [],
+      "finishedGame": false
+    },
+    {
+      "continuation": "payment",
+      "id": "disposal-2",
+      "payerId": "player-2",
+      "recipientId": "public",
+      "propertyId": "fortune:14",
+      "due": 6000,
+      "amount": 5798,
+      "unpaid": 202,
+      "paid": {
+        "cash": 0,
+        "bank": 5798
+      },
+      "released": [],
+      "pool": [],
+      "draws": [],
+      "stocks": [],
+      "inventory": [],
+      "ignoredPoints": 0,
+      "auctions": [],
+      "finishedGame": true
+    }
+  ],
+  "publicAuctions": 0,
+  "negativeChecks": 0,
+  "prefixes": [
+    "paused",
+    "resumed",
+    "computer-first",
+    "exit-start",
+    "exit-return",
+    "before-terminal"
+  ],
+  "report": {
+    "crossChecks": [],
+    "route": "terminal-3",
+    "terminal": true,
+    "players": 3,
+    "normalSpeed": true,
+    "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+    "commands": 511,
+    "human": 123,
+    "lifecycle": [
+      "pause stops waiting",
+      "resume",
+      "reset dialog cancel",
+      "reset",
+      "replace with humans",
+      "exit cleanup",
+      "fullscreen",
+      "390px"
+    ],
+    "cleanup": {
+      "raf": 0,
+      "canvas": 0
+    },
+    "errors": [],
+    "scheduledNonMovementSteps": 72
+  },
+  "hashes": {
+    "replay": "c801518ef81d8de65505ef022d96461b3c49aa9424b02b9d50f282c7ef63001a",
+    "state": "a4c4e39c19fe03c605d5740e2eaa9382c03b7f5c32553fb3441c541c8679461e",
+    "events": "3784a76798da7da24650ff91473a59482be50ed6adfa4396ce937356af968585"
+  }
+}

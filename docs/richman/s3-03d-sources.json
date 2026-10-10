@@ -1,0 +1,339 @@
+{
+  "stage": "S3-03d",
+  "referenceCommit": "ec7d70e693059d1e781d9d1cc2ad7f36d360d39e",
+  "nativeExecution": false,
+  "sourceScope": "cached reference assembly/C; no full binary reachability proof",
+  "sources": [
+    {
+      "path": "asm/rich4_load_map.asm",
+      "sha256": "7a555911e15b8c947c6c281b95c23bf536dba92baca20929ab1666ed31df3987",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_load_map.asm"
+    },
+    {
+      "path": "asm/rich4_objects.asm",
+      "sha256": "a2d3c8c9d6946625df6f5b26a981cbae195d445f4b5de6447dea033a11adcaf6",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_objects.asm"
+    },
+    {
+      "path": "asm/rich4_gods.asm",
+      "sha256": "c1128c8e98dbedd828e3d1dc7e0b3aae4bb97f132e618733caaef44ed8534e16",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_gods.asm"
+    },
+    {
+      "path": "asm/rich4_ui_options.asm",
+      "sha256": "9d2aa14cf279688eeb032310224aaa3481855995b8e1fae7440a9a231093caf1",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_ui_options.asm"
+    },
+    {
+      "path": "asm/rich4_magic_house.asm",
+      "sha256": "e22f10bc48ca379482e4a9c03970f96884af7a6dea5c1c0f0cf6b1d51d7bd74b",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_magic_house.asm"
+    },
+    {
+      "path": "asm/rich4_player_utils.asm",
+      "sha256": "17479913576a004458908f124c4d7e94361dab41a501830d2ecb87eb7b438f01",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_utils.asm"
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "sha256": "2874c1a3e0ca1d0da5afe4cb93e42cf2d6f6fa864dbee11d7bcaa028af07d94a",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_core_actions.asm"
+    },
+    {
+      "path": "asm/rich4_animate_object.asm",
+      "sha256": "6226d33c4e6de31b84b14fe90f2f42558f9259396dc309e1c58b305ca42fb028",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_animate_object.asm"
+    },
+    {
+      "path": "asm/rich4_card_qingshenfu.asm",
+      "sha256": "046bdae010cdafbe4153789cc122a79ca98d087bcd5833dacb72cebe1ffaf55d",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_card_qingshenfu.asm"
+    },
+    {
+      "path": "asm/rich4_tool_chuansongji.asm",
+      "sha256": "0198b74da766617974d63a5f26c3614e260b9af995f7938f5c8aca5cae38bed4",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_tool_chuansongji.asm"
+    },
+    {
+      "path": "asm/rich4_tool_utils.c",
+      "sha256": "12fb8cedf2a50efa98cdfbd15f55b8167a4b3d753c6677d5ba787ac50c8d4097",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_tool_utils.c"
+    },
+    {
+      "path": "asm/rich4_player_bankrupt.asm",
+      "sha256": "57c69d347bef382e0045b00855c17293e5cb737ed22359340894ed9b9cf8bf02",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_bankrupt.asm"
+    },
+    {
+      "path": "asm/rich4.asm",
+      "sha256": "30904cbb4f23a6b74fc1b80ad023bd7dff11b441c2c1978f768f9891d099d64a",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4.asm"
+    }
+  ],
+  "facts": [
+    {
+      "id": "GOD-01",
+      "file": "rich4_objects.asm",
+      "lines": [
+        23,
+        137
+      ],
+      "finding": "Type15 scans zero-based object slots14..15 (two). Nonzero carrier invokes attach on carrier-1 with map node0; attach overrides passed duration. Busy slots are skipped, no overwrite. load_map:754..759 initializes object kind bytes1..14,15,15 (little-endian0x0f0f0e0d)."
+    },
+    {
+      "id": "GOD-02",
+      "file": "rich4_ui_options.asm",
+      "lines": [
+        2745,
+        2778
+      ],
+      "finding": "Surrender calls bankruptcy first, then human/active-human gates, then call_god_of_death_entry; selected one-based target becomes temporary current actor, place15(node0,duration7,carrier=target), then current actor restored. Do not attach this hook to arbitrary rent bankruptcy."
+    },
+    {
+      "id": "GOD-03",
+      "file": "rich4_magic_house.asm",
+      "lines": [
+        2384,
+        2541
+      ],
+      "finding": "Death selector enumerates active ordinary seats excluding surrendering actor; <=1 other live seat returns0. Selected target returned by message callback; no payment or revival. This is not ordinary magic-house twelve-effect dispatch."
+    },
+    {
+      "id": "GOD-04",
+      "file": "rich4_gods.asm",
+      "lines": [
+        421,
+        550
+      ],
+      "finding": "Attach accepts type15 as god, detaches previous, assigns carrier/current node; type15 duration becomes13 regardless of place duration7; ordinary types7."
+    },
+    {
+      "id": "GOD-05",
+      "file": "rich4_gods.asm",
+      "lines": [
+        1147,
+        1194
+      ],
+      "finding": "Death attachment calls sell_all_tools then sell_all_the_card. Return totals are discarded; no point refund. Tool utility moves equipped ordinary vehicle/engineer into inventory, resets traffic/dice, then clears all tool kinds. Existing Web retains equipment: explicit gap."
+    },
+    {
+      "id": "GOD-06",
+      "file": "rich4_tool_utils.c",
+      "lines": [
+        67,
+        100
+      ],
+      "finding": "Sell-all-tools returns equipped traffic class1/2/3 as tool5/6/12 before clearing kinds1..13; direct equipment increment is not the receive_tool stack9 gate; only kinds1..8 replenish finite pool."
+    },
+    {
+      "id": "GOD-07",
+      "file": "rich4_player_core_actions.asm",
+      "lines": [
+        4464,
+        4488
+      ],
+      "finding": "Attached slot duration decrements on own incoming action, reaches0 calls detach. No day/round countdown claim."
+    },
+    {
+      "id": "GOD-08",
+      "file": "rich4_objects.asm",
+      "lines": [
+        139,
+        254
+      ],
+      "finding": "Removal clears carrier stats/node/duration; pair creation only zero-based index<12. Both type15 slots are outside pair branch. player_bankrupt:88..100 first clears participation and removes the attached slot when nonzero, including15, before later exit processing."
+    },
+    {
+      "id": "GOD-09",
+      "file": "rich4_load_map.asm",
+      "lines": [
+        255,
+        307
+      ],
+      "finding": "Original map initialization places odd1..11 then13/14. No type15 placement here."
+    },
+    {
+      "id": "GOD-10",
+      "file": "rich4_player_core_actions.asm",
+      "lines": [
+        4830,
+        4874
+      ],
+      "finding": "Month entry replaces13/14 only. No15 or periodic five-round all-god refill established."
+    },
+    {
+      "id": "GOD-11",
+      "file": "rich4_magic_house.asm",
+      "lines": [
+        1650,
+        2182
+      ],
+      "finding": "Death selector callback: message0x205 routes to cancellation, kills timer and posts result0 (2165..2182); confirmed selected one-based seat is posted after stage5 (1815..1820), mapped from ordinary-seat table built at2469..2506. Caller skips place15 on0. Cancel does not undo prior surrender/bankruptcy. Keyboard Escape equivalence not established."
+    },
+    {
+      "id": "MOVE-01",
+      "file": "rich4_objects.asm",
+      "lines": [
+        85,
+        127
+      ],
+      "finding": "Placement uses first adjacent node to calculate facing. This initializes direction, does not schedule autonomous movement."
+    },
+    {
+      "id": "MOVE-02",
+      "file": "rich4.asm",
+      "lines": [
+        7040,
+        7159
+      ],
+      "finding": "fcn40fafd sets transient render XY/velocity/tick counter; update_attached_object_node_idx synchronizes carried god/bomb to actor node. Distinct from selecting a new road node."
+    },
+    {
+      "id": "MOVE-03",
+      "file": "rich4_player_core_actions.asm",
+      "lines": [
+        2662,
+        2680
+      ],
+      "finding": "Special moving actor8 uses transient object animation then removes encountered object (clearing vehicle path). Not a wandering ordinary god."
+    },
+    {
+      "id": "MOVE-04",
+      "file": "rich4_animate_object.asm",
+      "lines": [
+        27,
+        110
+      ],
+      "finding": "Generic visual source/destination animation reads object direction; callers include cards and tools. It is not a turn-based random walk."
+    },
+    {
+      "id": "MOVE-05",
+      "file": "rich4_card_qingshenfu.asm",
+      "lines": [
+        62,
+        103
+      ],
+      "finding": "Invite temporarily hides original node, animates to actor, restores source then attaches; explicit card-triggered movement."
+    },
+    {
+      "id": "MOVE-06",
+      "file": "rich4_tool_chuansongji.asm",
+      "lines": [
+        58,
+        491
+      ],
+      "finding": "Explicit teleport redirects a carried object to its carrier (58..90), updates player node and synchronizes attachments (340..376); the mouse-selected object branch clears old occupancy, writes new object node/new occupancy and facing (422..491). These are input-triggered relocations, not an autonomous scheduler; exact special-object selection masks remain outside this batch."
+    },
+    {
+      "id": "MOVE-07",
+      "file": "rich4.asm",
+      "lines": [
+        1746,
+        2040
+      ],
+      "finding": "Rendering increments temporary XY and decrements animation counter, or renders node/actor positions; shown writes are visual fields, not autonomous node selection."
+    }
+  ],
+  "callInventory": [
+    {
+      "file": "rich4.asm",
+      "line": 6016,
+      "instruction": "call _rich4_update_attached_object_node_idx  ; call 0x40fc00"
+    },
+    {
+      "file": "rich4_card_qingshenfu.asm",
+      "line": 102,
+      "instruction": "call _rich4_attach_god  ; call 0x40ead7"
+    },
+    {
+      "file": "rich4_hospital_utils.asm",
+      "line": 88,
+      "instruction": "call _rich4_update_attached_object_node_idx  ; call 0x40fc00"
+    },
+    {
+      "file": "rich4_load_map.asm",
+      "line": 285,
+      "instruction": "call _rich4_place_object  ; call 0x40e033"
+    },
+    {
+      "file": "rich4_load_map.asm",
+      "line": 297,
+      "instruction": "call _rich4_place_object  ; call 0x40e033"
+    },
+    {
+      "file": "rich4_load_map.asm",
+      "line": 306,
+      "instruction": "call _rich4_place_object  ; call 0x40e033"
+    },
+    {
+      "file": "rich4_objects.asm",
+      "line": 82,
+      "instruction": "call _rich4_attach_god  ; call 0x40ead7"
+    },
+    {
+      "file": "rich4_objects.asm",
+      "line": 249,
+      "instruction": "call _rich4_place_object  ; call 0x40e033"
+    },
+    {
+      "file": "rich4_player_core_actions.asm",
+      "line": 2675,
+      "instruction": "call fcn_0040fafd  ; call 0x40fafd"
+    },
+    {
+      "file": "rich4_player_core_actions.asm",
+      "line": 2898,
+      "instruction": "call _rich4_attach_god  ; call 0x40ead7"
+    },
+    {
+      "file": "rich4_player_core_actions.asm",
+      "line": 4857,
+      "instruction": "call _rich4_place_object  ; call 0x40e033"
+    },
+    {
+      "file": "rich4_player_core_actions.asm",
+      "line": 4871,
+      "instruction": "call _rich4_place_object  ; call 0x40e033"
+    },
+    {
+      "file": "rich4_player_utils.asm",
+      "line": 457,
+      "instruction": "call _rich4_update_attached_object_node_idx  ; call 0x40fc00"
+    },
+    {
+      "file": "rich4_prison_utils.asm",
+      "line": 88,
+      "instruction": "call _rich4_update_attached_object_node_idx  ; call 0x40fc00"
+    },
+    {
+      "file": "rich4_tool_chuansongji.asm",
+      "line": 376,
+      "instruction": "call _rich4_update_attached_object_node_idx  ; call 0x40fc00"
+    },
+    {
+      "file": "rich4_tool_dilei.asm",
+      "line": 52,
+      "instruction": "call _rich4_place_object  ; call 0x40e033"
+    },
+    {
+      "file": "rich4_tool_dingshizhadan.asm",
+      "line": 52,
+      "instruction": "call _rich4_place_object  ; call 0x40e033"
+    },
+    {
+      "file": "rich4_tool_luzhang.asm",
+      "line": 52,
+      "instruction": "call _rich4_place_object  ; call 0x40e033"
+    },
+    {
+      "file": "rich4_ui_options.asm",
+      "line": 2774,
+      "instruction": "call _rich4_place_object  ; call 0x40e033"
+    }
+  ],
+  "autonomousWandering": {
+    "implemented": false,
+    "finding": "No independent autonomous node-walk scheduler found in audited init/calendar/render/sync/card/tool call chains; absence across entire original executable not proved"
+  },
+  "decision": "Keep v46 and all prior semantics. Surrender/death dual-slot/equipment behavior is tied to deferred original exit stack; do not fabricate ordinary random acquisition or retrofit all bankruptcies. Add honest presentation and reachable circuit evidence. S3-03 not fully closed."
+}

@@ -1,0 +1,497 @@
+{
+  "stage": "S3-04d",
+  "date": "2026-10-09",
+  "status": "browser-matrix-executed-with-explicit-gaps-not-whole-stage-closed",
+  "rulesId": "japan-events-candidate-v47",
+  "fingerprint": "c6d96cc",
+  "policies": 15,
+  "newGameSemantics": false,
+  "newPolicyVersion": false,
+  "fix": "scene constructor now draws fallback road markers before first command",
+  "browser": {
+    "routes": 7,
+    "normalSpeed": true,
+    "originalMap": true,
+    "authFixtureOnly": true,
+    "stateInjection": false,
+    "routeCommands": 8827,
+    "visualCommands": 9,
+    "totalCommands": 8836,
+    "routePrefixes": 61,
+    "visualPrefixes": 3,
+    "totalPrefixes": 64,
+    "actualAutomaticSeatCommands": 322,
+    "fullAndPrefixReplay": true,
+    "routeErrors": [],
+    "mediaFilesDecoded": 28,
+    "musicTracksNaturalPlayback": 8,
+    "effectsActualGame": 4,
+    "voicesActualGame": [
+      "1078",
+      "1079",
+      "1131",
+      "1132",
+      "1133",
+      "1158",
+      "1159",
+      "1160",
+      "1293",
+      "1294",
+      "1295"
+    ],
+    "voicesDecodedButNotAllTriggered": 5,
+    "resourceFailureScenarios": 6,
+    "hiddenObserved": false,
+    "listeningAccepted": false,
+    "scope": "Chrome real media playing/time advancement; headless output muted for routes, no listening claim; headed visibility attempts also did not report document.hidden"
+  },
+  "checks": {
+    "localTests": 66,
+    "files": 6,
+    "build": "passed with existing chunk/import warnings",
+    "lint": "passed",
+    "diffCheck": "passed"
+  },
+  "preservation": {
+    "baselineFiles": 805,
+    "changedExisting": [
+      "frontend/src/features/richman/scene.ts"
+    ],
+    "engineRulesPoliciesAudioUnchanged": true,
+    "oldGeneratedFiles": 40,
+    "oldGeneratedUnchanged": true,
+    "oldFixtureFiles": 458,
+    "oldFixturesUnchanged": true,
+    "newReplayFiles": 8,
+    "newManifestFiles": 8
+  },
+  "receipts": [
+    {
+      "route": "special2",
+      "players": 2,
+      "commands": 69,
+      "computerCommands": 21,
+      "prefixes": [
+        {
+          "index": 15,
+          "kind": "g6Notice"
+        },
+        {
+          "index": 17,
+          "kind": "specialObjectsRefreshed"
+        },
+        {
+          "index": 48,
+          "kind": "specialObjectResolved"
+        }
+      ],
+      "playedVoices": [],
+      "fullReplay": true,
+      "prefixReplay": true,
+      "hashes": {
+        "replay": "f3105b979bc99803284130de925764253f98de111dc63dd2cf690526563f0cfa",
+        "state": "7545ae2e964d884bf5e2863e4c411311a9b8de2fadc394fb824861aa088b93b4",
+        "events": "c5010dd6667dd33751aec52586985f474207bec1a3ed667a6d7e429e966625c5"
+      }
+    },
+    {
+      "route": "special3",
+      "players": 3,
+      "commands": 45,
+      "computerCommands": 19,
+      "prefixes": [
+        {
+          "index": 23,
+          "kind": "specialObjectsRefreshed"
+        },
+        {
+          "index": 26,
+          "kind": "specialObjectResolved"
+        }
+      ],
+      "playedVoices": [],
+      "fullReplay": true,
+      "prefixReplay": true,
+      "hashes": {
+        "replay": "004d230cd607f8313211f6184f2c0d4bdc05c82f5613dd93049a686bc2332451",
+        "state": "fb73f844a4c4c51e5703e9c2880ad651b5cfb3a633f85aa7ebe597a11259f824",
+        "events": "484a66af39651edf96ce809708036c5835b2e377accb4c877245190724db7998"
+      }
+    },
+    {
+      "route": "special4",
+      "players": 4,
+      "commands": 110,
+      "computerCommands": 54,
+      "prefixes": [
+        {
+          "index": 41,
+          "kind": "specialObjectsRefreshed"
+        },
+        {
+          "index": 59,
+          "kind": "g6Notice"
+        },
+        {
+          "index": 109,
+          "kind": "specialObjectResolved"
+        }
+      ],
+      "playedVoices": [],
+      "fullReplay": true,
+      "prefixReplay": true,
+      "hashes": {
+        "replay": "56684963731604fc72c512196d523af00162258b979845fd25cc3a6f67a479ea",
+        "state": "6efa2f992984e360cfc6643af8161cfade9b8d47164debeffccf4f166c358a7e",
+        "events": "8dd9dc74cab6f6997737dceaf4f818204d3a0c6a242e82a0d118959aac978f84"
+      }
+    },
+    {
+      "route": "pair",
+      "players": 2,
+      "commands": 1761,
+      "computerCommands": 0,
+      "prefixes": [
+        {
+          "index": 111,
+          "kind": "specialObjectsRefreshed"
+        },
+        {
+          "index": 199,
+          "kind": "g6Notice"
+        },
+        {
+          "index": 205,
+          "kind": "g6Notice"
+        },
+        {
+          "index": 305,
+          "kind": "g6Notice"
+        },
+        {
+          "index": 315,
+          "kind": "g6Notice"
+        },
+        {
+          "index": 580,
+          "kind": "specialObjectsRefreshed"
+        },
+        {
+          "index": 818,
+          "kind": "g6Notice"
+        },
+        {
+          "index": 957,
+          "kind": "specialObjectResolved"
+        },
+        {
+          "index": 1474,
+          "kind": "vehicle-avoid11"
+        },
+        {
+          "index": 1648,
+          "kind": "attach12"
+        },
+        {
+          "index": 1759,
+          "kind": "pair-back11"
+        }
+      ],
+      "playedVoices": [
+        "1293",
+        "1295",
+        "1158",
+        "1294",
+        "1159",
+        "1160"
+      ],
+      "fullReplay": true,
+      "prefixReplay": true,
+      "hashes": {
+        "replay": "c6dc932e433a5f36bc609dfceb848a5b66b81cd00c6bfc018b16686d09dfd92d",
+        "state": "23c55fc691273aa89aa71bc06a269d8b2b5088da68f45155cf4382e9e2c1f456",
+        "events": "5ebe0982e951dd138c103b5558c90f1b4345b6f00cdc9aab8bd330e914906c5f"
+      }
+    },
+    {
+      "route": "full",
+      "players": 3,
+      "commands": 3625,
+      "computerCommands": 0,
+      "prefixes": [
+        {
+          "index": 138,
+          "kind": "specialObjectsRefreshed"
+        },
+        {
+          "index": 314,
+          "kind": "specialObjectResolved"
+        },
+        {
+          "index": 352,
+          "kind": "g6Notice"
+        },
+        {
+          "index": 517,
+          "kind": "g6Notice"
+        },
+        {
+          "index": 655,
+          "kind": "g6Notice"
+        },
+        {
+          "index": 660,
+          "kind": "g6Notice"
+        },
+        {
+          "index": 744,
+          "kind": "g6Notice"
+        },
+        {
+          "index": 778,
+          "kind": "specialObjectsRefreshed"
+        },
+        {
+          "index": 1278,
+          "kind": "attach12"
+        },
+        {
+          "index": 1424,
+          "kind": "pair-back11"
+        },
+        {
+          "index": 2394,
+          "kind": "attach12"
+        },
+        {
+          "index": 2550,
+          "kind": "pair-back11"
+        },
+        {
+          "index": 3569,
+          "kind": "attach12"
+        },
+        {
+          "index": 3622,
+          "kind": "tool13-full"
+        }
+      ],
+      "playedVoices": [
+        "1294",
+        "1295",
+        "1159",
+        "1132",
+        "1131",
+        "1158",
+        "1133",
+        "1160",
+        "1293"
+      ],
+      "fullReplay": true,
+      "prefixReplay": true,
+      "hashes": {
+        "replay": "ee18b462b60a3b0efccc3e92e2e077cf432a055f608250ac2d81cbce1f1a334b",
+        "state": "29a8fe2f5d1d9ca6f4366e342b516398cc95bfce84e4b4c24307b1da548297a9",
+        "events": "19e525ce7db4d611485230d0379f9aa7c8f284520e9d2c4500f7bf16c3590782"
+      }
+    },
+    {
+      "route": "car",
+      "players": 3,
+      "commands": 775,
+      "computerCommands": 0,
+      "prefixes": [
+        {
+          "index": 295,
+          "kind": "g6Notice"
+        },
+        {
+          "index": 302,
+          "kind": "specialObjectResolved"
+        },
+        {
+          "index": 311,
+          "kind": "g6Notice"
+        },
+        {
+          "index": 367,
+          "kind": "g6Notice"
+        },
+        {
+          "index": 469,
+          "kind": "g6Notice"
+        },
+        {
+          "index": 477,
+          "kind": "specialObjectsRefreshed"
+        },
+        {
+          "index": 530,
+          "kind": "g6Notice"
+        },
+        {
+          "index": 571,
+          "kind": "equipped"
+        },
+        {
+          "index": 592,
+          "kind": "before-surrender"
+        },
+        {
+          "index": 595,
+          "kind": "equipped-before-attachment"
+        },
+        {
+          "index": 598,
+          "kind": "cleared-after-attachment"
+        },
+        {
+          "index": 773,
+          "kind": "death-expired"
+        }
+      ],
+      "playedVoices": [
+        "1160",
+        "1159",
+        "1131",
+        "1133"
+      ],
+      "fullReplay": true,
+      "prefixReplay": true,
+      "hashes": {
+        "replay": "cac214eea21e5ca9ee15ce5488b50f3002377dfce0c2e3dbe5bd01b36cc41165",
+        "state": "8a0035c3737202fa3bc23929fa5902a816e36db38bfdcb0effb1b67560e7fbd7",
+        "events": "2075c92959ba3e23e19ae3f824eef7f3fde8864505d48bfda308af2833b4bd21"
+      }
+    },
+    {
+      "route": "research",
+      "players": 4,
+      "commands": 2442,
+      "computerCommands": 228,
+      "prefixes": [
+        {
+          "index": 216,
+          "kind": "specialObjectResolved"
+        },
+        {
+          "index": 251,
+          "kind": "g6Notice"
+        },
+        {
+          "index": 459,
+          "kind": "g6Notice"
+        },
+        {
+          "index": 607,
+          "kind": "g6Notice"
+        },
+        {
+          "index": 660,
+          "kind": "g6Notice"
+        },
+        {
+          "index": 686,
+          "kind": "specialObjectsRefreshed"
+        },
+        {
+          "index": 826,
+          "kind": "g6Notice"
+        },
+        {
+          "index": 869,
+          "kind": "g6Notice"
+        },
+        {
+          "index": 2144,
+          "kind": "equipped"
+        },
+        {
+          "index": 2169,
+          "kind": "before-surrender"
+        },
+        {
+          "index": 2172,
+          "kind": "equipped-before-attachment"
+        },
+        {
+          "index": 2175,
+          "kind": "cleared-after-attachment"
+        },
+        {
+          "index": 2272,
+          "kind": "post-exit-research-produced"
+        },
+        {
+          "index": 2295,
+          "kind": "before-time"
+        },
+        {
+          "index": 2298,
+          "kind": "G7 current world restored"
+        },
+        {
+          "index": 2440,
+          "kind": "death-expired"
+        }
+      ],
+      "playedVoices": [
+        "1133",
+        "1160",
+        "1295",
+        "1158",
+        "1079",
+        "1078",
+        "1131",
+        "1293"
+      ],
+      "fullReplay": true,
+      "prefixReplay": true,
+      "hashes": {
+        "replay": "249f9f0de70ea47f7ccf5b7cf85f8e38fbaa22a090684fe9bcf9310436e2af35",
+        "state": "f01f3289598203ceb7995b6b989ea310fce508a7d24924eb4fae1a5f89eb5a0b",
+        "events": "45f4636cd07e05bb1cf4a2318e9466afe6b0cea9daa616da8c0bbd7c34d85f05"
+      }
+    }
+  ],
+  "artifacts": {
+    "frontend/src/features/richman/game/fixtures/presentation-v47-visual-replay.json": "8378c384cc0f58405f73df5ba847746c1538358461bc0440fa411873fb3b7c9c",
+    "frontend/src/features/richman/game/fixtures/presentation-v47-research-manifest.json": "c0106f8e354fac87491603d20b16fa712824bd4a4204455e5d74d76af1c22a77",
+    "frontend/src/features/richman/game/fixtures/presentation-v46-special4-manifest.json": "83810a285bd9ff5d4df32da2db2b8480e0d6b85f526cacbd6b01204b1cee198b",
+    "frontend/src/features/richman/game/fixtures/presentation-v46-special3-manifest.json": "c36453266c19e3c48c73b8e687544b5d182529a0193a27b25d42acce0e9ce5af",
+    "frontend/src/features/richman/game/fixtures/presentation-v47-car-manifest.json": "d487c76ef7e78924450091f2266ba2cabe886014acd9960a151adb98198ec092",
+    "frontend/src/features/richman/game/fixtures/presentation-v46-special3-replay.json": "004d230cd607f8313211f6184f2c0d4bdc05c82f5613dd93049a686bc2332451",
+    "frontend/src/features/richman/game/fixtures/presentation-v47-car-replay.json": "cac214eea21e5ca9ee15ce5488b50f3002377dfce0c2e3dbe5bd01b36cc41165",
+    "frontend/src/features/richman/game/fixtures/presentation-v46-full-replay.json": "ee18b462b60a3b0efccc3e92e2e077cf432a055f608250ac2d81cbce1f1a334b",
+    "frontend/src/features/richman/game/fixtures/presentation-v47-research-replay.json": "249f9f0de70ea47f7ccf5b7cf85f8e38fbaa22a090684fe9bcf9310436e2af35",
+    "frontend/src/features/richman/game/fixtures/presentation-v46-special4-replay.json": "56684963731604fc72c512196d523af00162258b979845fd25cc3a6f67a479ea",
+    "frontend/src/features/richman/game/fixtures/presentation-v47-visual-manifest.json": "f888c6579173c0d72b56bd11c46a53d9f19b428d4fae712b8fbedbfc655f1557",
+    "frontend/src/features/richman/game/fixtures/presentation-v46-pair-replay.json": "c6dc932e433a5f36bc609dfceb848a5b66b81cd00c6bfc018b16686d09dfd92d",
+    "frontend/src/features/richman/game/fixtures/presentation-v46-special2-manifest.json": "b63bb8abe8c0949c5cbdfc5d129ea1f15bc22708a6216adb3da4abf644465193",
+    "frontend/src/features/richman/game/fixtures/presentation-v46-special2-replay.json": "f3105b979bc99803284130de925764253f98de111dc63dd2cf690526563f0cfa",
+    "frontend/src/features/richman/game/fixtures/presentation-v46-full-manifest.json": "f6c41dda1c6831dbbbce5988713f58ddf85c36f5a8961e9bff9e4d0e7f46edd7",
+    "frontend/src/features/richman/game/fixtures/presentation-v46-pair-manifest.json": "7b84ea8a4668abfe9dddd4c371cb9eb261d366f9fd6aade117c1f14a21bee9c9"
+  },
+  "unaccepted": [
+    "actual OS audio output/listening, clipping and volume balance",
+    "real hidden/restore: active game popup-tab attempts in headless and headed Chrome observed document.hidden=false; not counted passed",
+    "five voices not naturally triggered on original map incl four ordinary paid 4->5 upgrade voices; all decoded separately; 234 saved legal replays contain no paid ordinary 4->5",
+    "natural browser policy refusal of in-game short audio: original-map effect49 directed NotAllowedError and retry passed only as fault injection",
+    "same-turn priority/flush passed in independent browser media packet; original-map same-turn saturation/preemption remains unobserved",
+    "storage-denied and finished silence now passed in shortest original-map UI; dream/winter/travel suppression and unknown-role silence remain local tests only",
+    "G7 visible eight sprite IDs matched browser/public replay across restore; set did not change, so changed-set destruction/recreation and exact-boundary per-port observation remain unaccepted",
+    "all8 directions/all15 sprite types and exact building/worker occlusion matrix not browser-exhaustive",
+    "Safari/iOS not run"
+  ],
+  "resolvedHarnessIssues": [
+    "loading harness incomplete token lifetime fixed; invalid ready phase replaced by Canvas wait",
+    "generic screenshot scrolled below canvas; explicit viewport/near-view capture added; earlier offscreen/blurred screenshots not visual pass evidence",
+    "Playwright evaluate grants a user gesture; permission harness corrected to CDP userGesture=false, got NotAllowedError then real button playback"
+  ],
+  "next": "Continue S3-04d remaining targeted gaps per current roadmap card; see s3-04d-targeted-results.json. Do not rerun historical seven routes.",
+  "targetedFollowUp": {
+    "date": "2026-10-09",
+    "file": "s3-04d-targeted-results.json",
+    "status": "partial-targeted-checks; whole S3-04 not closed"
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "referenceCommit": "ec7d70e693059d1e781d9d1cc2ad7f36d360d39e",
+  "sources": [
+    {
+      "path": "asm/rich4_fortune.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_fortune.asm",
+      "gitBlobSha1": "32a7a9dff203a46ec3d2906c1e5f1ede22f97e70",
+      "sha256": "d6309c81b0943a38e138bcdf85c8d006ddb0ba53c4d72744c4d3cc4ab63a53fc"
+    },
+    {
+      "path": "asm/rich4_ui_bank.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_ui_bank.asm",
+      "gitBlobSha1": "a33182c5fa87f03271e20c43956ad11302f14baa",
+      "sha256": "bd225f868ef673c4052d145223d9564a5ded0c4eec28093811cb439ec9fc230a"
+    },
+    {
+      "path": "asm/rich4_player_say_on_events.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_say_on_events.asm",
+      "gitBlobSha1": "644c02665ec7ffce20f389e4c258cf1118ab8907",
+      "sha256": "9d12b7717f448b8928db8f2b89cfa0b4bbae694757ea9a53a6c8ea5d7fa5adb9"
+    },
+    {
+      "path": "asm/rich4.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4.asm",
+      "gitBlobSha1": "d11a64755094435fa9953652a5a4951871fd9697",
+      "sha256": "30904cbb4f23a6b74fc1b80ad023bd7dff11b441c2c1978f768f9891d099d64a"
+    },
+    {
+      "path": "asm/rich4_player_info.h",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_info.h",
+      "gitBlobSha1": "2f04e6aa425bba2f9345b64ce0ab4c1240ac185f",
+      "sha256": "cc17726ce054de587a42c0f335d84495e66698da2e15eb6a7b7ca28ab38604be"
+    },
+    {
+      "path": "asm/rich4_player_utils.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_utils.asm",
+      "gitBlobSha1": "4bdaafa1f87f9fcd5f71dcf50f1aebd7e795d6be",
+      "sha256": "17479913576a004458908f124c4d7e94361dab41a501830d2ecb87eb7b438f01"
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_core_actions.asm",
+      "gitBlobSha1": "ebfde6c820e8a430b856d9816a926b636e0db1dc",
+      "sha256": "2874c1a3e0ca1d0da5afe4cb93e42cf2d6f6fa864dbee11d7bcaa028af07d94a"
+    },
+    {
+      "path": "asm/rich4_card_utils.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_card_utils.asm",
+      "gitBlobSha1": "23304fd33491d039d9f50d36475fa9794acccdb2",
+      "sha256": "937d2f587f15068f1f1280ac60d4a61c0249dbde0f206bfcc1489a29591d8181"
+    },
+    {
+      "path": "asm/rich4_card_passive.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_card_passive.asm",
+      "gitBlobSha1": "786c4467dcb1827b9bbe85c134ebb9560e2de3a9",
+      "sha256": "2c8ceb5582bb36974922ead75c86e681e35bf8faeb3ccf9a919edd108a0eaf9d"
+    }
+  ],
+  "verifiedFiles": 9,
+  "method": "Local ASM bytes checked against fixed-commit Git tree blob; no new Windows runtime observation",
+  "selection": {
+    "address": "0044bb4b/0044bbd3",
+    "slots": [
+      2,
+      3,
+      4,
+      6,
+      7
+    ],
+    "condition": "unconditional pass in 37-slot sequence; no reshuffle or new RNG"
+  },
+  "handlers": {
+    "2": {
+      "address": "0044c0e8/0044c180",
+      "text": "人頭被盜用冒貸%d元",
+      "effect": "10000*price index; money70 bad code1 cancels/code2 doubles; add to player+36 loan;00433b7e sets loan+44 due date if absent (90 days, skip weekday helper result1 (calendar semantics deferred)); no cash/bank mutation; insurance0044ba63 follows",
+      "deferred": "Web price1, existing debt/repayment only; original due-date not modeled; full insurance omitted"
+    },
+    "3": {
+      "address": "0044c229/0044c27c",
+      "text": "支票跳票 銀行拒絕往來一個月",
+      "effect": "money70 bad code1 cancels; other codes add30 to byte+59 with uint8 overflow; code2 not doubled"
+    },
+    "4": {
+      "address": "0044c2c2/0044c342",
+      "text": "侵入銀行電腦 挪用其他人存款10％",
+      "effect": "seat loop excluding current/who0/bank0, no location or loan test; scalar float32(10/100), trunc bank*scalar;0041d2c6(donor,current,amount,4) debits bank first, credits bank; no god/reaction"
+    },
+    "6/7": {
+      "address": "0044c5d8/0044c658;0044c6ed/0044c76d",
+      "text": [
+        "強迫出國觀光3天",
+        "被外星人綁架3天"
+      ],
+      "effect": "resistance72 bad; cancel1/double2; try免罪/嫁祸 then0040d375(actualTarget,duration,0/1)"
+    }
+  },
+  "helpers": {
+    "0040d375": "if no existing+51:0040d761 clear hotel/disappear/prison/hospital and rosters; preserve node+12/heading/traffic, remove occupancy bit; restore screen coordinates from same node; sets+51=(duration | mode<<6); increments+66 statistic;0044f2c2 speech only;0044ba63 insurance with duration*2000*price; no direct debit",
+    "0040d4c5": "existing+51=(old&0x3f)+newEncoded cast byte; no facility clear or repeated insurance/speech",
+    "0040d4e5": "restore node occupancy and sprite; clear+51; animation chosen by bit6; no landing settlement",
+    "0041c8bc": "incoming-player travel byte: highbit release; else decrement and if low6==0 sethighbit; +50dword nonzero freezes winter/dream/turtle later; stop still ticks",
+    "0041caa3/0041cb91": "bankRejected byte clears highbit then decrements nonzero; zero becomes128; independent of facility freeze",
+    "_rich4_ui_bank_entry": "bank UI entry tests+59 nonzero and rejects all bank services",
+    "00441210": "auto21 before optional19, other alive seats including facilities, no recursive reactions/revenge/hostility"
+  },
+  "candidateBoundaries": [
+    "action clock not calendar",
+    "price index1; no expiry/maturity/interest/forced-auction",
+    "full company/special financing/insurance policy not implemented",
+    "voice/animation RNG and cumulative absence statistic not modeled",
+    "other map fortune branches33..40/45..48 remain outside Japan"
+  ]
+}

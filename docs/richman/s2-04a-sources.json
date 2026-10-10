@@ -1,0 +1,472 @@
+{
+  "stage": "S2-04a",
+  "referenceCommit": "ec7d70e693059d1e781d9d1cc2ad7f36d360d39e",
+  "grade": "fixed cross-version assembly/C data; no native Windows execution",
+  "sources": [
+    {
+      "path": "asm/rich4_stocks.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_stocks.asm",
+      "gitBlobSha1": "c45cd776b51483d17f78972845b8053deeee2433",
+      "sha256": "d55e17af17da2464655f53d3b3dd32224637a37ab131c6cf483db8fbac045ea3"
+    },
+    {
+      "path": "asm/rich4_ui_stock.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_ui_stock.asm",
+      "gitBlobSha1": "cc0913dc550a049781e3b72f2df215ce84df6b28",
+      "sha256": "0e3152263c9886615fa6509fcd005f0db37a9fb850b3124ede51de868fa8ab82"
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_core_actions.asm",
+      "gitBlobSha1": "ebfde6c820e8a430b856d9816a926b636e0db1dc",
+      "sha256": "2874c1a3e0ca1d0da5afe4cb93e42cf2d6f6fa864dbee11d7bcaa028af07d94a"
+    },
+    {
+      "path": "asm/rich4_all_stocks.c",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_all_stocks.c",
+      "gitBlobSha1": "703f9720e5f363aae4045866094b7d67425cb454",
+      "sha256": "1b3f5ce0a33efc330933d68c0a4690cedbb2b143818c95385ef912799ba7c14f"
+    }
+  ],
+  "anchors": [
+    {
+      "path": "asm/rich4_stocks.asm",
+      "anchor": "_rich4_buy_stock:",
+      "lines": [
+        94
+      ]
+    },
+    {
+      "path": "asm/rich4_stocks.asm",
+      "anchor": "_rich4_sell_stock:",
+      "lines": [
+        171
+      ]
+    },
+    {
+      "path": "asm/rich4_stocks.asm",
+      "anchor": "fcn_00428ec5:",
+      "lines": [
+        226
+      ]
+    },
+    {
+      "path": "asm/rich4_stocks.asm",
+      "anchor": "fcn_00429040:",
+      "lines": [
+        366
+      ]
+    },
+    {
+      "path": "asm/rich4_stocks.asm",
+      "anchor": "fcn_0042915a:",
+      "lines": [
+        468
+      ]
+    },
+    {
+      "path": "asm/rich4_stocks.asm",
+      "anchor": "fcn_004291d6:",
+      "lines": [
+        517
+      ]
+    },
+    {
+      "path": "asm/rich4_stocks.asm",
+      "anchor": "loc_00429248:",
+      "lines": [
+        552
+      ]
+    },
+    {
+      "path": "asm/rich4_stocks.asm",
+      "anchor": "loc_00429316:",
+      "lines": [
+        603
+      ]
+    },
+    {
+      "path": "asm/rich4_stocks.asm",
+      "anchor": "loc_00429346:",
+      "lines": [
+        619
+      ]
+    },
+    {
+      "path": "asm/rich4_stocks.asm",
+      "anchor": "loc_004293d2:",
+      "lines": [
+        662
+      ]
+    },
+    {
+      "path": "asm/rich4_stocks.asm",
+      "anchor": "loc_00429470:",
+      "lines": [
+        708
+      ]
+    },
+    {
+      "path": "asm/rich4_stocks.asm",
+      "anchor": "loc_004294b9:",
+      "lines": [
+        729
+      ]
+    },
+    {
+      "path": "asm/rich4_stocks.asm",
+      "anchor": "fcn_004295ea:",
+      "lines": [
+        867
+      ]
+    },
+    {
+      "path": "asm/rich4_ui_stock.asm",
+      "anchor": "loc_0042aee4:",
+      "lines": [
+        2041
+      ]
+    },
+    {
+      "path": "asm/rich4_ui_stock.asm",
+      "anchor": "loc_0042af30:",
+      "lines": [
+        2067
+      ]
+    },
+    {
+      "path": "asm/rich4_ui_stock.asm",
+      "anchor": "loc_0042af89:",
+      "lines": [
+        2097
+      ]
+    },
+    {
+      "path": "asm/rich4_ui_stock.asm",
+      "anchor": "loc_0042afff:",
+      "lines": [
+        2140
+      ]
+    },
+    {
+      "path": "asm/rich4_ui_stock.asm",
+      "anchor": "loc_0042b05a:",
+      "lines": [
+        2166
+      ]
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "anchor": "fcn_0041c84f:",
+      "lines": [
+        4101
+      ]
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "anchor": "loc_0041d021:",
+      "lines": [
+        4800
+      ]
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "anchor": "loc_0041d045:",
+      "lines": [
+        4814
+      ]
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "anchor": "loc_0041d066:",
+      "lines": [
+        4827
+      ]
+    }
+  ],
+  "constants": {
+    "ref_00463f88": 100.0,
+    "ref_00463f8c": 5.0,
+    "ref_00463f90": 15.0,
+    "ref_00463f94": 50.0,
+    "ref_00463f98": 150.0,
+    "ref_00463f9c": 0.5,
+    "ref_00463fa4": 0.1,
+    "ref_00463fac": 0.05,
+    "ref_00463fb4": 0.01,
+    "ref_00463fbc": 9999.0,
+    "ref_00463fc0": 10000.0,
+    "ref_00463fc4": 4097.0,
+    "ref_00463fc8": 1171.0,
+    "ref_00463fcc": 0.5,
+    "ref_00463fd0": 2.0,
+    "ref_00463fd4": 8.0,
+    "ref_00463fd8": 10000.0,
+    "ref_00463fdc": 0.85,
+    "ref_00463fe4": 3.0,
+    "ref_00463fe8": -10.0,
+    "ref_00463fec": 10.0
+  },
+  "japanStocks": [
+    {
+      "id": "jp:24",
+      "name": "富士银行",
+      "fields": [
+        1.0,
+        0.0,
+        0.0,
+        10000.0,
+        0.0,
+        160.0,
+        160.0,
+        160.0,
+        0.8,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "jp:25",
+      "name": "三井生命",
+      "fields": [
+        1.0,
+        0.0,
+        0.0,
+        5000.0,
+        0.0,
+        99.0,
+        99.0,
+        99.0,
+        1.4,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "jp:26",
+      "name": "三越百货",
+      "fields": [
+        1.0,
+        0.0,
+        0.0,
+        10000.0,
+        0.0,
+        22.0,
+        22.0,
+        22.0,
+        2.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "jp:27",
+      "name": "日产建设",
+      "fields": [
+        1.0,
+        0.0,
+        0.0,
+        5000.0,
+        0.0,
+        28.0,
+        28.0,
+        28.0,
+        2.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "jp:28",
+      "name": "ＳＥＧＡ",
+      "fields": [
+        1.0,
+        0.0,
+        0.0,
+        5000.0,
+        0.0,
+        300.0,
+        300.0,
+        300.0,
+        1.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "jp:29",
+      "name": "丰田汽车",
+      "fields": [
+        1.0,
+        0.0,
+        0.0,
+        5000.0,
+        0.0,
+        35.0,
+        35.0,
+        35.0,
+        1.2,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "jp:30",
+      "name": "松下电机",
+      "fields": [
+        0.0,
+        0.0,
+        0.0,
+        10000.0,
+        0.0,
+        540.0,
+        540.0,
+        540.0,
+        1.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "jp:31",
+      "name": "日立机电",
+      "fields": [
+        0.0,
+        0.0,
+        0.0,
+        10000.0,
+        0.0,
+        830.0,
+        830.0,
+        830.0,
+        1.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "jp:32",
+      "name": "ＳＯＮＹ",
+      "fields": [
+        0.0,
+        0.0,
+        0.0,
+        10000.0,
+        0.0,
+        300.0,
+        300.0,
+        300.0,
+        1.2,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "jp:33",
+      "name": "三菱工业",
+      "fields": [
+        0.0,
+        0.0,
+        0.0,
+        10000.0,
+        0.0,
+        225.0,
+        225.0,
+        225.0,
+        0.7,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "jp:34",
+      "name": "任天堂",
+      "fields": [
+        0.0,
+        0.0,
+        0.0,
+        10000.0,
+        0.0,
+        300.0,
+        300.0,
+        300.0,
+        1.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "jp:35",
+      "name": "德间书店",
+      "fields": [
+        0.0,
+        0.0,
+        0.0,
+        10000.0,
+        0.0,
+        150.0,
+        150.0,
+        150.0,
+        0.8,
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "rules": {
+    "R08-01a": "Japanese stocks24..35: same12 names, initial yuan prices, public shares and volatility facts. Current catalog volatility8..20 is native0.8..2.0 times10; v42 applies /10.",
+    "R08-02a": "Open day uses one shared(rand-16384)/4097; ordinary stock stores noise=(rand-16384)/1171, adds noise*volatility to previous percent then shared. Stored fields float32; seeded draw0..32767 replaces native libc RNG and time reseed explicitly.",
+    "R08-03a": "Company anchor=capital(+0x24)/10000 yuan, strict below0.85x or above3x; ordinary initial price strict below0.5x/above8x. Above suppress positive0.5/amplify negative2; below positive2/negative0.5; then clamp[-10,10]. Uses capital, not funds/cumulative/dividend.",
+    "R08-04a": "Existing daily clocks precede quote update. Closed day returns before shared RNG or history. Each stock copies current to base; individual suspension resets percent0 and flat price, overrides red/black, no individual draw; else redblack sets+-10 without individual draw; ordinary last. 12 stocks catalog order,144 history, aggregate index trunc(sum(yuan)*10). Cards/news set same persistent percent when changing current quote.",
+    "R08-05a": "Target-price tiers5/15/50/150 yuan use delta steps0.01/0.05/0.1/0.5/1; lower1 upper9999. Reuse existing integer-cent ideal formula; native x87/f32 boundary bits not claimed equivalent.",
+    "R08-06a": "004295ea classifies upper/lower from current vs base and stepped+-10 quotes. UI upper(1) blocks buys,lower(3) blocks sells; opposite side allowed, flat unchanged price is not classified as limit. Debt forced sales bypass UI restriction. UI manual buy max=min(current quota, trunc(bank/current price)); current pool constraint retained. Existing floor(transaction price*quantity) amount can afford one extra share at fractional boundary, so v42 separately enforces unrounded affordability. Sale proceeds bank, pool/quota restored; company-owner ordering inherited.",
+    "R08-07a": "Quota per incoming ordinary seat: remaining<=1000 all,else trunc(pool*(rand%2000+1000)/10000). Existing seeded implementation retained; not daily supply refill. Native average-cost float is not existing total-cost prorating; retain as explicit next-step gap."
+  },
+  "matrix": [
+    {
+      "area": "R08-01a",
+      "evidence": "Japanese stocks24..35: same12 names, initial yuan prices, public shares and volatility facts. Current catalog volatility8..20 is native0.8..2.0 times10; v42 applies /10.",
+      "status": "verified/reused with stated differences"
+    },
+    {
+      "area": "R08-02a",
+      "evidence": "Open day uses one shared(rand-16384)/4097; ordinary stock stores noise=(rand-16384)/1171, adds noise*volatility to previous percent then shared. Stored fields float32; seeded draw0..32767 replaces native libc RNG and time reseed explicitly.",
+      "status": "v42 increment"
+    },
+    {
+      "area": "R08-03a",
+      "evidence": "Company anchor=capital(+0x24)/10000 yuan, strict below0.85x or above3x; ordinary initial price strict below0.5x/above8x. Above suppress positive0.5/amplify negative2; below positive2/negative0.5; then clamp[-10,10]. Uses capital, not funds/cumulative/dividend.",
+      "status": "v42 increment"
+    },
+    {
+      "area": "R08-04a",
+      "evidence": "Existing daily clocks precede quote update. Closed day returns before shared RNG or history. Each stock copies current to base; individual suspension resets percent0 and flat price, overrides red/black, no individual draw; else redblack sets+-10 without individual draw; ordinary last. 12 stocks catalog order,144 history, aggregate index trunc(sum(yuan)*10). Cards/news set same persistent percent when changing current quote.",
+      "status": "v42 increment"
+    },
+    {
+      "area": "R08-05a",
+      "evidence": "Target-price tiers5/15/50/150 yuan use delta steps0.01/0.05/0.1/0.5/1; lower1 upper9999. Reuse existing integer-cent ideal formula; native x87/f32 boundary bits not claimed equivalent.",
+      "status": "verified/reused with stated differences"
+    },
+    {
+      "area": "R08-06a",
+      "evidence": "004295ea classifies upper/lower from current vs base and stepped+-10 quotes. UI upper(1) blocks buys,lower(3) blocks sells; opposite side allowed, flat unchanged price is not classified as limit. Debt forced sales bypass UI restriction. UI manual buy max=min(current quota, trunc(bank/current price)); current pool constraint retained. Existing floor(transaction price*quantity) amount can afford one extra share at fractional boundary, so v42 separately enforces unrounded affordability. Sale proceeds bank, pool/quota restored; company-owner ordering inherited.",
+      "status": "v42 increment"
+    },
+    {
+      "area": "R08-07a",
+      "evidence": "Quota per incoming ordinary seat: remaining<=1000 all,else trunc(pool*(rand%2000+1000)/10000). Existing seeded implementation retained; not daily supply refill. Native average-cost float is not existing total-cost prorating; retain as explicit next-step gap.",
+      "status": "verified/reused with stated differences"
+    }
+  ],
+  "deferred": [
+    "native x87/CRT/time reseed equivalence",
+    "native float average-cost",
+    "full native chart/input/audio",
+    "other asset listings",
+    "special actors",
+    "native roulette",
+    "native exit call stack and ending",
+    "minigame presentation/collision"
+  ]
+}

@@ -1,0 +1,22 @@
+import type {CompanyDividend,DividendPayment} from '../../frontend/src/features/richman/game/dividends';
+import assert from 'node:assert/strict';
+import type {GameState,GameEvent} from '../../frontend/src/features/richman/game/engine';
+/** Independent pre/post accounting; no production dividend/market/lottery handlers. */
+export function verifyDividends(before:GameState,after:GameState,events:readonly GameEvent[]){
+ const checks:string[]=[];
+ for(const ev of events){
+  if(ev.type==='stockTraded'&&!ev.forced){const k=before.g6!.stocks.find(k=>k.id===ev.stockId)!,old=before.g6!.holdings[ev.traderId][k.id],now=after.g6!.holdings[ev.traderId][k.id],sign=ev.side==='buy'?1:-1;assert.equal(ev.amount,Math.floor(k.price*ev.quantity/100));assert.equal(now.quantity,old.quantity+sign*ev.quantity);assert.equal(after.economy!.balances[ev.traderId].bank,before.economy!.balances[ev.traderId].bank-sign*ev.amount);checks.push('legal market purchase/sale changes real holdings and bank');}
+  if(ev.type==='newsResolved'&&ev.completeChanges?.company&&ev.newsId!==29){const old=before.news!.business!.companies.find(c=>c.id===ev.completeChanges!.company!.before.id)!,now=after.news!.business!.companies.find(c=>c.id===old.id)!,delta=ev.newsId===31?20000:ev.newsId===32?-20000:ev.newsId===34?-5000:-10000;const funds=ev.newsId===35?(old.funds*2)|0:(old.funds+delta)|0,cumulative=(old.cumulative+(ev.newsId===35?funds:delta))|0;assert.equal(now.funds,funds);assert.equal(now.cumulative,cumulative);checks.push('original-map company news changes period and cumulative income');}
+  if(ev.type!=='companyDividends')continue;
+  assert.ok(events.some(e=>e.type==='dateAdvanced'));assert.equal(after.calendar!.date.slice(-3),'-15');assert.equal(ev.settlement.date,after.calendar!.date);
+  const alive=before.players.filter(p=>!before.finance!.eliminated.includes(p.id)),totals=Object.fromEntries(alive.map(p=>[p.id,0]));
+  assert.deepEqual(ev.settlement.companies.map(c=>c.stockId),before.g6!.stocks.filter(k=>before.news!.business!.companies.some(c=>c.stockId===k.id)).map(k=>k.id));
+  for(const old of before.news!.business!.companies){const row:CompanyDividend=ev.settlement.companies.find(c=>c.companyId===old.id)!,sum=alive.reduce((n,p)=>n+before.g6!.holdings[p.id][old.stockId].quantity,0);assert.equal(row.funds,old.funds);assert.equal(row.cumulative,old.cumulative);assert.equal(row.shares,sum);assert.deepEqual(row.allocations.map(a=>a.playerId),alive.map(p=>p.id));for(const p of alive){const q=before.g6!.holdings[p.id][old.stockId].quantity,ratio=new Float32Array([sum?q/sum:0])[0],amount=Math.trunc(old.funds*ratio)|0,a=row.allocations.find(a=>a.playerId===p.id)!;assert.deepEqual(a,{playerId:p.id,quantity:q,ratio,amount});totals[p.id]=(totals[p.id]+amount)|0;}const now=after.news!.business!.companies.find(c=>c.id===old.id)!;assert.equal(now.funds,sum?0:old.funds);assert.equal(now.cumulative,old.cumulative);assert.equal(row.after,now.funds);if(old.funds)checks.push(sum?'distributed signed period clears; cumulative retained':'no-holder signed period and cumulative carried');}
+  const expected=structuredClone(before.economy!.balances);
+  for(const p of alive){const b=expected[p.id];const row:DividendPayment=ev.settlement.payments.find(r=>r.playerId===p.id)!;assert.deepEqual(row.before,b);b.bank=(b.bank+totals[p.id])|0;if(b.bank<0){b.cash=(b.cash+b.bank)|0;b.bank=0;}const bankrupt=b.cash<0;assert.equal(row.unpaid,Math.max(0,-b.cash));assert.equal(row.bankrupt,bankrupt);if(bankrupt)b.cash=0;assert.deepEqual(row.after,b);assert.equal(row.amount,totals[p.id]);if(bankrupt)assert.ok(after.finance!.eliminated.includes(p.id));}
+  const draw=events.find(e=>e.type==='lotteryDrawn');assert.ok(draw?.type==='lotteryDrawn');assert.ok(events.indexOf(draw)>events.indexOf(ev));if(draw.result.winnerId)expected[draw.result.winnerId].cash+=draw.result.amount;assert.equal(draw.result.fundBefore,before.news!.publicFund);assert.equal(after.news!.publicFund,draw.result.fundAfter);
+  for(const n of events)if(n.type==='loanNotice'&&n.notice.kind==='collected'){assert.ok(events.indexOf(n)>events.indexOf(draw));expected[n.notice.playerId].bank-=n.notice.bank;expected[n.notice.playerId].cash-=n.notice.cash;}
+  assert.deepEqual(after.economy!.balances,expected);assert.deepEqual(after.news!.business!.dividends,ev.settlement);checks.push('all-company net enters bank before lottery and incoming loan; final balances reconciled');
+ }
+ return checks;
+}

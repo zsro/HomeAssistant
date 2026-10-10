@@ -1,0 +1,621 @@
+{
+  "stage": "S3-02d",
+  "completed": true,
+  "policy": "estate-v1",
+  "preservedPolicies": [
+    "basic-v1",
+    "tools-v1",
+    "rent-v1",
+    "defense-v1"
+  ],
+  "rulesId": "japan-events-candidate-v44",
+  "fingerprint": "f9dbb7e9",
+  "newGameSemantics": false,
+  "checks": {
+    "frontend": {
+      "tests": 1930,
+      "files": 134,
+      "passed": true,
+      "log": "/private/tmp/estate-full-final.log",
+      "workers": 2,
+      "durationSeconds": 506.81
+    },
+    "newDomainTests": 35,
+    "newActualReplayTests": 3,
+    "versionsPlayers": 132,
+    "lint": true,
+    "build": true,
+    "diffCheck": true,
+    "oldFixtureJsonByteUnchanged": 320,
+    "basicDecisionBodyUnchanged": true,
+    "toolsRentDefenseFilesUnchanged": true,
+    "engineRulesUnchanged": true
+  },
+  "browser": {
+    "routes": [
+      {
+        "players": 2,
+        "commands": 1730,
+        "turn": 253,
+        "auto": 353,
+        "human": 353,
+        "acquisitions": [
+          {
+            "id": "player-2",
+            "ai": true,
+            "item": "card:05",
+            "turn": 54,
+            "action": "magic",
+            "evidence": [
+              {
+                "node": 35,
+                "group": 0,
+                "targets": [
+                  "player-2"
+                ],
+                "effect": 6,
+                "title": "得一张卡片",
+                "rows": [
+                  {
+                    "playerId": "player-2",
+                    "lines": [
+                      "获得换屋卡。"
+                    ],
+                    "pointsBefore": 0,
+                    "pointsAfter": 0,
+                    "cashBefore": 600,
+                    "cashAfter": 600,
+                    "bankBefore": 96000,
+                    "bankAfter": 96000,
+                    "stopBefore": 0,
+                    "stopAfter": 0,
+                    "previousBefore": 36,
+                    "previousAfter": 36,
+                    "received": {
+                      "itemId": "card:05",
+                      "discarded": null
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "player-2",
+            "ai": true,
+            "item": "card:04",
+            "turn": 150,
+            "action": "buyItem",
+            "evidence": [
+              {
+                "item": "card:04",
+                "cost": 25
+              }
+            ]
+          },
+          {
+            "id": "player-2",
+            "ai": true,
+            "item": "card:03",
+            "turn": 176,
+            "action": "buyItem",
+            "evidence": [
+              {
+                "item": "card:03",
+                "cost": 35
+              }
+            ]
+          }
+        ],
+        "uses": [
+          {
+            "ai": true,
+            "id": "player-2",
+            "item": "card:04",
+            "turn": 172,
+            "target": "japan:land:22",
+            "cost": 0,
+            "changes": [
+              {
+                "before": {
+                  "id": "japan:land:26",
+                  "ownerId": "player-2",
+                  "level": 0,
+                  "basePrice": 1500,
+                  "buildingType": 0,
+                  "priceStatus": 0,
+                  "research": null
+                },
+                "after": {
+                  "id": "japan:land:26",
+                  "ownerId": null,
+                  "level": 0,
+                  "basePrice": 1500,
+                  "buildingType": 0,
+                  "priceStatus": 0,
+                  "research": null
+                }
+              },
+              {
+                "before": {
+                  "id": "japan:land:22",
+                  "ownerId": null,
+                  "level": 0,
+                  "basePrice": 2000,
+                  "buildingType": 0,
+                  "priceStatus": 0,
+                  "research": null
+                },
+                "after": {
+                  "id": "japan:land:22",
+                  "ownerId": "player-2",
+                  "level": 0,
+                  "basePrice": 2000,
+                  "buildingType": 0,
+                  "priceStatus": 0,
+                  "research": null
+                }
+              }
+            ]
+          },
+          {
+            "ai": true,
+            "id": "player-2",
+            "item": "card:03",
+            "turn": 252,
+            "target": "japan:land:12",
+            "cost": 2500,
+            "changes": [
+              {
+                "before": {
+                  "id": "japan:land:12",
+                  "ownerId": "player-1",
+                  "level": 0,
+                  "basePrice": 2500,
+                  "buildingType": 0,
+                  "priceStatus": 0,
+                  "research": null
+                },
+                "after": {
+                  "id": "japan:land:12",
+                  "ownerId": "player-2",
+                  "level": 0,
+                  "basePrice": 2500,
+                  "buildingType": 0,
+                  "priceStatus": 0,
+                  "research": null
+                }
+              }
+            ]
+          }
+        ],
+        "cancellations": [],
+        "prefixes": [
+          "card:05-acquired",
+          "card:04-acquired",
+          "card:04-paused",
+          "card:04-resumed",
+          "card:04-confirm-before",
+          "card:04-confirm-after",
+          "card:03-acquired",
+          "card:03-paused",
+          "card:03-resumed",
+          "card:03-confirm-before",
+          "card:03-confirm-after"
+        ],
+        "report": {
+          "policy": "estate-v1",
+          "toolWindows": [
+            "tool:08",
+            "card:04",
+            "card:03"
+          ],
+          "crossChecks": [],
+          "route": "2",
+          "terminal": false,
+          "players": 2,
+          "normalSpeed": true,
+          "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+          "commands": 1730,
+          "auto": 353,
+          "human": 353,
+          "lifecycle": [
+            "pause stops waiting",
+            "resume",
+            "reset dialog cancel",
+            "reset",
+            "replace with humans",
+            "exit cleanup",
+            "fullscreen",
+            "390px"
+          ],
+          "cleanup": {
+            "raf": 0,
+            "canvas": 0
+          },
+          "errors": []
+        },
+        "hashes": {
+          "replay": "f0ffd5a8c432a5782b056ce2895aafe422675cd4b0bc64ca60059f68c5ad31fc",
+          "state": "6dbfd021e90258ba16158738001f596fdfb966f5c21bd3aa38a41f6bcd78e0df",
+          "events": "222d6f5d9087d38568041a9b518a9feaaa2b72f1e0e2047c54ac26e252fd1178"
+        }
+      },
+      {
+        "players": 3,
+        "commands": 381,
+        "turn": 49,
+        "auto": 105,
+        "human": 48,
+        "acquisitions": [
+          {
+            "id": "player-3",
+            "ai": true,
+            "item": "card:05",
+            "turn": 42,
+            "action": "buyItem",
+            "evidence": [
+              {
+                "item": "card:05",
+                "cost": 20
+              }
+            ]
+          }
+        ],
+        "uses": [
+          {
+            "ai": true,
+            "id": "player-3",
+            "item": "card:05",
+            "turn": 48,
+            "target": "japan:land:23",
+            "cost": 0,
+            "changes": [
+              {
+                "before": {
+                  "id": "japan:land:37",
+                  "ownerId": "player-3",
+                  "level": 0,
+                  "basePrice": 2000,
+                  "buildingType": 0,
+                  "priceStatus": 0,
+                  "research": null
+                },
+                "after": {
+                  "id": "japan:land:37",
+                  "ownerId": "player-3",
+                  "level": 1,
+                  "basePrice": 2000,
+                  "buildingType": 0,
+                  "priceStatus": 0,
+                  "research": null
+                }
+              },
+              {
+                "before": {
+                  "id": "japan:land:23",
+                  "ownerId": "player-2",
+                  "level": 1,
+                  "basePrice": 2000,
+                  "buildingType": 0,
+                  "priceStatus": 0,
+                  "research": null
+                },
+                "after": {
+                  "id": "japan:land:23",
+                  "ownerId": "player-2",
+                  "level": 0,
+                  "basePrice": 2000,
+                  "buildingType": 0,
+                  "priceStatus": 0,
+                  "research": null
+                }
+              }
+            ]
+          }
+        ],
+        "cancellations": [],
+        "prefixes": [
+          "card:05-acquired",
+          "card:05-paused",
+          "card:05-resumed",
+          "card:05-confirm-before",
+          "card:05-confirm-after"
+        ],
+        "report": {
+          "policy": "estate-v1",
+          "toolWindows": [
+            "tool:08",
+            "tool:09",
+            "card:05"
+          ],
+          "crossChecks": [],
+          "route": "3",
+          "terminal": false,
+          "players": 3,
+          "normalSpeed": true,
+          "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+          "commands": 381,
+          "auto": 105,
+          "human": 48,
+          "lifecycle": [
+            "pause stops waiting",
+            "resume",
+            "reset dialog cancel",
+            "reset",
+            "replace with humans",
+            "exit cleanup",
+            "fullscreen",
+            "390px"
+          ],
+          "cleanup": {
+            "raf": 0,
+            "canvas": 0
+          },
+          "errors": []
+        },
+        "hashes": {
+          "replay": "d9140556392b01a92223c586348e35f40954e9edf28b2c61bdece7348d3d4536",
+          "state": "aa8c267b10fda1531536706698a7428cdf2f6ab2dc23f3cdbb331a3bbfcf42c5",
+          "events": "f5bb45f2a035fecbde20960c9b1b78cb27ab16c8df4771a5b7db220fb12f9a50"
+        }
+      },
+      {
+        "players": 4,
+        "commands": 884,
+        "turn": 121,
+        "auto": 272,
+        "human": 82,
+        "acquisitions": [
+          {
+            "id": "player-1",
+            "ai": false,
+            "item": "card:05",
+            "turn": 49,
+            "action": "magic",
+            "evidence": [
+              {
+                "node": 35,
+                "group": 3,
+                "targets": [
+                  "player-1"
+                ],
+                "effect": 6,
+                "title": "得一张卡片",
+                "rows": [
+                  {
+                    "playerId": "player-1",
+                    "lines": [
+                      "获得换屋卡。"
+                    ],
+                    "pointsBefore": 0,
+                    "pointsAfter": 0,
+                    "cashBefore": 39100,
+                    "cashAfter": 39100,
+                    "bankBefore": 51600,
+                    "bankAfter": 51600,
+                    "stopBefore": 0,
+                    "stopAfter": 0,
+                    "previousBefore": 36,
+                    "previousAfter": 36,
+                    "received": {
+                      "itemId": "card:05",
+                      "discarded": null
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "player-4",
+            "ai": true,
+            "item": "card:04",
+            "turn": 84,
+            "action": "magic",
+            "evidence": [
+              {
+                "node": 35,
+                "group": 4,
+                "targets": [
+                  "player-4"
+                ],
+                "effect": 6,
+                "title": "得一张卡片",
+                "rows": [
+                  {
+                    "playerId": "player-4",
+                    "lines": [
+                      "获得换地卡。"
+                    ],
+                    "pointsBefore": 0,
+                    "pointsAfter": 0,
+                    "cashBefore": 950,
+                    "cashAfter": 950,
+                    "bankBefore": 95400,
+                    "bankAfter": 95400,
+                    "stopBefore": 0,
+                    "stopAfter": 0,
+                    "previousBefore": 36,
+                    "previousAfter": 36,
+                    "received": {
+                      "itemId": "card:04",
+                      "discarded": null
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "player-4",
+            "ai": true,
+            "item": "card:12",
+            "turn": 100,
+            "action": "animationDone",
+            "evidence": [
+              "玩家4附身大福神，期限7次自身行动边界。",
+              "玩家4获得card:12。",
+              "玩家4获得card:13。"
+            ]
+          }
+        ],
+        "uses": [
+          {
+            "ai": true,
+            "id": "player-4",
+            "item": "card:12",
+            "turn": 120,
+            "target": "japan:land:21",
+            "cost": 0,
+            "changes": [
+              {
+                "before": {
+                  "id": "japan:land:21",
+                  "ownerId": "player-1",
+                  "level": 1,
+                  "basePrice": 2000,
+                  "buildingType": 0,
+                  "priceStatus": 0,
+                  "research": null
+                },
+                "after": {
+                  "id": "japan:land:21",
+                  "ownerId": "player-1",
+                  "level": 0,
+                  "basePrice": 2000,
+                  "buildingType": 0,
+                  "priceStatus": 0,
+                  "research": null
+                }
+              }
+            ]
+          }
+        ],
+        "cancellations": [
+          {
+            "ai": false,
+            "id": "player-1",
+            "item": "card:05",
+            "turn": 85
+          }
+        ],
+        "prefixes": [
+          "card:04-acquired",
+          "cancel-before",
+          "cancel-after",
+          "card:12-acquired",
+          "card:12-paused",
+          "card:12-resumed",
+          "card:12-confirm-before",
+          "card:12-confirm-after"
+        ],
+        "report": {
+          "policy": "estate-v1",
+          "toolWindows": [
+            "tool:08",
+            "tool:09",
+            "card:12"
+          ],
+          "crossChecks": [],
+          "route": "4",
+          "terminal": false,
+          "players": 4,
+          "normalSpeed": true,
+          "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+          "commands": 884,
+          "auto": 272,
+          "human": 82,
+          "lifecycle": [
+            "pause stops waiting",
+            "resume",
+            "reset dialog cancel",
+            "reset",
+            "replace with humans",
+            "exit cleanup",
+            "fullscreen",
+            "390px"
+          ],
+          "cleanup": {
+            "raf": 0,
+            "canvas": 0
+          },
+          "errors": []
+        },
+        "hashes": {
+          "replay": "4f389ceed7b930c8a65c1071ec69ed1830875ebdd44780d4d14b18f5c7743cbe",
+          "state": "0235423d342d65ac965c2b40be137b2529b6adc0bdb1303a9320d8c8241b9abb",
+          "events": "f8d8fcd73310fbf39852bc6c472e4bbed5d07fed0c746649837d386aaae68efa"
+        }
+      }
+    ],
+    "totalCommands": 2995,
+    "totalComputerDecisions": 730,
+    "totalHumanDecisions": 483,
+    "namedPrefixes": 24,
+    "normalSpeed": true,
+    "injection": "auth only; no game state injection"
+  },
+  "builtUI": {
+    "built": true,
+    "normalSpeed": true,
+    "defaultHuman": true,
+    "defaultBasic": true,
+    "toolsEffect": true,
+    "policyMetadata": true,
+    "resetPreservesPolicy": true,
+    "switchBackToBasic": true,
+    "switchBackToTools": true,
+    "switchBackToRent": true,
+    "switchBackToDefense": true,
+    "humanReplacement": true,
+    "exitWhileToolsWaiting": true,
+    "setup390": true,
+    "cleanup": {
+      "raf": 0,
+      "canvas": 0
+    },
+    "errors": []
+  },
+  "changes": [
+    "new host estate-v1 for four G1 property cards, exact existing legal target set and command interface",
+    "current asset/basic-rent utility, cash-only reserve, ally/type/status filters; no hidden data or RNG",
+    "recheck target before confirm and cancel when no benefit remains; finite shelf/pool/capacity restock",
+    "five selectable policy versions with unchanged basic default and prior policy delegation"
+  ],
+  "failedAttempts": [
+    {
+      "scope": "initial domain fixtures",
+      "reason": "stale object references after immutable dispatch, omitted required Session seed, and expectation overlooked another profitable unowned swap; corrected fixtures/assertions; no game semantic changes",
+      "log": "/private/tmp/estate-domain-fixture-failures.log"
+    },
+    {
+      "scope": "test type check",
+      "reason": "test referenced absent G5.research field and omitted seed; assert entire G5 instead and supply seed; final build passed",
+      "log": "/private/tmp/estate-build-test-type-failure.log"
+    }
+  ],
+  "notClaimed": [
+    "native AI/hostility/difficulty parity or globally optimal relative-wealth strategy",
+    "chain/special/facility/research property valuation, sealed/inflated land, predicted rent modifiers or future dates",
+    "browser target/ownership/cash mutation or computer automatic cancel; domain only; actual human cancel separate",
+    "new policy browser non-current response/payment/liquidation/bankruptcy or terminal/all characters; historical accepted evidence retained",
+    "background throttling/save-load, per-seat policy mix or midgame takeover",
+    "other proactive cards/stocks/financing/research/bidding"
+  ],
+  "retainedDifferences": [
+    "native precision/RNG/chart",
+    "other asset sales",
+    "special actors",
+    "original wheel",
+    "original exit stack/endgame",
+    "minigame presentation/collision",
+    "native snapshot"
+  ],
+  "next": "S3-02e: proactive cash-card group (equal poor/equal rich/tax), legal participants and actual payment/reaction callback, cash gain/cost/ally risk; separately version policy, retain all prior policies and v44",
+  "git": {
+    "committed": false,
+    "pushed": false,
+    "deployed": false
+  }
+}

@@ -1,0 +1,171 @@
+{
+  "referenceCommit": "ec7d70e693059d1e781d9d1cc2ad7f36d360d39e",
+  "method": "Seven local fixed-commit ASM/header files checked against Git-tree blob SHA1; local MapDat event bytes reused from prior verified map audit. Cross-version evidence B; no new Windows runtime observation.",
+  "verifiedFiles": 7,
+  "sources": [
+    {
+      "path": "asm/rich4_ui_letou.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_ui_letou.asm",
+      "gitBlobSha1": "ad619f3ce4c05ef3ef6ae54de27d3bad4cc1b5e6",
+      "sha256": "8d3f5824e30bf1c774ed86056a5da1ea7da384d0ce41f965c5dab163806eceb9"
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_core_actions.asm",
+      "gitBlobSha1": "ebfde6c820e8a430b856d9816a926b636e0db1dc",
+      "sha256": "2874c1a3e0ca1d0da5afe4cb93e42cf2d6f6fa864dbee11d7bcaa028af07d94a"
+    },
+    {
+      "path": "asm/rich4_new_game.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_new_game.asm",
+      "gitBlobSha1": "55015c738593cf08c2bf97b6298324be4b9bec00",
+      "sha256": "0abb3c6ee86e22c768480573e365dcefb692f69ffa701d5ff027cf4d1b2bf86a"
+    },
+    {
+      "path": "asm/rich4_player_bankrupt.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_bankrupt.asm",
+      "gitBlobSha1": "7d89fe867d86a4b9fc230602da8bc084725310c6",
+      "sha256": "57c69d347bef382e0045b00855c17293e5cb737ed22359340894ed9b9cf8bf02"
+    },
+    {
+      "path": "asm/rich4_ui_stock.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_ui_stock.asm",
+      "gitBlobSha1": "cc0913dc550a049781e3b72f2df215ce84df6b28",
+      "sha256": "0e3152263c9886615fa6509fcd005f0db37a9fb850b3124ede51de868fa8ab82"
+    },
+    {
+      "path": "asm/rich4_player_info.h",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_info.h",
+      "gitBlobSha1": "2f04e6aa425bba2f9345b64ce0ab4c1240ac185f",
+      "sha256": "cc17726ce054de587a42c0f335d84495e66698da2e15eb6a7b7ca28ab38604be"
+    },
+    {
+      "path": "asm/rich4.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4.asm",
+      "gitBlobSha1": "d11a64755094435fa9953652a5a4951871fd9697",
+      "sha256": "30904cbb4f23a6b74fc1b80ad023bd7dff11b441c2c1978f768f9891d099d64a"
+    }
+  ],
+  "localMapSource": {
+    "MapDat.MKF": {
+      "bytes": 36560,
+      "sha256": "4dc6a47efe03f64484e6b9ac5ee31489b7f42fc369c0296f2f0b8d63845294b1"
+    },
+    "rich4.exe": {
+      "bytes": 591360,
+      "sha256": "110b29f9d2fadcff3836eb69ec380aa264951859c90955da6e11158d2f956a13"
+    }
+  },
+  "lotteryNodes": [
+    {
+      "id": 28,
+      "offset": 1160,
+      "x": 408,
+      "y": 2064,
+      "rawHex": "98011008bcd6b37a000000000000000000000000000000001d001b00000000000000090009000080",
+      "adjacentSlots": [
+        29,
+        27,
+        0,
+        0
+      ],
+      "adjacent": [
+        29,
+        27
+      ],
+      "kind": 0,
+      "word22": 9,
+      "statusBits": 2147483657,
+      "eventCodeCandidate": 9,
+      "target": null
+    },
+    {
+      "id": 88,
+      "offset": 3560,
+      "x": 1943,
+      "y": 743,
+      "rawHex": "9707e702bcd6b37a0000000000000000000000000000000059005700000000000000090009000000",
+      "adjacentSlots": [
+        89,
+        87,
+        0,
+        0
+      ],
+      "adjacent": [
+        89,
+        87
+      ],
+      "kind": 0,
+      "word22": 9,
+      "statusBits": 9,
+      "eventCodeCandidate": 9,
+      "target": null
+    }
+  ],
+  "fields": {
+    "tickets": "ref004990b8,36 byte owner markers,0=unsold,seat+1=owner",
+    "publicFund": "ref00499080, same public fund used by taxes/penalties and lottery; initial0",
+    "cash": "player+28",
+    "bank": "player+32"
+  },
+  "rules": {
+    "R13-01l": {
+      "addresses": [
+        "player_core_actions:004197e9 / 00419884 / 0041b17a",
+        "ui_letou:004315cc"
+      ],
+      "evidence": "17-code landing dispatcher index9 lottery; +55 dream suppresses non-property events; Japan status&255==9 maps to28/88; not MapNode.kind"
+    },
+    "R05-01l": {
+      "addresses": [
+        "ui_letou:0042f8c8..0042f8f6",
+        "0042fe8c..0042ffd1",
+        "0042f94f..0042fa2f",
+        "0043169e..0043170a"
+      ],
+      "evidence": "human UI cash>=1000; click free number writes owner seat+1, cash-1000/sharedFund+1000 then posts406, sets state5 to close; no price index, bank fallback or reaction; one pervisit; AI branch uses cash>1000 and one random free number, AI remains deferred"
+    },
+    "R13-02l": {
+      "addresses": [
+        "player_core_actions:0041d066..0041d099",
+        "ui_letou:00431712..00431729"
+      ],
+      "evidence": "global date lowbyte15 calls company distribution0042ba97 then lottery00431712 after normal market/holiday handler, before incoming player; date not required to be trading day; no owner across36 means return without draw"
+    },
+    "R13-03l": {
+      "addresses": [
+        "ui_letou:00430322 / 00430b0d..00430b7a"
+      ],
+      "evidence": "scan tickets ascending number and count owners0..3; if any owner count>10, rand%soldCount selects sold-number list; else rand%36+1; threshold is not a cap. Web uses one existing g6Draw range call, not CRT/animation or timer RNG"
+    },
+    "R05-02l": {
+      "addresses": [
+        "ui_letou:00430d55..00430d85 / 00430ab5..00430afb",
+        "player_core_actions:0041d3f4..0041d415",
+        "new_game:00407494..004074c9"
+      ],
+      "evidence": "winner marker selectedNumber+004990b7; nonzero calls reward(winner-1,fund,1), flag1 credits cash; then zeros publicFund and memset36 tickets; zero winner skips all clearing, retaining both; newgame sets36 tickets and fund to0, no guaranteed starting jackpot/subsidy"
+    },
+    "R05-03l": {
+      "addresses": [
+        "player_bankrupt:0040d1a2..0040d1c6"
+      ],
+      "evidence": "loop36, owner==bankruptSeat+1 set0; does not subtract/refund sharedFund; freed numbers become available; full forced auction remains deferred"
+    },
+    "R09-01l": {
+      "evidence": "Web integration: version25 only state/decisions/actions/events; G7 world snapshot includes lottery with existing publicFund/calendar, RNG/log remain live; replay seed sampler is explicit candidate convention"
+    },
+    "R08-02l-deferred": {
+      "addresses": [
+        "ui_stock:0042ba97..0042bec5"
+      ],
+      "evidence": "date15 predecessor is company earnings distribution: company+28 income distributed by holdings ratio, then bank credit; not a lottery jackpot refill. Full company dividends remain unimplemented in v25 and are next evidence target"
+    }
+  },
+  "deferred": [
+    "company distributions and full operating/insurance rules",
+    "original animation/voice RNG and AI-only purchase threshold",
+    "other calendar activities / price index / special players",
+    "original bankruptcy forced auctions"
+  ]
+}

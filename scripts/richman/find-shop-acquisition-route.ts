@@ -1,0 +1,3 @@
+import fs from 'node:fs';
+import {planShopAcquisition} from './plan-shop-acquisition-journey';
+for(const goal of ['card','tool']){for(let i=1;i<=50;i++){const seed='shop-acquisition-'+i,result=planShopAcquisition(seed,goal==='card'?4:3,400,goal);if(!result)continue;const gift=result.events.filter(e=>e.type==='shopGift');if(!gift.some(e=>e.receipt.kind===goal&&e.receipt.received))continue;fs.writeFileSync('/private/tmp/richman-unified-03aa-'+goal+'.json',JSON.stringify(result));console.log(JSON.stringify({goal,seed,commands:result.replay.commands.length,fingerprint:result.replay.itemFingerprint,gifts:gift,turn:result.state.turn}));break;}}

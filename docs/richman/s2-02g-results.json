@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-03",
+  "rulesId": "japan-tools-candidate-v6",
+  "itemFingerprint": "410bc234",
+  "playableItems": {
+    "before": 5,
+    "after": 6,
+    "cards": 2,
+    "tools": 4,
+    "catalog": 43,
+    "remaining": 37,
+    "stageComplete": false
+  },
+  "frontendTests": {
+    "files": 28,
+    "passed": 202,
+    "newRulesAndUI": 14
+  },
+  "lint": "passed",
+  "build": "passed; pre-existing PDF bundling warnings",
+  "browser": "s2-02g-browser-results.json",
+  "legacyV5": {
+    "fixture": "frontend/src/features/richman/game/fixtures/tools-v5-replay.json",
+    "golden": "frontend/src/features/richman/game/fixtures/tools-v5-golden.json",
+    "comparison": "state/events JSON SHA-256 frozen before v6 match after changes"
+  },
+  "scope": {
+    "browserPlayers": 3,
+    "browserNormalSpeed": true,
+    "browserGameStateInjection": false,
+    "v6EnginePurchaseAndAveragePlayers": [
+      2,
+      3,
+      4
+    ],
+    "v6SmallMapToVictoryPlayers": [
+      3
+    ],
+    "v6OriginalMapFullGameToVictoryTested": false,
+    "legacyS1V1V4FullEngineGamesPassed": [
+      2,
+      3,
+      4
+    ],
+    "resourceRescan": false,
+    "databaseChange": false,
+    "commitPushDeploy": false
+  },
+  "failureResolved": "UI test incorrectly expected remainder 1 for 9002 / 3; corrected to 2; final complete suite passed."
+}

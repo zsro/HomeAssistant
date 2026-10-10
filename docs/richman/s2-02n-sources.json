@@ -1,0 +1,66 @@
+{
+  "referenceCommit": "ec7d70e693059d1e781d9d1cc2ad7f36d360d39e",
+  "status": "source-reviewed-not-Windows-runtime-verified",
+  "sources": [
+    {
+      "path": "asm/rich4_player_save_state.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_save_state.asm",
+      "sha256": "8c3d6b7432e81703520465e7785b8293527402e0332f32374ba81848e142e459",
+      "provenance": "downloaded-fixed-reference"
+    },
+    {
+      "path": "asm/rich4_tool_chuansongji.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_tool_chuansongji.asm",
+      "sha256": "0198b74da766617974d63a5f26c3614e260b9af995f7938f5c8aca5cae38bed4",
+      "provenance": "downloaded-fixed-reference"
+    },
+    {
+      "path": "asm/rich4_tool_hezifeidan.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_tool_hezifeidan.asm",
+      "sha256": "8a5c6bb9c9a1e5b0c6850e72ba6a9ec484b7c1c0b316f0630dcaf30bf62655e1",
+      "provenance": "downloaded-fixed-reference"
+    },
+    {
+      "path": "asm/rich4_tool_shiguangji.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_tool_shiguangji.asm",
+      "sha256": "cf7d61f898bb06d9b0f26abd90c2b1ff0d0f370c563a78f566fbb374daa1277b",
+      "provenance": "downloaded-fixed-reference"
+    },
+    {
+      "path": "asm/rich4.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4.asm",
+      "sha256": "30904cbb4f23a6b74fc1b80ad023bd7dff11b441c2c1978f768f9891d099d64a",
+      "provenance": "previous-audit-cache"
+    },
+    {
+      "path": "asm/rich4_tool_table.c",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_tool_table.c",
+      "sha256": "d19259524990ed8b9bf13c85dbf7220d9166b11536f91df9c8ed904f5f4e3158",
+      "provenance": "previous-audit-cache"
+    },
+    {
+      "path": "asm/rich4_player_utils.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_utils.asm",
+      "sha256": "17479913576a004458908f124c4d7e94361dab41a501830d2ecb87eb7b438f01",
+      "provenance": "previous-audit-cache"
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_core_actions.asm",
+      "sha256": "2874c1a3e0ca1d0da5afe4cb93e42cf2d6f6fa864dbee11d7bcaa028af07d94a",
+      "provenance": "previous-audit-cache"
+    },
+    {
+      "path": "asm/rich4_ui_use_tool.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_ui_use_tool.asm",
+      "sha256": "fa16767708c30617610771e1eb6e0003b7576a2be2efc34d92f29a631fa7754a",
+      "provenance": "previous-audit-cache"
+    },
+    {
+      "path": "asm/rich4_objects.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_objects.asm",
+      "sha256": "a2d3c8c9d6946625df6f5b26a981cbae195d445f4b5de6447dea033a11adcaf6",
+      "provenance": "previous-audit-cache"
+    }
+  ]
+}

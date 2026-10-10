@@ -1,0 +1,119 @@
+{
+  "players": 3,
+  "commands": 381,
+  "turn": 49,
+  "auto": 105,
+  "human": 48,
+  "acquisitions": [
+    {
+      "id": "player-3",
+      "ai": true,
+      "item": "card:05",
+      "turn": 42,
+      "action": "buyItem",
+      "evidence": [
+        {
+          "item": "card:05",
+          "cost": 20
+        }
+      ]
+    }
+  ],
+  "uses": [
+    {
+      "ai": true,
+      "id": "player-3",
+      "item": "card:05",
+      "turn": 48,
+      "target": "japan:land:23",
+      "cost": 0,
+      "changes": [
+        {
+          "before": {
+            "id": "japan:land:37",
+            "ownerId": "player-3",
+            "level": 0,
+            "basePrice": 2000,
+            "buildingType": 0,
+            "priceStatus": 0,
+            "research": null
+          },
+          "after": {
+            "id": "japan:land:37",
+            "ownerId": "player-3",
+            "level": 1,
+            "basePrice": 2000,
+            "buildingType": 0,
+            "priceStatus": 0,
+            "research": null
+          }
+        },
+        {
+          "before": {
+            "id": "japan:land:23",
+            "ownerId": "player-2",
+            "level": 1,
+            "basePrice": 2000,
+            "buildingType": 0,
+            "priceStatus": 0,
+            "research": null
+          },
+          "after": {
+            "id": "japan:land:23",
+            "ownerId": "player-2",
+            "level": 0,
+            "basePrice": 2000,
+            "buildingType": 0,
+            "priceStatus": 0,
+            "research": null
+          }
+        }
+      ]
+    }
+  ],
+  "cancellations": [],
+  "prefixes": [
+    "card:05-acquired",
+    "card:05-paused",
+    "card:05-resumed",
+    "card:05-confirm-before",
+    "card:05-confirm-after"
+  ],
+  "report": {
+    "policy": "estate-v1",
+    "toolWindows": [
+      "tool:08",
+      "tool:09",
+      "card:05"
+    ],
+    "crossChecks": [],
+    "route": "3",
+    "terminal": false,
+    "players": 3,
+    "normalSpeed": true,
+    "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+    "commands": 381,
+    "auto": 105,
+    "human": 48,
+    "lifecycle": [
+      "pause stops waiting",
+      "resume",
+      "reset dialog cancel",
+      "reset",
+      "replace with humans",
+      "exit cleanup",
+      "fullscreen",
+      "390px"
+    ],
+    "cleanup": {
+      "raf": 0,
+      "canvas": 0
+    },
+    "errors": []
+  },
+  "hashes": {
+    "replay": "d9140556392b01a92223c586348e35f40954e9edf28b2c61bdece7348d3d4536",
+    "state": "aa8c267b10fda1531536706698a7428cdf2f6ab2dc23f3cdbb331a3bbfcf42c5",
+    "events": "f5bb45f2a035fecbde20960c9b1b78cb27ab16c8df4771a5b7db220fb12f9a50"
+  }
+}

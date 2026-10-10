@@ -1,0 +1,12 @@
+{
+  "route": "1",
+  "seed": "asset-group-3",
+  "commands": 45,
+  "turn": 6,
+  "players": 3,
+  "state": "531413dfbec8478e3abacae1f95c2e4a6e082d6955fed16a3628669a2a9995cb",
+  "events": "c5303ee5df28145f9c2cb50d5b7b8d206f780e3956f3acec7ef70a340e812aff",
+  "fortune": [
+    1
+  ]
+}

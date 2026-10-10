@@ -1,0 +1,65 @@
+{
+  "normalSpeed": true,
+  "map": "original Japan; public UI commands; auth-only fixture; no game state injection",
+  "seed": "card-six-96",
+  "rulesId": "japan-tools-candidate-v6",
+  "itemFingerprint": "410bc234",
+  "checks": [
+    "earn 200 points",
+    "purchase for 200 points",
+    "finite stock",
+    "three-player global cash preview without selecting targets",
+    "pause",
+    "cancel without consumption",
+    "reset dialog cancellation",
+    "fullscreen",
+    "390px",
+    "cash-only settlement",
+    "no RNG/position/bank/property/points changes",
+    "existing tools and next roll",
+    "exact replay",
+    "reset empty cards",
+    "v5 mode",
+    "cleanup"
+  ],
+  "purchase": {
+    "type": "itemBought",
+    "itemId": "card:01",
+    "cost": 200,
+    "points": 0,
+    "supply": 0,
+    "sequence": 1054,
+    "commandId": "command-660",
+    "playerId": "player-2",
+    "turn": 98
+  },
+  "settlement": {
+    "type": "wealthEqualized",
+    "participants": [
+      {
+        "playerId": "player-1",
+        "cash": 32600
+      },
+      {
+        "playerId": "player-2",
+        "cash": 49800
+      },
+      {
+        "playerId": "player-3",
+        "cash": 48900
+      }
+    ],
+    "average": 43766,
+    "discarded": 2,
+    "sequence": 1097,
+    "commandId": "command-688",
+    "playerId": "player-2",
+    "turn": 101
+  },
+  "turn": 101,
+  "cleanup": {
+    "raf": 0,
+    "canvas": 0
+  },
+  "errors": []
+}

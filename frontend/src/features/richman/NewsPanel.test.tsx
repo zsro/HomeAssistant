@@ -1,0 +1,14 @@
+import { render,screen,fireEvent,cleanup } from '@testing-library/react';
+import { expect,it,vi,afterEach } from 'vitest';
+import { NewsPanel } from './NewsPanel';
+afterEach(cleanup);
+const decision={kind:'news' as const,id:'n1',node:13,newsId:11,title:'所得税',lines:['玩家1：现金100 → 95元。']};
+it('presents settled changes and sends only the decision token, disabled while paused',()=>{const acknowledge=vi.fn(()=>true),p=render(<NewsPanel decision={decision} paused acknowledge={acknowledge}/>);expect(screen.getByLabelText('新闻变化明细')).toHaveTextContent('100 → 95');fireEvent.click(screen.getByRole('button',{name:'继续回合'}));expect(acknowledge).not.toHaveBeenCalled();p.rerender(<NewsPanel decision={decision} paused={false} acknowledge={acknowledge}/>);fireEvent.click(screen.getByRole('button',{name:'继续回合'}));expect(acknowledge).toHaveBeenCalledExactlyOnceWith('n1');});
+it('reports a stale acknowledgement and makes no local economic mutation',()=>{const original=structuredClone(decision);render(<NewsPanel decision={decision} paused={false} acknowledge={()=>false}/>);fireEvent.click(screen.getByRole('button',{name:'继续回合'}));expect(screen.getByRole('alert')).toHaveTextContent('已失效');expect(decision).toEqual(original);});
+
+it('v16 shows property ownership and research cancellation with the eight-news scope',()=>{render(<NewsPanel decision={{...decision,newsId:5,title:'随机建筑拆除并收回土地',lines:['研究所5级 → 空地0级；产权 玩家1 → 待售。','研究所生产任务已取消，未发放在研工具。'],scope:'当前开放八条新闻，其余候选暂跳过。'}} paused={false} acknowledge={()=>true}/>);expect(screen.getByLabelText('新闻变化明细')).toHaveTextContent('玩家1 → 待售');expect(screen.getByLabelText('新闻变化明细')).toHaveTextContent('生产任务已取消');expect(screen.getByText('当前开放八条新闻，其余候选暂跳过。')).toBeInTheDocument();});
+
+it('public auction is explicitly pending and only offers entry, never claiming an already completed settlement',()=>{const ack=vi.fn(()=>true);render(<NewsPanel decision={{...decision,newsId:7,title:'公共土地拍卖',auction:{propertyId:'land',candidates:['land'],skipped:[]},scope:'十一条新闻'}} paused={false} acknowledge={ack}/>);expect(screen.getByText(/尚未成交/)).toBeInTheDocument();expect(screen.queryByText(/本次新闻已结算/)).toBeNull();fireEvent.click(screen.getByRole('button',{name:'进入竞价'}));expect(ack).toHaveBeenCalledWith('n1');});
+
+it('status news distinguishes approval to leave from the later turn-boundary release',()=>{render(<NewsPanel decision={{...decision,newsId:0,title:'全体在押玩家获释',lines:['玩家2：已移出设施名单，下次自身行动开始时解除状态，位置暂时不变。'],scope:'当前开放十七条新闻；日期/结息仍未实现。'}} paused={false} acknowledge={()=>true}/>);expect(screen.getByLabelText('新闻变化明细')).toHaveTextContent('下次自身行动开始');expect(screen.queryByText(/按本期基准价/)).toBeNull();});
+it.each([26,27,28,29,30,31,32,33,34,35])('news%i never shows the obsolete one-period red/black explanation',newsId=>{render(<NewsPanel decision={{...decision,newsId,scope:'36条新闻'}} paused={false} acknowledge={()=>true}/>);expect(screen.queryByText(/下期恢复常规行情/)).toBeNull();});

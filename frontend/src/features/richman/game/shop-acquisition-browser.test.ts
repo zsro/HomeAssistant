@@ -1,0 +1,12 @@
+import {GameEngine,replayGame} from './engine';
+import type {Replay} from './engine';
+import {expect,it} from 'vitest';
+import {createHash} from 'node:crypto';
+import nodes from '../japan-topology.fixture.json';
+import card from './fixtures/shop-acquisition-v40-card-replay.json';
+import cardGolden from './fixtures/shop-acquisition-v40-card-manifest.json';
+import tool from './fixtures/shop-acquisition-v40-tool-replay.json';
+import toolGolden from './fixtures/shop-acquisition-v40-tool-manifest.json';
+import {verifyShopAcquisition} from '../../../../../scripts/richman/verify-shop-acquisition';
+for(const[name,replay,golden]of[['card',card,cardGolden],['tool',tool,toolGolden]]as const)it(`actual v40 ${name} UI preserves golden and independent gift, weighted shelf, inventory and dividend accounting`,()=>{const r=verifyShopAcquisition(replay as Replay);for(const k of['commands','shelves','gifts','buys','sales','closings','dividends','godCards']as const)expect(r[k]).toBe(golden[k]);for(const k of['state','events']as const)expect(createHash('sha256').update(JSON.stringify(r[k])).digest('hex')).toBe(golden.hashes[k]);expect(createHash('sha256').update(JSON.stringify(replay)).digest('hex')).toBe(golden.hashes.replay);});
+it('real UI prefixes resume before gift, frozen shelf, after buy/sale, close and day15 without reroll or duplicate gift/income',()=>{const r=card as Replay,e=new GameEngine(nodes,r.config),points=new Map<string,number>();for(let i=0;i<r.commands.length;i++){const a=r.commands[i].action,p=e.state.pending;if(p?.kind==='shop'){const key=a.type==='buyItem'?'frozenShelf':a.type==='sellItem'&&p.turnover!>100?'afterBuy':a.type==='leaveShop'?'beforeClose':p.sales?.length?'afterSale':null;if(key&&!points.has(key))points.set(key,i);}const dispatched=e.dispatch(r.commands[i]);expect(dispatched.ok).toBe(true);if(dispatched.ok&&dispatched.events.some(e=>e.type==='shopGift'))points.set('beforeGift',i);if(dispatched.ok&&dispatched.events.some(e=>e.type==='companyDividends'))points.set('beforeDividend',i);}expect([...points.keys()].sort()).toEqual(['afterBuy','afterSale','beforeClose','beforeDividend','beforeGift','frozenShelf']);for(const i of points.values()){const copy=replayGame(nodes,{...r,commands:r.commands.slice(0,i)});expect(JSON.parse(JSON.stringify(copy.state.pending))).toEqual(copy.state.pending);for(const c of r.commands.slice(i))expect(copy.dispatch(c).ok).toBe(true);expect(copy.state).toEqual(e.state);expect(copy.events).toEqual(e.events);}});

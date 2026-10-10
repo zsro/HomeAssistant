@@ -1,0 +1,320 @@
+{
+  "stage": "S2-03z",
+  "referenceCommit": "ec7d70e693059d1e781d9d1cc2ad7f36d360d39e",
+  "grade": "fixed cross-version source; no native Windows execution",
+  "inheritedSource": "s2-03y-sources.json",
+  "sources": [
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_core_actions.asm",
+      "gitBlobSha1": "ebfde6c820e8a430b856d9816a926b636e0db1dc",
+      "sha256": "2874c1a3e0ca1d0da5afe4cb93e42cf2d6f6fa864dbee11d7bcaa028af07d94a"
+    },
+    {
+      "path": "asm/rich4_ui_prison.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_ui_prison.asm",
+      "gitBlobSha1": "52662dceef837f2a0c08d48f77781b4720af5272",
+      "sha256": "302f06b49c280b4ff1503d4a502d5c9f9669f489ef736f4bf5d3c2504028f8aa"
+    },
+    {
+      "path": "asm/rich4_ui_hospital.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_ui_hospital.asm",
+      "gitBlobSha1": "bb2323103e846f4a9996ec1fcf8091b9e16b9192",
+      "sha256": "c3c70f816da830944707ddf7ce0613c23ce78de467edc9713942497ac9e8a0cd"
+    },
+    {
+      "path": "asm/rich4_shop.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_shop.asm",
+      "gitBlobSha1": "b7ae7b1f19435f6b7861ea15365da14be76ecf34",
+      "sha256": "2273fa44c0cbc7d4f508006b917b4f2c412a19e33014abd968435c29e0770410"
+    },
+    {
+      "path": "asm/rich4_ui_use_tool.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_ui_use_tool.asm",
+      "gitBlobSha1": "9cbe7c8bf1e585fd463ffe17896bccf1be71fb04",
+      "sha256": "fa16767708c30617610771e1eb6e0003b7576a2be2efc34d92f29a631fa7754a"
+    },
+    {
+      "path": "asm/rich4_card_utils.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_card_utils.asm",
+      "gitBlobSha1": "23304fd33491d039d9f50d36475fa9794acccdb2",
+      "sha256": "937d2f587f15068f1f1280ac60d4a61c0249dbde0f206bfcc1489a29591d8181"
+    },
+    {
+      "path": "asm/rich4_prison_utils.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_prison_utils.asm",
+      "gitBlobSha1": "96762e540959c05618816670fe7535e3ab495c97",
+      "sha256": "26984458a39e9fc06941772cc9b34931b32d85f561d08a4bddb88d450863abbc"
+    },
+    {
+      "path": "asm/rich4_hospital_utils.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_hospital_utils.asm",
+      "gitBlobSha1": "a6442121b32fc0380f3a20909590236f8e7dca5e",
+      "sha256": "ba23adbaa7ccc396f3b99d8854285ee222aea8c1b81bcfc0637e72a6e56c145a"
+    }
+  ],
+  "verifiedFiles": 8,
+  "references": [
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "anchor": "_rich4_handle_player_land_on_node:",
+      "lines": [
+        322
+      ]
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "anchor": "loc_00419884:",
+      "lines": [
+        346
+      ]
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "anchor": "loc_0041b132:",
+      "lines": [
+        2358
+      ]
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "anchor": "loc_0041b13c:",
+      "lines": [
+        2362
+      ]
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "anchor": "loc_0041b3b9:",
+      "lines": [
+        2561
+      ]
+    },
+    {
+      "path": "asm/rich4_ui_prison.asm",
+      "anchor": "_rich4_ui_prison_entry:",
+      "lines": [
+        868
+      ]
+    },
+    {
+      "path": "asm/rich4_ui_prison.asm",
+      "anchor": "loc_0043d0bc:",
+      "lines": [
+        689
+      ]
+    },
+    {
+      "path": "asm/rich4_ui_prison.asm",
+      "anchor": "loc_0043cf21:",
+      "lines": [
+        569
+      ]
+    },
+    {
+      "path": "asm/rich4_ui_prison.asm",
+      "anchor": "loc_0043cf78:",
+      "lines": [
+        597
+      ]
+    },
+    {
+      "path": "asm/rich4_ui_prison.asm",
+      "anchor": "ref_00475c44:",
+      "lines": [
+        1155
+      ]
+    },
+    {
+      "path": "asm/rich4_ui_hospital.asm",
+      "anchor": "_rich4_ui_hospital_entry:",
+      "lines": [
+        1477
+      ]
+    },
+    {
+      "path": "asm/rich4_ui_hospital.asm",
+      "anchor": "loc_0043e763:",
+      "lines": [
+        1305
+      ]
+    },
+    {
+      "path": "asm/rich4_ui_hospital.asm",
+      "anchor": "loc_0043de56:",
+      "lines": [
+        560
+      ]
+    },
+    {
+      "path": "asm/rich4_ui_hospital.asm",
+      "anchor": "loc_0043deae:",
+      "lines": [
+        589
+      ]
+    },
+    {
+      "path": "asm/rich4_ui_hospital.asm",
+      "anchor": "ref_00475ca4:",
+      "lines": [
+        1816
+      ]
+    },
+    {
+      "path": "asm/rich4_shop.asm",
+      "anchor": "_rich4_ui_shop_entry:",
+      "lines": [
+        1898
+      ]
+    },
+    {
+      "path": "asm/rich4_shop.asm",
+      "anchor": "fcn_0042d145:",
+      "lines": [
+        103
+      ]
+    },
+    {
+      "path": "asm/rich4_shop.asm",
+      "anchor": "fcn_0042d1b2:",
+      "lines": [
+        133
+      ]
+    },
+    {
+      "path": "asm/rich4_shop.asm",
+      "anchor": "_rich4_player_buy_card:",
+      "lines": [
+        176
+      ]
+    },
+    {
+      "path": "asm/rich4_shop.asm",
+      "anchor": "loc_0042dfe6:",
+      "lines": [
+        1211
+      ]
+    },
+    {
+      "path": "asm/rich4_shop.asm",
+      "anchor": "loc_0042e100:",
+      "lines": [
+        1291
+      ]
+    },
+    {
+      "path": "asm/rich4_shop.asm",
+      "anchor": "loc_0042ed50:",
+      "lines": [
+        2221
+      ]
+    },
+    {
+      "path": "asm/rich4_shop.asm",
+      "anchor": "ref_00464364:",
+      "lines": [
+        2801
+      ]
+    },
+    {
+      "path": "asm/rich4_shop.asm",
+      "anchor": "ref_0046436c:",
+      "lines": [
+        2805
+      ]
+    },
+    {
+      "path": "asm/rich4_ui_use_tool.asm",
+      "anchor": "fcn_00447c6e:",
+      "lines": [
+        1352
+      ]
+    },
+    {
+      "path": "asm/rich4_card_utils.asm",
+      "anchor": "_rich4_consume_card:",
+      "lines": [
+        169
+      ]
+    },
+    {
+      "path": "asm/rich4_prison_utils.asm",
+      "anchor": "_rich4_add_player_days_in_prison:",
+      "lines": [
+        30
+      ]
+    },
+    {
+      "path": "asm/rich4_prison_utils.asm",
+      "anchor": "_rich4_release_player_from_prison:",
+      "lines": [
+        202
+      ]
+    },
+    {
+      "path": "asm/rich4_hospital_utils.asm",
+      "anchor": "_rich4_add_player_days_in_hospital:",
+      "lines": [
+        30
+      ]
+    },
+    {
+      "path": "asm/rich4_hospital_utils.asm",
+      "anchor": "_rich4_release_player_from_hospital:",
+      "lines": [
+        202
+      ]
+    }
+  ],
+  "mapEvents": [
+    {
+      "code": 4,
+      "candidate": "prison",
+      "nodeIds": [
+        78
+      ],
+      "status": "v39普通玩家30点探访；特殊角色/AI待补",
+      "previousStatus": "拘留状态与名单已实现；直接停留监狱原UI/服务待核验"
+    },
+    {
+      "code": 5,
+      "candidate": "hospital",
+      "nodeIds": [
+        55
+      ],
+      "status": "v39普通玩家30点探访；特殊角色/AI待补",
+      "previousStatus": "住院状态与名单已实现；直接停留医院原UI/服务待核验"
+    },
+    {
+      "code": 15,
+      "candidate": "shop",
+      "nodeIds": [
+        50,
+        107
+      ],
+      "status": "v39手动卖出与离店营业记账；经营者赠品/随机货架待补",
+      "previousStatus": "商店购买已实现；原商店卖出UI待补"
+    }
+  ],
+  "decoded": {
+    "saleRatio": 0.9,
+    "normalFacilityCost": 30,
+    "specialFacilityCostDeferred": 300
+  },
+  "rules": {
+    "R13-11z": "Land handler statusBits&255:4 prison78,5 hospital55,15 shop50/107; nonzero event skipped for dream. Kind8002/node84 is holding location, not prison visit entrance. No service when merely passing. Empty8-slot native roster returns; normal Web seats come from independent detention roster and skip bankrupt.",
+    "R09-02z": "Human UI yes/no validates points>=30 per normal seat (four30 entries; special4 entries300 deferred). 43cf21/43de56 target raw state→128, clear roster bit, keep position and vehicle; own incoming action releases via existing clock. Hostility(target,visitor) -=max(raw&127,1)*100*price, self helper zero. Web records delta, no AI score matrix. No payment callback, insurance, company or bank/public cash. Can help multiple and leave; no charge on cancel or insufficient points.",
+    "R07-02z": "Shop hand sale selects card slot or bag tool1..13, count1. 42d145 consumes first matching card and returns card supply; 42d1b2 decrements bag and returns only tool<=8 to finite pool. Equipped vehicle is not bag list447c6e, no implicit dismount. Both constants464364/46436c are IEEE7540.9; points=trunc(points+base*0.9) then word store, not full-price magic/fortune bulk sale. Tools9..13 can sell but are not replenished into shop pool.",
+    "R12-02z": "Shop callback accumulates buy return10*base price, sale returnbase price (not seller point credit). On normal human close42ed50 adds sum to company period+28 and cumulative+2c for raw6001..7999. No owner-required check, price multiplier or player cash transfer. v39 enables this close ledger for inherited buying and new selling; existing15th dividend follows after normal day progression.",
+    "R13-12z": "Fresh decision token per aid/sale, pause/actor/revision guard, no outside-shop sale. Explicit facility close ends own landing, no date advance while choosing. New last receipts checkpoint with G7. Owner gift branch42e9ea falls through to same shop UI; gift and native random shelf selection remain deferred, not claimed implemented."
+  },
+  "deferred": [
+    "special actors and300-point release",
+    "global AI hostility scores and native UI animations",
+    "company owner free random gift before shop and native random shelves",
+    "minigames6/7/8",
+    "other asset listings",
+    "native roulette and post-exit stack/ending",
+    "legacy global point acquisition overflow differences"
+  ]
+}

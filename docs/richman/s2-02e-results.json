@@ -1,0 +1,34 @@
+{
+  "date": "2026-10-03",
+  "rulesId": "japan-tools-candidate-v4",
+  "itemFingerprint": "dde79d34",
+  "playableItemCountBefore": 2,
+  "playableItemCountAfter": 4,
+  "catalogCount": 43,
+  "stageComplete": false,
+  "fullFrontendTests": {
+    "files": 24,
+    "passed": 171
+  },
+  "subsequentFocusedTests": {
+    "files": 2,
+    "passed": 18,
+    "note": "Includes one subsequently added shop UI test; cumulative suite 172 tests."
+  },
+  "lint": "passed",
+  "build": "passed; existing PDF chunk/dynamic import warnings",
+  "browser": "s2-02e-browser-results.json",
+  "longGames": {
+    "players": [
+      2,
+      3,
+      4
+    ],
+    "map": "original Japan",
+    "engine": "finished with conserved supply and exact state/event replay",
+    "browserFullGamesRerun": false
+  },
+  "assetsReexported": false,
+  "databaseChanges": false,
+  "gitCommitPushDeploy": false
+}

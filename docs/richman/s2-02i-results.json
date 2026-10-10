@@ -1,0 +1,142 @@
+{
+  "date": "2026-10-05",
+  "group": "G2",
+  "rulesId": "japan-tools-candidate-v8",
+  "itemFingerprint": "717e58c0",
+  "status": "group-accepted-with-documented-candidate-scope",
+  "playableItems": {
+    "previouslyAccepted": 11,
+    "acceptedThisGroup": 7,
+    "acceptedTotal": 18,
+    "cards": 12,
+    "tools": 6,
+    "remaining": 25,
+    "catalog": 43,
+    "groupComplete": true,
+    "stageComplete": false
+  },
+  "frontendTests": {
+    "files": 32,
+    "passed": 249,
+    "newRulesAndUI": 26,
+    "domainIntegration": 16,
+    "components": 10
+  },
+  "lint": "passed",
+  "build": "passed; existing PDF bundling and chunk size warnings",
+  "browser": {
+    "status": "passed",
+    "date": "2026-10-05",
+    "executedBy": "agent local Chrome via Playwright; real UI at normal speed; auth-only isolated fixture",
+    "baseUrl": "http://localhost:5173",
+    "script": "scripts/richman/g2-ui-browser.cjs",
+    "scriptSha256": "d9be0bfc623f6010d0f7f0c007ba2894a6e3ccaf9589a364d16a7a601b7bd649",
+    "report": "docs/richman/s2-02i-browser-results.json",
+    "replay": "docs/richman/s2-02i-browser-replay.json",
+    "replaySha256": "b544ce29a3cf6d0f58f33630d96f5d596ca2ba6f5fa7415e7c6914854311f97c",
+    "normalSpeed": true,
+    "players": 2,
+    "seed": "group-two-7",
+    "commands": 1130,
+    "turn": 166,
+    "lastNewItemTurn": 153,
+    "effects": 7,
+    "fullGameToVictory": false,
+    "checks": [
+      "earn points and buy all seven",
+      "real effects",
+      "pause/cancel/reset-dialog",
+      "fullscreen",
+      "390px",
+      "roadblock/remote dice",
+      "vehicle dice selector and normal 2/3 dice rolls",
+      "dismount and following foot roll",
+      "status expiry and prison release",
+      "exact replay",
+      "reset inventory",
+      "v7 mode",
+      "cleanup"
+    ],
+    "screenshotsReviewed": [
+      {
+        "path": "/private/tmp/richman-s2-02i-ui/card-14-preview.png",
+        "sha256": "f38829aee74183dc0c9fb9eb46efa6496d737e4e7700a9796df8beb242eccaff"
+      },
+      {
+        "path": "/private/tmp/richman-s2-02i-ui/card-15-preview.png",
+        "sha256": "f50c1f7a9546089291543a0845d8d7f91685890c0c722f24eb4c490da39eb0b9"
+      },
+      {
+        "path": "/private/tmp/richman-s2-02i-ui/card-16-preview.png",
+        "sha256": "356fbc9f46d241f31bd2579b051c0567b14a489276f7046b40265f6b33116944"
+      },
+      {
+        "path": "/private/tmp/richman-s2-02i-ui/card-17-preview.png",
+        "sha256": "2b1dcaac61133f06fb9e31124b776c3a2628a09f47ac781d7fdd8ef435fdde92"
+      },
+      {
+        "path": "/private/tmp/richman-s2-02i-ui/card-30-preview.png",
+        "sha256": "5774a22a375639d516f228062a739f004ed0231d2c64985073ad1a6c1709e1f1"
+      },
+      {
+        "path": "/private/tmp/richman-s2-02i-ui/g2-fullscreen.png",
+        "sha256": "f58471635b10bd6f7a7b26bf08459c82dabd21dad02e56a3fc4e9c811f937691"
+      },
+      {
+        "path": "/private/tmp/richman-s2-02i-ui/g2-mobile.png",
+        "sha256": "62ec0862db81e54ce3ed5553b4f04745412575f00b944e8ddfd3ce057abf3c70"
+      },
+      {
+        "path": "/private/tmp/richman-s2-02i-ui/tool-05-preview.png",
+        "sha256": "4d81c062227a2117b181ccbcaab159a7ab8e18de2692467fc98f6fac4f8cd61e"
+      },
+      {
+        "path": "/private/tmp/richman-s2-02i-ui/tool-06-preview.png",
+        "sha256": "925de640213361399f48c7057c47e0f8d279fc5fc3ada2ff7e05292f648a96f2"
+      },
+      {
+        "path": "/private/tmp/richman-s2-02i-ui/traffic-restored.png",
+        "sha256": "b65be83de63a53a33f206a50f04d869f166f5d77393c9f4700e8f4691c61dd4e"
+      }
+    ],
+    "replayCheck": "Downloaded actual UI commands dispatched independently and replayGame; final state/events equal; each effect, pools, expiry and multi-dice verified",
+    "cleanup": {
+      "raf": 0,
+      "canvas": 0
+    },
+    "errors": []
+  },
+  "enginePlan": {
+    "notBrowserEvidence": true,
+    "seed": "group-two-7",
+    "commands": 1111,
+    "turn": 166,
+    "effectsCompleteAtTurn": 153
+  },
+  "regression": {
+    "v7Fingerprint": "e2ec2345",
+    "v7Golden": "frontend/src/features/richman/game/fixtures/tools-v7-golden.json",
+    "v7ActualReplayCommands": 411,
+    "olderVersions": "v1-v6 and S1 tests passed; original fixtures unchanged"
+  },
+  "scopeLimitations": [
+    "candidate cross-version semantics, not original executable runtime parity",
+    "Web target-turn clock; no full calendar",
+    "fixed nearby anchor candidates, no pixel-occlusion research",
+    "ordinary human players; no special NPCs, hotel/disappear/insurance/hostility",
+    "G3 reaction cards not implemented; trigger chain documented",
+    "hospital shared domain foundation tested; G5 attack entry not playable",
+    "vehicles use walking sprites plus text/dice UI",
+    "dream vehicle restoration, hospital foundation, bankruptcy and 3/4-player combinations are engine evidence, not this two-player browser journey",
+    "browser run is combination acceptance, not full victory game"
+  ],
+  "failuresResolved": [
+    "Initial browser launch auto-review transport disconnected; later same action succeeded",
+    "UI test used an ambiguous repeated price string; scoped to the matching product row",
+    "First real browser run reached motorcycle but exact label selector timed out; scoped selector to traffic region and reran from start at normal speed"
+  ],
+  "next": "G3 six reaction/player-interaction cards; new profile preserving v8, target24/43",
+  "git": "uncommitted cumulative workspace; no push or deploy",
+  "assets": "unchanged; no re-export",
+  "database": "unchanged"
+}

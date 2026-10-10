@@ -1,0 +1,226 @@
+{
+  "players": 3,
+  "commands": 1442,
+  "auto": 408,
+  "human": 177,
+  "acquisitions": [
+    {
+      "ai": true,
+      "id": "player-2",
+      "item": "card:06",
+      "turn": 185,
+      "cost": 20
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "item": "tool:05",
+      "turn": 185,
+      "cost": 80
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "item": "tool:06",
+      "turn": 185,
+      "cost": 150
+    }
+  ],
+  "uses": [
+    {
+      "ai": true,
+      "id": "player-2",
+      "item": "card:06",
+      "turn": 188,
+      "target": {
+        "kind": "player",
+        "id": "player-2"
+      },
+      "mobilityBefore": {
+        "stop": 0,
+        "winter": 0,
+        "dream": 0,
+        "prison": 0,
+        "hospital": 0,
+        "turtle": 0,
+        "vehicle": "foot",
+        "diceCount": 1,
+        "savedVehicle": "foot",
+        "savedDice": 1,
+        "travel": 0
+      },
+      "mobilityAfter": {
+        "stop": 0,
+        "winter": 0,
+        "dream": 0,
+        "prison": 0,
+        "hospital": 0,
+        "turtle": 0,
+        "vehicle": "foot",
+        "diceCount": 1,
+        "savedVehicle": "foot",
+        "savedDice": 1,
+        "travel": 0
+      }
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "item": "tool:06",
+      "turn": 188,
+      "target": {
+        "kind": "player",
+        "id": "player-2"
+      },
+      "mobilityBefore": {
+        "stop": 0,
+        "winter": 0,
+        "dream": 0,
+        "prison": 0,
+        "hospital": 0,
+        "turtle": 0,
+        "vehicle": "foot",
+        "diceCount": 1,
+        "savedVehicle": "foot",
+        "savedDice": 1,
+        "travel": 0
+      },
+      "mobilityAfter": {
+        "stop": 0,
+        "winter": 0,
+        "dream": 0,
+        "prison": 0,
+        "hospital": 0,
+        "turtle": 0,
+        "vehicle": "tool:06",
+        "diceCount": 3,
+        "savedVehicle": "foot",
+        "savedDice": 1,
+        "travel": 0
+      }
+    }
+  ],
+  "cancellations": [],
+  "traffic": [
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 188,
+      "before": 3,
+      "after": 1,
+      "vehicle": "tool:06"
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 191,
+      "before": 1,
+      "after": 3,
+      "vehicle": "tool:06"
+    }
+  ],
+  "rolls": [
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 188,
+      "vehicle": "tool:06",
+      "engineer": false,
+      "values": [
+        4
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 191,
+      "vehicle": "tool:06",
+      "engineer": false,
+      "values": [
+        5,
+        4,
+        2
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 194,
+      "vehicle": "tool:06",
+      "engineer": false,
+      "values": [
+        5,
+        5,
+        5
+      ]
+    }
+  ],
+  "engineering": [],
+  "prefixes": [
+    "card:06-bought",
+    "tool:05-bought",
+    "tool:06-bought",
+    "card:06-paused",
+    "card:06-resumed",
+    "card:06-confirm-before",
+    "card:06-confirm-after",
+    "tool:06-paused",
+    "tool:06-resumed",
+    "tool:06-confirm-before",
+    "tool:06-confirm-after",
+    "traffic-before",
+    "traffic-after",
+    "roll-tool:06-1",
+    "roll-tool:06-3"
+  ],
+  "report": {
+    "robotPreviews": [
+      {
+        "mines": 0,
+        "bombs": 0
+      }
+    ],
+    "policy": "mobility-v1",
+    "toolWindows": [
+      "tool:08",
+      "tool:09",
+      "tool:02",
+      "tool:01",
+      "tool:03",
+      "card:02",
+      "card:14",
+      "card:17",
+      "card:06",
+      "tool:06"
+    ],
+    "crossChecks": [],
+    "route": "3",
+    "terminal": false,
+    "players": 3,
+    "normalSpeed": true,
+    "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+    "commands": 1442,
+    "auto": 408,
+    "human": 177,
+    "lifecycle": [
+      "pause stops waiting",
+      "resume",
+      "reset dialog cancel",
+      "reset",
+      "replace with humans",
+      "exit cleanup",
+      "fullscreen",
+      "390px"
+    ],
+    "cleanup": {
+      "raf": 0,
+      "canvas": 0
+    },
+    "errors": []
+  },
+  "hashes": {
+    "replay": "99b7b794c4fe66cf98642a8fc51ee261db6d4a5b385a3b35c6881b7a46e006ae",
+    "state": "c32fe19c104aeee2108ca35e49bdbc8bd8ee1147dab186899ee3c84e22ce1015",
+    "events": "921e982b14876b86fa585b07ea2c67799e4d9ae24a9c1f75c2436cf8f908f102"
+  }
+}

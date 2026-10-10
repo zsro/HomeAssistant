@@ -1,0 +1,242 @@
+{
+  "stage": "S2-05b",
+  "referenceCommit": "ec7d70e693059d1e781d9d1cc2ad7f36d360d39e",
+  "rulesId": "japan-events-candidate-v44",
+  "fingerprint": "f9dbb7e9",
+  "semanticIncrement": false,
+  "grade": "fixed cross-version assembly anchors, not Windows execution",
+  "sources": [
+    {
+      "path": "asm/rich4_card_passive.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_card_passive.asm",
+      "sha256": "2c8ceb5582bb36974922ead75c86e681e35bf8faeb3ccf9a919edd108a0eaf9d",
+      "gitBlobSha1": "786c4467dcb1827b9bbe85c134ebb9560e2de3a9"
+    },
+    {
+      "path": "asm/rich4_card_xianhaika.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_card_xianhaika.asm",
+      "sha256": "91ba0a1eaee9f0793c59bd9b62f6859967ecf8cb4b570efdee7d787746828870",
+      "gitBlobSha1": "07e1919e685c2dceb595af5fce29726a954208ed"
+    },
+    {
+      "path": "asm/rich4_card_mengyouka.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_card_mengyouka.asm",
+      "sha256": "c7ecc98dddd394f35975bb496b42f4c5b852f143da23d1cd61e3da31b394baab",
+      "gitBlobSha1": "6e82ea3d61c444eec55d1a0c767be136af2bb6da"
+    },
+    {
+      "path": "asm/rich4_card_tongmengka.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_card_tongmengka.asm",
+      "sha256": "b965d59f181e83cac7fa0bdaa17b0ddb14c3f98c6cb502125845079e41b00456",
+      "gitBlobSha1": "ae87dd973a8eed78ade0626340ea485570d61d2b"
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_core_actions.asm",
+      "sha256": "2874c1a3e0ca1d0da5afe4cb93e42cf2d6f6fa864dbee11d7bcaa028af07d94a",
+      "gitBlobSha1": "ebfde6c820e8a430b856d9816a926b636e0db1dc"
+    },
+    {
+      "path": "asm/rich4_player_bankrupt.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_bankrupt.asm",
+      "gitBlobSha1": "7d89fe867d86a4b9fc230602da8bc084725310c6",
+      "sha256": "57c69d347bef382e0045b00855c17293e5cb737ed22359340894ed9b9cf8bf02"
+    }
+  ],
+  "anchors": [
+    {
+      "path": "asm/rich4_card_passive.asm",
+      "anchor": "_rich4_try_use_card_mianfeika:",
+      "lines": [
+        365
+      ]
+    },
+    {
+      "path": "asm/rich4_card_passive.asm",
+      "anchor": "_rich4_try_use_card_jiahuoka:",
+      "lines": [
+        104
+      ]
+    },
+    {
+      "path": "asm/rich4_card_passive.asm",
+      "anchor": "_rich4_use_card_mianzuika:",
+      "lines": [
+        485
+      ]
+    },
+    {
+      "path": "asm/rich4_card_passive.asm",
+      "anchor": "_rich4_use_card_fuchouka:",
+      "lines": [
+        31
+      ]
+    },
+    {
+      "path": "asm/rich4_card_xianhaika.asm",
+      "anchor": "loc_00444599:",
+      "lines": [
+        93
+      ]
+    },
+    {
+      "path": "asm/rich4_card_xianhaika.asm",
+      "anchor": "loc_004445e7:",
+      "lines": [
+        121
+      ]
+    },
+    {
+      "path": "asm/rich4_card_xianhaika.asm",
+      "anchor": "loc_0044460b:",
+      "lines": [
+        137
+      ]
+    },
+    {
+      "path": "asm/rich4_card_xianhaika.asm",
+      "anchor": "loc_0044461c:",
+      "lines": [
+        149
+      ]
+    },
+    {
+      "path": "asm/rich4_card_mengyouka.asm",
+      "anchor": "_rich4_use_card_mengyouka:",
+      "lines": [
+        26
+      ]
+    },
+    {
+      "path": "asm/rich4_card_mengyouka.asm",
+      "anchor": "loc_00444334:",
+      "lines": [
+        143
+      ]
+    },
+    {
+      "path": "asm/rich4_card_mengyouka.asm",
+      "anchor": "loc_004443e6:",
+      "lines": [
+        199
+      ]
+    },
+    {
+      "path": "asm/rich4_card_tongmengka.asm",
+      "anchor": "loc_004457e8:",
+      "lines": [
+        87
+      ]
+    },
+    {
+      "path": "asm/rich4_card_tongmengka.asm",
+      "anchor": "loc_00445827:",
+      "lines": [
+        106
+      ]
+    },
+    {
+      "path": "asm/rich4_card_tongmengka.asm",
+      "anchor": "loc_00445866:",
+      "lines": [
+        124
+      ]
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "anchor": "loc_00419e34:",
+      "lines": [
+        803
+      ]
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "anchor": "loc_00419e67:",
+      "lines": [
+        824
+      ]
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "anchor": "loc_00419e9a:",
+      "lines": [
+        843
+      ]
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "anchor": "loc_00419ec7:",
+      "lines": [
+        861
+      ]
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "anchor": "loc_00419f2a:",
+      "lines": [
+        893
+      ]
+    },
+    {
+      "path": "asm/rich4_player_bankrupt.asm",
+      "anchor": "loc_0040d039:",
+      "lines": [
+        282
+      ]
+    },
+    {
+      "path": "asm/rich4_player_bankrupt.asm",
+      "anchor": "loc_0040d089:",
+      "lines": [
+        308
+      ]
+    },
+    {
+      "path": "asm/rich4_player_bankrupt.asm",
+      "anchor": "loc_0040d14d:",
+      "lines": [
+        390
+      ]
+    },
+    {
+      "path": "asm/rich4_player_bankrupt.asm",
+      "anchor": "loc_0040d282:",
+      "lines": [
+        509
+      ]
+    }
+  ],
+  "rules": {
+    "R07-01b-circuit": "Existing ordinary rent: alliance waiver before reactions; optional free then redirect; only final payer portfolio is liquidated; substitute protections are not recursively offered; owner redirect waives rent.",
+    "R07-02b-circuit": "Existing attack: hostility first; automatic immunity before redirect; target source prison=4, other=5; original-hit revenge applies 5 to source with no recursive immunity. Original dream winter guard precedes reactions, redirect bypasses it.",
+    "R05-01b-circuit": "Existing v33 exit: substitute dies; original turn actor remains; auction cash goes public, original actual-paid frozen and credited to owner bank after disposal; no date/next actor advance while auction waits.",
+    "R10-01b-circuit": "UI-only fix: later profiles inherited nearby worker in engine but ItemPanel mode allowlist stopped at company. Use existing g1 capability plus pre-G1 nearby modes; old worker-only mode preserved. No fingerprint or engine change."
+  },
+  "historicalCoverage": [
+    {
+      "stage": "G3/v9 + unified",
+      "coverage": "six cards acquired, optional/free/redirect/automatic defenses, small-map substitute debt, roster and inventory",
+      "gap": "current v44 averages/public disposal and original-map ally rent not combined"
+    },
+    {
+      "stage": "S2-03p/x",
+      "coverage": "insurance and magic detention reactions",
+      "gap": "current attack redirection and current-action return stressed here"
+    },
+    {
+      "stage": "S2-05a",
+      "coverage": "rent necessary sale, negative dividend, loan date/public disposal",
+      "gap": "no new free/redirect/alliance UI"
+    }
+  ],
+  "retainedDifferences": [
+    "original float/x87 versus integer cents and aggregate precision",
+    "native RNG/reseeding",
+    "native chart/input/audio",
+    "other asset listings",
+    "special actors",
+    "native roulette",
+    "native exit call stack/end menu and Web last-survivor date stop",
+    "minigame presentation/collision/input"
+  ]
+}

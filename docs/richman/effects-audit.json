@@ -1,0 +1,2809 @@
+{
+  "schemaVersion": 1,
+  "referenceCommit": "ec7d70e693059d1e781d9d1cc2ad7f36d360d39e",
+  "semantics": "B: cross-version candidates; A: local bytes only; C: unknown; no enabled game effects",
+  "sources": [
+    {
+      "path": "csrc/cards.c",
+      "sha256": "f5f065702b1559bb08eb3989a09340f49dfd1b8b04932545d5d73b44317da410",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/csrc/cards.c"
+    },
+    {
+      "path": "csrc/card.h",
+      "sha256": "9b20743723d982a99c4b6a9e2b911c520e9bb1eec510d15af0f281336aedac97",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/csrc/card.h"
+    },
+    {
+      "path": "csrc/cards_ui.c",
+      "sha256": "0a33b625e668e31561f94537d092e1af6c57e3454bbe9d5cf843e4510dd6260e",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/csrc/cards_ui.c"
+    },
+    {
+      "path": "csrc/tools_ui.c",
+      "sha256": "00f51bff95ea1247d1a44e63403f9e9f171edd8ab1f21dcda6d9018aab3265b6",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/csrc/tools_ui.c"
+    },
+    {
+      "path": "csrc/game_init.c",
+      "sha256": "4167f960114ff5eca0aaadb24d9266c7826d6ea4d2dc55a3512c9c669e85ea71",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/csrc/game_init.c"
+    },
+    {
+      "path": "csrc/fortune.c",
+      "sha256": "f6ed729c08b165aed4b793b40ff5508e27bf661d2e8bc8c9db8eb551cefd8823",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/csrc/fortune.c"
+    },
+    {
+      "path": "csrc/news.c",
+      "sha256": "f9fd0ee17badef0441c1799f1ad2a529bdfcd9bef4be52b452b15982c5c28361",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/csrc/news.c"
+    },
+    {
+      "path": "asm/rich4_tool_table.c",
+      "sha256": "d19259524990ed8b9bf13c85dbf7220d9166b11536f91df9c8ed904f5f4e3158",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_tool_table.c"
+    },
+    {
+      "path": "asm/tool.h",
+      "sha256": "4b75cb724ab6f78a37b003a02f547397beff32abd71d847c899d9b7d1a45380b",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/tool.h"
+    },
+    {
+      "path": "asm/rich4_tool_utils.c",
+      "sha256": "12fb8cedf2a50efa98cdfbd15f55b8167a4b3d753c6677d5ba787ac50c8d4097",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_tool_utils.c"
+    },
+    {
+      "path": "asm/rich4_shop.asm",
+      "sha256": "2273fa44c0cbc7d4f508006b917b4f2c412a19e33014abd968435c29e0770410",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_shop.asm"
+    },
+    {
+      "path": "asm/rich4_player_info.h",
+      "sha256": "cc17726ce054de587a42c0f335d84495e66698da2e15eb6a7b7ca28ab38604be",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_info.h"
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "sha256": "2874c1a3e0ca1d0da5afe4cb93e42cf2d6f6fa864dbee11d7bcaa028af07d94a",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_core_actions.asm"
+    },
+    {
+      "path": "asm/rich4_card_zhuanxiangka.c",
+      "sha256": "e9bbbea320b4c702281c4475e3b8d77234e699a942fb9859130ba07d715b4e32",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_card_zhuanxiangka.c"
+    }
+  ],
+  "localExe": {
+    "bytes": 591360,
+    "sha256": "110b29f9d2fadcff3836eb69ec380aa264951859c90955da6e11158d2f956a13"
+  },
+  "items": [
+    {
+      "name": "均富卡",
+      "nameHex": "a7a1b449a564",
+      "rawFields": [
+        1,
+        200,
+        2,
+        2
+      ],
+      "sourceLine": 12,
+      "id": "card:01",
+      "originalId": 1,
+      "kind": "card",
+      "source": "csrc/cards.c",
+      "localRecordOffset": 508242,
+      "localNameOffsets": [
+        404415,
+        406899
+      ],
+      "priceCandidate": 200,
+      "currencyCandidate": "points",
+      "enabled": false,
+      "timing": null,
+      "target": null,
+      "consumption": null,
+      "cancellation": null,
+      "duration": null,
+      "conflict": null,
+      "localNameOffset": 406899,
+      "behaviorCandidate": null
+    },
+    {
+      "name": "均貧卡",
+      "nameHex": "a7a1b368a564",
+      "rawFields": [
+        2,
+        200,
+        2,
+        2
+      ],
+      "sourceLine": 13,
+      "id": "card:02",
+      "originalId": 2,
+      "kind": "card",
+      "source": "csrc/cards.c",
+      "localRecordOffset": 508250,
+      "localNameOffsets": [
+        404408,
+        406906
+      ],
+      "priceCandidate": 200,
+      "currencyCandidate": "points",
+      "enabled": false,
+      "timing": null,
+      "target": null,
+      "consumption": null,
+      "cancellation": null,
+      "duration": null,
+      "conflict": null,
+      "localNameOffset": 406906,
+      "behaviorCandidate": null
+    },
+    {
+      "name": "購地卡",
+      "nameHex": "c1caa661a564",
+      "rawFields": [
+        4,
+        35,
+        0,
+        1
+      ],
+      "sourceLine": 14,
+      "id": "card:03",
+      "originalId": 3,
+      "kind": "card",
+      "source": "csrc/cards.c",
+      "localRecordOffset": 508258,
+      "localNameOffsets": [
+        404565,
+        406913
+      ],
+      "priceCandidate": 35,
+      "currencyCandidate": "points",
+      "enabled": false,
+      "timing": null,
+      "target": null,
+      "consumption": null,
+      "cancellation": null,
+      "duration": null,
+      "conflict": null,
+      "localNameOffset": 406913,
+      "behaviorCandidate": null
+    },
+    {
+      "name": "換地卡",
+      "nameHex": "b4aba661a564",
+      "rawFields": [
+        4,
+        25,
+        0,
+        0
+      ],
+      "sourceLine": 15,
+      "id": "card:04",
+      "originalId": 4,
+      "kind": "card",
+      "source": "csrc/cards.c",
+      "localRecordOffset": 508266,
+      "localNameOffsets": [
+        404511,
+        406920
+      ],
+      "priceCandidate": 25,
+      "currencyCandidate": "points",
+      "enabled": false,
+      "timing": null,
+      "target": null,
+      "consumption": null,
+      "cancellation": null,
+      "duration": null,
+      "conflict": null,
+      "localNameOffset": 406920,
+      "behaviorCandidate": null
+    },
+    {
+      "name": "換屋卡",
+      "nameHex": "b4ababcea564",
+      "rawFields": [
+        4,
+        20,
+        0,
+        0
+      ],
+      "sourceLine": 16,
+      "id": "card:05",
+      "originalId": 5,
+      "kind": "card",
+      "source": "csrc/cards.c",
+      "localRecordOffset": 508274,
+      "localNameOffsets": [
+        404518,
+        406927
+      ],
+      "priceCandidate": 20,
+      "currencyCandidate": "points",
+      "enabled": false,
+      "timing": null,
+      "target": null,
+      "consumption": null,
+      "cancellation": null,
+      "duration": null,
+      "conflict": null,
+      "localNameOffset": 406927,
+      "behaviorCandidate": null
+    },
+    {
+      "name": "轉向卡",
+      "nameHex": "c2e0a656a564",
+      "rawFields": [
+        3,
+        20,
+        0,
+        0
+      ],
+      "sourceLine": 17,
+      "id": "card:06",
+      "originalId": 6,
+      "kind": "card",
+      "source": "csrc/cards.c",
+      "localRecordOffset": 508282,
+      "localNameOffsets": [
+        404572,
+        406934
+      ],
+      "priceCandidate": 20,
+      "currencyCandidate": "points",
+      "enabled": false,
+      "timing": null,
+      "target": null,
+      "consumption": null,
+      "cancellation": null,
+      "duration": null,
+      "conflict": null,
+      "localNameOffset": 406934,
+      "behaviorCandidate": {
+        "target": "selected player/special actor; mask restrictions still unknown",
+        "consumption": "one card after nonzero selection",
+        "cancellation": "zero selection returns without consumption",
+        "duration": "instant direction change",
+        "source": "csrc/cards.c:turn_back_card; asm/rich4_card_zhuanxiangka.c"
+      }
+    },
+    {
+      "name": "改建卡",
+      "nameHex": "a7efabd8a564",
+      "rawFields": [
+        8,
+        15,
+        0,
+        0
+      ],
+      "sourceLine": 18,
+      "id": "card:07",
+      "originalId": 7,
+      "kind": "card",
+      "source": "csrc/cards.c",
+      "localRecordOffset": 508290,
+      "localNameOffsets": [
+        404422,
+        406941
+      ],
+      "priceCandidate": 15,
+      "currencyCandidate": "points",
+      "enabled": false,
+      "timing": null,
+      "target": null,
+      "consumption": null,
+      "cancellation": null,
+      "duration": null,
+      "conflict": null,
+      "localNameOffset": 406941,
+      "behaviorCandidate": null
+    },
+    {
+      "name": "拍賣卡",
+      "nameHex": "a9e7bde6a564",
+      "rawFields": [
+        3,
+        20,
+        0,
+        1
+      ],
+      "sourceLine": 19,
+      "id": "card:08",
+      "originalId": 8,
+      "kind": "card",
+      "source": "csrc/cards.c",
+      "localRecordOffset": 508298,
+      "localNameOffsets": [
+        404436,
+        406948
+      ],
+      "priceCandidate": 20,
+      "currencyCandidate": "points",
+      "enabled": false,
+      "timing": null,
+      "target": null,
+      "consumption": null,
+      "cancellation": null,
+      "duration": null,
+      "conflict": null,
+      "localNameOffset": 406948,
+      "behaviorCandidate": null
+    },
+    {
+      "name": "天使卡",
+      "nameHex": "a4d1a8cfa564",
+      "rawFields": [
+        2,
+        160,
+        2,
+        0
+      ],
+      "sourceLine": 20,
+      "id": "card:09",
+      "originalId": 9,
+      "kind": "card",
+      "source": "csrc/cards.c",
+      "localRecordOffset": 508306,
+      "localNameOffsets": [
+        404373,
+        406955
+      ],
+      "priceCandidate": 160,
+      "currencyCandidate": "points",
+      "enabled": false,
+      "timing": null,
+      "target": null,
+      "consumption": null,
+      "cancellation": null,
+      "duration": null,
+      "conflict": null,
+      "localNameOffset": 406955,
+      "behaviorCandidate": null
+    },
+    {
+      "name": "惡魔卡",
+      "nameHex": "b463c55da564",
+      "rawFields": [
+        1,
+        180,
+        2,
+        2
+      ],
+      "sourceLine": 21,
+      "id": "card:10",
+      "originalId": 10,
+      "kind": "card",
+      "source": "csrc/cards.c",
+      "localRecordOffset": 508314,
+      "localNameOffsets": [
+        404504,
+        406962
+      ],
+      "priceCandidate": 180,
+      "currencyCandidate": "points",
+      "enabled": false,
+      "timing": null,
+      "target": null,
+      "consumption": null,
+      "cancellation": null,
+      "duration": null,
+      "conflict": null,
+      "localNameOffset": 406962,
+      "behaviorCandidate": null
+    },
+    {
+      "name": "怪獸卡",
+      "nameHex": "a9c7c37ea564",
+      "rawFields": [
+        2,
+        60,
+        0,
+        2
+      ],
+      "sourceLine": 22,
+      "id": "card:11",
+      "originalId": 11,
+      "kind": "card",
+      "source": "csrc/cards.c",
+      "localRecordOffset": 508322,
+      "localNameOffsets": [
+        404429,
+        406969
+      ],
+      "priceCandidate": 60,
+      "currencyCandidate": "points",
+      "enabled": false,
+      "timing": null,
+      "target": null,
+      "consumption": null,
+      "cancellation": null,
+      "duration": null,
+      "conflict": null,
+      "localNameOffset": 406969,
+      "behaviorCandidate": null
+    },
+    {
+      "name": "拆除卡",
+      "nameHex": "a9eeb0a3a564",
+      "rawFields": [
+        5,
+        15,
+        0,
+        1
+      ],
+      "sourceLine": 23,
+      "id": "card:12",
+      "originalId": 12,
+      "kind": "card",
+      "source": "csrc/cards.c",
+      "localRecordOffset": 508330,
+      "localNameOffsets": [
+        404443,
+        406976
+      ],
+      "priceCandidate": 15,
+      "currencyCandidate": "points",
+      "enabled": false,
+      "timing": null,
+      "target": null,
+      "consumption": null,
+      "cancellation": null,
+      "duration": null,
+      "conflict": null,
+      "localNameOffset": 406976,
+      "behaviorCandidate": null
+    },
+    {
+      "name": "搶奪卡",
+      "nameHex": "b76db9dca564",
+      "rawFields": [
+        4,
+        25,
+        0,
+        2
+      ],
+      "sourceLine": 24,
+      "id": "card:13",
+      "originalId": 13,
+      "kind": "card",
+      "source": "csrc/cards.c",
+      "localRecordOffset": 508338,
+      "localNameOffsets": [
+        404537,
+        406983
+      ],
+      "priceCandidate": 25,
+      "currencyCandidate": "points",
+      "enabled": false,
+      "timing": null,
+      "target": null,
+      "consumption": null,
+      "cancellation": null,
+      "duration": null,
+      "conflict": null,
+      "localNameOffset": 406983,
+      "behaviorCandidate": null
+    },
+    {
+      "name": "停留卡",
+      "nameHex": "b0b1af64a564",
+      "rawFields": [
+        4,
+        20,
+        0,
+        0
+      ],
+      "sourceLine": 25,
+      "id": "card:14",
+      "originalId": 14,
+      "kind": "card",
+      "source": "csrc/cards.c",
+      "localRecordOffset": 508346,
+      "localNameOffsets": [
+        404483,
+        406990
+      ],
+      "priceCandidate": 20,
+      "currencyCandidate": "points",
+      "enabled": false,
+      "timing": null,
+      "target": null,
+      "consumption": null,
+      "cancellation": null,
+      "duration": null,
+      "conflict": null,
+      "localNameOffset": 406990,
+      "behaviorCandidate": {
+        "target": "selected player/special actor",
+        "consumption": "one card after nonzero selection",
+        "cancellation": "zero selection returns without consumption",
+        "duration": "self raw days_stopping=0x80; other=1, countdown unknown",
+        "source": "csrc/cards.c:stop_card"
+      }
+    },
+    {
+      "name": "冬眠卡",
+      "nameHex": "a556af76a564",
+      "rawFields": [
+        2,
+        100,
+        2,
+        2
+      ],
+      "sourceLine": 26,
+      "id": "card:15",
+      "originalId": 15,
+      "kind": "card",
+      "source": "csrc/cards.c",
+      "localRecordOffset": 508354,
+      "localNameOffsets": [
+        404380,
+        406997
+      ],
+      "priceCandidate": 100,
+      "currencyCandidate": "points",
+      "enabled": false,
+      "timing": null,
+      "target": null,
+      "consumption": null,
+      "cancellation": null,
+      "duration": null,
+      "conflict": null,
+      "localNameOffset": 406997,
+      "behaviorCandidate": {
+        "target": "other eligible players and special actors, excludes hotel etc.",
+        "consumption": "one card at entry",
+        "cancellation": null,
+        "duration": "raw winter_sleep=5 and clears sleep_walking; includes additional financial call",
+        "source": "csrc/cards.c:winter_sleep_card"
+      }
+    },
+    {
+      "name": "夢遊卡",
+      "nameHex": "b9dab943a564",
+      "rawFields": [
+        4,
+        25,
+        0,
+        1
+      ],
+      "sourceLine": 27,
+      "id": "card:16",
+      "originalId": 16,
+      "kind": "card",
+      "source": "csrc/cards.c",
+      "localRecordOffset": 508362,
+      "localNameOffsets": [
+        404544,
+        407004
+      ],
+      "priceCandidate": 25,
+      "currencyCandidate": "points",
+      "enabled": false,
+      "timing": null,
+      "target": null,
+      "consumption": null,
+      "cancellation": null,
+      "duration": null,
+      "conflict": null,
+      "localNameOffset": 407004,
+      "behaviorCandidate": null
+    },
+    {
+      "name": "陷害卡",
+      "nameHex": "b3b4ae60a564",
+      "rawFields": [
+        4,
+        20,
+        0,
+        2
+      ],
+      "sourceLine": 28,
+      "id": "card:17",
+      "originalId": 17,
+      "kind": "card",
+      "source": "csrc/cards.c",
+      "localRecordOffset": 508370,
+      "localNameOffsets": [
+        404490,
+        407011
+      ],
+      "priceCandidate": 20,
+      "currencyCandidate": "points",
+      "enabled": false,
+      "timing": null,
+      "target": null,
+      "consumption": null,
+      "cancellation": null,
+      "duration": null,
+      "conflict": null,
+      "localNameOffset": 407011,
+      "behaviorCandidate": null
+    },
+    {
+      "name": "復仇卡",
+      "nameHex": "b45fa4b3a564",
+      "rawFields": [
+        4,
+        20,
+        0,
+        0
+      ],
+      "sourceLine": 29,
+      "id": "card:18",
+      "originalId": 18,
+      "kind": "card",
+      "source": "csrc/cards.c",
+      "localRecordOffset": 508378,
+      "localNameOffsets": [
+        404497,
+        407018
+      ],
+      "priceCandidate": 20,
+      "currencyCandidate": "points",
+      "enabled": false,
+      "timing": null,
+      "target": null,
+      "consumption": null,
+      "cancellation": null,
+      "duration": null,
+      "conflict": null,
+      "localNameOffset": 407018,
+      "behaviorCandidate": null
+    },
+    {
+      "name": "嫁禍卡",
+      "nameHex": "b6f9bad7a564",
+      "rawFields": [
+        4,
+        40,
+        0,
+        0
+      ],
+      "sourceLine": 30,
+      "id": "card:19",
+      "originalId": 19,
+      "kind": "card",
+      "source": "csrc/cards.c",
+      "localRecordOffset": 508386,
+      "localNameOffsets": [
+        404530,
+        407025
+      ],
+      "priceCandidate": 40,
+      "currencyCandidate": "points",
+      "enabled": false,
+      "timing": null,
+      "target": null,
+      "consumption": null,
+      "cancellation": null,
+      "duration": null,
+      "conflict": null,
+      "localNameOffset": 407025,
+      "behaviorCandidate": null
+    },
+    {
+      "name": "免費卡",
+      "nameHex": "a74bb64fa564",
+      "rawFields": [
+        4,
+        25,
+        0,
+        0
+      ],
+      "sourceLine": 31,
+      "id": "card:20",
+      "originalId": 20,
+      "kind": "card",
+      "source": "csrc/cards.c",
+      "localRecordOffset": 508394,
+      "localNameOffsets": [
+        404394,
+        407032
+      ],
+      "priceCandidate": 25,
+      "currencyCandidate": "points",
+      "enabled": false,
+      "timing": null,
+      "target": null,
+      "consumption": null,
+      "cancellation": null,
+      "duration": null,
+      "conflict": null,
+      "localNameOffset": 407032,
+      "behaviorCandidate": null
+    },
+    {
+      "name": "免罪卡",
+      "nameHex": "a74bb86fa564",
+      "rawFields": [
+        4,
+        25,
+        0,
+        0
+      ],
+      "sourceLine": 32,
+      "id": "card:21",
+      "originalId": 21,
+      "kind": "card",
+      "source": "csrc/cards.c",
+      "localRecordOffset": 508402,
+      "localNameOffsets": [
+        404401,
+        407039
+      ],
+      "priceCandidate": 25,
+      "currencyCandidate": "points",
+      "enabled": false,
+      "timing": null,
+      "target": null,
+      "consumption": null,
+      "cancellation": null,
+      "duration": null,
+      "conflict": null,
+      "localNameOffset": 407039,
+      "behaviorCandidate": null
+    },
+    {
+      "name": "送神符",
+      "nameHex": "b065afabb2c5",
+      "rawFields": [
+        3,
+        10,
+        0,
+        0
+      ],
+      "sourceLine": 33,
+      "id": "card:22",
+      "originalId": 22,
+      "kind": "card",
+      "source": "csrc/cards.c",
+      "localRecordOffset": 508410,
+      "localNameOffsets": [
+        404476,
+        407046
+      ],
+      "priceCandidate": 10,
+      "currencyCandidate": "points",
+      "enabled": false,
+      "timing": null,
+      "target": null,
+      "consumption": null,
+      "cancellation": null,
+      "duration": null,
+      "conflict": null,
+      "localNameOffset": 407046,
+      "behaviorCandidate": null
+    },
+    {
+      "name": "請神符",
+      "nameHex": "bdd0afabb2c5",
+      "rawFields": [
+        3,
+        20,
+        0,
+        0
+      ],
+      "sourceLine": 34,
+      "id": "card:23",
+      "originalId": 23,
+      "kind": "card",
+      "source": "csrc/cards.c",
+      "localRecordOffset": 508418,
+      "localNameOffsets": [
+        404558,
+        407053
+      ],
+      "priceCandidate": 20,
+      "currencyCandidate": "points",
+      "enabled": false,
+      "timing": null,
+      "target": null,
+      "consumption": null,
+      "cancellation": null,
+      "duration": null,
+      "conflict": null,
+      "localNameOffset": 407053,
+      "behaviorCandidate": null
+    },
+    {
+      "name": "紅卡",
+      "nameHex": "acf5a564",
+      "rawFields": [
+        3,
+        50,
+        0,
+        0
+      ],
+      "sourceLine": 35,
+      "id": "card:24",
+      "originalId": 24,
+      "kind": "card",
+      "source": "csrc/cards.c",
+      "localRecordOffset": 508426,
+      "localNameOffsets": [
+        404464,
+        407060
+      ],
+      "priceCandidate": 50,
+      "currencyCandidate": "points",
+      "enabled": false,
+      "timing": null,
+      "target": null,
+      "consumption": null,
+      "cancellation": null,
+      "duration": null,
+      "conflict": null,
+      "localNameOffset": 407060,
+      "behaviorCandidate": null
+    },
+    {
+      "name": "黑卡",
+      "nameHex": "b6c2a564",
+      "rawFields": [
+        3,
+        30,
+        0,
+        1
+      ],
+      "sourceLine": 36,
+      "id": "card:25",
+      "originalId": 25,
+      "kind": "card",
+      "source": "csrc/cards.c",
+      "localRecordOffset": 508434,
+      "localNameOffsets": [
+        404525,
+        407065
+      ],
+      "priceCandidate": 30,
+      "currencyCandidate": "points",
+      "enabled": false,
+      "timing": null,
+      "target": null,
+      "consumption": null,
+      "cancellation": null,
+      "duration": null,
+      "conflict": null,
+      "localNameOffset": 407065,
+      "behaviorCandidate": null
+    },
+    {
+      "name": "查稅卡",
+      "nameHex": "ac64b57ca564",
+      "rawFields": [
+        4,
+        35,
+        0,
+        1
+      ],
+      "sourceLine": 37,
+      "id": "card:26",
+      "originalId": 26,
+      "kind": "card",
+      "source": "csrc/cards.c",
+      "localRecordOffset": 508442,
+      "localNameOffsets": [
+        404457,
+        407070
+      ],
+      "priceCandidate": 35,
+      "currencyCandidate": "points",
+      "enabled": false,
+      "timing": null,
+      "target": null,
+      "consumption": null,
+      "cancellation": null,
+      "duration": null,
+      "conflict": null,
+      "localNameOffset": 407070,
+      "behaviorCandidate": null
+    },
+    {
+      "name": "漲價卡",
+      "nameHex": "baa6bbf9a564",
+      "rawFields": [
+        3,
+        35,
+        0,
+        0
+      ],
+      "sourceLine": 38,
+      "id": "card:27",
+      "originalId": 27,
+      "kind": "card",
+      "source": "csrc/cards.c",
+      "localRecordOffset": 508450,
+      "localNameOffsets": [
+        404551,
+        407077
+      ],
+      "priceCandidate": 35,
+      "currencyCandidate": "points",
+      "enabled": false,
+      "timing": null,
+      "target": null,
+      "consumption": null,
+      "cancellation": null,
+      "duration": null,
+      "conflict": null,
+      "localNameOffset": 407077,
+      "behaviorCandidate": null
+    },
+    {
+      "name": "查封卡",
+      "nameHex": "ac64abcaa564",
+      "rawFields": [
+        3,
+        35,
+        0,
+        1
+      ],
+      "sourceLine": 39,
+      "id": "card:28",
+      "originalId": 28,
+      "kind": "card",
+      "source": "csrc/cards.c",
+      "localRecordOffset": 508458,
+      "localNameOffsets": [
+        404450,
+        407084
+      ],
+      "priceCandidate": 35,
+      "currencyCandidate": "points",
+      "enabled": false,
+      "timing": null,
+      "target": null,
+      "consumption": null,
+      "cancellation": null,
+      "duration": null,
+      "conflict": null,
+      "localNameOffset": 407084,
+      "behaviorCandidate": null
+    },
+    {
+      "name": "同盟卡",
+      "nameHex": "a650b7f9a564",
+      "rawFields": [
+        2,
+        40,
+        0,
+        0
+      ],
+      "sourceLine": 40,
+      "id": "card:29",
+      "originalId": 29,
+      "kind": "card",
+      "source": "csrc/cards.c",
+      "localRecordOffset": 508466,
+      "localNameOffsets": [
+        404387,
+        407091
+      ],
+      "priceCandidate": 40,
+      "currencyCandidate": "points",
+      "enabled": false,
+      "timing": null,
+      "target": null,
+      "consumption": null,
+      "cancellation": null,
+      "duration": null,
+      "conflict": null,
+      "localNameOffset": 407091,
+      "behaviorCandidate": null
+    },
+    {
+      "name": "烏龜卡",
+      "nameHex": "af51c074a564",
+      "rawFields": [
+        3,
+        70,
+        0,
+        0
+      ],
+      "sourceLine": 41,
+      "id": "card:30",
+      "originalId": 30,
+      "kind": "card",
+      "source": "csrc/cards.c",
+      "localRecordOffset": 508474,
+      "localNameOffsets": [
+        404469,
+        407098
+      ],
+      "priceCandidate": 70,
+      "currencyCandidate": "points",
+      "enabled": false,
+      "timing": null,
+      "target": null,
+      "consumption": null,
+      "cancellation": null,
+      "duration": null,
+      "conflict": null,
+      "localNameOffset": 407098,
+      "behaviorCandidate": {
+        "target": "selected player/special actor",
+        "consumption": "one card after nonzero selection",
+        "cancellation": "zero selection returns without consumption",
+        "duration": "self raw days=2; other/special raw days=3; countdown not verified",
+        "source": "csrc/cards.c:tortoise_walking_card"
+      }
+    },
+    {
+      "name": "機器娃娃",
+      "nameHex": "bef7beb9abbdabbd",
+      "rawFields": [
+        10,
+        15,
+        0,
+        0
+      ],
+      "sourceLine": 4,
+      "id": "tool:01",
+      "originalId": 1,
+      "kind": "tool",
+      "source": "asm/rich4_tool_table.c",
+      "localRecordOffset": 508482,
+      "localNameOffsets": [
+        404661,
+        407105
+      ],
+      "priceCandidate": 15,
+      "currencyCandidate": "points",
+      "enabled": false,
+      "timing": null,
+      "target": null,
+      "consumption": null,
+      "cancellation": null,
+      "duration": null,
+      "conflict": null,
+      "localNameOffset": 407105,
+      "behaviorCandidate": null
+    },
+    {
+      "name": "路障",
+      "nameHex": "b8f4bbd9",
+      "rawFields": [
+        10,
+        30,
+        0,
+        1
+      ],
+      "sourceLine": 5,
+      "id": "tool:02",
+      "originalId": 2,
+      "kind": "tool",
+      "source": "asm/rich4_tool_table.c",
+      "localRecordOffset": 508490,
+      "localNameOffsets": [
+        404633,
+        406241
+      ],
+      "priceCandidate": 30,
+      "currencyCandidate": "points",
+      "enabled": false,
+      "timing": null,
+      "target": null,
+      "consumption": null,
+      "cancellation": null,
+      "duration": null,
+      "conflict": null,
+      "localNameOffset": 406241,
+      "behaviorCandidate": null
+    },
+    {
+      "name": "地雷",
+      "nameHex": "a661b970",
+      "rawFields": [
+        10,
+        25,
+        0,
+        1
+      ],
+      "sourceLine": 6,
+      "id": "tool:03",
+      "originalId": 3,
+      "kind": "tool",
+      "source": "asm/rich4_tool_table.c",
+      "localRecordOffset": 508498,
+      "localNameOffsets": [
+        404586,
+        406246
+      ],
+      "priceCandidate": 25,
+      "currencyCandidate": "points",
+      "enabled": false,
+      "timing": null,
+      "target": null,
+      "consumption": null,
+      "cancellation": null,
+      "duration": null,
+      "conflict": null,
+      "localNameOffset": 406246,
+      "behaviorCandidate": null
+    },
+    {
+      "name": "定時炸彈",
+      "nameHex": "a977aec9acb5bc75",
+      "rawFields": [
+        10,
+        25,
+        0,
+        1
+      ],
+      "sourceLine": 7,
+      "id": "tool:04",
+      "originalId": 4,
+      "kind": "tool",
+      "source": "asm/rich4_tool_table.c",
+      "localRecordOffset": 508506,
+      "localNameOffsets": [
+        404596,
+        406251
+      ],
+      "priceCandidate": 25,
+      "currencyCandidate": "points",
+      "enabled": false,
+      "timing": null,
+      "target": null,
+      "consumption": null,
+      "cancellation": null,
+      "duration": null,
+      "conflict": null,
+      "localNameOffset": 406251,
+      "behaviorCandidate": null
+    },
+    {
+      "name": "機車",
+      "nameHex": "bef7a8ae",
+      "rawFields": [
+        10,
+        80,
+        0,
+        0
+      ],
+      "sourceLine": 8,
+      "id": "tool:05",
+      "originalId": 5,
+      "kind": "tool",
+      "source": "asm/rich4_tool_table.c",
+      "localRecordOffset": 508514,
+      "localNameOffsets": [
+        392436,
+        404647,
+        407114
+      ],
+      "priceCandidate": 80,
+      "currencyCandidate": "points",
+      "enabled": false,
+      "timing": null,
+      "target": null,
+      "consumption": null,
+      "cancellation": null,
+      "duration": null,
+      "conflict": null,
+      "localNameOffset": 407114,
+      "behaviorCandidate": null
+    },
+    {
+      "name": "汽車",
+      "nameHex": "a854a8ae",
+      "rawFields": [
+        10,
+        150,
+        1,
+        0
+      ],
+      "sourceLine": 9,
+      "id": "tool:06",
+      "originalId": 6,
+      "kind": "tool",
+      "source": "asm/rich4_tool_table.c",
+      "localRecordOffset": 508522,
+      "localNameOffsets": [
+        392441,
+        404591,
+        406529,
+        406738,
+        406837,
+        407119
+      ],
+      "priceCandidate": 150,
+      "currencyCandidate": "points",
+      "enabled": false,
+      "timing": null,
+      "target": null,
+      "consumption": null,
+      "cancellation": null,
+      "duration": null,
+      "conflict": null,
+      "localNameOffset": 407119,
+      "behaviorCandidate": null
+    },
+    {
+      "name": "飛彈",
+      "nameHex": "adb8bc75",
+      "rawFields": [
+        10,
+        100,
+        1,
+        2
+      ],
+      "sourceLine": 10,
+      "id": "tool:07",
+      "originalId": 7,
+      "kind": "tool",
+      "source": "asm/rich4_tool_table.c",
+      "localRecordOffset": 508530,
+      "localNameOffsets": [
+        404605,
+        404621,
+        407124,
+        407172
+      ],
+      "priceCandidate": 100,
+      "currencyCandidate": "points",
+      "enabled": false,
+      "timing": null,
+      "target": null,
+      "consumption": null,
+      "cancellation": null,
+      "duration": null,
+      "conflict": null,
+      "localNameOffset": 407124,
+      "behaviorCandidate": null
+    },
+    {
+      "name": "遙控骰子",
+      "nameHex": "bbbbb1b1bbeba46c",
+      "rawFields": [
+        10,
+        30,
+        1,
+        0
+      ],
+      "sourceLine": 11,
+      "id": "tool:08",
+      "originalId": 8,
+      "kind": "tool",
+      "source": "asm/rich4_tool_table.c",
+      "localRecordOffset": 508538,
+      "localNameOffsets": [
+        404638,
+        407129
+      ],
+      "priceCandidate": 30,
+      "currencyCandidate": "points",
+      "enabled": false,
+      "timing": null,
+      "target": null,
+      "consumption": null,
+      "cancellation": null,
+      "duration": null,
+      "conflict": null,
+      "localNameOffset": 407129,
+      "behaviorCandidate": null
+    },
+    {
+      "name": "機器工人",
+      "nameHex": "bef7beb9a475a448",
+      "rawFields": [
+        0,
+        30,
+        2,
+        1
+      ],
+      "sourceLine": 12,
+      "id": "tool:09",
+      "originalId": 9,
+      "kind": "tool",
+      "source": "asm/rich4_tool_table.c",
+      "localRecordOffset": 508546,
+      "localNameOffsets": [
+        404652,
+        407138
+      ],
+      "priceCandidate": 30,
+      "currencyCandidate": "points",
+      "enabled": false,
+      "timing": null,
+      "target": null,
+      "consumption": null,
+      "cancellation": null,
+      "duration": null,
+      "conflict": null,
+      "localNameOffset": 407138,
+      "behaviorCandidate": null
+    },
+    {
+      "name": "時光機",
+      "nameHex": "aec9a5fabef7",
+      "rawFields": [
+        0,
+        40,
+        2,
+        2
+      ],
+      "sourceLine": 13,
+      "id": "tool:10",
+      "originalId": 10,
+      "kind": "tool",
+      "source": "asm/rich4_tool_table.c",
+      "localRecordOffset": 508554,
+      "localNameOffsets": [
+        404610,
+        407147
+      ],
+      "priceCandidate": 40,
+      "currencyCandidate": "points",
+      "enabled": false,
+      "timing": null,
+      "target": null,
+      "consumption": null,
+      "cancellation": null,
+      "duration": null,
+      "conflict": null,
+      "localNameOffset": 407147,
+      "behaviorCandidate": null
+    },
+    {
+      "name": "傳送機",
+      "nameHex": "b6c7b065bef7",
+      "rawFields": [
+        0,
+        95,
+        2,
+        1
+      ],
+      "sourceLine": 14,
+      "id": "tool:11",
+      "originalId": 11,
+      "kind": "tool",
+      "source": "asm/rich4_tool_table.c",
+      "localRecordOffset": 508562,
+      "localNameOffsets": [
+        404626,
+        407154
+      ],
+      "priceCandidate": 95,
+      "currencyCandidate": "points",
+      "enabled": false,
+      "timing": null,
+      "target": null,
+      "consumption": null,
+      "cancellation": null,
+      "duration": null,
+      "conflict": null,
+      "localNameOffset": 407154,
+      "behaviorCandidate": null
+    },
+    {
+      "name": "工程車",
+      "nameHex": "a475b57ba8ae",
+      "rawFields": [
+        0,
+        150,
+        2,
+        2
+      ],
+      "sourceLine": 15,
+      "id": "tool:12",
+      "originalId": 12,
+      "kind": "tool",
+      "source": "asm/rich4_tool_table.c",
+      "localRecordOffset": 508570,
+      "localNameOffsets": [
+        404579,
+        407161
+      ],
+      "priceCandidate": 150,
+      "currencyCandidate": "points",
+      "enabled": false,
+      "timing": null,
+      "target": null,
+      "consumption": null,
+      "cancellation": null,
+      "duration": null,
+      "conflict": null,
+      "localNameOffset": 407161,
+      "behaviorCandidate": null
+    },
+    {
+      "name": "核子飛彈",
+      "nameHex": "aed6a46cadb8bc75",
+      "rawFields": [
+        0,
+        250,
+        2,
+        2
+      ],
+      "sourceLine": 16,
+      "id": "tool:13",
+      "originalId": 13,
+      "kind": "tool",
+      "source": "asm/rich4_tool_table.c",
+      "localRecordOffset": 508578,
+      "localNameOffsets": [
+        404617,
+        407168
+      ],
+      "priceCandidate": 250,
+      "currencyCandidate": "points",
+      "enabled": false,
+      "timing": null,
+      "target": null,
+      "consumption": null,
+      "cancellation": null,
+      "duration": null,
+      "conflict": null,
+      "localNameOffset": 407168,
+      "behaviorCandidate": null
+    }
+  ],
+  "mapAuditSha256": "e2eba8a3517f1a73fb349a42b0ae06242f8d0df026a886133059704e445a6921",
+  "mapEvents": [
+    {
+      "code": 0,
+      "candidate": "property",
+      "source": "asm/rich4_player_core_actions.asm:ref_004197e9",
+      "nodeIds": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        15,
+        17,
+        21,
+        30,
+        32,
+        34,
+        36,
+        37,
+        38,
+        39,
+        40,
+        42,
+        43,
+        44,
+        46,
+        47,
+        48,
+        49,
+        51,
+        52,
+        53,
+        54,
+        56,
+        57,
+        58,
+        59,
+        60,
+        62,
+        63,
+        64,
+        65,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        74,
+        75,
+        76,
+        77,
+        80,
+        82,
+        84,
+        85,
+        86,
+        87,
+        89,
+        90,
+        91,
+        92,
+        93,
+        95,
+        96,
+        97,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        108,
+        109,
+        110
+      ],
+      "timing": "landing-candidate",
+      "enabled": true,
+      "implementationScope": "ordinary lands only"
+    },
+    {
+      "code": 1,
+      "candidate": "no-op",
+      "source": "asm/rich4_player_core_actions.asm:ref_004197e9",
+      "nodeIds": [
+        41
+      ],
+      "timing": "landing-candidate",
+      "enabled": false,
+      "implementationScope": "not implemented"
+    },
+    {
+      "code": 2,
+      "candidate": "news",
+      "source": "asm/rich4_player_core_actions.asm:ref_004197e9",
+      "nodeIds": [
+        13,
+        61,
+        94
+      ],
+      "timing": "landing-candidate",
+      "enabled": false,
+      "implementationScope": "not implemented"
+    },
+    {
+      "code": 3,
+      "candidate": "fortune",
+      "source": "asm/rich4_player_core_actions.asm:ref_004197e9",
+      "nodeIds": [
+        2,
+        19,
+        45,
+        66
+      ],
+      "timing": "landing-candidate",
+      "enabled": false,
+      "implementationScope": "not implemented"
+    },
+    {
+      "code": 4,
+      "candidate": "prison",
+      "source": "asm/rich4_player_core_actions.asm:ref_004197e9",
+      "nodeIds": [
+        78
+      ],
+      "timing": "landing-candidate",
+      "enabled": false,
+      "implementationScope": "not implemented"
+    },
+    {
+      "code": 5,
+      "candidate": "hospital",
+      "source": "asm/rich4_player_core_actions.asm:ref_004197e9",
+      "nodeIds": [
+        55
+      ],
+      "timing": "landing-candidate",
+      "enabled": false,
+      "implementationScope": "not implemented"
+    },
+    {
+      "code": 6,
+      "candidate": "penguin-game",
+      "source": "asm/rich4_player_core_actions.asm:ref_004197e9",
+      "nodeIds": [
+        22
+      ],
+      "timing": "landing-candidate",
+      "enabled": false,
+      "implementationScope": "not implemented"
+    },
+    {
+      "code": 7,
+      "candidate": "balloon-game",
+      "source": "asm/rich4_player_core_actions.asm:ref_004197e9",
+      "nodeIds": [
+        24
+      ],
+      "timing": "landing-candidate",
+      "enabled": false,
+      "implementationScope": "not implemented"
+    },
+    {
+      "code": 8,
+      "candidate": "falling-gifts-game",
+      "source": "asm/rich4_player_core_actions.asm:ref_004197e9",
+      "nodeIds": [
+        26
+      ],
+      "timing": "landing-candidate",
+      "enabled": false,
+      "implementationScope": "not implemented"
+    },
+    {
+      "code": 9,
+      "candidate": "lottery",
+      "source": "asm/rich4_player_core_actions.asm:ref_004197e9",
+      "nodeIds": [
+        28,
+        88
+      ],
+      "timing": "landing-candidate",
+      "enabled": false,
+      "implementationScope": "not implemented"
+    },
+    {
+      "code": 10,
+      "candidate": "points-50",
+      "source": "asm/rich4_player_core_actions.asm:ref_004197e9",
+      "nodeIds": [
+        20,
+        31
+      ],
+      "timing": "landing-candidate",
+      "enabled": false,
+      "implementationScope": "not implemented"
+    },
+    {
+      "code": 11,
+      "candidate": "points-30",
+      "source": "asm/rich4_player_core_actions.asm:ref_004197e9",
+      "nodeIds": [
+        23,
+        27,
+        83
+      ],
+      "timing": "landing-candidate",
+      "enabled": false,
+      "implementationScope": "not implemented"
+    },
+    {
+      "code": 12,
+      "candidate": "points-10",
+      "source": "asm/rich4_player_core_actions.asm:ref_004197e9",
+      "nodeIds": [
+        14,
+        16,
+        18,
+        25,
+        29,
+        33,
+        79,
+        81
+      ],
+      "timing": "landing-candidate",
+      "enabled": false,
+      "implementationScope": "not implemented"
+    },
+    {
+      "code": 13,
+      "candidate": "random-card",
+      "source": "asm/rich4_player_core_actions.asm:ref_004197e9",
+      "nodeIds": [
+        98
+      ],
+      "timing": "landing-candidate",
+      "enabled": false,
+      "implementationScope": "not implemented"
+    },
+    {
+      "code": 14,
+      "candidate": "bank",
+      "source": "asm/rich4_player_core_actions.asm:ref_004197e9",
+      "nodeIds": [
+        1
+      ],
+      "timing": "landing-candidate",
+      "enabled": true,
+      "implementationScope": "S1 basic bank"
+    },
+    {
+      "code": 15,
+      "candidate": "shop",
+      "source": "asm/rich4_player_core_actions.asm:ref_004197e9",
+      "nodeIds": [
+        50,
+        107
+      ],
+      "timing": "landing-candidate",
+      "enabled": false,
+      "implementationScope": "not implemented"
+    },
+    {
+      "code": 16,
+      "candidate": "magic-house-candidate",
+      "source": "asm/rich4_player_core_actions.asm:ref_004197e9",
+      "nodeIds": [
+        35,
+        73
+      ],
+      "timing": "landing-candidate",
+      "enabled": false,
+      "implementationScope": "not implemented"
+    }
+  ],
+  "unknownMapEventCodes": [],
+  "inventoryCandidates": {
+    "cardSlots": 15,
+    "toolsPerKind": 9,
+    "sharedCardPool": true,
+    "sharedToolPoolIds": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "source": "csrc/cards.c:consume_a_card; asm/rich4_tool_utils.c:rich4_receive_tool",
+    "initialDeal": "unverified; csrc/game_init.c calls tool grants before character initialization",
+    "enabled": false
+  },
+  "shops": [
+    {
+      "id": "japan:company:1",
+      "name": "三越百貨",
+      "nodeIds": [
+        50,
+        107
+      ],
+      "eventCode": 15,
+      "currency": "points-candidate",
+      "priceField": "item table byte +5",
+      "saleRatio": null,
+      "source": "asm/rich4_shop.asm:_rich4_player_buy_card/_rich4_player_buy_tool",
+      "enabled": false
+    }
+  ],
+  "dataArchive": {
+    "bytes": 53296712,
+    "sha256": "c63023e815b1ad4bef172b6415d128c7f041f12b71b5d80dc3ff29240a0a1988"
+  },
+  "eventFamilies": [
+    {
+      "id": "news",
+      "source": "csrc/news.c:news_events",
+      "selection": null,
+      "priority": null,
+      "enabled": false,
+      "entries": [
+        {
+          "id": "news:00",
+          "resource": {
+            "index": 441,
+            "offset": 40327272,
+            "decodedBytes": 194776,
+            "packedBytes": 80689
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "news:01",
+          "resource": {
+            "index": 442,
+            "offset": 40407977,
+            "decodedBytes": 194776,
+            "packedBytes": 77272
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "news:02",
+          "resource": {
+            "index": 443,
+            "offset": 40485265,
+            "decodedBytes": 194776,
+            "packedBytes": 74146
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "news:03",
+          "resource": {
+            "index": 444,
+            "offset": 40559427,
+            "decodedBytes": 194776,
+            "packedBytes": 86159
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "news:04",
+          "resource": {
+            "index": 445,
+            "offset": 40645602,
+            "decodedBytes": 194776,
+            "packedBytes": 91999
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "news:05",
+          "resource": {
+            "index": 446,
+            "offset": 40737617,
+            "decodedBytes": 194776,
+            "packedBytes": 69270
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "news:06",
+          "resource": {
+            "index": 447,
+            "offset": 40806903,
+            "decodedBytes": 194776,
+            "packedBytes": 82824
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "news:07",
+          "resource": {
+            "index": 448,
+            "offset": 40889743,
+            "decodedBytes": 194776,
+            "packedBytes": 99184
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "news:08",
+          "resource": {
+            "index": 449,
+            "offset": 40988943,
+            "decodedBytes": 194776,
+            "packedBytes": 81164
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "news:09",
+          "resource": {
+            "index": 450,
+            "offset": 41070123,
+            "decodedBytes": 194776,
+            "packedBytes": 53293
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "news:10",
+          "resource": {
+            "index": 451,
+            "offset": 41123432,
+            "decodedBytes": 194776,
+            "packedBytes": 67429
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "news:11",
+          "resource": {
+            "index": 452,
+            "offset": 41190877,
+            "decodedBytes": 194776,
+            "packedBytes": 68753
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "news:12",
+          "resource": {
+            "index": 453,
+            "offset": 41259646,
+            "decodedBytes": 194776,
+            "packedBytes": 85921
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "news:13",
+          "resource": {
+            "index": 454,
+            "offset": 41345583,
+            "decodedBytes": 194776,
+            "packedBytes": 68341
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "news:14",
+          "resource": {
+            "index": 455,
+            "offset": 41413940,
+            "decodedBytes": 194776,
+            "packedBytes": 76510
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "news:15",
+          "resource": {
+            "index": 456,
+            "offset": 41490466,
+            "decodedBytes": 194776,
+            "packedBytes": 68292
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "news:16",
+          "resource": {
+            "index": 457,
+            "offset": 41558774,
+            "decodedBytes": 194776,
+            "packedBytes": 45525
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "news:17",
+          "resource": {
+            "index": 458,
+            "offset": 41604315,
+            "decodedBytes": 194776,
+            "packedBytes": 70083
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "news:18",
+          "resource": {
+            "index": 459,
+            "offset": 41674414,
+            "decodedBytes": 194776,
+            "packedBytes": 63675
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "news:19",
+          "resource": {
+            "index": 460,
+            "offset": 41738105,
+            "decodedBytes": 194776,
+            "packedBytes": 55618
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "news:20",
+          "resource": {
+            "index": 461,
+            "offset": 41793739,
+            "decodedBytes": 194776,
+            "packedBytes": 68028
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "news:21",
+          "resource": {
+            "index": 462,
+            "offset": 41861783,
+            "decodedBytes": 194776,
+            "packedBytes": 66916
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "news:22",
+          "resource": {
+            "index": 463,
+            "offset": 41928715,
+            "decodedBytes": 194776,
+            "packedBytes": 87047
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "news:23",
+          "resource": {
+            "index": 464,
+            "offset": 42015778,
+            "decodedBytes": 194776,
+            "packedBytes": 81592
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "news:24",
+          "resource": {
+            "index": 465,
+            "offset": 42097386,
+            "decodedBytes": 194776,
+            "packedBytes": 105046
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "news:25",
+          "resource": {
+            "index": 466,
+            "offset": 42202448,
+            "decodedBytes": 194776,
+            "packedBytes": 77576
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "news:26",
+          "resource": {
+            "index": 467,
+            "offset": 42280040,
+            "decodedBytes": 194776,
+            "packedBytes": 69894
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "news:27",
+          "resource": {
+            "index": 468,
+            "offset": 42349950,
+            "decodedBytes": 194776,
+            "packedBytes": 87536
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "news:28",
+          "resource": {
+            "index": 469,
+            "offset": 42437502,
+            "decodedBytes": 194776,
+            "packedBytes": 53188
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "news:29",
+          "resource": {
+            "index": 470,
+            "offset": 42490706,
+            "decodedBytes": 194776,
+            "packedBytes": 88580
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "news:30",
+          "resource": {
+            "index": 471,
+            "offset": 42579302,
+            "decodedBytes": 194776,
+            "packedBytes": 46753
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "news:31",
+          "resource": {
+            "index": 472,
+            "offset": 42626071,
+            "decodedBytes": 194776,
+            "packedBytes": 68425
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "news:32",
+          "resource": {
+            "index": 473,
+            "offset": 42694512,
+            "decodedBytes": 194776,
+            "packedBytes": 70426
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "news:33",
+          "resource": {
+            "index": 474,
+            "offset": 42764954,
+            "decodedBytes": 194776,
+            "packedBytes": 80448
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "news:34",
+          "resource": {
+            "index": 475,
+            "offset": 42845418,
+            "decodedBytes": 194776,
+            "packedBytes": 77690
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "news:35",
+          "resource": {
+            "index": 476,
+            "offset": 42923124,
+            "decodedBytes": 413574,
+            "packedBytes": 112364
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        }
+      ]
+    },
+    {
+      "id": "fortune",
+      "source": "csrc/fortune.c:fortune_data_idx",
+      "selection": null,
+      "priority": null,
+      "enabled": false,
+      "entries": [
+        {
+          "id": "fortune:00",
+          "resource": {
+            "index": 477,
+            "offset": 43035504,
+            "decodedBytes": 149622,
+            "packedBytes": 23409
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "fortune:01",
+          "resource": {
+            "index": 478,
+            "offset": 43058929,
+            "decodedBytes": 29860,
+            "packedBytes": 16213
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "fortune:02",
+          "resource": {
+            "index": 479,
+            "offset": 43075158,
+            "decodedBytes": 975456,
+            "packedBytes": 374871
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "fortune:03",
+          "resource": {
+            "index": 480,
+            "offset": 43450045,
+            "decodedBytes": 16755,
+            "packedBytes": 8847
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "fortune:04",
+          "resource": {
+            "index": 481,
+            "offset": 43458908,
+            "decodedBytes": 82412,
+            "packedBytes": 40473
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "fortune:05",
+          "resource": {
+            "index": 482,
+            "offset": 43499397,
+            "decodedBytes": 375474,
+            "packedBytes": 172361
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "fortune:06",
+          "resource": {
+            "index": 483,
+            "offset": 43671774,
+            "decodedBytes": 148528,
+            "packedBytes": 57013
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "fortune:07",
+          "resource": {
+            "index": 484,
+            "offset": 43728803,
+            "decodedBytes": 23464,
+            "packedBytes": 9591
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "fortune:08",
+          "resource": {
+            "index": 485,
+            "offset": 43738410,
+            "decodedBytes": 29694,
+            "packedBytes": 12734
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "fortune:09",
+          "resource": {
+            "index": 486,
+            "offset": 43751160,
+            "decodedBytes": 233924,
+            "packedBytes": 161296
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "fortune:10",
+          "resource": {
+            "index": 487,
+            "offset": 43912472,
+            "decodedBytes": 122268,
+            "packedBytes": 49809
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "fortune:11",
+          "resource": {
+            "index": 488,
+            "offset": 43962297,
+            "decodedBytes": 783698,
+            "packedBytes": 340429
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "fortune:12",
+          "resource": {
+            "index": 489,
+            "offset": 44302742,
+            "decodedBytes": 697658,
+            "packedBytes": 366588
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "fortune:13",
+          "resource": {
+            "index": 490,
+            "offset": 44669346,
+            "decodedBytes": 723830,
+            "packedBytes": 364666
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "fortune:14",
+          "resource": {
+            "index": 491,
+            "offset": 45034028,
+            "decodedBytes": 314670,
+            "packedBytes": 177247
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "fortune:15",
+          "resource": {
+            "index": 492,
+            "offset": 45211291,
+            "decodedBytes": 165142,
+            "packedBytes": 126870
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "fortune:16",
+          "resource": {
+            "index": 493,
+            "offset": 45338177,
+            "decodedBytes": 127668,
+            "packedBytes": 84979
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "fortune:17",
+          "resource": {
+            "index": 494,
+            "offset": 45423172,
+            "decodedBytes": 161046,
+            "packedBytes": 109360
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "fortune:18",
+          "resource": {
+            "index": 495,
+            "offset": 45532548,
+            "decodedBytes": 7848,
+            "packedBytes": 3079
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "fortune:19",
+          "resource": {
+            "index": 496,
+            "offset": 45535643,
+            "decodedBytes": 7622,
+            "packedBytes": 3184
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "fortune:20",
+          "resource": {
+            "index": 497,
+            "offset": 45538843,
+            "decodedBytes": 101612,
+            "packedBytes": 18079
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "fortune:21",
+          "resource": {
+            "index": 497,
+            "offset": 45538843,
+            "decodedBytes": 101612,
+            "packedBytes": 18079
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "fortune:22",
+          "resource": {
+            "index": 497,
+            "offset": 45538843,
+            "decodedBytes": 101612,
+            "packedBytes": 18079
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "fortune:23",
+          "resource": {
+            "index": 498,
+            "offset": 45556938,
+            "decodedBytes": 188944,
+            "packedBytes": 138286
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "fortune:24",
+          "resource": {
+            "index": 498,
+            "offset": 45556938,
+            "decodedBytes": 188944,
+            "packedBytes": 138286
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "fortune:25",
+          "resource": {
+            "index": 499,
+            "offset": 45695240,
+            "decodedBytes": 477988,
+            "packedBytes": 308880
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "fortune:26",
+          "resource": {
+            "index": 500,
+            "offset": 46004136,
+            "decodedBytes": 585460,
+            "packedBytes": 341301
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "fortune:27",
+          "resource": {
+            "index": 501,
+            "offset": 46345453,
+            "decodedBytes": 564576,
+            "packedBytes": 328695
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "fortune:28",
+          "resource": {
+            "index": 501,
+            "offset": 46345453,
+            "decodedBytes": 564576,
+            "packedBytes": 328695
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "fortune:29",
+          "resource": {
+            "index": 501,
+            "offset": 46345453,
+            "decodedBytes": 564576,
+            "packedBytes": 328695
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "fortune:30",
+          "resource": {
+            "index": 502,
+            "offset": 46674164,
+            "decodedBytes": 245194,
+            "packedBytes": 142604
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "fortune:31",
+          "resource": {
+            "index": 503,
+            "offset": 46816784,
+            "decodedBytes": 546150,
+            "packedBytes": 338618
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "fortune:32",
+          "resource": {
+            "index": 504,
+            "offset": 47155418,
+            "decodedBytes": 138450,
+            "packedBytes": 79475
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "fortune:33",
+          "resource": {
+            "index": 505,
+            "offset": 47234909,
+            "decodedBytes": 306244,
+            "packedBytes": 167501
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "fortune:34",
+          "resource": {
+            "index": 506,
+            "offset": 47402426,
+            "decodedBytes": 95158,
+            "packedBytes": 48364
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "fortune:35",
+          "resource": {
+            "index": 507,
+            "offset": 47450806,
+            "decodedBytes": 386002,
+            "packedBytes": 209464
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "fortune:36",
+          "resource": {
+            "index": 508,
+            "offset": 47660286,
+            "decodedBytes": 318686,
+            "packedBytes": 178862
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "fortune:37",
+          "resource": {
+            "index": 505,
+            "offset": 47234909,
+            "decodedBytes": 306244,
+            "packedBytes": 167501
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "fortune:38",
+          "resource": {
+            "index": 509,
+            "offset": 47839164,
+            "decodedBytes": 523782,
+            "packedBytes": 281966
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "fortune:39",
+          "resource": {
+            "index": 510,
+            "offset": 48121146,
+            "decodedBytes": 526892,
+            "packedBytes": 274120
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "fortune:40",
+          "resource": {
+            "index": 511,
+            "offset": 48395282,
+            "decodedBytes": 66326,
+            "packedBytes": 36751
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "fortune:41",
+          "resource": {
+            "index": 512,
+            "offset": 48432049,
+            "decodedBytes": 826690,
+            "packedBytes": 388298
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "fortune:42",
+          "resource": {
+            "index": 506,
+            "offset": 47402426,
+            "decodedBytes": 95158,
+            "packedBytes": 48364
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "fortune:43",
+          "resource": {
+            "index": 507,
+            "offset": 47450806,
+            "decodedBytes": 386002,
+            "packedBytes": 209464
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "fortune:44",
+          "resource": {
+            "index": 513,
+            "offset": 48820363,
+            "decodedBytes": 970778,
+            "packedBytes": 463596
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "fortune:45",
+          "resource": {
+            "index": 514,
+            "offset": 49283975,
+            "decodedBytes": 546642,
+            "packedBytes": 275482
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "fortune:46",
+          "resource": {
+            "index": 515,
+            "offset": 49559473,
+            "decodedBytes": 733200,
+            "packedBytes": 372970
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "fortune:47",
+          "resource": {
+            "index": 510,
+            "offset": 48121146,
+            "decodedBytes": 526892,
+            "packedBytes": 274120
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        },
+        {
+          "id": "fortune:48",
+          "resource": {
+            "index": 516,
+            "offset": 49932459,
+            "decodedBytes": 96728,
+            "packedBytes": 60895
+          },
+          "effect": null,
+          "target": null,
+          "duration": null
+        }
+      ]
+    }
+  ]
+}

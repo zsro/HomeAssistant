@@ -1,0 +1,531 @@
+{
+  "stage": "S3-03b",
+  "status": "ordinary-five-pairs-candidate-accepted",
+  "completedDate": "2026-10-08",
+  "rulesId": "japan-events-candidate-v45",
+  "fingerprint": "e5d78322",
+  "mode": "godPairs",
+  "base": "japan-events-candidate-v44",
+  "newGameSemantics": true,
+  "newPolicyVersion": false,
+  "policyChanges": "version applicability only; same weights/order/public information/RNG restrictions",
+  "preservedPolicies": [
+    "basic-v1",
+    "tools-v1",
+    "rent-v1",
+    "defense-v1",
+    "estate-v1",
+    "cash-v1",
+    "status-v1",
+    "inventory-v1",
+    "commerce-v1",
+    "area-v1",
+    "roads-v1",
+    "mobility-v1",
+    "gods-v1",
+    "capital-v1",
+    "research-v1"
+  ],
+  "S3_03Closed": false,
+  "nativeExecution": false,
+  "implementedPairs": [
+    [
+      1,
+      2
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      5,
+      6
+    ],
+    [
+      7,
+      8
+    ],
+    [
+      9,
+      10
+    ]
+  ],
+  "historicalCapabilities": {
+    "items": 43,
+    "news": 36,
+    "japanFortuneSlots": 37
+  },
+  "checks": {
+    "cleanTargeted": {
+      "passed": true,
+      "uniqueTests": 172,
+      "files": 7,
+      "runs": [
+        {
+          "tests": 28,
+          "files": 3,
+          "log": "/private/tmp/god-pairs-recheck.log"
+        },
+        {
+          "tests": 141,
+          "files": 3,
+          "log": "/private/tmp/god-pairs-matrix.log"
+        },
+        {
+          "tests": 3,
+          "files": 1,
+          "log": "/private/tmp/god-pairs-archive-tests.log"
+        }
+      ],
+      "includes": {
+        "newDomain": 21,
+        "newOriginalMapEngineCircuits": 3,
+        "allPoliciesSession": 1,
+        "legacyVersionPlayerCases": 132,
+        "legacyV9Golden": 1,
+        "priorUIReplays": 7,
+        "presentation": 4,
+        "newActualUIReplays": 3
+      }
+    },
+    "broadDiagnostic": {
+      "passed": false,
+      "files": 152,
+      "tests": 2410,
+      "passedAssertions": 2407,
+      "failedAssertions": 3,
+      "workerRpcTimeouts": 3,
+      "log": "/private/tmp/god-pairs-regression.log",
+      "failures": [
+        "rent-v1 payer120s timeout",
+        "site-circuit3p30s timeout",
+        "v45 asset-fortune gate loaded before fix"
+      ],
+      "failedFilesRecheckedClean": true,
+      "cleanSingleFullSuiteClaim": false
+    },
+    "newRulesAndCircuit": {
+      "tests": 25,
+      "passed": true,
+      "log": "/private/tmp/god-pairs-final-tests.log",
+      "includedInCleanTargeted": true
+    },
+    "build": {
+      "passed": true,
+      "log": "/private/tmp/god-pairs-build.log",
+      "warning": "existing >500kB chunks"
+    },
+    "lint": {
+      "passed": true,
+      "log": "/private/tmp/god-pairs-lint.log"
+    },
+    "preservation": {
+      "oldFixtureFilesByteIdentical": 428,
+      "newFixtureFiles": 6,
+      "baseFingerprint": "f9dbb7e9",
+      "legacyRules": "v1-v44",
+      "baseline": "/private/tmp/richman-03b-before/richman"
+    }
+  },
+  "browser": {
+    "commands": 1507,
+    "pairSpawns": 7,
+    "displayChecks": 15,
+    "prefixes": 16,
+    "normalSpeed": true,
+    "gameStateInjection": false,
+    "authFixtureOnly": true,
+    "routes": [
+      {
+        "displayChecks": [
+          {
+            "index": 16,
+            "gods": [
+              {
+                "carrier": "player-1",
+                "text": "衰神 · 剩余13次自身行动开始结算"
+              }
+            ]
+          },
+          {
+            "index": 46,
+            "gods": [
+              {
+                "carrier": "player-2",
+                "text": "小穷神 · 剩余7次自身行动开始结算"
+              },
+              {
+                "carrier": "player-1",
+                "text": "衰神 · 剩余11次自身行动开始结算"
+              }
+            ]
+          },
+          {
+            "index": 156,
+            "gods": [
+              {
+                "carrier": "player-1",
+                "text": "衰神 · 剩余4次自身行动开始结算"
+              }
+            ]
+          },
+          {
+            "index": 215,
+            "gods": []
+          },
+          {
+            "index": 238,
+            "gods": [
+              {
+                "carrier": "player-1",
+                "text": "天使 · 剩余7次自身行动开始结算"
+              }
+            ]
+          },
+          {
+            "index": 251,
+            "gods": [
+              {
+                "carrier": "player-1",
+                "text": "小衰神 · 剩余7次自身行动开始结算"
+              }
+            ]
+          }
+        ],
+        "robotPreviews": [],
+        "policy": "research-v1",
+        "toolWindows": [
+          "tool:08",
+          "tool:09"
+        ],
+        "crossChecks": [],
+        "route": "2",
+        "terminal": false,
+        "players": 2,
+        "normalSpeed": true,
+        "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+        "commands": 285,
+        "auto": 56,
+        "human": 51,
+        "lifecycle": [
+          "pause stops waiting",
+          "resume",
+          "reset dialog cancel",
+          "reset",
+          "replace with humans",
+          "exit cleanup",
+          "fullscreen",
+          "390px"
+        ],
+        "cleanup": {
+          "raf": 0,
+          "canvas": 0
+        },
+        "errors": [],
+        "pairNotices": [
+          {
+            "type": "g6Notice",
+            "message": "配对补位：6号槽出现在109号路格。",
+            "sequence": 305,
+            "commandId": "command-166",
+            "playerId": "player-2",
+            "turn": 20
+          },
+          {
+            "type": "g6Notice",
+            "message": "配对补位：10号槽出现在43号路格。",
+            "sequence": 502,
+            "commandId": "command-273",
+            "playerId": "player-1",
+            "turn": 33
+          }
+        ],
+        "prefixes": [
+          24,
+          59,
+          166,
+          233,
+          258,
+          273
+        ],
+        "fullReplay": true,
+        "prefixReplay": true,
+        "commandsMatchPriorLegalRoute": true,
+        "hashes": {
+          "replay": "749e10e624bdb413c806628e950ae4657a5bf8b45789879936b9de18873a91aa",
+          "state": "4732ac85a7f6652440e2e967a2d20894ec4ff443077c95aa35ca5d56c7deff46",
+          "events": "461d8d0dc2b8556c719a876ec3e23121c5fa28c63ac31ce2b436e1e3bbf62b44"
+        }
+      },
+      {
+        "displayChecks": [
+          {
+            "index": 133,
+            "gods": [
+              {
+                "carrier": "player-3",
+                "text": "小财神 · 剩余7次自身行动开始结算"
+              }
+            ]
+          },
+          {
+            "index": 179,
+            "gods": [
+              {
+                "carrier": "player-3",
+                "text": "小财神 · 剩余5次自身行动开始结算"
+              },
+              {
+                "carrier": "player-1",
+                "text": "小福神 · 剩余7次自身行动开始结算"
+              }
+            ]
+          },
+          {
+            "index": 280,
+            "gods": [
+              {
+                "carrier": "player-1",
+                "text": "小福神 · 剩余2次自身行动开始结算"
+              }
+            ]
+          },
+          {
+            "index": 302,
+            "gods": [
+              {
+                "carrier": "player-1",
+                "text": "小福神 · 剩余1次自身行动开始结算"
+              },
+              {
+                "carrier": "player-2",
+                "text": "小穷神 · 剩余7次自身行动开始结算"
+              }
+            ]
+          },
+          {
+            "index": 317,
+            "gods": [
+              {
+                "carrier": "player-2",
+                "text": "土地公 · 剩余7次自身行动开始结算"
+              }
+            ]
+          }
+        ],
+        "robotPreviews": [
+          {
+            "mines": 1,
+            "bombs": 0
+          }
+        ],
+        "policy": "research-v1",
+        "toolWindows": [
+          "tool:08",
+          "tool:09",
+          "card:08",
+          "tool:05",
+          "tool:02",
+          "tool:03",
+          "tool:01"
+        ],
+        "crossChecks": [],
+        "route": "3",
+        "terminal": false,
+        "players": 3,
+        "normalSpeed": true,
+        "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+        "commands": 474,
+        "auto": 151,
+        "human": 45,
+        "lifecycle": [
+          "pause stops waiting",
+          "resume",
+          "reset dialog cancel",
+          "reset",
+          "replace with humans",
+          "exit cleanup",
+          "fullscreen",
+          "390px"
+        ],
+        "cleanup": {
+          "raf": 0,
+          "canvas": 0
+        },
+        "errors": [],
+        "pairNotices": [
+          {
+            "type": "g6Notice",
+            "message": "配对补位：2号槽出现在21号路格。",
+            "sequence": 527,
+            "commandId": "command-295",
+            "playerId": "player-3",
+            "turn": 39
+          },
+          {
+            "type": "g6Notice",
+            "message": "配对补位：6号槽出现在32号路格。",
+            "sequence": 594,
+            "commandId": "command-331",
+            "playerId": "player-2",
+            "turn": 44
+          },
+          {
+            "type": "g6Notice",
+            "message": "配对补位：4号槽出现在11号路格。",
+            "sequence": 614,
+            "commandId": "command-341",
+            "playerId": "player-1",
+            "turn": 46
+          }
+        ],
+        "prefixes": [
+          143,
+          193,
+          295,
+          316,
+          331,
+          341
+        ],
+        "fullReplay": true,
+        "prefixReplay": true,
+        "commandsMatchPriorLegalRoute": true,
+        "hashes": {
+          "replay": "57d058647c532ed6742eb9b8cb4819857c6a6ca35fa7eaa5910721890450ebfb",
+          "state": "062088b7d7b926f220bb505536f99c591f6b605f3f9a160f556aa12a7bc71c3a",
+          "events": "f86dfa5d0b6cdf797e9192e7c9ac05bbe94849b8d342b42a5604f8d72c7b22e6"
+        }
+      },
+      {
+        "displayChecks": [
+          {
+            "index": 221,
+            "gods": [
+              {
+                "carrier": "player-4",
+                "text": "天使 · 剩余7次自身行动开始结算"
+              }
+            ]
+          },
+          {
+            "index": 351,
+            "gods": [
+              {
+                "carrier": "player-1",
+                "text": "小衰神 · 剩余7次自身行动开始结算"
+              },
+              {
+                "carrier": "player-4",
+                "text": "天使 · 剩余3次自身行动开始结算"
+              }
+            ]
+          },
+          {
+            "index": 450,
+            "gods": [
+              {
+                "carrier": "player-1",
+                "text": "小衰神 · 剩余4次自身行动开始结算"
+              }
+            ]
+          },
+          {
+            "index": 583,
+            "gods": []
+          }
+        ],
+        "robotPreviews": [
+          {
+            "mines": 0,
+            "bombs": 0
+          }
+        ],
+        "policy": "research-v1",
+        "toolWindows": [
+          "tool:08",
+          "tool:09",
+          "card:09",
+          "card:24",
+          "tool:02",
+          "tool:01"
+        ],
+        "crossChecks": [],
+        "route": "4",
+        "terminal": false,
+        "players": 4,
+        "normalSpeed": true,
+        "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+        "commands": 748,
+        "auto": 258,
+        "human": 57,
+        "lifecycle": [
+          "pause stops waiting",
+          "resume",
+          "reset dialog cancel",
+          "reset",
+          "replace with humans",
+          "exit cleanup",
+          "fullscreen",
+          "390px"
+        ],
+        "cleanup": {
+          "raf": 0,
+          "canvas": 0
+        },
+        "errors": [],
+        "pairNotices": [
+          {
+            "type": "g6Notice",
+            "message": "配对补位：10号槽出现在40号路格。",
+            "sequence": 811,
+            "commandId": "command-462",
+            "playerId": "player-4",
+            "turn": 56
+          },
+          {
+            "type": "g6Notice",
+            "message": "配对补位：8号槽出现在99号路格。",
+            "sequence": 1075,
+            "commandId": "command-617",
+            "playerId": "player-1",
+            "turn": 73
+          }
+        ],
+        "prefixes": [
+          225,
+          361,
+          454,
+          603
+        ],
+        "fullReplay": true,
+        "prefixReplay": true,
+        "commandsMatchPriorLegalRoute": true,
+        "hashes": {
+          "replay": "5315c86af0207e7c1e9861acd4d8558bbedf2edb55c504d990a300c8304b1a80",
+          "state": "ade790eb0983e492a7b7af74978e572f2585db6f92310eaa3418481b8d32ae1d",
+          "events": "014a61281f9400f52a4de5ba28dce568aca386bd518ea3b8c3f843317b507602"
+        }
+      }
+    ],
+    "screenshotsInspected": [
+      "/private/tmp/richman-god-pairs-ui-4/map-visible-351.png",
+      "/private/tmp/richman-god-pairs-ui-2/gods-251.png"
+    ],
+    "supersededRuns": "Initial routes before inherited-gate correction excluded. Four-player runner resume/reset race and idempotent-pause count fixed only in test script; final route from clean start."
+  },
+  "knownDifferences": [
+    "Only1..10 paired;12/15 use legacy initial/five-round replenishment",
+    "11/12 and13/14 special effects/month-boundary deferred",
+    "seeded RNG not native libc; empty/no-distant guards and4096 draw cap",
+    "forced double-pair transient native slot clearing not emulated",
+    "G7 nuclear fixed initial hit set vs native traversal not claimed identical",
+    "native AI, market precision/RNG/charts, other listings, special actors, spinner/animations, exit stack/terminal, minigame collisions"
+  ],
+  "notTestedAsOriginalMapUI": [
+    "busy slot/no far node",
+    "all god types",
+    "dismiss card / bankruptcy carrying god / nuclear removal / time restore combinations",
+    "native Windows execution and special11/13/14"
+  ],
+  "next": "S3-03c special11/13/14,11-to12 pairing and month-boundary; evidence-backed new semantics v46; preserve v45/v44 and15 policies"
+}

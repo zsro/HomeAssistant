@@ -1,0 +1,2 @@
+import {writeFileSync} from 'node:fs';import {strict as assert} from 'node:assert';import {planComputerResearch} from './plan-computer-research';
+for(const c of [{n:2,seed:1,items:['tool:10','tool:11'],limit:3000},{n:3,seed:0,items:['tool:10'],limit:2500},{n:4,seed:0,items:['tool:10','tool:11','tool:13'],limit:4100}]){const p=planComputerResearch(c.n,`research-${c.n}-${c.seed}`,c.items,c.limit);assert.ok(p.replay);writeFileSync('/private/tmp/computer-research-'+c.n+'.json',JSON.stringify(p));console.log(c.n,p.replay.commands.length,p.used);}

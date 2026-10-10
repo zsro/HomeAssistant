@@ -1,0 +1,44 @@
+{
+  "kind": "commerce",
+  "players": 2,
+  "commands": 110,
+  "turn": 9,
+  "trades": 24,
+  "subscriptions": 2,
+  "subscriptionPaid": 4147,
+  "forcedBank": 0,
+  "forcedPublic": 0,
+  "fortune": [],
+  "news": [
+    33
+  ],
+  "dates": 4,
+  "quoteDays": 3,
+  "companyTrends": 1,
+  "research": 0,
+  "restored": 0,
+  "prefixes": [
+    "trade",
+    "market-date",
+    "date",
+    "subscription",
+    "closed-date",
+    "company-trend"
+  ],
+  "report": {
+    "normalSpeed": true,
+    "map": "original Japan; real UI commands; auth-only fixture; no game-state injection",
+    "circuitCommon": true,
+    "completed": [],
+    "errors": [],
+    "cleanup": {
+      "raf": 0,
+      "canvas": 0
+    }
+  },
+  "hashes": {
+    "replay": "d559e40ce2e240ee263ea5edb84c098ba8cc584cb30d1748617869b56a8e6ed4",
+    "state": "cd8c14a0eaff15ce4f36a08e4400fea03cf36d8fc532fc1f625c3eea7a380962",
+    "events": "eb13bbaaed312f70ea6a07829b49000ce52fb98deb5b2daa7f05f0f124e3b338"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "stage": "S3-05b",
+  "date": "2026-10-10",
+  "scope": "Web interaction polish, no new native rule claim",
+  "rulesId": "japan-events-candidate-v47",
+  "facts": [
+    {
+      "id": "R12-B01",
+      "finding": "长页快捷导航定位地图/当前决策/帮助，按phase选面板，保险办理优先；只滚动与focus，帮助展开，无游戏命令。",
+      "evidence": "decision-navigation.ts; real worker/help/map desktop/touch browser; other phase mapping is source audit only"
+    },
+    {
+      "id": "R12-B02",
+      "finding": "工人无效命中反馈绑定decisionId，已有选择保留；改选/取消清除，不能把点击错误视作消耗。",
+      "evidence": "scene.ts propertyMissed; RichmanPage; desktop/touch real map invalid hit + 6-command replay each"
+    },
+    {
+      "id": "R12-B03",
+      "finding": "指针捕获释放后抬起仍可能生成无效点选；追加hasPointerCapture、lostpointercapture和模型发布时取消手势，暂停/新局失效。",
+      "evidence": "real desktop capture-release fault exposed and fixed; trusted touchCancel; pause/resume while down"
+    },
+    {
+      "id": "R12-B04",
+      "finding": "电脑实际应答期间禁止地图选路/选工人和miss反馈；列表沿用fieldset禁用，回调再检查归属。",
+      "evidence": "scene.ts and RichmanPage guards; two tools-v1 seats legal original-map purchase then worker, 17 commands"
+    },
+    {
+      "id": "R12-B05",
+      "finding": "全屏API拒绝时现有expanded回退可用，快捷导航支持内部滚动，Escape恢复body overflow；390px触屏拖动确实移动地图。",
+      "evidence": "explicit requestFullscreen rejection, not natural; CDP trusted single touch and reviewed before/after screenshots"
+    }
+  ],
+  "files": {
+    "frontend/src/pages/RichmanPage.tsx": "7b66b60ebe2da52f62d08c308a753b5a1579410dfe9c3bcbf4ef1487229cf7fb",
+    "frontend/src/features/richman/scene.ts": "0cd4ff8a1b3dec9437efff5b7469ac4ccca96b0432fcef35afa98f72466ccfa6",
+    "frontend/src/features/richman/decision-navigation.ts": "b884e8f00676fa186fc11746c0e7f79022740a2044f2e8b1ce429a16f1d1a595",
+    "frontend/src/features/richman/decision-navigation.test.tsx": "3848dcfe33c3bcc6473a0c4f68cc01653ec933bd60c84fcdb6984ca9f03de342",
+    "frontend/src/features/richman/richman.css": "94ce9827814e3642f4ddbb12e79123d9107aa5a5bec32389dfa76825b5ac297c",
+    "scripts/richman/polish-navigation-browser.cjs": "83f7afd7f773af62060a64eb768ced50eef823b08f6e5bc4d9b687710dadbd9f",
+    "scripts/richman/polish-ownership-browser.cjs": "6c1349e71cd19ee6ec61e14914b6eda47558fe93fab6ed33a3bb3ebb5518eef7",
+    "scripts/richman/verify-polish-navigation.ts": "b640ceb1ebcf7fd5670202ce892c5b43a2f48910fba308e65e1c2814979d8cb5"
+  },
+  "historicalGameAndResourcesUnchanged": 758,
+  "historicalFixturesUnchanged": 490,
+  "preserved": "S3-05a help; S3-04 Chrome candidate and untriggered items; all 15 policies"
+}

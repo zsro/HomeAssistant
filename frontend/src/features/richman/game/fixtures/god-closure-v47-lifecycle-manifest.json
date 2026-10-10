@@ -1,0 +1,41 @@
+{
+  "players": 3,
+  "normalSpeed": true,
+  "policy": "research-v1",
+  "commands": 7,
+  "selectorRevision": 1,
+  "frozen": 4,
+  "afterComputer": 7,
+  "checks": [
+    "exited human retains selector",
+    "computer target",
+    "human roll/surrender disabled during AI",
+    "pause pending AI",
+    "reset-dialog cancel",
+    "resume AI",
+    "reset after AI",
+    "replace",
+    "exit"
+  ],
+  "cleanup": {
+    "raf": 0,
+    "canvas": 0
+  },
+  "errors": [],
+  "prefixes": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "fullReplay": true,
+  "prefixReplay": true,
+  "hashes": {
+    "replay": "eb5aaff45fc650cb55f69c4bd686d68b0d1ec1a8fd0019adff03f05585ab45e3",
+    "state": "9dbb13cd0d1864be52c3671ad7a1695227b54e6f88d365fdab0990084aea46c6",
+    "events": "2ec1590d2ad96f32ca70c1c12800493f432feb9860e26f951596a0cb8f6ba13e"
+  }
+}

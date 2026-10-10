@@ -1,0 +1,36 @@
+// Engine first: canonical initialization of the existing fingerprint dependency chain.
+import {GameEngine,replayGame} from '../../frontend/src/features/richman/game/engine';
+import type {Replay} from '../../frontend/src/features/richman/game/engine';
+import assert from 'node:assert/strict';
+import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import {g6Draw} from '../../frontend/src/features/richman/game/g6-random';
+import {cardPrices} from '../../frontend/src/features/richman/game/g3';
+import {shopSupply,shopPrice} from '../../frontend/src/features/richman/game/shop-acquisition';
+/** Independently rebuild gifts and frozen shelves from pre-landing pools; then verify each real transfer. */
+export function verifyShopAcquisition(replay:Replay){
+ assert.equal(replay.rulesId,'japan-events-candidate-v40');assert.equal(replay.itemFingerprint,'72a3a480');const live=new GameEngine(nodes,replay.config);let shelves=0,gifts=0,buys=0,sales=0,closings=0,dividends=0,godCards=0;const cards=Array.from({length:30},(_,i)=>`card:${String(i+1).padStart(2,'0')}`),tools=Array.from({length:8},(_,i)=>`tool:${String(i+1).padStart(2,'0')}`);
+ for(const c of replay.commands){const before=live.state,r=live.dispatch(c);assert.ok(r.ok);if(!r.ok)throw Error();const after=live.state,who=before.players[before.active].id,p=before.pending;
+  const shelfEvent=r.events.find(e=>e.type==='shopShelf');if(shelfEvent?.type==='shopShelf'){
+   shelves++;const pool=Object.fromEntries([...cards,...tools].map(id=>[id,shopSupply(before,id)])),bag=structuredClone(before.effects!.inventory),slots=structuredClone(before.g3!.slots);let rng=before.randomState;const draw=(n:number)=>{const d=g6Draw(rng,n);rng=d.state;return d.index;},weighted=(ids:string[])=>ids.flatMap(id=>Array(pool[id]).fill(id) as string[]);let expectedGift=null;
+   // The actual card route encounters a small fortune god before the shop entrance.
+   const god=before.g6!.gods.find(g=>!g.carrier&&g.node===after.players[after.active].node);
+   if(god){assert.ok([3,4].includes(god.type),'Verifier must explicitly account for other god effects');for(let n=0;n<(god.type===3?1:2);n++){const available=weighted(cards);if(!available.length)continue;const item=available[draw(available.length)];if(slots[who].length===15){const drop=slots[who].reduce((best,id)=>cardPrices[id]<cardPrices[best]?id:best);slots[who].splice(slots[who].indexOf(drop),1);bag[who][drop]--;pool[drop]++;}slots[who].push(item);bag[who][item]++;pool[item]--;godCards++;}}
+   if(before.news!.business!.companies[0].ownerId===who){gifts++;const kind=draw(2)===0?'card':'tool',available=weighted(kind==='card'?cards:tools),item=available.length?available[draw(available.length)]:null;let discarded:string|null=null,received=false;
+    if(item){if(kind==='card'){if(slots[who].length===15){discarded=slots[who].reduce((best,id)=>cardPrices[id]<cardPrices[best]?id:best);slots[who].splice(slots[who].indexOf(discarded),1);bag[who][discarded]--;pool[discarded]++;}slots[who].push(item);received=true;}else received=(bag[who][item]??0)<9;if(received){bag[who][item]=(bag[who][item]??0)+1;pool[item]--;}}
+    expectedGift={kind,itemId:item,received,discarded,reason:!item?'empty':received?'received':'full'};
+   }
+   const requested=6+draw(10),local=weighted(cards),cardSlots=[];while(cardSlots.length<requested&&local.length)cardSlots.push({itemId:local.splice(draw(local.length),1)[0],available:true});
+   assert.deepEqual(shelfEvent.shelf,{requested,cards:cardSlots,tools:tools.filter(id=>pool[id]>0).map(itemId=>({itemId,available:true})),gift:expectedGift});assert.deepEqual(after.effects!.inventory,bag);assert.deepEqual(after.g3!.slots,slots);for(const id of[...cards,...tools])assert.equal(shopSupply(after,id),pool[id]);assert.equal(after.randomState,rng);assert.deepEqual(after.items!.points,before.items!.points);assert.deepEqual(after.economy,before.economy);assert.deepEqual(after.news!.business!.companies,before.news!.business!.companies);if(after.pending?.kind!=='shop')throw Error();assert.equal(after.pending.turnover,0);
+  }
+  if(['buyItem','sellItem','leaveShop'].includes(c.action.type)){
+   assert.deepEqual(after.calendar,before.calendar);assert.equal(after.turn,before.turn);assert.deepEqual(after.economy,before.economy);assert.equal(after.randomState,before.randomState);assert.equal(after.news!.publicFund,before.news!.publicFund);
+   if(p?.kind!=='shop')throw Error();
+   if(c.action.type==='buyItem'){buys++;const id=c.action.itemId,expected=structuredClone(p.shelf!),slot=[...expected.cards,...expected.tools].find(x=>x.itemId===id&&x.available);assert.ok(slot);slot.available=false;if(after.pending?.kind!=='shop')throw Error();assert.deepEqual(after.pending.shelf,expected);assert.equal(shopSupply(after,id),shopSupply(before,id)-1);assert.equal(after.effects!.inventory[who][id],(before.effects!.inventory[who][id]??0)+1);assert.equal(after.items!.points[who],before.items!.points[who]-shopPrice(id));assert.equal(after.pending.turnover,p.turnover!+shopPrice(id)*10);assert.deepEqual(after.news!.business!.companies,before.news!.business!.companies);}
+   if(c.action.type==='sellItem'){sales++;if(after.pending?.kind!=='shop')throw Error();const id=c.action.itemId;assert.deepEqual(after.pending.shelf,p.shelf);assert.equal(after.items!.points[who],Math.trunc(before.items!.points[who]+shopPrice(id)*0.9)&65535);assert.equal(after.effects!.inventory[who][id],before.effects!.inventory[who][id]-1);if(id.startsWith('card:')||Number(id.slice(5))<=8)assert.equal(shopSupply(after,id),shopSupply(before,id)+1);assert.equal(after.pending.turnover,p.turnover!+shopPrice(id));assert.deepEqual(after.news!.business!.companies,before.news!.business!.companies);}
+   if(c.action.type==='leaveShop'){closings++;const old=before.news!.business!.companies[0],next=after.news!.business!.companies[0];assert.equal(next.funds,(old.funds+p.turnover!)|0);assert.equal(next.cumulative,(old.cumulative+p.turnover!)|0);}
+  }
+  for(const e of r.events.filter(e=>e.type==='companyDividends')){const row=e.settlement.companies.find(c=>c.companyId==='japan:company:1')!;if(!row.funds)continue;dividends++;assert.equal(e.settlement.date,'1998-01-15');assert.equal(row.shares,1);assert.equal(row.funds,before.news!.business!.companies[0].funds);const payment=e.settlement.payments.find(p=>p.playerId==='player-1')!;assert.equal(payment.amount,row.funds);assert.equal(payment.after.bank-payment.before.bank,row.funds);assert.equal(after.news!.business!.companies[0].funds,0);assert.equal(after.news!.business!.companies[0].cumulative,before.news!.business!.companies[0].cumulative);}
+ }
+ const copy=replayGame(nodes,replay);assert.deepEqual(copy.state,live.state);assert.deepEqual(copy.events,live.events);assert.ok(gifts>=1&&buys>=2&&sales>=2&&dividends===1&&closings>0);assert.ok(live.events.some(e=>e.type==='stockTraded'&&e.stockId==='jp:26'&&e.side==='buy'));
+ return{commands:replay.commands.length,turn:live.state.turn,date:live.state.calendar!.date,shelves,gifts,buys,sales,closings,dividends,godCards,giftReceipts:live.events.filter(e=>e.type==='shopGift').map(e=>e.receipt),shopReceipts:live.events.filter(e=>e.type==='shopTurnover').map(e=>e.receipt),dividendReceipt:live.state.news!.business!.dividends,state:live.state,events:live.events};
+}

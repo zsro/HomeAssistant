@@ -1,0 +1,89 @@
+{
+  "stage": "S2-03z",
+  "source": "real original Japan UI; normal speed; auth-only fixture; no world injection",
+  "seed": "site-services-31",
+  "players": 4,
+  "commands": 420,
+  "turn": 59,
+  "date": "1998-01-15",
+  "facilities": 1,
+  "kinds": [
+    "hospital"
+  ],
+  "sales": 2,
+  "closings": 1,
+  "purchases": 1,
+  "helpReceipts": [
+    {
+      "facility": "hospital",
+      "visitorId": "player-3",
+      "targetId": "player-4",
+      "cost": 30,
+      "before": 2,
+      "after": 128,
+      "pointsBefore": 50,
+      "pointsAfter": 20,
+      "hostility": -200
+    }
+  ],
+  "saleReceipts": [
+    {
+      "itemId": "tool:09",
+      "basePrice": 30,
+      "credit": 27,
+      "pointsBefore": 0,
+      "pointsAfter": 27,
+      "countBefore": 1,
+      "countAfter": 0,
+      "poolReturned": false
+    },
+    {
+      "itemId": "card:06",
+      "basePrice": 20,
+      "credit": 18,
+      "pointsBefore": 7,
+      "pointsAfter": 25,
+      "countBefore": 1,
+      "countAfter": 0,
+      "poolReturned": true
+    }
+  ],
+  "shopReceipts": [
+    {
+      "node": 107,
+      "visitorId": "player-1",
+      "turnover": 250,
+      "sales": [
+        {
+          "itemId": "tool:09",
+          "basePrice": 30,
+          "credit": 27,
+          "pointsBefore": 0,
+          "pointsAfter": 27,
+          "countBefore": 1,
+          "countAfter": 0,
+          "poolReturned": false
+        },
+        {
+          "itemId": "card:06",
+          "basePrice": 20,
+          "credit": 18,
+          "pointsBefore": 7,
+          "pointsAfter": 25,
+          "countBefore": 1,
+          "countAfter": 0,
+          "poolReturned": true
+        }
+      ],
+      "fundsBefore": 0,
+      "fundsAfter": 250,
+      "cumulativeBefore": 0,
+      "cumulativeAfter": 250
+    }
+  ],
+  "hashes": {
+    "replay": "0596d81ff111d05581a60bf283903bfb602325ada3499b6ef883c903e7edd7b8",
+    "state": "4b50bf1cf638b286000e59f9429272cba2110fd48fb923c930bc6feba087a0c2",
+    "events": "f4eeab69f9904665b07b668c315c79c1f57d24f2a33db4c373f028f7e2bad86c"
+  }
+}

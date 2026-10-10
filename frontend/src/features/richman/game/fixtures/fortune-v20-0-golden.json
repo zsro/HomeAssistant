@@ -1,0 +1,13 @@
+{
+  "route": "0",
+  "seed": "fortune-group-0",
+  "commands": 56,
+  "turn": 6,
+  "players": 2,
+  "state": "196714d6767ec70aa070ce3b974f34bc27d5bb29e9929b7d4862733c6f071239",
+  "events": "bea16a7820985b189ad41be50bed9205498c2a5d6f75ae4385fcc75f5ced15b6",
+  "fortune": [
+    17,
+    19
+  ]
+}

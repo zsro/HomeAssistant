@@ -1,0 +1,649 @@
+{
+  "stage": "S3-02c",
+  "completed": true,
+  "policy": "defense-v1",
+  "preservedPolicies": [
+    "basic-v1",
+    "tools-v1",
+    "rent-v1"
+  ],
+  "rulesId": "japan-events-candidate-v44",
+  "fingerprint": "f9dbb7e9",
+  "newGameSemantics": false,
+  "checks": {
+    "frontend": {
+      "tests": 1892,
+      "files": 132,
+      "passed": true,
+      "log": "/private/tmp/defense-full-final.log",
+      "workers": 2,
+      "durationSeconds": 503.32
+    },
+    "newDomainTests": 27,
+    "newActualReplayTests": 3,
+    "versionsPlayers": 132,
+    "lint": true,
+    "build": true,
+    "diffCheck": true,
+    "oldFixtureJsonByteUnchanged": 314,
+    "basicDecisionBodyUnchanged": true,
+    "toolsPolicyFileUnchanged": true,
+    "rentPolicyFileUnchanged": true,
+    "engineRulesUnchanged": true
+  },
+  "browser": {
+    "routes": [
+      {
+        "players": 2,
+        "commands": 958,
+        "turn": 137,
+        "auto": 189,
+        "human": 195,
+        "acquisitions": [
+          {
+            "id": "player-2",
+            "item": "card:19",
+            "ai": true,
+            "turn": 15,
+            "action": "magic",
+            "node": 96,
+            "evidence": [
+              {
+                "node": 35,
+                "group": 4,
+                "targets": [
+                  "player-2"
+                ],
+                "effect": 6,
+                "title": "得一张卡片",
+                "rows": [
+                  {
+                    "playerId": "player-2",
+                    "lines": [
+                      "获得嫁祸卡。"
+                    ],
+                    "pointsBefore": 0,
+                    "pointsAfter": 0,
+                    "cashBefore": 1000,
+                    "cashAfter": 1000,
+                    "bankBefore": 21000,
+                    "bankAfter": 21000,
+                    "stopBefore": 0,
+                    "stopAfter": 0,
+                    "previousBefore": 97,
+                    "previousAfter": 97,
+                    "received": {
+                      "itemId": "card:19",
+                      "discarded": null
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "player-1",
+            "item": "card:17",
+            "ai": false,
+            "turn": 117,
+            "action": "buyItem",
+            "node": 107,
+            "evidence": [
+              "card:17"
+            ]
+          }
+        ],
+        "attacks": [
+          {
+            "id": "player-1",
+            "target": "player-2",
+            "item": "card:17",
+            "turn": 127
+          }
+        ],
+        "reactions": [
+          {
+            "ai": true,
+            "id": "player-2",
+            "item": "card:17",
+            "target": "player-1",
+            "source": "player-1",
+            "choice": "use",
+            "turn": 127,
+            "turns": 4,
+            "phase": "turnEnd"
+          }
+        ],
+        "automatic": [],
+        "prefixes": [
+          "acquired-card:19",
+          "acquired-card:17",
+          "card:17-confirm-before",
+          "card:17-confirm-after",
+          "defense-paused",
+          "defense-resumed",
+          "reaction-before",
+          "reaction-after"
+        ],
+        "report": {
+          "policy": "defense-v1",
+          "toolWindows": [
+            "tool:08",
+            "tool:09"
+          ],
+          "crossChecks": [
+            {
+              "index": 910,
+              "active": "player-1",
+              "actor": "player-2",
+              "kind": "reaction",
+              "computer": true,
+              "item": "card:17"
+            }
+          ],
+          "route": "2",
+          "terminal": false,
+          "players": 2,
+          "normalSpeed": true,
+          "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+          "commands": 958,
+          "auto": 189,
+          "human": 195,
+          "lifecycle": [
+            "pause stops waiting",
+            "resume",
+            "reset dialog cancel",
+            "reset",
+            "replace with humans",
+            "exit cleanup",
+            "fullscreen",
+            "390px"
+          ],
+          "cleanup": {
+            "raf": 0,
+            "canvas": 0
+          },
+          "errors": []
+        },
+        "hashes": {
+          "replay": "dd81312739b57d80a6804e39dbce2e6938a927ba692f269a559fe7e9dd69a1da",
+          "state": "966e731103254cf55caca6f1c0b3dd77b8dc05581d409ee37279863c2b2bd4a9",
+          "events": "2b84efa9b8111217d21b1e016f18bb7c817d232c3e3b0a74e5503a98468f50c9"
+        }
+      },
+      {
+        "players": 3,
+        "commands": 1975,
+        "turn": 274,
+        "auto": 260,
+        "human": 515,
+        "acquisitions": [
+          {
+            "id": "player-2",
+            "item": "card:16",
+            "ai": false,
+            "turn": 38,
+            "action": "buyItem",
+            "node": 50,
+            "evidence": [
+              "card:16"
+            ]
+          },
+          {
+            "id": "player-2",
+            "item": "card:21",
+            "ai": false,
+            "turn": 80,
+            "action": "animationDone",
+            "node": 98,
+            "evidence": []
+          },
+          {
+            "id": "player-1",
+            "item": "card:16",
+            "ai": false,
+            "turn": 103,
+            "action": "buyItem",
+            "node": 107,
+            "evidence": [
+              "card:16"
+            ]
+          },
+          {
+            "id": "player-3",
+            "item": "card:19",
+            "ai": true,
+            "turn": 183,
+            "action": "buyItem",
+            "node": 107,
+            "evidence": [
+              "card:19"
+            ]
+          },
+          {
+            "id": "player-2",
+            "item": "card:16",
+            "ai": false,
+            "turn": 236,
+            "action": "buyItem",
+            "node": 50,
+            "evidence": [
+              "card:16"
+            ]
+          },
+          {
+            "id": "player-3",
+            "item": "card:19",
+            "ai": true,
+            "turn": 254,
+            "action": "magic",
+            "node": 11,
+            "evidence": [
+              {
+                "node": 73,
+                "group": 6,
+                "targets": [
+                  "player-1",
+                  "player-2",
+                  "player-3"
+                ],
+                "effect": 6,
+                "title": "得一张卡片",
+                "rows": [
+                  {
+                    "playerId": "player-1",
+                    "lines": [
+                      "获得换地卡。"
+                    ],
+                    "pointsBefore": 115,
+                    "pointsAfter": 115,
+                    "cashBefore": 3700,
+                    "cashAfter": 3700,
+                    "bankBefore": 6271,
+                    "bankAfter": 6271,
+                    "stopBefore": 0,
+                    "stopAfter": 0,
+                    "previousBefore": 72,
+                    "previousAfter": 72,
+                    "received": {
+                      "itemId": "card:04",
+                      "discarded": null
+                    }
+                  },
+                  {
+                    "playerId": "player-2",
+                    "lines": [
+                      "获得改建卡。"
+                    ],
+                    "pointsBefore": 60,
+                    "pointsAfter": 60,
+                    "cashBefore": 0,
+                    "cashAfter": 0,
+                    "bankBefore": 15217,
+                    "bankAfter": 15217,
+                    "stopBefore": 0,
+                    "stopAfter": 0,
+                    "previousBefore": 72,
+                    "previousAfter": 72,
+                    "received": {
+                      "itemId": "card:07",
+                      "discarded": null
+                    }
+                  },
+                  {
+                    "playerId": "player-3",
+                    "lines": [
+                      "获得嫁祸卡。"
+                    ],
+                    "pointsBefore": 195,
+                    "pointsAfter": 195,
+                    "cashBefore": 574,
+                    "cashAfter": 574,
+                    "bankBefore": 9097,
+                    "bankAfter": 9097,
+                    "stopBefore": 0,
+                    "stopAfter": 0,
+                    "previousBefore": 12,
+                    "previousAfter": 12,
+                    "received": {
+                      "itemId": "card:19",
+                      "discarded": null
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "attacks": [
+          {
+            "id": "player-2",
+            "target": "player-3",
+            "item": "card:16",
+            "turn": 272
+          }
+        ],
+        "reactions": [
+          {
+            "ai": true,
+            "id": "player-3",
+            "item": "card:16",
+            "target": "player-2",
+            "source": "player-2",
+            "choice": "use",
+            "turn": 272,
+            "turns": 4,
+            "phase": "idle"
+          }
+        ],
+        "automatic": [],
+        "prefixes": [
+          "acquired-card:16",
+          "acquired-card:19",
+          "card:16-confirm-before",
+          "card:16-confirm-after",
+          "defense-paused",
+          "defense-resumed",
+          "reaction-before",
+          "reaction-after"
+        ],
+        "report": {
+          "policy": "defense-v1",
+          "toolWindows": [
+            "tool:08",
+            "tool:09"
+          ],
+          "crossChecks": [
+            {
+              "index": 1939,
+              "active": "player-2",
+              "actor": "player-3",
+              "kind": "reaction",
+              "computer": true,
+              "item": "card:16"
+            }
+          ],
+          "route": "3",
+          "terminal": false,
+          "players": 3,
+          "normalSpeed": true,
+          "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+          "commands": 1975,
+          "auto": 260,
+          "human": 515,
+          "lifecycle": [
+            "pause stops waiting",
+            "resume",
+            "reset dialog cancel",
+            "reset",
+            "replace with humans",
+            "exit cleanup",
+            "fullscreen",
+            "390px"
+          ],
+          "cleanup": {
+            "raf": 0,
+            "canvas": 0
+          },
+          "errors": []
+        },
+        "hashes": {
+          "replay": "e8e814ffc7d87fb58c011cdfe70457aa7d70a2dd86528837c545e3c5635406a4",
+          "state": "9a6566724eea84f7fcdc8400030fdfbca5e54396e804ecc8d22eb0c6d42e1b74",
+          "events": "bb8790581f08790130f5b03e29a6ae8b045c39efed38cf5eb441ac748c36d81a"
+        }
+      },
+      {
+        "players": 4,
+        "commands": 2102,
+        "turn": 290,
+        "auto": 216,
+        "human": 615,
+        "acquisitions": [
+          {
+            "id": "player-4",
+            "item": "card:18",
+            "ai": true,
+            "turn": 26,
+            "action": "magic",
+            "node": 88,
+            "evidence": [
+              {
+                "node": 35,
+                "group": 10,
+                "targets": [
+                  "player-2",
+                  "player-4"
+                ],
+                "effect": 6,
+                "title": "得一张卡片",
+                "rows": [
+                  {
+                    "playerId": "player-2",
+                    "lines": [
+                      "获得改建卡。"
+                    ],
+                    "pointsBefore": 110,
+                    "pointsAfter": 110,
+                    "cashBefore": 13500,
+                    "cashAfter": 13500,
+                    "bankBefore": 15000,
+                    "bankAfter": 15000,
+                    "stopBefore": 0,
+                    "stopAfter": 0,
+                    "previousBefore": 34,
+                    "previousAfter": 34,
+                    "received": {
+                      "itemId": "card:07",
+                      "discarded": null
+                    }
+                  },
+                  {
+                    "playerId": "player-4",
+                    "lines": [
+                      "获得复仇卡。"
+                    ],
+                    "pointsBefore": 0,
+                    "pointsAfter": 0,
+                    "cashBefore": 1000,
+                    "cashAfter": 1000,
+                    "bankBefore": 25000,
+                    "bankAfter": 25000,
+                    "stopBefore": 0,
+                    "stopAfter": 0,
+                    "previousBefore": 89,
+                    "previousAfter": 89,
+                    "received": {
+                      "itemId": "card:18",
+                      "discarded": null
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "player-1",
+            "item": "card:17",
+            "ai": false,
+            "turn": 41,
+            "action": "buyItem",
+            "node": 50,
+            "evidence": [
+              "card:17"
+            ]
+          },
+          {
+            "id": "player-2",
+            "item": "card:17",
+            "ai": false,
+            "turn": 94,
+            "action": "buyItem",
+            "node": 107,
+            "evidence": [
+              "card:17"
+            ]
+          },
+          {
+            "id": "player-1",
+            "item": "card:17",
+            "ai": false,
+            "turn": 101,
+            "action": "buyItem",
+            "node": 107,
+            "evidence": [
+              "card:17"
+            ]
+          },
+          {
+            "id": "player-4",
+            "item": "card:19",
+            "ai": true,
+            "turn": 288,
+            "action": "buyItem",
+            "node": 50,
+            "evidence": [
+              "card:19"
+            ]
+          }
+        ],
+        "attacks": [
+          {
+            "id": "player-1",
+            "target": "player-4",
+            "item": "card:17",
+            "turn": 289
+          }
+        ],
+        "reactions": [
+          {
+            "ai": true,
+            "id": "player-4",
+            "item": "card:17",
+            "target": "player-1",
+            "source": "player-1",
+            "choice": "use",
+            "turn": 289,
+            "turns": 4,
+            "phase": "turnEnd"
+          }
+        ],
+        "automatic": [],
+        "prefixes": [
+          "acquired-card:17",
+          "acquired-card:19",
+          "card:17-confirm-before",
+          "card:17-confirm-after",
+          "defense-paused",
+          "defense-resumed",
+          "reaction-before",
+          "reaction-after"
+        ],
+        "report": {
+          "policy": "defense-v1",
+          "toolWindows": [
+            "tool:08"
+          ],
+          "crossChecks": [
+            {
+              "index": 2088,
+              "active": "player-1",
+              "actor": "player-4",
+              "kind": "reaction",
+              "computer": true,
+              "item": "card:17"
+            }
+          ],
+          "route": "4",
+          "terminal": false,
+          "players": 4,
+          "normalSpeed": true,
+          "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+          "commands": 2102,
+          "auto": 216,
+          "human": 615,
+          "lifecycle": [
+            "pause stops waiting",
+            "resume",
+            "reset dialog cancel",
+            "reset",
+            "replace with humans",
+            "exit cleanup",
+            "fullscreen",
+            "390px"
+          ],
+          "cleanup": {
+            "raf": 0,
+            "canvas": 0
+          },
+          "errors": []
+        },
+        "hashes": {
+          "replay": "0a3d675c9774b31de5310ab30b15d49985c477617b18d6ed4104d20486435c9f",
+          "state": "fb714815e07b06138dfcc05648112f85c221eb9876c2423e56ff58a40576ad14",
+          "events": "828126706541670ed3e3db69fd471ef7f02c582205de7f8cbe03e9526777cb92"
+        }
+      }
+    ],
+    "totalCommands": 5035,
+    "totalComputerDecisions": 665,
+    "namedPrefixes": 24,
+    "normalSpeed": true,
+    "injection": "auth only; no game state injection"
+  },
+  "builtUI": {
+    "built": true,
+    "normalSpeed": true,
+    "defaultHuman": true,
+    "defaultBasic": true,
+    "toolsEffect": true,
+    "policyMetadata": true,
+    "resetPreservesPolicy": true,
+    "switchBackToBasic": true,
+    "switchBackToTools": true,
+    "switchBackToRent": true,
+    "humanReplacement": true,
+    "exitWhileToolsWaiting": true,
+    "setup390": true,
+    "cleanup": {
+      "raf": 0,
+      "canvas": 0
+    },
+    "errors": []
+  },
+  "changes": [
+    "new host defense-v1 for existing attack redirect windows; delegate other windows to rent-v1",
+    "source-first legal non-ally target, seat fallback, recheck invalidation; no game RNG or hidden sequence",
+    "UI strategy selector and readable defense reason; prison additive vs dream overwrite explicit"
+  ],
+  "notClaimed": [
+    "native AI/hostility/difficulty parity",
+    "browser automatic absolution/revenge, winter conflicts, third-party fallback, target mutation or source insurance; domain only",
+    "new policy browser terminal/all characters/automatic liquidation or bankruptcy; prior accepted evidence retained",
+    "attack-window hard reset/replace/dispose is domain; browser tests reaction pause/reset-cancel plus generic reset/replace/queued exit",
+    "save/load/background throttling, per-seat mixed policies or midgame takeover",
+    "other proactive cards/stocks/financing/research/bidding"
+  ],
+  "retainedDifferences": [
+    "native precision/RNG/chart",
+    "other asset sales",
+    "special actors",
+    "original wheel",
+    "original exit stack/endgame",
+    "minigame presentation/collision",
+    "native snapshot"
+  ],
+  "next": "S3-02d: proactive G1 property-card strategy (strong buy/land swap/building swap/demolish), legal targets/cost/risk, independently versioned policy; retain basic-v1/tools-v1/rent-v1/defense-v1 and v44",
+  "git": {
+    "committed": false,
+    "pushed": false,
+    "deployed": false
+  },
+  "failedAttempts": [
+    {
+      "scope": "build verifier types",
+      "reason": "new replay verifier claims/amount inference failed strict TS; explicit EventPayload[] and number added, final build passed",
+      "log": "/private/tmp/defense-build-verifier-type-failure.log"
+    }
+  ]
+}

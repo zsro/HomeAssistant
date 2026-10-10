@@ -1,0 +1,252 @@
+{
+  "stage": "S2-03x",
+  "source": "real original Japan UI; normal speed; auth-only fixture; no world injection",
+  "seed": "magic-actions-12",
+  "players": 4,
+  "commands": 360,
+  "turn": 48,
+  "date": "1998-01-12",
+  "effects": [
+    2,
+    5,
+    9,
+    10
+  ],
+  "rows": 7,
+  "reactions": 0,
+  "buildChoices": 0,
+  "receipts": [
+    {
+      "effect": 2,
+      "group": 1,
+      "targets": [
+        "player-1"
+      ],
+      "rows": [
+        {
+          "playerId": "player-1",
+          "lines": [
+            "玩家 1监禁：0 → 3；保留车辆，按自身行动计时。"
+          ],
+          "pointsBefore": 0,
+          "pointsAfter": 0,
+          "cashBefore": 42212,
+          "cashAfter": 42212,
+          "bankBefore": 50000,
+          "bankAfter": 50000,
+          "stopBefore": 0,
+          "stopAfter": 0,
+          "previousBefore": 93,
+          "previousAfter": null,
+          "change": {
+            "hostility": 90,
+            "targetId": "player-1",
+            "kind": "prison",
+            "before": 0,
+            "after": 3
+          }
+        }
+      ]
+    },
+    {
+      "effect": 10,
+      "group": 3,
+      "targets": [
+        "player-4"
+      ],
+      "rows": [
+        {
+          "playerId": "player-4",
+          "lines": [
+            "玩家 4住院：0 → 3；保留车辆，按自身行动计时。"
+          ],
+          "pointsBefore": 50,
+          "pointsAfter": 50,
+          "cashBefore": 50864,
+          "cashAfter": 50864,
+          "bankBefore": 50000,
+          "bankAfter": 50000,
+          "stopBefore": 0,
+          "stopAfter": 0,
+          "previousBefore": 34,
+          "previousAfter": null,
+          "change": {
+            "hostility": 0,
+            "targetId": "player-4",
+            "kind": "hospital",
+            "before": 0,
+            "after": 3
+          }
+        }
+      ]
+    },
+    {
+      "effect": 5,
+      "group": 9,
+      "targets": [
+        "player-2",
+        "player-4"
+      ],
+      "rows": [
+        {
+          "playerId": "player-2",
+          "lines": [
+            "倉敷：1 → 2 级；产权不变，不收费。"
+          ],
+          "pointsBefore": 50,
+          "pointsAfter": 50,
+          "cashBefore": 45212,
+          "cashAfter": 45212,
+          "bankBefore": 50000,
+          "bankAfter": 50000,
+          "stopBefore": 0,
+          "stopAfter": 0,
+          "previousBefore": 42,
+          "previousAfter": 42,
+          "change": {
+            "propertyBefore": {
+              "id": "japan:land:33",
+              "ownerId": "player-2",
+              "level": 1,
+              "basePrice": 1500,
+              "buildingType": 0,
+              "priceStatus": 0,
+              "research": null
+            },
+            "propertyAfter": {
+              "id": "japan:land:33",
+              "ownerId": "player-2",
+              "level": 2,
+              "basePrice": 1500,
+              "buildingType": 0,
+              "priceStatus": 0,
+              "research": null
+            }
+          }
+        },
+        {
+          "playerId": "player-4",
+          "lines": [
+            "当前不在可建拆地产，或住宿、旅行、拘留中，跳过。"
+          ],
+          "pointsBefore": 50,
+          "pointsAfter": 50,
+          "cashBefore": 50864,
+          "cashAfter": 50864,
+          "bankBefore": 50000,
+          "bankAfter": 50000,
+          "stopBefore": 0,
+          "stopAfter": 0,
+          "previousBefore": null,
+          "previousAfter": null,
+          "skipped": true
+        }
+      ]
+    },
+    {
+      "effect": 9,
+      "group": 9,
+      "targets": [
+        "player-2",
+        "player-3",
+        "player-4"
+      ],
+      "rows": [
+        {
+          "playerId": "player-2",
+          "lines": [
+            "松本：1 → 0 级；产权不变，不收费。"
+          ],
+          "pointsBefore": 50,
+          "pointsAfter": 50,
+          "cashBefore": 37277,
+          "cashAfter": 37277,
+          "bankBefore": 50000,
+          "bankAfter": 50000,
+          "stopBefore": 0,
+          "stopAfter": 0,
+          "previousBefore": 56,
+          "previousAfter": 56,
+          "change": {
+            "propertyBefore": {
+              "id": "japan:land:40",
+              "ownerId": "player-4",
+              "level": 1,
+              "basePrice": 1500,
+              "buildingType": 0,
+              "priceStatus": 0,
+              "research": null
+            },
+            "propertyAfter": {
+              "id": "japan:land:40",
+              "ownerId": "player-4",
+              "level": 0,
+              "basePrice": 1500,
+              "buildingType": 0,
+              "priceStatus": 0,
+              "research": null
+            }
+          }
+        },
+        {
+          "playerId": "player-3",
+          "lines": [
+            "姬路：0 → 0 级；产权不变，不收费。"
+          ],
+          "pointsBefore": 60,
+          "pointsAfter": 60,
+          "cashBefore": 36237,
+          "cashAfter": 36237,
+          "bankBefore": 50000,
+          "bankAfter": 50000,
+          "stopBefore": 0,
+          "stopAfter": 0,
+          "previousBefore": 46,
+          "previousAfter": 46,
+          "change": {
+            "propertyBefore": {
+              "id": "japan:facility:1",
+              "ownerId": "player-3",
+              "level": 0,
+              "basePrice": 4000,
+              "buildingType": 0,
+              "priceStatus": 0,
+              "research": null
+            },
+            "propertyAfter": {
+              "id": "japan:facility:1",
+              "ownerId": "player-3",
+              "level": 0,
+              "basePrice": 4000,
+              "buildingType": 0,
+              "priceStatus": 0,
+              "research": null
+            }
+          }
+        },
+        {
+          "playerId": "player-4",
+          "lines": [
+            "当前不在可建拆地产，或住宿、旅行、拘留中，跳过。"
+          ],
+          "pointsBefore": 50,
+          "pointsAfter": 50,
+          "cashBefore": 49199,
+          "cashAfter": 49199,
+          "bankBefore": 50300,
+          "bankAfter": 50300,
+          "stopBefore": 0,
+          "stopAfter": 0,
+          "previousBefore": 60,
+          "previousAfter": 60,
+          "skipped": true
+        }
+      ]
+    }
+  ],
+  "hashes": {
+    "replay": "f5515ffa2f7b20994f36fd1a1ef20ea31c2ab6f919df9c1ab1d51c9a73871be6",
+    "state": "e6074b91f780b75d613cebd0f79620b888149b1a80693924ca0ccb527bdc5499",
+    "events": "9dd0473952f54bfe87dc7cfabfc710f89f08d1a8b741923b152b999dec2e595f"
+  }
+}

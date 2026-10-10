@@ -1,0 +1,131 @@
+{
+  "displayChecks": [
+    {
+      "index": 0,
+      "objects": [
+        {
+          "id": "god-6",
+          "type": 11,
+          "node": 103,
+          "carrier": null,
+          "remaining": 0
+        },
+        {
+          "id": "god-7",
+          "type": 13,
+          "node": 102,
+          "carrier": null,
+          "remaining": 0
+        },
+        {
+          "id": "god-8",
+          "type": 14,
+          "node": 33,
+          "carrier": null,
+          "remaining": 0
+        }
+      ],
+      "gods": []
+    }
+  ],
+  "robotPreviews": [],
+  "policy": "research-v1",
+  "toolWindows": [
+    "tool:08",
+    "tool:09"
+  ],
+  "crossChecks": [],
+  "route": "4",
+  "terminal": false,
+  "players": 4,
+  "normalSpeed": true,
+  "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+  "commands": 116,
+  "auto": 54,
+  "human": 7,
+  "lifecycle": [
+    "pause stops waiting",
+    "resume",
+    "reset dialog cancel",
+    "reset",
+    "replace with humans",
+    "exit cleanup",
+    "fullscreen",
+    "390px"
+  ],
+  "cleanup": {
+    "raf": 0,
+    "canvas": 0
+  },
+  "errors": [],
+  "specialReceipts": [
+    {
+      "type": "specialObjectsRefreshed",
+      "date": "1998-02-01",
+      "objects": [
+        {
+          "type": 13,
+          "node": 73
+        },
+        {
+          "type": 14,
+          "node": 109
+        }
+      ],
+      "sequence": 82,
+      "commandId": "command-49",
+      "playerId": "player-4",
+      "turn": 4
+    },
+    {
+      "type": "specialObjectResolved",
+      "objectType": 11,
+      "node": 103,
+      "targetId": "player-4",
+      "outcome": "hospital",
+      "sequence": 214,
+      "commandId": "command-121",
+      "playerId": "player-4",
+      "turn": 16
+    }
+  ],
+  "pairNotices": [
+    {
+      "type": "g6Notice",
+      "message": "配对补位：13号槽出现在73号路格。",
+      "sequence": 80,
+      "commandId": "command-49",
+      "playerId": "player-4",
+      "turn": 4
+    },
+    {
+      "type": "g6Notice",
+      "message": "配对补位：14号槽出现在109号路格。",
+      "sequence": 81,
+      "commandId": "command-49",
+      "playerId": "player-4",
+      "turn": 4
+    },
+    {
+      "type": "g6Notice",
+      "message": "配对补位：12号槽出现在56号路格。",
+      "sequence": 213,
+      "commandId": "command-121",
+      "playerId": "player-4",
+      "turn": 16
+    }
+  ],
+  "prefixes": [
+    45,
+    65,
+    115
+  ],
+  "fullReplay": true,
+  "prefixReplay": true,
+  "commandsMatchPriorLegalRoute": true,
+  "hashes": {
+    "replay": "7d77b141c7e790610089e75095511e2cf666fe8cc8b3c9a711a117f962e69ce3",
+    "state": "61f483031cab8c313f20150ad8c56e478baf958a2f4d0e6721df9cdb3c91ceab",
+    "events": "f8b4090d513b237ef014984a4ab81a159173b9a752b04951361218475f14ca73"
+  }
+}

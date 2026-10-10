@@ -1,0 +1,2 @@
+import {readFileSync} from 'node:fs';import {verifyStrategyCircuit} from './verify-strategy-circuit';
+for(const name of (process.env.RICHMAN_ROUTES??'terminal-2,terminal-3,terminal-4,restore-3').split(',')){const p=JSON.parse(readFileSync('/private/tmp/strategy-circuit-'+name+'.json','utf8'));const{state,events,...r}=await verifyStrategyCircuit(p.replay,name.startsWith('terminal'),false);console.log(name,r.commands,r.auto,r.exits.length,r.publicAuctions,r.prefixes.length,r.restores.length);}

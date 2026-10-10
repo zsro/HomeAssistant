@@ -1,0 +1,321 @@
+{
+  "players": 2,
+  "commands": 547,
+  "auto": 112,
+  "human": 97,
+  "trades": [
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 4,
+      "side": "buy",
+      "stockId": "jp:32",
+      "quantity": 18,
+      "amount": 4860,
+      "balanceBefore": {
+        "cash": 48000,
+        "bank": 50000
+      },
+      "balanceAfter": {
+        "cash": 48000,
+        "bank": 45140
+      },
+      "holdingBefore": {
+        "quantity": 0,
+        "cost": 0,
+        "average": 0
+      },
+      "holdingAfter": {
+        "quantity": 18,
+        "cost": 4860,
+        "average": 270
+      },
+      "ownerBefore": null,
+      "ownerAfter": null,
+      "budget": {
+        "operating": 10000,
+        "debt": 0,
+        "liquid": 98000,
+        "basis": 0,
+        "reserve": 10000,
+        "room": 10000
+      }
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 10,
+      "side": "buy",
+      "stockId": "jp:24",
+      "quantity": 35,
+      "amount": 4970,
+      "balanceBefore": {
+        "cash": 5000,
+        "bank": 86140
+      },
+      "balanceAfter": {
+        "cash": 5000,
+        "bank": 81170
+      },
+      "holdingBefore": {
+        "quantity": 0,
+        "cost": 0,
+        "average": 0
+      },
+      "holdingAfter": {
+        "quantity": 35,
+        "cost": 4970,
+        "average": 142
+      },
+      "ownerBefore": null,
+      "ownerAfter": "player-2",
+      "budget": {
+        "operating": 10000,
+        "debt": 0,
+        "liquid": 91140,
+        "basis": 4860,
+        "reserve": 10000,
+        "room": 5140
+      }
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 20,
+      "side": "buy",
+      "stockId": "jp:27",
+      "quantity": 6,
+      "amount": 145,
+      "balanceBefore": {
+        "cash": 5000,
+        "bank": 81170
+      },
+      "balanceAfter": {
+        "cash": 5000,
+        "bank": 81025
+      },
+      "holdingBefore": {
+        "quantity": 0,
+        "cost": 0,
+        "average": 0
+      },
+      "holdingAfter": {
+        "quantity": 6,
+        "cost": 144,
+        "average": 24.16666603088379
+      },
+      "ownerBefore": null,
+      "ownerAfter": "player-2",
+      "budget": {
+        "operating": 10000,
+        "debt": 0,
+        "liquid": 86170,
+        "basis": 9830,
+        "reserve": 10000,
+        "room": 170
+      }
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 66,
+      "side": "sell",
+      "stockId": "jp:32",
+      "quantity": 18,
+      "amount": 5886,
+      "balanceBefore": {
+        "cash": 2500,
+        "bank": 86209
+      },
+      "balanceAfter": {
+        "cash": 2500,
+        "bank": 92095
+      },
+      "holdingBefore": {
+        "quantity": 18,
+        "cost": 4860,
+        "average": 270
+      },
+      "holdingAfter": {
+        "quantity": 0,
+        "cost": 0,
+        "average": 0
+      },
+      "ownerBefore": null,
+      "ownerAfter": null,
+      "budget": {
+        "operating": 10000,
+        "debt": 0,
+        "liquid": 88709,
+        "basis": 9974,
+        "reserve": 10000,
+        "room": 26
+      }
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 66,
+      "side": "buy",
+      "stockId": "jp:25",
+      "quantity": 72,
+      "amount": 4860,
+      "balanceBefore": {
+        "cash": 2500,
+        "bank": 92095
+      },
+      "balanceAfter": {
+        "cash": 2500,
+        "bank": 87235
+      },
+      "holdingBefore": {
+        "quantity": 0,
+        "cost": 0,
+        "average": 0
+      },
+      "holdingAfter": {
+        "quantity": 72,
+        "cost": 4860,
+        "average": 67.5
+      },
+      "ownerBefore": null,
+      "ownerAfter": "player-2",
+      "budget": {
+        "operating": 10000,
+        "debt": 0,
+        "liquid": 94595,
+        "basis": 5114,
+        "reserve": 10000,
+        "room": 4886
+      }
+    }
+  ],
+  "subscriptions": [],
+  "loans": [],
+  "banks": [
+    {
+      "ai": true,
+      "id": "player-2",
+      "operation": "deposit",
+      "amount": 41000
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "operation": "withdraw",
+      "amount": 2918
+    },
+    {
+      "ai": false,
+      "id": "player-1",
+      "operation": "deposit",
+      "amount": 16184
+    }
+  ],
+  "reds": [],
+  "forcedSales": [],
+  "reactions": [],
+  "exits": [],
+  "rentPayments": [
+    {
+      "ai": true,
+      "active": "player-2",
+      "payer": "player-2",
+      "recipient": "player-1",
+      "amount": 200,
+      "paid": {
+        "cash": 200,
+        "bank": 0
+      }
+    },
+    {
+      "ai": true,
+      "active": "player-2",
+      "payer": "player-2",
+      "recipient": "player-1",
+      "amount": 750,
+      "paid": {
+        "cash": 750,
+        "bank": 0
+      }
+    },
+    {
+      "ai": true,
+      "active": "player-2",
+      "payer": "player-2",
+      "recipient": "player-1",
+      "amount": 1000,
+      "paid": {
+        "cash": 1000,
+        "bank": 0
+      }
+    }
+  ],
+  "prefixes": [
+    "market-before",
+    "market-after",
+    "buy-paused",
+    "buy-resumed",
+    "buy-before",
+    "buy-after",
+    "deposit-paused",
+    "deposit-resumed",
+    "deposit-before",
+    "deposit-after",
+    "rent-payment-before",
+    "rent-payment-after",
+    "withdraw-paused",
+    "withdraw-resumed",
+    "withdraw-before",
+    "withdraw-after",
+    "sell-paused",
+    "sell-resumed",
+    "sell-before",
+    "sell-after"
+  ],
+  "report": {
+    "capitalWindows": [
+      "buy",
+      "deposit",
+      "withdraw",
+      "sell"
+    ],
+    "robotPreviews": [],
+    "policy": "capital-v1",
+    "toolWindows": [
+      "tool:08",
+      "tool:09",
+      "card:23",
+      "card:11"
+    ],
+    "crossChecks": [],
+    "route": "2",
+    "terminal": false,
+    "players": 2,
+    "normalSpeed": true,
+    "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+    "commands": 547,
+    "auto": 112,
+    "human": 97,
+    "lifecycle": [
+      "pause stops waiting",
+      "resume",
+      "reset dialog cancel",
+      "reset",
+      "replace with humans",
+      "exit cleanup",
+      "fullscreen",
+      "390px"
+    ],
+    "cleanup": {
+      "raf": 0,
+      "canvas": 0
+    },
+    "errors": []
+  },
+  "hashes": {
+    "replay": "7788282d996cb6634c29e6de4353bcf19b7ac0be24c1d9a567e4c5d7215696d4",
+    "state": "b478ff2154f6b088262864d845d5c466475aed283745e092a81408201ac03bd6",
+    "events": "a1dcad50eec48cc6e70342b42e880379cfa12551c52a82c76490329f08fc996d"
+  }
+}

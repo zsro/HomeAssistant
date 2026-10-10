@@ -1,0 +1,297 @@
+{
+  "stage": "S2-03x",
+  "referenceCommit": "ec7d70e693059d1e781d9d1cc2ad7f36d360d39e",
+  "grade": "fixed cross-version source; no native Windows execution",
+  "inheritedSource": "s2-03w-sources.json",
+  "sources": [
+    {
+      "path": "asm/rich4_player_say_on_events.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_say_on_events.asm",
+      "gitBlobSha1": "644c02665ec7ffce20f389e4c258cf1118ab8907",
+      "sha256": "9d12b7717f448b8928db8f2b89cfa0b4bbae694757ea9a53a6c8ea5d7fa5adb9"
+    },
+    {
+      "path": "asm/rich4_magic_house.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_magic_house.asm",
+      "gitBlobSha1": "b29b47525b927656625dc559484254e1a6da8b5c",
+      "sha256": "e22f10bc48ca379482e4a9c03970f96884af7a6dea5c1c0f0cf6b1d51d7bd74b"
+    },
+    {
+      "path": "asm/rich4_card_utils.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_card_utils.asm",
+      "gitBlobSha1": "23304fd33491d039d9f50d36475fa9794acccdb2",
+      "sha256": "937d2f587f15068f1f1280ac60d4a61c0249dbde0f206bfcc1489a29591d8181"
+    },
+    {
+      "path": "asm/rich4_card_passive.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_card_passive.asm",
+      "gitBlobSha1": "786c4467dcb1827b9bbe85c134ebb9560e2de3a9",
+      "sha256": "2c8ceb5582bb36974922ead75c86e681e35bf8faeb3ccf9a919edd108a0eaf9d"
+    },
+    {
+      "path": "asm/rich4_prison_utils.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_prison_utils.asm",
+      "gitBlobSha1": "96762e540959c05618816670fe7535e3ab495c97",
+      "sha256": "26984458a39e9fc06941772cc9b34931b32d85f561d08a4bddb88d450863abbc"
+    },
+    {
+      "path": "asm/rich4_hospital_utils.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_hospital_utils.asm",
+      "gitBlobSha1": "a6442121b32fc0380f3a20909590236f8e7dca5e",
+      "sha256": "ba23adbaa7ccc396f3b99d8854285ee222aea8c1b81bcfc0637e72a6e56c145a"
+    },
+    {
+      "path": "asm/rich4_player_utils.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_utils.asm",
+      "gitBlobSha1": "4bdaafa1f87f9fcd5f71dcf50f1aebd7e795d6be",
+      "sha256": "17479913576a004458908f124c4d7e94361dab41a501830d2ecb87eb7b438f01"
+    },
+    {
+      "path": "asm/rich4.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4.asm",
+      "gitBlobSha1": "d11a64755094435fa9953652a5a4951871fd9697",
+      "sha256": "30904cbb4f23a6b74fc1b80ad023bd7dff11b441c2c1978f768f9891d099d64a"
+    }
+  ],
+  "verifiedFiles": 8,
+  "references": [
+    {
+      "path": "asm/rich4_player_say_on_events.asm",
+      "anchor": "fcn_0044f2c2:",
+      "lines": [
+        87
+      ]
+    },
+    {
+      "path": "asm/rich4_magic_house.asm",
+      "anchor": "fcn_00431caa:",
+      "lines": [
+        134
+      ]
+    },
+    {
+      "path": "asm/rich4_magic_house.asm",
+      "anchor": "loc_00431dcc:",
+      "lines": [
+        228
+      ]
+    },
+    {
+      "path": "asm/rich4_magic_house.asm",
+      "anchor": "loc_00431f67:",
+      "lines": [
+        350
+      ]
+    },
+    {
+      "path": "asm/rich4_magic_house.asm",
+      "anchor": "loc_00432259:",
+      "lines": [
+        565
+      ]
+    },
+    {
+      "path": "asm/rich4_magic_house.asm",
+      "anchor": "loc_00432384:",
+      "lines": [
+        647
+      ]
+    },
+    {
+      "path": "asm/rich4_magic_house.asm",
+      "anchor": "loc_004324fa:",
+      "lines": [
+        753
+      ]
+    },
+    {
+      "path": "asm/rich4_card_utils.asm",
+      "anchor": "_rich4_try_mianzui_jiahuo_card:",
+      "lines": [
+        17
+      ]
+    },
+    {
+      "path": "asm/rich4_card_passive.asm",
+      "anchor": "_rich4_try_use_card_jiahuoka:",
+      "lines": [
+        104
+      ]
+    },
+    {
+      "path": "asm/rich4_card_passive.asm",
+      "anchor": "loc_004447b8:",
+      "lines": [
+        128
+      ]
+    },
+    {
+      "path": "asm/rich4_card_passive.asm",
+      "anchor": "loc_00444863:",
+      "lines": [
+        185
+      ]
+    },
+    {
+      "path": "asm/rich4_prison_utils.asm",
+      "anchor": "_rich4_add_player_days_in_prison:",
+      "lines": [
+        30
+      ]
+    },
+    {
+      "path": "asm/rich4_hospital_utils.asm",
+      "anchor": "_rich4_add_player_days_in_hospital:",
+      "lines": [
+        30
+      ]
+    },
+    {
+      "path": "asm/rich4_player_utils.asm",
+      "anchor": "fcn_0040d761:",
+      "lines": [
+        524
+      ]
+    },
+    {
+      "path": "asm/rich4_player_utils.asm",
+      "anchor": "_rich4_update_hostility:",
+      "lines": [
+        1169
+      ]
+    },
+    {
+      "path": "asm/rich4_player_utils.asm",
+      "anchor": "fcn_0040dffa:",
+      "lines": [
+        1233
+      ]
+    },
+    {
+      "path": "asm/rich4.asm",
+      "anchor": "fcn_0040ab4a:",
+      "lines": [
+        3989
+      ]
+    },
+    {
+      "path": "asm/rich4.asm",
+      "anchor": "fcn_0040b0cd:",
+      "lines": [
+        4534
+      ]
+    },
+    {
+      "path": "asm/rich4.asm",
+      "anchor": "fcn_0040b110:",
+      "lines": [
+        4561
+      ]
+    },
+    {
+      "path": "asm/rich4.asm",
+      "anchor": "fcn_0043fae4:",
+      "lines": [
+        20210
+      ]
+    },
+    {
+      "path": "asm/rich4.asm",
+      "anchor": "loc_0043fe81:",
+      "lines": [
+        20488
+      ]
+    },
+    {
+      "path": "asm/rich4.asm",
+      "anchor": "loc_0043febb:",
+      "lines": [
+        20507
+      ]
+    },
+    {
+      "path": "asm/rich4.asm",
+      "anchor": "fcn_00440aac:",
+      "lines": [
+        21443
+      ]
+    },
+    {
+      "path": "asm/rich4.asm",
+      "anchor": "fcn_0044ba63:",
+      "lines": [
+        22899
+      ]
+    }
+  ],
+  "rules": {
+    "R13-05x": "431caa freezes seat list, temporarily current=target and restores original visitor4324fa. v37 serializes source/cursor/row/result, interrupts for per-target redirect or empty-facility type, never advances outer day/turn.",
+    "R08-01x": "Effects2/10 calculate90*price, update hostility(original target,original visitor) BEFORE441210. Self no change; positive hostility breaks alliance. Web records exact deltas and breaks alliance, does not claim shared AI hostility matrix.",
+    "R09-02x": "441210 checks21 first(auto consume/skip), otherwise19(optional redirect), then prison/hospital3 on final target. 4447b8 lists all alive others without absence filter. No recursive defense, revenge or god-resistance call. Existing same-kind raw timer=(raw+3)&127 and position stays. First-entry40d761 clears only hotel/travel/prison/hospital; vehicles,winter,dream preserved.",
+    "R12-01x": "Hospital/prison shared helper calls44ba63 with2000*added3*price after status; final target policy128 still covered, company4 signed period/cumulative pays target cash. No fee or immediate bankruptcy/date advance; later15th uses inherited v35 negative dividend callbacks.",
+    "R04-03x": "5/9 test packed bytes50..53 only, current tile2001..5999, no ownership test/payment/hostility. Build40b110 ordinarytype0 cap5,type1 cap1,other types do not build; at/above cap no change, never lower an existing level. Emptyfacility choose type0..4 as current target; existingfacility caps1/5/5/1/5. Repeated occupants read live property each seat;40b0cd is fifth-floor visual only.",
+    "R04-04x": "Demolish40ab4a mode0: level down one; ordinary nonzero type reset level/type0; facility reset type only atzero and40dffa marks ALL active hotel bytes128. Preserveowner/base/status, no insurance/refund or card response. Research reuses existing candidate reconciliation per row, not inferred from40dffa.",
+    "R13-06x": "Ten-of-twelve magic effects now implemented. Fortune3/auction remain unavailable; source draw/timing/AI/specialactor differences inherited. Serializable in-memory decision/replay not disk-save UI."
+  },
+  "effects": [
+    {
+      "id": 0,
+      "implemented": true
+    },
+    {
+      "id": 1,
+      "implemented": false
+    },
+    {
+      "id": 2,
+      "implemented": true
+    },
+    {
+      "id": 3,
+      "implemented": true
+    },
+    {
+      "id": 4,
+      "implemented": true
+    },
+    {
+      "id": 5,
+      "implemented": true
+    },
+    {
+      "id": 6,
+      "implemented": true
+    },
+    {
+      "id": 7,
+      "implemented": true
+    },
+    {
+      "id": 8,
+      "implemented": true
+    },
+    {
+      "id": 9,
+      "implemented": true
+    },
+    {
+      "id": 10,
+      "implemented": true
+    },
+    {
+      "id": 11,
+      "implemented": false
+    }
+  ],
+  "deferred": [
+    "effect1 three fortunes",
+    "effect11 current property auction",
+    "native roulette timing and AI hostility scoring",
+    "research native production clock/full hotel internals",
+    "native total-absence statistics and event voice/animation",
+    "minigames/other map sites",
+    "other asset listings",
+    "special actors",
+    "native end menus"
+  ]
+}

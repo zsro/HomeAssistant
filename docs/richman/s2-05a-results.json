@@ -1,0 +1,526 @@
+{
+  "stage": "S2-05a",
+  "date": "2026-10-07",
+  "rulesId": "japan-events-candidate-v44",
+  "fingerprint": "f9dbb7e9",
+  "semanticIncrement": false,
+  "runtimeChanged": false,
+  "s2_05Complete": false,
+  "preserved": {
+    "s2_03CandidateClosed": true,
+    "s2_04CandidateClosed": true,
+    "items": 43,
+    "news": 36,
+    "japanFortuneSlots": 37,
+    "magicEffects": 12,
+    "minigames": 3,
+    "oldFixtureJsonUnchanged": 262,
+    "allVersionPlayerCases": 132
+  },
+  "sourceAudit": {
+    "files": 5,
+    "anchors": 14,
+    "referenceCommit": "ec7d70e693059d1e781d9d1cc2ad7f36d360d39e",
+    "nativeWindowsExecution": false
+  },
+  "checks": {
+    "frontend": {
+      "passed": 1735,
+      "files": 118,
+      "maxWorkers": 2,
+      "newDomain": 14,
+      "newActualReplay": 3,
+      "allVersionPlayerCases": 132
+    },
+    "lint": "passed",
+    "build": "passed; existing large-chunk warning",
+    "defaultUI": "runtime/default unchanged; retain 04c dev/built checks, not newly claimed"
+  },
+  "originalMapBrowser": {
+    "routes": [
+      {
+        "kind": "rent",
+        "players": 2,
+        "commands": 1036,
+        "turn": 125,
+        "date": "1998-03-04",
+        "rentSettled": 1,
+        "bankruptcies": 0,
+        "auctionPaid": 0,
+        "stockPublic": 0,
+        "loanActual": 0,
+        "dividendActual": 0,
+        "lotteries": 2,
+        "prizes": 0,
+        "forced": [
+          {
+            "type": "stockTraded",
+            "stockId": "jp:24",
+            "traderId": "player-1",
+            "side": "sell",
+            "quantity": 1,
+            "price": 14700,
+            "amount": 147,
+            "forced": true,
+            "sequence": 1677,
+            "commandId": "command-1035",
+            "playerId": "player-1",
+            "turn": 125
+          }
+        ],
+        "notices": [],
+        "receipts": [],
+        "prefixes": [
+          "necessary-sale",
+          "rent-settlement"
+        ],
+        "report": {
+          "normalSpeed": true,
+          "map": "original Japan; real UI commands; auth-only fixture; no game-state injection",
+          "calendarCommon": true,
+          "errors": [],
+          "cleanup": {
+            "raf": 0,
+            "canvas": 0
+          }
+        },
+        "hashes": {
+          "replay": "ce5821d33551adc0058cd52a6bc81f7e455812bc28f25aff9ac4152124efae62",
+          "state": "1c0044a50382bb37ff3e726c5ad0183ed7c20cbc529c9ca48d64d7ac06b49c9c",
+          "events": "e79869e20f1867e1a848c5c58bf5c758ccb7d656e9b524d02190694a65dc0b18"
+        },
+        "replay": "frontend/src/features/richman/game/fixtures/finance-stress-v44-rent-replay.json",
+        "screenshots": "/private/tmp/richman-unified-ui-05a-rent-2"
+      },
+      {
+        "kind": "dividend",
+        "players": 4,
+        "commands": 2724,
+        "turn": 181,
+        "date": "1998-02-15",
+        "rentSettled": 0,
+        "bankruptcies": 1,
+        "auctionPaid": 2700,
+        "stockPublic": 15,
+        "loanActual": 0,
+        "dividendActual": 0,
+        "lotteries": 2,
+        "prizes": 6815,
+        "forced": [],
+        "notices": [],
+        "receipts": [
+          {
+            "payment": {
+              "kind": "batch",
+              "stage": "completed",
+              "batchId": 4,
+              "rowIndex": 0,
+              "payerId": "player-1",
+              "due": 10000,
+              "destination": "sink",
+              "paid": {
+                "cash": 0,
+                "bank": 0
+              },
+              "disposalId": "disposal-1"
+            },
+            "disposal": {
+              "continuation": "payment",
+              "id": "disposal-1",
+              "payerId": "player-1",
+              "recipientId": "sink",
+              "propertyId": "batch:4:0",
+              "due": 10000,
+              "amount": 0,
+              "unpaid": 10000,
+              "paid": {
+                "cash": 0,
+                "bank": 0
+              },
+              "released": [
+                "japan:land:3",
+                "japan:land:6",
+                "japan:land:9",
+                "japan:land:16",
+                "japan:land:19",
+                "japan:land:24",
+                "japan:land:28",
+                "japan:land:46"
+              ],
+              "pool": [
+                null,
+                "japan:land:6",
+                "japan:land:9",
+                "japan:land:16",
+                null,
+                "japan:land:24",
+                null,
+                "japan:land:46"
+              ],
+              "draws": [
+                4,
+                6,
+                0
+              ],
+              "stocks": [
+                {
+                  "stockId": "jp:26",
+                  "quantity": 1,
+                  "price": 1555,
+                  "amount": 15
+                }
+              ],
+              "inventory": [
+                {
+                  "itemId": "tool:09",
+                  "quantity": 1,
+                  "points": 30
+                },
+                {
+                  "itemId": "tool:01",
+                  "quantity": 1,
+                  "points": 15
+                },
+                {
+                  "itemId": "tool:02",
+                  "quantity": 1,
+                  "points": 30
+                },
+                {
+                  "itemId": "card:05",
+                  "quantity": 1,
+                  "points": 20
+                },
+                {
+                  "itemId": "card:30",
+                  "quantity": 1,
+                  "points": 70
+                }
+              ],
+              "ignoredPoints": 165,
+              "auctions": [
+                {
+                  "propertyId": "japan:land:19",
+                  "winnerId": "player-4",
+                  "amount": 2100,
+                  "reserve": 2000
+                },
+                {
+                  "propertyId": "japan:land:28",
+                  "winnerId": null,
+                  "amount": 0,
+                  "reserve": 1500
+                },
+                {
+                  "propertyId": "japan:land:3",
+                  "winnerId": "player-4",
+                  "amount": 600,
+                  "reserve": 500
+                }
+              ],
+              "finishedGame": false
+            }
+          }
+        ],
+        "prefixes": [
+          "exit-start",
+          "auction-wait",
+          "payment-return"
+        ],
+        "report": {
+          "normalSpeed": true,
+          "map": "original Japan; real UI commands; auth-only fixture; no game-state injection",
+          "calendarCommon": true,
+          "errors": [],
+          "cleanup": {
+            "raf": 0,
+            "canvas": 0
+          }
+        },
+        "hashes": {
+          "replay": "635f1dced248aeb6e70296c15af97402274233006605cb4f12272129ec47ff81",
+          "state": "68447fd366d1c1813820bd63c6c782b57bd3d6918e8e86f007a237d18b4d214e",
+          "events": "781fb8862951198924ed60f3b88161ac67a58196b5785f62df35dcefc8266263"
+        },
+        "replay": "frontend/src/features/richman/game/fixtures/finance-stress-v44-dividend-replay.json",
+        "screenshots": "/private/tmp/richman-unified-ui-05a-dividend-4"
+      },
+      {
+        "kind": "loan",
+        "players": 3,
+        "commands": 5006,
+        "turn": 358,
+        "date": "1998-04-30",
+        "rentSettled": 1,
+        "bankruptcies": 1,
+        "auctionPaid": 8200,
+        "stockPublic": 91229,
+        "loanActual": 8,
+        "dividendActual": 0,
+        "lotteries": 4,
+        "prizes": 0,
+        "forced": [
+          {
+            "type": "stockTraded",
+            "stockId": "jp:24",
+            "traderId": "player-1",
+            "side": "sell",
+            "quantity": 8,
+            "price": 11550,
+            "amount": 924,
+            "forced": true,
+            "sequence": 4690,
+            "commandId": "command-4332",
+            "playerId": "player-1",
+            "turn": 343
+          }
+        ],
+        "notices": [
+          {
+            "playerId": "player-1",
+            "date": "1998-04-27",
+            "due": "1998-04-30",
+            "kind": "reminder",
+            "days": 3,
+            "principal": 10000,
+            "bank": 0,
+            "cash": 0,
+            "unpaid": 0
+          },
+          {
+            "playerId": "player-1",
+            "date": "1998-04-28",
+            "due": "1998-04-30",
+            "kind": "reminder",
+            "days": 2,
+            "principal": 10000,
+            "bank": 0,
+            "cash": 0,
+            "unpaid": 0
+          },
+          {
+            "playerId": "player-1",
+            "date": "1998-04-29",
+            "due": "1998-04-30",
+            "kind": "reminder",
+            "days": 1,
+            "principal": 10000,
+            "bank": 0,
+            "cash": 0,
+            "unpaid": 0
+          },
+          {
+            "playerId": "player-1",
+            "date": "1998-04-30",
+            "due": "1998-04-30",
+            "kind": "collected",
+            "days": 0,
+            "principal": 10000,
+            "bank": 8,
+            "cash": 0,
+            "unpaid": 9992
+          }
+        ],
+        "receipts": [
+          {
+            "payment": {
+              "kind": "loan",
+              "stage": "completed",
+              "payerId": "player-1",
+              "due": 10000,
+              "paid": {
+                "cash": 0,
+                "bank": 8
+              },
+              "notice": {
+                "playerId": "player-1",
+                "date": "1998-04-30",
+                "due": "1998-04-30",
+                "kind": "collected",
+                "days": 0,
+                "principal": 10000,
+                "bank": 8,
+                "cash": 0,
+                "unpaid": 9992
+              },
+              "disposalId": "disposal-1"
+            },
+            "disposal": {
+              "continuation": "payment",
+              "id": "disposal-1",
+              "payerId": "player-1",
+              "recipientId": "bank",
+              "propertyId": "loan",
+              "due": 10000,
+              "amount": 8,
+              "unpaid": 9992,
+              "paid": {
+                "cash": 0,
+                "bank": 8
+              },
+              "released": [
+                "japan:land:23",
+                "japan:land:29",
+                "japan:land:30",
+                "japan:land:33",
+                "japan:land:35",
+                "japan:land:37",
+                "japan:land:39",
+                "japan:land:41",
+                "japan:land:43",
+                "japan:facility:1",
+                "japan:facility:2",
+                "japan:facility:3"
+              ],
+              "pool": [
+                "japan:land:23",
+                null,
+                "japan:land:30",
+                "japan:land:33",
+                "japan:land:35",
+                null,
+                "japan:land:39",
+                "japan:land:41",
+                "japan:land:43",
+                "japan:facility:1",
+                "japan:facility:2",
+                null
+              ],
+              "draws": [
+                11,
+                5,
+                1
+              ],
+              "stocks": [
+                {
+                  "stockId": "jp:24",
+                  "quantity": 717,
+                  "price": 12700,
+                  "amount": 91059
+                },
+                {
+                  "stockId": "jp:25",
+                  "quantity": 4,
+                  "price": 4270,
+                  "amount": 170
+                }
+              ],
+              "inventory": [],
+              "ignoredPoints": 0,
+              "auctions": [
+                {
+                  "propertyId": "japan:facility:3",
+                  "winnerId": "player-2",
+                  "amount": 5100,
+                  "reserve": 5000
+                },
+                {
+                  "propertyId": "japan:land:37",
+                  "winnerId": "player-2",
+                  "amount": 1500,
+                  "reserve": 1400
+                },
+                {
+                  "propertyId": "japan:land:29",
+                  "winnerId": "player-2",
+                  "amount": 1600,
+                  "reserve": 1500
+                }
+              ],
+              "finishedGame": false
+            }
+          }
+        ],
+        "prefixes": [
+          "borrow",
+          "necessary-sale",
+          "rent-settlement",
+          "exit-start",
+          "auction-wait",
+          "payment-return"
+        ],
+        "report": {
+          "normalSpeed": true,
+          "map": "original Japan; real UI commands; auth-only fixture; no game-state injection",
+          "calendarCommon": true,
+          "errors": [],
+          "cleanup": {
+            "raf": 0,
+            "canvas": 0
+          }
+        },
+        "hashes": {
+          "replay": "a66bd19b69d38c758371369f356d732bcb830626374f12fba3db93ed8fbd95a3",
+          "state": "f026e3b2de7d8e4fc19b051b37a4b3d19fcaad45405653dc8606a45557a72b8d",
+          "events": "39d7bd153ec50b59aceb4ad009f90e01fa6b20aae8826a13c3e7fcc47c345fd8"
+        },
+        "replay": "frontend/src/features/richman/game/fixtures/finance-stress-v44-loan-replay.json",
+        "screenshots": "/private/tmp/richman-unified-ui-05a-loan-3"
+      }
+    ],
+    "commands": 8766,
+    "normalSpeed": true,
+    "authOnlyFixture": true,
+    "gameStateInjection": false,
+    "bankruptcies": 2,
+    "publicStock": 91244,
+    "publicAuction": 10900,
+    "loanActual": 8,
+    "dividendActual": 0,
+    "lotteryPrize": 6815,
+    "forcedRentSales": 2,
+    "continuations": [
+      "auction-wait",
+      "borrow",
+      "exit-start",
+      "necessary-sale",
+      "payment-return",
+      "rent-settlement"
+    ],
+    "independentAccounting": "frozen dividend companies/nets and live seat balances; ordinary average invariants; necessary rent sale quantity/bank/remaining average and subsequent rent receipt; public exit stock float-price truncation and zero average; company ranking validity; auction cash/public actual; callback IDs/order; same-day lottery award/public reconciliation; loan due/notice clearing; full replay and serialized prefixes",
+    "uiAssertions": "normal real commands; calendar/pause/reset-cancel/fullscreen/390px; auction responder and disabled paused bids; final obligation/actual/unpaid/stock/auction receipt text; dividend completed cursor or loan disposal amount; maturity notice verified in actual replay; reset and zero RAF/canvas; actual exported state equals legal plan"
+  },
+  "domainOnly": [
+    "positive partial liquid debit for v44 negative dividend (current original-map dividend route paid zero; historical v35 covered nonzero)",
+    "2p last-survivor skips stock/estate sale and later dividend/lottery/loan; retained averages are deliberate",
+    "2/3/4p exact maturity exhaustion retains shares/rights and ticks once",
+    "two negative holders with frozen 1:3 allocations and separate exits",
+    "earlier auction bid makes later negative holder insolvent without recomputing net",
+    "same-day dividend auction -> awarded lottery -> second incoming loan disposal",
+    "bank rejection/noLoans/detention do not prevent maturity collection",
+    "two-stock necessary rent sale partial/empty average and ownership transfer under market closure"
+  ],
+  "notNewBrowserAcceptance": [
+    "two negative holders or auction spending causing a second bankruptcy in the same batch",
+    "same-day lottery prize followed by loan disposal (separate date routes; domain combined)",
+    "last-survivor negative dividend/loan with current averages (domain)",
+    "G7 used after or across payment/auction/date world restoration",
+    "free/redirect/revenge/immunity/alliance payment reactions",
+    "stock-tax multiple-holder exits",
+    "individual/global halt or manual red/black card stress",
+    "new minigame input/collision; timer-only returns",
+    "every interim ledger label; exported state checked independently"
+  ],
+  "resolvedValidationIssues": [
+    "First full suite passed assertions but reported Vitest onTaskUpdate RPC timeout during synchronous long replay verification. Added periodic async yields in verification only; reran full suite without unhandled errors.",
+    "Initial pause test used auction responder for a non-auction command; fixed helper to use active player for pause.",
+    "Rent route generator supplied construction type while declining a purchase; fixed legal-command generation.",
+    "Loan search initially abandoned an already-exited payer while its disposal callback was still pending; continue pending disposal to completion. These were harness issues; no product rules changed."
+  ],
+  "remainingDifferences": [
+    "original float/x87 versus integer cents and aggregate precision",
+    "native RNG/reseeding",
+    "native chart/input/audio",
+    "other asset listings",
+    "special actors",
+    "native roulette",
+    "native exit call stack/end menu and Web last-survivor date stop",
+    "minigame presentation/collision/input"
+  ],
+  "next": "S2-05b: reaction/effect-chain regression on current v44, prioritize free/redirect/alliance actual rent payer and forced liquidation, detention/attack immunity/redirect and outer turn return, retain finance stress routes; v45 only for new semantics",
+  "release": {
+    "committed": false,
+    "pushed": false,
+    "deployed": false
+  }
+}

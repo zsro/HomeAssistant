@@ -1,0 +1,66 @@
+{
+  "date": "2026-10-05",
+  "group": "G3",
+  "status": "implemented-browser-validation-deferred-by-user",
+  "implementedTotal": 24,
+  "acceptedTotal": 18,
+  "implementedThisGroup": 6,
+  "acceptedThisGroup": 0,
+  "remainingImplementation": 19,
+  "stageCatalog": 43,
+  "defaultRules": "japan-tools-candidate-v9",
+  "itemFingerprint": "6be76c90",
+  "v9Implemented": true,
+  "completed": [
+    "six legal shop entries, ordered inventory and transfer",
+    "optional reaction commands and automatic immune/revenge",
+    "mutual alliances, expiry, supported hostility and rent waiver",
+    "G1/G2 integration and independent rent payer/debt/elimination",
+    "UI previews, responder choices, replay and old profiles"
+  ],
+  "priorFrontendTests": {
+    "files": 34,
+    "passed": 268,
+    "g3EngineAndCompatibility": 16,
+    "g3Components": 3,
+    "scope": "before final cash-hostility integer-threshold correction and fingerprint update; final snapshot regression deferred"
+  },
+  "priorLint": "passed after function naming correction",
+  "priorBuild": "passed after test TypeScript correction; existing bundling warnings",
+  "finalSnapshotRecheck": "not run after user deferred automation",
+  "browser": {
+    "status": "not-run-deferred-by-user",
+    "userInstruction": "先不进行自动测试，等所有卡片道具完成后一起测试",
+    "script": "scripts/richman/g3-ui-browser.cjs",
+    "actualReplay": null,
+    "screenshots": []
+  },
+  "enginePlan": {
+    "evidence": "not-browser-evidence",
+    "seed": "group-three-9",
+    "players": 3,
+    "commands": 1788,
+    "turn": 249,
+    "replay": "frontend/src/features/richman/game/fixtures/tools-v9-engine-replay.json",
+    "golden": "frontend/src/features/richman/game/fixtures/tools-v9-engine-golden.json"
+  },
+  "resolvedReferenceDownload": true,
+  "historicalBrowserLaunchFailure": {
+    "reason": "automatic approval stream disconnected before completion",
+    "commandsExecuted": false,
+    "currentBlocker": false
+  },
+  "v8Frozen": {
+    "replay": "frontend/src/features/richman/game/fixtures/tools-v8-replay.json",
+    "commands": 1130,
+    "itemFingerprint": "717e58c0",
+    "golden": {
+      "state": "f676e001976c143831c044ebd29410972702942f1d6981845420ce58d921bfe4",
+      "events": "91f375aab5cc7b64c8aee321d5c05ddfa5d9d73ea4df99c57d04d7c3f2347756"
+    }
+  },
+  "next": "G4 five-item implementation in v10; preserve v9 and all old replays; defer automated testing until 43 implemented",
+  "git": "uncommitted; no push or deployment",
+  "database": "unchanged",
+  "assets": "unchanged"
+}

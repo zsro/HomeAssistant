@@ -1,0 +1,389 @@
+{
+  "stage": "S2-03r",
+  "date": "2026-10-06",
+  "status": "indexed-economy-candidate-subset-accepted",
+  "mode": "indexedEconomy",
+  "rulesId": "japan-events-candidate-v31",
+  "fingerprint": "d24c17e3",
+  "baseline": {
+    "items": "43/43 historical",
+    "news": "36/36 historical",
+    "japanFortune": "37/37 historical",
+    "oldRules": "v1-v30 frozen fingerprints and golden replays"
+  },
+  "checks": {
+    "tests": 1121,
+    "testFiles": 80,
+    "newDomainTests": 49,
+    "newPanelTests": 1,
+    "newMatrixTests": 3,
+    "newActualBrowserReplayTests": 1,
+    "versionPlayersMatrix": 93,
+    "lint": "passed",
+    "build": "passed; existing Vite chunk-size and mixed-import warnings",
+    "diffCheck": "passed",
+    "sourceFiles": 31,
+    "sourceReferences": 166
+  },
+  "browser": {
+    "routes": [
+      {
+        "route": "3",
+        "seed": "price-3-28",
+        "players": 3,
+        "commands": 887,
+        "turn": 113,
+        "startDate": "1998-12-24",
+        "endDate": "1999-02-16",
+        "price": {
+          "initialFunds": 10000,
+          "priceIndex": 2,
+          "price": {
+            "date": "1999-02-16",
+            "before": 2,
+            "after": 2,
+            "total": 37848,
+            "average": 18924,
+            "initialFunds": 10000,
+            "rows": [
+              {
+                "playerId": "player-1",
+                "liquid": 14561,
+                "stocks": 1250,
+                "property": 11300,
+                "wealth": 27111
+              },
+              {
+                "playerId": "player-2",
+                "liquid": 812,
+                "stocks": 125,
+                "property": 9800,
+                "wealth": 10737
+              }
+            ]
+          },
+          "festival": {
+            "date": "1999-01-01",
+            "slot": 0,
+            "name": "元旦",
+            "flags": 3,
+            "gifts": []
+          }
+        },
+        "dividends": {
+          "date": "1999-02-15",
+          "companies": [
+            {
+              "companyId": "japan:company:6",
+              "stockId": "jp:24",
+              "name": "富士銀行",
+              "funds": 0,
+              "cumulative": 0,
+              "shares": 0,
+              "after": 0,
+              "allocations": [
+                {
+                  "playerId": "player-1",
+                  "quantity": 0,
+                  "ratio": 0,
+                  "amount": 0
+                },
+                {
+                  "playerId": "player-2",
+                  "quantity": 0,
+                  "ratio": 0,
+                  "amount": 0
+                }
+              ]
+            },
+            {
+              "companyId": "japan:company:4",
+              "stockId": "jp:25",
+              "name": "三井生命",
+              "funds": 0,
+              "cumulative": 11401,
+              "shares": 11,
+              "after": 0,
+              "allocations": [
+                {
+                  "playerId": "player-1",
+                  "quantity": 10,
+                  "ratio": 0.9090909361839294,
+                  "amount": 0
+                },
+                {
+                  "playerId": "player-2",
+                  "quantity": 1,
+                  "ratio": 0.09090909361839294,
+                  "amount": 0
+                }
+              ]
+            },
+            {
+              "companyId": "japan:company:1",
+              "stockId": "jp:26",
+              "name": "三越百貨",
+              "funds": 0,
+              "cumulative": 0,
+              "shares": 0,
+              "after": 0,
+              "allocations": [
+                {
+                  "playerId": "player-1",
+                  "quantity": 0,
+                  "ratio": 0,
+                  "amount": 0
+                },
+                {
+                  "playerId": "player-2",
+                  "quantity": 0,
+                  "ratio": 0,
+                  "amount": 0
+                }
+              ]
+            },
+            {
+              "companyId": "japan:company:3",
+              "stockId": "jp:27",
+              "name": "日產建設",
+              "funds": 0,
+              "cumulative": 0,
+              "shares": 0,
+              "after": 0,
+              "allocations": [
+                {
+                  "playerId": "player-1",
+                  "quantity": 0,
+                  "ratio": 0,
+                  "amount": 0
+                },
+                {
+                  "playerId": "player-2",
+                  "quantity": 0,
+                  "ratio": 0,
+                  "amount": 0
+                }
+              ]
+            },
+            {
+              "companyId": "japan:company:5",
+              "stockId": "jp:28",
+              "name": "ＳＥＧＡ",
+              "funds": 0,
+              "cumulative": 0,
+              "shares": 0,
+              "after": 0,
+              "allocations": [
+                {
+                  "playerId": "player-1",
+                  "quantity": 0,
+                  "ratio": 0,
+                  "amount": 0
+                },
+                {
+                  "playerId": "player-2",
+                  "quantity": 0,
+                  "ratio": 0,
+                  "amount": 0
+                }
+              ]
+            },
+            {
+              "companyId": "japan:company:2",
+              "stockId": "jp:29",
+              "name": "豐田汽車",
+              "funds": 0,
+              "cumulative": 0,
+              "shares": 0,
+              "after": 0,
+              "allocations": [
+                {
+                  "playerId": "player-1",
+                  "quantity": 0,
+                  "ratio": 0,
+                  "amount": 0
+                },
+                {
+                  "playerId": "player-2",
+                  "quantity": 0,
+                  "ratio": 0,
+                  "amount": 0
+                }
+              ]
+            }
+          ],
+          "payments": [
+            {
+              "playerId": "player-1",
+              "amount": 0,
+              "before": {
+                "cash": 111,
+                "bank": 14450
+              },
+              "after": {
+                "cash": 111,
+                "bank": 14450
+              },
+              "unpaid": 0,
+              "bankrupt": false,
+              "returnedShares": 0
+            },
+            {
+              "playerId": "player-2",
+              "amount": 0,
+              "before": {
+                "cash": 812,
+                "bank": 0
+              },
+              "after": {
+                "cash": 812,
+                "bank": 0
+              },
+              "unpaid": 0,
+              "bankrupt": false,
+              "returnedShares": 0
+            }
+          ]
+        },
+        "state": "569e96eab7678917713df5eb25918d0b18348d6a264741b8785c1258559546d5",
+        "events": "d842b85b04c92917a10dcf30f874eb206421ef708722990034ed69b1dc4c75d6",
+        "checks": [
+          "property buy: quote, debit, recipient and raw fields at index 1",
+          "daily signed wealth/float32 holdings/raw buildings; alive denominator; monotone index before settlement",
+          "Christmas actual ordered gifts enter inventory, no status filter",
+          "premium applies current index once before god/reaction/payment",
+          "New Year presentation has no gift; normal monthly interest remains",
+          "rent aggregate and god order at index 1",
+          "property rent: quote, debit, recipient and raw fields at index 1",
+          "news 13: raw tax base truncates before index 1",
+          "distributed signed period clears; cumulative retained",
+          "all-company net enters bank before lottery and incoming loan; final balances reconciled",
+          "fortune 29: indexed fixed cash at index 1",
+          "property buy: quote, debit, recipient and raw fields at index 2",
+          "rent aggregate and god order at index 2",
+          "property rent: quote, debit, recipient and raw fields at index 2",
+          "property upgrade: quote, debit, recipient and raw fields at index 2",
+          "fortune 21: indexed fixed cash at index 2"
+        ],
+        "normalSpeed": true,
+        "map": "original Japan; real UI commands; auth-only fixture; no game-state injection",
+        "cleanup": {
+          "raf": 0,
+          "canvas": 0
+        },
+        "errors": [],
+        "screenshots": "/private/tmp/richman-unified-ui-03r-3"
+      }
+    ],
+    "totalCommands": 887,
+    "indexGreaterThanOneActualSettlements": [
+      {
+        "type": "propertySettled",
+        "index": 2,
+        "turn": 60,
+        "propertyId": "japan:land:21",
+        "operation": "buy",
+        "amount": 4000,
+        "paid": {
+          "cash": 4000,
+          "bank": 0
+        },
+        "recipientId": null
+      },
+      {
+        "type": "propertySettled",
+        "index": 2,
+        "turn": 61,
+        "propertyId": "japan:land:19",
+        "operation": "rent",
+        "amount": 1600,
+        "paid": {
+          "cash": 0,
+          "bank": 1600
+        },
+        "recipientId": "player-2"
+      },
+      {
+        "type": "propertySettled",
+        "index": 2,
+        "turn": 64,
+        "propertyId": "japan:land:18",
+        "operation": "buy",
+        "amount": 3000,
+        "paid": {
+          "cash": 3000,
+          "bank": 0
+        },
+        "recipientId": null
+      },
+      {
+        "type": "propertySettled",
+        "index": 2,
+        "turn": 66,
+        "propertyId": "japan:land:17",
+        "operation": "upgrade",
+        "amount": 600,
+        "paid": {
+          "cash": 600,
+          "bank": 0
+        },
+        "recipientId": null
+      },
+      {
+        "type": "propertySettled",
+        "index": 2,
+        "turn": 96,
+        "propertyId": "japan:land:30",
+        "operation": "buy",
+        "amount": 2000,
+        "paid": {
+          "cash": 2000,
+          "bank": 0
+        },
+        "recipientId": null
+      },
+      {
+        "type": "fortuneResolved",
+        "index": 2,
+        "turn": 113,
+        "fortuneId": 21,
+        "amount": 4000,
+        "cashBefore": 111,
+        "cashAfter": 4111
+      }
+    ],
+    "controls": [
+      "normal-speed original Japan",
+      "auth-only fixture, no game-state injection",
+      "fullscreen",
+      "390px no horizontal overflow",
+      "pause and cancel restart",
+      "actual replay matches legal final world",
+      "restart executed; index reset not separately asserted in this run",
+      "cleanup raf=0/canvas=0, no console errors"
+    ],
+    "visualInspection": "fortune-21.png: 4,000 cash reward at index2, 111→4,111, bank unchanged; text fits",
+    "coverageLimits": [
+      "Only one new browser journey, starting 3 players and ending 2; 2/4-player v31 coverage is domain replay matrix, not additional browser acceptance",
+      "index>1 news8/9/10/12/13, card03, god/free/redirect/insolvency and duration insurance combinations covered by domain tests only",
+      "old v30 fee browser coverage above index1 not newly established by this route"
+    ]
+  },
+  "developmentChecks": {
+    "domainFirstRun": "13 failed: tiny-map player count and event-node fixture collisions plus a legacy COMPANY_RULES string inadvertently edited by a broad replace; restored frozen rule string and corrected isolated fixture; old full suite and all final domain cases passed",
+    "routeSearch": "2-player 80 seeds did not meet requested compound route; 4-player discovery exposed planner missing facility buildingType; fixed planner. Neither search is counted as browser acceptance",
+    "browserFailures": []
+  },
+  "remaining": [
+    "S2-03 remains incomplete",
+    "original forced sale/auction/7-slot sale aging",
+    "full caller inventory includes deferred money/AI/hostility/display contexts",
+    "god attached-cash/original wheel, magic house and special actors",
+    "Windows runtime comparison and extreme int32 payment overflow"
+  ],
+  "next": {
+    "stage": "S2-03s",
+    "rules": "v32",
+    "scope": "original asset disposal/sale records and auction linkage; preserve v31 and old replays"
+  }
+}

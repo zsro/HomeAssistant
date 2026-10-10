@@ -1,0 +1,399 @@
+{
+  "stage": "S3-02a",
+  "date": "2026-10-07",
+  "rulesId": "japan-events-candidate-v44",
+  "fingerprint": "f9dbb7e9",
+  "policy": "tools-v1",
+  "preservedPolicy": "basic-v1",
+  "semanticIncrement": false,
+  "runtimeChanged": true,
+  "completed": true,
+  "nativeComplete": false,
+  "preserved": {
+    "s3_01CandidateClosed": true,
+    "s2_03CandidateClosed": true,
+    "s2_04CandidateClosed": true,
+    "s2_05CandidateClosed": true,
+    "items": 43,
+    "news": 36,
+    "japanFortuneSlots": 37,
+    "oldFixtureJsonUnchanged": 300,
+    "basicV1DecisionBodyByteUnchanged": true,
+    "engineAndGameRulesUnchanged": true,
+    "workerUIFixUnchanged": true,
+    "allVersionPlayerCases": 132
+  },
+  "checks": {
+    "frontend": {
+      "status": "passed",
+      "newDomain": 32,
+      "newActualReplay": 4,
+      "maxWorkers": 2,
+      "passed": 1833,
+      "files": 128,
+      "errors": 0
+    },
+    "lint": "passed",
+    "build": "passed; existing mixed-import/chunk-size warnings",
+    "firstFocusedRun": "23 passed, 2 failed: tests incorrectly expected remote use from equal-score node1; domain probe moved to node2; policy unchanged"
+  },
+  "originalMapBrowser": {
+    "routes": [
+      {
+        "route": "2",
+        "seed": "tools-ai-2",
+        "computerCharacters": [
+          "tuu"
+        ],
+        "players": 2,
+        "commands": 267,
+        "turn": 35,
+        "auto": 60,
+        "human": 47,
+        "dates": 17,
+        "used": {
+          "tool:08": 1,
+          "tool:09": 1
+        },
+        "bought": [],
+        "prefixes": [
+          "idle:paused",
+          "idle:resumed",
+          "tool:08:begin",
+          "tool:08:select-dice-v1:paused",
+          "tool:08:select-dice-v1:resumed",
+          "tool:08:confirm",
+          "tool:08:after",
+          "tool:09:begin",
+          "tool:09:build-nearby-anchor-v1:paused",
+          "tool:09:build-nearby-anchor-v1:resumed",
+          "tool:09:confirm",
+          "tool:09:after",
+          "normal-roll"
+        ],
+        "report": {
+          "policy": "tools-v1",
+          "toolWindows": [
+            "tool:08",
+            "tool:09"
+          ],
+          "crossChecks": [],
+          "route": "2",
+          "terminal": false,
+          "players": 2,
+          "normalSpeed": true,
+          "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+          "commands": 267,
+          "auto": 60,
+          "human": 47,
+          "lifecycle": [
+            "pause stops waiting",
+            "resume",
+            "reset dialog cancel",
+            "reset",
+            "replace with humans",
+            "exit cleanup",
+            "fullscreen",
+            "390px"
+          ],
+          "cleanup": {
+            "raf": 0,
+            "canvas": 0
+          },
+          "errors": []
+        },
+        "hashes": {
+          "replay": "170cd434aac9b9a731339f5c1f4357cfd4dc77ff34171924ffea331050bef826",
+          "state": "08b06600f06a512134467038b7136ed95129aae7dd868f84d2633bff983fec9f",
+          "events": "0cd2abb87979676c54e31c346fc5cac953a5224d30898faefe391a1868cb06d7"
+        }
+      },
+      {
+        "route": "3",
+        "seed": "tools-ai-3",
+        "computerCharacters": [
+          "tuu"
+        ],
+        "players": 3,
+        "commands": 256,
+        "turn": 36,
+        "auto": 42,
+        "human": 59,
+        "dates": 11,
+        "used": {
+          "tool:08": 1,
+          "tool:09": 1
+        },
+        "bought": [],
+        "prefixes": [
+          "idle:paused",
+          "idle:resumed",
+          "tool:08:begin",
+          "tool:08:select-dice-v1:paused",
+          "tool:08:select-dice-v1:resumed",
+          "tool:08:confirm",
+          "tool:08:after",
+          "tool:09:begin",
+          "tool:09:build-nearby-anchor-v1:paused",
+          "tool:09:build-nearby-anchor-v1:resumed",
+          "tool:09:confirm",
+          "tool:09:after",
+          "normal-roll"
+        ],
+        "report": {
+          "policy": "tools-v1",
+          "toolWindows": [
+            "tool:08",
+            "tool:09"
+          ],
+          "crossChecks": [],
+          "route": "3",
+          "terminal": false,
+          "players": 3,
+          "normalSpeed": true,
+          "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+          "commands": 256,
+          "auto": 42,
+          "human": 59,
+          "lifecycle": [
+            "pause stops waiting",
+            "resume",
+            "reset dialog cancel",
+            "reset",
+            "replace with humans",
+            "exit cleanup",
+            "fullscreen",
+            "390px"
+          ],
+          "cleanup": {
+            "raf": 0,
+            "canvas": 0
+          },
+          "errors": []
+        },
+        "hashes": {
+          "replay": "7c01d6093ea2f31af984fd44a980341d922c493c2d2a350498a0f7bb2d243ec2",
+          "state": "797fe2d0b3f6c4c424b2c1aba05b56b79c87f88b377f380b9a5cc24e36910a95",
+          "events": "27185ff3bbb0d122a75adcc4bb6b3aef959ab708bb9786b64239b104bc985bc2"
+        }
+      },
+      {
+        "route": "4",
+        "seed": "tools-ai-4",
+        "computerCharacters": [
+          "tuu",
+          "salonbus"
+        ],
+        "players": 4,
+        "commands": 250,
+        "turn": 35,
+        "auto": 58,
+        "human": 46,
+        "dates": 8,
+        "used": {
+          "tool:08": 2,
+          "tool:09": 2
+        },
+        "bought": [],
+        "prefixes": [
+          "idle:paused",
+          "idle:resumed",
+          "tool:08:begin",
+          "tool:08:select-dice-v1:paused",
+          "tool:08:select-dice-v1:resumed",
+          "tool:08:confirm",
+          "tool:08:after",
+          "normal-roll",
+          "tool:09:begin",
+          "tool:09:build-nearby-anchor-v1:paused",
+          "tool:09:build-nearby-anchor-v1:resumed",
+          "tool:09:confirm",
+          "tool:09:after"
+        ],
+        "report": {
+          "policy": "tools-v1",
+          "toolWindows": [
+            "tool:08",
+            "tool:09"
+          ],
+          "crossChecks": [],
+          "route": "4",
+          "terminal": false,
+          "players": 4,
+          "normalSpeed": true,
+          "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+          "commands": 250,
+          "auto": 58,
+          "human": 46,
+          "lifecycle": [
+            "pause stops waiting",
+            "resume",
+            "reset dialog cancel",
+            "reset",
+            "replace with humans",
+            "exit cleanup",
+            "fullscreen",
+            "390px"
+          ],
+          "cleanup": {
+            "raf": 0,
+            "canvas": 0
+          },
+          "errors": []
+        },
+        "hashes": {
+          "replay": "7b8be0a0047f30cb227c2ae2fa6fae32c24571aa9a754071f1db71b6abe4ede7",
+          "state": "4ceb6e15af54435dce3c4e9aa24387e3aa177bccde6af01d9b5c9217233d5bad",
+          "events": "73cbce8d96a6eee85bee66733bf138b4e71230cdc3695cd2e6f0b00174c61534"
+        }
+      },
+      {
+        "route": "refill",
+        "seed": "tools-refill-0",
+        "computerCharacters": [
+          "tuu"
+        ],
+        "players": 2,
+        "commands": 675,
+        "turn": 91,
+        "auto": 142,
+        "human": 132,
+        "dates": 45,
+        "used": {
+          "tool:08": 2,
+          "tool:09": 1
+        },
+        "bought": [
+          {
+            "player": "player-2",
+            "turn": 74,
+            "pointsBefore": 150,
+            "pointsAfter": 120,
+            "supplyBefore": 9,
+            "supplyAfter": 8
+          }
+        ],
+        "prefixes": [
+          "idle:paused",
+          "idle:resumed",
+          "tool:08:begin",
+          "tool:08:select-dice-v1:paused",
+          "tool:08:select-dice-v1:resumed",
+          "tool:08:confirm",
+          "tool:08:after",
+          "tool:09:begin",
+          "tool:09:build-nearby-anchor-v1:paused",
+          "tool:09:build-nearby-anchor-v1:resumed",
+          "tool:09:confirm",
+          "tool:09:after",
+          "normal-roll",
+          "refill-before",
+          "refill-after"
+        ],
+        "report": {
+          "policy": "tools-v1",
+          "toolWindows": [
+            "tool:08",
+            "tool:09"
+          ],
+          "crossChecks": [],
+          "route": "refill",
+          "terminal": false,
+          "players": 2,
+          "normalSpeed": true,
+          "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+          "commands": 675,
+          "auto": 142,
+          "human": 132,
+          "lifecycle": [
+            "pause stops waiting",
+            "resume",
+            "reset dialog cancel",
+            "reset",
+            "replace with humans",
+            "exit cleanup",
+            "fullscreen",
+            "390px"
+          ],
+          "cleanup": {
+            "raf": 0,
+            "canvas": 0
+          },
+          "errors": []
+        },
+        "hashes": {
+          "replay": "edf337e638dd12f1d1c089fd7d49a402e07ec0d3ea0420c9ae0357af9876d794",
+          "state": "cad50d11de4e7e7e7d2e6971b36c6f758d92c2088a3c0b9993eaafc455819982",
+          "events": "4cdaceed9305d7425b85513b0dbe3bc7d1667fc4ae4dcec2e14aeb17439612e4"
+        }
+      }
+    ],
+    "totalCommands": 1448,
+    "totalComputerDecisions": 302,
+    "namedPrefixChecks": 54,
+    "normalSpeed": true,
+    "injection": "auth only; no game state injection",
+    "remoteUses": 6,
+    "workerUses": 5,
+    "refill": [
+      {
+        "player": "player-2",
+        "turn": 74,
+        "pointsBefore": 150,
+        "pointsAfter": 120,
+        "supplyBefore": 9,
+        "supplyAfter": 8
+      }
+    ],
+    "errors": []
+  },
+  "builtUI": {
+    "built": true,
+    "normalSpeed": true,
+    "defaultHuman": true,
+    "defaultBasic": true,
+    "toolsEffect": true,
+    "policyMetadata": true,
+    "resetPreservesPolicy": true,
+    "switchBackToBasic": true,
+    "humanReplacement": true,
+    "exitWhileToolsWaiting": true,
+    "setup390": true,
+    "cleanup": {
+      "raf": 0,
+      "canvas": 0
+    },
+    "errors": []
+  },
+  "notClaimed": [
+    "native AI parity/difficulty",
+    "all character/controller permutations or tools-v1 terminal games",
+    "live target invalidation in original-map browser: domain probes only",
+    "tools-v1 non-active payer/reaction/auction UI: historical real prefixes plus new-policy session domain checks",
+    "other proactive cards/stocks/research/refinancing/bidding",
+    "saving/loading controller state or per-seat mixed policies",
+    "background browser throttling",
+    "automatic worker research acquisition"
+  ],
+  "retainedDifferences": [
+    "native precision/RNG/chart/input",
+    "other asset sales",
+    "special actors",
+    "original wheel",
+    "original exit call stack/endgame",
+    "minigame presentation/collision",
+    "native memory snapshot"
+  ],
+  "next": "S3-02b: grouped free/redirect rent reaction and risk policy; separately version and preserve basic-v1/tools-v1, retain v44 absent new game semantics",
+  "git": {
+    "committed": false,
+    "pushed": false,
+    "deployed": false
+  },
+  "fixes": [
+    "domain remote-use probes start from distinct-score node2; equal-score node1 correctly conserves inventory",
+    "shared strategy selector uses existing form style and stays outside per-seat selectors",
+    "invalid artificial mid-effect stop/turtle halts without illegal cancel",
+    "worker reason names actual land/road node"
+  ]
+}

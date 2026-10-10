@@ -1,0 +1,106 @@
+{
+  "referenceCommit": "ec7d70e693059d1e781d9d1cc2ad7f36d360d39e",
+  "evidence": "Local table bytes are A; pinned cross-version reference semantics are B; Web timing/selection differences are explicit, not original runtime certification.",
+  "sources": [
+    {
+      "path": "csrc/cards.c",
+      "sha256": "f5f065702b1559bb08eb3989a09340f49dfd1b8b04932545d5d73b44317da410",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/csrc/cards.c"
+    },
+    {
+      "path": "asm/rich4_card_tingliuka.asm",
+      "sha256": "d372f58a77abe7b5c52caf9889cbbe5dbf8fa1918bbcd80045aed1211d80dc2d",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_card_tingliuka.asm"
+    },
+    {
+      "path": "asm/rich4_card_dongmianka.asm",
+      "sha256": "2e0014e7e0cba68aff475918075c8228d8b3f72a7cbf418ccf762a07b0140167",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_card_dongmianka.asm"
+    },
+    {
+      "path": "asm/rich4_card_mengyouka.asm",
+      "sha256": "c7ecc98dddd394f35975bb496b42f4c5b852f143da23d1cd61e3da31b394baab",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_card_mengyouka.asm"
+    },
+    {
+      "path": "asm/rich4_card_xianhaika.asm",
+      "sha256": "91ba0a1eaee9f0793c59bd9b62f6859967ecf8cb4b570efdee7d787746828870",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_card_xianhaika.asm"
+    },
+    {
+      "path": "asm/rich4_card_wuguika.asm",
+      "sha256": "d4ec533ac33fbb8384c3fd6d9818dbede4b1f001559b95ca8d48f76ce4ec1dd1",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_card_wuguika.asm"
+    },
+    {
+      "path": "asm/rich4_tool_jiche.asm",
+      "sha256": "bc74fbda422507fb79ba47f8cff770840af21223245713b60a5b1014ec5fa25d",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_tool_jiche.asm"
+    },
+    {
+      "path": "asm/rich4_tool_qiche.asm",
+      "sha256": "d701426fe774a3fa06286303a0a4093f38d8322f0704f4d5271b53e51ebbbff2",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_tool_qiche.asm"
+    },
+    {
+      "path": "asm/rich4_tool_yaokongtouzi.asm",
+      "sha256": "18cd27d4b64a3fe37dabce55e80135e0d4adade71c90d6203cb8c94237314461",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_tool_yaokongtouzi.asm"
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "sha256": "2874c1a3e0ca1d0da5afe4cb93e42cf2d6f6fa864dbee11d7bcaa028af07d94a",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_core_actions.asm"
+    },
+    {
+      "path": "asm/rich4_player_utils.asm",
+      "sha256": "17479913576a004458908f124c4d7e94361dab41a501830d2ecb87eb7b438f01",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_utils.asm"
+    },
+    {
+      "path": "asm/rich4_prison_utils.asm",
+      "sha256": "26984458a39e9fc06941772cc9b34931b32d85f561d08a4bddb88d450863abbc",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_prison_utils.asm"
+    },
+    {
+      "path": "asm/rich4_hospital_utils.asm",
+      "sha256": "ba23adbaa7ccc396f3b99d8854285ee222aea8c1b81bcfc0637e72a6e56c145a",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_hospital_utils.asm"
+    },
+    {
+      "path": "asm/rich4_shop.asm",
+      "sha256": "2273fa44c0cbc7d4f508006b917b4f2c412a19e33014abd968435c29e0770410",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_shop.asm"
+    },
+    {
+      "path": "asm/rich4_tool_utils.c",
+      "sha256": "12fb8cedf2a50efa98cdfbd15f55b8167a4b3d753c6677d5ba787ac50c8d4097",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_tool_utils.c"
+    },
+    {
+      "path": "asm/rich4_card_utils.asm",
+      "sha256": "937d2f587f15068f1f1280ac60d4a61c0249dbde0f206bfcc1489a29591d8181",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_card_utils.asm"
+    },
+    {
+      "path": "asm/rich4_ui_use_tool.asm",
+      "sha256": "fa16767708c30617610771e1eb6e0003b7576a2be2efc34d92f29a631fa7754a",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_ui_use_tool.asm"
+    },
+    {
+      "path": "asm/rich4.asm",
+      "sha256": "30904cbb4f23a6b74fc1b80ad023bd7dff11b441c2c1978f768f9891d099d64a",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4.asm"
+    }
+  ],
+  "localAudits": [
+    {
+      "path": "docs/richman/effects-audit.json",
+      "sha256": "f167be3bda6209391c8121eccab1e2a4228a948cb1cf5d65adaf128f40572c1e"
+    },
+    {
+      "path": "docs/richman/japan-map-audit.json",
+      "sha256": "e2eba8a3517f1a73fb349a42b0ae06242f8d0df026a886133059704e445a6921"
+    }
+  ]
+}

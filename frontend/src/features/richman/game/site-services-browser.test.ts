@@ -1,0 +1,12 @@
+import {expect,it} from 'vitest';
+import {createHash} from 'node:crypto';
+import {GameEngine,replayGame} from './engine';
+import type {Replay} from './engine';
+import nodes from '../japan-topology.fixture.json';
+import prison from './fixtures/site-services-v39-prison-replay.json';
+import prisonGolden from './fixtures/site-services-v39-prison-manifest.json';
+import hospital from './fixtures/site-services-v39-hospital-replay.json';
+import hospitalGolden from './fixtures/site-services-v39-hospital-manifest.json';
+import {verifySiteServices} from '../../../../../scripts/richman/verify-site-services';
+for(const[name,replay,golden]of[['prison',prison,prisonGolden],['hospital',hospital,hospitalGolden]]as const)it(`actual v39 ${name} original-map UI has stable hashes and independent points, roster, inventory and company accounting`,()=>{const r=verifySiteServices(replay as Replay);for(const k of['commands','facilities','sales','closings','purchases']as const)expect(r[k]).toBe(golden[k]);for(const k of['state','events']as const)expect(createHash('sha256').update(JSON.stringify(r[k])).digest('hex')).toBe(golden.hashes[k]);expect(createHash('sha256').update(JSON.stringify(replay)).digest('hex')).toBe(golden.hashes.replay);},20000);
+it('actual prefixes resume card sale, tool sale, shop closing and both facility decisions without duplicate settlement or clock advance',()=>{const keys=new Set<string>();for(const replay of[prison,hospital]){const r=replay as Replay,e=new GameEngine(nodes,r.config),points=new Map<string,number>();for(let i=0;i<r.commands.length;i++){const a=r.commands[i].action,p=e.state.pending;const key=a.type==='sellItem'?a.itemId:a.type==='leaveShop'?'closing':a.type==='facility'&&a.targetId&&p?.kind==='facility'?p.facility:null;if(key&&!keys.has(key)){points.set(key,i);keys.add(key);}expect(e.dispatch(r.commands[i]).ok).toBe(true);}for(const i of points.values()){const copy=replayGame(nodes,{...r,commands:r.commands.slice(0,i)});expect(JSON.parse(JSON.stringify(copy.state.pending))).toEqual(copy.state.pending);for(const c of r.commands.slice(i))expect(copy.dispatch(c).ok).toBe(true);expect(copy.state).toEqual(e.state);expect(copy.events).toEqual(e.events);}}expect([...keys].sort()).toEqual(['card:06','closing','hospital','prison','tool:09']);},30000);

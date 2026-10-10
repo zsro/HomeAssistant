@@ -1,0 +1,124 @@
+{
+  "stage": "S3-02i",
+  "policy": "area-v1",
+  "preservedPolicies": [
+    "basic-v1",
+    "tools-v1",
+    "rent-v1",
+    "defense-v1",
+    "estate-v1",
+    "cash-v1",
+    "status-v1",
+    "inventory-v1",
+    "commerce-v1"
+  ],
+  "rulesId": "japan-events-candidate-v44",
+  "fingerprint": "f9dbb7e9",
+  "newGameSemantics": false,
+  "nativeExecution": false,
+  "referenceCommit": "ec7d70e693059d1e781d9d1cc2ad7f36d360d39e",
+  "priorNativeAudit": [
+    "s2-02l-sources.json",
+    "s2-02o-results.json",
+    "s3-02h-sources.json"
+  ],
+  "nativeReread": [
+    {
+      "path": "asm/rich4_card_tianshika.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_card_tianshika.asm",
+      "sha256": "be6e43481caaff8ff9991ef63a557457e8d3b1af94d5379b2c7cb1c6b83c205b",
+      "localPath": "/private/tmp/rich4-g5/rich4_card_tianshika.asm",
+      "reread": true
+    },
+    {
+      "path": "asm/rich4_card_emoka.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_card_emoka.asm",
+      "sha256": "7e83b0f160dd0d4e4aab65d99e809c7f053cc3e12f63837873f9b3b47e4c6b12",
+      "localPath": "/private/tmp/rich4-g5/rich4_card_emoka.asm",
+      "reread": true
+    },
+    {
+      "path": "asm/rich4_card_guaishouka.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_card_guaishouka.asm",
+      "sha256": "73e9f0614ab3da56cc48d4100b0380e20f88c66d518dece426cde12a5c85601b",
+      "localPath": "/private/tmp/rich4-g5/rich4_card_guaishouka.asm",
+      "reread": true
+    }
+  ],
+  "localEvidence": [
+    {
+      "path": "frontend/src/features/richman/game/computer-area.ts",
+      "sha256": "ed18de80b742481251fe95da5b655047aee22563ccc00d307acbd22c0ee96c42"
+    },
+    {
+      "path": "frontend/src/features/richman/game/computer-area.test.ts",
+      "sha256": "7ead2c1fff76a180a208f8ad40e966192a25acd856c66f5eaf0bb149c747d77b"
+    },
+    {
+      "path": "frontend/src/features/richman/game/computer-commerce.ts",
+      "sha256": "be3e2b8e0b7fb6046de9ee3ce6bd331f646108dda95a9df5eb90322abd9d72d9"
+    },
+    {
+      "path": "frontend/src/features/richman/game/g5.ts",
+      "sha256": "b2768b2f307d7088d83fd85827e7d80291455571e305eabd5b1179f83dfa6618"
+    },
+    {
+      "path": "frontend/src/features/richman/game/g5-catalog.ts",
+      "sha256": "b182b995d998aec5f41104d0b81d4eb56804fbc715a630acd522098c12844573"
+    },
+    {
+      "path": "frontend/src/features/richman/game/g4.ts",
+      "sha256": "78e38e9e287cff11a645a45c99a5e632777bc842e2029526b18096184f28184c"
+    },
+    {
+      "path": "frontend/src/features/richman/game/g3.ts",
+      "sha256": "ea51f1c7c9be00d7ed055e9dd13cb464732992a266eaededf717b60b2e4a69e0"
+    },
+    {
+      "path": "frontend/src/features/richman/game/shop-acquisition.ts",
+      "sha256": "78667adb5cfab4f0fb8ff828e94ed610ae30bd7fc6e4923070359a4b549c72cc"
+    },
+    {
+      "path": "frontend/src/features/richman/game/session.ts",
+      "sha256": "a73a199a4b55c64325ba9b9a014ed129251500037fad3baf7343681fd99c857e"
+    },
+    {
+      "path": "scripts/richman/verify-computer-area.ts",
+      "sha256": "6363040a0415f900516d9365727b3b4fa3a28f5979b227626413058396b42c9c"
+    },
+    {
+      "path": "scripts/richman/plan-computer-area.ts",
+      "sha256": "f3315fe8951fbf4a0261d900fdd901d3ec99c7b57cdfd09dd2e2785d71e407a3"
+    },
+    {
+      "path": "scripts/richman/plan-computer-area-manual.ts",
+      "sha256": "ffb6c114c7def36d10e37f7ded7f25bcab37aa0600bdbb2a4f8d3e58b462ba02"
+    },
+    {
+      "path": "scripts/richman/prepare-area-routes.ts",
+      "sha256": "df6a401a24248ced48d1380dc8d1a56e25d0db70f4f47544a1571432f720486a"
+    },
+    {
+      "path": "scripts/richman/computer-area-ui-browser.cjs",
+      "sha256": "b6c8a49710a7ca7b7f410b4e93616a520dfc576d832998a2da5191a93d4d6287"
+    },
+    {
+      "path": "scripts/richman/archive-computer-area.ts",
+      "sha256": "4b81361c7a49358f3c32a0e1b45516ba30f22341edab1383b8aa9d9c6cc24b83"
+    },
+    {
+      "path": "frontend/src/features/richman/game/computer-area-browser.test.ts",
+      "sha256": "0f644caf8c93d6a54a9be45af282e6f26346274304d317123dc364eefdb4e6e4"
+    },
+    {
+      "path": "scripts/richman/computer-area-built-browser.cjs",
+      "sha256": "91c2f5e1b7708bf6336986d1076283cc79132d09e3afb6dbb063e35f6839d51f"
+    }
+  ],
+  "claims": [
+    "天使同名普通地或单大型加盖，上限按类型；恶魔整街/怪兽单地清空",
+    "消费、产权保留、科研失效及无反应窗口沿v44，不重新实现",
+    "静态投资/租金、盟友保护和购物中心选型为宿主启发式，不是原AI",
+    "不读隐藏序列或游戏RNG，不模拟未来"
+  ]
+}

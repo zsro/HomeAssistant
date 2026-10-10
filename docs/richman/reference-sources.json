@@ -1,0 +1,82 @@
+{
+  "repository": "https://github.com/mytbk/rich4",
+  "commit": "ec7d70e693059d1e781d9d1cc2ad7f36d360d39e",
+  "archiveSha256": "bd607e45287925323a17173f03e9ca666f9e0f078694330fa6f992d147355ec6",
+  "files": [
+    {
+      "path": "readme.rst",
+      "sha256": "8fc6b7f7ac3b3066353a31447b3475c52829bb8af2dfb154dea7a0b7586a5e03",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/readme.rst"
+    },
+    {
+      "path": "docs/map.txt",
+      "sha256": "71f2ec56678075b9e91f6326dd1d3f96240cfa6f01b53669b13588e9d1c71073",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/docs/map.txt"
+    },
+    {
+      "path": "csrc/land.h",
+      "sha256": "491d2be2e54736000d3829d98cb062922f9d374b58b66bce942323e11238ac28",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/csrc/land.h"
+    },
+    {
+      "path": "csrc/game_init.c",
+      "sha256": "4167f960114ff5eca0aaadb24d9266c7826d6ea4d2dc55a3512c9c669e85ea71",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/csrc/game_init.c"
+    },
+    {
+      "path": "csrc/media_init.c",
+      "sha256": "6efe2fa00c6a33f06be1beb0657af4fba7b2dc76afa2ab0d4d4b782a3a676015",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/csrc/media_init.c"
+    },
+    {
+      "path": "asm/rich4_map.h",
+      "sha256": "80fc0c1786ae9f3e659c5f9ff30befff54ee60eeddb94ffb2f105b8907db8446",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_map.h"
+    },
+    {
+      "path": "tools/map_data_parser.c",
+      "sha256": "24aa5b17acfd04e5282cbda3ffde050f9dcfe1099f8fc8162d5d511a893fd177",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/tools/map_data_parser.c"
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "sha256": "2874c1a3e0ca1d0da5afe4cb93e42cf2d6f6fa864dbee11d7bcaa028af07d94a",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_core_actions.asm"
+    },
+    {
+      "path": "asm/rich4_calculate_player_wealth.asm",
+      "sha256": "95b68c2bf328121bcb981311a2e1ad226283c0c2a1015386397fa9df5281241c",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_calculate_player_wealth.asm"
+    },
+    {
+      "path": "asm/rich4_player_bankrupt.asm",
+      "sha256": "57c69d347bef382e0045b00855c17293e5cb737ed22359340894ed9b9cf8bf02",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_bankrupt.asm"
+    },
+    {
+      "path": "asm/rich4_ui_bank.asm",
+      "sha256": "bd225f868ef673c4052d145223d9564a5ded0c4eec28093811cb439ec9fc230a",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_ui_bank.asm"
+    },
+    {
+      "path": "asm/rich4_load_map.asm",
+      "sha256": "7a555911e15b8c947c6c281b95c23bf536dba92baca20929ab1666ed31df3987",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_load_map.asm"
+    },
+    {
+      "path": "asm/rich4.asm",
+      "sha256": "30904cbb4f23a6b74fc1b80ad023bd7dff11b441c2c1978f768f9891d099d64a",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4.asm"
+    },
+    {
+      "path": "asm/rich4_player_utils.asm",
+      "sha256": "17479913576a004458908f124c4d7e94361dab41a501830d2ecb87eb7b438f01",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_utils.asm"
+    },
+    {
+      "path": "asm/rich4_player_say_on_events.asm",
+      "sha256": "9d12b7717f448b8928db8f2b89cfa0b4bbae694757ea9a53a6c8ea5d7fa5adb9",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_say_on_events.asm"
+    }
+  ]
+}

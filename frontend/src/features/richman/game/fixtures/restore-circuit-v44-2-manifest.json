@@ -1,0 +1,80 @@
+{
+  "players": 2,
+  "commands": 1510,
+  "turn": 90,
+  "date": "1998-02-21",
+  "deliveries": 1,
+  "researchStarted": 1,
+  "trades": 24,
+  "dateSteps": 44,
+  "afterRestore": 1,
+  "prefixes": [
+    "calendar",
+    "research-start",
+    "research-delivery",
+    "before-time-confirm",
+    "after-time-confirm",
+    "next-departure"
+  ],
+  "restores": [
+    {
+      "playerId": "player-1",
+      "turn": 89,
+      "checkpointTurn": 87,
+      "round": [
+        45,
+        44
+      ],
+      "date": [
+        "1998-02-22",
+        "1998-02-21"
+      ],
+      "changed": [
+        "market",
+        "date",
+        "companies",
+        "finance"
+      ],
+      "inventory": [
+        1,
+        1,
+        0
+      ],
+      "research": [
+        [],
+        []
+      ],
+      "rng": 3413370900,
+      "revision": [
+        1499,
+        1500
+      ],
+      "logs": [
+        1348,
+        1350
+      ]
+    }
+  ],
+  "report": {
+    "normalSpeed": true,
+    "map": "original Japan; real UI commands; auth-only fixture; no game-state injection",
+    "circuitCommon": true,
+    "calendarCommon": true,
+    "completed": [
+      {
+        "id": "tool:10",
+        "preview": "恢复全体玩家位置、现金/存款、地产、库存/供应、研究、车辆/状态、神仙、道路物件及股票持仓/行情。随机序列和操作日志不倒退；从历史背包扣1台，所有旧历史清除。取消不改变任何状态。"
+      }
+    ],
+    "errors": [],
+    "cleanup": {
+      "raf": 0,
+      "canvas": 0
+    }
+  },
+  "hashes": {
+    "replay": "33be7f38688a86ee1fd291d96c10a61cac583a246735d95422fa26d686c5ff30",
+    "state": "f8828ad439356dd3675f81a77488f1c4b7c82cee167df1650d6c86c6c89d7c33",
+    "events": "405da6b1e86afab6537b92da5698a3820b66261f35094975d1fc536d4f585aef"
+  }
+}

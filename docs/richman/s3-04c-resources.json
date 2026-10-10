@@ -1,0 +1,158 @@
+{
+  "stage": "S3-04c",
+  "archives": {
+    "Data.mkf": {
+      "bytes": 53296712,
+      "sha256": "c63023e815b1ad4bef172b6415d128c7f041f12b71b5d80dc3ff29240a0a1988",
+      "entries": 561
+    },
+    "Panel.mkf": {
+      "bytes": 25351066,
+      "sha256": "5b9bfd11a866694cfdf93457d2010d30f20a43f96b668e5186fa99452e16f563",
+      "entries": 113
+    },
+    "jump.mkf": {
+      "bytes": 26091102,
+      "sha256": "92b3ea10d4a8021052eb927ed97ccbe9cd51ca3d6021ab85e07b88c2377b761e",
+      "entries": 67
+    }
+  },
+  "objects": [
+    {
+      "type": 1,
+      "index": 355,
+      "frames": 8,
+      "decodedSha256": "ef9f4854b2bffe3c351376ca25c52ffcec2a8c3a255fc8e57428df3d8784af2f"
+    },
+    {
+      "type": 2,
+      "index": 356,
+      "frames": 8,
+      "decodedSha256": "bf963b1be356bb6333a9f431ee814b5e698e4eba934e3ddce694a8f39173da8d"
+    },
+    {
+      "type": 3,
+      "index": 357,
+      "frames": 8,
+      "decodedSha256": "d91b50d212821f27fff7b0478441efd7abffbafd632a9395fde635fa341af366"
+    },
+    {
+      "type": 4,
+      "index": 358,
+      "frames": 8,
+      "decodedSha256": "420de117b7192314ca03ad55b4699cdc9d52fbec0e6854f8b6276eba376d1f46"
+    },
+    {
+      "type": 5,
+      "index": 359,
+      "frames": 8,
+      "decodedSha256": "abbe632219303e412fc983eda6152314281d8d218100045342706bce76aad455"
+    },
+    {
+      "type": 6,
+      "index": 360,
+      "frames": 8,
+      "decodedSha256": "544be582eeb58f372c8368094669686ad349aacfbbda0e227791f6dcc0ee29c3"
+    },
+    {
+      "type": 7,
+      "index": 361,
+      "frames": 8,
+      "decodedSha256": "7e6ea9ed37c276f166a090246705fd403de6c94d6ebbf6a718ab2dfec39eb0fd"
+    },
+    {
+      "type": 8,
+      "index": 362,
+      "frames": 8,
+      "decodedSha256": "c4d156adbb6b4b2b32811b1751591125e89a19a59215c1243573ba631e5791c7"
+    },
+    {
+      "type": 9,
+      "index": 363,
+      "frames": 8,
+      "decodedSha256": "190b9b8905b03f044db6e65c352c452d0283c403faf3b27d522286affca3148c"
+    },
+    {
+      "type": 10,
+      "index": 364,
+      "frames": 8,
+      "decodedSha256": "95876d6f1d3e003545eafe14ef945747983d18c37e92ff59ec6d49027b4a7ef5"
+    },
+    {
+      "type": 11,
+      "index": 365,
+      "frames": 8,
+      "decodedSha256": "72d2ab8c0785a33f75fdbdda4c60f831183063ec7b52f2fb071b6cfcb7c3bb5d"
+    },
+    {
+      "type": 12,
+      "index": 366,
+      "frames": 8,
+      "decodedSha256": "a1346aee4722cbf45fff3aa304da2bf30dcdb3b75b5f6e4a05be61e71f76f5c8"
+    },
+    {
+      "type": 13,
+      "index": 367,
+      "frames": 8,
+      "decodedSha256": "bff4b855463ca601011f6f892ca2364a646063a500235bbb0cfd237d64fc4ce9"
+    },
+    {
+      "type": 14,
+      "index": 368,
+      "frames": 8,
+      "decodedSha256": "71baba139387d11ce3da51e53410c3f836cb5285d5f8086311ccf406abee5e24"
+    },
+    {
+      "type": 15,
+      "index": 369,
+      "frames": 8,
+      "decodedSha256": "d2a1aeed339132a0babb26377df949cbe43309af810d669dcb1f5096410b5ee8"
+    }
+  ],
+  "frameCount": 120,
+  "localLoadLoopOffset": 28908,
+  "localLoadLoopHex": "8d8363010000508b15dc70480052e8696f040083c41089049db83849004383fb147cd9",
+  "referenceIndexOffset": 41,
+  "offsets": [
+    [
+      -10,
+      -22
+    ],
+    [
+      -22,
+      -10
+    ],
+    [
+      -22,
+      10
+    ],
+    [
+      -10,
+      22
+    ],
+    [
+      10,
+      22
+    ],
+    [
+      22,
+      10
+    ],
+    [
+      22,
+      -10
+    ],
+    [
+      10,
+      -22
+    ]
+  ],
+  "offsetTableExeOffset": 463869,
+  "atlas": {
+    "width": 1024,
+    "height": 292,
+    "sha256": "b957fca8b01a5a592fee287f203010d17b5d69015912331f06e63a9cf68b3541"
+  },
+  "manifestSha256": "1966c7e41915e85ed0e24236998e81f5af0b5fdf98b3da3fcd8745d7702e529a",
+  "nativeExecution": false
+}

@@ -1,0 +1,352 @@
+{
+  "stage": "S3-03a",
+  "status": "presentation-increment-accepted",
+  "completedDate": "2026-10-08",
+  "rulesId": "japan-events-candidate-v44",
+  "fingerprint": "f9dbb7e9",
+  "policy": "research-v1",
+  "newGameSemantics": false,
+  "newPolicyBehavior": false,
+  "nativeExecution": false,
+  "S3_03Closed": false,
+  "historicalCapabilities": {
+    "items": 43,
+    "news": 36,
+    "japanFortuneSlots": 37
+  },
+  "checks": {
+    "relatedRegression": {
+      "passed": true,
+      "tests": 330,
+      "files": 9,
+      "log": "/private/tmp/god-lifecycle-regression.log",
+      "fullFrontendRerun": false
+    },
+    "newArchivedReplayRegression": {
+      "passed": true,
+      "tests": 3,
+      "files": 1,
+      "log": "/private/tmp/god-lifecycle-archive-tests.log"
+    },
+    "compatibilityMatrix": {
+      "passed": true,
+      "versions": "v1-v44",
+      "players": [
+        2,
+        3,
+        4
+      ],
+      "cases": 132,
+      "includedInRelatedRegression": true
+    },
+    "lint": {
+      "passed": true,
+      "log": "/private/tmp/god-lifecycle-lint.log"
+    },
+    "build": {
+      "passed": true,
+      "log": "/private/tmp/god-lifecycle-build.log",
+      "warning": "existing chunk size >500kB"
+    },
+    "preservation": {
+      "baseline": "/private/tmp/richman-03a-before/richman",
+      "existingFilesChanged": [
+        "G6Panel.tsx",
+        "richman.css",
+        "scene.ts"
+      ],
+      "oldFixtureFilesByteIdentical": 422,
+      "gameRuntimeAnd15PoliciesByteIdentical": true
+    },
+    "finalDisplayRecheck": {
+      "tests": 13,
+      "passed": true,
+      "includedInRelatedRegressionCount": true,
+      "log": "/private/tmp/god-ui-tests.log",
+      "reason": "clarify engineering expiry from walking"
+    }
+  },
+  "browser": {
+    "actualCommands": 720,
+    "displayCheckpoints": 10,
+    "keyPrefixes": 11,
+    "routes": [
+      {
+        "displayChecks": [
+          {
+            "index": 4,
+            "gods": [
+              {
+                "carrier": "player-1",
+                "text": "恶魔 · 剩余7次自身行动开始结算"
+              }
+            ]
+          },
+          {
+            "index": 111,
+            "gods": []
+          },
+          {
+            "index": 163,
+            "gods": [
+              {
+                "carrier": "player-1",
+                "text": "小衰神 · 剩余7次自身行动开始结算"
+              }
+            ]
+          },
+          {
+            "index": 190,
+            "gods": [
+              {
+                "carrier": "player-1",
+                "text": "小衰神 · 剩余5次自身行动开始结算"
+              },
+              {
+                "carrier": "player-2",
+                "text": "衰神 · 剩余13次自身行动开始结算"
+              }
+            ]
+          }
+        ],
+        "robotPreviews": [],
+        "policy": "gods-v1",
+        "toolWindows": [
+          "tool:08",
+          "tool:09"
+        ],
+        "crossChecks": [],
+        "route": "2",
+        "terminal": false,
+        "players": 2,
+        "normalSpeed": true,
+        "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+        "commands": 227,
+        "auto": 46,
+        "human": 45,
+        "lifecycle": [
+          "pause stops waiting",
+          "resume",
+          "reset dialog cancel",
+          "reset",
+          "replace with humans",
+          "exit cleanup",
+          "fullscreen",
+          "390px"
+        ],
+        "cleanup": {
+          "raf": 0,
+          "canvas": 0
+        },
+        "errors": [],
+        "prefixes": [
+          4,
+          125,
+          179,
+          206
+        ],
+        "fullReplay": true,
+        "prefixReplay": true,
+        "commandsMatchPriorLegalRoute": true,
+        "hashes": {
+          "replay": "1317b94cff36926817821382e9ad97376f2b9f43312edab4b5116d584e5664bb",
+          "state": "da8076a55a3416a2a482c33044ba0fac1b0f94b2e615a4a724b0fc0ccc9b341c",
+          "events": "01f4cd2fd95621322c910fa2bad03a741611a3f099b085c451fb0339a3f052d9"
+        }
+      },
+      {
+        "displayChecks": [
+          {
+            "index": 23,
+            "gods": [
+              {
+                "carrier": "player-3",
+                "text": "大衰神 · 剩余7次自身行动开始结算"
+              }
+            ]
+          },
+          {
+            "index": 84,
+            "gods": [
+              {
+                "carrier": "player-1",
+                "text": "小衰神 · 剩余7次自身行动开始结算"
+              },
+              {
+                "carrier": "player-3",
+                "text": "大衰神 · 剩余5次自身行动开始结算"
+              }
+            ]
+          },
+          {
+            "index": 144,
+            "gods": [
+              {
+                "carrier": "player-1",
+                "text": "小衰神 · 剩余4次自身行动开始结算"
+              },
+              {
+                "carrier": "player-3",
+                "text": "恶魔 · 剩余7次自身行动开始结算"
+              }
+            ]
+          }
+        ],
+        "robotPreviews": [],
+        "policy": "gods-v1",
+        "toolWindows": [
+          "tool:08",
+          "tool:09",
+          "card:28"
+        ],
+        "crossChecks": [],
+        "route": "3",
+        "terminal": false,
+        "players": 3,
+        "normalSpeed": true,
+        "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+        "commands": 240,
+        "auto": 67,
+        "human": 31,
+        "lifecycle": [
+          "pause stops waiting",
+          "resume",
+          "reset dialog cancel",
+          "reset",
+          "replace with humans",
+          "exit cleanup",
+          "fullscreen",
+          "390px"
+        ],
+        "cleanup": {
+          "raf": 0,
+          "canvas": 0
+        },
+        "errors": [],
+        "prefixes": [
+          29,
+          98,
+          157
+        ],
+        "fullReplay": true,
+        "prefixReplay": true,
+        "commandsMatchPriorLegalRoute": true,
+        "hashes": {
+          "replay": "f33e4de51b785a23c57ca3bc15306c01fec903ae8e98853fa5a02a2e134b6b33",
+          "state": "df7015a3fbd0228c61c17b9da9a22488601901f611ad4f76db26e430d6739157",
+          "events": "0ef6ee23c253376338c0756cc33e8403851fbea965afa53ac262e93e8e39ac6e"
+        }
+      },
+      {
+        "displayChecks": [
+          {
+            "index": 36,
+            "gods": [
+              {
+                "carrier": "player-4",
+                "text": "大财神 · 剩余7次自身行动开始结算"
+              }
+            ]
+          },
+          {
+            "index": 69,
+            "gods": [
+              {
+                "carrier": "player-4",
+                "text": "恶魔 · 剩余7次自身行动开始结算"
+              }
+            ]
+          },
+          {
+            "index": 109,
+            "gods": [
+              {
+                "carrier": "player-4",
+                "text": "衰神 · 剩余13次自身行动开始结算"
+              }
+            ]
+          }
+        ],
+        "robotPreviews": [
+          {
+            "mines": 0,
+            "bombs": 0
+          }
+        ],
+        "policy": "gods-v1",
+        "toolWindows": [
+          "tool:08",
+          "tool:09",
+          "tool:02",
+          "tool:01"
+        ],
+        "crossChecks": [],
+        "route": "4",
+        "terminal": false,
+        "players": 4,
+        "normalSpeed": true,
+        "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+        "commands": 253,
+        "auto": 80,
+        "human": 22,
+        "lifecycle": [
+          "pause stops waiting",
+          "resume",
+          "reset dialog cancel",
+          "reset",
+          "replace with humans",
+          "exit cleanup",
+          "fullscreen",
+          "390px"
+        ],
+        "cleanup": {
+          "raf": 0,
+          "canvas": 0
+        },
+        "errors": [],
+        "prefixes": [
+          42,
+          81,
+          131,
+          234
+        ],
+        "fullReplay": true,
+        "prefixReplay": true,
+        "commandsMatchPriorLegalRoute": true,
+        "hashes": {
+          "replay": "2e1e7bac66bc053b187e6600392ef57613b727c64733c9bb874a145c8e3abf88",
+          "state": "eecab193ebe0847cf2252b413e3c8653dfc141298f6d6b10089873359e6a8e65",
+          "events": "e230fcef336a3938a0adb6cb2399d00c32a5e17bc8936f464fc52f7d60b26271"
+        }
+      }
+    ],
+    "visual": {
+      "report": {
+        "humanLegalPrefix": 4,
+        "normalSpeed": true,
+        "errors": [],
+        "viewport390": true
+      },
+      "imagesInspected": [
+        "/private/tmp/richman-god-lifecycle-ui-2-visual/map-visible-4.png",
+        "/private/tmp/richman-god-lifecycle-ui-2-visual/panel-390.png"
+      ],
+      "notIncludedIn720Commands": true
+    }
+  },
+  "notTestedAsUI": [
+    "engineering vehicle equip/dream/expiration restoration in these new prefixes",
+    "all god types",
+    "all characters / dedicated native animations",
+    "same-node text overlap",
+    "native paired refresh / roaming",
+    "background throttling"
+  ],
+  "differencesRetained": [
+    "Web twelve-type initialization/five-round replenishment vs native initial odd slots/paired removal",
+    "native special slots11/13/14 and month-boundary callers",
+    "original AI, base character luck, native spinner",
+    "original market precision/RNG/chart, other asset listings, exit stack/terminal, minigame collision/presentation"
+  ],
+  "next": "S3-03b: paired god initialization/removal/replenishment and occupancy/distance/reentry gates; new semantics separate v45 when evidenced"
+}

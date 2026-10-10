@@ -1,0 +1,99 @@
+{
+  "media": {
+    "playing": 9,
+    "sources": [
+      "http://127.0.0.1:5177/richman/generated/audio/track02.mp3",
+      "http://127.0.0.1:5177/richman/generated/audio/effect-49.wav",
+      "http://127.0.0.1:5177/richman/generated/audio/effect-43.wav"
+    ],
+    "released": true,
+    "headlessOutputMuted": true
+  },
+  "route": "special3",
+  "players": 3,
+  "normalSpeed": true,
+  "map": "original Japan; real human UI + actual automatic seats; auth fixture only",
+  "computerCommands": 19,
+  "commands": 45,
+  "human": 7,
+  "auto": 36,
+  "displayChecks": [
+    {
+      "index": 0,
+      "kinds": []
+    }
+  ],
+  "lifecycle": [
+    "pause/resume",
+    "reset dialog cancel",
+    "reset",
+    "replace",
+    "exit",
+    "fullscreen",
+    "390px"
+  ],
+  "cleanup": {
+    "raf": 0,
+    "canvas": 0
+  },
+  "errors": [],
+  "prefixes": [
+    {
+      "index": 23,
+      "kind": "specialObjectsRefreshed"
+    },
+    {
+      "index": 26,
+      "kind": "specialObjectResolved"
+    }
+  ],
+  "facts": [
+    {
+      "index": 23,
+      "event": {
+        "type": "specialObjectsRefreshed",
+        "date": "1998-02-01",
+        "objects": [
+          {
+            "type": 13,
+            "node": 108
+          },
+          {
+            "type": 14,
+            "node": 4
+          }
+        ],
+        "sequence": 44,
+        "commandId": "command-25",
+        "playerId": "player-3",
+        "turn": 3
+      }
+    },
+    {
+      "index": 26,
+      "event": {
+        "type": "specialObjectResolved",
+        "objectType": 14,
+        "node": 4,
+        "targetId": "player-1",
+        "outcome": "points",
+        "before": 0,
+        "after": 500,
+        "sequence": 50,
+        "commandId": "command-28",
+        "playerId": "player-1",
+        "turn": 4
+      }
+    }
+  ],
+  "expectedVoices": [],
+  "playedVoices": [],
+  "fullReplay": true,
+  "prefixReplay": true,
+  "commandsMatchLegalPlan": true,
+  "hashes": {
+    "replay": "004d230cd607f8313211f6184f2c0d4bdc05c82f5613dd93049a686bc2332451",
+    "state": "fb73f844a4c4c51e5703e9c2880ad651b5cfb3a633f85aa7ebe597a11259f824",
+    "events": "484a66af39651edf96ce809708036c5835b2e377accb4c877245190724db7998"
+  }
+}

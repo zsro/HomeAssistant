@@ -1,0 +1,334 @@
+{
+  "stage": "S3-02c",
+  "policy": "defense-v1",
+  "preservedPolicies": [
+    "basic-v1",
+    "tools-v1",
+    "rent-v1"
+  ],
+  "rulesId": "japan-events-candidate-v44",
+  "fingerprint": "f9dbb7e9",
+  "newGameSemantics": false,
+  "nativeExecution": false,
+  "priorNativeAudit": "s3-01a-sources.json",
+  "sources": [
+    {
+      "path": "frontend/src/features/richman/game/computer-defense.ts",
+      "sha256": "34b21482dad7bd9684162ba5b75cffab780338ffe535f7b51832164fc412e5de",
+      "anchors": [
+        {
+          "text": "DEFENSE_POLICY",
+          "lines": [
+            6,
+            9
+          ]
+        },
+        {
+          "text": "export function decideComputer",
+          "lines": [
+            8
+          ]
+        },
+        {
+          "text": "const legal=",
+          "lines": [
+            18
+          ]
+        },
+        {
+          "text": "const target=",
+          "lines": [
+            19
+          ]
+        }
+      ],
+      "grade": "host heuristic/validation; not native AI evidence"
+    },
+    {
+      "path": "frontend/src/features/richman/game/computer-reactions.ts",
+      "sha256": "212ddf0a043aceefe5ae286173f092cbe8b0529ce0ac77721cdec64294f769fa",
+      "anchors": [
+        {
+          "text": "export function decideComputer",
+          "lines": [
+            15
+          ]
+        }
+      ],
+      "grade": "host heuristic/validation; not native AI evidence"
+    },
+    {
+      "path": "frontend/src/features/richman/game/computer-tools.ts",
+      "sha256": "00c5f76c27336c15137c98b0eb27b7cb70626aa3c1befae18b6a7e0fe4bb9e37",
+      "anchors": [
+        {
+          "text": "export function decideComputer",
+          "lines": [
+            67
+          ]
+        }
+      ],
+      "grade": "host heuristic/validation; not native AI evidence"
+    },
+    {
+      "path": "frontend/src/features/richman/game/computer.ts",
+      "sha256": "c42d1b5c318f2c4cda5c6befa8f43ffb8827303003d6686e0a511ea5ba85d80d",
+      "anchors": [
+        {
+          "text": "decisionPlayer",
+          "lines": [
+            11,
+            20
+          ]
+        },
+        {
+          "text": "export function computerDecision",
+          "lines": [
+            18
+          ]
+        }
+      ],
+      "grade": "host heuristic/validation; not native AI evidence"
+    },
+    {
+      "path": "frontend/src/features/richman/game/session.ts",
+      "sha256": "be387e1289b1239e17512272297b045ec49f5900042b31d82e462c15179f6e21",
+      "anchors": [
+        {
+          "text": "computerPolicy",
+          "lines": [
+            79,
+            134,
+            139,
+            328,
+            391
+          ]
+        },
+        {
+          "text": "private send",
+          "lines": [
+            250
+          ]
+        },
+        {
+          "text": "tick(milliseconds",
+          "lines": [
+            379,
+            381
+          ]
+        }
+      ],
+      "grade": "host heuristic/validation; not native AI evidence"
+    },
+    {
+      "path": "frontend/src/features/richman/ComputerPanel.tsx",
+      "sha256": "e349c130cb500c98a5b570b943f894cc5e71bf06c4018d13c4c7462fdb83a781",
+      "anchors": [
+        {
+          "text": "c.policy==='defense-v1'",
+          "lines": [
+            11
+          ]
+        }
+      ],
+      "grade": "host heuristic/validation; not native AI evidence"
+    },
+    {
+      "path": "frontend/src/pages/RichmanPage.tsx",
+      "sha256": "d4ade36e438242b51b13690df1a646e38504a53f37a8b3274a6288fce80f794d",
+      "anchors": [
+        {
+          "text": "电脑策略",
+          "lines": [
+            342
+          ]
+        }
+      ],
+      "grade": "host heuristic/validation; not native AI evidence"
+    },
+    {
+      "path": "frontend/src/features/richman/game/g3.ts",
+      "sha256": "ea51f1c7c9be00d7ed055e9dd13cb464732992a266eaededf717b60b2e4a69e0",
+      "anchors": [
+        {
+          "text": "function applyAttack",
+          "lines": [
+            149
+          ]
+        },
+        {
+          "text": "export function startAttack",
+          "lines": [
+            169
+          ]
+        },
+        {
+          "text": "export function reactG3",
+          "lines": [
+            197
+          ]
+        },
+        {
+          "text": "function consumeG3",
+          "lines": [
+            81
+          ]
+        }
+      ],
+      "grade": "preserved v44 game semantics"
+    },
+    {
+      "path": "frontend/src/features/richman/game/g2.ts",
+      "sha256": "639f9fdaadfafa0c6fed745c65f42018c9cc9bfce8a9d99db06e6e51f1ff9c17",
+      "anchors": [
+        {
+          "text": "export function enterDetention",
+          "lines": [
+            127
+          ]
+        }
+      ],
+      "grade": "preserved v44 game semantics"
+    },
+    {
+      "path": "frontend/src/features/richman/game/insurance-state.ts",
+      "sha256": "1080a67fe1f8623fd8d533d6a42b9c6603e6a0e4ea6808a9689700ee1fa68337",
+      "anchors": [
+        {
+          "text": "export function claimInsurance",
+          "lines": [
+            11
+          ]
+        }
+      ],
+      "grade": "preserved v44 game semantics"
+    },
+    {
+      "path": "frontend/src/features/richman/game/computer-defense.test.ts",
+      "sha256": "d70b21be6fa766b1a72f73868fc03defcf085c4a7434bdda064ad38d903c07ae",
+      "anchors": [
+        {
+          "text": "Hidden",
+          "lines": [
+            12
+          ]
+        },
+        {
+          "text": "source imprisonment insurance",
+          "lines": [
+            30
+          ]
+        },
+        {
+          "text": "attack breaks source alliance",
+          "lines": [
+            32
+          ]
+        }
+      ],
+      "grade": "host heuristic/validation; not native AI evidence"
+    },
+    {
+      "path": "scripts/richman/verify-computer-defense.ts",
+      "sha256": "2ed1c80dd373cba96070b1c6527bb7e7c5d860216493891d30f34d8e9f03957e",
+      "anchors": [
+        {
+          "text": "verifyComputerDefense",
+          "lines": [
+            7
+          ]
+        },
+        {
+          "text": "acquisitions.push",
+          "lines": [
+            16
+          ]
+        },
+        {
+          "text": "replayGame(nodes",
+          "lines": [
+            42,
+            43
+          ]
+        }
+      ],
+      "grade": "host heuristic/validation; not native AI evidence"
+    },
+    {
+      "path": "scripts/richman/plan-computer-defense.ts",
+      "sha256": "4392dd6a66ced4731b918f878e074600790196b67c5ca11dc8363860a91e3e11",
+      "anchors": [
+        {
+          "text": "export function",
+          "lines": [
+            14
+          ]
+        }
+      ],
+      "grade": "host heuristic/validation; not native AI evidence"
+    },
+    {
+      "path": "scripts/richman/computer-defense-ui-browser.cjs",
+      "sha256": "909b9123e71b9670651582c4ef294d1b10d3dd22116fc81b0d8364af088aa3a9",
+      "anchors": [
+        {
+          "text": "const cross=",
+          "lines": [
+            74
+          ]
+        },
+        {
+          "text": "const report=",
+          "lines": [
+            114
+          ]
+        }
+      ],
+      "grade": "host heuristic/validation; not native AI evidence"
+    },
+    {
+      "path": "scripts/richman/archive-computer-defense.ts",
+      "sha256": "198e7682c82e8b1e10291ed4eaa5c35762981dabb8ff2e7160e1b217bf1b76d4",
+      "anchors": [
+        {
+          "text": "assert.deepEqual",
+          "lines": [
+            5,
+            6,
+            8
+          ]
+        },
+        {
+          "text": "verifyComputerDefense(replay)",
+          "lines": [
+            9
+          ]
+        }
+      ],
+      "grade": "host heuristic/validation; not native AI evidence"
+    }
+  ],
+  "strategyFacts": {
+    "window": "existing attack redirect only; original winter/hostility/automatic absolution precede optional policy",
+    "target": "current legal living non-ally set; source first, otherwise seat order; missing inventory/targets decline",
+    "strength": "source4, others5; prison accumulates low7 bits, dream overwrites",
+    "automatic": "redirect does not recursively trigger receiver absolution/revenge; decline leaves original automatic revenge to engine",
+    "risk": "self protection/source priority; imprisonment source can receive insurance cash, no benefit prediction",
+    "inheritance": "all non-attack windows delegate rent-v1 unchanged",
+    "random": "no hidden sequence/RNG/seed/snapshot reads or game RNG draws",
+    "settlement": "engine owns detention, insurance and return; public disposal cannot rescue or pay original debt"
+  },
+  "preservation": {
+    "oldFixtureJsonUnchanged": 314,
+    "basicV1DecisionBodyByteUnchanged": true,
+    "toolsV1FileByteUnchanged": true,
+    "rentV1FileByteUnchanged": true,
+    "engineAndRuleFilesByteUnchanged": true
+  },
+  "differences": [
+    "custom host policy, not native AI/hostility/difficulty",
+    "automatic absolution/revenge, third-party fallback, live invalidation, winter and source insurance are domain-only in this batch",
+    "other active cards/stocks/financing/research deferred",
+    "no per-seat mixed policy or midgame takeover"
+  ]
+}

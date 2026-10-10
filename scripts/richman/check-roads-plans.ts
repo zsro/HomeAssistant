@@ -1,0 +1,3 @@
+/** Planning only, never browser acceptance. */
+import {readFileSync} from 'node:fs';import {verifyComputerRoads} from './verify-computer-roads';
+for(const route of (process.env.RICHMAN_ROUTES??'2,3,4,manual').split(',')){const p=JSON.parse(readFileSync('/private/tmp/computer-roads-'+route+'.json','utf8'));const r=await verifyComputerRoads(p.replay);console.log(route,JSON.stringify({commands:r.commands,uses:r.uses,cancellations:r.cancellations,acquisitions:r.acquisitions}));}

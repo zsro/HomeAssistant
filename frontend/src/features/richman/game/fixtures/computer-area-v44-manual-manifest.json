@@ -1,0 +1,145 @@
+{
+  "players": 3,
+  "commands": 628,
+  "turn": 91,
+  "auto": 181,
+  "human": 79,
+  "acquisitions": [
+    {
+      "id": "player-1",
+      "ai": false,
+      "item": "card:09",
+      "turn": 60,
+      "action": "magic",
+      "events": [
+        {
+          "type": "magicResolved",
+          "receipt": {
+            "node": 73,
+            "group": 5,
+            "targets": [
+              "player-1"
+            ],
+            "effect": 6,
+            "title": "得一张卡片",
+            "rows": [
+              {
+                "playerId": "player-1",
+                "lines": [
+                  "获得天使卡。"
+                ],
+                "pointsBefore": 60,
+                "pointsAfter": 60,
+                "cashBefore": 26835,
+                "cashAfter": 26835,
+                "bankBefore": 50000,
+                "bankAfter": 50000,
+                "stopBefore": 0,
+                "stopAfter": 0,
+                "previousBefore": null,
+                "previousAfter": null,
+                "received": {
+                  "itemId": "card:09",
+                  "discarded": null
+                }
+              }
+            ]
+          },
+          "sequence": 876,
+          "commandId": "command-447",
+          "playerId": "player-3",
+          "turn": 60
+        }
+      ]
+    }
+  ],
+  "uses": [
+    {
+      "ai": false,
+      "id": "player-1",
+      "item": "card:09",
+      "target": "japan:facility:4",
+      "value": 2,
+      "turn": 88,
+      "phase": "idle",
+      "affected": [
+        "japan:facility:4"
+      ],
+      "changes": [
+        {
+          "before": {
+            "id": "japan:facility:4",
+            "ownerId": "player-1",
+            "level": 0,
+            "basePrice": 5000,
+            "buildingType": 0,
+            "priceStatus": 0,
+            "research": null
+          },
+          "after": {
+            "id": "japan:facility:4",
+            "ownerId": "player-1",
+            "level": 1,
+            "basePrice": 5000,
+            "buildingType": 2,
+            "priceStatus": 0,
+            "research": null
+          }
+        }
+      ]
+    }
+  ],
+  "cancellations": [
+    {
+      "ai": false,
+      "id": "player-1",
+      "item": "card:09",
+      "turn": 88
+    }
+  ],
+  "prefixes": [
+    "card:09-acquired",
+    "cancel-before",
+    "cancel-after",
+    "card:09-confirm-before",
+    "card:09-confirm-after"
+  ],
+  "report": {
+    "policy": "area-v1",
+    "toolWindows": [
+      "tool:08",
+      "tool:09",
+      "card:29",
+      "card:27"
+    ],
+    "crossChecks": [],
+    "route": "manual",
+    "terminal": false,
+    "players": 3,
+    "normalSpeed": true,
+    "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+    "commands": 628,
+    "auto": 181,
+    "human": 79,
+    "lifecycle": [
+      "pause stops waiting",
+      "resume",
+      "reset dialog cancel",
+      "reset",
+      "replace with humans",
+      "exit cleanup",
+      "fullscreen",
+      "390px"
+    ],
+    "cleanup": {
+      "raf": 0,
+      "canvas": 0
+    },
+    "errors": []
+  },
+  "hashes": {
+    "replay": "e9d56767e0cdcc21926cafd0bc07d058bebc3094780a42dd2a98e6f5a388406f",
+    "state": "ea06811792928577c6f6a254212bb6d5fcc3ac42991058dd40482b2ffc46e4f7",
+    "events": "50e3178ba4d868efbcdad925bfdf94114688b28879beddceaa6440f27b96de71"
+  }
+}

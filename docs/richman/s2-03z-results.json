@@ -1,0 +1,339 @@
+{
+  "stage": "S2-03z",
+  "date": "2026-10-06",
+  "rulesId": "japan-events-candidate-v39",
+  "fingerprint": "3c7c9e9c",
+  "defaultMode": "siteServices",
+  "status": "normal-player prison/hospital assistance and manual shop sale/accounting implemented; two real original-map UI routes accepted within listed scope; S2-03 incomplete",
+  "progress": {
+    "itemsHistorical": {
+      "implemented": 43,
+      "accepted": 43,
+      "total": 43
+    },
+    "newsHistorical": 36,
+    "japanFortuneSlotsHistorical": 37,
+    "magicEffectsHistorical": {
+      "implemented": 12,
+      "basicUiCovered": 12,
+      "total": 12
+    },
+    "newSiteServices": [
+      "prison normal-player aid",
+      "hospital normal-player aid",
+      "manual card/tool sale and close-only company turnover"
+    ]
+  },
+  "sourceAudit": {
+    "files": 8,
+    "anchors": 30,
+    "referenceCommit": "ec7d70e693059d1e781d9d1cc2ad7f36d360d39e",
+    "nativeExecution": false
+  },
+  "checks": {
+    "tests": 1435,
+    "files": 101,
+    "execution": "full 1435/101 passed",
+    "newDomain": 27,
+    "newComponent": 3,
+    "newMatrix": 3,
+    "newRealReplay": 3,
+    "versionPlayerMatrix": 117,
+    "versions": "v1-v39",
+    "players": [
+      2,
+      3,
+      4
+    ],
+    "lint": "passed",
+    "build": "passed; existing chunk-size warning",
+    "diffCheck": "passed"
+  },
+  "browser": {
+    "actualCommands": 1061,
+    "facilityAssists": 2,
+    "sales": 4,
+    "shopClosings": 4,
+    "normalSpeed": true,
+    "map": "original Japan",
+    "worldInjection": false,
+    "authFixtureOnly": true,
+    "routes": [
+      {
+        "stage": "S2-03z",
+        "source": "real original Japan UI; normal speed; auth-only fixture; no world injection",
+        "seed": "site-services-1",
+        "players": 4,
+        "commands": 641,
+        "turn": 88,
+        "date": "1998-01-22",
+        "facilities": 1,
+        "kinds": [
+          "prison"
+        ],
+        "sales": 2,
+        "closings": 3,
+        "purchases": 3,
+        "helpReceipts": [
+          {
+            "facility": "prison",
+            "visitorId": "player-4",
+            "targetId": "player-1",
+            "cost": 30,
+            "before": 2,
+            "after": 128,
+            "pointsBefore": 90,
+            "pointsAfter": 60,
+            "hostility": -200
+          }
+        ],
+        "saleReceipts": [
+          {
+            "itemId": "tool:09",
+            "basePrice": 30,
+            "credit": 27,
+            "pointsBefore": 0,
+            "pointsAfter": 27,
+            "countBefore": 1,
+            "countAfter": 0,
+            "poolReturned": false
+          },
+          {
+            "itemId": "card:06",
+            "basePrice": 20,
+            "credit": 18,
+            "pointsBefore": 7,
+            "pointsAfter": 25,
+            "countBefore": 1,
+            "countAfter": 0,
+            "poolReturned": true
+          }
+        ],
+        "shopReceipts": [
+          {
+            "node": 107,
+            "visitorId": "player-1",
+            "turnover": 250,
+            "sales": [
+              {
+                "itemId": "tool:09",
+                "basePrice": 30,
+                "credit": 27,
+                "pointsBefore": 0,
+                "pointsAfter": 27,
+                "countBefore": 1,
+                "countAfter": 0,
+                "poolReturned": false
+              },
+              {
+                "itemId": "card:06",
+                "basePrice": 20,
+                "credit": 18,
+                "pointsBefore": 7,
+                "pointsAfter": 25,
+                "countBefore": 1,
+                "countAfter": 0,
+                "poolReturned": true
+              }
+            ],
+            "fundsBefore": 0,
+            "fundsAfter": 250,
+            "cumulativeBefore": 0,
+            "cumulativeAfter": 250
+          },
+          {
+            "node": 50,
+            "visitorId": "player-2",
+            "turnover": 300,
+            "sales": [],
+            "fundsBefore": 250,
+            "fundsAfter": 550,
+            "cumulativeBefore": 250,
+            "cumulativeAfter": 550
+          },
+          {
+            "node": 50,
+            "visitorId": "player-4",
+            "turnover": 300,
+            "sales": [],
+            "fundsBefore": 550,
+            "fundsAfter": 850,
+            "cumulativeBefore": 550,
+            "cumulativeAfter": 850
+          }
+        ],
+        "hashes": {
+          "replay": "c60ac22835247551da865847bb5d501a0d6eab721eee9d5096b8a6d0d7bfbe88",
+          "state": "3b2be8edd9d8615bcf1dbcd50b19831090cdb3a7bb512c12ba6d64fe33760eaa",
+          "events": "c9c4be6dd9122a858e021a326f7788f885d44e75bbd7f7a1b3d6d2fa7613376d"
+        },
+        "replay": "frontend/src/features/richman/game/fixtures/site-services-v39-prison-replay.json",
+        "manifest": "frontend/src/features/richman/game/fixtures/site-services-v39-prison-manifest.json",
+        "artifacts": "/private/tmp/richman-unified-ui-03z-prison",
+        "cleanup": {
+          "raf": 0,
+          "canvas": 0
+        },
+        "errors": []
+      },
+      {
+        "stage": "S2-03z",
+        "source": "real original Japan UI; normal speed; auth-only fixture; no world injection",
+        "seed": "site-services-31",
+        "players": 4,
+        "commands": 420,
+        "turn": 59,
+        "date": "1998-01-15",
+        "facilities": 1,
+        "kinds": [
+          "hospital"
+        ],
+        "sales": 2,
+        "closings": 1,
+        "purchases": 1,
+        "helpReceipts": [
+          {
+            "facility": "hospital",
+            "visitorId": "player-3",
+            "targetId": "player-4",
+            "cost": 30,
+            "before": 2,
+            "after": 128,
+            "pointsBefore": 50,
+            "pointsAfter": 20,
+            "hostility": -200
+          }
+        ],
+        "saleReceipts": [
+          {
+            "itemId": "tool:09",
+            "basePrice": 30,
+            "credit": 27,
+            "pointsBefore": 0,
+            "pointsAfter": 27,
+            "countBefore": 1,
+            "countAfter": 0,
+            "poolReturned": false
+          },
+          {
+            "itemId": "card:06",
+            "basePrice": 20,
+            "credit": 18,
+            "pointsBefore": 7,
+            "pointsAfter": 25,
+            "countBefore": 1,
+            "countAfter": 0,
+            "poolReturned": true
+          }
+        ],
+        "shopReceipts": [
+          {
+            "node": 107,
+            "visitorId": "player-1",
+            "turnover": 250,
+            "sales": [
+              {
+                "itemId": "tool:09",
+                "basePrice": 30,
+                "credit": 27,
+                "pointsBefore": 0,
+                "pointsAfter": 27,
+                "countBefore": 1,
+                "countAfter": 0,
+                "poolReturned": false
+              },
+              {
+                "itemId": "card:06",
+                "basePrice": 20,
+                "credit": 18,
+                "pointsBefore": 7,
+                "pointsAfter": 25,
+                "countBefore": 1,
+                "countAfter": 0,
+                "poolReturned": true
+              }
+            ],
+            "fundsBefore": 0,
+            "fundsAfter": 250,
+            "cumulativeBefore": 0,
+            "cumulativeAfter": 250
+          }
+        ],
+        "hashes": {
+          "replay": "0596d81ff111d05581a60bf283903bfb602325ada3499b6ef883c903e7edd7b8",
+          "state": "4b50bf1cf638b286000e59f9429272cba2110fd48fb923c930bc6feba087a0c2",
+          "events": "f4eeab69f9904665b07b668c315c79c1f57d24f2a33db4c373f028f7e2bad86c"
+        },
+        "replay": "frontend/src/features/richman/game/fixtures/site-services-v39-hospital-replay.json",
+        "manifest": "frontend/src/features/richman/game/fixtures/site-services-v39-hospital-manifest.json",
+        "artifacts": "/private/tmp/richman-unified-ui-03z-hospital",
+        "cleanup": {
+          "raf": 0,
+          "canvas": 0
+        },
+        "errors": []
+      }
+    ],
+    "default": {
+      "rulesId": "japan-events-candidate-v39",
+      "fingerprint": "3c7c9e9c",
+      "defaultMode": "siteServices",
+      "cleanup": {
+        "raf": 0,
+        "canvas": 0
+      },
+      "errors": []
+    },
+    "prefixRestoration": [
+      "tool sale",
+      "card sale",
+      "shop close",
+      "prison help",
+      "hospital help"
+    ],
+    "screenshotsInspected": [
+      "prison/facility-narrow-596.png",
+      "prison/sell-narrow-10.png",
+      "hospital/facility-narrow-374.png",
+      "hospital/facility-result-374.png"
+    ]
+  },
+  "fixes": [
+    "use event-code4 node78 for prison visit, not detention holding node84 kind8002"
+  ],
+  "notBrowserAccepted": [
+    "multiple aid targets in one visit",
+    "exact30/insufficient30 and point overflow",
+    "manual tools1..8/research tools/spare vehicles/engineer sales",
+    "help with vehicle/winter/insurance combinations",
+    "G7 actual UI restoration",
+    "nonzero shareholder dividend/loan maturity/bankruptcy after shop turnover",
+    "2/3-player site-specific UI routes"
+  ],
+  "candidateDifferences": [
+    "fixed cross-version reference; no Windows native run",
+    "normal seats only; special4 targets300-point handling deferred",
+    "hostility delta receipt without native AI matrix",
+    "existing all-goods shelf and explicit confirm UI; native owner gift/random shelf/AI/RNG not reproduced",
+    "existing general point-acquisition overflow differences retained"
+  ],
+  "deferred": [
+    "shop owner free random gift and native random shelf/supply behavior",
+    "minigames6/7/8",
+    "other asset listings",
+    "special actors",
+    "native roulette",
+    "native post-exit stack and ending",
+    "complete native research/hotel internals"
+  ],
+  "next": {
+    "stage": "S2-03aa",
+    "rulesId": "japan-events-candidate-v40",
+    "scope": "audit shop owner gift, random shelves/purchasable goods, supply and replenishment; gift-to-trade continuation, turnover and15th dividends; implement evidenced group"
+  },
+  "delivery": {
+    "committed": false,
+    "pushed": false,
+    "deployed": false
+  }
+}

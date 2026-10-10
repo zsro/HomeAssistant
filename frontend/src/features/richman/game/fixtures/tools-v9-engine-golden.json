@@ -1,0 +1,7 @@
+{
+  "evidence": "engine-only public-command plan; NOT browser acceptance",
+  "itemFingerprint": "6be76c90",
+  "commands": 1788,
+  "state": "363b60a206077029424c26713685973c86208085994a26564f14ff79fdd44096",
+  "events": "4f0a6b311d666e40c2ad56c6e7b87dc24a329bf5b81602ec8d42a722566b003a"
+}

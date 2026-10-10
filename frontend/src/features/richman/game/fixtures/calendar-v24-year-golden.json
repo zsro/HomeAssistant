@@ -1,0 +1,12 @@
+{
+  "route": "year",
+  "seed": "calendar-year-0",
+  "players": 3,
+  "commands": 123,
+  "turn": 16,
+  "startDate": "1998-12-31",
+  "endDate": "1999-01-05",
+  "elapsedDays": 5,
+  "state": "5bdeaa5ddcfa99b7db76b1c19e2e192ea16725fcd8b569c4737fd5d56948ffeb",
+  "events": "a4350f498da488942e2a390146a0e4deafaf2003daccbba1dddba4055471c762"
+}

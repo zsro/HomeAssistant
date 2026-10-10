@@ -1,0 +1,430 @@
+{
+  "baseUrl": "http://localhost:5173",
+  "normalSpeed": true,
+  "map": "original Japan; real UI commands; auth-only fixture; no game-state injection",
+  "seed": "group-two-7",
+  "rulesId": "japan-tools-candidate-v8",
+  "itemFingerprint": "717e58c0",
+  "checks": [
+    "earn points and buy all seven",
+    "real effects",
+    "pause/cancel/reset-dialog",
+    "fullscreen",
+    "390px",
+    "roadblock/remote dice",
+    "vehicle dice selector and normal 2/3 dice rolls",
+    "dismount and following foot roll",
+    "status expiry and prison release",
+    "exact replay",
+    "reset inventory",
+    "v7 mode",
+    "cleanup"
+  ],
+  "commands": 1130,
+  "turn": 166,
+  "finalMobility": {
+    "player-1": {
+      "stop": 0,
+      "winter": 0,
+      "dream": 0,
+      "prison": 0,
+      "hospital": 0,
+      "turtle": 0,
+      "vehicle": "foot",
+      "diceCount": 1,
+      "savedVehicle": "foot",
+      "savedDice": 1
+    },
+    "player-2": {
+      "stop": 0,
+      "winter": 0,
+      "dream": 0,
+      "prison": 0,
+      "hospital": 0,
+      "turtle": 0,
+      "vehicle": "foot",
+      "diceCount": 1,
+      "savedVehicle": "foot",
+      "savedDice": 1
+    }
+  },
+  "skipped": [
+    {
+      "type": "turnSkipped",
+      "reason": "stop",
+      "sequence": 346,
+      "commandId": "command-198",
+      "playerId": "player-1",
+      "turn": 29
+    },
+    {
+      "type": "turnSkipped",
+      "reason": "prison",
+      "sequence": 898,
+      "commandId": "command-508",
+      "playerId": "player-1",
+      "turn": 71
+    },
+    {
+      "type": "turnSkipped",
+      "reason": "prison",
+      "sequence": 910,
+      "commandId": "command-514",
+      "playerId": "player-1",
+      "turn": 73
+    },
+    {
+      "type": "turnSkipped",
+      "reason": "prison",
+      "sequence": 923,
+      "commandId": "command-521",
+      "playerId": "player-1",
+      "turn": 75
+    },
+    {
+      "type": "turnSkipped",
+      "reason": "prison",
+      "sequence": 938,
+      "commandId": "command-529",
+      "playerId": "player-1",
+      "turn": 77
+    },
+    {
+      "type": "turnSkipped",
+      "reason": "prison",
+      "sequence": 948,
+      "commandId": "command-534",
+      "playerId": "player-1",
+      "turn": 79
+    },
+    {
+      "type": "turnSkipped",
+      "reason": "winter",
+      "sequence": 1886,
+      "commandId": "command-1071",
+      "playerId": "player-2",
+      "turn": 154
+    },
+    {
+      "type": "turnSkipped",
+      "reason": "winter",
+      "sequence": 1907,
+      "commandId": "command-1082",
+      "playerId": "player-2",
+      "turn": 156
+    },
+    {
+      "type": "turnSkipped",
+      "reason": "winter",
+      "sequence": 1917,
+      "commandId": "command-1087",
+      "playerId": "player-2",
+      "turn": 158
+    },
+    {
+      "type": "turnSkipped",
+      "reason": "winter",
+      "sequence": 1926,
+      "commandId": "command-1092",
+      "playerId": "player-2",
+      "turn": 160
+    },
+    {
+      "type": "turnSkipped",
+      "reason": "winter",
+      "sequence": 1939,
+      "commandId": "command-1099",
+      "playerId": "player-2",
+      "turn": 162
+    }
+  ],
+  "diceSamples": [
+    {
+      "type": "diceRolled",
+      "values": [
+        6,
+        3
+      ],
+      "total": 9,
+      "sequence": 1789,
+      "commandId": "command-1021",
+      "playerId": "player-2",
+      "turn": 150
+    },
+    {
+      "type": "diceRolled",
+      "values": [
+        4,
+        3,
+        6
+      ],
+      "total": 13,
+      "sequence": 1836,
+      "commandId": "command-1047",
+      "playerId": "player-2",
+      "turn": 152
+    },
+    {
+      "type": "diceRolled",
+      "values": [
+        5,
+        2,
+        1
+      ],
+      "total": 8,
+      "sequence": 1950,
+      "commandId": "command-1106",
+      "playerId": "player-2",
+      "turn": 164
+    }
+  ],
+  "purchases": [
+    {
+      "type": "itemBought",
+      "itemId": "card:14",
+      "cost": 20,
+      "points": 100,
+      "supply": 3,
+      "sequence": 322,
+      "commandId": "command-181",
+      "playerId": "player-1",
+      "turn": 27
+    },
+    {
+      "type": "itemBought",
+      "itemId": "card:15",
+      "cost": 100,
+      "points": 0,
+      "supply": 1,
+      "sequence": 323,
+      "commandId": "command-182",
+      "playerId": "player-1",
+      "turn": 27
+    },
+    {
+      "type": "itemBought",
+      "itemId": "card:16",
+      "cost": 25,
+      "points": 85,
+      "supply": 3,
+      "sequence": 399,
+      "commandId": "command-229",
+      "playerId": "player-2",
+      "turn": 34
+    },
+    {
+      "type": "itemBought",
+      "itemId": "card:17",
+      "cost": 20,
+      "points": 65,
+      "supply": 3,
+      "sequence": 400,
+      "commandId": "command-230",
+      "playerId": "player-2",
+      "turn": 34
+    },
+    {
+      "type": "itemBought",
+      "itemId": "card:30",
+      "cost": 70,
+      "points": 40,
+      "supply": 2,
+      "sequence": 1553,
+      "commandId": "command-885",
+      "playerId": "player-1",
+      "turn": 131
+    },
+    {
+      "type": "itemBought",
+      "itemId": "tool:05",
+      "cost": 80,
+      "points": 185,
+      "supply": 9,
+      "sequence": 1762,
+      "commandId": "command-1004",
+      "playerId": "player-2",
+      "turn": 148
+    },
+    {
+      "type": "itemBought",
+      "itemId": "tool:06",
+      "cost": 150,
+      "points": 35,
+      "supply": 9,
+      "sequence": 1763,
+      "commandId": "command-1005",
+      "playerId": "player-2",
+      "turn": 148
+    }
+  ],
+  "settlements": [
+    {
+      "type": "g2Resolved",
+      "itemId": "card:14",
+      "option": {
+        "target": {
+          "kind": "player",
+          "id": "player-1"
+        },
+        "title": "玩家 1（你） · 50 号路格",
+        "detail": "本次行动不移动、不掷骰，不重复结算落点；掷骰前仍可用卡。",
+        "playerIds": [
+          "player-1"
+        ]
+      },
+      "sequence": 343,
+      "commandId": "command-197",
+      "playerId": "player-1",
+      "turn": 29
+    },
+    {
+      "type": "g2Resolved",
+      "itemId": "card:16",
+      "option": {
+        "target": {
+          "kind": "player",
+          "id": "player-1"
+        },
+        "title": "玩家 1 · 88 号路格",
+        "detail": "梦游 5 次行动，暂时改为步行，车辆入包；不能用卡、买地或升级，仍需付租。正常到期尝试恢复原车辆。",
+        "playerIds": [
+          "player-1"
+        ]
+      },
+      "sequence": 562,
+      "commandId": "command-323",
+      "playerId": "player-2",
+      "turn": 46
+    },
+    {
+      "type": "g2Resolved",
+      "itemId": "card:17",
+      "option": {
+        "target": {
+          "kind": "player",
+          "id": "player-1"
+        },
+        "title": "玩家 1 · 24 号路格",
+        "detail": "送至监狱，暂停 5 次行动；释放后从监狱路格出发。资金、地产和车辆不变。",
+        "playerIds": [
+          "player-1"
+        ]
+      },
+      "sequence": 888,
+      "commandId": "command-504",
+      "playerId": "player-2",
+      "turn": 70
+    },
+    {
+      "type": "g2Resolved",
+      "itemId": "card:30",
+      "option": {
+        "target": {
+          "kind": "player",
+          "id": "player-1"
+        },
+        "title": "玩家 1（你） · 50 号路格",
+        "detail": "含本次在内共 3 次行动，每次固定走 1 格；不抽骰，车辆保留。",
+        "playerIds": [
+          "player-1"
+        ]
+      },
+      "sequence": 1576,
+      "commandId": "command-898",
+      "playerId": "player-1",
+      "turn": 133
+    },
+    {
+      "type": "g2Resolved",
+      "itemId": "tool:05",
+      "option": {
+        "target": {
+          "kind": "player",
+          "id": "player-2"
+        },
+        "title": "玩家 2（你）",
+        "playerIds": [
+          "player-2"
+        ],
+        "detail": "改用机车，默认 2 颗骰子，可选 1–2 颗。装备的车辆不返还商店池，遥控骰子仍指定总步数 1–6。"
+      },
+      "sequence": 1785,
+      "commandId": "command-1018",
+      "playerId": "player-2",
+      "turn": 150
+    },
+    {
+      "type": "g2Resolved",
+      "itemId": "tool:06",
+      "option": {
+        "target": {
+          "kind": "player",
+          "id": "player-2"
+        },
+        "title": "玩家 2（你）",
+        "playerIds": [
+          "player-2"
+        ],
+        "detail": "改用汽车，默认 3 颗骰子，可选 1–3 颗。原车辆回到背包。装备的车辆不返还商店池，遥控骰子仍指定总步数 1–6。"
+      },
+      "sequence": 1832,
+      "commandId": "command-1044",
+      "playerId": "player-2",
+      "turn": 152
+    },
+    {
+      "type": "g2Resolved",
+      "itemId": "card:15",
+      "option": {
+        "target": {
+          "kind": "player",
+          "id": "player-1"
+        },
+        "title": "全图合格对手",
+        "playerIds": [
+          "player-2"
+        ],
+        "detail": "玩家 2：冬眠 5 次行动，清除梦游；不改变资金。监禁/住院玩家不受影响。确认消耗 1 张。"
+      },
+      "sequence": 1871,
+      "commandId": "command-1065",
+      "playerId": "player-1",
+      "turn": 153
+    }
+  ],
+  "completed": [
+    {
+      "id": "card:14",
+      "preview": "本次行动不移动、不掷骰，不重复结算落点；掷骰前仍可用卡。\n\n确认消耗 1 张卡片，取消不消耗。"
+    },
+    {
+      "id": "card:16",
+      "preview": "梦游 5 次行动，暂时改为步行，车辆入包；不能用卡、买地或升级，仍需付租。正常到期尝试恢复原车辆。\n\n确认消耗 1 张卡片，取消不消耗。"
+    },
+    {
+      "id": "card:17",
+      "preview": "送至监狱，暂停 5 次行动；释放后从监狱路格出发。资金、地产和车辆不变。\n\n确认消耗 1 张卡片，取消不消耗。"
+    },
+    {
+      "id": "card:30",
+      "preview": "含本次在内共 3 次行动，每次固定走 1 格；不抽骰，车辆保留。\n\n确认消耗 1 张卡片，取消不消耗。"
+    },
+    {
+      "id": "tool:05",
+      "preview": "改用机车，默认 2 颗骰子，可选 1–2 颗。装备的车辆不返还商店池，遥控骰子仍指定总步数 1–6。\n\n确认消耗 1 辆库存车辆，取消不消耗。"
+    },
+    {
+      "id": "tool:06",
+      "preview": "改用汽车，默认 3 颗骰子，可选 1–3 颗。原车辆回到背包。装备的车辆不返还商店池，遥控骰子仍指定总步数 1–6。\n\n确认消耗 1 辆库存车辆，取消不消耗。"
+    },
+    {
+      "id": "card:15",
+      "preview": "玩家 2：冬眠 5 次行动，清除梦游；不改变资金。监禁/住院玩家不受影响。确认消耗 1 张。\n\n确认消耗 1 张卡片，取消不消耗。"
+    }
+  ],
+  "cleanup": {
+    "raf": 0,
+    "canvas": 0
+  },
+  "errors": []
+}

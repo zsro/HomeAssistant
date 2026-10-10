@@ -1,0 +1,25 @@
+{
+  "checks": [
+    "four players rotate and wrap only after next-player confirmation",
+    "downloaded live replay reconstructs the four completed turns",
+    "two non-contiguous characters, validation, pause, reset cancellation and same-seed restart",
+    "fullscreen retains new-game dialog and 390px layout has no horizontal overflow",
+    "isolated sandbox preserves manual character selection and three-way junction fixture",
+    "three route exits during turns release all canvases and RAF callbacks"
+  ],
+  "errors": [],
+  "cleanup": [
+    {
+      "raf": 0,
+      "canvas": 0
+    },
+    {
+      "raf": 0,
+      "canvas": 0
+    },
+    {
+      "raf": 0,
+      "canvas": 0
+    }
+  ]
+}

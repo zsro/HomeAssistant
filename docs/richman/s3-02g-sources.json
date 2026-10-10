@@ -1,0 +1,418 @@
+{
+  "stage": "S3-02g",
+  "policy": "inventory-v1",
+  "preservedPolicies": [
+    "basic-v1",
+    "tools-v1",
+    "rent-v1",
+    "defense-v1",
+    "estate-v1",
+    "cash-v1",
+    "status-v1"
+  ],
+  "rulesId": "japan-events-candidate-v44",
+  "fingerprint": "f9dbb7e9",
+  "newGameSemantics": false,
+  "nativeExecution": false,
+  "priorNativeAudit": [
+    "s2-02j-sources.json",
+    "s2-03aa-sources.json",
+    "s3-02f-sources.json"
+  ],
+  "referenceCommit": "ec7d70e693059d1e781d9d1cc2ad7f36d360d39e",
+  "nativeReread": [
+    {
+      "path": "asm/rich4_card_utils.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_card_utils.asm",
+      "sha256": "937d2f587f15068f1f1280ac60d4a61c0249dbde0f206bfcc1489a29591d8181",
+      "localPath": "/private/tmp/rich4-tools-audit/rich4-master/asm/rich4_card_utils.asm",
+      "reread": true
+    },
+    {
+      "path": "asm/rich4_card_qiangduoka.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_card_qiangduoka.asm",
+      "sha256": "b29c42370a9fad411458bcdbe535b977c55e0b03259e8b83d9ec4b73a62ba32a",
+      "localPath": "/private/tmp/rich4-tools-audit/rich4-master/asm/rich4_card_qiangduoka.asm",
+      "reread": true
+    },
+    {
+      "path": "asm/rich4_card_tongmengka.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_card_tongmengka.asm",
+      "sha256": "b965d59f181e83cac7fa0bdaa17b0ddb14c3f98c6cb502125845079e41b00456",
+      "localPath": "/private/tmp/rich4-tools-audit/rich4-master/asm/rich4_card_tongmengka.asm",
+      "reread": true
+    },
+    {
+      "path": "asm/rich4_tool_utils.c",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_tool_utils.c",
+      "sha256": "12fb8cedf2a50efa98cdfbd15f55b8167a4b3d753c6677d5ba787ac50c8d4097",
+      "localPath": "/private/tmp/rich4-tools-audit/rich4-master/asm/rich4_tool_utils.c",
+      "reread": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "frontend/src/features/richman/game/computer-inventory.ts",
+      "sha256": "78afad270561435f34b47e44203a87dca2ba18ddaeac88781de4397f1f3a3a81",
+      "anchors": [
+        {
+          "text": "function inventoryChoices",
+          "lines": [
+            22
+          ]
+        },
+        {
+          "text": "function robberyGain",
+          "lines": [
+            14
+          ]
+        },
+        {
+          "text": "function decideComputer",
+          "lines": [
+            36
+          ]
+        },
+        {
+          "text": "INVENTORY_POLICY",
+          "lines": [
+            11,
+            37
+          ]
+        },
+        {
+          "text": "inventory-v1",
+          "lines": [
+            11
+          ]
+        }
+      ],
+      "grade": "existing candidate semantics / new host heuristic or validation; not original AI parity"
+    },
+    {
+      "path": "frontend/src/features/richman/game/computer-inventory.test.ts",
+      "sha256": "9bb3f3b2711b0c6f23647642bfd7f6248b5a4629c93fad492fe7567034c91ead",
+      "anchors": [
+        {
+          "text": "inventory-v1",
+          "lines": [
+            10,
+            11,
+            20,
+            21,
+            22,
+            24,
+            25,
+            28,
+            29
+          ]
+        }
+      ],
+      "grade": "existing candidate semantics / new host heuristic or validation; not original AI parity"
+    },
+    {
+      "path": "frontend/src/features/richman/game/computer-inventory-browser.test.ts",
+      "sha256": "ffdd60ab8bbde31055d4e2b4aaf7b46f27d643c85e16f4f936daabf207576e64",
+      "anchors": [
+        {
+          "text": "inventory-v1",
+          "lines": [
+            5
+          ]
+        }
+      ],
+      "grade": "existing candidate semantics / new host heuristic or validation; not original AI parity"
+    },
+    {
+      "path": "frontend/src/features/richman/game/g3.ts",
+      "sha256": "ea51f1c7c9be00d7ed055e9dd13cb464732992a266eaededf717b60b2e4a69e0",
+      "anchors": [
+        {
+          "text": "function applyG3",
+          "lines": [
+            115
+          ]
+        },
+        {
+          "text": "function tickAlliance",
+          "lines": [
+            109
+          ]
+        }
+      ],
+      "grade": "existing candidate semantics / new host heuristic or validation; not original AI parity"
+    },
+    {
+      "path": "frontend/src/features/richman/game/card-slots.ts",
+      "sha256": "d2365b896774338c9b1e25bcc91b884d6d751b11a11fee48b0bad5eedd25d56b",
+      "anchors": [
+        {
+          "text": "function receiveCardSlot",
+          "lines": [
+            9
+          ]
+        },
+        {
+          "text": "function consumeCardSlot",
+          "lines": [
+            4
+          ]
+        }
+      ],
+      "grade": "existing candidate semantics / new host heuristic or validation; not original AI parity"
+    },
+    {
+      "path": "frontend/src/features/richman/game/shop-acquisition.ts",
+      "sha256": "78667adb5cfab4f0fb8ff828e94ed610ae30bd7fc6e4923070359a4b549c72cc",
+      "anchors": [],
+      "grade": "existing candidate semantics / new host heuristic or validation; not original AI parity"
+    },
+    {
+      "path": "frontend/src/features/richman/game/session.ts",
+      "sha256": "28b6e62b4fd65f94b2996d8aa2ca07f545528f8d058deafe4c9a620fb3ff20cf",
+      "anchors": [
+        {
+          "text": "inventory-v1",
+          "lines": [
+            139
+          ]
+        }
+      ],
+      "grade": "existing candidate semantics / new host heuristic or validation; not original AI parity"
+    },
+    {
+      "path": "frontend/src/features/richman/game/computer.ts",
+      "sha256": "7187663f26753c1792b3f51d269ec0ce13977dcfb0aca67a588fb169c6f89c3d",
+      "anchors": [
+        {
+          "text": "inventory-v1",
+          "lines": [
+            7
+          ]
+        }
+      ],
+      "grade": "existing candidate semantics / new host heuristic or validation; not original AI parity"
+    },
+    {
+      "path": "frontend/src/features/richman/ComputerPanel.tsx",
+      "sha256": "82ced6bdc3abf5125920d5ac443cd0d229edd7eb7eb5b921c12b724a82a4d6fd",
+      "anchors": [
+        {
+          "text": "inventory-v1",
+          "lines": [
+            11
+          ]
+        }
+      ],
+      "grade": "existing candidate semantics / new host heuristic or validation; not original AI parity"
+    },
+    {
+      "path": "frontend/src/pages/RichmanPage.tsx",
+      "sha256": "38f03b61db923539c607ec48ed81956a4fe680bffc60195111c29f5d833239fd",
+      "anchors": [
+        {
+          "text": "inventory-v1",
+          "lines": [
+            342
+          ]
+        }
+      ],
+      "grade": "existing candidate semantics / new host heuristic or validation; not original AI parity"
+    },
+    {
+      "path": "scripts/richman/verify-computer-inventory.ts",
+      "sha256": "e36739a994119215cbf8a903c06fc319a71cf5349e74455877af9ededcb1add7",
+      "anchors": [
+        {
+          "text": "function verifyComputerInventory",
+          "lines": [
+            10
+          ]
+        },
+        {
+          "text": "inventory-v1",
+          "lines": [
+            11,
+            16
+          ]
+        }
+      ],
+      "grade": "existing candidate semantics / new host heuristic or validation; not original AI parity"
+    },
+    {
+      "path": "scripts/richman/prepare-inventory-routes.ts",
+      "sha256": "77450ceb7898f318cfe8940799e9e522c21e776f5a7e35768647ee1614183a29",
+      "anchors": [],
+      "grade": "existing candidate semantics / new host heuristic or validation; not original AI parity"
+    },
+    {
+      "path": "scripts/richman/plan-computer-inventory.ts",
+      "sha256": "4fd5b839131bae40f63f9f91157e1fce5056a9cd33bb531cb339dd478cdc237a",
+      "anchors": [
+        {
+          "text": "inventory-v1",
+          "lines": [
+            14,
+            17
+          ]
+        }
+      ],
+      "grade": "existing candidate semantics / new host heuristic or validation; not original AI parity"
+    },
+    {
+      "path": "scripts/richman/plan-computer-inventory-manual.ts",
+      "sha256": "f839368a3514f801d6da0e2b8f58bef97c410a9a9d13c3cf011586e3e5fa83ce",
+      "anchors": [
+        {
+          "text": "inventory-v1",
+          "lines": [
+            15,
+            19
+          ]
+        }
+      ],
+      "grade": "existing candidate semantics / new host heuristic or validation; not original AI parity"
+    },
+    {
+      "path": "scripts/richman/computer-inventory-ui-browser.cjs",
+      "sha256": "c5f25f4a88ad23ca1b4d1785a422704d760e27d7038ed8fb52f3ee6feab3e1fd",
+      "anchors": [
+        {
+          "text": "inventory-v1",
+          "lines": [
+            28,
+            113,
+            115
+          ]
+        }
+      ],
+      "grade": "existing candidate semantics / new host heuristic or validation; not original AI parity"
+    },
+    {
+      "path": "scripts/richman/computer-inventory-built-browser.cjs",
+      "sha256": "4272050bf42c94f1f657829c9aad99a9c742a39e7ed92f5d94759942e3cbd4d0",
+      "anchors": [
+        {
+          "text": "inventory-v1",
+          "lines": [
+            27,
+            35,
+            36,
+            45
+          ]
+        }
+      ],
+      "grade": "existing candidate semantics / new host heuristic or validation; not original AI parity"
+    },
+    {
+      "path": "scripts/richman/archive-computer-inventory.ts",
+      "sha256": "f758fee1fe54fe230de96a0caa88b12c8680f28ca75e74618e1773ba996a5d7a",
+      "anchors": [],
+      "grade": "existing candidate semantics / new host heuristic or validation; not original AI parity"
+    },
+    {
+      "path": "frontend/src/features/richman/game/computer-status.ts",
+      "sha256": "ff57f853f3d0fa81fce5b12ade8f2bc8774ab4b929e78e41fd94fa540ec29162",
+      "anchors": [
+        {
+          "text": "function decideComputer",
+          "lines": [
+            27
+          ]
+        }
+      ],
+      "grade": "existing candidate semantics / new host heuristic or validation; not original AI parity"
+    },
+    {
+      "path": "frontend/src/features/richman/game/computer-cash.ts",
+      "sha256": "a82370fc28ddb666299136056f7c8ab609c8e18e09ce7a1f29dcc681afe3eaa6",
+      "anchors": [
+        {
+          "text": "function decideComputer",
+          "lines": [
+            39
+          ]
+        }
+      ],
+      "grade": "existing candidate semantics / new host heuristic or validation; not original AI parity"
+    },
+    {
+      "path": "frontend/src/features/richman/game/computer-estate.ts",
+      "sha256": "bcce6e5aae10a0183c5b2c8af51420ab00614976d6d4ee3f40b0277409f95d30",
+      "anchors": [
+        {
+          "text": "function decideComputer",
+          "lines": [
+            41
+          ]
+        }
+      ],
+      "grade": "existing candidate semantics / new host heuristic or validation; not original AI parity"
+    },
+    {
+      "path": "frontend/src/features/richman/game/computer-defense.ts",
+      "sha256": "34b21482dad7bd9684162ba5b75cffab780338ffe535f7b51832164fc412e5de",
+      "anchors": [
+        {
+          "text": "function decideComputer",
+          "lines": [
+            8
+          ]
+        }
+      ],
+      "grade": "existing candidate semantics / new host heuristic or validation; not original AI parity"
+    },
+    {
+      "path": "frontend/src/features/richman/game/computer-reactions.ts",
+      "sha256": "212ddf0a043aceefe5ae286173f092cbe8b0529ce0ac77721cdec64294f769fa",
+      "anchors": [
+        {
+          "text": "function decideComputer",
+          "lines": [
+            15
+          ]
+        }
+      ],
+      "grade": "existing candidate semantics / new host heuristic or validation; not original AI parity"
+    },
+    {
+      "path": "frontend/src/features/richman/game/computer-tools.ts",
+      "sha256": "00c5f76c27336c15137c98b0eb27b7cb70626aa3c1befae18b6a7e0fe4bb9e37",
+      "anchors": [
+        {
+          "text": "function decideComputer",
+          "lines": [
+            67
+          ]
+        }
+      ],
+      "grade": "existing candidate semantics / new host heuristic or validation; not original AI parity"
+    }
+  ],
+  "strategyFacts": {
+    "rob": "positive point-value net after actual receive/discard/consume ordering; no ally; tools1..8 below9",
+    "ally": "both unallied including raw128; positive ordinary base-rent exposure difference; no future-god/path prediction",
+    "shop": "visible finite shelf/supply/points/15slots; one empty each25/40",
+    "confirmation": "recompute or cancel; no hidden decks or game RNG",
+    "priority": "rob then ally then status-v1; units not summed"
+  },
+  "preservation": {
+    "oldFixtureJson": 344,
+    "oldFilesChanged": [
+      "ComputerPanel.tsx",
+      "game/computer.ts",
+      "game/session.ts"
+    ],
+    "oldPolicyBodyUnchanged": true,
+    "worldUnchanged": true
+  },
+  "differences": [
+    "原精度/RNG/图表",
+    "其他资产挂牌",
+    "特殊角色",
+    "原转盘",
+    "原退出调用栈/终局",
+    "小游戏表现/碰撞",
+    "原版AI与G7原快照差异"
+  ]
+}

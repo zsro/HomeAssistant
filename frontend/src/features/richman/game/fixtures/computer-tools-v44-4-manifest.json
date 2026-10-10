@@ -1,0 +1,64 @@
+{
+  "players": 4,
+  "commands": 250,
+  "turn": 35,
+  "auto": 58,
+  "human": 46,
+  "dates": 8,
+  "used": {
+    "tool:08": 2,
+    "tool:09": 2
+  },
+  "bought": [],
+  "prefixes": [
+    "idle:paused",
+    "idle:resumed",
+    "tool:08:begin",
+    "tool:08:select-dice-v1:paused",
+    "tool:08:select-dice-v1:resumed",
+    "tool:08:confirm",
+    "tool:08:after",
+    "normal-roll",
+    "tool:09:begin",
+    "tool:09:build-nearby-anchor-v1:paused",
+    "tool:09:build-nearby-anchor-v1:resumed",
+    "tool:09:confirm",
+    "tool:09:after"
+  ],
+  "report": {
+    "policy": "tools-v1",
+    "toolWindows": [
+      "tool:08",
+      "tool:09"
+    ],
+    "crossChecks": [],
+    "route": "4",
+    "terminal": false,
+    "players": 4,
+    "normalSpeed": true,
+    "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+    "commands": 250,
+    "auto": 58,
+    "human": 46,
+    "lifecycle": [
+      "pause stops waiting",
+      "resume",
+      "reset dialog cancel",
+      "reset",
+      "replace with humans",
+      "exit cleanup",
+      "fullscreen",
+      "390px"
+    ],
+    "cleanup": {
+      "raf": 0,
+      "canvas": 0
+    },
+    "errors": []
+  },
+  "hashes": {
+    "replay": "7b8be0a0047f30cb227c2ae2fa6fae32c24571aa9a754071f1db71b6abe4ede7",
+    "state": "4ceb6e15af54435dce3c4e9aa24387e3aa177bccde6af01d9b5c9217233d5bad",
+    "events": "73cbce8d96a6eee85bee66733bf138b4e71230cdc3695cd2e6f0b00174c61534"
+  }
+}

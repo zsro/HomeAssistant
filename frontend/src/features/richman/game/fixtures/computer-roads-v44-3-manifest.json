@@ -1,0 +1,241 @@
+{
+  "players": 3,
+  "commands": 594,
+  "turn": 88,
+  "auto": 167,
+  "human": 79,
+  "acquisitions": [
+    {
+      "id": "player-3",
+      "ai": true,
+      "item": "tool:03",
+      "turn": 78,
+      "action": "buyItem",
+      "events": [
+        {
+          "type": "itemBought",
+          "itemId": "tool:03",
+          "cost": 25,
+          "points": 35,
+          "supply": 9,
+          "sequence": 967,
+          "commandId": "command-512",
+          "playerId": "player-3",
+          "turn": 78
+        }
+      ]
+    },
+    {
+      "id": "player-3",
+      "ai": true,
+      "item": "tool:04",
+      "turn": 78,
+      "action": "buyItem",
+      "events": [
+        {
+          "type": "itemBought",
+          "itemId": "tool:04",
+          "cost": 25,
+          "points": 10,
+          "supply": 9,
+          "sequence": 968,
+          "commandId": "command-513",
+          "playerId": "player-3",
+          "turn": 78
+        }
+      ]
+    }
+  ],
+  "uses": [
+    {
+      "ai": true,
+      "id": "player-3",
+      "item": "tool:03",
+      "target": {
+        "kind": "node",
+        "id": "109"
+      },
+      "turn": 87,
+      "phase": "idle",
+      "affected": null,
+      "properties": [],
+      "events": [
+        {
+          "type": "effectConsumed",
+          "playerId": "player-3",
+          "itemId": "tool:03",
+          "amount": 1,
+          "sequence": 1095,
+          "commandId": "command-581",
+          "turn": 87
+        },
+        {
+          "type": "hazardChanged",
+          "hazard": {
+            "id": 1,
+            "itemId": "tool:03",
+            "node": 109,
+            "carrier": null,
+            "remaining": 0
+          },
+          "removed": false,
+          "reason": "放置",
+          "sequence": 1096,
+          "commandId": "command-581",
+          "playerId": "player-3",
+          "turn": 87
+        }
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-3",
+      "item": "tool:04",
+      "target": {
+        "kind": "node",
+        "id": "110"
+      },
+      "turn": 87,
+      "phase": "idle",
+      "affected": null,
+      "properties": [],
+      "events": [
+        {
+          "type": "effectConsumed",
+          "playerId": "player-3",
+          "itemId": "tool:04",
+          "amount": 1,
+          "sequence": 1102,
+          "commandId": "command-587",
+          "turn": 87
+        },
+        {
+          "type": "hazardChanged",
+          "hazard": {
+            "id": 2,
+            "itemId": "tool:04",
+            "node": 110,
+            "carrier": null,
+            "remaining": 0
+          },
+          "removed": false,
+          "reason": "放置",
+          "sequence": 1103,
+          "commandId": "command-587",
+          "playerId": "player-3",
+          "turn": 87
+        }
+      ]
+    }
+  ],
+  "cancellations": [
+    {
+      "ai": false,
+      "id": "player-1",
+      "item": "tool:02",
+      "turn": 58
+    }
+  ],
+  "hazardEvents": [
+    {
+      "type": "hazardChanged",
+      "hazard": {
+        "id": 1,
+        "itemId": "tool:03",
+        "node": 109,
+        "carrier": null,
+        "remaining": 0
+      },
+      "removed": false,
+      "reason": "放置",
+      "sequence": 1096,
+      "commandId": "command-581",
+      "playerId": "player-3",
+      "turn": 87
+    },
+    {
+      "type": "hazardChanged",
+      "hazard": {
+        "id": 2,
+        "itemId": "tool:04",
+        "node": 110,
+        "carrier": null,
+        "remaining": 0
+      },
+      "removed": false,
+      "reason": "放置",
+      "sequence": 1103,
+      "commandId": "command-587",
+      "playerId": "player-3",
+      "turn": 87
+    }
+  ],
+  "stops": [],
+  "prefixes": [
+    "cancel-before",
+    "cancel-after",
+    "tool:03-acquired",
+    "tool:04-acquired",
+    "tool:03-paused",
+    "tool:03-resumed",
+    "tool:03-confirm-before",
+    "tool:03-confirm-after",
+    "hazard-放置-before",
+    "hazard-放置-after",
+    "tool:04-paused",
+    "tool:04-resumed",
+    "tool:04-confirm-before",
+    "tool:04-confirm-after"
+  ],
+  "report": {
+    "policy": "roads-v1",
+    "toolWindows": [
+      "tool:08",
+      "tool:09",
+      "card:17",
+      "card:14",
+      "tool:03",
+      "tool:04"
+    ],
+    "crossChecks": [
+      {
+        "index": 315,
+        "kind": "auction",
+        "computer": false
+      },
+      {
+        "index": 316,
+        "kind": "auction",
+        "computer": true
+      }
+    ],
+    "route": "3",
+    "terminal": false,
+    "players": 3,
+    "normalSpeed": true,
+    "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+    "commands": 594,
+    "auto": 167,
+    "human": 79,
+    "lifecycle": [
+      "pause stops waiting",
+      "resume",
+      "reset dialog cancel",
+      "reset",
+      "replace with humans",
+      "exit cleanup",
+      "fullscreen",
+      "390px"
+    ],
+    "cleanup": {
+      "raf": 0,
+      "canvas": 0
+    },
+    "errors": []
+  },
+  "hashes": {
+    "replay": "a8d0fc38179ad8373fd0168f7ab52cbd0c71258f889e592e23ede03f89337596",
+    "state": "86761bda1af92d987b73a5b09bd7c614433bac7a0b0a0351a7e9543ccbed7a78",
+    "events": "7c992954e2a1c881b77b8b38db6d42e076c892405b2f5307f1208a0900bb9d66"
+  }
+}

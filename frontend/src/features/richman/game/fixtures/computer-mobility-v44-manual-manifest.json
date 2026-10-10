@@ -1,0 +1,996 @@
+{
+  "players": 2,
+  "commands": 1384,
+  "auto": 296,
+  "human": 227,
+  "acquisitions": [
+    {
+      "ai": false,
+      "id": "player-1",
+      "item": "tool:05",
+      "turn": 31,
+      "cost": 80
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "item": "tool:05",
+      "turn": 48,
+      "cost": 80
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "item": "tool:06",
+      "turn": 170,
+      "cost": 150
+    }
+  ],
+  "uses": [
+    {
+      "ai": true,
+      "id": "player-2",
+      "item": "tool:05",
+      "turn": 50,
+      "target": {
+        "kind": "player",
+        "id": "player-2"
+      },
+      "mobilityBefore": {
+        "stop": 0,
+        "winter": 0,
+        "dream": 0,
+        "prison": 0,
+        "hospital": 0,
+        "turtle": 0,
+        "vehicle": "foot",
+        "diceCount": 1,
+        "savedVehicle": "foot",
+        "savedDice": 1,
+        "travel": 0
+      },
+      "mobilityAfter": {
+        "stop": 0,
+        "winter": 0,
+        "dream": 0,
+        "prison": 0,
+        "hospital": 0,
+        "turtle": 0,
+        "vehicle": "tool:05",
+        "diceCount": 2,
+        "savedVehicle": "foot",
+        "savedDice": 1,
+        "travel": 0
+      }
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "item": "tool:06",
+      "turn": 172,
+      "target": {
+        "kind": "player",
+        "id": "player-2"
+      },
+      "mobilityBefore": {
+        "stop": 0,
+        "winter": 0,
+        "dream": 0,
+        "prison": 0,
+        "hospital": 0,
+        "turtle": 0,
+        "vehicle": "tool:05",
+        "diceCount": 1,
+        "savedVehicle": "foot",
+        "savedDice": 1,
+        "travel": 0
+      },
+      "mobilityAfter": {
+        "stop": 0,
+        "winter": 0,
+        "dream": 0,
+        "prison": 0,
+        "hospital": 0,
+        "turtle": 0,
+        "vehicle": "tool:06",
+        "diceCount": 3,
+        "savedVehicle": "foot",
+        "savedDice": 1,
+        "travel": 0
+      }
+    }
+  ],
+  "cancellations": [
+    {
+      "ai": false,
+      "id": "player-1",
+      "item": "tool:05",
+      "turn": 33
+    }
+  ],
+  "traffic": [
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 50,
+      "before": 2,
+      "after": 1,
+      "vehicle": "tool:05"
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 56,
+      "before": 1,
+      "after": 2,
+      "vehicle": "tool:05"
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 58,
+      "before": 2,
+      "after": 1,
+      "vehicle": "tool:05"
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 60,
+      "before": 1,
+      "after": 2,
+      "vehicle": "tool:05"
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 62,
+      "before": 2,
+      "after": 1,
+      "vehicle": "tool:05"
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 70,
+      "before": 1,
+      "after": 2,
+      "vehicle": "tool:05"
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 72,
+      "before": 2,
+      "after": 1,
+      "vehicle": "tool:05"
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 78,
+      "before": 1,
+      "after": 2,
+      "vehicle": "tool:05"
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 80,
+      "before": 2,
+      "after": 1,
+      "vehicle": "tool:05"
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 84,
+      "before": 1,
+      "after": 2,
+      "vehicle": "tool:05"
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 88,
+      "before": 2,
+      "after": 1,
+      "vehicle": "tool:05"
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 96,
+      "before": 1,
+      "after": 2,
+      "vehicle": "tool:05"
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 98,
+      "before": 2,
+      "after": 1,
+      "vehicle": "tool:05"
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 100,
+      "before": 1,
+      "after": 2,
+      "vehicle": "tool:05"
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 106,
+      "before": 2,
+      "after": 1,
+      "vehicle": "tool:05"
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 120,
+      "before": 1,
+      "after": 2,
+      "vehicle": "tool:05"
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 128,
+      "before": 2,
+      "after": 1,
+      "vehicle": "tool:05"
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 130,
+      "before": 1,
+      "after": 2,
+      "vehicle": "tool:05"
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 132,
+      "before": 2,
+      "after": 1,
+      "vehicle": "tool:05"
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 140,
+      "before": 1,
+      "after": 2,
+      "vehicle": "tool:05"
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 144,
+      "before": 2,
+      "after": 1,
+      "vehicle": "tool:05"
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 148,
+      "before": 1,
+      "after": 2,
+      "vehicle": "tool:05"
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 152,
+      "before": 2,
+      "after": 1,
+      "vehicle": "tool:05"
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 166,
+      "before": 1,
+      "after": 2,
+      "vehicle": "tool:05"
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 168,
+      "before": 2,
+      "after": 1,
+      "vehicle": "tool:05"
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 172,
+      "before": 3,
+      "after": 2,
+      "vehicle": "tool:06"
+    }
+  ],
+  "rolls": [
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 50,
+      "vehicle": "tool:05",
+      "engineer": false,
+      "values": [
+        4
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 52,
+      "vehicle": "tool:05",
+      "engineer": false,
+      "values": [
+        1
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 54,
+      "vehicle": "tool:05",
+      "engineer": false,
+      "values": [
+        1
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 56,
+      "vehicle": "tool:05",
+      "engineer": false,
+      "values": [
+        5,
+        6
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 58,
+      "vehicle": "tool:05",
+      "engineer": false,
+      "values": [
+        4
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 60,
+      "vehicle": "tool:05",
+      "engineer": false,
+      "values": [
+        3,
+        1
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 62,
+      "vehicle": "tool:05",
+      "engineer": false,
+      "values": [
+        4
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 64,
+      "vehicle": "tool:05",
+      "engineer": false,
+      "values": [
+        2
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 66,
+      "vehicle": "tool:05",
+      "engineer": false,
+      "values": [
+        5
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 68,
+      "vehicle": "tool:05",
+      "engineer": false,
+      "values": [
+        6
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 70,
+      "vehicle": "tool:05",
+      "engineer": false,
+      "values": [
+        4,
+        5
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 72,
+      "vehicle": "tool:05",
+      "engineer": false,
+      "values": [
+        2
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 74,
+      "vehicle": "tool:05",
+      "engineer": false,
+      "values": [
+        1
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 76,
+      "vehicle": "tool:05",
+      "engineer": false,
+      "values": [
+        4
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 78,
+      "vehicle": "tool:05",
+      "engineer": false,
+      "values": [
+        4,
+        1
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 80,
+      "vehicle": "tool:05",
+      "engineer": false,
+      "values": [
+        1
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 82,
+      "vehicle": "tool:05",
+      "engineer": false,
+      "values": [
+        5
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 84,
+      "vehicle": "tool:05",
+      "engineer": false,
+      "values": [
+        5,
+        2
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 86,
+      "vehicle": "tool:05",
+      "engineer": false,
+      "values": [
+        4,
+        1
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 88,
+      "vehicle": "tool:05",
+      "engineer": false,
+      "values": [
+        4
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 90,
+      "vehicle": "tool:05",
+      "engineer": false,
+      "values": [
+        4
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 92,
+      "vehicle": "tool:05",
+      "engineer": false,
+      "values": [
+        6
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 94,
+      "vehicle": "tool:05",
+      "engineer": false,
+      "values": [
+        2
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 96,
+      "vehicle": "tool:05",
+      "engineer": false,
+      "values": [
+        5,
+        1
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 98,
+      "vehicle": "tool:05",
+      "engineer": false,
+      "values": [
+        4
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 100,
+      "vehicle": "tool:05",
+      "engineer": false,
+      "values": [
+        1,
+        3
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 102,
+      "vehicle": "tool:05",
+      "engineer": false,
+      "values": [
+        5,
+        1
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 104,
+      "vehicle": "tool:05",
+      "engineer": false,
+      "values": [
+        3,
+        2
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 106,
+      "vehicle": "tool:05",
+      "engineer": false,
+      "values": [
+        2
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 108,
+      "vehicle": "tool:05",
+      "engineer": false,
+      "values": [
+        4
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 110,
+      "vehicle": "tool:05",
+      "engineer": false,
+      "values": [
+        2
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 112,
+      "vehicle": "tool:05",
+      "engineer": false,
+      "values": [
+        6
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 114,
+      "vehicle": "tool:05",
+      "engineer": false,
+      "values": [
+        2
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 116,
+      "vehicle": "tool:05",
+      "engineer": false,
+      "values": [
+        4
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 118,
+      "vehicle": "tool:05",
+      "engineer": false,
+      "values": [
+        6
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 120,
+      "vehicle": "tool:05",
+      "engineer": false,
+      "values": [
+        1,
+        3
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 128,
+      "vehicle": "tool:05",
+      "engineer": false,
+      "values": [
+        4
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 130,
+      "vehicle": "tool:05",
+      "engineer": false,
+      "values": [
+        2,
+        2
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 132,
+      "vehicle": "tool:05",
+      "engineer": false,
+      "values": [
+        4
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 134,
+      "vehicle": "tool:05",
+      "engineer": false,
+      "values": [
+        5
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 136,
+      "vehicle": "tool:05",
+      "engineer": false,
+      "values": [
+        4
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 138,
+      "vehicle": "tool:05",
+      "engineer": false,
+      "values": [
+        2
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 140,
+      "vehicle": "tool:05",
+      "engineer": false,
+      "values": [
+        2,
+        4
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 142,
+      "vehicle": "tool:05",
+      "engineer": false,
+      "values": [
+        6,
+        2
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 144,
+      "vehicle": "tool:05",
+      "engineer": false,
+      "values": [
+        1
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 146,
+      "vehicle": "tool:05",
+      "engineer": false,
+      "values": [
+        1
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 148,
+      "vehicle": "tool:05",
+      "engineer": false,
+      "values": [
+        5,
+        1
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 150,
+      "vehicle": "tool:05",
+      "engineer": false,
+      "values": [
+        6,
+        1
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 152,
+      "vehicle": "tool:05",
+      "engineer": false,
+      "values": [
+        4
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 154,
+      "vehicle": "tool:05",
+      "engineer": false,
+      "values": [
+        5
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 156,
+      "vehicle": "tool:05",
+      "engineer": false,
+      "values": [
+        3
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 158,
+      "vehicle": "tool:05",
+      "engineer": false,
+      "values": [
+        1
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 160,
+      "vehicle": "tool:05",
+      "engineer": false,
+      "values": [
+        3
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 162,
+      "vehicle": "tool:05",
+      "engineer": false,
+      "values": [
+        4
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 164,
+      "vehicle": "tool:05",
+      "engineer": false,
+      "values": [
+        2
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 166,
+      "vehicle": "tool:05",
+      "engineer": false,
+      "values": [
+        4,
+        1
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 168,
+      "vehicle": "tool:05",
+      "engineer": false,
+      "values": [
+        6
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 170,
+      "vehicle": "tool:05",
+      "engineer": false,
+      "values": [
+        2
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 172,
+      "vehicle": "tool:06",
+      "engineer": false,
+      "values": [
+        2,
+        3
+      ]
+    }
+  ],
+  "engineering": [],
+  "prefixes": [
+    "tool:05-bought",
+    "cancel-before",
+    "cancel-after",
+    "tool:05-paused",
+    "tool:05-resumed",
+    "tool:05-confirm-before",
+    "tool:05-confirm-after",
+    "traffic-before",
+    "traffic-after",
+    "roll-tool:05-1",
+    "roll-tool:05-2",
+    "tool:06-bought",
+    "tool:06-paused",
+    "tool:06-resumed",
+    "tool:06-confirm-before",
+    "tool:06-confirm-after",
+    "roll-tool:06-2"
+  ],
+  "report": {
+    "robotPreviews": [],
+    "policy": "mobility-v1",
+    "toolWindows": [
+      "tool:08",
+      "tool:09",
+      "card:27",
+      "tool:02",
+      "tool:05",
+      "card:16",
+      "card:11",
+      "card:07",
+      "card:12",
+      "tool:06"
+    ],
+    "crossChecks": [],
+    "route": "manual",
+    "terminal": false,
+    "players": 2,
+    "normalSpeed": true,
+    "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+    "commands": 1384,
+    "auto": 296,
+    "human": 227,
+    "lifecycle": [
+      "pause stops waiting",
+      "resume",
+      "reset dialog cancel",
+      "reset",
+      "replace with humans",
+      "exit cleanup",
+      "fullscreen",
+      "390px"
+    ],
+    "cleanup": {
+      "raf": 0,
+      "canvas": 0
+    },
+    "errors": []
+  },
+  "hashes": {
+    "replay": "50e2b7a512bf5de9e438791ec0b63cb575b57740bae94a09ce8a77edae00fcd6",
+    "state": "44ce5c644ae4fac8ae82ab05827445e3d954c1cd50d0fa1c33fda569633ada36",
+    "events": "06c6550e0e044069744ca4e48444b37337e882f5e653dae95b1cddb60d8ce1dd"
+  }
+}

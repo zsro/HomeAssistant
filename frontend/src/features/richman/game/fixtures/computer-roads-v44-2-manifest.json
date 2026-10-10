@@ -1,0 +1,313 @@
+{
+  "players": 2,
+  "commands": 598,
+  "turn": 83,
+  "auto": 133,
+  "human": 111,
+  "acquisitions": [
+    {
+      "id": "player-2",
+      "ai": true,
+      "item": "tool:03",
+      "turn": 28,
+      "action": "buyItem",
+      "events": [
+        {
+          "type": "itemBought",
+          "itemId": "tool:03",
+          "cost": 25,
+          "points": 5,
+          "supply": 9,
+          "sequence": 330,
+          "commandId": "command-167",
+          "playerId": "player-2",
+          "turn": 28
+        }
+      ]
+    }
+  ],
+  "uses": [
+    {
+      "ai": true,
+      "id": "player-2",
+      "item": "tool:02",
+      "target": {
+        "kind": "node",
+        "id": "54"
+      },
+      "turn": 34,
+      "phase": "idle",
+      "affected": null,
+      "properties": [],
+      "events": [
+        {
+          "type": "effectConsumed",
+          "playerId": "player-2",
+          "itemId": "tool:02",
+          "amount": 1,
+          "sequence": 416,
+          "commandId": "command-214",
+          "turn": 34
+        },
+        {
+          "type": "effectResolved",
+          "definitionId": "tool:02:place-anchor-v1",
+          "sourceId": "player-2",
+          "target": {
+            "kind": "node",
+            "id": "54"
+          },
+          "sequence": 417,
+          "commandId": "command-214",
+          "playerId": "player-2",
+          "turn": 34
+        },
+        {
+          "type": "roadblockPlaced",
+          "node": 54,
+          "sequence": 418,
+          "commandId": "command-214",
+          "playerId": "player-2",
+          "turn": 34
+        }
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "item": "tool:03",
+      "target": {
+        "kind": "node",
+        "id": "53"
+      },
+      "turn": 34,
+      "phase": "idle",
+      "affected": null,
+      "properties": [],
+      "events": [
+        {
+          "type": "effectConsumed",
+          "playerId": "player-2",
+          "itemId": "tool:03",
+          "amount": 1,
+          "sequence": 424,
+          "commandId": "command-220",
+          "turn": 34
+        },
+        {
+          "type": "hazardChanged",
+          "hazard": {
+            "id": 1,
+            "itemId": "tool:03",
+            "node": 53,
+            "carrier": null,
+            "remaining": 0
+          },
+          "removed": false,
+          "reason": "放置",
+          "sequence": 425,
+          "commandId": "command-220",
+          "playerId": "player-2",
+          "turn": 34
+        }
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "item": "tool:01",
+      "target": {
+        "kind": "player",
+        "id": "player-2"
+      },
+      "turn": 82,
+      "phase": "idle",
+      "affected": null,
+      "properties": [],
+      "events": [
+        {
+          "type": "effectConsumed",
+          "playerId": "player-2",
+          "itemId": "tool:01",
+          "amount": 1,
+          "sequence": 1117,
+          "commandId": "command-591",
+          "turn": 82
+        },
+        {
+          "type": "effectResolved",
+          "definitionId": "tool:01:clear-nine-v1",
+          "sourceId": "player-2",
+          "target": {
+            "kind": "player",
+            "id": "player-2"
+          },
+          "sequence": 1118,
+          "commandId": "command-591",
+          "playerId": "player-2",
+          "turn": 82
+        },
+        {
+          "type": "roadSupplyChanged",
+          "itemId": "tool:01",
+          "amount": 1,
+          "supply": 9,
+          "sequence": 1119,
+          "commandId": "command-591",
+          "playerId": "player-2",
+          "turn": 82
+        },
+        {
+          "type": "hazardChanged",
+          "hazard": {
+            "id": 1,
+            "itemId": "tool:03",
+            "node": 53,
+            "carrier": null,
+            "remaining": 0
+          },
+          "removed": true,
+          "reason": "机器娃娃清除",
+          "sequence": 1120,
+          "commandId": "command-591",
+          "playerId": "player-2",
+          "turn": 82
+        },
+        {
+          "type": "robotCleared",
+          "path": [
+            45,
+            46,
+            47,
+            48,
+            49,
+            50,
+            51,
+            52,
+            53
+          ],
+          "cleared": [],
+          "sequence": 1121,
+          "commandId": "command-591",
+          "playerId": "player-2",
+          "turn": 82
+        }
+      ]
+    }
+  ],
+  "cancellations": [
+    {
+      "ai": false,
+      "id": "player-1",
+      "item": "tool:01",
+      "turn": 35
+    }
+  ],
+  "hazardEvents": [
+    {
+      "type": "hazardChanged",
+      "hazard": {
+        "id": 1,
+        "itemId": "tool:03",
+        "node": 53,
+        "carrier": null,
+        "remaining": 0
+      },
+      "removed": false,
+      "reason": "放置",
+      "sequence": 425,
+      "commandId": "command-220",
+      "playerId": "player-2",
+      "turn": 34
+    },
+    {
+      "type": "hazardChanged",
+      "hazard": {
+        "id": 1,
+        "itemId": "tool:03",
+        "node": 53,
+        "carrier": null,
+        "remaining": 0
+      },
+      "removed": true,
+      "reason": "机器娃娃清除",
+      "sequence": 1120,
+      "commandId": "command-591",
+      "playerId": "player-2",
+      "turn": 82
+    }
+  ],
+  "stops": [
+    {
+      "type": "roadblockStopped",
+      "node": 54,
+      "discarded": 1,
+      "sequence": 471,
+      "commandId": "command-246",
+      "playerId": "player-1",
+      "turn": 37
+    }
+  ],
+  "prefixes": [
+    "tool:03-acquired",
+    "tool:02-paused",
+    "tool:02-resumed",
+    "tool:02-confirm-before",
+    "tool:02-confirm-after",
+    "tool:03-paused",
+    "tool:03-resumed",
+    "tool:03-confirm-before",
+    "tool:03-confirm-after",
+    "hazard-放置-before",
+    "hazard-放置-after",
+    "cancel-before",
+    "cancel-after",
+    "roadblock-stop-before",
+    "roadblock-stop-after",
+    "tool:01-paused",
+    "tool:01-resumed",
+    "tool:01-confirm-before",
+    "tool:01-confirm-after",
+    "hazard-机器娃娃清除-before",
+    "hazard-机器娃娃清除-after"
+  ],
+  "report": {
+    "policy": "roads-v1",
+    "toolWindows": [
+      "tool:08",
+      "tool:09",
+      "tool:02",
+      "tool:03",
+      "tool:01"
+    ],
+    "crossChecks": [],
+    "route": "2",
+    "terminal": false,
+    "players": 2,
+    "normalSpeed": true,
+    "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+    "commands": 598,
+    "auto": 133,
+    "human": 111,
+    "lifecycle": [
+      "pause stops waiting",
+      "resume",
+      "reset dialog cancel",
+      "reset",
+      "replace with humans",
+      "exit cleanup",
+      "fullscreen",
+      "390px"
+    ],
+    "cleanup": {
+      "raf": 0,
+      "canvas": 0
+    },
+    "errors": []
+  },
+  "hashes": {
+    "replay": "6f3358805f898d782bec9cc89d5cbcefdeaa8634273fc9bbb2758530798a8509",
+    "state": "16cc9e65417ab8e1ce1562bbc92403c6f5289a7d89f8e01af491519c3ee41ff0",
+    "events": "d4a97598ecb7bf9dae29fcf75721eec2e83de13eaaf82c1d71f9d1ecf9da2284"
+  }
+}

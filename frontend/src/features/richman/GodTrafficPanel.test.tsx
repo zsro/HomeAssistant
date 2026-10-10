@@ -1,0 +1,16 @@
+import {cleanup,render,screen} from '@testing-library/react';
+import {afterEach,expect,it} from 'vitest';
+import {GameSession} from './game/session';
+import {GodTrafficPanel} from './GodTrafficPanel';
+import {godTrafficView} from './god-traffic-view';
+import type {Manifest} from './types';
+import nodes from './japan-topology.fixture.json';
+afterEach(cleanup);
+const manifest:Manifest={version:1,map:{name:'日本',width:2304,height:2304,nodes,scenery:[]},sprites:{},characters:['a','b','c'].map(id=>({id,name:id,color:'#fff',idle:[],walk:[],walkFramesPerDirection:10}))};
+function snapshot(mode:'stockCircuit'|'g6'='stockCircuit') {const session=new GameSession(manifest,{id:()=> 'god-ui',seed:()=> 'god-ui'},mode);session.start({mode,seed:'god-ui',characterIds:['c','a','b']});return session.snapshot();}
+it('separates money and resistance; follows seat mapping without altering snapshot',()=>{const s=snapshot();Object.assign(s.g6!.gods[0],{type:2,carrier:'player-1',remaining:6});const before=JSON.stringify(s);render(<GodTrafficPanel snapshot={s}/>);expect(screen.getByLabelText('玩家1神仙与交通')).toHaveTextContent('资金命运：强利好；状态/库存命运：无修正');expect(godTrafficView(s,0).actorIndex).toBe(2);expect(JSON.stringify(s)).toBe(before);});
+it('replacement, expiry and eliminated actor remove stale attachment displays',()=>{const s=snapshot();Object.assign(s.g6!.gods[0],{type:8,carrier:'player-1',remaining:1});const v=render(<GodTrafficPanel snapshot={s}/>);expect(screen.getByLabelText('玩家1神仙与交通')).toHaveTextContent('状态/库存命运：不利');s.g6!.gods[0].type=4;v.rerender(<GodTrafficPanel snapshot={s}/>);expect(screen.getByLabelText('玩家1神仙与交通')).toHaveTextContent('状态/库存命运：强利好');s.g6!.gods[0].carrier=null;v.rerender(<GodTrafficPanel snapshot={s}/>);expect(screen.getByLabelText('玩家1神仙与交通')).toHaveTextContent('未附身');s.eliminated=[2];v.rerender(<GodTrafficPanel snapshot={s}/>);expect(screen.getByLabelText('玩家1神仙与交通')).toHaveTextContent('已退出');expect(godTrafficView(s,0).badge).toBe('');});
+it('old G6 mode does not claim fortune consumers',()=>{const s=snapshot('g6');s.g6!.gods[0].carrier='player-1';render(<GodTrafficPanel snapshot={s}/>);expect(screen.queryByText(/资金命运：/)).not.toBeInTheDocument();});
+it('engineering suspension, travel and pause preserve separate timers',()=>{const s=snapshot();Object.assign(s.g6!.gods[0],{carrier:'player-1',remaining:7});s.g5!.engineers['player-1']={remaining:3,vehicle:'tool:06',dice:3,suspended:false};expect(godTrafficView(s,0).badge).toContain('工程车');s.g5!.engineers['player-1']!.suspended=true;s.g2!.players['player-1'].travel=2;expect(godTrafficView(s,0).badge).toBe('');s.paused=true;render(<GodTrafficPanel snapshot={s}/>);expect(screen.getByLabelText('玩家1神仙与交通')).toHaveTextContent('工程车暂停（梦游） · 剩余3次');expect(screen.getByLabelText('玩家1神仙与交通')).toHaveTextContent('剩余7次');expect(s.g6!.gods[0].remaining).toBe(7);s.g5!.engineers['player-1']!.vehicle='foot';expect(godTrafficView(s,0).engineer).toContain('到期继续步行');});
+
+it('labels legacy death acquisition and equipment gap without claiming native wandering',()=>{const s=snapshot(),before=JSON.stringify(s);render(<GodTrafficPanel snapshot={s}/>);expect(screen.getByText(/原版已定位到认输退出后的选人附身与双槽入口/)).toHaveTextContent('该流程尚未接入');expect(screen.getByText(/地图方向和移动动画不等于自主游走/)).toBeInTheDocument();expect(JSON.stringify(s)).toBe(before);});

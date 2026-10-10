@@ -1,0 +1,115 @@
+{
+  "players": 4,
+  "commands": 2427,
+  "turn": 199,
+  "date": "1998-02-26",
+  "deliveries": 1,
+  "researchStarted": 4,
+  "trades": 49,
+  "dateSteps": 49,
+  "afterRestore": 1,
+  "prefixes": [
+    "calendar",
+    "research-start",
+    "research-delivery",
+    "before-time-confirm",
+    "after-time-confirm",
+    "next-departure"
+  ],
+  "restores": [
+    {
+      "playerId": "player-2",
+      "turn": 198,
+      "checkpointTurn": 194,
+      "round": [
+        50,
+        49
+      ],
+      "date": [
+        "1998-02-27",
+        "1998-02-26"
+      ],
+      "changed": [
+        "balances",
+        "holdings",
+        "market",
+        "date",
+        "research",
+        "companies",
+        "finance"
+      ],
+      "inventory": [
+        1,
+        1,
+        0
+      ],
+      "research": [
+        [
+          {
+            "id": "japan:facility:4",
+            "ownerId": "player-2",
+            "level": 1,
+            "basePrice": 5000,
+            "buildingType": 4,
+            "priceStatus": 0,
+            "research": {
+              "itemId": "tool:09",
+              "remaining": 5,
+              "ownerId": "player-2"
+            }
+          }
+        ],
+        [
+          {
+            "id": "japan:facility:4",
+            "ownerId": "player-2",
+            "level": 1,
+            "basePrice": 5000,
+            "buildingType": 4,
+            "priceStatus": 0,
+            "research": {
+              "itemId": "tool:09",
+              "remaining": 4,
+              "ownerId": "player-2"
+            }
+          }
+        ]
+      ],
+      "rng": 90260517,
+      "revision": [
+        2416,
+        2417
+      ],
+      "logs": [
+        2900,
+        2902
+      ]
+    }
+  ],
+  "report": {
+    "normalSpeed": true,
+    "map": "original Japan; real UI commands; auth-only fixture; no game-state injection",
+    "circuitCommon": true,
+    "calendarCommon": true,
+    "completed": [
+      {
+        "id": "card:14",
+        "preview": "本次行动不移动、不掷骰，不重复结算落点；掷骰前仍可用卡。\n\n确认消耗 1 张卡片，取消不消耗。"
+      },
+      {
+        "id": "tool:10",
+        "preview": "恢复全体玩家位置、现金/存款、地产、库存/供应、研究、车辆/状态、神仙、道路物件及股票持仓/行情。随机序列和操作日志不倒退；从历史背包扣1台，所有旧历史清除。取消不改变任何状态。"
+      }
+    ],
+    "errors": [],
+    "cleanup": {
+      "raf": 0,
+      "canvas": 0
+    }
+  },
+  "hashes": {
+    "replay": "489995c2102c4bc7869619af961528cdea218119b3d2745ca383b5e80777a2ce",
+    "state": "fef26778a13bfb0fd9dd1ca8bcaf54da054b0339ab1b1a266481637de959104a",
+    "events": "a850c5d90e3c7dd00115f79f700196c2c477798236f031fe74c6b832e1adf8e7"
+  }
+}

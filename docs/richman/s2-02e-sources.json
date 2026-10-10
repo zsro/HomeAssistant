@@ -1,0 +1,51 @@
+{
+  "referenceCommit": "ec7d70e693059d1e781d9d1cc2ad7f36d360d39e",
+  "evidence": "B: pinned reconstruction source; A: existing local item bytes; not original runtime equivalence",
+  "sources": [
+    {
+      "path": "asm/rich4_tool_luzhang.asm",
+      "sha256": "309e1306470462c1056376f0f63014024b3c65ea89cb0f38d9ffc0660c0a6f9c",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_tool_luzhang.asm"
+    },
+    {
+      "path": "asm/rich4_tool_jiqiwawa.asm",
+      "sha256": "913608b2555e14ad15ee105e0617aa7ced659642f02e3defc6e54e1a9c486fc4",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_tool_jiqiwawa.asm"
+    },
+    {
+      "path": "asm/rich4_tool_utils.c",
+      "sha256": "12fb8cedf2a50efa98cdfbd15f55b8167a4b3d753c6677d5ba787ac50c8d4097",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_tool_utils.c"
+    },
+    {
+      "path": "asm/rich4_shop.asm",
+      "sha256": "2273fa44c0cbc7d4f508006b917b4f2c412a19e33014abd968435c29e0770410",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_shop.asm"
+    },
+    {
+      "path": "asm/rich4_new_game.asm",
+      "sha256": "0abb3c6ee86e22c768480573e365dcefb692f69ffa701d5ff027cf4d1b2bf86a",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_new_game.asm"
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "sha256": "2874c1a3e0ca1d0da5afe4cb93e42cf2d6f6fa864dbee11d7bcaa028af07d94a",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_core_actions.asm"
+    },
+    {
+      "path": "asm/rich4_objects.asm",
+      "sha256": "a2d3c8c9d6946625df6f5b26a981cbae195d445f4b5de6447dea033a11adcaf6",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_objects.asm"
+    },
+    {
+      "path": "asm/rich4_player_utils.asm",
+      "sha256": "17479913576a004458908f124c4d7e94361dab41a501830d2ecb87eb7b438f01",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_utils.asm"
+    },
+    {
+      "path": "asm/rich4_ui_use_tool.asm",
+      "sha256": "fa16767708c30617610771e1eb6e0003b7576a2be2efc34d92f29a631fa7754a",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_ui_use_tool.asm"
+    }
+  ]
+}

@@ -1,0 +1,173 @@
+{
+  "stage": "S3-03c",
+  "referenceCommit": "ec7d70e693059d1e781d9d1cc2ad7f36d360d39e",
+  "nativeExecution": false,
+  "sources": [
+    {
+      "path": "asm/rich4_load_map.asm",
+      "sha256": "7a555911e15b8c947c6c281b95c23bf536dba92baca20929ab1666ed31df3987",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_load_map.asm"
+    },
+    {
+      "path": "asm/rich4_objects.asm",
+      "sha256": "a2d3c8c9d6946625df6f5b26a981cbae195d445f4b5de6447dea033a11adcaf6",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_objects.asm"
+    },
+    {
+      "path": "asm/rich4_node_utils.asm",
+      "sha256": "c49fef7051acf5d605d107e35fad1a580d66b39e468763ffb9e59fc2c1d286ce",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_node_utils.asm"
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "sha256": "2874c1a3e0ca1d0da5afe4cb93e42cf2d6f6fa864dbee11d7bcaa028af07d94a",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_core_actions.asm"
+    },
+    {
+      "path": "asm/rich4_player_utils.asm",
+      "sha256": "17479913576a004458908f124c4d7e94361dab41a501830d2ecb87eb7b438f01",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_utils.asm"
+    },
+    {
+      "path": "asm/rich4_hospital_utils.asm",
+      "sha256": "ba23adbaa7ccc396f3b99d8854285ee222aea8c1b81bcfc0637e72a6e56c145a",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_hospital_utils.asm"
+    },
+    {
+      "path": "asm/rich4_tool_utils.c",
+      "sha256": "12fb8cedf2a50efa98cdfbd15f55b8167a4b3d753c6677d5ba787ac50c8d4097",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_tool_utils.c"
+    },
+    {
+      "path": "asm/rich4_tool_gongchengche.asm",
+      "sha256": "59198ff193a5ec99e61cec80d41654097e13ed910267286ee8bd104ac7d10ee9",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_tool_gongchengche.asm"
+    },
+    {
+      "path": "asm/rich4.asm",
+      "sha256": "30904cbb4f23a6b74fc1b80ad023bd7dff11b441c2c1978f768f9891d099d64a",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4.asm"
+    }
+  ],
+  "facts": [
+    {
+      "id": "SPECIAL-01",
+      "file": "rich4_load_map.asm",
+      "lines": [
+        255,
+        307
+      ],
+      "finding": "Initialize odd1..11 then13/14. v46 uses same order; legacy15 remains explicitly separate."
+    },
+    {
+      "id": "SPECIAL-02",
+      "file": "rich4_player_utils.asm",
+      "lines": [
+        685,
+        718
+      ],
+      "finding": "ref48baf8 is remaining movement, decremented per completed step; move-one-step dispatch checks zero. Not a dream flag."
+    },
+    {
+      "id": "SPECIAL-03",
+      "file": "rich4_player_core_actions.asm",
+      "lines": [
+        2584,
+        2602
+      ],
+      "finding": "11/13/14 have separate dispatch from attachable1..10/12. Ordinary actor IDs0..3; special actors separate."
+    },
+    {
+      "id": "SPECIAL-04",
+      "file": "rich4_player_core_actions.asm",
+      "lines": [
+        2901,
+        2967
+      ],
+      "finding": "11 zero-remaining gate; remove11 BEFORE ordinary vehicle check; nonzero traffic skips hospital, foot calls preparation then hospital3. No card reaction window."
+    },
+    {
+      "id": "SPECIAL-04b",
+      "file": "rich4_tool_gongchengche.asm",
+      "lines": [
+        18,
+        58
+      ],
+      "finding": "Engineering sets traffic+17 to0x1f (nonzero), so active engineer also avoids object11. Web stores active engineer separately from foot mobility; gate must include non-suspended engineer."
+    },
+    {
+      "id": "SPECIAL-05",
+      "file": "rich4_hospital_utils.asm",
+      "lines": [
+        30,
+        187
+      ],
+      "finding": "Hospital shared entry relocates/updates absence and calls fcn44ba63 with duration*2000*priceIndex; existing insurance integration reused. No added payment debt or attack response."
+    },
+    {
+      "id": "SPECIAL-06",
+      "file": "rich4_player_core_actions.asm",
+      "lines": [
+        2968,
+        3015
+      ],
+      "finding": "13 ordinary final stop calls receive_random_tool; only returned0 retains object. Nonzero removes13 and shows selected tool."
+    },
+    {
+      "id": "SPECIAL-07",
+      "file": "rich4_tool_utils.c",
+      "lines": [
+        12,
+        64
+      ],
+      "finding": "Weighted current finite supply for tool1..8 only; selected ID returned even if receive_tool refuses stack>=9. Empty pool returns0 without draw. Full stack means remove object, no supply decrement, no retry. Corrects prior shorthand successful receipt."
+    },
+    {
+      "id": "SPECIAL-08",
+      "file": "rich4_player_core_actions.asm",
+      "lines": [
+        3114,
+        3160
+      ],
+      "finding": "14 ordinary final stop removes then adds500 via ADD WORD player+48 (uint16 wrap), no fee or company revenue. Special actor branches deferred."
+    },
+    {
+      "id": "SPECIAL-09",
+      "file": "rich4_player_core_actions.asm",
+      "lines": [
+        4830,
+        4874
+      ],
+      "finding": "After day15 dividend/lottery check and month helper, capture13 old node (+290), remove13, sample distant from OLD node, place13; repeat14 (+314). Absent old node0 means no distance. Corrects previous report implied generic refresh."
+    },
+    {
+      "id": "SPECIAL-10",
+      "file": "rich4_objects.asm",
+      "lines": [
+        139,
+        254
+      ],
+      "finding": "First12 slots removal pairs XOR1;13/14 never pair. Reuse shared sampler and busy-slot behavior; include special road occupancy."
+    },
+    {
+      "id": "SPECIAL-11",
+      "file": "rich4.asm",
+      "lines": [
+        4320,
+        4357
+      ],
+      "finding": "Explosion uses shared object removal. Web fixed initial hit set includes special objects; newly paired spawn not recursively hit, native mutable traversal remains difference."
+    }
+  ],
+  "corrections": [
+    "13 selected nonzero is not proof inventory increased: full selected kind still removes object",
+    "month13/14 sample distant from captured old node, not unconditional origin0"
+  ],
+  "implemented": "ordinary-seat road11/13/14 final stops; pair11/12; tool1..8 pools/full outcome; uint16 points; ordered month refresh; shared occupancy/nuclear removal/G7 restore",
+  "differences": [
+    "native RNG/voice draws/empty-cap protection and transient double-slot reentrancy retained",
+    "special actors4+ and15 acquisition/pool retained as deferred",
+    "special object teleport selection, native mutable blast traversal and original sprites/spinner deferred",
+    "no Windows runtime validation; shared candidate detention/vehicle status semantics retained"
+  ]
+}

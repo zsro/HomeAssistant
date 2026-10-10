@@ -1,0 +1,392 @@
+{
+  "date": "2026-10-05",
+  "slice": "S2-03c",
+  "stageComplete": false,
+  "newsImplemented": 8,
+  "newsAccepted": 8,
+  "newsTotal": 36,
+  "newNews": [
+    5,
+    8,
+    9,
+    15
+  ],
+  "itemsImplemented": 43,
+  "itemsHistoricalAccepted": 43,
+  "rulesId": "japan-events-candidate-v16",
+  "fingerprint": "68c6abd6",
+  "checks": {
+    "frontend": {
+      "numTotalTests": 449,
+      "numPassedTests": 449,
+      "numFailedTests": 0,
+      "success": true
+    },
+    "newPropertyDomainTests": 21,
+    "newNewsPanelTests": 1,
+    "newWorkerModeRegressionTests": 3,
+    "newBrowserGoldenTests": 1,
+    "versionPlayerMatrix": 48,
+    "lint": "passed",
+    "build": "passed",
+    "sourceGitBlobIdentitiesVerified": 5,
+    "pythonResourceSuite": "not rerun; earlier24 historical"
+  },
+  "browser": {
+    "normalSpeed": true,
+    "map": "original Japan; real UI commands; auth-only fixture; no game-state injection",
+    "commands": 504,
+    "turn": 71,
+    "players": 3,
+    "completedNews": [
+      25,
+      8,
+      15,
+      23,
+      9,
+      5
+    ],
+    "cleanup": {
+      "raf": 0,
+      "canvas": 0
+    },
+    "errors": []
+  },
+  "news": [
+    {
+      "type": "newsResolved",
+      "newsId": 25,
+      "title": "股市全面上涨",
+      "node": 13,
+      "skipped": [
+        29,
+        27,
+        20,
+        22,
+        7,
+        28,
+        14,
+        1,
+        12
+      ],
+      "money": [],
+      "stocks": [
+        {
+          "id": "jp:24",
+          "before": 16000,
+          "after": 17600
+        },
+        {
+          "id": "jp:25",
+          "before": 9900,
+          "after": 10850
+        },
+        {
+          "id": "jp:26",
+          "before": 2200,
+          "after": 2420
+        },
+        {
+          "id": "jp:27",
+          "before": 2800,
+          "after": 3080
+        },
+        {
+          "id": "jp:28",
+          "before": 30000,
+          "after": 33000
+        },
+        {
+          "id": "jp:29",
+          "before": 3500,
+          "after": 3850
+        },
+        {
+          "id": "jp:30",
+          "before": 54000,
+          "after": 59400
+        },
+        {
+          "id": "jp:31",
+          "before": 83000,
+          "after": 91300
+        },
+        {
+          "id": "jp:32",
+          "before": 30000,
+          "after": 33000
+        },
+        {
+          "id": "jp:33",
+          "before": 22500,
+          "after": 24700
+        },
+        {
+          "id": "jp:34",
+          "before": 30000,
+          "after": 33000
+        },
+        {
+          "id": "jp:35",
+          "before": 15000,
+          "after": 16500
+        }
+      ],
+      "publicFund": 0,
+      "cursor": 10,
+      "sequence": 41,
+      "commandId": "command-21",
+      "playerId": "player-2",
+      "turn": 2
+    },
+    {
+      "type": "newsResolved",
+      "newsId": 8,
+      "title": "土地最多者获现金奖励",
+      "node": 13,
+      "skipped": [
+        21,
+        32,
+        16,
+        30
+      ],
+      "money": [
+        {
+          "playerId": "player-3",
+          "cashBefore": 146500,
+          "cashAfter": 156500,
+          "bankBefore": 150400,
+          "bankAfter": 150400
+        }
+      ],
+      "stocks": [],
+      "publicFund": 0,
+      "cursor": 15,
+      "propertyChanges": {
+        "candidates": [],
+        "properties": [],
+        "counts": [
+          {
+            "playerId": "player-1",
+            "count": 1
+          },
+          {
+            "playerId": "player-2",
+            "count": 0
+          },
+          {
+            "playerId": "player-3",
+            "count": 2
+          }
+        ],
+        "hotel": []
+      },
+      "sequence": 146,
+      "commandId": "command-80",
+      "playerId": "player-3",
+      "turn": 9
+    },
+    {
+      "type": "newsResolved",
+      "newsId": 15,
+      "title": "随机普通地产建筑降级",
+      "node": 13,
+      "skipped": [
+        35,
+        13
+      ],
+      "money": [],
+      "stocks": [],
+      "publicFund": 0,
+      "cursor": 18,
+      "propertyChanges": {
+        "candidates": [
+          "japan:land:16",
+          "japan:land:17",
+          "japan:land:21"
+        ],
+        "properties": [
+          {
+            "before": {
+              "id": "japan:land:16",
+              "ownerId": null,
+              "level": 1,
+              "buildingType": 0,
+              "priceStatus": 0,
+              "research": null
+            },
+            "after": {
+              "id": "japan:land:16",
+              "ownerId": null,
+              "level": 0,
+              "buildingType": 0,
+              "priceStatus": 0,
+              "research": null
+            }
+          }
+        ],
+        "counts": [],
+        "hotel": []
+      },
+      "sequence": 167,
+      "commandId": "command-91",
+      "playerId": "player-1",
+      "turn": 10
+    },
+    {
+      "type": "newsResolved",
+      "newsId": 23,
+      "title": "银行加发10%储金红利",
+      "node": 61,
+      "skipped": [
+        19,
+        34
+      ],
+      "money": [
+        {
+          "playerId": "player-1",
+          "cashBefore": 146200,
+          "cashAfter": 146200,
+          "bankBefore": 150000,
+          "bankAfter": 165000
+        },
+        {
+          "playerId": "player-2",
+          "cashBefore": 144600,
+          "cashAfter": 144600,
+          "bankBefore": 151400,
+          "bankAfter": 166540
+        },
+        {
+          "playerId": "player-3",
+          "cashBefore": 141500,
+          "cashAfter": 141500,
+          "bankBefore": 150800,
+          "bankAfter": 165880
+        }
+      ],
+      "stocks": [],
+      "publicFund": 0,
+      "cursor": 21,
+      "sequence": 562,
+      "commandId": "command-310",
+      "playerId": "player-3",
+      "turn": 42
+    },
+    {
+      "type": "newsResolved",
+      "newsId": 9,
+      "title": "土地最少者获现金补助",
+      "node": 61,
+      "skipped": [
+        26
+      ],
+      "money": [
+        {
+          "playerId": "player-1",
+          "cashBefore": 134211,
+          "cashAfter": 139211,
+          "bankBefore": 165000,
+          "bankAfter": 165000
+        }
+      ],
+      "stocks": [],
+      "publicFund": 0,
+      "cursor": 23,
+      "propertyChanges": {
+        "candidates": [],
+        "properties": [],
+        "counts": [
+          {
+            "playerId": "player-1",
+            "count": 3
+          },
+          {
+            "playerId": "player-2",
+            "count": 4
+          },
+          {
+            "playerId": "player-3",
+            "count": 8
+          }
+        ],
+        "hotel": []
+      },
+      "sequence": 640,
+      "commandId": "command-352",
+      "playerId": "player-2",
+      "turn": 47
+    },
+    {
+      "type": "newsResolved",
+      "newsId": 5,
+      "title": "随机建筑拆除并收回土地",
+      "node": 94,
+      "skipped": [
+        33,
+        6,
+        2,
+        18
+      ],
+      "money": [],
+      "stocks": [],
+      "publicFund": 0,
+      "cursor": 28,
+      "propertyChanges": {
+        "candidates": [
+          "japan:land:17",
+          "japan:land:21"
+        ],
+        "properties": [
+          {
+            "before": {
+              "id": "japan:land:17",
+              "ownerId": null,
+              "level": 1,
+              "buildingType": 0,
+              "priceStatus": 0,
+              "research": null
+            },
+            "after": {
+              "id": "japan:land:17",
+              "ownerId": null,
+              "level": 0,
+              "buildingType": 0,
+              "priceStatus": 0,
+              "research": null
+            }
+          }
+        ],
+        "counts": [],
+        "hotel": []
+      },
+      "sequence": 909,
+      "commandId": "command-503",
+      "playerId": "player-2",
+      "turn": 71
+    }
+  ],
+  "independentReplayChecks": [
+    "news8: actual land counts, first-seat extreme and cash-only award independently verified",
+    "news15: actual target belongs to full eligible set; single property ownership/level change; other properties and money unchanged",
+    "news9: actual land counts, first-seat extreme and cash-only award independently verified",
+    "news5: actual target belongs to full eligible set; single property ownership/level change; other properties and money unchanged"
+  ],
+  "replay": {
+    "path": "frontend/src/features/richman/game/fixtures/property-news-v16-replay.json",
+    "golden": "frontend/src/features/richman/game/fixtures/property-news-v16-golden.json",
+    "stateSha256": "6390036ccca9772e42d74b338ff69e6e55e7009e5c8adfd55bd02402782c3596",
+    "eventsSha256": "8ec5193eb17e195a7f4434195b277d8eeb9b998573bd3d9b2c846e39af69ddf4"
+  },
+  "rawEvidence": "/private/tmp/richman-unified-ui-03c",
+  "plannedCommands": 500,
+  "actualFix": "ItemPanel missed events/news/propertyNews in nearby worker modes; actual browser failed at first worker click, fixed and rerun successfully; old rules/fingerprints unchanged",
+  "limits": [
+    "eight-event subset explicitly skips28 unsupported candidates; not full original distribution",
+    "browser news5/15 targets were unowned ordinary buildings; owned buildings, chains, facility/research cancellation and hotel release are domain tests only",
+    "three-player71-turn route, not complete match or all43 UI rerun",
+    "calendar/interest/loans and original Windows runtime remain unverified",
+    "news15 intentionally narrows eligibility to ordinary built land to avoid original empty target mismatch",
+    "speech/animation RNG and original news graphics not reproduced"
+  ]
+}

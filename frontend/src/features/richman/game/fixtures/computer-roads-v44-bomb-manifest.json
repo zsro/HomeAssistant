@@ -1,0 +1,424 @@
+{
+  "players": 2,
+  "commands": 1118,
+  "turn": 149,
+  "auto": 223,
+  "human": 213,
+  "acquisitions": [
+    {
+      "id": "player-2",
+      "ai": true,
+      "item": "tool:01",
+      "turn": 80,
+      "action": "buyItem",
+      "events": [
+        {
+          "type": "itemBought",
+          "itemId": "tool:01",
+          "cost": 15,
+          "points": 165,
+          "supply": 8,
+          "sequence": 1140,
+          "commandId": "command-574",
+          "playerId": "player-2",
+          "turn": 80
+        }
+      ]
+    },
+    {
+      "id": "player-2",
+      "ai": true,
+      "item": "tool:02",
+      "turn": 80,
+      "action": "buyItem",
+      "events": [
+        {
+          "type": "itemBought",
+          "itemId": "tool:02",
+          "cost": 30,
+          "points": 135,
+          "supply": 8,
+          "sequence": 1141,
+          "commandId": "command-575",
+          "playerId": "player-2",
+          "turn": 80
+        }
+      ]
+    },
+    {
+      "id": "player-2",
+      "ai": true,
+      "item": "tool:03",
+      "turn": 80,
+      "action": "buyItem",
+      "events": [
+        {
+          "type": "itemBought",
+          "itemId": "tool:03",
+          "cost": 25,
+          "points": 110,
+          "supply": 9,
+          "sequence": 1142,
+          "commandId": "command-576",
+          "playerId": "player-2",
+          "turn": 80
+        }
+      ]
+    },
+    {
+      "id": "player-2",
+      "ai": true,
+      "item": "tool:04",
+      "turn": 80,
+      "action": "buyItem",
+      "events": [
+        {
+          "type": "itemBought",
+          "itemId": "tool:04",
+          "cost": 25,
+          "points": 85,
+          "supply": 9,
+          "sequence": 1143,
+          "commandId": "command-577",
+          "playerId": "player-2",
+          "turn": 80
+        }
+      ]
+    }
+  ],
+  "uses": [
+    {
+      "ai": true,
+      "id": "player-2",
+      "item": "tool:02",
+      "target": {
+        "kind": "node",
+        "id": "87"
+      },
+      "turn": 44,
+      "phase": "idle",
+      "affected": null,
+      "properties": [],
+      "events": [
+        {
+          "type": "effectConsumed",
+          "playerId": "player-2",
+          "itemId": "tool:02",
+          "amount": 1,
+          "sequence": 573,
+          "commandId": "command-293",
+          "turn": 44
+        },
+        {
+          "type": "effectResolved",
+          "definitionId": "tool:02:place-anchor-v1",
+          "sourceId": "player-2",
+          "target": {
+            "kind": "node",
+            "id": "87"
+          },
+          "sequence": 574,
+          "commandId": "command-293",
+          "playerId": "player-2",
+          "turn": 44
+        },
+        {
+          "type": "roadblockPlaced",
+          "node": 87,
+          "sequence": 575,
+          "commandId": "command-293",
+          "playerId": "player-2",
+          "turn": 44
+        }
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "item": "tool:03",
+      "target": {
+        "kind": "node",
+        "id": "55"
+      },
+      "turn": 86,
+      "phase": "idle",
+      "affected": null,
+      "properties": [],
+      "events": [
+        {
+          "type": "effectConsumed",
+          "playerId": "player-2",
+          "itemId": "tool:03",
+          "amount": 1,
+          "sequence": 1243,
+          "commandId": "command-633",
+          "turn": 86
+        },
+        {
+          "type": "hazardChanged",
+          "hazard": {
+            "id": 1,
+            "itemId": "tool:03",
+            "node": 55,
+            "carrier": null,
+            "remaining": 0
+          },
+          "removed": false,
+          "reason": "放置",
+          "sequence": 1244,
+          "commandId": "command-633",
+          "playerId": "player-2",
+          "turn": 86
+        }
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "item": "tool:04",
+      "target": {
+        "kind": "node",
+        "id": "66"
+      },
+      "turn": 92,
+      "phase": "idle",
+      "affected": null,
+      "properties": [],
+      "events": [
+        {
+          "type": "effectConsumed",
+          "playerId": "player-2",
+          "itemId": "tool:04",
+          "amount": 1,
+          "sequence": 1356,
+          "commandId": "command-697",
+          "turn": 92
+        },
+        {
+          "type": "hazardChanged",
+          "hazard": {
+            "id": 2,
+            "itemId": "tool:04",
+            "node": 66,
+            "carrier": null,
+            "remaining": 0
+          },
+          "removed": false,
+          "reason": "放置",
+          "sequence": 1357,
+          "commandId": "command-697",
+          "playerId": "player-2",
+          "turn": 92
+        }
+      ]
+    }
+  ],
+  "cancellations": [
+    {
+      "ai": false,
+      "id": "player-1",
+      "item": "tool:01",
+      "turn": 47
+    }
+  ],
+  "hazardEvents": [
+    {
+      "type": "hazardChanged",
+      "hazard": {
+        "id": 1,
+        "itemId": "tool:03",
+        "node": 55,
+        "carrier": null,
+        "remaining": 0
+      },
+      "removed": false,
+      "reason": "放置",
+      "sequence": 1244,
+      "commandId": "command-633",
+      "playerId": "player-2",
+      "turn": 86
+    },
+    {
+      "type": "hazardChanged",
+      "hazard": {
+        "id": 2,
+        "itemId": "tool:04",
+        "node": 66,
+        "carrier": null,
+        "remaining": 0
+      },
+      "removed": false,
+      "reason": "放置",
+      "sequence": 1357,
+      "commandId": "command-697",
+      "playerId": "player-2",
+      "turn": 92
+    },
+    {
+      "type": "hazardChanged",
+      "hazard": {
+        "id": 2,
+        "itemId": "tool:04",
+        "node": 66,
+        "carrier": "player-2",
+        "remaining": 38
+      },
+      "removed": false,
+      "reason": "携带炸弹",
+      "sequence": 2134,
+      "commandId": "command-1102",
+      "playerId": "player-2",
+      "turn": 146
+    },
+    {
+      "type": "hazardChanged",
+      "hazard": {
+        "id": 2,
+        "itemId": "tool:04",
+        "node": 67,
+        "carrier": "player-2",
+        "remaining": 37
+      },
+      "removed": false,
+      "reason": "移动倒数",
+      "sequence": 2158,
+      "commandId": "command-1113",
+      "playerId": "player-2",
+      "turn": 148
+    },
+    {
+      "type": "hazardChanged",
+      "hazard": {
+        "id": 2,
+        "itemId": "tool:04",
+        "node": 68,
+        "carrier": "player-2",
+        "remaining": 36
+      },
+      "removed": false,
+      "reason": "移动倒数",
+      "sequence": 2161,
+      "commandId": "command-1114",
+      "playerId": "player-2",
+      "turn": 148
+    },
+    {
+      "type": "hazardChanged",
+      "hazard": {
+        "id": 2,
+        "itemId": "tool:04",
+        "node": 69,
+        "carrier": "player-2",
+        "remaining": 35
+      },
+      "removed": false,
+      "reason": "移动倒数",
+      "sequence": 2164,
+      "commandId": "command-1115",
+      "playerId": "player-2",
+      "turn": 148
+    },
+    {
+      "type": "hazardChanged",
+      "hazard": {
+        "id": 2,
+        "itemId": "tool:04",
+        "node": 70,
+        "carrier": "player-2",
+        "remaining": 34
+      },
+      "removed": false,
+      "reason": "移动倒数",
+      "sequence": 2167,
+      "commandId": "command-1116",
+      "playerId": "player-2",
+      "turn": 148
+    }
+  ],
+  "stops": [
+    {
+      "type": "roadblockStopped",
+      "node": 87,
+      "discarded": 3,
+      "sequence": 625,
+      "commandId": "command-319",
+      "playerId": "player-1",
+      "turn": 47
+    }
+  ],
+  "prefixes": [
+    "tool:02-paused",
+    "tool:02-resumed",
+    "tool:02-confirm-before",
+    "tool:02-confirm-after",
+    "cancel-before",
+    "cancel-after",
+    "roadblock-stop-before",
+    "roadblock-stop-after",
+    "tool:01-acquired",
+    "tool:02-acquired",
+    "tool:03-acquired",
+    "tool:04-acquired",
+    "tool:03-paused",
+    "tool:03-resumed",
+    "tool:03-confirm-before",
+    "tool:03-confirm-after",
+    "hazard-放置-before",
+    "hazard-放置-after",
+    "tool:04-paused",
+    "tool:04-resumed",
+    "tool:04-confirm-before",
+    "tool:04-confirm-after",
+    "hazard-携带炸弹-before",
+    "hazard-携带炸弹-after",
+    "hazard-移动倒数-before",
+    "hazard-移动倒数-after"
+  ],
+  "report": {
+    "policy": "roads-v1",
+    "toolWindows": [
+      "tool:08",
+      "tool:09",
+      "tool:02",
+      "card:28",
+      "tool:03",
+      "card:08",
+      "tool:04"
+    ],
+    "crossChecks": [
+      {
+        "index": 623,
+        "kind": "auction",
+        "computer": false
+      }
+    ],
+    "route": "bomb",
+    "terminal": false,
+    "players": 2,
+    "normalSpeed": true,
+    "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+    "commands": 1118,
+    "auto": 223,
+    "human": 213,
+    "lifecycle": [
+      "pause stops waiting",
+      "resume",
+      "reset dialog cancel",
+      "reset",
+      "replace with humans",
+      "exit cleanup",
+      "fullscreen",
+      "390px"
+    ],
+    "cleanup": {
+      "raf": 0,
+      "canvas": 0
+    },
+    "errors": []
+  },
+  "hashes": {
+    "replay": "7b84b2bcd2c8cadc5270afe103438a347d8654ec0e5d156e4e74fe7776b2ead0",
+    "state": "76a3f5973e40e943075823d2d01cef892a9b930f82b8c1c7c4e2d0146be4de7d",
+    "events": "c21a781365c0859b0a64c7f3c2710e0e56fafdad8f7a856337ef4329d4f8a68d"
+  }
+}

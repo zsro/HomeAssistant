@@ -1,0 +1,173 @@
+{
+  "kind": "waiver",
+  "commands": 2863,
+  "players": 3,
+  "turn": 194,
+  "date": "1998-03-22",
+  "prefixes": [
+    "exit-start",
+    "public-auction",
+    "rent-callback",
+    "after-exit-turn",
+    "rent-free",
+    "free-waiver",
+    "allied-landing"
+  ],
+  "reactions": [
+    {
+      "kind": "rent",
+      "stage": "free",
+      "responderId": "player-3",
+      "choice": "use",
+      "targetId": null,
+      "turn": 104
+    }
+  ],
+  "attacks": [],
+  "waivers": [
+    {
+      "type": "rentWaived",
+      "propertyId": "japan:land:23",
+      "ownerId": "player-1",
+      "reason": "免费卡",
+      "sequence": 1484,
+      "commandId": "command-1509",
+      "playerId": "player-3",
+      "turn": 104
+    },
+    {
+      "type": "rentWaived",
+      "propertyId": "japan:land:1",
+      "ownerId": "player-3",
+      "reason": "同盟免租",
+      "sequence": 2746,
+      "commandId": "command-2862",
+      "playerId": "player-1",
+      "turn": 193
+    }
+  ],
+  "forced": [],
+  "disposals": [
+    {
+      "id": "disposal-1",
+      "payerId": "player-2",
+      "recipientId": "player-1",
+      "propertyId": "japan:land:23",
+      "due": 25000,
+      "amount": 13531,
+      "unpaid": 11469,
+      "paid": {
+        "cash": 0,
+        "bank": 13531
+      },
+      "released": [
+        "japan:land:4",
+        "japan:land:27",
+        "japan:land:28",
+        "japan:land:30",
+        "japan:land:31",
+        "japan:land:33",
+        "japan:land:35",
+        "japan:land:39",
+        "japan:land:40",
+        "japan:land:42",
+        "japan:land:47"
+      ],
+      "pool": [
+        "japan:land:4",
+        "japan:land:27",
+        "japan:land:28",
+        null,
+        null,
+        "japan:land:33",
+        "japan:land:35",
+        "japan:land:39",
+        "japan:land:40",
+        null,
+        "japan:land:47"
+      ],
+      "draws": [
+        9,
+        9,
+        4,
+        3
+      ],
+      "stocks": [],
+      "inventory": [
+        {
+          "itemId": "tool:08",
+          "quantity": 1,
+          "points": 30
+        },
+        {
+          "itemId": "tool:01",
+          "quantity": 1,
+          "points": 15
+        },
+        {
+          "itemId": "tool:02",
+          "quantity": 1,
+          "points": 30
+        },
+        {
+          "itemId": "card:17",
+          "quantity": 1,
+          "points": 20
+        }
+      ],
+      "ignoredPoints": 95,
+      "auctions": [
+        {
+          "propertyId": "japan:land:42",
+          "winnerId": "player-1",
+          "amount": 1600,
+          "reserve": 1500
+        },
+        {
+          "propertyId": "japan:land:31",
+          "winnerId": "player-1",
+          "amount": 1100,
+          "reserve": 1000
+        },
+        {
+          "propertyId": "japan:land:30",
+          "winnerId": null,
+          "amount": 0,
+          "reserve": 1000
+        }
+      ],
+      "finishedGame": false
+    }
+  ],
+  "auctionPaid": 2700,
+  "substituteSales": 0,
+  "substituteExits": 0,
+  "paidRent": 5200,
+  "wrongActorChecks": 1,
+  "report": {
+    "normalSpeed": true,
+    "map": "original Japan; real UI commands; auth-only fixture; no game-state injection",
+    "calendarCommon": true,
+    "reactionCommon": true,
+    "reactionChecks": [
+      {
+        "kind": "rent",
+        "stage": "free",
+        "responderId": "player-3",
+        "choice": "use",
+        "targetId": null,
+        "text": "请玩家 3 应答 · 免费卡\n\n本次应付租金 12,500 元。\n\n使用免费卡免付本次租金；不使用则继续检查嫁祸。\n\n确认才消耗 1 张；不使用保留卡片。\n\n使用免费卡\n不使用免费卡"
+      }
+    ],
+    "errors": [],
+    "cleanup": {
+      "raf": 0,
+      "canvas": 0
+    }
+  },
+  "hashes": {
+    "replay": "79026906110d8e726ca54ea9d65647637750c398e3dba721738560dd783df1ab",
+    "state": "914240778aa5f3cd5b3548deadef2837a98d53efc1090e9503fc7eb231b38ddf",
+    "events": "500038c9dbf3bbacfa8dc7f325d1e4fb262445bd67507d9c76612c3dc58d963b"
+  }
+}

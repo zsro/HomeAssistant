@@ -1,0 +1,50 @@
+{
+  "kind": "fortune",
+  "players": 3,
+  "commands": 938,
+  "turn": 100,
+  "trades": 36,
+  "subscriptions": 7,
+  "subscriptionPaid": 8632,
+  "forcedBank": 56791,
+  "forcedPublic": 776,
+  "fortune": [
+    9,
+    8
+  ],
+  "news": [
+    32,
+    18
+  ],
+  "dates": 33,
+  "quoteDays": 26,
+  "companyTrends": 1,
+  "research": 0,
+  "restored": 0,
+  "prefixes": [
+    "trade",
+    "fortune-9",
+    "market-date",
+    "date",
+    "closed-date",
+    "subscription",
+    "company-trend",
+    "fortune-8"
+  ],
+  "report": {
+    "normalSpeed": true,
+    "map": "original Japan; real UI commands; auth-only fixture; no game-state injection",
+    "circuitCommon": true,
+    "completed": [],
+    "errors": [],
+    "cleanup": {
+      "raf": 0,
+      "canvas": 0
+    }
+  },
+  "hashes": {
+    "replay": "4a5f886ae4a35d5e5ac3c46b84248cbdc244d1988b618e3fa36522d8bc8745e4",
+    "state": "3596bc152e372ae9662fa8a80b60d5c74a9124b91b02b7cc406b72d3d415f5ca",
+    "events": "3461907e10da4e5383043561b89b4806fdc56e9f5d784e9fea3dba1423654408"
+  }
+}

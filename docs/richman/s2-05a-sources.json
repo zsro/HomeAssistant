@@ -1,0 +1,178 @@
+{
+  "stage": "S2-05a",
+  "rulesId": "japan-events-candidate-v44",
+  "fingerprint": "f9dbb7e9",
+  "semanticIncrement": false,
+  "referenceCommit": "ec7d70e693059d1e781d9d1cc2ad7f36d360d39e",
+  "grade": "fixed cross-version assembly; no Windows execution",
+  "sources": [
+    {
+      "path": "asm/rich4_ui_bank.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_ui_bank.asm",
+      "gitBlobSha1": "a33182c5fa87f03271e20c43956ad11302f14baa",
+      "sha256": "bd225f868ef673c4052d145223d9564a5ded0c4eec28093811cb439ec9fc230a"
+    },
+    {
+      "path": "asm/rich4_ui_stock.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_ui_stock.asm",
+      "gitBlobSha1": "cc0913dc550a049781e3b72f2df215ce84df6b28",
+      "sha256": "0e3152263c9886615fa6509fcd005f0db37a9fb850b3124ede51de868fa8ab82"
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_core_actions.asm",
+      "gitBlobSha1": "ebfde6c820e8a430b856d9816a926b636e0db1dc",
+      "sha256": "2874c1a3e0ca1d0da5afe4cb93e42cf2d6f6fa864dbee11d7bcaa028af07d94a"
+    },
+    {
+      "path": "asm/rich4_player_bankrupt.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_bankrupt.asm",
+      "gitBlobSha1": "7d89fe867d86a4b9fc230602da8bc084725310c6",
+      "sha256": "57c69d347bef382e0045b00855c17293e5cb737ed22359340894ed9b9cf8bf02"
+    },
+    {
+      "path": "asm/rich4_stocks.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_stocks.asm",
+      "gitBlobSha1": "c45cd776b51483d17f78972845b8053deeee2433",
+      "sha256": "d55e17af17da2464655f53d3b3dd32224637a37ab131c6cf483db8fbac045ea3"
+    }
+  ],
+  "anchors": [
+    {
+      "path": "asm/rich4_ui_bank.asm",
+      "anchor": "fcn_00433bd8:",
+      "lines": [
+        230
+      ]
+    },
+    {
+      "path": "asm/rich4_ui_bank.asm",
+      "anchor": "loc_00433c1e:",
+      "lines": [
+        250
+      ]
+    },
+    {
+      "path": "asm/rich4_ui_bank.asm",
+      "anchor": "loc_00436a9b:",
+      "lines": [
+        3808
+      ]
+    },
+    {
+      "path": "asm/rich4_ui_stock.asm",
+      "anchor": "fcn_0042ba97:",
+      "lines": [
+        3052
+      ]
+    },
+    {
+      "path": "asm/rich4_ui_stock.asm",
+      "anchor": "loc_0042be6f:",
+      "lines": [
+        3372
+      ]
+    },
+    {
+      "path": "asm/rich4_ui_stock.asm",
+      "anchor": "loc_0042bec2:",
+      "lines": [
+        3394
+      ]
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "anchor": "loc_0041d066:",
+      "lines": [
+        4827
+      ]
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "anchor": "fcn_0041d2c6:",
+      "lines": [
+        5058
+      ]
+    },
+    {
+      "path": "asm/rich4_player_bankrupt.asm",
+      "anchor": "loc_0040d039:",
+      "lines": [
+        282
+      ]
+    },
+    {
+      "path": "asm/rich4_player_bankrupt.asm",
+      "anchor": "loc_0040d089:",
+      "lines": [
+        308
+      ]
+    },
+    {
+      "path": "asm/rich4_player_bankrupt.asm",
+      "anchor": "loc_0040d14d:",
+      "lines": [
+        390
+      ]
+    },
+    {
+      "path": "asm/rich4_player_bankrupt.asm",
+      "anchor": "loc_0040d282:",
+      "lines": [
+        509
+      ]
+    },
+    {
+      "path": "asm/rich4_stocks.asm",
+      "anchor": "_rich4_sell_stock:",
+      "lines": [
+        171
+      ]
+    },
+    {
+      "path": "asm/rich4_stocks.asm",
+      "anchor": "loc_00428ea4:",
+      "lines": [
+        210
+      ]
+    }
+  ],
+  "rules": {
+    "R05-01a-stress": "Revalidate current v44: dividend and maturity debit bank then cash, insufficient amount exits without necessary-share pre-sale; public exit proceeds cannot refill original debit. Rent retains earlier necessary liquidation and can leave player alive. No new rule.",
+    "R08-01a-stress": "Frozen company allocation and seat nets use original f32 ratio/int32 sum. Later seats read live cash after earlier auctions. Exit clears average/quantity and ownership only after final-survivor early branch; exact loan payment leaves average/ownership intact. No new ledger rule.",
+    "R09-01a-stress": "While dividend disposal waits, date tail/lottery/incoming loan/self clocks wait. Completed dividend emits receipt, then lottery, then incoming maturity; second loan disposal has distinct callback. Same-day awarded lottery+loan is domain coverage, not original-map UI evidence.",
+    "R10-01a-stress": "Legal original-map commands and actual browser exports independently reconcile obligations/actual/unpaid, forced rent sale versus public exit stock sale, bids, company ownership and restart from serialized replay prefixes. Plan-only results never count as UI."
+  },
+  "historicalCoverage": [
+    {
+      "stage": "S2-03t/v33",
+      "coverage": "rent insolvency, final-survivor and three public auctions",
+      "gap": "no v43 averages/v42 quotes"
+    },
+    {
+      "stage": "S2-03u/v34",
+      "coverage": "company/fortune callbacks; maturity domain",
+      "gap": "maturity public disposal original-map UI missing"
+    },
+    {
+      "stage": "S2-03v/v35",
+      "coverage": "tax/dividend frozen rows, public disposal and date return; same-day loan domain",
+      "gap": "same-day awarded lottery+loan and new stock ledger UI missing"
+    },
+    {
+      "stage": "S2-04b/c",
+      "coverage": "averages/current quotes; legal fortune8/9/G7 routes",
+      "gap": "necessary rent stock sale and negative dividend/maturity disposal current-profile UI missing"
+    }
+  ],
+  "retainedDifferences": [
+    "original float/x87 versus integer cents and aggregate precision",
+    "native RNG/reseeding",
+    "native chart/input/audio",
+    "other asset listings",
+    "special actors",
+    "native roulette",
+    "native exit call stack/end menu and Web last-survivor date stop",
+    "minigame presentation/collision/input"
+  ]
+}

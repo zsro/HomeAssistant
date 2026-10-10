@@ -1,0 +1,474 @@
+{
+  "stage": "S2-05c",
+  "date": "2026-10-07",
+  "rulesId": "japan-events-candidate-v44",
+  "fingerprint": "f9dbb7e9",
+  "semanticIncrement": false,
+  "runtimeChanged": false,
+  "s2_05CandidateClosed": true,
+  "nativeComplete": false,
+  "preserved": {
+    "s2_03CandidateClosed": true,
+    "s2_04CandidateClosed": true,
+    "items": 43,
+    "news": 36,
+    "japanFortuneSlots": 37,
+    "magicEffects": 12,
+    "minigames": 3,
+    "oldFixtureJsonUnchanged": 274,
+    "s2_05a_bReplaysUnchanged": true,
+    "workerUIFixUnchanged": true,
+    "allVersionPlayerCases": 132
+  },
+  "sourceAudit": {
+    "files": 5,
+    "anchors": 12,
+    "referenceCommit": "ec7d70e693059d1e781d9d1cc2ad7f36d360d39e",
+    "nativeWindowsExecution": false
+  },
+  "checks": {
+    "frontend": {
+      "passed": 1773,
+      "files": 122,
+      "newDomain": 14,
+      "newActualReplay": 3,
+      "maxWorkers": 2
+    },
+    "lint": "passed",
+    "build": "passed; existing large-chunk and mixed-import warnings",
+    "defaultBuiltUI": "not rerun this batch; 05b evidence retained, no runtime edits"
+  },
+  "originalMapBrowser": {
+    "routes": [
+      {
+        "players": 2,
+        "commands": 1510,
+        "turn": 90,
+        "date": "1998-02-21",
+        "deliveries": 1,
+        "researchStarted": 1,
+        "trades": 24,
+        "dateSteps": 44,
+        "afterRestore": 1,
+        "prefixes": [
+          "calendar",
+          "research-start",
+          "research-delivery",
+          "before-time-confirm",
+          "after-time-confirm",
+          "next-departure"
+        ],
+        "restores": [
+          {
+            "playerId": "player-1",
+            "turn": 89,
+            "checkpointTurn": 87,
+            "round": [
+              45,
+              44
+            ],
+            "date": [
+              "1998-02-22",
+              "1998-02-21"
+            ],
+            "changed": [
+              "market",
+              "date",
+              "companies",
+              "finance"
+            ],
+            "inventory": [
+              1,
+              1,
+              0
+            ],
+            "research": [
+              [],
+              []
+            ],
+            "rng": 3413370900,
+            "revision": [
+              1499,
+              1500
+            ],
+            "logs": [
+              1348,
+              1350
+            ]
+          }
+        ],
+        "report": {
+          "normalSpeed": true,
+          "map": "original Japan; real UI commands; auth-only fixture; no game-state injection",
+          "circuitCommon": true,
+          "calendarCommon": true,
+          "completed": [
+            {
+              "id": "tool:10",
+              "preview": "恢复全体玩家位置、现金/存款、地产、库存/供应、研究、车辆/状态、神仙、道路物件及股票持仓/行情。随机序列和操作日志不倒退；从历史背包扣1台，所有旧历史清除。取消不改变任何状态。"
+            }
+          ],
+          "errors": [],
+          "cleanup": {
+            "raf": 0,
+            "canvas": 0
+          }
+        },
+        "hashes": {
+          "replay": "33be7f38688a86ee1fd291d96c10a61cac583a246735d95422fa26d686c5ff30",
+          "state": "f8828ad439356dd3675f81a77488f1c4b7c82cee167df1650d6c86c6c89d7c33",
+          "events": "405da6b1e86afab6537b92da5698a3820b66261f35094975d1fc536d4f585aef"
+        },
+        "verifiedScreenshots": [
+          {
+            "path": "/private/tmp/richman-unified-ui-05c-2/narrow-tool-10.png",
+            "sha256": "0677005dda7901c2e8d33256002015ae9da38e339b87427a524ab7967fbcd739"
+          },
+          {
+            "path": "/private/tmp/richman-unified-ui-05c-2/fullscreen-tool-10.png",
+            "sha256": "b69face6e6de547bb5ba99fabc82a3e70a44d12ced914631647858f55584ae62"
+          },
+          {
+            "path": "/private/tmp/richman-unified-ui-05c-2/circuit-ledger-final.png",
+            "sha256": "34efa9664c4bc4df5787e196b1df54805abb52cac46bd394454d730bba1e54a2"
+          },
+          {
+            "path": "/private/tmp/richman-unified-ui-05c-2/circuit-ledger-narrow.png",
+            "sha256": "760ac9adb65cbfd57b653fc0b0c32e92362c3afce23b9f49748056e26dbee178"
+          },
+          {
+            "path": "/private/tmp/richman-unified-ui-05c-2/calendar-narrow.png",
+            "sha256": "8bda14caa543f0cda9066a95e0ff1a8c51c34f18ce78341c5e637c5463f7356b"
+          }
+        ],
+        "replay": "frontend/src/features/richman/game/fixtures/restore-circuit-v44-2-replay.json",
+        "screenshots": "/private/tmp/richman-unified-ui-05c-2"
+      },
+      {
+        "players": 3,
+        "commands": 2535,
+        "turn": 126,
+        "date": "1998-02-18",
+        "deliveries": 1,
+        "researchStarted": 2,
+        "trades": 37,
+        "dateSteps": 41,
+        "afterRestore": 1,
+        "prefixes": [
+          "calendar",
+          "research-start",
+          "research-delivery",
+          "before-time-confirm",
+          "after-time-confirm",
+          "next-departure"
+        ],
+        "restores": [
+          {
+            "playerId": "player-2",
+            "turn": 125,
+            "checkpointTurn": 122,
+            "round": [
+              42,
+              41
+            ],
+            "date": [
+              "1998-02-19",
+              "1998-02-18"
+            ],
+            "changed": [
+              "balances",
+              "holdings",
+              "market",
+              "date",
+              "research",
+              "companies",
+              "finance"
+            ],
+            "inventory": [
+              1,
+              1,
+              0
+            ],
+            "research": [
+              [
+                {
+                  "id": "japan:facility:2",
+                  "ownerId": "player-2",
+                  "level": 3,
+                  "basePrice": 6000,
+                  "buildingType": 4,
+                  "priceStatus": 0,
+                  "research": {
+                    "itemId": "tool:09",
+                    "remaining": 5,
+                    "ownerId": "player-2"
+                  }
+                }
+              ],
+              [
+                {
+                  "id": "japan:facility:2",
+                  "ownerId": "player-2",
+                  "level": 3,
+                  "basePrice": 6000,
+                  "buildingType": 4,
+                  "priceStatus": 0,
+                  "research": {
+                    "itemId": "tool:09",
+                    "remaining": 4,
+                    "ownerId": "player-2"
+                  }
+                }
+              ]
+            ],
+            "rng": 3422784935,
+            "revision": [
+              2530,
+              2531
+            ],
+            "logs": [
+              1872,
+              1874
+            ]
+          }
+        ],
+        "report": {
+          "normalSpeed": true,
+          "map": "original Japan; real UI commands; auth-only fixture; no game-state injection",
+          "circuitCommon": true,
+          "calendarCommon": true,
+          "completed": [
+            {
+              "id": "tool:10",
+              "preview": "恢复全体玩家位置、现金/存款、地产、库存/供应、研究、车辆/状态、神仙、道路物件及股票持仓/行情。随机序列和操作日志不倒退；从历史背包扣1台，所有旧历史清除。取消不改变任何状态。"
+            }
+          ],
+          "errors": [],
+          "cleanup": {
+            "raf": 0,
+            "canvas": 0
+          }
+        },
+        "hashes": {
+          "replay": "f5446193df9b3911256082068584905c0150e82a7a33e33afdd04fea7d12f2de",
+          "state": "f12857728e60a08ad99cc33a92aaf08d7bc7f889e3ccd4007d0bef65606e9cdf",
+          "events": "77e8cec5fc65dfcaa210a33d2d3538ed750cef8126d6a4c6ef8dc5475732d6e8"
+        },
+        "verifiedScreenshots": [
+          {
+            "path": "/private/tmp/richman-unified-ui-05c-3/narrow-tool-10.png",
+            "sha256": "4958696ba950c00c6e7f9235ee5226be5d9da39cdf24a8e2974fcd97c96ceab8"
+          },
+          {
+            "path": "/private/tmp/richman-unified-ui-05c-3/fullscreen-tool-10.png",
+            "sha256": "a0a50ab404927d48bcc1ed056627ac83ffc5cf6237146e90bd4f5c198e3d5080"
+          },
+          {
+            "path": "/private/tmp/richman-unified-ui-05c-3/circuit-ledger-final.png",
+            "sha256": "a82d29c528e5148b98cc74ff457e3c6262af64d00c44604430b8232c07660a17"
+          },
+          {
+            "path": "/private/tmp/richman-unified-ui-05c-3/circuit-ledger-narrow.png",
+            "sha256": "760ac9adb65cbfd57b653fc0b0c32e92362c3afce23b9f49748056e26dbee178"
+          },
+          {
+            "path": "/private/tmp/richman-unified-ui-05c-3/calendar-narrow.png",
+            "sha256": "494fc6310f58229510fe4bd56c25b4419be2a5ca92ee96961043020a79e5df73"
+          }
+        ],
+        "replay": "frontend/src/features/richman/game/fixtures/restore-circuit-v44-3-replay.json",
+        "screenshots": "/private/tmp/richman-unified-ui-05c-3"
+      },
+      {
+        "players": 4,
+        "commands": 2427,
+        "turn": 199,
+        "date": "1998-02-26",
+        "deliveries": 1,
+        "researchStarted": 4,
+        "trades": 49,
+        "dateSteps": 49,
+        "afterRestore": 1,
+        "prefixes": [
+          "calendar",
+          "research-start",
+          "research-delivery",
+          "before-time-confirm",
+          "after-time-confirm",
+          "next-departure"
+        ],
+        "restores": [
+          {
+            "playerId": "player-2",
+            "turn": 198,
+            "checkpointTurn": 194,
+            "round": [
+              50,
+              49
+            ],
+            "date": [
+              "1998-02-27",
+              "1998-02-26"
+            ],
+            "changed": [
+              "balances",
+              "holdings",
+              "market",
+              "date",
+              "research",
+              "companies",
+              "finance"
+            ],
+            "inventory": [
+              1,
+              1,
+              0
+            ],
+            "research": [
+              [
+                {
+                  "id": "japan:facility:4",
+                  "ownerId": "player-2",
+                  "level": 1,
+                  "basePrice": 5000,
+                  "buildingType": 4,
+                  "priceStatus": 0,
+                  "research": {
+                    "itemId": "tool:09",
+                    "remaining": 5,
+                    "ownerId": "player-2"
+                  }
+                }
+              ],
+              [
+                {
+                  "id": "japan:facility:4",
+                  "ownerId": "player-2",
+                  "level": 1,
+                  "basePrice": 5000,
+                  "buildingType": 4,
+                  "priceStatus": 0,
+                  "research": {
+                    "itemId": "tool:09",
+                    "remaining": 4,
+                    "ownerId": "player-2"
+                  }
+                }
+              ]
+            ],
+            "rng": 90260517,
+            "revision": [
+              2416,
+              2417
+            ],
+            "logs": [
+              2900,
+              2902
+            ]
+          }
+        ],
+        "report": {
+          "normalSpeed": true,
+          "map": "original Japan; real UI commands; auth-only fixture; no game-state injection",
+          "circuitCommon": true,
+          "calendarCommon": true,
+          "completed": [
+            {
+              "id": "card:14",
+              "preview": "本次行动不移动、不掷骰，不重复结算落点；掷骰前仍可用卡。\n\n确认消耗 1 张卡片，取消不消耗。"
+            },
+            {
+              "id": "tool:10",
+              "preview": "恢复全体玩家位置、现金/存款、地产、库存/供应、研究、车辆/状态、神仙、道路物件及股票持仓/行情。随机序列和操作日志不倒退；从历史背包扣1台，所有旧历史清除。取消不改变任何状态。"
+            }
+          ],
+          "errors": [],
+          "cleanup": {
+            "raf": 0,
+            "canvas": 0
+          }
+        },
+        "hashes": {
+          "replay": "489995c2102c4bc7869619af961528cdea218119b3d2745ca383b5e80777a2ce",
+          "state": "fef26778a13bfb0fd9dd1ca8bcaf54da054b0339ab1b1a266481637de959104a",
+          "events": "a850c5d90e3c7dd00115f79f700196c2c477798236f031fe74c6b832e1adf8e7"
+        },
+        "verifiedScreenshots": [
+          {
+            "path": "/private/tmp/richman-unified-ui-05c-4/narrow-tool-10.png",
+            "sha256": "b5c33df7ddbe8adf312bc1f41767ed213ad24fb634c01eb147c2b3cd04f350a6"
+          },
+          {
+            "path": "/private/tmp/richman-unified-ui-05c-4/fullscreen-tool-10.png",
+            "sha256": "888a9dcef5dd40becb909e3ef46dda63a80ca162434a961dca0431f2041fcde1"
+          },
+          {
+            "path": "/private/tmp/richman-unified-ui-05c-4/circuit-ledger-final.png",
+            "sha256": "847f85e386a42021e8bb5faefaa42dfa161e7a77f766827f1a1e6d6100726ade"
+          },
+          {
+            "path": "/private/tmp/richman-unified-ui-05c-4/circuit-ledger-narrow.png",
+            "sha256": "760ac9adb65cbfd57b653fc0b0c32e92362c3afce23b9f49748056e26dbee178"
+          },
+          {
+            "path": "/private/tmp/richman-unified-ui-05c-4/calendar-narrow.png",
+            "sha256": "7fc81cbb4b74e694c2b2042e97d6e3793aeb7bb6071e66af54f89525c06a44fa"
+          }
+        ],
+        "replay": "frontend/src/features/richman/game/fixtures/restore-circuit-v44-4-replay.json",
+        "screenshots": "/private/tmp/richman-unified-ui-05c-4"
+      }
+    ],
+    "commands": 6472,
+    "normalSpeed": true,
+    "authOnlyFixture": true,
+    "gameStateInjection": false,
+    "prefixes": [
+      "after-time-confirm",
+      "before-time-confirm",
+      "calendar",
+      "next-departure",
+      "research-delivery",
+      "research-start"
+    ],
+    "uiAssertions": "calendar/stock panels, market closed-day disable, time target/preview, pause/reset-cancel/cancel/fullscreen/390px, final actual export vs legal world, reset tools and zero RAF/canvas; no claim every intermediate ledger label asserted",
+    "independentRestoration": "exact every saved world field with explicit historical tool consumption/effect serial/pending/landedTurn exceptions; current actor/command turn/completed movement/RNG/serial/config identity remain; revision advances, command/log prefixes stay; duplicate/stale confirm atomic rejection; historical checkpoints invalidated; average/cost/zero and company ranking invariants; next departure and serialized critical-prefix/full state/event equality"
+  },
+  "domainOnly": [
+    "explicit 2–4p all optional world domains with injected historical/current tool counts, rejecting missing history/current inventory",
+    "six real 05a/b command histories reused as domain inputs; stocked time with valid checkpoint rejected during reaction/debt/auction; direct world rollback uses an explicitly injected checkpoint/tool and is not legal research acquisition evidence",
+    "relations/status/carried bomb/engineer vehicle rollback; engineer saved vehicle and inventory remain coherent",
+    "research discarded output rolls back; remaining owner-action countdown produces once after restored progress, other seat cannot advance it",
+    "self teleport overwrites latest departure snapshot before its own tool consumption",
+    "restoration across previous bankruptcy/loan/negative dividend is direct-domain coverage; public disposal itself still leaves payer eliminated and unpaid debt unfilled"
+  ],
+  "notNewBrowserAcceptance": [
+    "G7 immediately before and after bankruptcy public auctions or negative dividend/loan payment callbacks",
+    "G7 with changed alliance/status/vehicle inventory in the actual rewind interval (4p used stop earlier, not as an observable rewind difference)",
+    "research redelivery after five restored own actions; UI validates remaining progress rollback and following departure only",
+    "pending reactions or auctions cannot actually time-rewind; rejected-command cases are domain tests",
+    "last survivor substitute bankruptcy, same-day double disposal, multiple stock-tax exits",
+    "all intermediate numeric UI labels, original precision/RNG/chart, full minigame collision/input"
+  ],
+  "resolvedIssues": [
+    "First domain fixture attempted to reconstruct config from GameState; corrected to engine.exportReplay().config, all domain tests rerun. The build also caught an invalid engineer vehicle label in a domain fixture and an unused type import; corrected to the existing foot + engineer record model and restarted final checks. No runtime defect found.",
+    "An initial 3p route required 467 turns; its in-progress browser run was deliberately stopped without acceptance. Replaced by legal seed restore-circuit-3-1 (126 turns), with completed new browser export; the abandoned plan is not counted."
+  ],
+  "remainingDifferences": [
+    "native float/x87/integer-cent aggregation and RNG",
+    "original chart/input/audio",
+    "other asset listings",
+    "special characters",
+    "original wheel",
+    "native exit call stack and full endgame",
+    "minigame rendering/collision/input",
+    "original-memory save/restore versus explicit coherent Web domains and nonrewound protocol/RNG"
+  ],
+  "closure": "S2-05 Japanese ordinary-player candidate scope closes on accumulated 05a/05b/05c representative domain + legal UI + replay evidence. This is not exhaustive Cartesian coverage or original-game equivalence. Named untested UI combinations remain in the regression backlog.",
+  "next": "S3-01a: inventory human/AI seat configuration, legal decisions and cancellation lifecycle; implement a basic command-driven computer opponent with pause/reset/exit cancellation and 2–4p mixed-seat replay acceptance. Preserve v44 and all old replays; no rewrite of existing systems.",
+  "release": {
+    "committed": false,
+    "pushed": false,
+    "deployed": false
+  }
+}

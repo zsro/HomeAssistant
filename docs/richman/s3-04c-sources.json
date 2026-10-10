@@ -1,0 +1,59 @@
+{
+  "stage": "S3-04c",
+  "rulesId": "japan-events-candidate-v47",
+  "fingerprint": "c6d96cc",
+  "presentationProfile": "object-presentation-v1",
+  "newGameSemantics": false,
+  "newPolicyVersion": false,
+  "nativeExecution": false,
+  "referenceCommit": "ec7d70e693059d1e781d9d1cc2ad7f36d360d39e",
+  "provenance": "retained local reference cache; hashes below; local EXE loop/table byte matches; attempted remote mkf.c fetch failed, not relied upon",
+  "sources": {
+    "rich4_load_map.asm": "7a555911e15b8c947c6c281b95c23bf536dba92baca20929ab1666ed31df3987",
+    "rich4.asm": "30904cbb4f23a6b74fc1b80ad023bd7dff11b441c2c1978f768f9891d099d64a",
+    "rich4_objects.asm": "a2d3c8c9d6946625df6f5b26a981cbae195d445f4b5de6447dea033a11adcaf6",
+    "rich4_animate_object.asm": "6226d33c4e6de31b84b14fe90f2f42558f9259396dc309e1c58b305ca42fb028",
+    "rich4_calculate_direction.asm": "63d642c81152e2701d8564afaabf60ded0224d60de9d522299dcb1bdfc098ffa",
+    "rich4_drawing.c": "28506c2394fedf69826783c3d991420b949191e73427bd65234752e607059b6e",
+    "rich4_player_info.h": "cc17726ce054de587a42c0f335d84495e66698da2e15eb6a7b7ca28ab38604be",
+    "rich4_new_game.asm": "0abb3c6ee86e22c768480573e365dcefb692f69ffa701d5ff027cf4d1b2bf86a"
+  },
+  "facts": [
+    {
+      "id": "R11-C01",
+      "source": "rich4_load_map.asm:586-601 + local EXE file offset28908",
+      "finding": "Reference396..415; local355..37420-slot loop. type1..15 maps local354+type;15x8 directional frames, not sequential animation."
+    },
+    {
+      "id": "R11-C02",
+      "source": "rich4_objects.asm:91-119; rich4.asm:971-998,1889-1919",
+      "finding": "First stored nonzero adjacent edge toward object node determines facing; no autonomous timer inferred."
+    },
+    {
+      "id": "R11-C03",
+      "source": "rich4.asm:1938-2034,40486-40519; local EXE offset463869",
+      "finding": "Carrier coordinate, direction+4 &7, paired offsets; packed +50 suppresses hotel/disappearance/prison/hospital. Offset bytes uniquely match local EXE."
+    },
+    {
+      "id": "R11-C04",
+      "source": "SPR headers + rich4_drawing.c:draw_non_zero_image_in_rect",
+      "finding": "Signed source anchors are retained. Web uses raw indexed zero as alpha color key; original full conversion/precision remains unverified."
+    },
+    {
+      "id": "R11-C05",
+      "source": "scene.ts + object-presentation.ts",
+      "finding": "Readonly current-world projection, existing ticker/pause; epoch/flush resets visual clock, no queue/gameRNG/replay mutation. New sprite picking remains click-through presentation difference."
+    },
+    {
+      "id": "R11-C06",
+      "source": "rich4.asm:_rich4_update_player_sprite; rich4_new_game.asm:3750-3815",
+      "finding": "Vehicle status resource branches, Panel UI calls and jump separate UI reads audited but no unverified clips mapped."
+    }
+  ],
+  "remaining": [
+    "vehicles and event-specific animations",
+    "native palette conversion/precision",
+    "browser direction/offset/layer/listening acceptance in S3-04d",
+    "historical audio RNG/queue/music stack and exit/endgame/special actor/spinner differences"
+  ]
+}

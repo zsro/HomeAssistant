@@ -1,0 +1,79 @@
+{
+  "players": 4,
+  "commands": 1505,
+  "turn": 217,
+  "phase": "idle",
+  "winner": null,
+  "auto": 147,
+  "human": 464,
+  "dates": 54,
+  "cross": [
+    {
+      "index": 1503,
+      "kind": "property",
+      "actor": "player-3",
+      "active": "player-4",
+      "computer": true
+    }
+  ],
+  "reactions": [
+    {
+      "responder": "player-4",
+      "active": "player-4",
+      "computer": false,
+      "kind": "rent",
+      "stage": "redirect",
+      "choice": "use",
+      "target": "player-3"
+    }
+  ],
+  "forced": [],
+  "exits": [],
+  "publicAuctions": 0,
+  "negativeChecks": 1,
+  "prefixes": [
+    "paused",
+    "resumed",
+    "computer-first",
+    "computer-property"
+  ],
+  "report": {
+    "crossChecks": [
+      {
+        "index": 1497,
+        "active": "player-4",
+        "actor": "player-3",
+        "kind": "property",
+        "computer": true
+      }
+    ],
+    "route": "debt",
+    "terminal": false,
+    "players": 4,
+    "normalSpeed": true,
+    "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+    "commands": 1505,
+    "human": 464,
+    "lifecycle": [
+      "pause stops waiting",
+      "resume",
+      "reset dialog cancel",
+      "reset",
+      "replace with humans",
+      "exit cleanup",
+      "fullscreen",
+      "390px"
+    ],
+    "cleanup": {
+      "raf": 0,
+      "canvas": 0
+    },
+    "errors": [],
+    "scheduledNonMovementSteps": 147
+  },
+  "hashes": {
+    "replay": "a0babeb619db33a15428d42e5b984e50cb20012fc2a48f3aca724f33407835c0",
+    "state": "29a3efb7945612164043070c8fa5c1a42851eca65137aa7a2fba9426e85404cd",
+    "events": "b0c2430e52bf6a4b025dd610d3c598c752c31fbe55013edca96abeaab8c74547"
+  }
+}

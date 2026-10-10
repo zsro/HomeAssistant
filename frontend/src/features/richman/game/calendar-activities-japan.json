@@ -1,0 +1,146 @@
+[
+  {
+    "slot": 0,
+    "month": 1,
+    "day": 1,
+    "flags": 3
+  },
+  {
+    "slot": 1,
+    "month": 1,
+    "day": 2,
+    "flags": 0
+  },
+  {
+    "slot": 2,
+    "month": 1,
+    "day": 3,
+    "flags": 0
+  },
+  {
+    "slot": 3,
+    "month": 1,
+    "day": 15,
+    "flags": 0
+  },
+  {
+    "slot": 4,
+    "month": 2,
+    "day": 3,
+    "flags": 0
+  },
+  {
+    "slot": 5,
+    "month": 2,
+    "day": 14,
+    "flags": 0
+  },
+  {
+    "slot": 6,
+    "month": 2,
+    "day": 11,
+    "flags": 0
+  },
+  {
+    "slot": 7,
+    "month": 3,
+    "day": 3,
+    "flags": 0
+  },
+  {
+    "slot": 8,
+    "month": 3,
+    "day": 22,
+    "flags": 0
+  },
+  {
+    "slot": 9,
+    "month": 4,
+    "day": 29,
+    "flags": 0
+  },
+  {
+    "slot": 10,
+    "month": 5,
+    "day": 3,
+    "flags": 0
+  },
+  {
+    "slot": 11,
+    "month": 5,
+    "day": 5,
+    "flags": 0
+  },
+  {
+    "slot": 12,
+    "month": 9,
+    "day": 15,
+    "flags": 0
+  },
+  {
+    "slot": 13,
+    "month": 9,
+    "day": 23,
+    "flags": 0
+  },
+  {
+    "slot": 14,
+    "month": 10,
+    "day": 10,
+    "flags": 0
+  },
+  {
+    "slot": 15,
+    "month": 11,
+    "day": 3,
+    "flags": 0
+  },
+  {
+    "slot": 16,
+    "month": 11,
+    "day": 23,
+    "flags": 0
+  },
+  {
+    "slot": 17,
+    "month": 12,
+    "day": 23,
+    "flags": 0
+  },
+  {
+    "slot": 18,
+    "month": 12,
+    "day": 25,
+    "flags": 15
+  },
+  {
+    "slot": 19,
+    "month": 0,
+    "day": 0,
+    "flags": 0
+  },
+  {
+    "slot": 20,
+    "month": 0,
+    "day": 0,
+    "flags": 0
+  },
+  {
+    "slot": 21,
+    "month": 0,
+    "day": 0,
+    "flags": 0
+  },
+  {
+    "slot": 22,
+    "month": 0,
+    "day": 0,
+    "flags": 0
+  },
+  {
+    "slot": 23,
+    "month": 0,
+    "day": 0,
+    "flags": 0
+  }
+]

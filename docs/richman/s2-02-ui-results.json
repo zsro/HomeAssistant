@@ -1,0 +1,25 @@
+{
+  "normalSpeed": true,
+  "checks": [
+    "explicit dice selection",
+    "paused choice frozen",
+    "reset cancellation retains selection",
+    "cancel does not consume",
+    "fresh choice clears radio",
+    "fullscreen",
+    "390px no overflow",
+    "two original road steps",
+    "one consumption",
+    "RNG unchanged",
+    "replay",
+    "reset restores inventory",
+    "exit during selection cleans RAF/canvas"
+  ],
+  "verification": {
+    "rng": true,
+    "steps": 2,
+    "consumed": 1,
+    "cancelled": 1
+  },
+  "errors": []
+}

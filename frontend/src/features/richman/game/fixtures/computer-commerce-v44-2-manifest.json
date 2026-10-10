@@ -1,0 +1,657 @@
+{
+  "players": 2,
+  "commands": 1353,
+  "turn": 199,
+  "auto": 260,
+  "human": 280,
+  "acquisitions": [
+    {
+      "id": "player-2",
+      "ai": true,
+      "item": "card:07",
+      "turn": 48,
+      "action": "magic",
+      "events": [
+        {
+          "type": "magicResolved",
+          "receipt": {
+            "node": 35,
+            "group": 4,
+            "targets": [
+              "player-2"
+            ],
+            "effect": 6,
+            "title": "得一张卡片",
+            "rows": [
+              {
+                "playerId": "player-2",
+                "lines": [
+                  "获得改建卡。"
+                ],
+                "pointsBefore": 0,
+                "pointsAfter": 0,
+                "cashBefore": 700,
+                "cashAfter": 700,
+                "bankBefore": 92400,
+                "bankAfter": 92400,
+                "stopBefore": 0,
+                "stopAfter": 0,
+                "previousBefore": 36,
+                "previousAfter": 36,
+                "received": {
+                  "itemId": "card:07",
+                  "discarded": null
+                }
+              }
+            ]
+          },
+          "sequence": 687,
+          "commandId": "command-363",
+          "playerId": "player-2",
+          "turn": 48
+        }
+      ]
+    },
+    {
+      "id": "player-2",
+      "ai": true,
+      "item": "card:07",
+      "turn": 118,
+      "action": "buyItem",
+      "events": [
+        {
+          "type": "itemBought",
+          "itemId": "card:07",
+          "cost": 15,
+          "points": 115,
+          "supply": 7,
+          "sequence": 1474,
+          "commandId": "command-743",
+          "playerId": "player-2",
+          "turn": 118
+        }
+      ]
+    },
+    {
+      "id": "player-2",
+      "ai": true,
+      "item": "card:27",
+      "turn": 118,
+      "action": "buyItem",
+      "events": [
+        {
+          "type": "itemBought",
+          "itemId": "card:27",
+          "cost": 35,
+          "points": 80,
+          "supply": 2,
+          "sequence": 1475,
+          "commandId": "command-744",
+          "playerId": "player-2",
+          "turn": 118
+        }
+      ]
+    },
+    {
+      "id": "player-2",
+      "ai": true,
+      "item": "card:28",
+      "turn": 197,
+      "action": "magic",
+      "events": [
+        {
+          "type": "magicResolved",
+          "receipt": {
+            "node": 35,
+            "group": 4,
+            "targets": [
+              "player-2"
+            ],
+            "effect": 6,
+            "title": "得一张卡片",
+            "rows": [
+              {
+                "playerId": "player-2",
+                "lines": [
+                  "获得查封卡。"
+                ],
+                "pointsBefore": 55,
+                "pointsAfter": 55,
+                "cashBefore": 1500,
+                "cashAfter": 1500,
+                "bankBefore": 117806,
+                "bankAfter": 117806,
+                "stopBefore": 0,
+                "stopAfter": 0,
+                "previousBefore": 59,
+                "previousAfter": 59,
+                "received": {
+                  "itemId": "card:28",
+                  "discarded": null
+                }
+              }
+            ]
+          },
+          "sequence": 2642,
+          "commandId": "command-1339",
+          "playerId": "player-1",
+          "turn": 197
+        }
+      ]
+    }
+  ],
+  "uses": [
+    {
+      "ai": true,
+      "id": "player-2",
+      "item": "card:27",
+      "target": "japan:land:42",
+      "turn": 194,
+      "phase": "idle",
+      "changes": [
+        {
+          "before": {
+            "id": "japan:land:42",
+            "ownerId": null,
+            "level": 0,
+            "basePrice": 1000,
+            "buildingType": 0,
+            "priceStatus": 0,
+            "research": null
+          },
+          "after": {
+            "id": "japan:land:42",
+            "ownerId": null,
+            "level": 0,
+            "basePrice": 1000,
+            "buildingType": 0,
+            "priceStatus": 80,
+            "research": null
+          }
+        },
+        {
+          "before": {
+            "id": "japan:land:43",
+            "ownerId": "player-2",
+            "level": 0,
+            "basePrice": 1000,
+            "buildingType": 0,
+            "priceStatus": 0,
+            "research": null
+          },
+          "after": {
+            "id": "japan:land:43",
+            "ownerId": "player-2",
+            "level": 0,
+            "basePrice": 1000,
+            "buildingType": 0,
+            "priceStatus": 80,
+            "research": null
+          }
+        },
+        {
+          "before": {
+            "id": "japan:land:44",
+            "ownerId": null,
+            "level": 0,
+            "basePrice": 1000,
+            "buildingType": 0,
+            "priceStatus": 0,
+            "research": null
+          },
+          "after": {
+            "id": "japan:land:44",
+            "ownerId": null,
+            "level": 0,
+            "basePrice": 1000,
+            "buildingType": 0,
+            "priceStatus": 80,
+            "research": null
+          }
+        },
+        {
+          "before": {
+            "id": "japan:land:45",
+            "ownerId": null,
+            "level": 0,
+            "basePrice": 1000,
+            "buildingType": 0,
+            "priceStatus": 0,
+            "research": null
+          },
+          "after": {
+            "id": "japan:land:45",
+            "ownerId": null,
+            "level": 0,
+            "basePrice": 1000,
+            "buildingType": 0,
+            "priceStatus": 80,
+            "research": null
+          }
+        }
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "item": "card:28",
+      "target": "japan:land:37",
+      "turn": 198,
+      "phase": "idle",
+      "changes": [
+        {
+          "before": {
+            "id": "japan:land:35",
+            "ownerId": "player-1",
+            "level": 0,
+            "basePrice": 2000,
+            "buildingType": 0,
+            "priceStatus": 0,
+            "research": null
+          },
+          "after": {
+            "id": "japan:land:35",
+            "ownerId": "player-1",
+            "level": 0,
+            "basePrice": 2000,
+            "buildingType": 0,
+            "priceStatus": 81,
+            "research": null
+          }
+        },
+        {
+          "before": {
+            "id": "japan:land:36",
+            "ownerId": null,
+            "level": 0,
+            "basePrice": 2000,
+            "buildingType": 0,
+            "priceStatus": 0,
+            "research": null
+          },
+          "after": {
+            "id": "japan:land:36",
+            "ownerId": null,
+            "level": 0,
+            "basePrice": 2000,
+            "buildingType": 0,
+            "priceStatus": 81,
+            "research": null
+          }
+        },
+        {
+          "before": {
+            "id": "japan:land:37",
+            "ownerId": "player-1",
+            "level": 1,
+            "basePrice": 2000,
+            "buildingType": 0,
+            "priceStatus": 0,
+            "research": null
+          },
+          "after": {
+            "id": "japan:land:37",
+            "ownerId": "player-1",
+            "level": 1,
+            "basePrice": 2000,
+            "buildingType": 0,
+            "priceStatus": 81,
+            "research": null
+          }
+        },
+        {
+          "before": {
+            "id": "japan:land:38",
+            "ownerId": "player-1",
+            "level": 0,
+            "basePrice": 2000,
+            "buildingType": 0,
+            "priceStatus": 0,
+            "research": null
+          },
+          "after": {
+            "id": "japan:land:38",
+            "ownerId": "player-1",
+            "level": 0,
+            "basePrice": 2000,
+            "buildingType": 0,
+            "priceStatus": 81,
+            "research": null
+          }
+        }
+      ]
+    }
+  ],
+  "cancellations": [],
+  "auctions": [],
+  "clocks": [
+    {
+      "type": "g4PropertyChanged",
+      "property": {
+        "id": "japan:land:42",
+        "ownerId": null,
+        "level": 0,
+        "basePrice": 1000,
+        "buildingType": 0,
+        "priceStatus": 64,
+        "research": null
+      },
+      "reason": "价格状态轮次计时",
+      "sequence": 2603,
+      "commandId": "command-1323",
+      "playerId": "player-2",
+      "turn": 194
+    },
+    {
+      "type": "g4PropertyChanged",
+      "property": {
+        "id": "japan:land:43",
+        "ownerId": "player-2",
+        "level": 0,
+        "basePrice": 1000,
+        "buildingType": 0,
+        "priceStatus": 64,
+        "research": null
+      },
+      "reason": "价格状态轮次计时",
+      "sequence": 2604,
+      "commandId": "command-1323",
+      "playerId": "player-2",
+      "turn": 194
+    },
+    {
+      "type": "g4PropertyChanged",
+      "property": {
+        "id": "japan:land:44",
+        "ownerId": null,
+        "level": 0,
+        "basePrice": 1000,
+        "buildingType": 0,
+        "priceStatus": 64,
+        "research": null
+      },
+      "reason": "价格状态轮次计时",
+      "sequence": 2605,
+      "commandId": "command-1323",
+      "playerId": "player-2",
+      "turn": 194
+    },
+    {
+      "type": "g4PropertyChanged",
+      "property": {
+        "id": "japan:land:45",
+        "ownerId": null,
+        "level": 0,
+        "basePrice": 1000,
+        "buildingType": 0,
+        "priceStatus": 64,
+        "research": null
+      },
+      "reason": "价格状态轮次计时",
+      "sequence": 2606,
+      "commandId": "command-1323",
+      "playerId": "player-2",
+      "turn": 194
+    },
+    {
+      "type": "g4PropertyChanged",
+      "property": {
+        "id": "japan:land:42",
+        "ownerId": null,
+        "level": 0,
+        "basePrice": 1000,
+        "buildingType": 0,
+        "priceStatus": 48,
+        "research": null
+      },
+      "reason": "价格状态轮次计时",
+      "sequence": 2629,
+      "commandId": "command-1334",
+      "playerId": "player-2",
+      "turn": 196
+    },
+    {
+      "type": "g4PropertyChanged",
+      "property": {
+        "id": "japan:land:43",
+        "ownerId": "player-2",
+        "level": 0,
+        "basePrice": 1000,
+        "buildingType": 0,
+        "priceStatus": 48,
+        "research": null
+      },
+      "reason": "价格状态轮次计时",
+      "sequence": 2630,
+      "commandId": "command-1334",
+      "playerId": "player-2",
+      "turn": 196
+    },
+    {
+      "type": "g4PropertyChanged",
+      "property": {
+        "id": "japan:land:44",
+        "ownerId": null,
+        "level": 0,
+        "basePrice": 1000,
+        "buildingType": 0,
+        "priceStatus": 48,
+        "research": null
+      },
+      "reason": "价格状态轮次计时",
+      "sequence": 2631,
+      "commandId": "command-1334",
+      "playerId": "player-2",
+      "turn": 196
+    },
+    {
+      "type": "g4PropertyChanged",
+      "property": {
+        "id": "japan:land:45",
+        "ownerId": null,
+        "level": 0,
+        "basePrice": 1000,
+        "buildingType": 0,
+        "priceStatus": 48,
+        "research": null
+      },
+      "reason": "价格状态轮次计时",
+      "sequence": 2632,
+      "commandId": "command-1334",
+      "playerId": "player-2",
+      "turn": 196
+    },
+    {
+      "type": "g4PropertyChanged",
+      "property": {
+        "id": "japan:land:35",
+        "ownerId": "player-1",
+        "level": 0,
+        "basePrice": 2000,
+        "buildingType": 0,
+        "priceStatus": 65,
+        "research": null
+      },
+      "reason": "价格状态轮次计时",
+      "sequence": 2666,
+      "commandId": "command-1353",
+      "playerId": "player-2",
+      "turn": 198
+    },
+    {
+      "type": "g4PropertyChanged",
+      "property": {
+        "id": "japan:land:36",
+        "ownerId": null,
+        "level": 0,
+        "basePrice": 2000,
+        "buildingType": 0,
+        "priceStatus": 65,
+        "research": null
+      },
+      "reason": "价格状态轮次计时",
+      "sequence": 2667,
+      "commandId": "command-1353",
+      "playerId": "player-2",
+      "turn": 198
+    },
+    {
+      "type": "g4PropertyChanged",
+      "property": {
+        "id": "japan:land:37",
+        "ownerId": "player-1",
+        "level": 1,
+        "basePrice": 2000,
+        "buildingType": 0,
+        "priceStatus": 65,
+        "research": null
+      },
+      "reason": "价格状态轮次计时",
+      "sequence": 2668,
+      "commandId": "command-1353",
+      "playerId": "player-2",
+      "turn": 198
+    },
+    {
+      "type": "g4PropertyChanged",
+      "property": {
+        "id": "japan:land:38",
+        "ownerId": "player-1",
+        "level": 0,
+        "basePrice": 2000,
+        "buildingType": 0,
+        "priceStatus": 65,
+        "research": null
+      },
+      "reason": "价格状态轮次计时",
+      "sequence": 2669,
+      "commandId": "command-1353",
+      "playerId": "player-2",
+      "turn": 198
+    },
+    {
+      "type": "g4PropertyChanged",
+      "property": {
+        "id": "japan:land:42",
+        "ownerId": null,
+        "level": 0,
+        "basePrice": 1000,
+        "buildingType": 0,
+        "priceStatus": 32,
+        "research": null
+      },
+      "reason": "价格状态轮次计时",
+      "sequence": 2670,
+      "commandId": "command-1353",
+      "playerId": "player-2",
+      "turn": 198
+    },
+    {
+      "type": "g4PropertyChanged",
+      "property": {
+        "id": "japan:land:43",
+        "ownerId": "player-2",
+        "level": 0,
+        "basePrice": 1000,
+        "buildingType": 0,
+        "priceStatus": 32,
+        "research": null
+      },
+      "reason": "价格状态轮次计时",
+      "sequence": 2671,
+      "commandId": "command-1353",
+      "playerId": "player-2",
+      "turn": 198
+    },
+    {
+      "type": "g4PropertyChanged",
+      "property": {
+        "id": "japan:land:44",
+        "ownerId": null,
+        "level": 0,
+        "basePrice": 1000,
+        "buildingType": 0,
+        "priceStatus": 32,
+        "research": null
+      },
+      "reason": "价格状态轮次计时",
+      "sequence": 2672,
+      "commandId": "command-1353",
+      "playerId": "player-2",
+      "turn": 198
+    },
+    {
+      "type": "g4PropertyChanged",
+      "property": {
+        "id": "japan:land:45",
+        "ownerId": null,
+        "level": 0,
+        "basePrice": 1000,
+        "buildingType": 0,
+        "priceStatus": 32,
+        "research": null
+      },
+      "reason": "价格状态轮次计时",
+      "sequence": 2673,
+      "commandId": "command-1353",
+      "playerId": "player-2",
+      "turn": 198
+    }
+  ],
+  "prefixes": [
+    "card:07-acquired",
+    "card:27-acquired",
+    "card:27-paused",
+    "card:27-resumed",
+    "card:27-confirm-before",
+    "card:27-confirm-after",
+    "price-clock-before",
+    "price-clock-after",
+    "card:28-acquired",
+    "card:28-paused",
+    "card:28-resumed",
+    "card:28-confirm-before",
+    "card:28-confirm-after"
+  ],
+  "report": {
+    "policy": "commerce-v1",
+    "toolWindows": [
+      "tool:08",
+      "tool:09",
+      "card:12",
+      "card:26",
+      "card:04",
+      "card:27",
+      "card:28"
+    ],
+    "crossChecks": [],
+    "route": "2",
+    "terminal": false,
+    "players": 2,
+    "normalSpeed": true,
+    "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+    "commands": 1353,
+    "auto": 260,
+    "human": 280,
+    "lifecycle": [
+      "pause stops waiting",
+      "resume",
+      "reset dialog cancel",
+      "reset",
+      "replace with humans",
+      "exit cleanup",
+      "fullscreen",
+      "390px"
+    ],
+    "cleanup": {
+      "raf": 0,
+      "canvas": 0
+    },
+    "errors": []
+  },
+  "hashes": {
+    "replay": "5ff1706cfcf7370bfe73a9ff05a5ef8cf2ae7d5124833b0a496644c7ad547620",
+    "state": "be5844c3eed83fa3c32b0bc2da06e53c60fd275c3e1aff923c1bd6ef5760f002",
+    "events": "c3f832d247e26b491625b0cb344c36c5fb622f4d950200e366e05d656884d052"
+  }
+}

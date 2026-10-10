@@ -1,0 +1,1203 @@
+{
+  "stage": "S3-02m",
+  "status": "candidate-group-accepted",
+  "policy": "capital-v1",
+  "rulesId": "japan-events-candidate-v44",
+  "fingerprint": "f9dbb7e9",
+  "newGameSemantics": false,
+  "nativeExecution": false,
+  "historicalCapabilities": {
+    "items": 43,
+    "news": 36,
+    "japanFortuneSlots": 37
+  },
+  "checks": {
+    "newDomain": {
+      "tests": 45,
+      "passed": true,
+      "log": "/private/tmp/capital-domain-final.log"
+    },
+    "relatedRegression": {
+      "firstRun": {
+        "tests": 840,
+        "files": 22,
+        "passed": true,
+        "log": "/private/tmp/capital-regression.log"
+      },
+      "uniqueDomainAfterHistoricalExitCase": 841,
+      "fullFrontendRerun": false
+    },
+    "actualReplayArchiveTests": {
+      "tests": 6,
+      "files": 1,
+      "passed": true,
+      "log": "/private/tmp/capital-browser-tests.log"
+    },
+    "uniqueTestsThisBatch": 847,
+    "uniqueTestFiles": 23,
+    "compatibilityMatrix": {
+      "versions": "v1-v44",
+      "players": [
+        2,
+        3,
+        4
+      ],
+      "cases": 132,
+      "passed": true
+    },
+    "typecheck": true,
+    "lint": true,
+    "build": true,
+    "buildWarnings": [
+      "Existing chunk size warning retained"
+    ],
+    "builtUI": {
+      "built": true,
+      "policies": 14,
+      "switchBackToGods": true,
+      "switchBackToMobility": true,
+      "normalSpeed": true,
+      "defaultHuman": true,
+      "defaultBasic": true,
+      "toolsEffect": true,
+      "policyMetadata": true,
+      "resetPreservesPolicy": true,
+      "switchBackToBasic": true,
+      "switchBackToTools": true,
+      "switchBackToRent": true,
+      "switchBackToDefense": true,
+      "switchBackToEstate": true,
+      "switchBackToCash": true,
+      "switchBackToStatus": true,
+      "switchBackToRoads": true,
+      "switchBackToArea": true,
+      "switchBackToCommerce": true,
+      "switchBackToInventory": true,
+      "humanReplacement": true,
+      "exitWhileToolsWaiting": true,
+      "setup390": true,
+      "cleanup": {
+        "raf": 0,
+        "canvas": 0
+      },
+      "errors": []
+    },
+    "preservation": {
+      "oldFixtures": 394,
+      "changed": [],
+      "changedHistoricalRuntime": [
+        "ComputerPanel.tsx",
+        "game/computer.ts",
+        "game/session.ts"
+      ]
+    }
+  },
+  "actualBrowser": {
+    "routes": [
+      {
+        "route": "2",
+        "players": 2,
+        "commands": 547,
+        "auto": 112,
+        "human": 97,
+        "prefixes": 20,
+        "report": {
+          "capitalWindows": [
+            "buy",
+            "deposit",
+            "withdraw",
+            "sell"
+          ],
+          "robotPreviews": [],
+          "policy": "capital-v1",
+          "toolWindows": [
+            "tool:08",
+            "tool:09",
+            "card:23",
+            "card:11"
+          ],
+          "crossChecks": [],
+          "route": "2",
+          "terminal": false,
+          "players": 2,
+          "normalSpeed": true,
+          "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+          "commands": 547,
+          "auto": 112,
+          "human": 97,
+          "lifecycle": [
+            "pause stops waiting",
+            "resume",
+            "reset dialog cancel",
+            "reset",
+            "replace with humans",
+            "exit cleanup",
+            "fullscreen",
+            "390px"
+          ],
+          "cleanup": {
+            "raf": 0,
+            "canvas": 0
+          },
+          "errors": []
+        },
+        "trades": 5,
+        "subscriptions": [],
+        "loans": [],
+        "reds": [],
+        "forcedSales": [],
+        "rentPayments": [
+          {
+            "ai": true,
+            "active": "player-2",
+            "payer": "player-2",
+            "recipient": "player-1",
+            "amount": 200,
+            "paid": {
+              "cash": 200,
+              "bank": 0
+            }
+          },
+          {
+            "ai": true,
+            "active": "player-2",
+            "payer": "player-2",
+            "recipient": "player-1",
+            "amount": 750,
+            "paid": {
+              "cash": 750,
+              "bank": 0
+            }
+          },
+          {
+            "ai": true,
+            "active": "player-2",
+            "payer": "player-2",
+            "recipient": "player-1",
+            "amount": 1000,
+            "paid": {
+              "cash": 1000,
+              "bank": 0
+            }
+          }
+        ],
+        "reactions": 0,
+        "exits": [],
+        "hashes": {
+          "replay": "7788282d996cb6634c29e6de4353bcf19b7ac0be24c1d9a567e4c5d7215696d4",
+          "state": "b478ff2154f6b088262864d845d5c466475aed283745e092a81408201ac03bd6",
+          "events": "a1dcad50eec48cc6e70342b42e880379cfa12551c52a82c76490329f08fc996d"
+        }
+      },
+      {
+        "route": "3",
+        "players": 3,
+        "commands": 433,
+        "auto": 131,
+        "human": 44,
+        "prefixes": 20,
+        "report": {
+          "capitalWindows": [
+            "buy",
+            "deposit",
+            "sell",
+            "subscription"
+          ],
+          "robotPreviews": [],
+          "policy": "capital-v1",
+          "toolWindows": [
+            "tool:08",
+            "tool:09",
+            "card:04"
+          ],
+          "crossChecks": [],
+          "route": "3",
+          "terminal": false,
+          "players": 3,
+          "normalSpeed": true,
+          "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+          "commands": 433,
+          "auto": 131,
+          "human": 44,
+          "lifecycle": [
+            "pause stops waiting",
+            "resume",
+            "reset dialog cancel",
+            "reset",
+            "replace with humans",
+            "exit cleanup",
+            "fullscreen",
+            "390px"
+          ],
+          "cleanup": {
+            "raf": 0,
+            "canvas": 0
+          },
+          "errors": []
+        },
+        "trades": 11,
+        "subscriptions": [
+          {
+            "ai": true,
+            "id": "player-3",
+            "turn": 57,
+            "receipt": [
+              {
+                "type": "companySubscribed",
+                "receipt": {
+                  "companyId": "japan:company:3",
+                  "stockId": "jp:27",
+                  "traderId": "player-3",
+                  "quantity": 100,
+                  "price": 24,
+                  "amount": 2400,
+                  "availableBefore": 5000,
+                  "availableAfter": 4900,
+                  "ownerBefore": "player-2",
+                  "ownerAfter": "player-2",
+                  "holdingBefore": {
+                    "quantity": 0,
+                    "cost": 0,
+                    "average": 0
+                  },
+                  "holdingAfter": {
+                    "quantity": 100,
+                    "cost": 2400,
+                    "average": 24
+                  }
+                },
+                "sequence": 793,
+                "commandId": "command-432",
+                "playerId": "player-3",
+                "turn": 57
+              }
+            ],
+            "balanceBefore": {
+              "cash": 27711,
+              "bank": 47522
+            },
+            "balanceAfter": {
+              "cash": 25311,
+              "bank": 47522
+            }
+          }
+        ],
+        "loans": [],
+        "reds": [],
+        "forcedSales": [],
+        "rentPayments": [
+          {
+            "ai": true,
+            "active": "player-3",
+            "payer": "player-3",
+            "recipient": "player-2",
+            "amount": 300,
+            "paid": {
+              "cash": 300,
+              "bank": 0
+            }
+          }
+        ],
+        "reactions": 0,
+        "exits": [],
+        "hashes": {
+          "replay": "57e127a69e10ac909a7091c470b5278b0a8524ccda2bec7107b91d2406ba085f",
+          "state": "b4876e7d1c856c7feaa23250ceebd193b2a2e20bdae0452d9411913b4c5de1b7",
+          "events": "67f41d4cd4b4d6b8d30dd6add99d112c17be3944c680c138cd2756478feecc73"
+        }
+      },
+      {
+        "route": "4",
+        "players": 4,
+        "commands": 483,
+        "auto": 156,
+        "human": 47,
+        "prefixes": 18,
+        "report": {
+          "capitalWindows": [
+            "buy",
+            "deposit",
+            "sell"
+          ],
+          "robotPreviews": [],
+          "policy": "capital-v1",
+          "toolWindows": [
+            "tool:08",
+            "tool:09",
+            "card:24"
+          ],
+          "crossChecks": [],
+          "route": "4",
+          "terminal": false,
+          "players": 4,
+          "normalSpeed": true,
+          "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+          "commands": 483,
+          "auto": 156,
+          "human": 47,
+          "lifecycle": [
+            "pause stops waiting",
+            "resume",
+            "reset dialog cancel",
+            "reset",
+            "replace with humans",
+            "exit cleanup",
+            "fullscreen",
+            "390px"
+          ],
+          "cleanup": {
+            "raf": 0,
+            "canvas": 0
+          },
+          "errors": []
+        },
+        "trades": 20,
+        "subscriptions": [],
+        "loans": [],
+        "reds": [
+          {
+            "ai": true,
+            "id": "player-2",
+            "stockId": "jp:26",
+            "quantity": 100,
+            "priceBefore": 3300,
+            "priceAfter": 4020
+          }
+        ],
+        "forcedSales": [],
+        "rentPayments": [
+          {
+            "ai": true,
+            "active": "player-3",
+            "payer": "player-3",
+            "recipient": "player-1",
+            "amount": 400,
+            "paid": {
+              "cash": 400,
+              "bank": 0
+            }
+          },
+          {
+            "ai": true,
+            "active": "player-2",
+            "payer": "player-2",
+            "recipient": "player-1",
+            "amount": 300,
+            "paid": {
+              "cash": 300,
+              "bank": 0
+            }
+          }
+        ],
+        "reactions": 0,
+        "exits": [],
+        "hashes": {
+          "replay": "aae49d8da7f3bd1e5f58293ec8c3ca17d9541311fa52bb578714efc95b4b962c",
+          "state": "43610f13ee9741ec77f10e478ca9cccad66afe539468a4fac0572b1b8406665f",
+          "events": "6a95414de07e7940d8bd042e73ad327f89995f5d842a086bf624e980da1c4028"
+        }
+      },
+      {
+        "route": "loan",
+        "players": 2,
+        "commands": 873,
+        "auto": 188,
+        "human": 145,
+        "prefixes": 24,
+        "report": {
+          "capitalWindows": [
+            "buy",
+            "deposit",
+            "sell",
+            "borrow",
+            "withdraw"
+          ],
+          "robotPreviews": [],
+          "policy": "capital-v1",
+          "toolWindows": [
+            "tool:08",
+            "tool:09",
+            "tool:02",
+            "tool:05",
+            "card:11"
+          ],
+          "crossChecks": [],
+          "route": "loan",
+          "terminal": false,
+          "players": 2,
+          "normalSpeed": true,
+          "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+          "commands": 873,
+          "auto": 188,
+          "human": 145,
+          "lifecycle": [
+            "pause stops waiting",
+            "resume",
+            "reset dialog cancel",
+            "reset",
+            "replace with humans",
+            "exit cleanup",
+            "fullscreen",
+            "390px"
+          ],
+          "cleanup": {
+            "raf": 0,
+            "canvas": 0
+          },
+          "errors": []
+        },
+        "trades": 14,
+        "subscriptions": [],
+        "loans": [
+          {
+            "ai": true,
+            "id": "player-2",
+            "turn": 98,
+            "operation": "borrow",
+            "amount": 2061,
+            "balanceBefore": {
+              "cash": 529,
+              "bank": 2410
+            },
+            "balanceAfter": {
+              "cash": 529,
+              "bank": 4471
+            },
+            "debtBefore": 0,
+            "debtAfter": 2061,
+            "dueBefore": null,
+            "dueAfter": "1998-05-23"
+          }
+        ],
+        "reds": [],
+        "forcedSales": [],
+        "rentPayments": [
+          {
+            "ai": true,
+            "active": "player-2",
+            "payer": "player-2",
+            "recipient": "player-1",
+            "amount": 400,
+            "paid": {
+              "cash": 400,
+              "bank": 0
+            }
+          },
+          {
+            "ai": false,
+            "active": "player-1",
+            "payer": "player-1",
+            "recipient": "player-2",
+            "amount": 400,
+            "paid": {
+              "cash": 400,
+              "bank": 0
+            }
+          },
+          {
+            "ai": false,
+            "active": "player-1",
+            "payer": "player-1",
+            "recipient": "player-2",
+            "amount": 600,
+            "paid": {
+              "cash": 600,
+              "bank": 0
+            }
+          },
+          {
+            "ai": false,
+            "active": "player-1",
+            "payer": "player-1",
+            "recipient": "player-2",
+            "amount": 400,
+            "paid": {
+              "cash": 400,
+              "bank": 0
+            }
+          }
+        ],
+        "reactions": 0,
+        "exits": [],
+        "hashes": {
+          "replay": "1ded42b7c216833f0b06ed0945703f2bd22e3238a1178d0ed8e9061856879dda",
+          "state": "403591c0e1ef71a90ba5d41b47a1ee45fe0f8d13ad2f18d85565e88e47bdc38e",
+          "events": "08b1865014e2fdc7148e6b8f3c7f0b650a3886653ab72213d3693b5f896c1903"
+        }
+      },
+      {
+        "route": "repay",
+        "players": 2,
+        "commands": 1669,
+        "auto": 361,
+        "human": 313,
+        "prefixes": 26,
+        "report": {
+          "capitalWindows": [
+            "buy",
+            "deposit",
+            "withdraw",
+            "sell",
+            "repay"
+          ],
+          "robotPreviews": [],
+          "policy": "capital-v1",
+          "toolWindows": [
+            "tool:08",
+            "tool:09",
+            "card:24",
+            "tool:02",
+            "card:27",
+            "card:15",
+            "card:22",
+            "card:07"
+          ],
+          "crossChecks": [
+            {
+              "index": 722,
+              "kind": "auction",
+              "computer": true
+            }
+          ],
+          "route": "repay",
+          "terminal": false,
+          "players": 2,
+          "normalSpeed": true,
+          "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+          "commands": 1669,
+          "auto": 361,
+          "human": 313,
+          "lifecycle": [
+            "pause stops waiting",
+            "resume",
+            "reset dialog cancel",
+            "reset",
+            "replace with humans",
+            "exit cleanup",
+            "fullscreen",
+            "390px"
+          ],
+          "cleanup": {
+            "raf": 0,
+            "canvas": 0
+          },
+          "errors": []
+        },
+        "trades": 19,
+        "subscriptions": [],
+        "loans": [
+          {
+            "ai": true,
+            "id": "player-2",
+            "turn": 228,
+            "operation": "repay",
+            "amount": 10000,
+            "balanceBefore": {
+              "cash": 0,
+              "bank": 26384
+            },
+            "balanceAfter": {
+              "cash": 0,
+              "bank": 16384
+            },
+            "debtBefore": 10000,
+            "debtAfter": 0,
+            "dueBefore": "1998-06-29",
+            "dueAfter": null
+          }
+        ],
+        "reds": [
+          {
+            "ai": true,
+            "id": "player-2",
+            "stockId": "jp:24",
+            "quantity": 50,
+            "priceBefore": 9200,
+            "priceAfter": 10450
+          },
+          {
+            "ai": true,
+            "id": "player-2",
+            "stockId": "jp:24",
+            "quantity": 50,
+            "priceBefore": 13950,
+            "priceAfter": 14850
+          }
+        ],
+        "forcedSales": [],
+        "rentPayments": [
+          {
+            "ai": true,
+            "active": "player-2",
+            "payer": "player-2",
+            "recipient": "player-1",
+            "amount": 800,
+            "paid": {
+              "cash": 800,
+              "bank": 0
+            }
+          },
+          {
+            "ai": true,
+            "active": "player-2",
+            "payer": "player-2",
+            "recipient": "player-1",
+            "amount": 300,
+            "paid": {
+              "cash": 300,
+              "bank": 0
+            }
+          },
+          {
+            "ai": false,
+            "active": "player-1",
+            "payer": "player-1",
+            "recipient": "player-2",
+            "amount": 1400,
+            "paid": {
+              "cash": 1400,
+              "bank": 0
+            }
+          },
+          {
+            "ai": true,
+            "active": "player-2",
+            "payer": "player-2",
+            "recipient": "player-1",
+            "amount": 2000,
+            "paid": {
+              "cash": 0,
+              "bank": 2000
+            }
+          },
+          {
+            "ai": true,
+            "active": "player-2",
+            "payer": "player-2",
+            "recipient": "player-1",
+            "amount": 2000,
+            "paid": {
+              "cash": 0,
+              "bank": 2000
+            }
+          },
+          {
+            "ai": false,
+            "active": "player-1",
+            "payer": "player-1",
+            "recipient": "player-2",
+            "amount": 150,
+            "paid": {
+              "cash": 150,
+              "bank": 0
+            }
+          },
+          {
+            "ai": false,
+            "active": "player-1",
+            "payer": "player-1",
+            "recipient": "player-2",
+            "amount": 1800,
+            "paid": {
+              "cash": 1800,
+              "bank": 0
+            }
+          },
+          {
+            "ai": false,
+            "active": "player-1",
+            "payer": "player-1",
+            "recipient": "player-2",
+            "amount": 1800,
+            "paid": {
+              "cash": 1800,
+              "bank": 0
+            }
+          },
+          {
+            "ai": true,
+            "active": "player-2",
+            "payer": "player-2",
+            "recipient": "player-1",
+            "amount": 2000,
+            "paid": {
+              "cash": 2000,
+              "bank": 0
+            }
+          },
+          {
+            "ai": true,
+            "active": "player-2",
+            "payer": "player-2",
+            "recipient": "player-1",
+            "amount": 600,
+            "paid": {
+              "cash": 600,
+              "bank": 0
+            }
+          },
+          {
+            "ai": true,
+            "active": "player-2",
+            "payer": "player-2",
+            "recipient": "player-1",
+            "amount": 300,
+            "paid": {
+              "cash": 300,
+              "bank": 0
+            }
+          },
+          {
+            "ai": true,
+            "active": "player-2",
+            "payer": "player-2",
+            "recipient": "player-1",
+            "amount": 300,
+            "paid": {
+              "cash": 300,
+              "bank": 0
+            }
+          },
+          {
+            "ai": true,
+            "active": "player-2",
+            "payer": "player-2",
+            "recipient": "player-1",
+            "amount": 300,
+            "paid": {
+              "cash": 0,
+              "bank": 300
+            }
+          },
+          {
+            "ai": true,
+            "active": "player-2",
+            "payer": "player-2",
+            "recipient": "player-1",
+            "amount": 2000,
+            "paid": {
+              "cash": 0,
+              "bank": 2000
+            }
+          }
+        ],
+        "reactions": 0,
+        "exits": [],
+        "hashes": {
+          "replay": "821ea34735447660774d9c50139263e6ce5a3128a5d1fa1ac8707136e8452e92",
+          "state": "25ceed9b684d38b9ff596bcf43e87b33adb6226bfaddb329d0c553ae537e9a3d",
+          "events": "c835cda9efe89fc39192eea8a1cc912558629f839a61c86110c9f3a62e5a5b84"
+        }
+      },
+      {
+        "route": "payer",
+        "players": 3,
+        "commands": 1546,
+        "auto": 432,
+        "human": 183,
+        "prefixes": 26,
+        "report": {
+          "capitalWindows": [
+            "buy",
+            "sell",
+            "withdraw",
+            "deposit"
+          ],
+          "robotPreviews": [
+            {
+              "mines": 0,
+              "bombs": 0
+            }
+          ],
+          "policy": "capital-v1",
+          "toolWindows": [
+            "tool:08",
+            "tool:09",
+            "tool:02",
+            "tool:01",
+            "card:09",
+            "card:17",
+            "card:24",
+            "card:27",
+            "card:23",
+            "card:22",
+            "card:16",
+            "card:30",
+            "card:12",
+            "card:08",
+            "card:29"
+          ],
+          "crossChecks": [
+            {
+              "index": 1451,
+              "kind": "reaction",
+              "computer": true
+            }
+          ],
+          "route": "payer",
+          "terminal": false,
+          "players": 3,
+          "normalSpeed": true,
+          "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+          "commands": 1546,
+          "auto": 432,
+          "human": 183,
+          "lifecycle": [
+            "pause stops waiting",
+            "resume",
+            "reset dialog cancel",
+            "reset",
+            "replace with humans",
+            "exit cleanup",
+            "fullscreen",
+            "390px"
+          ],
+          "cleanup": {
+            "raf": 0,
+            "canvas": 0
+          },
+          "errors": []
+        },
+        "trades": 14,
+        "subscriptions": [],
+        "loans": [],
+        "reds": [
+          {
+            "ai": true,
+            "id": "player-2",
+            "stockId": "jp:28",
+            "quantity": 10,
+            "priceBefore": 26600,
+            "priceAfter": 32400
+          }
+        ],
+        "forcedSales": [
+          {
+            "event": {
+              "type": "stockTraded",
+              "stockId": "jp:28",
+              "traderId": "player-2",
+              "side": "sell",
+              "quantity": 5,
+              "price": 51100,
+              "amount": 2555,
+              "forced": true,
+              "sequence": 1272,
+              "commandId": "command-678",
+              "playerId": "player-2",
+              "turn": 89
+            },
+            "action": "animationDone",
+            "active": "player-2",
+            "pending": {
+              "kind": "segment",
+              "id": "a5698266-1937-452e-a6bd-5a3bc06c117c:437",
+              "from": 3,
+              "to": 4
+            },
+            "publicBefore": 3000,
+            "publicAfter": 3000
+          }
+        ],
+        "rentPayments": [
+          {
+            "ai": true,
+            "active": "player-3",
+            "payer": "player-3",
+            "recipient": "player-2",
+            "amount": 750,
+            "paid": {
+              "cash": 750,
+              "bank": 0
+            }
+          },
+          {
+            "ai": true,
+            "active": "player-3",
+            "payer": "player-3",
+            "recipient": "player-1",
+            "amount": 300,
+            "paid": {
+              "cash": 300,
+              "bank": 0
+            }
+          },
+          {
+            "ai": false,
+            "active": "player-1",
+            "payer": "player-1",
+            "recipient": "player-2",
+            "amount": 1800,
+            "paid": {
+              "cash": 1800,
+              "bank": 0
+            }
+          },
+          {
+            "ai": true,
+            "active": "player-3",
+            "payer": "player-3",
+            "recipient": "player-2",
+            "amount": 3000,
+            "paid": {
+              "cash": 3000,
+              "bank": 0
+            }
+          },
+          {
+            "ai": true,
+            "active": "player-3",
+            "payer": "player-3",
+            "recipient": "player-2",
+            "amount": 300,
+            "paid": {
+              "cash": 300,
+              "bank": 0
+            }
+          },
+          {
+            "ai": true,
+            "active": "player-3",
+            "payer": "player-3",
+            "recipient": "player-2",
+            "amount": 300,
+            "paid": {
+              "cash": 300,
+              "bank": 0
+            }
+          },
+          {
+            "ai": true,
+            "active": "player-3",
+            "payer": "player-3",
+            "recipient": "player-2",
+            "amount": 200,
+            "paid": {
+              "cash": 200,
+              "bank": 0
+            }
+          },
+          {
+            "ai": true,
+            "active": "player-2",
+            "payer": "player-2",
+            "recipient": "player-1",
+            "amount": 225,
+            "paid": {
+              "cash": 0,
+              "bank": 225
+            }
+          },
+          {
+            "ai": true,
+            "active": "player-2",
+            "payer": "player-2",
+            "recipient": "player-3",
+            "amount": 12800,
+            "paid": {
+              "cash": 5000,
+              "bank": 7800
+            }
+          },
+          {
+            "ai": false,
+            "active": "player-1",
+            "payer": "player-1",
+            "recipient": "player-2",
+            "amount": 750,
+            "paid": {
+              "cash": 750,
+              "bank": 0
+            }
+          },
+          {
+            "ai": false,
+            "active": "player-1",
+            "payer": "player-1",
+            "recipient": "player-3",
+            "amount": 200,
+            "paid": {
+              "cash": 200,
+              "bank": 0
+            }
+          },
+          {
+            "ai": false,
+            "active": "player-1",
+            "payer": "player-1",
+            "recipient": "player-2",
+            "amount": 4500,
+            "paid": {
+              "cash": 1350,
+              "bank": 3150
+            }
+          },
+          {
+            "ai": true,
+            "active": "player-2",
+            "payer": "player-2",
+            "recipient": "player-3",
+            "amount": 200,
+            "paid": {
+              "cash": 200,
+              "bank": 0
+            }
+          },
+          {
+            "ai": true,
+            "active": "player-3",
+            "payer": "player-3",
+            "recipient": "player-2",
+            "amount": 3000,
+            "paid": {
+              "cash": 684,
+              "bank": 2316
+            }
+          },
+          {
+            "ai": false,
+            "active": "player-1",
+            "payer": "player-1",
+            "recipient": "player-2",
+            "amount": 200,
+            "paid": {
+              "cash": 0,
+              "bank": 200
+            }
+          },
+          {
+            "ai": true,
+            "active": "player-3",
+            "payer": "player-3",
+            "recipient": "player-2",
+            "amount": 1050,
+            "paid": {
+              "cash": 0,
+              "bank": 1050
+            }
+          },
+          {
+            "ai": true,
+            "active": "player-3",
+            "payer": "player-3",
+            "recipient": "player-1",
+            "amount": 500,
+            "paid": {
+              "cash": 0,
+              "bank": 500
+            }
+          },
+          {
+            "ai": false,
+            "active": "player-1",
+            "payer": "player-1",
+            "recipient": "player-3",
+            "amount": 1500,
+            "paid": {
+              "cash": 0,
+              "bank": 1500
+            }
+          },
+          {
+            "ai": true,
+            "active": "player-3",
+            "payer": "player-3",
+            "recipient": "player-2",
+            "amount": 750,
+            "paid": {
+              "cash": 0,
+              "bank": 750
+            }
+          },
+          {
+            "ai": false,
+            "active": "player-1",
+            "payer": "player-1",
+            "recipient": "player-3",
+            "amount": 9600,
+            "paid": {
+              "cash": 4600,
+              "bank": 5000
+            }
+          },
+          {
+            "ai": true,
+            "active": "player-3",
+            "payer": "player-3",
+            "recipient": "player-1",
+            "amount": 2000,
+            "paid": {
+              "cash": 0,
+              "bank": 2000
+            }
+          },
+          {
+            "ai": true,
+            "active": "player-3",
+            "payer": "player-3",
+            "recipient": "player-1",
+            "amount": 500,
+            "paid": {
+              "cash": 500,
+              "bank": 0
+            }
+          }
+        ],
+        "reactions": 1,
+        "exits": [],
+        "hashes": {
+          "replay": "31d8357d323d17ed5ff879e62662841a268c738517c6bb9389702994cb8c3327",
+          "state": "f988a9e1c4e393e4dcf578c8bec063aeadeaeb41d86067e0e9214c64181474fb",
+          "events": "caa8e536da4c5a85b5fcf3ea58dafb458e00c8ba1a5165ddf879d08d24f2524c"
+        }
+      }
+    ],
+    "totals": {
+      "commands": 5551,
+      "auto": 1380,
+      "human": 829,
+      "namedPrefixes": 134
+    },
+    "authOnlyFixture": true,
+    "gameStateInjection": false,
+    "normalSpeed": true,
+    "newFullTerminalRun": false
+  },
+  "attempts": [
+    {
+      "issue": "Initial stock sale UI assertion expected sell button while untouched form defaults to buy",
+      "fix": "Check visible disabled controls; reran2/3/4 successfully",
+      "runtimeChange": false
+    },
+    {
+      "issue": "Initial repay Chrome closed and first payer process exited137",
+      "fix": "Reduced concurrent browser load and reran whole routes successfully",
+      "runtimeChange": false
+    },
+    {
+      "issue": "Test fixtures lacked bank arrival/property fields and Result narrowing",
+      "fix": "Corrected domain test fixtures/types; final typecheck and build pass",
+      "runtimeChange": false
+    }
+  ],
+  "notBrowserCovered": [
+    "All partial repayments, bank-then-cash shortfall and due/holiday variants",
+    "All halt/down-limit/negative funds/allied tie/instant quota invalidation combinations",
+    "capital-v1 redirected rent followed by noncurrent exit/public auctions: domain from historical UI prefix only",
+    "All characters, background throttling, persistence, per-seat different policies, new complete terminal matrix"
+  ],
+  "preservedDifferences": [
+    "Native AI and forecast/long-term trap optimisation",
+    "Original quote precision/RNG/charts",
+    "Other asset listings, special roles, original wheel, original exit stack/endgame, minigame presentation/collision"
+  ],
+  "next": "S3-02n advanced research strategy",
+  "release": {
+    "committed": false,
+    "pushed": false,
+    "deployed": false,
+    "databaseTouched": false,
+    "preview5186Stopped": true,
+    "existingVite5175Preserved": true
+  }
+}

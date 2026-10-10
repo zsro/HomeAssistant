@@ -1,0 +1,89 @@
+{
+  "players": 4,
+  "commands": 907,
+  "turn": 122,
+  "phase": "idle",
+  "winner": null,
+  "auto": 96,
+  "human": 277,
+  "dates": 30,
+  "cross": [
+    {
+      "index": 896,
+      "kind": "reaction",
+      "actor": "player-4",
+      "active": "player-1",
+      "computer": true
+    }
+  ],
+  "reactions": [
+    {
+      "responder": "player-3",
+      "active": "player-3",
+      "computer": false,
+      "kind": "trafficDetention",
+      "stage": "redirect",
+      "choice": "decline",
+      "target": null
+    },
+    {
+      "responder": "player-4",
+      "active": "player-1",
+      "computer": true,
+      "kind": "attack",
+      "stage": "redirect",
+      "choice": "decline",
+      "target": null
+    }
+  ],
+  "forced": [],
+  "exits": [],
+  "publicAuctions": 0,
+  "negativeChecks": 1,
+  "prefixes": [
+    "paused",
+    "resumed",
+    "computer-first",
+    "computer-reaction",
+    "attack-return"
+  ],
+  "report": {
+    "crossChecks": [
+      {
+        "index": 890,
+        "active": "player-1",
+        "actor": "player-4",
+        "kind": "reaction",
+        "computer": true
+      }
+    ],
+    "route": "attack",
+    "terminal": false,
+    "players": 4,
+    "normalSpeed": true,
+    "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+    "commands": 907,
+    "human": 277,
+    "lifecycle": [
+      "pause stops waiting",
+      "resume",
+      "reset dialog cancel",
+      "reset",
+      "replace with humans",
+      "exit cleanup",
+      "fullscreen",
+      "390px"
+    ],
+    "cleanup": {
+      "raf": 0,
+      "canvas": 0
+    },
+    "errors": [],
+    "scheduledNonMovementSteps": 96
+  },
+  "hashes": {
+    "replay": "1fc8471f983e4fbaa1e33b9a2d6e79691353425cb5c37a89e0326ebfc2d069fa",
+    "state": "e8ef3027d89b11b642db7496a116c3eadd92971cd4143f9cc93718e38434c789",
+    "events": "15be5cfb0ed70db0e6369dc4ec8e65ca63fc29224093febc3fba185cf3202043"
+  }
+}

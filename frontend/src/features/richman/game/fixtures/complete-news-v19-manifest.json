@@ -1,0 +1,202 @@
+[
+  {
+    "route": "47",
+    "seed": "complete-news-47",
+    "commands": 114,
+    "turn": 11,
+    "players": 4,
+    "state": "9699b2604ee9a5bd6f3baaf49004e58ea5a6b68448dee7af665d40b1ee953109",
+    "events": "a3e2b6701ac533f9952ebd5d1dcab3cccf4ae2fb34c2f02ca4cfef4dd1b11f87",
+    "news": [
+      10,
+      14,
+      22
+    ]
+  },
+  {
+    "route": "138",
+    "seed": "complete-news-138",
+    "commands": 59,
+    "turn": 5,
+    "players": 2,
+    "state": "5a04536c56efe5a55646d4cb827fb585e08f664bd448f4ba34422d71446241be",
+    "events": "669df7dd4725428bad7bedc86524ddbe0bffa687122ef0bf50c3ea8c329774a0",
+    "news": [
+      26,
+      32
+    ]
+  },
+  {
+    "route": "155",
+    "seed": "complete-news-155",
+    "commands": 91,
+    "turn": 8,
+    "players": 4,
+    "state": "4e34c76f71a68ca95a33c8f423ea9f1084c5ebb67b90c024154b0c71a7b1dcd6",
+    "events": "285cbc7f2840ad7db66c1e33f25056b6300dfc7f39f32ec925cb72414889a0f5",
+    "news": [
+      30,
+      34
+    ]
+  },
+  {
+    "route": "125",
+    "seed": "complete-news-125",
+    "commands": 91,
+    "turn": 7,
+    "players": 4,
+    "state": "eae721c63c0c81e9b3661edab2376a4edd71b03d0a0ce4ab6da885ed2a3e99d1",
+    "events": "d538f6a9eff163aec8cfda680c44c426aeda086d7793cbcfba451887ed661e14",
+    "news": [
+      13,
+      31
+    ]
+  },
+  {
+    "route": "103",
+    "seed": "complete-news-103",
+    "commands": 34,
+    "turn": 2,
+    "players": 3,
+    "state": "4f60e8ffea0f83800b3ce8cdc98f385cad520ef1de75f7193d63d3b437c8e0c7",
+    "events": "1e8597c2d5c352976e6f53393efd0083bf510479b0358a629ec6f3453f419e44",
+    "news": [
+      4
+    ]
+  },
+  {
+    "route": "98",
+    "seed": "complete-news-98",
+    "commands": 34,
+    "turn": 2,
+    "players": 4,
+    "state": "a03538d723440637d6468f6bed5992de71cd235100bab5a6810f4463555dc59c",
+    "events": "753096b37217a91ccef7eca05af18a48a835f020326020ce818389e1384df582",
+    "news": [
+      29
+    ]
+  },
+  {
+    "route": "61",
+    "seed": "complete-news-61",
+    "commands": 34,
+    "turn": 2,
+    "players": 3,
+    "state": "35168a4d272b64ea572a0f89589e844e55f84940933c787d72bc12b8f3d402b6",
+    "events": "79b0478bbe10302d1178c4c486a8d629f8ea4586f438713c4807d08c3b54e098",
+    "news": [
+      27
+    ]
+  },
+  {
+    "route": "119",
+    "seed": "complete-news-119",
+    "commands": 34,
+    "turn": 2,
+    "players": 4,
+    "state": "b343680d64fac6124a055184bf6806d8a94f6bcf86f79ba6bf8ad419d8120144",
+    "events": "95503388fe469ab074d3cd958a6f490ef7697b74772d79b41afc65062217dce0",
+    "news": [
+      18
+    ]
+  },
+  {
+    "route": "128",
+    "seed": "complete-news-128",
+    "commands": 34,
+    "turn": 2,
+    "players": 4,
+    "state": "bf48166be2acfc59dc0ed17ee58e4d063fe8c0cdbc0f435cb5affd79a2f52c1b",
+    "events": "d70ead1abc2f4aedf0322b13094d14aad124785d8501eeaa771469418b2a74c2",
+    "news": [
+      33
+    ]
+  },
+  {
+    "route": "113",
+    "seed": "complete-news-113",
+    "commands": 88,
+    "turn": 7,
+    "players": 4,
+    "state": "ebda1120681382394f5b03b812ef779e76f1f6ee854819900cc3151b18b7b5cc",
+    "events": "bed3598d51c51e8fb6cd3f67335f27639ae3b775a8f61ad0adf91f11a266d548",
+    "news": [
+      21
+    ]
+  },
+  {
+    "route": "80",
+    "seed": "complete-news-80",
+    "commands": 111,
+    "turn": 11,
+    "players": 4,
+    "state": "cc062f795052343a0fbf88e7800ece698fb13e5b42e06f719436719cab4ebe0b",
+    "events": "bb3670bf2767fe6cf0a00c73f7c036df164e102586ef07479ccb1207364e6eaf",
+    "news": [
+      20
+    ]
+  },
+  {
+    "route": "156",
+    "seed": "complete-news-156",
+    "commands": 273,
+    "turn": 36,
+    "players": 2,
+    "state": "f46b4ef452e2dddd0f8400c465b9e98eb6e5c170c9d6665a3117fdfc0486c6af",
+    "events": "35e4147e25c0b1289d55b19f457bec77004f187df0bf81b641fb4ba9797de89e",
+    "news": [
+      28
+    ]
+  },
+  {
+    "route": "42",
+    "seed": "complete-news-42",
+    "commands": 328,
+    "turn": 45,
+    "players": 2,
+    "state": "d394183afb5618400bccfc12d38e3164a526d0bc619c3ecc6fc1a11c4fda681a",
+    "events": "eb729ce4ad2f4ceca7c0a27ca9abb2b6031bb1b29965196814a4219ff7b8307d",
+    "news": [
+      19
+    ]
+  },
+  {
+    "route": "140",
+    "seed": "complete-news-140",
+    "commands": 396,
+    "turn": 53,
+    "players": 4,
+    "state": "c108309f0264d1af9dc909a43ba89313a4665fc9ae4accc554ad90202a0e5cbc",
+    "events": "737d21cd6e43ad5dbc68fbfb90e3844ebc170f11634b66da0958e67689396b0d",
+    "news": [
+      35
+    ]
+  },
+  {
+    "route": "45",
+    "seed": "complete-news-45",
+    "commands": 194,
+    "turn": 27,
+    "players": 2,
+    "state": "4e85eecdf185c50c52d0b0781b9d37b97bad5e8bc27605be025fac6eba62059c",
+    "events": "9f76fdb6e344bebc861bae9c0b8c33af18fd1ed1420df263ad13cbbba1124a15",
+    "news": [
+      29
+    ]
+  },
+  {
+    "route": "162",
+    "seed": "complete-news-162",
+    "commands": 416,
+    "turn": 54,
+    "players": 2,
+    "state": "48b1627268e55bf5eb218818bc21eb7dedc75678280e9a7499a6b29a3fd7ae97",
+    "events": "a75cdaf847605a39ff37de03874eed4a688274b1a9c52ccd75f3e79e0a82b497",
+    "news": [
+      21,
+      22,
+      31,
+      32
+    ]
+  }
+]

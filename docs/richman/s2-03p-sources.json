@@ -1,0 +1,114 @@
+{
+  "referenceCommit": "ec7d70e693059d1e781d9d1cc2ad7f36d360d39e",
+  "verifiedFiles": 6,
+  "grade": "B fixed cross-version assembly; Japan company directory A inherited; no Windows runtime comparison",
+  "sources": [
+    {
+      "path": "asm/rich4.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4.asm",
+      "gitBlobSha1": "d11a64755094435fa9953652a5a4951871fd9697",
+      "sha256": "30904cbb4f23a6b74fc1b80ad023bd7dff11b441c2c1978f768f9891d099d64a"
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_core_actions.asm",
+      "gitBlobSha1": "ebfde6c820e8a430b856d9816a926b636e0db1dc",
+      "sha256": "2874c1a3e0ca1d0da5afe4cb93e42cf2d6f6fa864dbee11d7bcaa028af07d94a"
+    },
+    {
+      "path": "asm/rich4_hospital_utils.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_hospital_utils.asm",
+      "gitBlobSha1": "a6442121b32fc0380f3a20909590236f8e7dca5e",
+      "sha256": "ba23adbaa7ccc396f3b99d8854285ee222aea8c1b81bcfc0637e72a6e56c145a"
+    },
+    {
+      "path": "asm/rich4_prison_utils.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_prison_utils.asm",
+      "gitBlobSha1": "96762e540959c05618816670fe7535e3ab495c97",
+      "sha256": "26984458a39e9fc06941772cc9b34931b32d85f561d08a4bddb88d450863abbc"
+    },
+    {
+      "path": "asm/rich4_player_utils.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_utils.asm",
+      "gitBlobSha1": "4bdaafa1f87f9fcd5f71dcf50f1aebd7e795d6be",
+      "sha256": "17479913576a004458908f124c4d7e94361dab41a501830d2ecb87eb7b438f01"
+    },
+    {
+      "path": "asm/rich4_fortune.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_fortune.asm",
+      "gitBlobSha1": "32a7a9dff203a46ec3d2906c1e5f1ede22f97e70",
+      "sha256": "d6309c81b0943a38e138bcdf85c8d006ddb0ba53c4d72744c4d3cc4ab63a53fc"
+    }
+  ],
+  "wheel": {
+    "address": "475d0c+36",
+    "raw": [
+      5,
+      255,
+      3,
+      255,
+      30,
+      255,
+      20,
+      255,
+      15,
+      255,
+      10,
+      255
+    ],
+    "valid": [
+      5,
+      3,
+      30,
+      20,
+      15,
+      10
+    ],
+    "entry": "44090e(mode3) -> 43f7c6 -> 43f127",
+    "boundary": "Original random start and timed key stop cannot equal Web one seeded uniform valid-result draw"
+  },
+  "rules": {
+    "R13-01p": {
+      "address": "41a998..41aa3c;41ab6d..41ac8c",
+      "evidence": "Japan company4 type4 at92/93; only actual landing, owner required; owner draw free; others word22=1000*draw*priceIndex; grant before v27 fee chain, dream allowed"
+    },
+    "R13-02p": {
+      "address": "44090e;43f7c6;43f127;475d0c+36",
+      "evidence": "12 positions, odd sentinel255 cannot stop; valid results5/3/30/20/15/10; Web one uniform seeded draw explicitly differs from timed wheel"
+    },
+    "R05-01p": {
+      "address": "41ac3c..41ac8c;41ae37 fee chain inherited v27",
+      "evidence": "grant before god-modified fee, free/redirect/god sponsor and actual cash-bank payment; policy stays visitor, owner-free; public fund unchanged"
+    },
+    "R09-01p": {
+      "address": "41aa0e..41aa37;41ac60..41ac87;41cae0;41cc48",
+      "evidence": "player decimal+62 (0x3e); add draw &127, not clamp; own-action clear highbit else decrement with128 release marker; no hotel/detention/travel freeze; any nonzero raw byte covered"
+    },
+    "R05-02p": {
+      "address": "44ba63..44bae0;41d2c6..41d3d0",
+      "evidence": "first type4 company pays full amount from period+28 and cumulative+2c signed32, even negative/no owner; victim cash via flag1; no public-fund or direct-owner payment; no term consumption"
+    },
+    "R13-03p": {
+      "address": "43ec3f..43ee0f;43d590..43d760;40d375..40d4c5;41a805",
+      "evidence": "hospital/prison each actual entry/extension 2000*argument duration; travel only first entry; hotel added-duration*2000; reaction resolves target first; no generic vehicle-loss/building-damage claims"
+    },
+    "R13-04p": {
+      "address": "44c1eb..44c220;44cec2..44cf1e;44d172 and negative handler tails",
+      "evidence": "fortune2 new-debt amount paid cash, debt retained; all negative money handlers14..19/23/24/26/30 use shared post-payment claim only if player remains alive; luck cancel no claim, double amount then reimburse; no blanket vehicle damage payouts"
+    },
+    "R08-01p": {
+      "address": "v26 dividends",
+      "evidence": "premiums actual-paid revenue, claims signed negative; monthly15 holder ratios/dividend clearing inherited; no-holder carry, insolvency inherited Web liquidation"
+    },
+    "R09-02p": {
+      "address": "Web integration",
+      "evidence": "business.insurance checkpoint; v29 only state/events and traffic-fortune gate fix, v26-28 omitted traffic handlers retained for exact replays; exits clear policy"
+    }
+  },
+  "deferred": [
+    "original timed wheel/animation/voice RNG",
+    "special actors and unverified additional insurance callers",
+    "other calendar/price-index events",
+    "original bankruptcy forced auctions"
+  ]
+}

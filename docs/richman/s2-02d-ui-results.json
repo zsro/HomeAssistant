@@ -1,0 +1,69 @@
+{
+  "normalSpeed": true,
+  "seed": "s2-02d-worker",
+  "map": "original Japan, no map/state injection",
+  "rulesId": "japan-tools-candidate-v3",
+  "itemFingerprint": "18003b93",
+  "checks": [
+    "map land click synchronizes radio/status",
+    "empty/right click preserves selection",
+    "drag does not select",
+    "pause blocks map choice",
+    "fullscreen map choice",
+    "390px map choice",
+    "explicit confirmation only",
+    "opaque house pixel outside ground diamond",
+    "worker then remote dice",
+    "exact downloaded replay",
+    "reset clears choice",
+    "cleanup"
+  ],
+  "built": [
+    {
+      "type": "propertyBuilt",
+      "propertyId": "japan:land:21",
+      "fromLevel": 0,
+      "level": 1,
+      "ownerId": null,
+      "sequence": 10,
+      "commandId": "command-8",
+      "playerId": "player-1",
+      "turn": 1
+    },
+    {
+      "type": "propertyBuilt",
+      "propertyId": "japan:land:21",
+      "fromLevel": 1,
+      "level": 2,
+      "ownerId": null,
+      "sequence": 29,
+      "commandId": "command-19",
+      "playerId": "player-2",
+      "turn": 2
+    }
+  ],
+  "consumed": [
+    "tool:09",
+    "tool:08",
+    "tool:09"
+  ],
+  "comparisons": [
+    {
+      "balances": true,
+      "items": true,
+      "rng": true,
+      "position": true
+    },
+    {
+      "balances": true,
+      "items": true,
+      "rng": true,
+      "position": true
+    }
+  ],
+  "cleanup": {
+    "raf": 0,
+    "canvas": 0
+  },
+  "errors": []
+}

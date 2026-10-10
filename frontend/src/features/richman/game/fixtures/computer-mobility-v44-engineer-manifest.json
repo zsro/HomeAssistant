@@ -1,0 +1,300 @@
+{
+  "players": 2,
+  "commands": 1950,
+  "auto": 371,
+  "human": 400,
+  "acquisitions": [],
+  "uses": [
+    {
+      "ai": true,
+      "id": "player-2",
+      "item": "tool:12",
+      "turn": 256,
+      "target": {
+        "kind": "player",
+        "id": "player-2"
+      },
+      "mobilityBefore": {
+        "stop": 0,
+        "winter": 0,
+        "dream": 0,
+        "prison": 0,
+        "hospital": 0,
+        "turtle": 0,
+        "vehicle": "foot",
+        "diceCount": 1,
+        "savedVehicle": "foot",
+        "savedDice": 1,
+        "travel": 0
+      },
+      "mobilityAfter": {
+        "stop": 0,
+        "winter": 0,
+        "dream": 0,
+        "prison": 0,
+        "hospital": 0,
+        "turtle": 0,
+        "vehicle": "foot",
+        "diceCount": 1,
+        "savedVehicle": "foot",
+        "savedDice": 1,
+        "travel": 0
+      }
+    }
+  ],
+  "cancellations": [],
+  "traffic": [],
+  "rolls": [
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 256,
+      "vehicle": "foot",
+      "engineer": true,
+      "values": [
+        1
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 258,
+      "vehicle": "foot",
+      "engineer": true,
+      "values": [
+        5
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 260,
+      "vehicle": "foot",
+      "engineer": true,
+      "values": [
+        5
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 262,
+      "vehicle": "foot",
+      "engineer": true,
+      "values": [
+        6
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 264,
+      "vehicle": "foot",
+      "engineer": true,
+      "values": [
+        4
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 266,
+      "vehicle": "foot",
+      "engineer": true,
+      "values": [
+        2
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 268,
+      "vehicle": "foot",
+      "engineer": true,
+      "values": [
+        3
+      ]
+    }
+  ],
+  "engineering": [
+    {
+      "type": "research",
+      "ai": true,
+      "id": "player-2",
+      "turn": 232,
+      "propertyId": "japan:facility:1"
+    },
+    {
+      "type": "g5Notice",
+      "message": "研究完成：工程车已入包。",
+      "sequence": 3351,
+      "commandId": "command-1721",
+      "playerId": "player-2",
+      "turn": 242
+    },
+    {
+      "type": "settledBeforeDemolition",
+      "receipt": {
+        "type": "propertySettled",
+        "payerId": "player-2",
+        "propertyId": "japan:land:20",
+        "operation": "rent",
+        "amount": 400,
+        "level": 0,
+        "recipientId": "player-1",
+        "paid": {
+          "cash": 0,
+          "bank": 400
+        },
+        "sequence": 3599,
+        "commandId": "command-1850",
+        "playerId": "player-2",
+        "turn": 256
+      }
+    },
+    {
+      "type": "settledBeforeDemolition",
+      "receipt": {
+        "type": "propertySettled",
+        "payerId": "player-2",
+        "propertyId": "japan:land:16",
+        "operation": "rent",
+        "amount": 1050,
+        "level": 1,
+        "recipientId": "player-1",
+        "paid": {
+          "cash": 1050,
+          "bank": 0
+        },
+        "sequence": 3635,
+        "commandId": "command-1869",
+        "playerId": "player-2",
+        "turn": 258
+      }
+    },
+    {
+      "type": "g4PropertyChanged",
+      "property": {
+        "id": "japan:land:16",
+        "ownerId": "player-1",
+        "level": 0,
+        "basePrice": 1500,
+        "buildingType": 0,
+        "priceStatus": 0,
+        "research": null
+      },
+      "reason": "工程车落点拆除",
+      "sequence": 3636,
+      "commandId": "command-1870",
+      "playerId": "player-2",
+      "turn": 258,
+      "before": {
+        "id": "japan:land:16",
+        "ownerId": "player-1",
+        "level": 1,
+        "basePrice": 1500,
+        "buildingType": 0,
+        "priceStatus": 0,
+        "research": null
+      },
+      "settlement": {
+        "type": "propertySettled",
+        "payerId": "player-2",
+        "propertyId": "japan:land:16",
+        "operation": "rent",
+        "amount": 1050,
+        "level": 1,
+        "recipientId": "player-1",
+        "paid": {
+          "cash": 1050,
+          "bank": 0
+        },
+        "sequence": 3635,
+        "commandId": "command-1869",
+        "playerId": "player-2",
+        "turn": 258
+      }
+    },
+    {
+      "type": "settledBeforeDemolition",
+      "receipt": {
+        "type": "propertySettled",
+        "payerId": "player-2",
+        "propertyId": "japan:land:6",
+        "operation": "rent",
+        "amount": 550,
+        "level": 0,
+        "recipientId": "player-1",
+        "paid": {
+          "cash": 550,
+          "bank": 0
+        },
+        "sequence": 3758,
+        "commandId": "command-1933",
+        "playerId": "player-2",
+        "turn": 266
+      }
+    },
+    {
+      "type": "g5Notice",
+      "message": "工程车到期，尝试恢复原车辆。",
+      "sequence": 3788,
+      "commandId": "command-1950",
+      "playerId": "player-2",
+      "turn": 268
+    }
+  ],
+  "prefixes": [
+    "research-start",
+    "研究完成：工程车已入包。",
+    "tool:12-paused",
+    "tool:12-resumed",
+    "tool:12-confirm-before",
+    "tool:12-confirm-after",
+    "roll-engineer-1",
+    "engineer-rent-before",
+    "engineer-rent-after",
+    "engineer-demolish-before",
+    "engineer-demolish-after",
+    "工程车到期，尝试恢复原车辆。"
+  ],
+  "report": {
+    "robotPreviews": [],
+    "policy": "mobility-v1",
+    "toolWindows": [
+      "tool:08",
+      "tool:09",
+      "card:26",
+      "tool:12"
+    ],
+    "crossChecks": [],
+    "route": "engineer",
+    "terminal": false,
+    "players": 2,
+    "normalSpeed": true,
+    "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+    "commands": 1950,
+    "auto": 371,
+    "human": 400,
+    "lifecycle": [
+      "pause stops waiting",
+      "resume",
+      "reset dialog cancel",
+      "reset",
+      "replace with humans",
+      "exit cleanup",
+      "fullscreen",
+      "390px"
+    ],
+    "cleanup": {
+      "raf": 0,
+      "canvas": 0
+    },
+    "errors": []
+  },
+  "hashes": {
+    "replay": "98f5b3c17c790e3f45a10eef914333b7e74d6d34aad49108b7332a5147acd0d0",
+    "state": "4563479649a456d7ecf4c6930573d6623aa0f9b1fb748615169502570caa68cc",
+    "events": "d2462fb74e65b9514ee11de3531edf92ef965f0131af739b26c2536955152ce0"
+  }
+}

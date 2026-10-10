@@ -1,0 +1,152 @@
+{
+  "rulesId": "japan-events-candidate-v44",
+  "fingerprint": "f9dbb7e9",
+  "newGameSemantics": false,
+  "nativeExecution": false,
+  "referenceCommit": "ec7d70e693059d1e781d9d1cc2ad7f36d360d39e",
+  "stage": "S3-02j",
+  "policy": "roads-v1",
+  "preservedPolicies": [
+    "basic-v1",
+    "tools-v1",
+    "rent-v1",
+    "defense-v1",
+    "estate-v1",
+    "cash-v1",
+    "status-v1",
+    "inventory-v1",
+    "commerce-v1",
+    "area-v1"
+  ],
+  "priorNativeAudit": [
+    "s2-02e-sources.json",
+    "s2-02l-sources.json",
+    "s2-03p-sources.json",
+    "s3-02i-sources.json"
+  ],
+  "nativeReread": [
+    {
+      "path": "asm/rich4_tool_luzhang.asm",
+      "sha256": "309e1306470462c1056376f0f63014024b3c65ea89cb0f38d9ffc0660c0a6f9c",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_tool_luzhang.asm",
+      "localPath": "/private/tmp/richman-price-reference/rich4_tool_luzhang.asm",
+      "reread": true
+    },
+    {
+      "path": "asm/rich4_tool_jiqiwawa.asm",
+      "sha256": "913608b2555e14ad15ee105e0617aa7ced659642f02e3defc6e54e1a9c486fc4",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_tool_jiqiwawa.asm",
+      "localPath": "/private/tmp/richman-price-reference/rich4_tool_jiqiwawa.asm",
+      "reread": true
+    },
+    {
+      "path": "asm/rich4_tool_dilei.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_tool_dilei.asm",
+      "sha256": "4471925303f00baae30b6c0484d4ca32489bde397f631f86a56743de183ad873",
+      "localPath": "/private/tmp/rich4-g5/rich4_tool_dilei.asm",
+      "reread": true
+    },
+    {
+      "path": "asm/rich4_tool_dingshizhadan.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_tool_dingshizhadan.asm",
+      "sha256": "d5cb75415c8981f60a2144611ed225ec9a8475fd0972c010218b9273c347538f",
+      "localPath": "/private/tmp/rich4-g5/rich4_tool_dingshizhadan.asm",
+      "reread": true
+    },
+    {
+      "path": "asm/rich4_tool_feidan.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_tool_feidan.asm",
+      "sha256": "1984f273e5fed3d00b0f124ff615515e346d5908d46b27627452e7e6d7eab6d6",
+      "localPath": "/private/tmp/rich4-g5/rich4_tool_feidan.asm",
+      "reread": true
+    }
+  ],
+  "localEvidence": [
+    {
+      "path": "frontend/src/features/richman/game/computer-roads.ts",
+      "sha256": "42388e2baa5336264f4941359068203c9dcd5857cd50de3f0ea095a724af2abe"
+    },
+    {
+      "path": "frontend/src/features/richman/game/computer-roads.test.ts",
+      "sha256": "d6c9a335b239c377e7fb11d5e30b0cc7055858ba0a2f98cfe409da37baee1271"
+    },
+    {
+      "path": "frontend/src/features/richman/game/computer-area.ts",
+      "sha256": "ed18de80b742481251fe95da5b655047aee22563ccc00d307acbd22c0ee96c42"
+    },
+    {
+      "path": "frontend/src/features/richman/game/road-tools.ts",
+      "sha256": "05d4f51839b01cf195f93ef1c9acc95381607bb0107ac3515e49929526ad4413"
+    },
+    {
+      "path": "frontend/src/features/richman/game/g5.ts",
+      "sha256": "b2768b2f307d7088d83fd85827e7d80291455571e305eabd5b1179f83dfa6618"
+    },
+    {
+      "path": "frontend/src/features/richman/game/g5-catalog.ts",
+      "sha256": "b182b995d998aec5f41104d0b81d4eb56804fbc715a630acd522098c12844573"
+    },
+    {
+      "path": "frontend/src/features/richman/game/g2.ts",
+      "sha256": "639f9fdaadfafa0c6fed745c65f42018c9cc9bfce8a9d99db06e6e51f1ff9c17"
+    },
+    {
+      "path": "frontend/src/features/richman/game/insurance-state.ts",
+      "sha256": "1080a67fe1f8623fd8d533d6a42b9c6603e6a0e4ea6808a9689700ee1fa68337"
+    },
+    {
+      "path": "frontend/src/features/richman/game/shop-acquisition.ts",
+      "sha256": "78667adb5cfab4f0fb8ff828e94ed610ae30bd7fc6e4923070359a4b549c72cc"
+    },
+    {
+      "path": "frontend/src/features/richman/game/session.ts",
+      "sha256": "c90f637676d6fc2d748b77c9af21520048ec55e121fe1530a99b4202baa50673"
+    },
+    {
+      "path": "frontend/src/features/richman/RoadToolChoice.tsx",
+      "sha256": "0e393b8da29cfcbdecfbe547b9951f31a5050e64678e3b705bb742b304ce1c3c"
+    },
+    {
+      "path": "frontend/src/features/richman/RoadToolChoice.test.tsx",
+      "sha256": "49627704f3beda78797c9c10d468500496e3276d1bf5afb94566039373585e15"
+    },
+    {
+      "path": "scripts/richman/verify-computer-roads.ts",
+      "sha256": "8f75426b1af1e1615974142da1658577518fbbc28766c41b7fc7d36cfe0470b8"
+    },
+    {
+      "path": "scripts/richman/plan-computer-roads.ts",
+      "sha256": "d7efee4a56826d9ef59a6b81ad401f7b4449bc69dcdb96c922de1b0df40a4770"
+    },
+    {
+      "path": "scripts/richman/plan-computer-roads-manual.ts",
+      "sha256": "d2579a7b1592955177257e5e13c7ccebaa27458a87a6729d939a02bf7a7da26d"
+    },
+    {
+      "path": "scripts/richman/prepare-roads-routes.ts",
+      "sha256": "691b3e89bbce08cf8ce15d6a8394a1376f7c70b7c900506c051a7257069b336d"
+    },
+    {
+      "path": "scripts/richman/computer-roads-ui-browser.cjs",
+      "sha256": "455973ad69f4e20c544547a110c99c77b8e1db16dd783ffbb2f034bf95e3d45f"
+    },
+    {
+      "path": "scripts/richman/archive-computer-roads.ts",
+      "sha256": "f7cd4bd5601f14eed9bd84ecc31d0f708e902debc6696fd138c3fc8328424547"
+    },
+    {
+      "path": "scripts/richman/computer-roads-built-browser.cjs",
+      "sha256": "32ebb185a22996eb63d500d79afa06d8f640d495ed0f6fd3ba4f5329a0af2bf8"
+    },
+    {
+      "path": "frontend/src/features/richman/game/computer-roads-browser.test.ts",
+      "sha256": "799aedb39861c43c8a56be973b3caf831a8a8b12a948e13a70d5682dc81e2b77"
+    }
+  ],
+  "claims": [
+    "原合法九格清路、附近空路格和飞弹200投影锚点效果复用v44",
+    "供应占用/返池、炸弹38移动格/转交、爆炸住院车辆及保险沿旧规则",
+    "道路包络/静态收益/同盟保护为自定义policy，不读取隐藏序列、不消耗RNG",
+    "机器娃娃预览修复地雷/未携带炸弹漏计，无游戏语义变化"
+  ]
+}

@@ -1,0 +1,318 @@
+{
+  "date": "2026-10-05",
+  "slice": "S2-03b",
+  "stageComplete": false,
+  "newsImplemented": 4,
+  "newsAccepted": 4,
+  "newsTotal": 36,
+  "itemsImplemented": 43,
+  "itemsHistoricalAccepted": 43,
+  "rulesId": "japan-events-candidate-v15",
+  "fingerprint": "3f29116d",
+  "checks": {
+    "frontend": {
+      "numTotalTests": 420,
+      "numPassedTests": 420,
+      "numFailedTests": 0,
+      "success": true
+    },
+    "newsDomainTests": 16,
+    "newsComponentTests": 2,
+    "newsBrowserGoldenTests": 1,
+    "versionPlayerMatrix": 45,
+    "lint": "passed",
+    "build": "passed",
+    "scriptSyntax": "passed",
+    "diffCheck": "passed",
+    "sourceGitBlobIdentitiesVerified": 6,
+    "pythonResourceSuite": "not rerun; earlier24 remain historical"
+  },
+  "browser": {
+    "normalSpeed": true,
+    "map": "original Japan; real UI commands; auth-only fixture; no game-state injection",
+    "commands": 345,
+    "turn": 46,
+    "players": 3,
+    "completedNews": [
+      23,
+      11,
+      25,
+      24
+    ],
+    "cleanup": {
+      "raf": 0,
+      "canvas": 0
+    },
+    "errors": []
+  },
+  "news": [
+    {
+      "type": "newsResolved",
+      "newsId": 23,
+      "title": "银行加发10%储金红利",
+      "node": 13,
+      "skipped": [],
+      "money": [
+        {
+          "playerId": "player-1",
+          "cashBefore": 50000,
+          "cashAfter": 50000,
+          "bankBefore": 48400,
+          "bankAfter": 53240
+        },
+        {
+          "playerId": "player-2",
+          "cashBefore": 50000,
+          "cashAfter": 50000,
+          "bankBefore": 48400,
+          "bankAfter": 53240
+        },
+        {
+          "playerId": "player-3",
+          "cashBefore": 50000,
+          "cashAfter": 50000,
+          "bankBefore": 50000,
+          "bankAfter": 55000
+        }
+      ],
+      "stocks": [],
+      "publicFund": 0,
+      "cursor": 1,
+      "sequence": 39,
+      "commandId": "command-21",
+      "playerId": "player-2",
+      "turn": 2
+    },
+    {
+      "type": "newsResolved",
+      "newsId": 11,
+      "title": "全员缴交所得税5%",
+      "node": 13,
+      "skipped": [
+        33,
+        31,
+        10,
+        27,
+        28,
+        9,
+        34,
+        8,
+        2,
+        15,
+        12,
+        35,
+        21,
+        29,
+        26,
+        20,
+        17,
+        32
+      ],
+      "money": [
+        {
+          "playerId": "player-1",
+          "cashBefore": 50000,
+          "cashAfter": 47500,
+          "bankBefore": 53240,
+          "bankAfter": 53240
+        },
+        {
+          "playerId": "player-2",
+          "cashBefore": 50000,
+          "cashAfter": 47500,
+          "bankBefore": 53240,
+          "bankAfter": 53240
+        },
+        {
+          "playerId": "player-3",
+          "cashBefore": 50000,
+          "cashAfter": 47500,
+          "bankBefore": 53400,
+          "bankAfter": 53400
+        }
+      ],
+      "stocks": [],
+      "publicFund": 7500,
+      "cursor": 20,
+      "sequence": 113,
+      "commandId": "command-63",
+      "playerId": "player-1",
+      "turn": 7
+    },
+    {
+      "type": "newsResolved",
+      "newsId": 25,
+      "title": "股市全面上涨",
+      "node": 13,
+      "skipped": [
+        18
+      ],
+      "money": [],
+      "stocks": [
+        {
+          "id": "jp:24",
+          "before": 16600,
+          "after": 18300
+        },
+        {
+          "id": "jp:25",
+          "before": 10000,
+          "after": 10850
+        },
+        {
+          "id": "jp:26",
+          "before": 2180,
+          "after": 2660
+        },
+        {
+          "id": "jp:27",
+          "before": 2530,
+          "after": 3090
+        },
+        {
+          "id": "jp:28",
+          "before": 34800,
+          "after": 36000
+        },
+        {
+          "id": "jp:29",
+          "before": 3360,
+          "after": 3780
+        },
+        {
+          "id": "jp:30",
+          "before": 61600,
+          "after": 64000
+        },
+        {
+          "id": "jp:31",
+          "before": 82400,
+          "after": 88700
+        },
+        {
+          "id": "jp:32",
+          "before": 30500,
+          "after": 30500
+        },
+        {
+          "id": "jp:33",
+          "before": 21100,
+          "after": 24000
+        },
+        {
+          "id": "jp:34",
+          "before": 31200,
+          "after": 32600
+        },
+        {
+          "id": "jp:35",
+          "before": 13500,
+          "after": 15750
+        }
+      ],
+      "publicFund": 7500,
+      "cursor": 22,
+      "sequence": 142,
+      "commandId": "command-79",
+      "playerId": "player-3",
+      "turn": 9
+    },
+    {
+      "type": "newsResolved",
+      "newsId": 24,
+      "title": "股市全面下跌",
+      "node": 61,
+      "skipped": [
+        1,
+        14,
+        5,
+        19,
+        6,
+        22,
+        4
+      ],
+      "money": [],
+      "stocks": [
+        {
+          "id": "jp:24",
+          "before": 15450,
+          "after": 13300
+        },
+        {
+          "id": "jp:25",
+          "before": 10750,
+          "after": 9850
+        },
+        {
+          "id": "jp:26",
+          "before": 2710,
+          "after": 2230
+        },
+        {
+          "id": "jp:27",
+          "before": 4140,
+          "after": 3400
+        },
+        {
+          "id": "jp:28",
+          "before": 46700,
+          "after": 40000
+        },
+        {
+          "id": "jp:29",
+          "before": 3840,
+          "after": 3780
+        },
+        {
+          "id": "jp:30",
+          "before": 79600,
+          "after": 65700
+        },
+        {
+          "id": "jp:31",
+          "before": 98200,
+          "after": 81500
+        },
+        {
+          "id": "jp:32",
+          "before": 39600,
+          "after": 33100
+        },
+        {
+          "id": "jp:33",
+          "before": 22500,
+          "after": 21600
+        },
+        {
+          "id": "jp:34",
+          "before": 31500,
+          "after": 27800
+        },
+        {
+          "id": "jp:35",
+          "before": 15950,
+          "after": 15350
+        }
+      ],
+      "publicFund": 7500,
+      "cursor": 30,
+      "sequence": 624,
+      "commandId": "command-344",
+      "playerId": "player-1",
+      "turn": 46
+    }
+  ],
+  "replay": {
+    "path": "frontend/src/features/richman/game/fixtures/news-v15-replay.json",
+    "golden": "frontend/src/features/richman/game/fixtures/news-v15-golden.json",
+    "stateSha256": "fdd7d93ab7de19df3568b6271af2e2d368159bf3858652cc9762e83e2418dd31",
+    "eventsSha256": "3657c70a862bb09689616d7624ad2ee676fc3743cdcbaf5d107d0d9614ece326"
+  },
+  "rawEvidence": "/private/tmp/richman-unified-ui-03b",
+  "limits": [
+    "four-event subset explicitly skips32 unsupported candidates; not full original distribution",
+    "three-player browser46 turns, not full match or all43 items rerun",
+    "news time restore, empty candidate, rounding extremes and teleport are boundary tests not browser cases",
+    "calendar/interest/loans/lottery payout and original Windows runtime comparison remain incomplete"
+  ]
+}

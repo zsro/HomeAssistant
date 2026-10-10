@@ -1,0 +1,49 @@
+{
+  "referenceCommit": "ec7d70e693059d1e781d9d1cc2ad7f36d360d39e",
+  "evidence": "A: inherited local EXE catalog bytes; B: pinned reference semantics; Web preview and bankruptcy explicitly candidate",
+  "localCatalogEvidence": {
+    "report": "effects-audit.json",
+    "id": "card:01",
+    "rawFields": [
+      1,
+      200,
+      2,
+      2
+    ],
+    "localRecordOffset": 508242
+  },
+  "sources": [
+    {
+      "path": "csrc/cards.c",
+      "sha256": "f5f065702b1559bb08eb3989a09340f49dfd1b8b04932545d5d73b44317da410",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/csrc/cards.c"
+    },
+    {
+      "path": "asm/rich4_card_junfuka.c",
+      "sha256": "afc35e91fdda7e8df284bae2e52f9c6b391c4f9ce2c7bbf10b8e3217f825ea9e",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_card_junfuka.c"
+    },
+    {
+      "path": "asm/rich4_player_info.h",
+      "sha256": "cc17726ce054de587a42c0f335d84495e66698da2e15eb6a7b7ca28ab38604be",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_info.h"
+    },
+    {
+      "path": "asm/rich4_card_utils.asm",
+      "sha256": "937d2f587f15068f1f1280ac60d4a61c0249dbde0f206bfcc1489a29591d8181",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_card_utils.asm"
+    },
+    {
+      "path": "asm/rich4_shop.asm",
+      "sha256": "2273fa44c0cbc7d4f508006b917b4f2c412a19e33014abd968435c29e0770410",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_shop.asm"
+    },
+    {
+      "path": "asm/rich4_new_game.asm",
+      "sha256": "0abb3c6ee86e22c768480573e365dcefb692f69ffa701d5ff027cf4d1b2bf86a",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_new_game.asm"
+    }
+  ],
+  "inheritedAcquisitionReport": "s2-02f-cards.md",
+  "conflicts": "Older csrc hostility formula differs from asm C; hostility/audio not implemented or asserted equivalent."
+}

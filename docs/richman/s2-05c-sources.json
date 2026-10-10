@@ -1,0 +1,146 @@
+{
+  "stage": "S2-05c",
+  "referenceCommit": "ec7d70e693059d1e781d9d1cc2ad7f36d360d39e",
+  "rulesId": "japan-events-candidate-v44",
+  "fingerprint": "f9dbb7e9",
+  "semanticIncrement": false,
+  "grade": "fixed source audit; not Windows execution",
+  "sources": [
+    {
+      "path": "asm/rich4_player_save_state.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_save_state.asm",
+      "sha256": "8c3d6b7432e81703520465e7785b8293527402e0332f32374ba81848e142e459",
+      "provenance": "downloaded-fixed-reference"
+    },
+    {
+      "path": "asm/rich4_tool_chuansongji.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_tool_chuansongji.asm",
+      "sha256": "0198b74da766617974d63a5f26c3614e260b9af995f7938f5c8aca5cae38bed4",
+      "provenance": "downloaded-fixed-reference"
+    },
+    {
+      "path": "asm/rich4_tool_shiguangji.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_tool_shiguangji.asm",
+      "sha256": "cf7d61f898bb06d9b0f26abd90c2b1ff0d0f370c563a78f566fbb374daa1277b",
+      "provenance": "downloaded-fixed-reference"
+    },
+    {
+      "path": "asm/rich4_tool_table.c",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_tool_table.c",
+      "sha256": "d19259524990ed8b9bf13c85dbf7220d9166b11536f91df9c8ed904f5f4e3158",
+      "provenance": "previous-audit-cache"
+    },
+    {
+      "path": "asm/rich4_player_utils.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_utils.asm",
+      "sha256": "17479913576a004458908f124c4d7e94361dab41a501830d2ecb87eb7b438f01",
+      "provenance": "previous-audit-cache"
+    }
+  ],
+  "anchors": [
+    {
+      "path": "asm/rich4_player_save_state.asm",
+      "anchor": "_rich4_store_current_state:",
+      "lines": [
+        47
+      ]
+    },
+    {
+      "path": "asm/rich4_player_save_state.asm",
+      "anchor": "_rich4_restore_last_state:",
+      "lines": [
+        412
+      ]
+    },
+    {
+      "path": "asm/rich4_player_save_state.asm",
+      "anchor": "push _rich4_player_cards",
+      "lines": [
+        120,
+        516
+      ]
+    },
+    {
+      "path": "asm/rich4_player_save_state.asm",
+      "anchor": "push _rich4_player_tool_amount",
+      "lines": [
+        139,
+        535
+      ]
+    },
+    {
+      "path": "asm/rich4_player_save_state.asm",
+      "anchor": "push _rich4_player_stocks",
+      "lines": [
+        217,
+        613
+      ]
+    },
+    {
+      "path": "asm/rich4_player_save_state.asm",
+      "anchor": "push _stocks_on_map",
+      "lines": [
+        236,
+        632
+      ]
+    },
+    {
+      "path": "asm/rich4_player_save_state.asm",
+      "anchor": "_global_rich4_cfg + 8",
+      "lines": [
+        72,
+        438
+      ]
+    },
+    {
+      "path": "asm/rich4_tool_shiguangji.asm",
+      "anchor": "call _rich4_restore_last_state",
+      "lines": [
+        31
+      ]
+    },
+    {
+      "path": "asm/rich4_tool_shiguangji.asm",
+      "anchor": "call _rich4_after_player_use_tool",
+      "lines": [
+        61
+      ]
+    },
+    {
+      "path": "asm/rich4_tool_chuansongji.asm",
+      "anchor": "call _rich4_store_current_state",
+      "lines": [
+        342
+      ]
+    },
+    {
+      "path": "asm/rich4_player_utils.asm",
+      "anchor": "call _rich4_store_current_state",
+      "lines": [
+        1012
+      ]
+    },
+    {
+      "path": "asm/rich4_tool_table.c",
+      "anchor": "时光",
+      "lines": [
+        13
+      ]
+    }
+  ],
+  "scope": {
+    "nativeSupported": [
+      "departure/self-teleport checkpoints",
+      "restore global date/player/card/tool/pool/stock state before consuming tool 10"
+    ],
+    "webContracts": [
+      "coherent world-domain snapshot rather than original memory image",
+      "keep RNG/command turn/revision/serial/log; clear all checkpoints; consume one from historical bag",
+      "calendar/company/finance callback restoration uses existing versioned Web fields"
+    ],
+    "notClaimed": [
+      "native save memory completeness or original RNG/precision equivalence",
+      "new restore during pending reaction/payment/date callback"
+    ]
+  }
+}

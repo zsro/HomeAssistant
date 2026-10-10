@@ -1,0 +1,199 @@
+{
+  "mode": "economy",
+  "map": "original Japan, no modified roads/assets/state",
+  "animation": "test-only repeated original 50 ms session ticks",
+  "games": [
+    {
+      "count": 2,
+      "bankArrivals": {
+        "passing": 4,
+        "landing": 4
+      },
+      "eliminations": [
+        {
+          "turn": 276,
+          "playerId": "player-2",
+          "released": 14,
+          "built": 8
+        }
+      ],
+      "repurchases": [],
+      "seed": "s1-04-loop",
+      "turns": 276,
+      "finance": {
+        "eliminated": [
+          "player-2"
+        ],
+        "winnerId": "player-1",
+        "round": 138
+      },
+      "uiCommands": 704,
+      "replayCommands": 1919,
+      "histogram": {
+        "rolled": 276,
+        "branchOffered": 14,
+        "branchChosen": 14,
+        "segmentStarted": 939,
+        "nodeEntered": 939,
+        "landed": 276,
+        "propertyOffered": 122,
+        "propertySettled": 85,
+        "turnStarted": 275,
+        "bankOffered": 8,
+        "bankTransferred": 8,
+        "bankClosed": 8,
+        "propertySkipped": 37,
+        "debtOffered": 1,
+        "debtSettled": 1,
+        "bankrupt": 1,
+        "gameEnded": 1
+      },
+      "cleanup": {
+        "raf": 0,
+        "canvas": 0
+      }
+    },
+    {
+      "count": 3,
+      "bankArrivals": {
+        "passing": 7,
+        "landing": 3
+      },
+      "eliminations": [
+        {
+          "turn": 243,
+          "playerId": "player-3",
+          "released": 14,
+          "built": 5
+        },
+        {
+          "turn": 349,
+          "playerId": "player-2",
+          "released": 23,
+          "built": 11
+        }
+      ],
+      "repurchases": [
+        {
+          "turn": 283,
+          "propertyId": "japan:land:34",
+          "level": 1,
+          "amount": 1800
+        }
+      ],
+      "seed": "s1-04-loop",
+      "turns": 349,
+      "finance": {
+        "eliminated": [
+          "player-3",
+          "player-2"
+        ],
+        "winnerId": "player-1",
+        "round": 134
+      },
+      "uiCommands": 900,
+      "replayCommands": 2443,
+      "histogram": {
+        "rolled": 349,
+        "branchOffered": 18,
+        "branchChosen": 18,
+        "segmentStarted": 1194,
+        "nodeEntered": 1194,
+        "landed": 349,
+        "propertyOffered": 163,
+        "propertySettled": 148,
+        "turnStarted": 348,
+        "bankOffered": 10,
+        "bankTransferred": 10,
+        "bankClosed": 10,
+        "propertySkipped": 15,
+        "debtOffered": 2,
+        "debtSettled": 2,
+        "bankrupt": 2,
+        "gameEnded": 1
+      },
+      "cleanup": {
+        "raf": 0,
+        "canvas": 0
+      }
+    },
+    {
+      "count": 4,
+      "bankArrivals": {
+        "passing": 13,
+        "landing": 3
+      },
+      "eliminations": [
+        {
+          "turn": 375,
+          "playerId": "player-3",
+          "released": 10,
+          "built": 2
+        },
+        {
+          "turn": 461,
+          "playerId": "player-1",
+          "released": 13,
+          "built": 10
+        },
+        {
+          "turn": 483,
+          "playerId": "player-4",
+          "released": 15,
+          "built": 12
+        }
+      ],
+      "repurchases": [
+        {
+          "turn": 465,
+          "propertyId": "japan:land:29",
+          "level": 1,
+          "amount": 1200
+        },
+        {
+          "turn": 476,
+          "propertyId": "japan:land:17",
+          "level": 1,
+          "amount": 1800
+        }
+      ],
+      "seed": "s1-04-loop",
+      "turns": 483,
+      "finance": {
+        "eliminated": [
+          "player-3",
+          "player-1",
+          "player-4"
+        ],
+        "winnerId": "player-2",
+        "round": 133
+      },
+      "uiCommands": 1249,
+      "replayCommands": 3400,
+      "histogram": {
+        "rolled": 483,
+        "branchOffered": 26,
+        "branchChosen": 26,
+        "segmentStarted": 1668,
+        "nodeEntered": 1668,
+        "landed": 483,
+        "propertyOffered": 223,
+        "propertySettled": 218,
+        "turnStarted": 482,
+        "bankOffered": 16,
+        "bankTransferred": 16,
+        "bankClosed": 16,
+        "propertySkipped": 5,
+        "debtOffered": 3,
+        "debtSettled": 3,
+        "bankrupt": 3,
+        "gameEnded": 1
+      },
+      "cleanup": {
+        "raf": 0,
+        "canvas": 0
+      }
+    }
+  ],
+  "errors": []
+}

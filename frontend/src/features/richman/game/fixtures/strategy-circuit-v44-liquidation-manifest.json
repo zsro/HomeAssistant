@@ -1,0 +1,297 @@
+{
+  "trades": [
+    {
+      "player": "player-1",
+      "side": "buy",
+      "amount": 11153,
+      "stock": "jp:30",
+      "quantity": 19
+    },
+    {
+      "player": "player-4",
+      "side": "buy",
+      "amount": 1244,
+      "stock": "jp:29",
+      "quantity": 40
+    },
+    {
+      "player": "player-4",
+      "side": "sell",
+      "amount": 4272,
+      "stock": "jp:28",
+      "quantity": 16
+    },
+    {
+      "player": "player-4",
+      "side": "sell",
+      "amount": 1008,
+      "stock": "jp:29",
+      "quantity": 18
+    },
+    {
+      "player": "player-4",
+      "side": "sell",
+      "amount": 1350,
+      "stock": "jp:29",
+      "quantity": 20
+    },
+    {
+      "player": "player-4",
+      "side": "buy",
+      "amount": 226,
+      "stock": "jp:25",
+      "quantity": 8
+    },
+    {
+      "player": "player-4",
+      "side": "buy",
+      "amount": 1405,
+      "stock": "jp:27",
+      "quantity": 100
+    },
+    {
+      "player": "player-4",
+      "side": "buy",
+      "amount": 984,
+      "stock": "jp:32",
+      "quantity": 4
+    },
+    {
+      "player": "player-4",
+      "side": "buy",
+      "amount": 840,
+      "stock": "jp:24",
+      "quantity": 8
+    },
+    {
+      "player": "player-4",
+      "side": "buy",
+      "amount": 928,
+      "stock": "jp:30",
+      "quantity": 2
+    },
+    {
+      "player": "player-4",
+      "side": "buy",
+      "amount": 140,
+      "stock": "jp:33",
+      "quantity": 1
+    }
+  ],
+  "restores": [],
+  "productions": [],
+  "observations": [],
+  "memory": {},
+  "players": 4,
+  "commands": 2665,
+  "turn": 374,
+  "phase": "turnEnd",
+  "winner": null,
+  "auto": 296,
+  "human": 756,
+  "dates": 93,
+  "cross": [
+    {
+      "index": 2656,
+      "kind": "auction",
+      "actor": "player-1",
+      "active": "player-2",
+      "computer": false
+    },
+    {
+      "index": 2661,
+      "kind": "auction",
+      "actor": "player-4",
+      "active": "player-2",
+      "computer": true
+    },
+    {
+      "index": 2662,
+      "kind": "auction",
+      "actor": "player-1",
+      "active": "player-2",
+      "computer": false
+    },
+    {
+      "index": 2663,
+      "kind": "auction",
+      "actor": "player-4",
+      "active": "player-2",
+      "computer": true
+    }
+  ],
+  "reactions": [],
+  "forced": [
+    {
+      "trader": "player-1",
+      "active": "player-1",
+      "quantity": 1,
+      "amount": 764,
+      "stock": "jp:30",
+      "bankBefore": 150,
+      "bankAfter": 914
+    }
+  ],
+  "exits": [
+    {
+      "continuation": "payment",
+      "id": "disposal-1",
+      "payerId": "player-2",
+      "recipientId": "public",
+      "propertyId": "fortune:17",
+      "due": 12000,
+      "amount": 7927,
+      "unpaid": 4073,
+      "paid": {
+        "cash": 0,
+        "bank": 7927
+      },
+      "released": [
+        "japan:land:14",
+        "japan:land:26",
+        "japan:land:28",
+        "japan:land:29",
+        "japan:land:32",
+        "japan:land:38",
+        "japan:land:47"
+      ],
+      "pool": [
+        null,
+        null,
+        "japan:land:28",
+        "japan:land:29",
+        "japan:land:32",
+        null,
+        "japan:land:47"
+      ],
+      "draws": [
+        1,
+        5,
+        1,
+        0
+      ],
+      "stocks": [],
+      "inventory": [
+        {
+          "itemId": "card:30",
+          "quantity": 1,
+          "points": 70
+        },
+        {
+          "itemId": "card:13",
+          "quantity": 1,
+          "points": 25
+        },
+        {
+          "itemId": "card:25",
+          "quantity": 1,
+          "points": 30
+        }
+      ],
+      "ignoredPoints": 125,
+      "auctions": [
+        {
+          "propertyId": "japan:land:26",
+          "winnerId": "player-1",
+          "amount": 1600,
+          "reserve": 1500
+        },
+        {
+          "propertyId": "japan:land:38",
+          "winnerId": null,
+          "amount": 0,
+          "reserve": 2000
+        },
+        {
+          "propertyId": "japan:land:14",
+          "winnerId": null,
+          "amount": 0,
+          "reserve": 2500
+        }
+      ],
+      "finishedGame": false
+    }
+  ],
+  "publicAuctions": 1600,
+  "negativeChecks": 2,
+  "prefixes": [
+    "paused",
+    "resumed",
+    "computer-first",
+    "date-before",
+    "date-after",
+    "trade-buy-before",
+    "trade-buy-after",
+    "necessary-stock-sale",
+    "trade-sell-before",
+    "trade-sell-after",
+    "exit-start-player-2",
+    "human-auction",
+    "computer-auction",
+    "public-auction-japan:land:26",
+    "public-auction-return-japan:land:26",
+    "public-auction-japan:land:38",
+    "public-auction-return-japan:land:38",
+    "public-auction-japan:land:14",
+    "public-auction-return-japan:land:14",
+    "exit-return-player-2",
+    "paymentCompleted-fortune"
+  ],
+  "report": {
+    "researchWindows": [],
+    "robotPreviews": [],
+    "policy": "research-v1",
+    "toolWindows": [
+      "tool:09",
+      "tool:08",
+      "tool:02",
+      "card:07",
+      "card:23",
+      "card:06"
+    ],
+    "crossChecks": [
+      {
+        "index": 2624,
+        "active": "player-2",
+        "actor": "player-1",
+        "kind": "auction",
+        "computer": false
+      },
+      {
+        "index": 2625,
+        "active": "player-2",
+        "actor": "player-4",
+        "kind": "auction",
+        "computer": true
+      }
+    ],
+    "route": "liquidation",
+    "terminal": false,
+    "players": 4,
+    "normalSpeed": true,
+    "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+    "commands": 2665,
+    "auto": 296,
+    "human": 756,
+    "lifecycle": [
+      "pause stops waiting",
+      "resume",
+      "reset dialog cancel",
+      "reset",
+      "replace with humans",
+      "exit cleanup",
+      "fullscreen",
+      "390px"
+    ],
+    "cleanup": {
+      "raf": 0,
+      "canvas": 0
+    },
+    "errors": []
+  },
+  "hashes": {
+    "replay": "c795494ce54dc301708dca3356c7937009ba329a8bb0f6cbc21ad71b689efd93",
+    "state": "6ab46d5bdf0d182acffc146cde0e03681ae7d6a0437e1640d1196c963f8ab903",
+    "events": "c4071520d3887ed6b02914a0eed4111c8f9c9f318cf0a6c0f8effae4f0a31cb2"
+  }
+}

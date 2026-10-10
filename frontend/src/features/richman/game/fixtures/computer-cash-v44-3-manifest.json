@@ -1,0 +1,143 @@
+{
+  "players": 3,
+  "commands": 2018,
+  "turn": 292,
+  "auto": 529,
+  "human": 274,
+  "acquisitions": [
+    {
+      "id": "player-3",
+      "ai": true,
+      "item": "card:26",
+      "turn": 207,
+      "action": "buyItem",
+      "evidence": [
+        {
+          "item": "card:26",
+          "cost": 35
+        }
+      ]
+    },
+    {
+      "id": "player-3",
+      "ai": true,
+      "item": "card:01",
+      "turn": 279,
+      "action": "animationDone",
+      "evidence": [
+        "玩家3附身小福神，期限7次自身行动边界。",
+        "玩家3获得card:01。"
+      ]
+    }
+  ],
+  "uses": [
+    {
+      "ai": true,
+      "id": "player-3",
+      "item": "card:01",
+      "turn": 291,
+      "gain": 2087,
+      "discarded": 1,
+      "receipt": {
+        "type": "wealthEqualized",
+        "participants": [
+          {
+            "playerId": "player-1",
+            "cash": 6542
+          },
+          {
+            "playerId": "player-2",
+            "cash": 4000
+          },
+          {
+            "playerId": "player-3",
+            "cash": 2140
+          }
+        ],
+        "average": 4227,
+        "discarded": 1,
+        "sequence": 3841,
+        "commandId": "command-2008",
+        "playerId": "player-3",
+        "turn": 291
+      },
+      "before": {
+        "player-1": {
+          "cash": 6542,
+          "bank": 49363
+        },
+        "player-2": {
+          "cash": 4000,
+          "bank": 94106
+        },
+        "player-3": {
+          "cash": 2140,
+          "bank": 95793
+        }
+      },
+      "after": {
+        "player-1": {
+          "cash": 4227,
+          "bank": 49363
+        },
+        "player-2": {
+          "cash": 4227,
+          "bank": 94106
+        },
+        "player-3": {
+          "cash": 4227,
+          "bank": 95793
+        }
+      }
+    }
+  ],
+  "reactions": [],
+  "cancellations": [],
+  "prefixes": [
+    "card:26-acquired",
+    "card:01-acquired",
+    "card:01-paused",
+    "card:01-resumed",
+    "card:01-confirm-before",
+    "card:01-confirm-after"
+  ],
+  "report": {
+    "policy": "cash-v1",
+    "toolWindows": [
+      "tool:08",
+      "tool:09",
+      "card:03",
+      "card:12",
+      "card:01"
+    ],
+    "crossChecks": [],
+    "route": "3",
+    "terminal": false,
+    "players": 3,
+    "normalSpeed": true,
+    "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+    "commands": 2018,
+    "auto": 529,
+    "human": 274,
+    "lifecycle": [
+      "pause stops waiting",
+      "resume",
+      "reset dialog cancel",
+      "reset",
+      "replace with humans",
+      "exit cleanup",
+      "fullscreen",
+      "390px"
+    ],
+    "cleanup": {
+      "raf": 0,
+      "canvas": 0
+    },
+    "errors": []
+  },
+  "hashes": {
+    "replay": "3478a3333243c5380fa95bd09cff11670d7329cb5f22af99cc6048b7031bfa51",
+    "state": "ca48906e55b8a9882e02e5082c6902d5a2f60e02af316be7b07fb9b9ff0fece3",
+    "events": "87c4544f035b4f236e4729dfe7ade175fc5d74f81fcdf7c3ffd882f651ff2ae5"
+  }
+}

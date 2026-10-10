@@ -1,0 +1,454 @@
+{
+  "stage": "S3-02h",
+  "policy": "commerce-v1",
+  "preservedPolicies": [
+    "basic-v1",
+    "tools-v1",
+    "rent-v1",
+    "defense-v1",
+    "estate-v1",
+    "cash-v1",
+    "status-v1",
+    "inventory-v1"
+  ],
+  "rulesId": "japan-events-candidate-v44",
+  "fingerprint": "f9dbb7e9",
+  "newGameSemantics": false,
+  "nativeExecution": false,
+  "referenceCommit": "ec7d70e693059d1e781d9d1cc2ad7f36d360d39e",
+  "priorNativeAudit": [
+    "s2-02k-sources.json",
+    "s2-03s-sources.json",
+    "s3-02g-sources.json"
+  ],
+  "nativeReread": [
+    {
+      "path": "asm/rich4_card_gaijianka.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_card_gaijianka.asm",
+      "sha256": "40cdd7e63fca491b52a9fdcd549cdc64948795aa911b7b4595d041623823d20d",
+      "localPath": "/private/tmp/rich4-g4/rich4_card_gaijianka.asm",
+      "reread": true
+    },
+    {
+      "path": "asm/rich4_card_paimaika.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_card_paimaika.asm",
+      "sha256": "b06cbb65c5bb88d3211bf095ce9fb7315a976809d670cf2f71a6cd1f8a7227ef",
+      "localPath": "/private/tmp/rich4-g4/rich4_card_paimaika.asm",
+      "reread": true
+    },
+    {
+      "path": "asm/rich4_card_zhangjiaka.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_card_zhangjiaka.asm",
+      "sha256": "6fd665a0c1d32b2753cd96d66042575466fe6552be0c2e43a7786fcf2be2de06",
+      "localPath": "/private/tmp/rich4-g4/rich4_card_zhangjiaka.asm",
+      "reread": true
+    },
+    {
+      "path": "asm/rich4_card_chafengka.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_card_chafengka.asm",
+      "sha256": "356bb90c9e043761069ad56925180115beeb31d3896777af18b3ca0015e4df97",
+      "localPath": "/private/tmp/rich4-g4/rich4_card_chafengka.asm",
+      "reread": true
+    },
+    {
+      "path": "asm/rich4_ui_auction.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_ui_auction.asm",
+      "sha256": "771ecbbbb5830bee2b5dbc8966e068329525e6f7f090705344f49725a33b816e",
+      "localPath": "/private/tmp/rich4-g4/rich4_ui_auction.asm",
+      "reread": true
+    },
+    {
+      "path": "csrc/land.h",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/csrc/land.h",
+      "sha256": "491d2be2e54736000d3829d98cb062922f9d374b58b66bce942323e11238ac28",
+      "localPath": "/private/tmp/rich4-g4/land.h",
+      "reread": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "frontend/src/features/richman/game/computer-commerce.ts",
+      "sha256": "be3e2b8e0b7fb6046de9ee3ce6bd331f646108dda95a9df5eb90322abd9d72d9",
+      "anchors": [
+        {
+          "text": "function commerceChoices",
+          "lines": [
+            23
+          ]
+        },
+        {
+          "text": "function commerceRent",
+          "lines": [
+            16
+          ]
+        },
+        {
+          "text": "function decideComputer",
+          "lines": [
+            59
+          ]
+        },
+        {
+          "text": "COMMERCE_POLICY",
+          "lines": [
+            12,
+            60
+          ]
+        },
+        {
+          "text": "commerce-v1",
+          "lines": [
+            12
+          ]
+        }
+      ],
+      "grade": "existing candidate semantics or new host heuristic/verification, not native AI parity"
+    },
+    {
+      "path": "frontend/src/features/richman/game/computer-commerce.test.ts",
+      "sha256": "e11f3b8742c7c34d1ad311254c18a531183cb2472c580d9b5453f0bae9008b1b",
+      "anchors": [
+        {
+          "text": "commerce-v1",
+          "lines": [
+            8,
+            14,
+            18,
+            19,
+            20,
+            21,
+            23,
+            24,
+            26,
+            27
+          ]
+        }
+      ],
+      "grade": "existing candidate semantics or new host heuristic/verification, not native AI parity"
+    },
+    {
+      "path": "frontend/src/features/richman/game/computer-commerce-browser.test.ts",
+      "sha256": "6e38b96a79ef0c4f1d815ab928bfc045d1344ee0ed617cbda436e2767a09e719",
+      "anchors": [
+        {
+          "text": "commerce-v1",
+          "lines": [
+            4
+          ]
+        }
+      ],
+      "grade": "existing candidate semantics or new host heuristic/verification, not native AI parity"
+    },
+    {
+      "path": "frontend/src/features/richman/game/g4.ts",
+      "sha256": "78e38e9e287cff11a645a45c99a5e632777bc842e2029526b18096184f28184c",
+      "anchors": [
+        {
+          "text": "function applyG4",
+          "lines": [
+            145
+          ]
+        },
+        {
+          "text": "function bidG4",
+          "lines": [
+            115
+          ]
+        },
+        {
+          "text": "function settleAuction",
+          "lines": [
+            94
+          ]
+        },
+        {
+          "text": "function tickProperties",
+          "lines": [
+            87
+          ]
+        }
+      ],
+      "grade": "existing candidate semantics or new host heuristic/verification, not native AI parity"
+    },
+    {
+      "path": "frontend/src/features/richman/game/g4-catalog.ts",
+      "sha256": "2c60913dac6557d75544afeec33acea7e4d593df2fcf5ae7418539e98b61e53d",
+      "anchors": [],
+      "grade": "existing candidate semantics or new host heuristic/verification, not native AI parity"
+    },
+    {
+      "path": "frontend/src/features/richman/game/price-index.ts",
+      "sha256": "43441e62b6dedb751d93c25f8704cba32f59d3ac1908a01687c6e85419293b59",
+      "anchors": [],
+      "grade": "existing candidate semantics or new host heuristic/verification, not native AI parity"
+    },
+    {
+      "path": "frontend/src/features/richman/game/shop-acquisition.ts",
+      "sha256": "78667adb5cfab4f0fb8ff828e94ed610ae30bd7fc6e4923070359a4b549c72cc",
+      "anchors": [],
+      "grade": "existing candidate semantics or new host heuristic/verification, not native AI parity"
+    },
+    {
+      "path": "frontend/src/features/richman/game/session.ts",
+      "sha256": "37ae30a7ab440b4c5f152fe81dee546a39e5caf65a59eaca0120a073e75af908",
+      "anchors": [
+        {
+          "text": "commerce-v1",
+          "lines": [
+            139
+          ]
+        }
+      ],
+      "grade": "existing candidate semantics or new host heuristic/verification, not native AI parity"
+    },
+    {
+      "path": "frontend/src/features/richman/game/computer.ts",
+      "sha256": "75dce0aa9b8e21a0cc73e4cc78aec546a397f02677e89caf830c46b7d99d246a",
+      "anchors": [
+        {
+          "text": "commerce-v1",
+          "lines": [
+            7
+          ]
+        }
+      ],
+      "grade": "existing candidate semantics or new host heuristic/verification, not native AI parity"
+    },
+    {
+      "path": "frontend/src/features/richman/ComputerPanel.tsx",
+      "sha256": "8565977c7a87f62c5b1c3e0d48488422bc4727f06d85d243ffacc16325168b55",
+      "anchors": [
+        {
+          "text": "commerce-v1",
+          "lines": [
+            11
+          ]
+        }
+      ],
+      "grade": "existing candidate semantics or new host heuristic/verification, not native AI parity"
+    },
+    {
+      "path": "frontend/src/pages/RichmanPage.tsx",
+      "sha256": "942ff41176928002e314b7248a6f8de66885e15b83d8ed307b52d6e0ec63bac8",
+      "anchors": [
+        {
+          "text": "commerce-v1",
+          "lines": [
+            342
+          ]
+        }
+      ],
+      "grade": "existing candidate semantics or new host heuristic/verification, not native AI parity"
+    },
+    {
+      "path": "scripts/richman/verify-computer-commerce.ts",
+      "sha256": "58bcb07dc5223b04d1a46f4e0020e0e2e757a4d7b0ce865cc7611407e2724c01",
+      "anchors": [
+        {
+          "text": "function verifyComputerCommerce",
+          "lines": [
+            3
+          ]
+        },
+        {
+          "text": "commerce-v1",
+          "lines": [
+            4,
+            7
+          ]
+        }
+      ],
+      "grade": "existing candidate semantics or new host heuristic/verification, not native AI parity"
+    },
+    {
+      "path": "scripts/richman/archive-computer-commerce.ts",
+      "sha256": "1929a381b6e0a71d0a2601143386322abae6cc308525e221175494b0f5911164",
+      "anchors": [],
+      "grade": "existing candidate semantics or new host heuristic/verification, not native AI parity"
+    },
+    {
+      "path": "scripts/richman/prepare-commerce-routes.ts",
+      "sha256": "6c31881e6bfa801552a20cb799c932f7fc5095568c1653de4820cb895ea605fe",
+      "anchors": [],
+      "grade": "existing candidate semantics or new host heuristic/verification, not native AI parity"
+    },
+    {
+      "path": "scripts/richman/plan-computer-commerce.ts",
+      "sha256": "fd4cb7aa1d14432d379dd071c5df2422ff8b15b6d131c483df189ca0ad9efec2",
+      "anchors": [
+        {
+          "text": "commerce-v1",
+          "lines": [
+            14,
+            17
+          ]
+        }
+      ],
+      "grade": "existing candidate semantics or new host heuristic/verification, not native AI parity"
+    },
+    {
+      "path": "scripts/richman/plan-computer-commerce-manual.ts",
+      "sha256": "78bfae0f906c7764272da014a8ea5ea5b8e9033f30223733ed993f91dc770c1e",
+      "anchors": [
+        {
+          "text": "commerce-v1",
+          "lines": [
+            15,
+            19
+          ]
+        }
+      ],
+      "grade": "existing candidate semantics or new host heuristic/verification, not native AI parity"
+    },
+    {
+      "path": "scripts/richman/computer-commerce-ui-browser.cjs",
+      "sha256": "d1791fa71286a360f24217add2a4e05484d8f6f23674ec238eb437ebf50b4578",
+      "anchors": [
+        {
+          "text": "commerce-v1",
+          "lines": [
+            28,
+            113,
+            115
+          ]
+        }
+      ],
+      "grade": "existing candidate semantics or new host heuristic/verification, not native AI parity"
+    },
+    {
+      "path": "scripts/richman/computer-commerce-built-browser.cjs",
+      "sha256": "4e820d35fecd664b6176cad9a330b22b4f9b5e3516be37778a610d67b061c24c",
+      "anchors": [
+        {
+          "text": "commerce-v1",
+          "lines": [
+            27,
+            35,
+            36,
+            46
+          ]
+        }
+      ],
+      "grade": "existing candidate semantics or new host heuristic/verification, not native AI parity"
+    },
+    {
+      "path": "frontend/src/features/richman/game/computer-inventory.ts",
+      "sha256": "78afad270561435f34b47e44203a87dca2ba18ddaeac88781de4397f1f3a3a81",
+      "anchors": [
+        {
+          "text": "function decideComputer",
+          "lines": [
+            36
+          ]
+        }
+      ],
+      "grade": "existing candidate semantics or new host heuristic/verification, not native AI parity"
+    },
+    {
+      "path": "frontend/src/features/richman/game/computer-status.ts",
+      "sha256": "ff57f853f3d0fa81fce5b12ade8f2bc8774ab4b929e78e41fd94fa540ec29162",
+      "anchors": [
+        {
+          "text": "function decideComputer",
+          "lines": [
+            27
+          ]
+        }
+      ],
+      "grade": "existing candidate semantics or new host heuristic/verification, not native AI parity"
+    },
+    {
+      "path": "frontend/src/features/richman/game/computer-cash.ts",
+      "sha256": "a82370fc28ddb666299136056f7c8ab609c8e18e09ce7a1f29dcc681afe3eaa6",
+      "anchors": [
+        {
+          "text": "function decideComputer",
+          "lines": [
+            39
+          ]
+        }
+      ],
+      "grade": "existing candidate semantics or new host heuristic/verification, not native AI parity"
+    },
+    {
+      "path": "frontend/src/features/richman/game/computer-estate.ts",
+      "sha256": "bcce6e5aae10a0183c5b2c8af51420ab00614976d6d4ee3f40b0277409f95d30",
+      "anchors": [
+        {
+          "text": "function decideComputer",
+          "lines": [
+            41
+          ]
+        }
+      ],
+      "grade": "existing candidate semantics or new host heuristic/verification, not native AI parity"
+    },
+    {
+      "path": "frontend/src/features/richman/game/computer-defense.ts",
+      "sha256": "34b21482dad7bd9684162ba5b75cffab780338ffe535f7b51832164fc412e5de",
+      "anchors": [
+        {
+          "text": "function decideComputer",
+          "lines": [
+            8
+          ]
+        }
+      ],
+      "grade": "existing candidate semantics or new host heuristic/verification, not native AI parity"
+    },
+    {
+      "path": "frontend/src/features/richman/game/computer-reactions.ts",
+      "sha256": "212ddf0a043aceefe5ae286173f092cbe8b0529ce0ac77721cdec64294f769fa",
+      "anchors": [
+        {
+          "text": "function decideComputer",
+          "lines": [
+            15
+          ]
+        }
+      ],
+      "grade": "existing candidate semantics or new host heuristic/verification, not native AI parity"
+    },
+    {
+      "path": "frontend/src/features/richman/game/computer-tools.ts",
+      "sha256": "00c5f76c27336c15137c98b0eb27b7cb70626aa3c1befae18b6a7e0fe4bb9e37",
+      "anchors": [
+        {
+          "text": "function decideComputer",
+          "lines": [
+            67
+          ]
+        }
+      ],
+      "grade": "existing candidate semantics or new host heuristic/verification, not native AI parity"
+    }
+  ],
+  "strategyFacts": {
+    "remodel": "current built; signed total-owner static landing rent change; no own level loss/allies/research/price status; own park->shop, enemy hotel/shop->park",
+    "priceSeal": "whole same-name street or single facility; avoid harmful mixed owners; positive current static rent delta; no same-status refresh",
+    "auction": "only enemy-owned chargeable property; proceeds not guaranteed; source never bids",
+    "bidding": "ordinary card auctions only; actual responder; increment100; reserve1000 cash; ceiling=(base+level*upgrade+2*static rent)*index; no shares/bank/loan funding",
+    "shop": "one empty each15/20/35/35 from finite actual shelf/pool",
+    "lifecycle": "same commands; recalc/cancel; no hidden deck or strategy RNG"
+  },
+  "preservation": {
+    "oldFixtureJson": 352,
+    "oldFilesChanged": [
+      "ComputerPanel.tsx",
+      "game/computer.ts",
+      "game/session.ts"
+    ],
+    "oldPolicyBodyUnchanged": true,
+    "worldUnchanged": true
+  },
+  "differences": [
+    "原AI/仇恨/难度",
+    "原精度/RNG/图表",
+    "其他资产挂牌",
+    "特殊角色",
+    "原转盘",
+    "原退出调用栈/终局",
+    "小游戏表现/碰撞",
+    "原快照边界"
+  ]
+}

@@ -1,0 +1,2 @@
+import fs from 'node:fs';import {planMagicContinuation} from './plan-magic-continuation-journey';
+for(let i=1;i<=15;i++){const p=planMagicContinuation('magic-nested-'+i,4,1100);if(p){fs.writeFileSync('/private/tmp/richman-unified-03x-nested.json',JSON.stringify(p,null,2));console.log(JSON.stringify({seed:p.state.seed,commands:p.replay.commands.length,turn:p.state.turn}));break;}console.log('No route',i);}

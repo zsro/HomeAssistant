@@ -1,0 +1,442 @@
+{
+  "stage": "S3-02d",
+  "policy": "estate-v1",
+  "preservedPolicies": [
+    "basic-v1",
+    "tools-v1",
+    "rent-v1",
+    "defense-v1"
+  ],
+  "rulesId": "japan-events-candidate-v44",
+  "fingerprint": "f9dbb7e9",
+  "newGameSemantics": false,
+  "nativeExecution": false,
+  "priorNativeAudit": [
+    "s2-02h-sources.json",
+    "s2-03r-sources.json",
+    "s3-01a-sources.json"
+  ],
+  "sources": [
+    {
+      "path": "frontend/src/features/richman/game/computer-estate.ts",
+      "sha256": "bcce6e5aae10a0183c5b2c8af51420ab00614976d6d4ee3f40b0277409f95d30",
+      "anchors": [
+        {
+          "text": "ESTATE_POLICY",
+          "lines": [
+            12,
+            42
+          ]
+        },
+        {
+          "text": "function estateChoices",
+          "lines": [
+            15
+          ]
+        },
+        {
+          "text": "const cost=",
+          "lines": [
+            33
+          ]
+        },
+        {
+          "text": "function decideComputer",
+          "lines": [
+            41
+          ]
+        },
+        {
+          "text": "const item=ESTATE_CARDS.find",
+          "lines": [
+            60
+          ]
+        }
+      ],
+      "grade": "host heuristic/validation; not native AI evidence"
+    },
+    {
+      "path": "frontend/src/features/richman/game/computer-defense.ts",
+      "sha256": "34b21482dad7bd9684162ba5b75cffab780338ffe535f7b51832164fc412e5de",
+      "anchors": [
+        {
+          "text": "function decideComputer",
+          "lines": [
+            8
+          ]
+        }
+      ],
+      "grade": "host heuristic/validation; not native AI evidence"
+    },
+    {
+      "path": "frontend/src/features/richman/game/computer-reactions.ts",
+      "sha256": "212ddf0a043aceefe5ae286173f092cbe8b0529ce0ac77721cdec64294f769fa",
+      "anchors": [
+        {
+          "text": "function decideComputer",
+          "lines": [
+            15
+          ]
+        }
+      ],
+      "grade": "host heuristic/validation; not native AI evidence"
+    },
+    {
+      "path": "frontend/src/features/richman/game/computer-tools.ts",
+      "sha256": "00c5f76c27336c15137c98b0eb27b7cb70626aa3c1befae18b6a7e0fe4bb9e37",
+      "anchors": [
+        {
+          "text": "function decideComputer",
+          "lines": [
+            67
+          ]
+        }
+      ],
+      "grade": "host heuristic/validation; not native AI evidence"
+    },
+    {
+      "path": "frontend/src/features/richman/game/computer.ts",
+      "sha256": "dd9e1849fc847db52324db927d67b8201af13e3d1c24fa06506b7364e4a83c3a",
+      "anchors": [
+        {
+          "text": "ComputerPolicy=",
+          "lines": [
+            7
+          ]
+        },
+        {
+          "text": "function computerDecision",
+          "lines": [
+            18
+          ]
+        }
+      ],
+      "grade": "host heuristic/validation; not native AI evidence"
+    },
+    {
+      "path": "frontend/src/features/richman/game/session.ts",
+      "sha256": "f2c3add06d3c29be7476ff09105b55f88dd586f0ebe658d4638ecc49342ef2e0",
+      "anchors": [
+        {
+          "text": "computerPolicy",
+          "lines": [
+            79,
+            134,
+            139,
+            328,
+            391
+          ]
+        },
+        {
+          "text": "private send",
+          "lines": [
+            250
+          ]
+        },
+        {
+          "text": "tick(milliseconds",
+          "lines": [
+            379,
+            381
+          ]
+        }
+      ],
+      "grade": "host heuristic/validation; not native AI evidence"
+    },
+    {
+      "path": "frontend/src/features/richman/ComputerPanel.tsx",
+      "sha256": "f6469b2a0670e5ba19045ee2fcd361b284f712d921d52e2144b6576ba304af62",
+      "anchors": [
+        {
+          "text": "c.policy==='estate-v1'",
+          "lines": [
+            11
+          ]
+        }
+      ],
+      "grade": "host heuristic/validation; not native AI evidence"
+    },
+    {
+      "path": "frontend/src/pages/RichmanPage.tsx",
+      "sha256": "d928655a79682d4edcd92a5d3878501a7d769b40819e36f0095ce85f9c75a91d",
+      "anchors": [
+        {
+          "text": "value=\"estate-v1\"",
+          "lines": [
+            342
+          ]
+        }
+      ],
+      "grade": "host heuristic/validation; not native AI evidence"
+    },
+    {
+      "path": "frontend/src/features/richman/game/g1.ts",
+      "sha256": "6f638af0b87346833b0997ad2d5b577a408d7d00fc51f867a552171b66fa91fe",
+      "anchors": [
+        {
+          "text": "G1_GOODS",
+          "lines": [
+            17,
+            32,
+            34
+          ]
+        },
+        {
+          "text": "function g1Options",
+          "lines": [
+            62
+          ]
+        },
+        {
+          "text": "const amount =",
+          "lines": [
+            79
+          ]
+        },
+        {
+          "text": "const land =",
+          "lines": [
+            96
+          ]
+        }
+      ],
+      "grade": "preserved existing semantic evidence"
+    },
+    {
+      "path": "frontend/src/features/richman/game/engine.ts",
+      "sha256": "edb72546f0f2c7269d77867855f24b764457c3b9f6a658632f50444eedada425",
+      "anchors": [
+        {
+          "text": "const g1Good = G1_GOODS.find",
+          "lines": [
+            766,
+            966
+          ]
+        },
+        {
+          "text": "option.transfer",
+          "lines": [
+            781,
+            782
+          ]
+        },
+        {
+          "text": "state.g1.supply[g1Good.id]++",
+          "lines": [
+            795
+          ]
+        }
+      ],
+      "grade": "preserved existing semantic evidence"
+    },
+    {
+      "path": "frontend/src/features/richman/game/price-index.ts",
+      "sha256": "43441e62b6dedb751d93c25f8704cba32f59d3ac1908a01687c6e85419293b59",
+      "anchors": [
+        {
+          "text": "consumerIndex=",
+          "lines": [
+            5
+          ]
+        }
+      ],
+      "grade": "preserved existing semantic evidence"
+    },
+    {
+      "path": "frontend/src/features/richman/game/shop-acquisition.ts",
+      "sha256": "78667adb5cfab4f0fb8ff828e94ed610ae30bd7fc6e4923070359a4b549c72cc",
+      "anchors": [
+        {
+          "text": "buyFromShelf",
+          "lines": [
+            34
+          ]
+        },
+        {
+          "text": "shopPrice",
+          "lines": [
+            17,
+            36
+          ]
+        }
+      ],
+      "grade": "preserved existing semantic evidence"
+    },
+    {
+      "path": "frontend/src/features/richman/game/computer-estate.test.ts",
+      "sha256": "fe6f274e61970ce4b6ebb066de943508e97d49afaa62457468824fc84bc2f9bd",
+      "anchors": [
+        {
+          "text": "Hidden",
+          "lines": [
+            20
+          ]
+        },
+        {
+          "text": "non-current rent/attack",
+          "lines": [
+            38
+          ]
+        },
+        {
+          "text": "pending %s invalidation",
+          "lines": [
+            24
+          ]
+        }
+      ],
+      "grade": "host heuristic/validation; not native AI evidence"
+    },
+    {
+      "path": "scripts/richman/verify-computer-estate.ts",
+      "sha256": "7fca5ae313c0f009714417d2715890e90e52a893f5903a72608d66a804927b7d",
+      "anchors": [
+        {
+          "text": "verifyComputerEstate",
+          "lines": [
+            9
+          ]
+        },
+        {
+          "text": "acquisitions.push",
+          "lines": [
+            18
+          ]
+        },
+        {
+          "text": "const amount=",
+          "lines": [
+            33
+          ]
+        },
+        {
+          "text": "replayGame(nodes",
+          "lines": [
+            44,
+            45
+          ]
+        }
+      ],
+      "grade": "host heuristic/validation; not native AI evidence"
+    },
+    {
+      "path": "scripts/richman/plan-computer-estate.ts",
+      "sha256": "0022401f5fe47ef48da5cf1c7598c7eaf4296b9ac52077f193c269ab071ef1cb",
+      "anchors": [
+        {
+          "text": "planComputerEstate",
+          "lines": [
+            10,
+            27
+          ]
+        },
+        {
+          "text": "cancelGood",
+          "lines": [
+            18,
+            19
+          ]
+        }
+      ],
+      "grade": "host heuristic/validation; not native AI evidence"
+    },
+    {
+      "path": "scripts/richman/computer-estate-ui-browser.cjs",
+      "sha256": "2cbd6c1a9442c3eaf9a76fa2fb189ba9dc23b0dacdbdb916853f249cf821599a",
+      "anchors": [
+        {
+          "text": "const report=",
+          "lines": [
+            114
+          ]
+        },
+        {
+          "text": "toolWindows.includes",
+          "lines": [
+            82
+          ]
+        }
+      ],
+      "grade": "host heuristic/validation; not native AI evidence"
+    },
+    {
+      "path": "scripts/richman/archive-computer-estate.ts",
+      "sha256": "6998889fdb25be0cb566c75a8d224b3f46b4aa02d064836bb6a5cbc786775298",
+      "anchors": [
+        {
+          "text": "verifyComputerEstate(replay)",
+          "lines": [
+            9
+          ]
+        }
+      ],
+      "grade": "host heuristic/validation; not native AI evidence"
+    },
+    {
+      "path": "docs/richman/s2-02h-g1.md",
+      "sha256": "0afb1d7526760a5e6715da9c37b05596b3b12366d01959e8d7635e0911b37dd1",
+      "anchors": [
+        {
+          "text": "R07-02h",
+          "lines": [
+            28
+          ]
+        },
+        {
+          "text": "R07-03h",
+          "lines": [
+            29
+          ]
+        },
+        {
+          "text": "R07-04h",
+          "lines": [
+            30
+          ]
+        },
+        {
+          "text": "R07-05h",
+          "lines": [
+            31
+          ]
+        },
+        {
+          "text": "R07-09h",
+          "lines": [
+            35
+          ]
+        }
+      ],
+      "grade": "preserved existing semantic evidence"
+    }
+  ],
+  "strategyFacts": {
+    "cards": [
+      "card:03",
+      "card:04",
+      "card:05",
+      "card:12"
+    ],
+    "target": "existing G1 current/nearby ordinary-land options only",
+    "valuation": "current (dynamic base+level*upgrade)*index and base rent*index; ordinary residence only; no future/market/whole-street/god rent prediction",
+    "score": "own asset delta minus cash cost +5*own base rent delta; require nonnegative net, positive rent if zero; demolition enemy base rent loss",
+    "risk": "cash cost leaves>=1000; skip ally/retired owners/priceStatus/nonzero building type; no harm to unowned demolition; not global relative-wealth optimization",
+    "shop": "each empty inventory at most one;35/25/20/15 points; actual shelf/supply/capacity; new group before inherited restock",
+    "recheck": "recompute at begin/confirm; choose other beneficial target or cancel without consumption",
+    "random": "no hidden sequence/seed/RNG/checkpoint reads, world simulation or game RNG draw",
+    "callbacks": "non-current responders and other effects delegate defense-v1 unchanged"
+  },
+  "preservation": {
+    "oldFixtureJsonUnchanged": 320,
+    "basicDecisionBodyByteUnchanged": true,
+    "toolsRentDefenseFilesByteUnchanged": true,
+    "engineAndRuleFilesByteUnchanged": true
+  },
+  "differences": [
+    "custom host AI, not original AI/difficulty/hostility",
+    "chain/special buildings, sealed/inflated land and research strategy excluded",
+    "target/cash/ownership invalidation, automatic cancel and non-current response are domain; browser human cancel separately counted",
+    "other active cards/stocks/financing/research deferred",
+    "no per-seat policy mix or midgame takeover"
+  ]
+}

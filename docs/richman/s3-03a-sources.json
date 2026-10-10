@@ -1,0 +1,326 @@
+{
+  "stage": "S3-03a",
+  "nativeExecution": false,
+  "evidence": "fixed-commit disassembly plus local PE data comparison; no Windows runtime or native animation equivalence",
+  "referenceCommit": "ec7d70e693059d1e781d9d1cc2ad7f36d360d39e",
+  "referenceURL": "https://github.com/mytbk/rich4",
+  "cache": "/private/tmp/richman-price-reference",
+  "files": [
+    {
+      "provenance": "sha256 matches prior fixed-commit source registrations",
+      "file": "rich4.asm",
+      "sha256": "30904cbb4f23a6b74fc1b80ad023bd7dff11b441c2c1978f768f9891d099d64a",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4.asm"
+    },
+    {
+      "provenance": "sha256 matches prior fixed-commit source registrations",
+      "file": "rich4_gods.asm",
+      "sha256": "c1128c8e98dbedd828e3d1dc7e0b3aae4bb97f132e618733caaef44ed8534e16",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_gods.asm"
+    },
+    {
+      "provenance": "sha256 matches prior fixed-commit source registrations",
+      "file": "rich4_objects.asm",
+      "sha256": "a2d3c8c9d6946625df6f5b26a981cbae195d445f4b5de6447dea033a11adcaf6",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_objects.asm"
+    },
+    {
+      "provenance": "sha256 matches prior fixed-commit source registrations",
+      "file": "rich4_load_map.asm",
+      "sha256": "7a555911e15b8c947c6c281b95c23bf536dba92baca20929ab1666ed31df3987",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_load_map.asm"
+    },
+    {
+      "provenance": "sha256 matches prior fixed-commit source registrations",
+      "file": "rich4_player_core_actions.asm",
+      "sha256": "2874c1a3e0ca1d0da5afe4cb93e42cf2d6f6fa864dbee11d7bcaa028af07d94a",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_core_actions.asm"
+    },
+    {
+      "provenance": "sha256 matches prior fixed-commit source registrations",
+      "file": "rich4_fortune.asm",
+      "sha256": "d6309c81b0943a38e138bcdf85c8d006ddb0ba53c4d72744c4d3cc4ab63a53fc",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_fortune.asm"
+    },
+    {
+      "provenance": "sha256 matches prior fixed-commit source registrations",
+      "file": "rich4_ai_use_card.asm",
+      "sha256": "aad843133290152c2675f000ca49b49477b93ecd37e0bb01c41d176b60f8a3f6",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_ai_use_card.asm"
+    },
+    {
+      "provenance": "sha256 matches prior fixed-commit source registrations",
+      "file": "rich4_ai_use_tool.asm",
+      "sha256": "8f7a16343841917046615996d0b8d749d84d02ceacde11738ca7cf2f931786b1",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_ai_use_tool.asm"
+    },
+    {
+      "provenance": "local cache; fixed-commit attribution not independently rechecked",
+      "file": "rich4_animate_object.asm",
+      "sha256": "6226d33c4e6de31b84b14fe90f2f42558f9259396dc309e1c58b305ca42fb028",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_animate_object.asm"
+    }
+  ],
+  "localBinaryNote": "Reference VA bytes differ. Each full 36-byte table occurs once at another file offset; byte-pattern match is data evidence, not proof of identical executable callsites.",
+  "localBinary": {
+    "path": "/Users/zsr/Documents/rich4/Game/rich4.exe",
+    "sha256": "110b29f9d2fadcff3836eb69ec380aa264951859c90955da6e11158d2f956a13"
+  },
+  "tables": {
+    "participantScore": {
+      "VA": "0x4749e2",
+      "signed16": [
+        0,
+        -100,
+        -200,
+        -100,
+        -200,
+        100,
+        200,
+        100,
+        200,
+        -100,
+        100,
+        0,
+        -500,
+        0,
+        0,
+        1000,
+        0,
+        0
+      ],
+      "localPEOffset": 472546,
+      "localPEMatches": false,
+      "binaryPatternOffsets": [
+        464014
+      ]
+    },
+    "money": {
+      "VA": "0x474a06",
+      "signed16": [
+        0,
+        100,
+        150,
+        0,
+        0,
+        -60,
+        -100,
+        0,
+        0,
+        60,
+        -60,
+        0,
+        0,
+        0,
+        0,
+        -200,
+        0,
+        0
+      ],
+      "localPEOffset": 472582,
+      "localPEMatches": false,
+      "binaryPatternOffsets": [
+        464050
+      ]
+    },
+    "resistance": {
+      "VA": "0x474a2a",
+      "signed16": [
+        0,
+        0,
+        0,
+        100,
+        150,
+        0,
+        0,
+        -60,
+        -100,
+        60,
+        -60,
+        0,
+        0,
+        0,
+        0,
+        -200,
+        0,
+        0
+      ],
+      "localPEOffset": 472618,
+      "localPEMatches": false,
+      "binaryPatternOffsets": [
+        464086
+      ]
+    }
+  },
+  "fieldReaders": {
+    "68": [
+      {
+        "file": "rich4.asm",
+        "line": 16684,
+        "instruction": "movsx ebx, word [edx + (_rich4_all_players_state + 68)]  ; movsx ebx, word [edx + 0x496bac]"
+      },
+      {
+        "file": "rich4_gods.asm",
+        "line": 545,
+        "instruction": "add word [eax + (_rich4_all_players_state + 68)], dx  ; add word [eax + 0x496bac], dx"
+      },
+      {
+        "file": "rich4_objects.asm",
+        "line": 197,
+        "instruction": "sub word [eax + (_rich4_all_players_state + 68)], bx  ; sub word [eax + 0x496bac], bx"
+      },
+      {
+        "file": "rich4_player_core_actions.asm",
+        "line": 2671,
+        "instruction": "mov ax, word [(_rich4_all_special_players_state + 68)]  ; mov ax, word [0x498e6c]"
+      }
+    ],
+    "70": [
+      {
+        "file": "rich4.asm",
+        "line": 22746,
+        "instruction": "mov si, word [eax + (_rich4_all_players_state + 70)]  ; mov si, word [eax + 0x496bae]"
+      },
+      {
+        "file": "rich4.asm",
+        "line": 22794,
+        "instruction": "mov di, word [eax + (_rich4_all_players_state + 70)]  ; mov di, word [eax + 0x496bae]"
+      },
+      {
+        "file": "rich4_gods.asm",
+        "line": 547,
+        "instruction": "add word [eax + (_rich4_all_players_state + 70)], dx  ; add word [eax + 0x496bae], dx"
+      },
+      {
+        "file": "rich4_objects.asm",
+        "line": 199,
+        "instruction": "sub word [eax + (_rich4_all_players_state + 70)], bx  ; sub word [eax + 0x496bae], bx"
+      },
+      {
+        "file": "rich4_player_core_actions.asm",
+        "line": 2668,
+        "instruction": "mov ax, word [(_rich4_all_special_players_state + 70)]  ; mov ax, word [0x498e6e]"
+      },
+      {
+        "file": "rich4_ai_use_card.asm",
+        "line": 1905,
+        "instruction": "cmp word [ecx + (_rich4_all_players_state + 70)], 0  ; cmp word [ecx + 0x496bae], 0"
+      },
+      {
+        "file": "rich4_ai_use_card.asm",
+        "line": 1990,
+        "instruction": "cmp word [edx + (_rich4_all_players_state + 70)], 0  ; cmp word [edx + 0x496bae], 0"
+      },
+      {
+        "file": "rich4_ai_use_card.asm",
+        "line": 3438,
+        "instruction": "cmp word [edx + (_rich4_all_players_state + 70)], 0  ; cmp word [edx + 0x496bae], 0"
+      },
+      {
+        "file": "rich4_ai_use_tool.asm",
+        "line": 246,
+        "instruction": "cmp word [eax + (_rich4_all_players_state + 70)], 0  ; cmp word [eax + 0x496bae], 0"
+      },
+      {
+        "file": "rich4_ai_use_tool.asm",
+        "line": 338,
+        "instruction": "cmp word [eax + (_rich4_all_players_state + 70)], 0  ; cmp word [eax + 0x496bae], 0"
+      },
+      {
+        "file": "rich4_ai_use_tool.asm",
+        "line": 933,
+        "instruction": "cmp word [edx + (_rich4_all_players_state + 70)], 0  ; cmp word [edx + 0x496bae], 0"
+      },
+      {
+        "file": "rich4_ai_use_tool.asm",
+        "line": 1383,
+        "instruction": "cmp word [ebx + (_rich4_all_players_state + 70)], 0  ; cmp word [ebx + 0x496bae], 0"
+      }
+    ],
+    "72": [
+      {
+        "file": "rich4.asm",
+        "line": 1460,
+        "instruction": "mov eax, dword [(ref_00496930 + 72)]  ; mov eax, dword [0x496978]"
+      },
+      {
+        "file": "rich4.asm",
+        "line": 1623,
+        "instruction": "mov eax, dword [(ref_00496930 + 72)]  ; mov eax, dword [0x496978]"
+      },
+      {
+        "file": "rich4.asm",
+        "line": 7928,
+        "instruction": "movzx esi, byte [(_rich4_all_special_players_state + 72)]  ; movzx esi, byte [0x498e70]"
+      },
+      {
+        "file": "rich4.asm",
+        "line": 8496,
+        "instruction": "movzx esi, byte [(_rich4_all_special_players_state + 72)]  ; movzx esi, byte [0x498e70]"
+      },
+      {
+        "file": "rich4.asm",
+        "line": 11714,
+        "instruction": "mov al, byte [(_rich4_all_special_players_state + 72)]  ; mov al, byte [0x498e70]"
+      },
+      {
+        "file": "rich4.asm",
+        "line": 22841,
+        "instruction": "mov dx, word [eax + (_rich4_all_players_state + 72)]  ; mov dx, word [eax + 0x496bb0]"
+      },
+      {
+        "file": "rich4_gods.asm",
+        "line": 549,
+        "instruction": "add word [eax + (_rich4_all_players_state + 72)], dx  ; add word [eax + 0x496bb0], dx"
+      },
+      {
+        "file": "rich4_objects.asm",
+        "line": 201,
+        "instruction": "sub word [eax + (_rich4_all_players_state + 72)], bx  ; sub word [eax + 0x496bb0], bx"
+      }
+    ]
+  },
+  "facts": [
+    {
+      "id": "GOD-01",
+      "source": "rich4_gods.asm:472-552",
+      "finding": "Attach replaces prior carrier; player+63 is object slot. Type15 duration13, other attached types7; add signed16 fields+68/+70/+72."
+    },
+    {
+      "id": "GOD-02",
+      "source": "rich4_objects.asm:139-254",
+      "finding": "Removal clears attachment and subtracts three modifiers; first12 object slots alternate paired slot and seek distant unoccupied node. Busy paired slot and all reentry callers deferred."
+    },
+    {
+      "id": "GOD-03",
+      "source": "rich4_load_map.asm:255-307",
+      "finding": "Initial slots1/3/5/7/9/11 plus13/14; differs from Web 12-type initial pool and five-round replenishment."
+    },
+    {
+      "id": "GOD-04",
+      "source": "rich4.asm:22732-22899; rich4_fortune.asm",
+      "finding": "fcn_0044b896 selects money +70 or resistance +72 and threshold result codes; imported fortune consumers already exist in Web. +68 is seen in participant scoring fcn_00437d1a; do not invent global luck probability."
+    },
+    {
+      "id": "GOD-05",
+      "source": "rich4_player_core_actions.asm:4459-4484,4830-4873",
+      "finding": "Own-action attached timer; date month-change branch relocates slots13/14 after day15 dividend/lottery; not evidence of five-round all-god refresh."
+    },
+    {
+      "id": "GOD-06",
+      "source": "rich4.asm:1910-2030,7130-7160; rich4_animate_object.asm",
+      "finding": "Attached object node/visual follows carrier; absence rendering gate exists. Animation is not proof of autonomous free-god game movement."
+    }
+  ],
+  "scope": {
+    "implemented": "read-only god/traffic panel and following text badge; game rules and all policies unchanged",
+    "deferred": [
+      "native paired spawn/remove rules and blocked pair",
+      "special slots11/13/14",
+      "native free wandering not established",
+      "native vehicle/god sprites and animation",
+      "base character luck and original AI scoring",
+      "native spinner and exit callstack"
+    ]
+  }
+}

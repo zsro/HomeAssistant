@@ -1,0 +1,245 @@
+{
+  "stage": "S3-05c",
+  "date": "2026-10-10",
+  "status": "S3-05 and S3 Web/Chrome candidate closed; not original-game parity",
+  "runtimeRulesUnchanged": "v47",
+  "policiesUnchanged": 15,
+  "newGameSemantics": false,
+  "keyboardBrowser": [
+    {
+      "name": "desktop",
+      "keyboardWorkerCancel": true,
+      "tabRadioSpace": true,
+      "dialogEscapeReturnsOpener": true,
+      "cancelRetainsSelection": true,
+      "pausedDialogStaysPaused": true,
+      "resetAndNewFocus": true,
+      "resetAndNewClearTargets": true,
+      "tabNextRoll": true,
+      "focusOutline": {
+        "style": "solid",
+        "width": "3px"
+      },
+      "exitCanvas": 0,
+      "errors": []
+    },
+    {
+      "name": "touch390",
+      "keyboardWorkerCancel": true,
+      "tabRadioSpace": true,
+      "dialogEscapeReturnsOpener": true,
+      "cancelRetainsSelection": true,
+      "pausedDialogStaysPaused": true,
+      "resetAndNewFocus": true,
+      "resetAndNewClearTargets": true,
+      "tabNextRoll": true,
+      "focusOutline": {
+        "style": "solid",
+        "width": "3px"
+      },
+      "exitCanvas": 0,
+      "errors": []
+    }
+  ],
+  "responderBrowser": [
+    {
+      "name": "auction",
+      "source": "operating-news-v17",
+      "mode": "operatingNews",
+      "checks": [
+        {
+          "index": 26,
+          "phase": "auction",
+          "active": "player-2",
+          "actor": "player-1",
+          "nonCurrent": true,
+          "label": "地产拍卖",
+          "tabWithinPanel": true,
+          "navigationNoCommand": true,
+          "focusAfterResponse": "地产拍卖"
+        },
+        {
+          "index": 27,
+          "phase": "auction",
+          "active": "player-2",
+          "actor": "player-2",
+          "nonCurrent": false,
+          "label": "地产拍卖",
+          "tabWithinPanel": true,
+          "navigationNoCommand": true,
+          "focusAfterResponse": "地产拍卖"
+        },
+        {
+          "index": 28,
+          "phase": "auction",
+          "active": "player-2",
+          "actor": "player-3",
+          "nonCurrent": true,
+          "label": "地产拍卖",
+          "tabWithinPanel": true,
+          "navigationNoCommand": true,
+          "focusAfterResponse": "新闻结算"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "name": "reaction",
+      "source": "magic-actions-v37-nested",
+      "mode": "magicActions",
+      "checks": [
+        {
+          "index": 283,
+          "phase": "reaction",
+          "active": "player-4",
+          "actor": "player-1",
+          "nonCurrent": true,
+          "label": "反应决策",
+          "tabWithinPanel": true,
+          "navigationNoCommand": true,
+          "focusAfterResponse": "魔法屋"
+        }
+      ],
+      "errors": []
+    }
+  ],
+  "replays": [
+    {
+      "name": "desktop-before-reset",
+      "rulesId": "japan-events-candidate-v47",
+      "commands": 9,
+      "prefixes": [
+        1,
+        3,
+        8
+      ],
+      "fullExportReplay": true,
+      "originalPlanExact": false,
+      "sha256": "563f0df55ab6f01f1e52f06caea9705fc29899f5500643ba18768a5199b19159",
+      "fixture": "frontend/src/features/richman/game/fixtures/polish-closure-desktop-before-reset-replay.json"
+    },
+    {
+      "name": "desktop-after-reset",
+      "rulesId": "japan-events-candidate-v47",
+      "commands": 2,
+      "prefixes": [
+        1
+      ],
+      "fullExportReplay": true,
+      "originalPlanExact": false,
+      "sha256": "db441fb99a17c177c92dba84d9a0b1a89053eb5d8f9c61505b1b41dfe817e760",
+      "fixture": "frontend/src/features/richman/game/fixtures/polish-closure-desktop-after-reset-replay.json"
+    },
+    {
+      "name": "desktop-after-new",
+      "rulesId": "japan-events-candidate-v47",
+      "commands": 2,
+      "prefixes": [
+        1
+      ],
+      "fullExportReplay": true,
+      "originalPlanExact": false,
+      "sha256": "9eea617688ed51b196dac52ffce9968915cffe1ff8da13429a0902ff554f40c3",
+      "fixture": "frontend/src/features/richman/game/fixtures/polish-closure-desktop-after-new-replay.json"
+    },
+    {
+      "name": "touch390-before-reset",
+      "rulesId": "japan-events-candidate-v47",
+      "commands": 9,
+      "prefixes": [
+        1,
+        3,
+        8
+      ],
+      "fullExportReplay": true,
+      "originalPlanExact": false,
+      "sha256": "e76a53fb0fb9239cf7e67b873476bb5cdc762130271cc6987ccd446ae22fb0f8",
+      "fixture": "frontend/src/features/richman/game/fixtures/polish-closure-touch390-before-reset-replay.json"
+    },
+    {
+      "name": "touch390-after-reset",
+      "rulesId": "japan-events-candidate-v47",
+      "commands": 2,
+      "prefixes": [
+        1
+      ],
+      "fullExportReplay": true,
+      "originalPlanExact": false,
+      "sha256": "7f916528a6baa8e6ce250a8980bcfbf10598f3770ab61c7e8ecc9cc3f743bdbc",
+      "fixture": "frontend/src/features/richman/game/fixtures/polish-closure-touch390-after-reset-replay.json"
+    },
+    {
+      "name": "touch390-after-new",
+      "rulesId": "japan-events-candidate-v47",
+      "commands": 2,
+      "prefixes": [
+        1
+      ],
+      "fullExportReplay": true,
+      "originalPlanExact": false,
+      "sha256": "b98ed3de92e615af147f33384bf633a2f2a7352a015d6b08faa33ffc1ad2e1b8",
+      "fixture": "frontend/src/features/richman/game/fixtures/polish-closure-touch390-after-new-replay.json"
+    },
+    {
+      "name": "auction",
+      "rulesId": "japan-events-candidate-v17",
+      "commands": 30,
+      "prefixes": [
+        20,
+        26,
+        28
+      ],
+      "fullExportReplay": true,
+      "originalPlanExact": true,
+      "sha256": "d7916682a8d11e2ec943d1c3489020d95091f5dc2ea178a7b206abd9689d2342",
+      "fixture": "frontend/src/features/richman/game/fixtures/polish-closure-auction-replay.json"
+    },
+    {
+      "name": "reaction",
+      "rulesId": "japan-events-candidate-v37",
+      "commands": 284,
+      "prefixes": [
+        200,
+        282,
+        283
+      ],
+      "fullExportReplay": true,
+      "originalPlanExact": true,
+      "sha256": "decaaee5ade044e741e3bb9d3cfa49388e8c006917e940fcaead4a3feaa64a54",
+      "fixture": "frontend/src/features/richman/game/fixtures/polish-closure-reaction-replay.json"
+    }
+  ],
+  "archivedCommands": 340,
+  "prefixChecks": 16,
+  "accounting": "26 v47 commands in six exported segments + 30 v17 auction + 284 v37 magic reaction. Full replay means entire exported prefix, not finished game. Commands between an export and destructive new-game boundary are not counted. Historical source routes are explicit, not v47 transaction acceptance.",
+  "tests": {
+    "passed": 33,
+    "files": 4,
+    "scope": "decision-navigation, ItemPanel, FinancePanel, G3Choice; non-current debt payer only isolated component fixture"
+  },
+  "lint": "passed",
+  "build": "tsc/Vite passed; existing chunk/import warnings",
+  "baseline": {
+    "unchangedGameAndResources": 761,
+    "unchangedExistingFixtures": 493,
+    "oldAudioLongRoutesRerun": false
+  },
+  "fix": "Keyboard item cancel dropped focus to body. Focus next operation after item completion/reset/new game; recover removed focused decision controls on snapshot change without stealing retained focus. Explicitly clear stale worker selection/miss on reset/new game.",
+  "notTested": [
+    "non-current debt original-map navigation this batch (component-only, historical finance baseline retained)",
+    "all 43 cards/phases/seat combinations and end-to-end keyboard-only app traversal",
+    "physical touchscreen/Safari/manual listening and multi-touch/pinch",
+    "natural audio denial/original-map competing queue remain untriggered",
+    "natural fullscreen rejection; prior S3-05b is explicit injection",
+    "original audio/animation/palette/occlusion, exit stack/endgame, RNG/special characters/spinner and AI/market differences"
+  ],
+  "attemptsExcluded": [
+    "Initial keyboard cancel lost-focus assertion failed; product fixed and affected short runs repeated",
+    "Initial historical pause runner used paused instead of value; corrected",
+    "First route heuristic chose current-player reaction; engine audit replaced with confirmed non-current v37 magic reaction",
+    "Runner duplicate act declaration and magic exact labels corrected before final accepted run",
+    "Intermediate browser prefix interrupted after focus handler edit/Hot Refresh; not counted",
+    "Debt component expected incorrect text; corrected to actual payer label, 33 checks subsequently passed"
+  ],
+  "next": "S4-01a: inventory original maps/characters/resources and current coverage; define first evidence-backed content increment without rewriting Japanese rules or starting save/deploy work"
+}

@@ -1,0 +1,97 @@
+[
+  {
+    "route": "3",
+    "seed": "disposal-2",
+    "players": 3,
+    "commands": 811,
+    "turn": 127,
+    "endDate": "1998-02-12",
+    "state": "98504fdd4b61ae16631c4b1240b287aaee88eb4588aa305548d981270a234a84",
+    "events": "7efa9117d8260b82342e1da7f5e9a47d8efed1640758b3291d24396f5e0f1deb",
+    "checks": [
+      "exit first; frozen actual liquid payment; no debtor rescue",
+      "released original estates retain buildings; stocks public; bag no point credit; lottery/listing cleanup",
+      "forced auction indexed reserve and survivor-only participants",
+      "auction sequence freezes active turn and calendar",
+      "forced auction actual cash to public only",
+      "three distinct lots; deferred creditor actual receipt; original turn resumes"
+    ],
+    "receipt": {
+      "id": "disposal-1",
+      "payerId": "player-1",
+      "recipientId": "player-3",
+      "propertyId": "japan:land:32",
+      "due": 300,
+      "amount": 0,
+      "unpaid": 300,
+      "paid": {
+        "cash": 0,
+        "bank": 0
+      },
+      "released": [
+        "japan:land:4",
+        "japan:land:14",
+        "japan:land:22",
+        "japan:land:24",
+        "japan:land:25"
+      ],
+      "pool": [
+        null,
+        null,
+        "japan:land:22",
+        "japan:land:24",
+        null
+      ],
+      "draws": [
+        0,
+        1,
+        4
+      ],
+      "stocks": [],
+      "inventory": [
+        {
+          "itemId": "tool:09",
+          "quantity": 1,
+          "points": 30
+        },
+        {
+          "itemId": "tool:01",
+          "quantity": 1,
+          "points": 15
+        },
+        {
+          "itemId": "tool:02",
+          "quantity": 1,
+          "points": 30
+        },
+        {
+          "itemId": "card:09",
+          "quantity": 1,
+          "points": 160
+        }
+      ],
+      "ignoredPoints": 235,
+      "auctions": [
+        {
+          "propertyId": "japan:land:4",
+          "winnerId": "player-2",
+          "amount": 900,
+          "reserve": 800
+        },
+        {
+          "propertyId": "japan:land:14",
+          "winnerId": "player-2",
+          "amount": 2600,
+          "reserve": 2500
+        },
+        {
+          "propertyId": "japan:land:25",
+          "winnerId": "player-3",
+          "amount": 1600,
+          "reserve": 1500
+        }
+      ],
+      "finishedGame": false
+    }
+  }
+]

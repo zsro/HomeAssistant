@@ -17,6 +17,8 @@ HomeAssistant 是一个前后端分离项目：后端使用 TypeScript、Express
 ## 模块开发接续
 
 - [大富翁 4 Web 复刻计划与接续记录](docs/richman-roadmap.md)：当前进度、分阶段任务、规则核验、验收标准和下一步。
+- [大富翁 S3 候选收口](docs/richman/s3-05c-interaction-closure.md)：v47、日本地图、电脑策略、声画与交互验收边界。
+- [大富翁资源发布](docs/richman/release-s3.md)：独立素材包校验与线上检查。
 - [大富翁技术验证报告](docs/richman-technical-validation.md)：原版资源、地图与移动原型的验证结果。
 
 ## 本地开发

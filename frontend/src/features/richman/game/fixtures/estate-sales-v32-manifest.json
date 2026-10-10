@@ -1,0 +1,19 @@
+[
+  {
+    "route": "3",
+    "seed": "estate-73",
+    "players": 3,
+    "commands": 100,
+    "turn": 7,
+    "endDate": "1998-01-03",
+    "state": "0ed6c8e85466b296c50bddc9a72f7ee3651b3e35bbe1d69e0b4c1fb1e29aaa7b",
+    "events": "d381d0be884711b089cb8ad87c5a89015ca2d0b507b715031c6eaf3753b9ec0b",
+    "checks": [
+      "auction reserve: truncate half-level base then index",
+      "auction receipt: winner cash to public/source bank",
+      "listing/reprice: valid quote, no escrow, seven slots",
+      "sale: exact cash -> seller bank, unchanged building, record removed",
+      "daily listing byte age"
+    ]
+  }
+]

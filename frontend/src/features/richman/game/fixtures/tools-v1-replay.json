@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "rulesId": "japan-tools-candidate-v1",
+  "mapFingerprint": "6fb1abfd",
+  "catalogFingerprint": "628c3de8",
+  "itemFingerprint": "5c3fe2f",
+  "config": {
+    "gameId": "519c7fc3-c9b2-4a9f-a20b-63ab82a7e1cc",
+    "seed": "s1-04-loop",
+    "characterIds": [
+      "xiaomei",
+      "chyan"
+    ],
+    "rulesId": "japan-tools-candidate-v1",
+    "initialFunds": 30000
+  },
+  "commands": [
+    {
+      "id": "command-1",
+      "gameId": "519c7fc3-c9b2-4a9f-a20b-63ab82a7e1cc",
+      "expectedRevision": 0,
+      "playerId": "player-1",
+      "action": {
+        "type": "item",
+        "action": {
+          "type": "begin",
+          "definitionId": "tool:08:select-dice-v1"
+        }
+      }
+    },
+    {
+      "id": "command-2",
+      "gameId": "519c7fc3-c9b2-4a9f-a20b-63ab82a7e1cc",
+      "expectedRevision": 1,
+      "playerId": "player-1",
+      "action": {
+        "type": "item",
+        "action": {
+          "type": "confirm",
+          "decisionId": "519c7fc3-c9b2-4a9f-a20b-63ab82a7e1cc:effect:1",
+          "target": {
+            "kind": "player",
+            "id": "player-1"
+          }
+        },
+        "value": 2
+      }
+    }
+  ]
+}

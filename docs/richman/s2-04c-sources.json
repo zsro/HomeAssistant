@@ -1,0 +1,206 @@
+{
+  "stage": "S2-04c",
+  "referenceCommit": "ec7d70e693059d1e781d9d1cc2ad7f36d360d39e",
+  "grade": "fixed cross-version assembly evidence; no Windows execution",
+  "sources": [
+    {
+      "path": "asm/rich4_stocks.asm",
+      "gitBlobSha1": "c45cd776b51483d17f78972845b8053deeee2433",
+      "sha256": "d55e17af17da2464655f53d3b3dd32224637a37ab131c6cf483db8fbac045ea3",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_stocks.asm"
+    },
+    {
+      "path": "asm/rich4_news.asm",
+      "gitBlobSha1": "31601ae8258b6f9074c348ae17d52295c5f94b8e",
+      "sha256": "a2172acdbbfe52fbc57672e40a8f0d669b3c8fb6cabb1f3d5d7dd8e72ebc458a",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_news.asm"
+    },
+    {
+      "path": "asm/rich4_ui_stock.asm",
+      "gitBlobSha1": "cc0913dc550a049781e3b72f2df215ce84df6b28",
+      "sha256": "0e3152263c9886615fa6509fcd005f0db37a9fb850b3124ede51de868fa8ab82",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_ui_stock.asm"
+    }
+  ],
+  "anchors": [
+    {
+      "path": "asm/rich4_stocks.asm",
+      "anchor": "fcn_00429040:",
+      "lines": [
+        366
+      ]
+    },
+    {
+      "path": "asm/rich4_stocks.asm",
+      "anchor": "loc_0042905b:",
+      "lines": [
+        379
+      ]
+    },
+    {
+      "path": "asm/rich4_stocks.asm",
+      "anchor": "loc_0042908f:",
+      "lines": [
+        395
+      ]
+    },
+    {
+      "path": "asm/rich4_stocks.asm",
+      "anchor": "loc_00429099:",
+      "lines": [
+        398
+      ]
+    },
+    {
+      "path": "asm/rich4_stocks.asm",
+      "anchor": "loc_004290da:",
+      "lines": [
+        417
+      ]
+    },
+    {
+      "path": "asm/rich4_news.asm",
+      "anchor": "loc_0044b3e7:",
+      "lines": [
+        3207
+      ]
+    },
+    {
+      "path": "asm/rich4_news.asm",
+      "anchor": "loc_0044b402:",
+      "lines": [
+        3218
+      ]
+    },
+    {
+      "path": "asm/rich4_news.asm",
+      "anchor": "loc_0044b6d6:",
+      "lines": [
+        3445
+      ]
+    },
+    {
+      "path": "asm/rich4_ui_stock.asm",
+      "anchor": "loc_0042a724:",
+      "lines": [
+        1450
+      ]
+    },
+    {
+      "path": "asm/rich4_ui_stock.asm",
+      "anchor": "loc_0042a795:",
+      "lines": [
+        1475
+      ]
+    },
+    {
+      "path": "asm/rich4_ui_stock.asm",
+      "anchor": "loc_0042a7da:",
+      "lines": [
+        1497
+      ]
+    },
+    {
+      "path": "asm/rich4_ui_stock.asm",
+      "anchor": "loc_0042a808:",
+      "lines": [
+        1511
+      ]
+    },
+    {
+      "path": "asm/rich4_ui_stock.asm",
+      "anchor": "loc_0042a813:",
+      "lines": [
+        1517
+      ]
+    },
+    {
+      "path": "asm/rich4_ui_stock.asm",
+      "anchor": "loc_0042a834:",
+      "lines": [
+        1525
+      ]
+    },
+    {
+      "path": "asm/rich4_ui_stock.asm",
+      "anchor": "fcn_0042aaff:",
+      "lines": [
+        1729
+      ]
+    },
+    {
+      "path": "asm/rich4_ui_stock.asm",
+      "anchor": "loc_0042ab59:",
+      "lines": [
+        1756
+      ]
+    },
+    {
+      "path": "asm/rich4_ui_stock.asm",
+      "anchor": "loc_0042abbb:",
+      "lines": [
+        1786
+      ]
+    },
+    {
+      "path": "asm/rich4_ui_stock.asm",
+      "anchor": "loc_0042b137:",
+      "lines": [
+        2246
+      ]
+    },
+    {
+      "path": "asm/rich4_ui_stock.asm",
+      "anchor": "ref_00463f64:",
+      "lines": [
+        3408
+      ]
+    }
+  ],
+  "rules": {
+    "R08-01c": "Company news 30..35 calls 00429040. Nonzero trend writes persistent stock+28 percent +10/-10 before requoting base and replacing last history point. Zero trend returns without changing percent or price. v44 only; v43 and prior replays retain their old behavior.",
+    "R08-02c": "Original-map actual commands independently reconcile bank market trades, cash company subscriptions/private pool/ownership, fortune8 public and fortune9 bank sales, float32 averages and derived costs. Quote receipts independently recomputed from recorded draws. No new ledger semantics.",
+    "R10-01c": "G7 legal research/time use restores world including holdings/averages, money, companies, quotes/history, news and calendar, consumes checkpoint tool, retains current RNG and invalidates checkpoints. Recorded prefixes resume to identical final state/events.",
+    "R08-03c": "Native chart has 144-slot circular history, zero sentinel, midpoint/spread-based vertical scaling and GDI line drawing. Native window dispatch handles mouse movement/release/doubleclick/custom messages. Web retains 144 data samples and last12 textual history, HTML controls; native chart, exact input geometry and audio not reproduced."
+  },
+  "chartInputMatrix": [
+    {
+      "area": "history/data",
+      "native": "144-slot float ring; zero sentinel; last sample overwritten by immediate red/black update",
+      "web": "up to 144 integer-cent chronological samples; last sample replaced; last12 rendered as text",
+      "status": "candidate data retained; native ring/float rendering differs"
+    },
+    {
+      "area": "chart/scaling",
+      "native": "midpoint/spread vertical scaling, circular traversal, GDI LineTo; exact thresholds not claimed here",
+      "web": "textual history; no native chart axes/scale/GDI reproduction",
+      "status": "explicit presentation backlog; not passed"
+    },
+    {
+      "area": "ownership/pie",
+      "native": "stock screen GDI Ellipse/pie drawing beside plot",
+      "web": "holding table and company ranking text",
+      "status": "data represented; original ownership visual not reproduced"
+    },
+    {
+      "area": "input",
+      "native": "window messages for mouse move/release/doubleclick and custom events; stock selection/quantity hit regions",
+      "web": "HTML stock and side selectors, integer quantity input, confirm; pause/fullscreen/narrow layout",
+      "status": "Web workflow tested; original geometry/gesture/audio parity unverified"
+    },
+    {
+      "area": "precision/RNG",
+      "native": "float price, x87 operations, native RNG/reseeding",
+      "web": "integer-cent quotes, selected float32 stores and deterministic shared RNG",
+      "status": "explicit numerical and randomness difference; no Windows runtime comparison"
+    }
+  ],
+  "retainedDifferences": [
+    "native precision/RNG/chart/input/audio",
+    "other asset listings",
+    "special actors",
+    "native roulette",
+    "native exit call stack and ending",
+    "minigame presentation/collision/input"
+  ]
+}

@@ -1,0 +1,213 @@
+{
+  "stage": "S2-03y",
+  "referenceCommit": "ec7d70e693059d1e781d9d1cc2ad7f36d360d39e",
+  "grade": "fixed cross-version source; no native Windows execution",
+  "inheritedSource": "s2-03x-sources.json",
+  "sources": [
+    {
+      "path": "asm/rich4_magic_house.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_magic_house.asm",
+      "gitBlobSha1": "b29b47525b927656625dc559484254e1a6da8b5c",
+      "sha256": "e22f10bc48ca379482e4a9c03970f96884af7a6dea5c1c0f0cf6b1d51d7bd74b"
+    },
+    {
+      "path": "asm/rich4_fortune.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_fortune.asm",
+      "gitBlobSha1": "32a7a9dff203a46ec3d2906c1e5f1ede22f97e70",
+      "sha256": "d6309c81b0943a38e138bcdf85c8d006ddb0ba53c4d72744c4d3cc4ab63a53fc"
+    },
+    {
+      "path": "asm/rich4.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4.asm",
+      "gitBlobSha1": "d11a64755094435fa9953652a5a4951871fd9697",
+      "sha256": "30904cbb4f23a6b74fc1b80ad023bd7dff11b441c2c1978f768f9891d099d64a"
+    },
+    {
+      "path": "asm/rich4_ui_auction.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_ui_auction.asm",
+      "gitBlobSha1": "7be2a9569b1f5158fe0d393696e11d8a0018a1bf",
+      "sha256": "771ecbbbb5830bee2b5dbc8966e068329525e6f7f090705344f49725a33b816e"
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_core_actions.asm",
+      "gitBlobSha1": "ebfde6c820e8a430b856d9816a926b636e0db1dc",
+      "sha256": "2874c1a3e0ca1d0da5afe4cb93e42cf2d6f6fa864dbee11d7bcaa028af07d94a"
+    }
+  ],
+  "verifiedFiles": 5,
+  "references": [
+    {
+      "path": "asm/rich4_magic_house.asm",
+      "anchor": "fcn_00431caa:",
+      "lines": [
+        134
+      ]
+    },
+    {
+      "path": "asm/rich4_magic_house.asm",
+      "anchor": "loc_00431d65:",
+      "lines": [
+        194
+      ]
+    },
+    {
+      "path": "asm/rich4_magic_house.asm",
+      "anchor": "loc_00431dbc:",
+      "lines": [
+        221
+      ]
+    },
+    {
+      "path": "asm/rich4_magic_house.asm",
+      "anchor": "loc_0043242b:",
+      "lines": [
+        698
+      ]
+    },
+    {
+      "path": "asm/rich4_magic_house.asm",
+      "anchor": "loc_004324fa:",
+      "lines": [
+        753
+      ]
+    },
+    {
+      "path": "asm/rich4_fortune.asm",
+      "anchor": "fcn_0044db81:",
+      "lines": [
+        2529
+      ]
+    },
+    {
+      "path": "asm/rich4_fortune.asm",
+      "anchor": "loc_0044dbba:",
+      "lines": [
+        2551
+      ]
+    },
+    {
+      "path": "asm/rich4_fortune.asm",
+      "anchor": "loc_0044dcaa:",
+      "lines": [
+        2628
+      ]
+    },
+    {
+      "path": "asm/rich4.asm",
+      "anchor": "fcn_0044bb4b:",
+      "lines": [
+        23001
+      ]
+    },
+    {
+      "path": "asm/rich4_ui_auction.asm",
+      "anchor": "_rich4_ui_auction_entry:",
+      "lines": [
+        2458
+      ]
+    },
+    {
+      "path": "asm/rich4_ui_auction.asm",
+      "anchor": "loc_0043c110:",
+      "lines": [
+        2696
+      ]
+    },
+    {
+      "path": "asm/rich4_ui_auction.asm",
+      "anchor": "loc_0043c709:",
+      "lines": [
+        3155
+      ]
+    },
+    {
+      "path": "asm/rich4_ui_auction.asm",
+      "anchor": "loc_0043c83b:",
+      "lines": [
+        3246
+      ]
+    },
+    {
+      "path": "asm/rich4_ui_auction.asm",
+      "anchor": "loc_0043c868:",
+      "lines": [
+        3259
+      ]
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "anchor": "fcn_0041d2c6:",
+      "lines": [
+        5058
+      ]
+    }
+  ],
+  "rules": {
+    "R13-07y": "431d65/431dbc calls44db81 synchronously three times per frozen target. No property, dream or packed absence gate here. Each common dispatch uses live eligibility44bb4b and skips ineligible slots. Each nested interaction must finish before next call; forced move does not invoke landing or stop the loop. Web result acknowledgement is a separate UI step.",
+    "R13-08y": "Serialized source seat, frozen targets, seat cursor, issued-call count, waiting kind and receipt. Temporary active target for shared fortune/auction handlers, restore original visitor afterwards. Wait for reaction/card donor selection/v34 payment/v33 disposal then receipt. No outer turn/date/15th/lending until visitor ends turn. Web skips dead remainder and stops at last survivor; native post-exit stack behavior not proved.",
+    "R13-09y": "43242b excludes packed hotel/travel/prison/hospital only, requires current tile2001..5999. No owner check, hostility, defense or fee. Pass selected target as source and property to auction entry with animation=1. Winter/dream/stop do not exclude auction source.",
+    "R04-05y": "43c110 alive bidders cash>reserve; excludes selected source, hotel/travel/prison/hospital/winter/dream, but not stop. Owner different from selected source can bid. Reserve trunc(raw base*(1+level/2))*price once. Read live property/amount per seat; winner receives ownership, level/type/raw base unchanged; reuse candidate research and stale-listing reconciliation.",
+    "R05-04y": "43c709 -1 or no bidder returns without changing owner or payment. 43c83b pushes flags0, bid, original source argument, winner; 41d2c6 pays winner cash into selected target bank. Not old owner, visitor, public fund, or original debt. v38 magic-only no-bid preservation; old card/news auctions frozen.",
+    "R13-10y": "v38 restores0/1/5/8/9 asset-fortune eligibility gate found restricted to v21..25, for both ordinary landing and nesting; v26..37 replay semantics left unchanged. Same established asset handlers/conditions, no new fortune IDs. Native cursor increments after dispatch; inherited Web increments when offering and records waiting continuation, never selects next before completion. Cursor observability difference retained."
+  },
+  "effects": [
+    {
+      "id": 0,
+      "implemented": true
+    },
+    {
+      "id": 1,
+      "implemented": true
+    },
+    {
+      "id": 2,
+      "implemented": true
+    },
+    {
+      "id": 3,
+      "implemented": true
+    },
+    {
+      "id": 4,
+      "implemented": true
+    },
+    {
+      "id": 5,
+      "implemented": true
+    },
+    {
+      "id": 6,
+      "implemented": true
+    },
+    {
+      "id": 7,
+      "implemented": true
+    },
+    {
+      "id": 8,
+      "implemented": true
+    },
+    {
+      "id": 9,
+      "implemented": true
+    },
+    {
+      "id": 10,
+      "implemented": true
+    },
+    {
+      "id": 11,
+      "implemented": true
+    }
+  ],
+  "deferred": [
+    "native post-exit stack and exact sequence cursor visibility",
+    "native roulette/timer/RNG/AI",
+    "minigames and other map sites",
+    "other asset listings",
+    "special actors",
+    "native end menus",
+    "candidate research clock and hotel internals"
+  ]
+}

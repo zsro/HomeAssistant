@@ -1,0 +1,639 @@
+{
+  "stage": "S2-05b",
+  "date": "2026-10-07",
+  "rulesId": "japan-events-candidate-v44",
+  "fingerprint": "f9dbb7e9",
+  "semanticIncrement": false,
+  "engineChanged": false,
+  "uiChanged": [
+    "ItemPanel.tsx: infer inherited nearby worker from G1 capability instead of stale mode allowlist"
+  ],
+  "s2_05Complete": false,
+  "preserved": {
+    "s2_03CandidateClosed": true,
+    "s2_04CandidateClosed": true,
+    "items": 43,
+    "news": 36,
+    "japanFortuneSlots": 37,
+    "magicEffects": 12,
+    "minigames": 3,
+    "oldFixtureJsonUnchanged": 268,
+    "s2_05aReplaysUnchanged": true,
+    "allVersionPlayerCases": 132
+  },
+  "sourceAudit": {
+    "files": 6,
+    "anchors": 23,
+    "referenceCommit": "ec7d70e693059d1e781d9d1cc2ad7f36d360d39e",
+    "nativeWindowsExecution": false
+  },
+  "checks": {
+    "frontend": {
+      "passed": 1756,
+      "files": 120,
+      "newDomain": 16,
+      "newUIRegression": 2,
+      "newActualReplay": 3,
+      "maxWorkers": 2
+    },
+    "lint": "passed",
+    "build": "passed; existing large-chunk and mixed-import warnings",
+    "defaultUI": {
+      "dev": {
+        "rulesId": "japan-events-candidate-v44",
+        "fingerprint": "f9dbb7e9",
+        "defaultMode": "stockCircuit",
+        "nearbyWorker": true,
+        "cleanup": {
+          "raf": 0,
+          "canvas": 0
+        },
+        "errors": []
+      },
+      "built": {
+        "rulesId": "japan-events-candidate-v44",
+        "fingerprint": "f9dbb7e9",
+        "defaultMode": "stockCircuit",
+        "nearbyWorker": true,
+        "cleanup": {
+          "raf": 0,
+          "canvas": 0
+        },
+        "errors": []
+      }
+    }
+  },
+  "originalMapBrowser": {
+    "routes": [
+      {
+        "kind": "attack",
+        "commands": 3965,
+        "players": 2,
+        "turn": 296,
+        "date": "1998-05-28",
+        "prefixes": [
+          "immune-attack",
+          "attack-redirect",
+          "self-redirect-attack",
+          "after-attack-turn",
+          "hit-attack",
+          "revenge-attack"
+        ],
+        "reactions": [
+          {
+            "kind": "attack",
+            "stage": "redirect",
+            "responderId": "player-2",
+            "choice": "use",
+            "targetId": "player-1",
+            "turn": 263
+          }
+        ],
+        "attacks": [
+          {
+            "type": "attackResolved",
+            "itemId": "card:17",
+            "sourceId": "player-1",
+            "originalId": "player-2",
+            "targetId": null,
+            "sequence": 2516,
+            "commandId": "command-1853",
+            "playerId": "player-1",
+            "turn": 175
+          },
+          {
+            "type": "attackResolved",
+            "itemId": "card:17",
+            "sourceId": "player-1",
+            "originalId": "player-2",
+            "targetId": "player-1",
+            "sequence": 3811,
+            "commandId": "command-3814",
+            "playerId": "player-1",
+            "turn": 263
+          },
+          {
+            "type": "attackResolved",
+            "itemId": "card:17",
+            "sourceId": "player-1",
+            "originalId": "player-2",
+            "targetId": "player-2",
+            "sequence": 4108,
+            "commandId": "command-3954",
+            "playerId": "player-1",
+            "turn": 285
+          }
+        ],
+        "waivers": [],
+        "forced": [],
+        "disposals": [],
+        "auctionPaid": 0,
+        "substituteSales": 0,
+        "substituteExits": 0,
+        "paidRent": 200,
+        "wrongActorChecks": 1,
+        "report": {
+          "normalSpeed": true,
+          "map": "original Japan; real UI commands; auth-only fixture; no game-state injection",
+          "calendarCommon": true,
+          "reactionCommon": true,
+          "reactionChecks": [
+            {
+              "kind": "attack",
+              "stage": "redirect",
+              "responderId": "player-2",
+              "choice": "use",
+              "targetId": "player-1",
+              "text": "请玩家 2 应答 · 嫁祸卡\n\n玩家 1使用陷害卡。\n\n可转移给任意其他未破产玩家，包括远处或设施中的玩家；不会再次触发对方的反制卡。\n\n嫁祸目标\n请选择目标\n玩家 1\n\n转回使用者为 4 次行动，转给其他玩家为 5 次；不使用时陷害卡生效后，有复仇卡则自动反击。\n\n使用嫁祸卡\n不使用嫁祸卡"
+            }
+          ],
+          "errors": [],
+          "cleanup": {
+            "raf": 0,
+            "canvas": 0
+          }
+        },
+        "hashes": {
+          "replay": "412835d4835f27fe34b39e90a96f5275831754d4e4355e5619be74192423e124",
+          "state": "af96cbc3aad1402d6677402709b80249da89027f5719b07c9df630bfc9971c95",
+          "events": "dc76bce69df8e35781443f18ab545e536837337bd4782cd1b70b5e2d76db5baa"
+        },
+        "replay": "frontend/src/features/richman/game/fixtures/reaction-circuit-v44-attack-replay.json",
+        "screenshots": "/private/tmp/richman-unified-ui-05b-attack"
+      },
+      {
+        "kind": "waiver",
+        "commands": 2863,
+        "players": 3,
+        "turn": 194,
+        "date": "1998-03-22",
+        "prefixes": [
+          "exit-start",
+          "public-auction",
+          "rent-callback",
+          "after-exit-turn",
+          "rent-free",
+          "free-waiver",
+          "allied-landing"
+        ],
+        "reactions": [
+          {
+            "kind": "rent",
+            "stage": "free",
+            "responderId": "player-3",
+            "choice": "use",
+            "targetId": null,
+            "turn": 104
+          }
+        ],
+        "attacks": [],
+        "waivers": [
+          {
+            "type": "rentWaived",
+            "propertyId": "japan:land:23",
+            "ownerId": "player-1",
+            "reason": "免费卡",
+            "sequence": 1484,
+            "commandId": "command-1509",
+            "playerId": "player-3",
+            "turn": 104
+          },
+          {
+            "type": "rentWaived",
+            "propertyId": "japan:land:1",
+            "ownerId": "player-3",
+            "reason": "同盟免租",
+            "sequence": 2746,
+            "commandId": "command-2862",
+            "playerId": "player-1",
+            "turn": 193
+          }
+        ],
+        "forced": [],
+        "disposals": [
+          {
+            "id": "disposal-1",
+            "payerId": "player-2",
+            "recipientId": "player-1",
+            "propertyId": "japan:land:23",
+            "due": 25000,
+            "amount": 13531,
+            "unpaid": 11469,
+            "paid": {
+              "cash": 0,
+              "bank": 13531
+            },
+            "released": [
+              "japan:land:4",
+              "japan:land:27",
+              "japan:land:28",
+              "japan:land:30",
+              "japan:land:31",
+              "japan:land:33",
+              "japan:land:35",
+              "japan:land:39",
+              "japan:land:40",
+              "japan:land:42",
+              "japan:land:47"
+            ],
+            "pool": [
+              "japan:land:4",
+              "japan:land:27",
+              "japan:land:28",
+              null,
+              null,
+              "japan:land:33",
+              "japan:land:35",
+              "japan:land:39",
+              "japan:land:40",
+              null,
+              "japan:land:47"
+            ],
+            "draws": [
+              9,
+              9,
+              4,
+              3
+            ],
+            "stocks": [],
+            "inventory": [
+              {
+                "itemId": "tool:08",
+                "quantity": 1,
+                "points": 30
+              },
+              {
+                "itemId": "tool:01",
+                "quantity": 1,
+                "points": 15
+              },
+              {
+                "itemId": "tool:02",
+                "quantity": 1,
+                "points": 30
+              },
+              {
+                "itemId": "card:17",
+                "quantity": 1,
+                "points": 20
+              }
+            ],
+            "ignoredPoints": 95,
+            "auctions": [
+              {
+                "propertyId": "japan:land:42",
+                "winnerId": "player-1",
+                "amount": 1600,
+                "reserve": 1500
+              },
+              {
+                "propertyId": "japan:land:31",
+                "winnerId": "player-1",
+                "amount": 1100,
+                "reserve": 1000
+              },
+              {
+                "propertyId": "japan:land:30",
+                "winnerId": null,
+                "amount": 0,
+                "reserve": 1000
+              }
+            ],
+            "finishedGame": false
+          }
+        ],
+        "auctionPaid": 2700,
+        "substituteSales": 0,
+        "substituteExits": 0,
+        "paidRent": 5200,
+        "wrongActorChecks": 1,
+        "report": {
+          "normalSpeed": true,
+          "map": "original Japan; real UI commands; auth-only fixture; no game-state injection",
+          "calendarCommon": true,
+          "reactionCommon": true,
+          "reactionChecks": [
+            {
+              "kind": "rent",
+              "stage": "free",
+              "responderId": "player-3",
+              "choice": "use",
+              "targetId": null,
+              "text": "请玩家 3 应答 · 免费卡\n\n本次应付租金 12,500 元。\n\n使用免费卡免付本次租金；不使用则继续检查嫁祸。\n\n确认才消耗 1 张；不使用保留卡片。\n\n使用免费卡\n不使用免费卡"
+            }
+          ],
+          "errors": [],
+          "cleanup": {
+            "raf": 0,
+            "canvas": 0
+          }
+        },
+        "hashes": {
+          "replay": "79026906110d8e726ca54ea9d65647637750c398e3dba721738560dd783df1ab",
+          "state": "914240778aa5f3cd5b3548deadef2837a98d53efc1090e9503fc7eb231b38ddf",
+          "events": "500038c9dbf3bbacfa8dc7f325d1e4fb262445bd67507d9c76612c3dc58d963b"
+        },
+        "replay": "frontend/src/features/richman/game/fixtures/reaction-circuit-v44-waiver-replay.json",
+        "screenshots": "/private/tmp/richman-unified-ui-05b-waiver"
+      },
+      {
+        "kind": "debt",
+        "commands": 3376,
+        "players": 4,
+        "turn": 211,
+        "date": "1998-02-22",
+        "prefixes": [
+          "own-liquidation",
+          "rent-free",
+          "rent-redirect",
+          "substitute-liquidation",
+          "exit-start",
+          "rent-callback",
+          "after-exit-turn"
+        ],
+        "reactions": [
+          {
+            "kind": "rent",
+            "stage": "free",
+            "responderId": "player-3",
+            "choice": "decline",
+            "targetId": null,
+            "turn": 123
+          },
+          {
+            "kind": "rent",
+            "stage": "redirect",
+            "responderId": "player-2",
+            "choice": "use",
+            "targetId": "player-1",
+            "turn": 210
+          }
+        ],
+        "attacks": [],
+        "waivers": [],
+        "forced": [
+          {
+            "type": "stockTraded",
+            "stockId": "jp:24",
+            "traderId": "player-1",
+            "side": "sell",
+            "quantity": 2,
+            "price": 27600,
+            "amount": 552,
+            "forced": true,
+            "sequence": 1456,
+            "commandId": "command-1720",
+            "playerId": "player-1",
+            "turn": 105
+          },
+          {
+            "type": "stockTraded",
+            "stockId": "jp:24",
+            "traderId": "player-1",
+            "side": "sell",
+            "quantity": 3,
+            "price": 8300,
+            "amount": 249,
+            "forced": true,
+            "sequence": 2717,
+            "commandId": "command-3270",
+            "playerId": "player-1",
+            "turn": 197
+          },
+          {
+            "type": "stockTraded",
+            "stockId": "jp:24",
+            "traderId": "player-1",
+            "side": "sell",
+            "quantity": 4,
+            "price": 8300,
+            "amount": 332,
+            "forced": true,
+            "sequence": 2772,
+            "commandId": "command-3301",
+            "playerId": "player-1",
+            "turn": 201
+          },
+          {
+            "type": "stockTraded",
+            "stockId": "jp:24",
+            "traderId": "player-1",
+            "side": "sell",
+            "quantity": 10,
+            "price": 7950,
+            "amount": 795,
+            "forced": true,
+            "sequence": 2906,
+            "commandId": "command-3374",
+            "playerId": "player-2",
+            "turn": 210
+          }
+        ],
+        "disposals": [
+          {
+            "id": "disposal-1",
+            "payerId": "player-1",
+            "recipientId": "player-4",
+            "propertyId": "japan:land:21",
+            "due": 6000,
+            "amount": 876,
+            "unpaid": 5124,
+            "paid": {
+              "cash": 0,
+              "bank": 876
+            },
+            "released": [
+              "japan:land:19",
+              "japan:land:23",
+              "japan:land:24",
+              "japan:land:26",
+              "japan:facility:1"
+            ],
+            "pool": [
+              "japan:land:19",
+              null,
+              null,
+              "japan:land:26",
+              null
+            ],
+            "draws": [
+              2,
+              2,
+              4,
+              1
+            ],
+            "stocks": [],
+            "inventory": [
+              {
+                "itemId": "tool:01",
+                "quantity": 1,
+                "points": 15
+              },
+              {
+                "itemId": "tool:02",
+                "quantity": 1,
+                "points": 30
+              },
+              {
+                "itemId": "card:03",
+                "quantity": 1,
+                "points": 35
+              },
+              {
+                "itemId": "card:07",
+                "quantity": 1,
+                "points": 15
+              },
+              {
+                "itemId": "card:09",
+                "quantity": 1,
+                "points": 160
+              },
+              {
+                "itemId": "card:25",
+                "quantity": 1,
+                "points": 30
+              }
+            ],
+            "ignoredPoints": 285,
+            "auctions": [
+              {
+                "propertyId": "japan:land:24",
+                "winnerId": null,
+                "amount": 0,
+                "reserve": 1500
+              },
+              {
+                "propertyId": "japan:facility:1",
+                "winnerId": null,
+                "amount": 0,
+                "reserve": 4000
+              },
+              {
+                "propertyId": "japan:land:23",
+                "winnerId": null,
+                "amount": 0,
+                "reserve": 2000
+              }
+            ],
+            "finishedGame": false
+          }
+        ],
+        "auctionPaid": 0,
+        "substituteSales": 1,
+        "substituteExits": 1,
+        "paidRent": 20600,
+        "wrongActorChecks": 2,
+        "report": {
+          "normalSpeed": true,
+          "map": "original Japan; real UI commands; auth-only fixture; no game-state injection",
+          "calendarCommon": true,
+          "reactionCommon": true,
+          "reactionChecks": [
+            {
+              "kind": "rent",
+              "stage": "free",
+              "responderId": "player-3",
+              "choice": "decline",
+              "targetId": null,
+              "text": "请玩家 3 应答 · 免费卡\n\n本次应付租金 6,000 元。\n\n使用免费卡免付本次租金；不使用则继续检查嫁祸。\n\n确认才消耗 1 张；不使用保留卡片。\n\n使用免费卡\n不使用免费卡"
+            },
+            {
+              "kind": "rent",
+              "stage": "redirect",
+              "responderId": "player-2",
+              "choice": "use",
+              "targetId": "player-1",
+              "text": "请玩家 2 应答 · 嫁祸卡\n\n本次应付租金 6,000 元。\n\n可转移给任意其他未破产玩家，包括远处或设施中的玩家；不会再次触发对方的反制卡。\n\n嫁祸目标\n请选择目标\n玩家 1\n玩家 3\n玩家 4\n\n由被选玩家承担原额租金；资金不足将由该玩家确认破产。转给业主本人则免付。\n\n使用嫁祸卡\n不使用嫁祸卡"
+            }
+          ],
+          "errors": [],
+          "cleanup": {
+            "raf": 0,
+            "canvas": 0
+          }
+        },
+        "hashes": {
+          "replay": "67fa05dc528cd509fda90e4fc9ae7744fef14d510521ae25ff9025524f09df34",
+          "state": "aadb506ab2d9489a7373ec0c18d7ad320fdfda6570f69a9d33badd8be5cd87bd",
+          "events": "0867bebe02e06dfa6d9f1020941082fd52a6edf7ed75a6667a224941ae71c31e"
+        },
+        "replay": "frontend/src/features/richman/game/fixtures/reaction-circuit-v44-debt-replay.json",
+        "screenshots": "/private/tmp/richman-unified-ui-05b-debt"
+      }
+    ],
+    "commands": 10204,
+    "normalSpeed": true,
+    "authOnlyFixture": true,
+    "gameStateInjection": false,
+    "substituteSales": 1,
+    "substituteExits": 1,
+    "publicAuction": 2700,
+    "prefixes": [
+      "after-attack-turn",
+      "after-exit-turn",
+      "allied-landing",
+      "attack-redirect",
+      "exit-start",
+      "free-waiver",
+      "hit-attack",
+      "immune-attack",
+      "own-liquidation",
+      "public-auction",
+      "rent-callback",
+      "rent-free",
+      "rent-redirect",
+      "revenge-attack",
+      "self-redirect-attack",
+      "substitute-liquidation"
+    ],
+    "uiAssertions": "reaction responder/amount/target set, use or decline, pause/reset-cancel/fullscreen/390px, active effect preview/cancel, auction identity/pause, full export vs legal plan and zero RAF/canvas; ledgers independently checked from actual export, not every label asserted",
+    "independentAccounting": "finite passive pools; consumed/declined cards; actual payer necessary shares and bank/cash; averages and company ranking; target prison and vehicle; insurance receipt arithmetic; frozen rent actual/public auction amounts; no turn/date advancement while waiting; original actor and next surviving seat; all serialized prefixes and full state/event hashes"
+  },
+  "domainOnly": [
+    "solvent substitute necessary liquidation followed by full rent, partial average retained",
+    "same-rent decline-free then use-redirect chain; current 4p UI free decline and redirect occur at separate landings",
+    "third target at remote hospital with immunity/redirect/revenge inventory, redirected prison and insurance payout to actual target",
+    "winter guards original dream, redirected dream bypasses winter and suspends vehicle",
+    "declined attack redirect then revenge; actual 2p UI revenge occurs after redirect card already consumed",
+    "2–4 player explicit reaction edge cases, wrong/stale/paused commands",
+    "positive public auction after redirected substitute exit; current 4p UI exit has three no-bids, nonzero public bids occur in 3p earlier normal rent exit"
+  ],
+  "notNewBrowserAcceptance": [
+    "last survivor substitute bankruptcy",
+    "G7 across payment/auction/state/date restoration",
+    "same-day double disposal and multiple stock-tax exits",
+    "individual/global halt or manual red/black stress from 05a remains outside this batch",
+    "dream/winter/vehicle reaction combinations",
+    "every intermediate bank/company/inventory label",
+    "minigame input/collision (natural timer-only returns)"
+  ],
+  "scopeNotes": [
+    "Three-player route loses player2 before later free/alliance checks; it is a 3p starting roster, not three survivors throughout.",
+    "Four-player substitute sells final 10 shares for795, has actual876 versus debt6000 and unpaid5124; all three forced auctions no-bid; next turn follows original actor.",
+    "Solvent substitute stock rescue is domain-only; current original-map substitute proceeds to bankruptcy."
+  ],
+  "resolvedIssues": [
+    "Actual browser found post-company ItemPanel modes dispatching legacy current-tile worker or disabling it; UI capability fix, nearby selection rebuilt and both routes rerun; no engine/version change.",
+    "Planner diagnostics initially used nonexistent receipt.playerId and assumed every rent waiver has a reason; corrected to payerId and optional reason.",
+    "Independent verifier initially compared each auto-auction to final command balance; corrected to sum all settlements within the command, including immediate no-bids.",
+    "Domain holding fixture cost uses cents; corrected initial purchase7300cents to assert73yuan mean.",
+    "First full regression exposed a verifier assertion assuming attack consumption and resolution share one command. Consumption precedes the optional redirect window; verifier now tracks the pending consumption across commands and full checks were rerun."
+  ],
+  "remainingDifferences": [
+    "original float/x87 versus integer cents and aggregate precision",
+    "native RNG/reseeding",
+    "native chart/input/audio",
+    "other asset listings",
+    "special actors",
+    "native roulette",
+    "native exit call stack/end menu and Web last-survivor date stop",
+    "minigame presentation/collision/input"
+  ],
+  "next": "S2-05c: legal G7 research/time-machine world restoration across finance, average holdings, statuses, relations, inventory, date/market and research; distinguish preserved RNG/log/command state; assess S2-05 candidate closure. Keep v44 without new semantics, v45 for new rules.",
+  "release": {
+    "committed": false,
+    "pushed": false,
+    "deployed": false
+  }
+}

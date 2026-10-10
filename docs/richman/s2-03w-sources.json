@@ -1,0 +1,881 @@
+{
+  "stage": "S2-03w",
+  "referenceCommit": "ec7d70e693059d1e781d9d1cc2ad7f36d360d39e",
+  "grade": "fixed cross-version source; not native execution equivalence",
+  "sources": [
+    {
+      "path": "asm/rich4_magic_house.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_magic_house.asm",
+      "gitBlobSha1": "b29b47525b927656625dc559484254e1a6da8b5c",
+      "sha256": "e22f10bc48ca379482e4a9c03970f96884af7a6dea5c1c0f0cf6b1d51d7bd74b"
+    },
+    {
+      "path": "asm/rich4.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4.asm",
+      "gitBlobSha1": "d11a64755094435fa9953652a5a4951871fd9697",
+      "sha256": "30904cbb4f23a6b74fc1b80ad023bd7dff11b441c2c1978f768f9891d099d64a"
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_core_actions.asm",
+      "gitBlobSha1": "ebfde6c820e8a430b856d9816a926b636e0db1dc",
+      "sha256": "2874c1a3e0ca1d0da5afe4cb93e42cf2d6f6fa864dbee11d7bcaa028af07d94a"
+    },
+    {
+      "path": "asm/rich4_calculate_player_wealth.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_calculate_player_wealth.asm",
+      "gitBlobSha1": "9b142d3a8173c4f7c850cd0786b60d58564f1893",
+      "sha256": "95b68c2bf328121bcb981311a2e1ad226283c0c2a1015386397fa9df5281241c"
+    },
+    {
+      "path": "asm/rich4_card_utils_2.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_card_utils_2.asm",
+      "gitBlobSha1": "461daf212cc8056beddaadd4ea6e36c5b9e93ceb",
+      "sha256": "98caa25f4c3cbbfca6cf304caa6485d719b3776ccb701a401d90920828b29ae2"
+    },
+    {
+      "path": "asm/rich4_tool_utils.c",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_tool_utils.c",
+      "gitBlobSha1": "218ab5b0e02204bcdb5a65c4483d8f570ef7265f",
+      "sha256": "12fb8cedf2a50efa98cdfbd15f55b8167a4b3d753c6677d5ba787ac50c8d4097"
+    },
+    {
+      "path": "asm/rich4_card_mengyouka.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_card_mengyouka.asm",
+      "gitBlobSha1": "6e82ea3d61c444eec55d1a0c767be136af2bb6da",
+      "sha256": "c7ecc98dddd394f35975bb496b42f4c5b852f143da23d1cd61e3da31b394baab"
+    },
+    {
+      "path": "asm/rich4_player_info.h",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_info.h",
+      "gitBlobSha1": "2f04e6aa425bba2f9345b64ce0ab4c1240ac185f",
+      "sha256": "cc17726ce054de587a42c0f335d84495e66698da2e15eb6a7b7ca28ab38604be"
+    },
+    {
+      "path": "asm/rich4_characters.c",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_characters.c",
+      "gitBlobSha1": "02c145979f2c3631ec151707432bffc9f07858cb",
+      "sha256": "42ac84738a5681c0010d23d2340f1b625e56c50f4849c2a0165c7e17b66d0852"
+    },
+    {
+      "path": "asm/rich4_small_games.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_small_games.asm",
+      "gitBlobSha1": "26da0af93b790bf6320438cb30599e5c440e2fbc",
+      "sha256": "62888c52a2266cf5f7a25ec7a5ca03b0e5988b0d1e57f98d102332abf99d3c43"
+    }
+  ],
+  "verifiedFiles": 10,
+  "references": [
+    {
+      "path": "asm/rich4_magic_house.asm",
+      "anchor": "ref_00431c7a:",
+      "lines": [
+        120
+      ]
+    },
+    {
+      "path": "asm/rich4_magic_house.asm",
+      "anchor": "fcn_00431caa:",
+      "lines": [
+        134
+      ]
+    },
+    {
+      "path": "asm/rich4_magic_house.asm",
+      "anchor": "loc_00431cd6:",
+      "lines": [
+        148
+      ]
+    },
+    {
+      "path": "asm/rich4_magic_house.asm",
+      "anchor": "loc_00431d65:",
+      "lines": [
+        194
+      ]
+    },
+    {
+      "path": "asm/rich4_magic_house.asm",
+      "anchor": "loc_00431dcc:",
+      "lines": [
+        228
+      ]
+    },
+    {
+      "path": "asm/rich4_magic_house.asm",
+      "anchor": "loc_00431e75:",
+      "lines": [
+        282
+      ]
+    },
+    {
+      "path": "asm/rich4_magic_house.asm",
+      "anchor": "loc_00431eef:",
+      "lines": [
+        316
+      ]
+    },
+    {
+      "path": "asm/rich4_magic_house.asm",
+      "anchor": "loc_00431f67:",
+      "lines": [
+        350
+      ]
+    },
+    {
+      "path": "asm/rich4_magic_house.asm",
+      "anchor": "loc_004320dd:",
+      "lines": [
+        457
+      ]
+    },
+    {
+      "path": "asm/rich4_magic_house.asm",
+      "anchor": "loc_00432160:",
+      "lines": [
+        494
+      ]
+    },
+    {
+      "path": "asm/rich4_magic_house.asm",
+      "anchor": "loc_004321f0:",
+      "lines": [
+        534
+      ]
+    },
+    {
+      "path": "asm/rich4_magic_house.asm",
+      "anchor": "loc_00432259:",
+      "lines": [
+        565
+      ]
+    },
+    {
+      "path": "asm/rich4_magic_house.asm",
+      "anchor": "loc_00432384:",
+      "lines": [
+        647
+      ]
+    },
+    {
+      "path": "asm/rich4_magic_house.asm",
+      "anchor": "loc_0043242b:",
+      "lines": [
+        698
+      ]
+    },
+    {
+      "path": "asm/rich4_magic_house.asm",
+      "anchor": "loc_004324fa:",
+      "lines": [
+        753
+      ]
+    },
+    {
+      "path": "asm/rich4_magic_house.asm",
+      "anchor": "fcn_004325c2:",
+      "lines": [
+        823
+      ]
+    },
+    {
+      "path": "asm/rich4_magic_house.asm",
+      "anchor": "loc_00432719:",
+      "lines": [
+        928
+      ]
+    },
+    {
+      "path": "asm/rich4_magic_house.asm",
+      "anchor": "loc_00432e8e:",
+      "lines": [
+        1495
+      ]
+    },
+    {
+      "path": "asm/rich4_magic_house.asm",
+      "anchor": "loc_00432a4c:",
+      "lines": [
+        1170
+      ]
+    },
+    {
+      "path": "asm/rich4_magic_house.asm",
+      "anchor": "fcn_0043380a:",
+      "lines": [
+        2225
+      ]
+    },
+    {
+      "path": "asm/rich4_magic_house.asm",
+      "anchor": "loc_0043390b:",
+      "lines": [
+        2298
+      ]
+    },
+    {
+      "path": "asm/rich4.asm",
+      "anchor": "fcn_00431842:",
+      "lines": [
+        16088
+      ]
+    },
+    {
+      "path": "asm/rich4.asm",
+      "anchor": "loc_00431867:",
+      "lines": [
+        16102
+      ]
+    },
+    {
+      "path": "asm/rich4.asm",
+      "anchor": "loc_004318b7:",
+      "lines": [
+        16139
+      ]
+    },
+    {
+      "path": "asm/rich4.asm",
+      "anchor": "loc_00431969:",
+      "lines": [
+        16219
+      ]
+    },
+    {
+      "path": "asm/rich4.asm",
+      "anchor": "loc_00431a23:",
+      "lines": [
+        16304
+      ]
+    },
+    {
+      "path": "asm/rich4.asm",
+      "anchor": "loc_00431a7d:",
+      "lines": [
+        16343
+      ]
+    },
+    {
+      "path": "asm/rich4.asm",
+      "anchor": "loc_00431ad2:",
+      "lines": [
+        16382
+      ]
+    },
+    {
+      "path": "asm/rich4.asm",
+      "anchor": "loc_00431b2c:",
+      "lines": [
+        16421
+      ]
+    },
+    {
+      "path": "asm/rich4.asm",
+      "anchor": "loc_00431b61:",
+      "lines": [
+        16443
+      ]
+    },
+    {
+      "path": "asm/rich4.asm",
+      "anchor": "loc_00431b99:",
+      "lines": [
+        16467
+      ]
+    },
+    {
+      "path": "asm/rich4.asm",
+      "anchor": "loc_00431bcf:",
+      "lines": [
+        16490
+      ]
+    },
+    {
+      "path": "asm/rich4.asm",
+      "anchor": "loc_00431c02:",
+      "lines": [
+        16511
+      ]
+    },
+    {
+      "path": "asm/rich4.asm",
+      "anchor": "loc_00431c31:",
+      "lines": [
+        16532
+      ]
+    },
+    {
+      "path": "asm/rich4.asm",
+      "anchor": "_rich4_change_player_direction:",
+      "lines": [
+        6417
+      ]
+    },
+    {
+      "path": "asm/rich4.asm",
+      "anchor": "fcn_0043f127:",
+      "lines": [
+        19427
+      ]
+    },
+    {
+      "path": "asm/rich4.asm",
+      "anchor": "fcn_0043f7c6:",
+      "lines": [
+        19951
+      ]
+    },
+    {
+      "path": "asm/rich4.asm",
+      "anchor": "fcn_0044090e:",
+      "lines": [
+        21331
+      ]
+    },
+    {
+      "path": "asm/rich4.asm",
+      "anchor": "fcn_00440706:",
+      "lines": [
+        21169
+      ]
+    },
+    {
+      "path": "asm/rich4.asm",
+      "anchor": "fcn_0043f23e:",
+      "lines": [
+        19522
+      ]
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "anchor": "_rich4_handle_player_land_on_node:",
+      "lines": [
+        322
+      ]
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "anchor": "loc_00419884:",
+      "lines": [
+        346
+      ]
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "anchor": "loc_0041b132:",
+      "lines": [
+        2358
+      ]
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "anchor": "loc_0041b13c:",
+      "lines": [
+        2362
+      ]
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "anchor": "loc_0041b146:",
+      "lines": [
+        2366
+      ]
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "anchor": "loc_0041b15e:",
+      "lines": [
+        2374
+      ]
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "anchor": "loc_0041b16c:",
+      "lines": [
+        2379
+      ]
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "anchor": "loc_0041b3cb:",
+      "lines": [
+        2568
+      ]
+    },
+    {
+      "path": "asm/rich4_calculate_player_wealth.asm",
+      "anchor": "_rich4_calculate_player_wealth:",
+      "lines": [
+        14
+      ]
+    },
+    {
+      "path": "asm/rich4_card_utils_2.asm",
+      "anchor": "_rich4_player_sell_all_the_card:",
+      "lines": [
+        147
+      ]
+    },
+    {
+      "path": "asm/rich4_tool_utils.c",
+      "anchor": "rich4_player_sell_all_tools(int player)",
+      "lines": [
+        66
+      ]
+    },
+    {
+      "path": "asm/rich4_card_mengyouka.asm",
+      "anchor": "loc_004443d4:",
+      "lines": [
+        193
+      ]
+    },
+    {
+      "path": "asm/rich4_card_mengyouka.asm",
+      "anchor": "loc_00444483:",
+      "lines": [
+        244
+      ]
+    },
+    {
+      "path": "asm/rich4_small_games.asm",
+      "anchor": "_rich4_ui_game_penguin_treasure:",
+      "lines": [
+        4223
+      ]
+    },
+    {
+      "path": "asm/rich4_small_games.asm",
+      "anchor": "_rich4_ui_game_balloon:",
+      "lines": [
+        4429
+      ]
+    },
+    {
+      "path": "asm/rich4_small_games.asm",
+      "anchor": "_rich4_ui_game_xicongtianjiang:",
+      "lines": [
+        4515
+      ]
+    }
+  ],
+  "decodedStrings": {
+    "ref_004646cc": "#0046財產最多的人",
+    "ref_004646de": "#0047土地最多的人",
+    "ref_004646f0": "#0048房屋最多的人",
+    "ref_00464702": "#0049現金最多的人",
+    "ref_00464714": "#0050存款最多的人",
+    "ref_00464726": "#0051點券最多的人",
+    "ref_00464738": "#0052走路的人",
+    "ref_00464746": "#0053騎機車的人",
+    "ref_00464756": "#0054開汽車的人",
+    "ref_00464766": "#0055神明附身的人",
+    "ref_00464778": "#0056所有男生",
+    "ref_00464786": "#0057所有女生",
+    "ref_00464794": "變賣所有卡片",
+    "ref_004647a1": "抽取命運三張",
+    "ref_004647ae": "立刻坐牢三天",
+    "ref_004647bb": "原地停留一回合",
+    "ref_004647ca": "存入所有現金",
+    "ref_004647d7": "就地加蓋房屋",
+    "ref_004647e4": "得一張卡片",
+    "ref_004647ef": "向後轉",
+    "ref_004647f6": "變賣所有道具",
+    "ref_00464803": "就地拆除房屋",
+    "ref_00464810": "住院檢查三天",
+    "ref_0046481d": "拍賣當格土地",
+    "ref_0046482f": "？？？...",
+    "ref_00464839": "得到%s！"
+  },
+  "mapEvents": [
+    {
+      "code": 0,
+      "candidate": "property",
+      "nodeIds": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        15,
+        17,
+        21,
+        30,
+        32,
+        34,
+        36,
+        37,
+        38,
+        39,
+        40,
+        42,
+        43,
+        44,
+        46,
+        47,
+        48,
+        49,
+        51,
+        52,
+        53,
+        54,
+        56,
+        57,
+        58,
+        59,
+        60,
+        62,
+        63,
+        64,
+        65,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        74,
+        75,
+        76,
+        77,
+        80,
+        82,
+        84,
+        85,
+        86,
+        87,
+        89,
+        90,
+        91,
+        92,
+        93,
+        95,
+        96,
+        97,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        108,
+        109,
+        110
+      ],
+      "status": "地产/大型建筑/公司候选已接入；完整设施差异保留"
+    },
+    {
+      "code": 1,
+      "candidate": "no-op",
+      "nodeIds": [
+        41
+      ],
+      "status": "无效果分派保留"
+    },
+    {
+      "code": 2,
+      "candidate": "news",
+      "nodeIds": [
+        13,
+        61,
+        94
+      ],
+      "status": "36新闻候选已实现/历史验收"
+    },
+    {
+      "code": 3,
+      "candidate": "fortune",
+      "nodeIds": [
+        2,
+        19,
+        45,
+        66
+      ],
+      "status": "日本37命运候选已实现/历史验收"
+    },
+    {
+      "code": 4,
+      "candidate": "prison",
+      "nodeIds": [
+        78
+      ],
+      "status": "拘留状态与名单已实现；直接停留监狱原UI/服务待核验"
+    },
+    {
+      "code": 5,
+      "candidate": "hospital",
+      "nodeIds": [
+        55
+      ],
+      "status": "住院状态与名单已实现；直接停留医院原UI/服务待核验"
+    },
+    {
+      "code": 6,
+      "candidate": "penguin-game",
+      "nodeIds": [
+        22
+      ],
+      "status": "企鹅寻宝小游戏未实现"
+    },
+    {
+      "code": 7,
+      "candidate": "balloon-game",
+      "nodeIds": [
+        24
+      ],
+      "status": "射气球小游戏未实现"
+    },
+    {
+      "code": 8,
+      "candidate": "falling-gifts-game",
+      "nodeIds": [
+        26
+      ],
+      "status": "喜从天降小游戏未实现"
+    },
+    {
+      "code": 9,
+      "candidate": "lottery",
+      "nodeIds": [
+        28,
+        88
+      ],
+      "status": "彩票地点/15日开奖v25候选已实现"
+    },
+    {
+      "code": 10,
+      "candidate": "points-50",
+      "nodeIds": [
+        20,
+        31
+      ],
+      "status": "50点地点已实现"
+    },
+    {
+      "code": 11,
+      "candidate": "points-30",
+      "nodeIds": [
+        23,
+        27,
+        83
+      ],
+      "status": "30点地点已实现"
+    },
+    {
+      "code": 12,
+      "candidate": "points-10",
+      "nodeIds": [
+        14,
+        16,
+        18,
+        25,
+        29,
+        33,
+        79,
+        81
+      ],
+      "status": "10点地点已实现"
+    },
+    {
+      "code": 13,
+      "candidate": "random-card",
+      "nodeIds": [
+        98
+      ],
+      "status": "随机卡地点v14已实现"
+    },
+    {
+      "code": 14,
+      "candidate": "bank",
+      "nodeIds": [
+        1
+      ],
+      "status": "银行/贷款/日期候选已实现；其他差异保留"
+    },
+    {
+      "code": 15,
+      "candidate": "shop",
+      "nodeIds": [
+        50,
+        107
+      ],
+      "status": "商店购买已实现；原商店卖出UI待补"
+    },
+    {
+      "code": 16,
+      "candidate": "magic-house-candidate",
+      "nodeIds": [
+        35,
+        73
+      ],
+      "status": "本轮魔法屋12目标组、6/12效果；其余效果与原动画待补"
+    }
+  ],
+  "currentMapStatus": [
+    {
+      "code": 0,
+      "status": "地产/大型建筑/公司候选已接入；完整设施差异保留"
+    },
+    {
+      "code": 1,
+      "status": "无效果分派保留"
+    },
+    {
+      "code": 2,
+      "status": "36新闻候选已实现/历史验收"
+    },
+    {
+      "code": 3,
+      "status": "日本37命运候选已实现/历史验收"
+    },
+    {
+      "code": 4,
+      "status": "拘留状态与名单已实现；直接停留监狱原UI/服务待核验"
+    },
+    {
+      "code": 5,
+      "status": "住院状态与名单已实现；直接停留医院原UI/服务待核验"
+    },
+    {
+      "code": 6,
+      "status": "企鹅寻宝小游戏未实现"
+    },
+    {
+      "code": 7,
+      "status": "射气球小游戏未实现"
+    },
+    {
+      "code": 8,
+      "status": "喜从天降小游戏未实现"
+    },
+    {
+      "code": 9,
+      "status": "彩票地点/15日开奖v25候选已实现"
+    },
+    {
+      "code": 10,
+      "status": "50点地点已实现"
+    },
+    {
+      "code": 11,
+      "status": "30点地点已实现"
+    },
+    {
+      "code": 12,
+      "status": "10点地点已实现"
+    },
+    {
+      "code": 13,
+      "status": "随机卡地点v14已实现"
+    },
+    {
+      "code": 14,
+      "status": "银行/贷款/日期候选已实现；其他差异保留"
+    },
+    {
+      "code": 15,
+      "status": "商店购买已实现；原商店卖出UI待补"
+    },
+    {
+      "code": 16,
+      "status": "本轮魔法屋12目标组、6/12效果；其余效果与原动画待补"
+    }
+  ],
+  "rules": {
+    "R13-01w": "17 map dispatch entries: code16 at35/73; 6/7/8 are minigames, no standalone roulette map code. Insurance/god/house selectors are distinct UI entry points, not one location.",
+    "R13-02w": "Landing handler masks low byte of status; sleep-walking suppresses nonzero codes. House has no entry fee. Human callback32719 rand%12 rejects empty groups;32e8e human mouse selection and32a4c posts selected effect-1. Web draws once uniformly among valid groups, freezes target order; no RNG/timer/AI equivalence claim.",
+    "R13-03w": "31842 builds alive one-based seats; maxima include all ties, property counts include land+facility, built counts buildings not levels; positive-only counts/cash/bank/points; wealth max starts0. Traffic CURRENT low2bits; dream443d4 clears to0, saved102/103 are not active traffic, attachedgodbyte63, sex20. Detained participants are not removed from group collection.",
+    "R05-01w": "Wealth239b9 cash+bank-loan, each stock current float32price*quantity plus float32 accumulated int then trunc/int32, raw property base+building cost; no price multiplier, points, tools or loan interest. Native malformed register idioms/extreme integer/FP behavior not claimed equivalent outside Web safe domain.",
+    "R07-01w": "Effect0 sells cards only via441f21;8 tools via445b3f incl active lowbit vehicle to bag before selling; dream ordinary vehicle already in bag (no duplicate); retain saved102/103; suspended engineer keeps v11 candidate lease, not native-equivalence claim, no cap loss,13 tool prices,first8 return pool;points add low16; no god fortune resistance, cash fee, insurance or bankruptcy caller.",
+    "R09-01w": "Effect3 ++byte56 then&127 without reflection/resistance.7 tests packedbytes50..53 hotel/disappear/prison/hospital, not winter/dream;40c78c heading+4 mod8, blocked-exit-filtered random previous; reuse existing v7 candidate.",
+    "R06-01w": "Effect4 directly cash+bank/zero cash without bank reject/loan/fee helper;6 receive one random card per target in frozen seat order; reuse finite card supply/full15 replacement. No immediate date advance/dividend/loan/public payment; inherited next-action and day continuation unchanged.",
+    "R13-04w": "v36 root magic last receipt + pending decision, token/pause/actor validation; G7 world includes receipt. Six unsupported effects visible as deferred:1 three fortunes;2 prison3;5 build;9 demolish;10 hospital3;11 auction current property."
+  },
+  "effects": [
+    {
+      "id": 0,
+      "label": "變賣所有卡片",
+      "implemented": true
+    },
+    {
+      "id": 1,
+      "label": "抽取命運三張",
+      "implemented": false
+    },
+    {
+      "id": 2,
+      "label": "立刻坐牢三天",
+      "implemented": false
+    },
+    {
+      "id": 3,
+      "label": "原地停留一回合",
+      "implemented": true
+    },
+    {
+      "id": 4,
+      "label": "存入所有現金",
+      "implemented": true
+    },
+    {
+      "id": 5,
+      "label": "就地加蓋房屋",
+      "implemented": false
+    },
+    {
+      "id": 6,
+      "label": "得一張卡片",
+      "implemented": true
+    },
+    {
+      "id": 7,
+      "label": "向後轉",
+      "implemented": true
+    },
+    {
+      "id": 8,
+      "label": "變賣所有道具",
+      "implemented": true
+    },
+    {
+      "id": 9,
+      "label": "就地拆除房屋",
+      "implemented": false
+    },
+    {
+      "id": 10,
+      "label": "住院檢查三天",
+      "implemented": false
+    },
+    {
+      "id": 11,
+      "label": "拍賣當格土地",
+      "implemented": false
+    }
+  ],
+  "differences": [
+    "seeded draw over nonempty groups instead of rand%12 retries/timing",
+    "existing v7 direction candidate",
+    "only four exported roster sex entries; unknown custom IDs omitted from sex groups",
+    "safe money model; signed bank overflow not emulated",
+    "v11 suspended engineer lease remains deferred native parity; no phantom engineer sale",
+    "six remaining magic effects unavailable; no AI magic policy"
+  ],
+  "deferred": [
+    "six magic effects",
+    "three minigames",
+    "hospital/prison direct landing services",
+    "original shop selling UI",
+    "god/insurance original roulette timing",
+    "other asset listings",
+    "special actors",
+    "native end menus"
+  ]
+}

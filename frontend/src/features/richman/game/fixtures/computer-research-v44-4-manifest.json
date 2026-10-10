@@ -1,0 +1,327 @@
+{
+  "players": 4,
+  "commands": 4081,
+  "auto": 1285,
+  "human": 339,
+  "production": [
+    {
+      "ai": true,
+      "id": "player-2",
+      "item": "tool:10",
+      "property": "japan:facility:1",
+      "level": 2,
+      "turn": 182
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "item": "tool:11",
+      "property": "japan:facility:1",
+      "level": 3,
+      "turn": 294
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "item": "tool:11",
+      "property": "japan:facility:1",
+      "level": 4,
+      "turn": 454
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "item": "tool:13",
+      "property": "japan:facility:1",
+      "level": 5,
+      "turn": 474
+    }
+  ],
+  "deliveries": [
+    {
+      "type": "g5Notice",
+      "message": "研究完成：时光机已入包。",
+      "sequence": 2840,
+      "commandId": "command-1567",
+      "playerId": "player-2",
+      "turn": 202
+    },
+    {
+      "type": "g5Notice",
+      "message": "研究完成：传送机已入包。",
+      "sequence": 4320,
+      "commandId": "command-2354",
+      "playerId": "player-2",
+      "turn": 314
+    },
+    {
+      "type": "g5Notice",
+      "message": "研究完成：传送机已入包。",
+      "sequence": 6976,
+      "commandId": "command-3785",
+      "playerId": "player-2",
+      "turn": 474
+    },
+    {
+      "type": "g5Notice",
+      "message": "研究完成：核子飞弹已入包。",
+      "sequence": 7275,
+      "commandId": "command-3941",
+      "playerId": "player-2",
+      "turn": 494
+    }
+  ],
+  "uses": [
+    {
+      "ai": true,
+      "id": "player-2",
+      "item": "tool:10",
+      "turn": 454,
+      "details": {
+        "observation": {
+          "value": {
+            "player-1": 323491,
+            "player-2": 387180,
+            "player-3": 433074,
+            "player-4": 370509
+          },
+          "protected": {
+            "player-1": "{\"inventory\":{\"tool:08\":0,\"tool:09\":0,\"tool:01\":0,\"tool:02\":0,\"card:02\":0,\"card:01\":0,\"card:03\":0,\"card:04\":1,\"card:05\":0,\"card:06\":0,\"card:12\":0,\"card:14\":0,\"card:15\":0,\"card:16\":0,\"card:17\":0,\"card:30\":1,\"tool:05\":0,\"tool:06\":0,\"card:13\":0,\"card:18\":0,\"card:19\":0,\"card:20\":0,\"card:21\":0,\"card:29\":0,\"card:07\":0,\"card:08\":0,\"card:26\":0,\"card:27\":0,\"card:28\":0,\"card:09\":0,\"card:10\":0,\"card:11\":1,\"tool:03\":0,\"tool:04\":0,\"tool:07\":0,\"tool:12\":0,\"card:22\":0,\"card:23\":0,\"card:24\":0,\"card:25\":1,\"tool:10\":0,\"tool:11\":0,\"tool:13\":0},\"status\":{\"stop\":0,\"winter\":0,\"dream\":0,\"prison\":0,\"hospital\":0,\"turtle\":0,\"vehicle\":\"foot\",\"diceCount\":1,\"savedVehicle\":\"foot\",\"savedDice\":1,\"travel\":0},\"engineer\":null,\"gods\":[],\"research\":[]}",
+            "player-2": "{\"inventory\":{\"tool:08\":0,\"tool:09\":0,\"tool:01\":1,\"tool:02\":0,\"card:02\":0,\"card:01\":0,\"card:03\":0,\"card:04\":0,\"card:05\":0,\"card:06\":0,\"card:12\":0,\"card:14\":0,\"card:15\":0,\"card:16\":0,\"card:17\":0,\"card:30\":0,\"tool:05\":0,\"tool:06\":0,\"card:13\":0,\"card:18\":0,\"card:19\":0,\"card:20\":1,\"card:21\":0,\"card:29\":0,\"card:07\":1,\"card:08\":0,\"card:26\":0,\"card:27\":0,\"card:28\":0,\"card:09\":0,\"card:10\":0,\"card:11\":0,\"tool:03\":0,\"tool:04\":0,\"tool:07\":0,\"tool:12\":0,\"card:22\":0,\"card:23\":0,\"card:24\":0,\"card:25\":0,\"tool:10\":1,\"tool:11\":1,\"tool:13\":0},\"status\":{\"stop\":0,\"winter\":0,\"dream\":0,\"prison\":0,\"hospital\":0,\"turtle\":0,\"vehicle\":\"tool:05\",\"diceCount\":2,\"savedVehicle\":\"foot\",\"savedDice\":1,\"travel\":0},\"engineer\":null,\"gods\":[],\"research\":[]}",
+            "player-3": "{\"inventory\":{\"tool:08\":0,\"tool:09\":0,\"tool:01\":1,\"tool:02\":0,\"card:02\":0,\"card:01\":0,\"card:03\":0,\"card:04\":0,\"card:05\":0,\"card:06\":0,\"card:12\":0,\"card:14\":0,\"card:15\":0,\"card:16\":0,\"card:17\":0,\"card:30\":0,\"tool:05\":0,\"tool:06\":0,\"card:13\":0,\"card:18\":0,\"card:19\":1,\"card:20\":0,\"card:21\":0,\"card:29\":0,\"card:07\":0,\"card:08\":0,\"card:26\":0,\"card:27\":0,\"card:28\":0,\"card:09\":0,\"card:10\":0,\"card:11\":0,\"tool:03\":0,\"tool:04\":0,\"tool:07\":0,\"tool:12\":0,\"card:22\":0,\"card:23\":0,\"card:24\":0,\"card:25\":0,\"tool:10\":0,\"tool:11\":0,\"tool:13\":0},\"status\":{\"stop\":0,\"winter\":0,\"dream\":0,\"prison\":0,\"hospital\":0,\"turtle\":0,\"vehicle\":\"tool:05\",\"diceCount\":1,\"savedVehicle\":\"foot\",\"savedDice\":1,\"travel\":0},\"engineer\":null,\"gods\":[],\"research\":[]}",
+            "player-4": "{\"inventory\":{\"tool:08\":0,\"tool:09\":0,\"tool:01\":0,\"tool:02\":0,\"card:02\":0,\"card:01\":0,\"card:03\":0,\"card:04\":0,\"card:05\":0,\"card:06\":0,\"card:12\":0,\"card:14\":0,\"card:15\":0,\"card:16\":0,\"card:17\":0,\"card:30\":0,\"tool:05\":0,\"tool:06\":0,\"card:13\":0,\"card:18\":0,\"card:19\":0,\"card:20\":0,\"card:21\":0,\"card:29\":0,\"card:07\":0,\"card:08\":0,\"card:26\":0,\"card:27\":0,\"card:28\":0,\"card:09\":0,\"card:10\":0,\"card:11\":0,\"tool:03\":0,\"tool:04\":0,\"tool:07\":0,\"tool:12\":0,\"card:22\":0,\"card:23\":0,\"card:24\":2,\"card:25\":0,\"tool:10\":0,\"tool:11\":0,\"tool:13\":0},\"status\":{\"stop\":0,\"winter\":0,\"dream\":0,\"prison\":0,\"hospital\":0,\"turtle\":0,\"vehicle\":\"tool:05\",\"diceCount\":2,\"savedVehicle\":\"foot\",\"savedDice\":1,\"travel\":0},\"engineer\":null,\"gods\":[],\"research\":[]}"
+          },
+          "allies": "{\"player-1\":null,\"player-2\":null,\"player-3\":null,\"player-4\":null}",
+          "eliminated": "[]"
+        },
+        "currentPublic": {
+          "value": {
+            "player-1": 323191,
+            "player-2": 358329,
+            "player-3": 433389,
+            "player-4": 370824
+          },
+          "protected": {
+            "player-1": "{\"inventory\":{\"tool:08\":0,\"tool:09\":0,\"tool:01\":0,\"tool:02\":0,\"card:02\":0,\"card:01\":0,\"card:03\":0,\"card:04\":1,\"card:05\":0,\"card:06\":0,\"card:12\":0,\"card:14\":0,\"card:15\":0,\"card:16\":0,\"card:17\":0,\"card:30\":1,\"tool:05\":0,\"tool:06\":0,\"card:13\":0,\"card:18\":0,\"card:19\":0,\"card:20\":0,\"card:21\":0,\"card:29\":0,\"card:07\":0,\"card:08\":0,\"card:26\":0,\"card:27\":0,\"card:28\":0,\"card:09\":0,\"card:10\":0,\"card:11\":1,\"tool:03\":0,\"tool:04\":0,\"tool:07\":0,\"tool:12\":0,\"card:22\":0,\"card:23\":0,\"card:24\":0,\"card:25\":1,\"tool:10\":0,\"tool:11\":0,\"tool:13\":0},\"status\":{\"stop\":0,\"winter\":0,\"dream\":0,\"prison\":0,\"hospital\":0,\"turtle\":0,\"vehicle\":\"foot\",\"diceCount\":1,\"savedVehicle\":\"foot\",\"savedDice\":1,\"travel\":0},\"engineer\":null,\"gods\":[],\"research\":[]}",
+            "player-2": "{\"inventory\":{\"tool:08\":0,\"tool:09\":0,\"tool:01\":1,\"tool:02\":0,\"card:02\":0,\"card:01\":0,\"card:03\":0,\"card:04\":0,\"card:05\":0,\"card:06\":0,\"card:12\":0,\"card:14\":0,\"card:15\":0,\"card:16\":0,\"card:17\":0,\"card:30\":0,\"tool:05\":0,\"tool:06\":0,\"card:13\":0,\"card:18\":0,\"card:19\":0,\"card:20\":1,\"card:21\":0,\"card:29\":0,\"card:07\":1,\"card:08\":0,\"card:26\":0,\"card:27\":0,\"card:28\":0,\"card:09\":0,\"card:10\":0,\"card:11\":0,\"tool:03\":0,\"tool:04\":0,\"tool:07\":0,\"tool:12\":0,\"card:22\":0,\"card:23\":0,\"card:24\":0,\"card:25\":0,\"tool:10\":1,\"tool:11\":1,\"tool:13\":0},\"status\":{\"stop\":0,\"winter\":0,\"dream\":0,\"prison\":0,\"hospital\":0,\"turtle\":0,\"vehicle\":\"tool:05\",\"diceCount\":2,\"savedVehicle\":\"foot\",\"savedDice\":1,\"travel\":0},\"engineer\":null,\"gods\":[],\"research\":[]}",
+            "player-3": "{\"inventory\":{\"tool:08\":0,\"tool:09\":0,\"tool:01\":1,\"tool:02\":0,\"card:02\":0,\"card:01\":0,\"card:03\":0,\"card:04\":0,\"card:05\":0,\"card:06\":0,\"card:12\":0,\"card:14\":0,\"card:15\":0,\"card:16\":0,\"card:17\":0,\"card:30\":0,\"tool:05\":0,\"tool:06\":0,\"card:13\":0,\"card:18\":0,\"card:19\":1,\"card:20\":0,\"card:21\":0,\"card:29\":0,\"card:07\":0,\"card:08\":0,\"card:26\":0,\"card:27\":0,\"card:28\":0,\"card:09\":0,\"card:10\":0,\"card:11\":0,\"tool:03\":0,\"tool:04\":0,\"tool:07\":0,\"tool:12\":0,\"card:22\":0,\"card:23\":0,\"card:24\":0,\"card:25\":0,\"tool:10\":0,\"tool:11\":0,\"tool:13\":0},\"status\":{\"stop\":0,\"winter\":0,\"dream\":0,\"prison\":0,\"hospital\":0,\"turtle\":0,\"vehicle\":\"tool:05\",\"diceCount\":1,\"savedVehicle\":\"foot\",\"savedDice\":1,\"travel\":0},\"engineer\":null,\"gods\":[],\"research\":[]}",
+            "player-4": "{\"inventory\":{\"tool:08\":0,\"tool:09\":0,\"tool:01\":0,\"tool:02\":0,\"card:02\":0,\"card:01\":0,\"card:03\":0,\"card:04\":0,\"card:05\":0,\"card:06\":0,\"card:12\":0,\"card:14\":0,\"card:15\":0,\"card:16\":0,\"card:17\":0,\"card:30\":0,\"tool:05\":0,\"tool:06\":0,\"card:13\":0,\"card:18\":0,\"card:19\":0,\"card:20\":0,\"card:21\":1,\"card:29\":0,\"card:07\":0,\"card:08\":0,\"card:26\":0,\"card:27\":0,\"card:28\":0,\"card:09\":0,\"card:10\":0,\"card:11\":0,\"tool:03\":0,\"tool:04\":0,\"tool:07\":0,\"tool:12\":0,\"card:22\":0,\"card:23\":0,\"card:24\":2,\"card:25\":0,\"tool:10\":0,\"tool:11\":0,\"tool:13\":0},\"status\":{\"stop\":0,\"winter\":0,\"dream\":0,\"prison\":0,\"hospital\":0,\"turtle\":0,\"vehicle\":\"tool:05\",\"diceCount\":2,\"savedVehicle\":\"foot\",\"savedDice\":1,\"travel\":0},\"engineer\":null,\"gods\":[],\"research\":[]}"
+          },
+          "allies": "{\"player-1\":null,\"player-2\":null,\"player-3\":null,\"player-4\":null}",
+          "eliminated": "[]"
+        },
+        "choice": {
+          "target": {
+            "kind": "player",
+            "id": "player-2"
+          },
+          "score": 28551
+        },
+        "changed": [
+          "players",
+          "economy",
+          "finance",
+          "effects",
+          "g2",
+          "g3",
+          "g5",
+          "g6",
+          "news",
+          "calendar"
+        ],
+        "dateBefore": "1998-04-28",
+        "dateAfter": "1998-04-27",
+        "rng": 2172193710,
+        "logs": 6645
+      }
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "item": "tool:11",
+      "turn": 454,
+      "details": {
+        "target": {
+          "kind": "player",
+          "id": "player-2"
+        },
+        "destination": {
+          "kind": "node",
+          "id": "46"
+        },
+        "phase": "property",
+        "landing": {
+          "kind": "property",
+          "id": "e324a23e-958e-42a3-86b9-8e26dccd9f87:2548",
+          "propertyId": "japan:facility:1",
+          "operation": "upgrade",
+          "amount": 400,
+          "recipientId": null,
+          "lines": []
+        },
+        "positionBefore": 100,
+        "positionAfter": 46
+      }
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "item": "tool:11",
+      "turn": 474,
+      "details": {
+        "target": {
+          "kind": "player",
+          "id": "player-2"
+        },
+        "destination": {
+          "kind": "node",
+          "id": "46"
+        },
+        "phase": "turnEnd",
+        "landing": null,
+        "positionBefore": 70,
+        "positionAfter": 46
+      }
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "item": "tool:13",
+      "turn": 502,
+      "details": {
+        "hit": {
+          "properties": [
+            "japan:land:17",
+            "japan:land:18",
+            "japan:land:19",
+            "japan:land:20",
+            "japan:land:21",
+            "japan:land:22"
+          ],
+          "players": [
+            "player-1"
+          ],
+          "blocks": [],
+          "hazards": [],
+          "gods": []
+        },
+        "target": {
+          "kind": "node",
+          "id": "3"
+        }
+      }
+    }
+  ],
+  "cancellations": [],
+  "prefixes": [
+    "tool:10-research-before",
+    "tool:10-research-after",
+    "研究完成：时光机已入包。",
+    "public-observation-before",
+    "public-observation-after",
+    "tool:11-research-before",
+    "tool:11-research-after",
+    "研究完成：传送机已入包。",
+    "tool:10-paused",
+    "tool:10-resumed",
+    "tool:10-confirm-before",
+    "tool:10-confirm-after",
+    "tool:11-paused",
+    "tool:11-resumed",
+    "tool:11-confirm-before",
+    "tool:11-confirm-after",
+    "tool:13-research-before",
+    "tool:13-research-after",
+    "研究完成：核子飞弹已入包。",
+    "tool:13-paused",
+    "tool:13-resumed",
+    "tool:13-confirm-before",
+    "tool:13-confirm-after"
+  ],
+  "memory": {},
+  "report": {
+    "researchWindows": [
+      "tool:10",
+      "tool:11",
+      "tool:13"
+    ],
+    "robotPreviews": [
+      {
+        "mines": 0,
+        "bombs": 0
+      }
+    ],
+    "policy": "research-v1",
+    "toolWindows": [
+      "tool:08",
+      "tool:09",
+      "tool:02",
+      "tool:01",
+      "card:08",
+      "card:23",
+      "card:29",
+      "card:07",
+      "card:04",
+      "card:30",
+      "card:22",
+      "card:06",
+      "card:12",
+      "card:28",
+      "tool:05",
+      "card:24",
+      "card:16",
+      "card:14",
+      "card:25",
+      "card:05",
+      "tool:10",
+      "tool:11",
+      "tool:13",
+      "tool:03"
+    ],
+    "crossChecks": [
+      {
+        "index": 664,
+        "kind": "auction",
+        "computer": false
+      },
+      {
+        "index": 665,
+        "kind": "auction",
+        "computer": true
+      },
+      {
+        "index": 2453,
+        "kind": "reaction",
+        "computer": true
+      }
+    ],
+    "route": "4",
+    "terminal": false,
+    "players": 4,
+    "normalSpeed": true,
+    "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+    "commands": 4081,
+    "auto": 1285,
+    "human": 339,
+    "lifecycle": [
+      "pause stops waiting",
+      "resume",
+      "reset dialog cancel",
+      "reset",
+      "replace with humans",
+      "exit cleanup",
+      "fullscreen",
+      "390px"
+    ],
+    "cleanup": {
+      "raf": 0,
+      "canvas": 0
+    },
+    "errors": []
+  },
+  "hashes": {
+    "replay": "7d7e44e9a8b2b499376ff4ed390bb4d114c1b475b842a0576f177d575b6bdb71",
+    "state": "165db5eaa03bc2d1317667324327886e1516842d7e73d52b44b568ed09810491",
+    "events": "e2fa87b787b6e162082d9df5fee59aecf4d89d70934d7046805bd6817e7ed626"
+  }
+}

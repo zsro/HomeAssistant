@@ -1,0 +1,973 @@
+{
+  "route": "g7change",
+  "rulesId": "japan-events-candidate-v47",
+  "actualCommands": 2114,
+  "businessCommands": 2112,
+  "prefixes": [
+    2104,
+    2105,
+    2114
+  ],
+  "fullReplay": true,
+  "prefixReplay": true,
+  "commandsMatchLegalPlan": true,
+  "worldBefore": [
+    "god-10",
+    "god-13",
+    "god-14",
+    "god-15",
+    "god-18",
+    "god-19",
+    "god-2",
+    "god-20"
+  ],
+  "worldAfter": [
+    "god-10",
+    "god-13",
+    "god-14",
+    "god-15",
+    "god-16",
+    "god-17",
+    "god-18",
+    "god-2"
+  ],
+  "removed": [
+    "god-19",
+    "god-20"
+  ],
+  "created": [
+    "god-16",
+    "god-17"
+  ],
+  "perPort": {
+    "before": [
+      {
+        "id": 0,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/track02.mp3",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.22,
+        "ready": 0
+      },
+      {
+        "id": 1,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-48.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 2,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-43.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 3,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-48.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 4,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-48.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 5,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/voice-1159.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.63,
+        "ready": 0
+      },
+      {
+        "id": 6,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-43.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 7,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-43.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 8,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-43.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 9,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-48.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 10,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-43.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 11,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-43.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 12,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-43.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 13,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/track03.mp3",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.22,
+        "ready": 0
+      },
+      {
+        "id": 14,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-43.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 15,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-48.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 16,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/voice-1294.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.63,
+        "ready": 0
+      },
+      {
+        "id": 17,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-43.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 18,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-43.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 19,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-48.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 20,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-48.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 21,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-43.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 22,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-48.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 23,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-43.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 24,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-48.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 25,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/voice-1160.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.63,
+        "ready": 0
+      },
+      {
+        "id": 26,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/track04.mp3",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.22,
+        "ready": 0
+      },
+      {
+        "id": 27,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-43.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 28,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-43.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 29,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-48.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 30,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-48.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 31,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-43.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 32,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-43.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 33,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-43.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 34,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-43.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 35,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-43.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 36,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-43.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 37,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-48.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 38,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/track05.mp3",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.22,
+        "ready": 0
+      },
+      {
+        "id": 39,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-43.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 40,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-48.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 41,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-43.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 42,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-43.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 43,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-48.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 44,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-43.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 45,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-48.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 46,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/voice-1160.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.63,
+        "ready": 0
+      },
+      {
+        "id": 47,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-48.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 48,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-43.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 49,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-43.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 50,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/track06.mp3",
+        "attribute": "/richman/generated/audio/track06.mp3",
+        "paused": false,
+        "time": 17.656334,
+        "volume": 0.22,
+        "ready": 4
+      }
+    ],
+    "after": [
+      {
+        "id": 0,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/track02.mp3",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.22,
+        "ready": 0
+      },
+      {
+        "id": 1,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-48.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 2,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-43.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 3,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-48.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 4,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-48.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 5,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/voice-1159.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.63,
+        "ready": 0
+      },
+      {
+        "id": 6,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-43.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 7,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-43.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 8,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-43.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 9,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-48.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 10,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-43.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 11,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-43.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 12,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-43.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 13,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/track03.mp3",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.22,
+        "ready": 0
+      },
+      {
+        "id": 14,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-43.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 15,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-48.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 16,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/voice-1294.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.63,
+        "ready": 0
+      },
+      {
+        "id": 17,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-43.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 18,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-43.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 19,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-48.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 20,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-48.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 21,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-43.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 22,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-48.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 23,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-43.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 24,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-48.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 25,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/voice-1160.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.63,
+        "ready": 0
+      },
+      {
+        "id": 26,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/track04.mp3",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.22,
+        "ready": 0
+      },
+      {
+        "id": 27,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-43.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 28,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-43.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 29,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-48.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 30,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-48.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 31,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-43.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 32,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-43.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 33,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-43.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 34,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-43.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 35,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-43.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 36,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-43.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 37,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-48.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 38,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/track05.mp3",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.22,
+        "ready": 0
+      },
+      {
+        "id": 39,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-43.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 40,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-48.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 41,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-43.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 42,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-43.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 43,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-48.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 44,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-43.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 45,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-48.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 46,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/voice-1160.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.63,
+        "ready": 0
+      },
+      {
+        "id": 47,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-48.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 48,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-43.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 49,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/effect-43.wav",
+        "attribute": null,
+        "paused": true,
+        "time": 0,
+        "volume": 0.47,
+        "ready": 0
+      },
+      {
+        "id": 50,
+        "src": "http://127.0.0.1:5177/richman/generated/audio/track06.mp3",
+        "attribute": "/richman/generated/audio/track06.mp3",
+        "paused": false,
+        "time": 19.014624,
+        "volume": 0.22,
+        "ready": 4
+      }
+    ],
+    "eventsBetween": []
+  },
+  "cleanup": {
+    "raf": 0,
+    "canvas": 0
+  },
+  "errors": [],
+  "replaySHA256": "1b85a5658aa03a1cbb8830c885ff6750cd8558dd1f9f125bd4acf6b555b4779b"
+}

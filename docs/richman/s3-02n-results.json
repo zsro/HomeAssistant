@@ -1,0 +1,706 @@
+{
+  "stage": "S3-02n",
+  "status": "candidate-group-accepted",
+  "policy": "research-v1",
+  "rulesId": "japan-events-candidate-v44",
+  "fingerprint": "f9dbb7e9",
+  "newGameSemantics": false,
+  "nativeExecution": false,
+  "historicalCapabilities": {
+    "items": 43,
+    "news": 36,
+    "japanFortuneSlots": 37
+  },
+  "checks": {
+    "newDomain": {
+      "tests": 45,
+      "passed": true,
+      "log": "/private/tmp/research-domain-final.log"
+    },
+    "relatedRegression": {
+      "tests": 908,
+      "files": 25,
+      "passed": true,
+      "log": "/private/tmp/research-regression.log",
+      "includesInitialResearchTests": 42,
+      "additionalResearchTests": 3,
+      "uniqueDomain": 911,
+      "fullFrontendRerun": false
+    },
+    "compatibilityMatrix": {
+      "versions": "v1-v44",
+      "players": [
+        2,
+        3,
+        4
+      ],
+      "cases": 132,
+      "passed": true
+    },
+    "preservation": {
+      "oldFixtures": 406,
+      "changed": [],
+      "changedHistoricalRuntime": [
+        "ComputerPanel.tsx",
+        "game/computer.ts",
+        "game/session.ts"
+      ],
+      "oldPolicyBodiesUnchanged": true,
+      "integrationOutsideFeatureTree": [
+        "frontend/src/pages/RichmanPage.tsx"
+      ]
+    },
+    "typecheck": true,
+    "lint": true,
+    "build": true,
+    "buildWarnings": [
+      "Existing chunk size warning retained"
+    ],
+    "builtUI": {
+      "built": true,
+      "policies": 15,
+      "switchBackToCapital": true,
+      "switchBackToGods": true,
+      "switchBackToMobility": true,
+      "normalSpeed": true,
+      "defaultHuman": true,
+      "defaultBasic": true,
+      "toolsEffect": true,
+      "policyMetadata": true,
+      "resetPreservesPolicy": true,
+      "switchBackToBasic": true,
+      "switchBackToTools": true,
+      "switchBackToRent": true,
+      "switchBackToDefense": true,
+      "switchBackToEstate": true,
+      "switchBackToCash": true,
+      "switchBackToStatus": true,
+      "switchBackToRoads": true,
+      "switchBackToArea": true,
+      "switchBackToCommerce": true,
+      "switchBackToInventory": true,
+      "humanReplacement": true,
+      "exitWhileToolsWaiting": true,
+      "setup390": true,
+      "cleanup": {
+        "raf": 0,
+        "canvas": 0
+      },
+      "errors": []
+    },
+    "actualReplayArchiveTests": {
+      "tests": 3,
+      "files": 1,
+      "passed": true,
+      "executedIndividually": [
+        2,
+        3,
+        4
+      ],
+      "logs": [
+        "/private/tmp/research-browser-2.log",
+        "/private/tmp/research-browser-3.log",
+        "/private/tmp/research-browser-4.log"
+      ],
+      "prefixAndFullReplay": true,
+      "prefixesVerifiedDuringArchive": [
+        2,
+        3,
+        4
+      ],
+      "repeatedPrefixesSkippedInVitestRoutes": [
+        4
+      ],
+      "note": "Each archive ran all critical prefixes and full replay. Routes2/3 repeated these in Vitest; route4 then rechecked all policy commands, effects, full replay and archive hashes, without repeating already verified prefixes."
+    },
+    "uniqueTestsThisBatch": 914,
+    "uniqueTestFiles": 26
+  },
+  "actualBrowser": {
+    "status": "passed",
+    "commands": 9369,
+    "auto": 2540,
+    "human": 1118,
+    "namedPrefixes": 48,
+    "routes": [
+      {
+        "players": 2,
+        "commands": 2936,
+        "auto": 634,
+        "human": 479,
+        "production": [
+          {
+            "ai": true,
+            "id": "player-2",
+            "item": "tool:10",
+            "property": "japan:facility:2",
+            "level": 2,
+            "turn": 164
+          },
+          {
+            "ai": true,
+            "id": "player-2",
+            "item": "tool:11",
+            "property": "japan:facility:2",
+            "level": 3,
+            "turn": 292
+          },
+          {
+            "ai": true,
+            "id": "player-2",
+            "item": "tool:11",
+            "property": "japan:facility:2",
+            "level": 4,
+            "turn": 348
+          }
+        ],
+        "deliveries": [
+          {
+            "type": "g5Notice",
+            "message": "研究完成：时光机已入包。",
+            "sequence": 2734,
+            "commandId": "command-1412",
+            "playerId": "player-2",
+            "turn": 174
+          },
+          {
+            "type": "g5Notice",
+            "message": "研究完成：传送机已入包。",
+            "sequence": 4854,
+            "commandId": "command-2489",
+            "playerId": "player-2",
+            "turn": 302
+          }
+        ],
+        "report": {
+          "researchWindows": [
+            "tool:10",
+            "tool:11"
+          ],
+          "robotPreviews": [
+            {
+              "mines": 1,
+              "bombs": 0
+            }
+          ],
+          "policy": "research-v1",
+          "toolWindows": [
+            "tool:08",
+            "tool:09",
+            "card:24",
+            "card:07",
+            "tool:05",
+            "card:23",
+            "card:12",
+            "card:06",
+            "card:08",
+            "card:03",
+            "card:05",
+            "tool:02",
+            "tool:03",
+            "tool:04",
+            "card:14",
+            "tool:01",
+            "card:11",
+            "tool:10",
+            "tool:11"
+          ],
+          "crossChecks": [
+            {
+              "index": 1818,
+              "kind": "auction",
+              "computer": false
+            },
+            {
+              "index": 1901,
+              "kind": "auction",
+              "computer": true
+            },
+            {
+              "index": 2446,
+              "kind": "reaction",
+              "computer": true
+            }
+          ],
+          "route": "2",
+          "terminal": false,
+          "players": 2,
+          "normalSpeed": true,
+          "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+          "commands": 2936,
+          "auto": 634,
+          "human": 479,
+          "lifecycle": [
+            "pause stops waiting",
+            "resume",
+            "reset dialog cancel",
+            "reset",
+            "replace with humans",
+            "exit cleanup",
+            "fullscreen",
+            "390px"
+          ],
+          "cleanup": {
+            "raf": 0,
+            "canvas": 0
+          },
+          "errors": []
+        },
+        "hashes": {
+          "replay": "51e36c984efcf6a77bd82d646c8f54122395fb440507ee2726a87fc72cf68017",
+          "state": "fb4d47edec3bbc7145c053bdda58ed1572aed6196f963a5abd4a1cfeaa4cdc9e",
+          "events": "dd7482f154d80e4c3e763da460740a8127db89e634f0ba6334179a91a0b72013"
+        },
+        "route": "2",
+        "prefixes": 16,
+        "uses": [
+          {
+            "ai": true,
+            "id": "player-2",
+            "item": "tool:10",
+            "turn": 348,
+            "details": {
+              "choice": {
+                "target": {
+                  "kind": "player",
+                  "id": "player-2"
+                },
+                "score": 5140
+              },
+              "changed": [
+                "players",
+                "economy",
+                "finance",
+                "items",
+                "effects",
+                "g2",
+                "g5",
+                "g6",
+                "calendar"
+              ],
+              "dateBefore": "1998-06-27",
+              "dateAfter": "1998-06-26"
+            }
+          },
+          {
+            "ai": true,
+            "id": "player-2",
+            "item": "tool:11",
+            "turn": 348,
+            "details": {
+              "target": {
+                "kind": "player",
+                "id": "player-2"
+              },
+              "destination": {
+                "kind": "node",
+                "id": "39"
+              },
+              "phase": "property",
+              "positionBefore": 3,
+              "positionAfter": 39
+            }
+          }
+        ]
+      },
+      {
+        "players": 3,
+        "commands": 2352,
+        "auto": 621,
+        "human": 300,
+        "production": [
+          {
+            "ai": true,
+            "id": "player-2",
+            "item": "tool:10",
+            "property": "japan:facility:3",
+            "level": 2,
+            "turn": 248
+          }
+        ],
+        "deliveries": [
+          {
+            "type": "g5Notice",
+            "message": "研究完成：时光机已入包。",
+            "sequence": 3775,
+            "commandId": "command-2006",
+            "playerId": "player-2",
+            "turn": 263
+          }
+        ],
+        "report": {
+          "researchWindows": [
+            "tool:10"
+          ],
+          "robotPreviews": [],
+          "policy": "research-v1",
+          "toolWindows": [
+            "tool:08",
+            "tool:09",
+            "card:17",
+            "card:04",
+            "card:03",
+            "card:28",
+            "card:25",
+            "tool:05",
+            "card:02",
+            "card:06",
+            "card:12",
+            "card:07",
+            "card:13",
+            "card:30",
+            "tool:02",
+            "tool:10"
+          ],
+          "crossChecks": [],
+          "route": "3",
+          "terminal": false,
+          "players": 3,
+          "normalSpeed": true,
+          "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+          "commands": 2352,
+          "auto": 621,
+          "human": 300,
+          "lifecycle": [
+            "pause stops waiting",
+            "resume",
+            "reset dialog cancel",
+            "reset",
+            "replace with humans",
+            "exit cleanup",
+            "fullscreen",
+            "390px"
+          ],
+          "cleanup": {
+            "raf": 0,
+            "canvas": 0
+          },
+          "errors": []
+        },
+        "hashes": {
+          "replay": "c1aa2de930b36d312feba1a87ad72689eb44b3c87d602e23f8183d1f47cfc3ce",
+          "state": "aa3800547816d6bd9470a3fca7347eaf8c72365182ab36f27fb39996d70db019",
+          "events": "d744b896849119631e3cad354f99e3895a31b0cc780fc9992199cc1dbf6a3028"
+        },
+        "route": "3",
+        "prefixes": 9,
+        "uses": [
+          {
+            "ai": true,
+            "id": "player-2",
+            "item": "tool:10",
+            "turn": 302,
+            "details": {
+              "choice": {
+                "target": {
+                  "kind": "player",
+                  "id": "player-2"
+                },
+                "score": 7125
+              },
+              "changed": [
+                "players",
+                "economy",
+                "finance",
+                "effects",
+                "g2",
+                "g5",
+                "g6",
+                "news",
+                "calendar",
+                "lottery"
+              ],
+              "dateBefore": "1998-04-15",
+              "dateAfter": "1998-04-14"
+            }
+          }
+        ]
+      },
+      {
+        "players": 4,
+        "commands": 4081,
+        "auto": 1285,
+        "human": 339,
+        "production": [
+          {
+            "ai": true,
+            "id": "player-2",
+            "item": "tool:10",
+            "property": "japan:facility:1",
+            "level": 2,
+            "turn": 182
+          },
+          {
+            "ai": true,
+            "id": "player-2",
+            "item": "tool:11",
+            "property": "japan:facility:1",
+            "level": 3,
+            "turn": 294
+          },
+          {
+            "ai": true,
+            "id": "player-2",
+            "item": "tool:11",
+            "property": "japan:facility:1",
+            "level": 4,
+            "turn": 454
+          },
+          {
+            "ai": true,
+            "id": "player-2",
+            "item": "tool:13",
+            "property": "japan:facility:1",
+            "level": 5,
+            "turn": 474
+          }
+        ],
+        "deliveries": [
+          {
+            "type": "g5Notice",
+            "message": "研究完成：时光机已入包。",
+            "sequence": 2840,
+            "commandId": "command-1567",
+            "playerId": "player-2",
+            "turn": 202
+          },
+          {
+            "type": "g5Notice",
+            "message": "研究完成：传送机已入包。",
+            "sequence": 4320,
+            "commandId": "command-2354",
+            "playerId": "player-2",
+            "turn": 314
+          },
+          {
+            "type": "g5Notice",
+            "message": "研究完成：传送机已入包。",
+            "sequence": 6976,
+            "commandId": "command-3785",
+            "playerId": "player-2",
+            "turn": 474
+          },
+          {
+            "type": "g5Notice",
+            "message": "研究完成：核子飞弹已入包。",
+            "sequence": 7275,
+            "commandId": "command-3941",
+            "playerId": "player-2",
+            "turn": 494
+          }
+        ],
+        "report": {
+          "researchWindows": [
+            "tool:10",
+            "tool:11",
+            "tool:13"
+          ],
+          "robotPreviews": [
+            {
+              "mines": 0,
+              "bombs": 0
+            }
+          ],
+          "policy": "research-v1",
+          "toolWindows": [
+            "tool:08",
+            "tool:09",
+            "tool:02",
+            "tool:01",
+            "card:08",
+            "card:23",
+            "card:29",
+            "card:07",
+            "card:04",
+            "card:30",
+            "card:22",
+            "card:06",
+            "card:12",
+            "card:28",
+            "tool:05",
+            "card:24",
+            "card:16",
+            "card:14",
+            "card:25",
+            "card:05",
+            "tool:10",
+            "tool:11",
+            "tool:13",
+            "tool:03"
+          ],
+          "crossChecks": [
+            {
+              "index": 664,
+              "kind": "auction",
+              "computer": false
+            },
+            {
+              "index": 665,
+              "kind": "auction",
+              "computer": true
+            },
+            {
+              "index": 2453,
+              "kind": "reaction",
+              "computer": true
+            }
+          ],
+          "route": "4",
+          "terminal": false,
+          "players": 4,
+          "normalSpeed": true,
+          "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+          "commands": 4081,
+          "auto": 1285,
+          "human": 339,
+          "lifecycle": [
+            "pause stops waiting",
+            "resume",
+            "reset dialog cancel",
+            "reset",
+            "replace with humans",
+            "exit cleanup",
+            "fullscreen",
+            "390px"
+          ],
+          "cleanup": {
+            "raf": 0,
+            "canvas": 0
+          },
+          "errors": []
+        },
+        "hashes": {
+          "replay": "7d7e44e9a8b2b499376ff4ed390bb4d114c1b475b842a0576f177d575b6bdb71",
+          "state": "165db5eaa03bc2d1317667324327886e1516842d7e73d52b44b568ed09810491",
+          "events": "e2fa87b787b6e162082d9df5fee59aecf4d89d70934d7046805bd6817e7ed626"
+        },
+        "route": "4",
+        "prefixes": 23,
+        "uses": [
+          {
+            "ai": true,
+            "id": "player-2",
+            "item": "tool:10",
+            "turn": 454,
+            "details": {
+              "choice": {
+                "target": {
+                  "kind": "player",
+                  "id": "player-2"
+                },
+                "score": 28551
+              },
+              "changed": [
+                "players",
+                "economy",
+                "finance",
+                "effects",
+                "g2",
+                "g3",
+                "g5",
+                "g6",
+                "news",
+                "calendar"
+              ],
+              "dateBefore": "1998-04-28",
+              "dateAfter": "1998-04-27"
+            }
+          },
+          {
+            "ai": true,
+            "id": "player-2",
+            "item": "tool:11",
+            "turn": 454,
+            "details": {
+              "target": {
+                "kind": "player",
+                "id": "player-2"
+              },
+              "destination": {
+                "kind": "node",
+                "id": "46"
+              },
+              "phase": "property",
+              "positionBefore": 100,
+              "positionAfter": 46
+            }
+          },
+          {
+            "ai": true,
+            "id": "player-2",
+            "item": "tool:11",
+            "turn": 474,
+            "details": {
+              "target": {
+                "kind": "player",
+                "id": "player-2"
+              },
+              "destination": {
+                "kind": "node",
+                "id": "46"
+              },
+              "phase": "turnEnd",
+              "positionBefore": 70,
+              "positionAfter": 46
+            }
+          },
+          {
+            "ai": true,
+            "id": "player-2",
+            "item": "tool:13",
+            "turn": 502,
+            "details": {
+              "target": {
+                "kind": "node",
+                "id": "3"
+              },
+              "hit": {
+                "properties": [
+                  "japan:land:17",
+                  "japan:land:18",
+                  "japan:land:19",
+                  "japan:land:20",
+                  "japan:land:21",
+                  "japan:land:22"
+                ],
+                "players": [
+                  "player-1"
+                ],
+                "blocks": [],
+                "hazards": [],
+                "gods": []
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "next": "S3-02o: strategy composition/long-game candidate closure, public memory and G7 restore, actual payer/exit and lifecycle; preserve v44 and all15policies",
+  "scope": {
+    "newPolicy": "research-v1",
+    "olderPoliciesPreserved": 14,
+    "timeInformation": "accepted-public-departure-observation only; no hidden snapshot gain forecast",
+    "teleport": "self-to-owned-idle-lab subset",
+    "production": "legal owned lab levels2/3/5; no injected inventory",
+    "nativeAIEquivalent": false,
+    "newTerminalUI": false,
+    "originalUICommandsOnly": true,
+    "timeCheckpointReadByVerifierOnly": true
+  },
+  "uncoveredUI": [
+    "human cancellation of scientific tools and instantaneous target invalidation",
+    "every allied research/god protection combination",
+    "nuclear actual hits on road objects/carried gods; actual original route hits properties and a player",
+    "non-self teleport entities/properties/objects/gods",
+    "new mixed-seat terminal, all characters, background throttling, save/import and per-seat policies"
+  ],
+  "completedDate": "2026-10-08",
+  "retainedDifferences": [
+    "native AI equivalence, native checkpoint flag1 role gate differs from established Web world rules",
+    "time heuristic is not full saved-world prediction; unobserved checkpoint after fresh host does not trigger",
+    "other entity/property/object/god teleport optimization",
+    "future events, prices, long-range traps and guaranteed safety",
+    "all old precision/RNG/chart, other asset listing, special roles, wheel, native exit/endgame, minigame presentation/collision differences"
+  ]
+}

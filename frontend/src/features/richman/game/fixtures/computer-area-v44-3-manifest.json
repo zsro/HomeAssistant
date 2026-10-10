@@ -1,0 +1,159 @@
+{
+  "players": 3,
+  "commands": 824,
+  "turn": 118,
+  "auto": 232,
+  "human": 112,
+  "acquisitions": [
+    {
+      "id": "player-2",
+      "ai": true,
+      "item": "card:09",
+      "turn": 35,
+      "action": "animationDone",
+      "events": [
+        {
+          "type": "g6Notice",
+          "message": "玩家2附身小福神，期限7次自身行动边界。",
+          "sequence": 480,
+          "commandId": "command-263",
+          "playerId": "player-2",
+          "turn": 35
+        },
+        {
+          "type": "g6Notice",
+          "message": "玩家2获得card:09。",
+          "sequence": 481,
+          "commandId": "command-263",
+          "playerId": "player-2",
+          "turn": 35
+        }
+      ]
+    }
+  ],
+  "uses": [
+    {
+      "ai": true,
+      "id": "player-2",
+      "item": "card:09",
+      "target": "japan:land:16",
+      "turn": 116,
+      "phase": "idle",
+      "affected": [
+        "japan:land:16",
+        "japan:land:17",
+        "japan:land:18"
+      ],
+      "changes": [
+        {
+          "before": {
+            "id": "japan:land:16",
+            "ownerId": "player-2",
+            "level": 0,
+            "basePrice": 1950,
+            "buildingType": 0,
+            "priceStatus": 0,
+            "research": null
+          },
+          "after": {
+            "id": "japan:land:16",
+            "ownerId": "player-2",
+            "level": 1,
+            "basePrice": 1950,
+            "buildingType": 0,
+            "priceStatus": 0,
+            "research": null
+          }
+        },
+        {
+          "before": {
+            "id": "japan:land:17",
+            "ownerId": "player-2",
+            "level": 0,
+            "basePrice": 1950,
+            "buildingType": 0,
+            "priceStatus": 0,
+            "research": null
+          },
+          "after": {
+            "id": "japan:land:17",
+            "ownerId": "player-2",
+            "level": 1,
+            "basePrice": 1950,
+            "buildingType": 0,
+            "priceStatus": 0,
+            "research": null
+          }
+        },
+        {
+          "before": {
+            "id": "japan:land:18",
+            "ownerId": "player-2",
+            "level": 0,
+            "basePrice": 1950,
+            "buildingType": 0,
+            "priceStatus": 0,
+            "research": null
+          },
+          "after": {
+            "id": "japan:land:18",
+            "ownerId": "player-2",
+            "level": 1,
+            "basePrice": 1950,
+            "buildingType": 0,
+            "priceStatus": 0,
+            "research": null
+          }
+        }
+      ]
+    }
+  ],
+  "cancellations": [],
+  "prefixes": [
+    "card:09-acquired",
+    "card:09-paused",
+    "card:09-resumed",
+    "card:09-confirm-before",
+    "card:09-confirm-after"
+  ],
+  "report": {
+    "policy": "area-v1",
+    "toolWindows": [
+      "tool:08",
+      "tool:09",
+      "card:14",
+      "card:16",
+      "card:03",
+      "card:09"
+    ],
+    "crossChecks": [],
+    "route": "3",
+    "terminal": false,
+    "players": 3,
+    "normalSpeed": true,
+    "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+    "commands": 824,
+    "auto": 232,
+    "human": 112,
+    "lifecycle": [
+      "pause stops waiting",
+      "resume",
+      "reset dialog cancel",
+      "reset",
+      "replace with humans",
+      "exit cleanup",
+      "fullscreen",
+      "390px"
+    ],
+    "cleanup": {
+      "raf": 0,
+      "canvas": 0
+    },
+    "errors": []
+  },
+  "hashes": {
+    "replay": "1297dce8f0dae935b2b4d8f87eb47b1ffa134b324c5ec82f9b275c49da74115d",
+    "state": "05326c03e66e8fcba79be2cee4311f49259cee93006ad1bb88f01ded39a50459",
+    "events": "668ae924268bd241d90a2d7178f9eb4490bdd539b26cefb4e87a50d692eb9b6d"
+  }
+}

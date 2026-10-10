@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-05",
+  "status": "implemented-awaiting-unified-acceptance",
+  "rulesId": "japan-tools-candidate-v10",
+  "itemFingerprint": "d9e59846",
+  "previousV9Fingerprint": "6be76c90",
+  "implementedThisGroup": 5,
+  "acceptedThisGroup": 0,
+  "implementedTotal": 29,
+  "acceptedTotal": 18,
+  "pendingAcceptance": 11,
+  "unimplemented": 14,
+  "staticTypecheck": {
+    "command": "node frontend/node_modules/typescript/bin/tsc -p frontend/tsconfig.app.json --noEmit --pretty false",
+    "exitCode": 0
+  },
+  "automatedTests": {
+    "executed": false,
+    "reason": "User deferred automated tests until all 43 items implemented"
+  },
+  "browser": {
+    "executed": false,
+    "replay": null,
+    "screenshots": []
+  },
+  "gameplayExecuted": false,
+  "oldReplaysRerun": false,
+  "next": "G5 seven items, new v11; implement first, unified tests later",
+  "limitations": [
+    "candidate turn-based auction and seeded wheel",
+    "global rounds replace original daily clock",
+    "research production and rare-item acquisition deferred to G5/G7",
+    "G1 facility targets not expanded",
+    "special building art not exported"
+  ]
+}

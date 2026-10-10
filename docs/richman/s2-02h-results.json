@@ -1,0 +1,294 @@
+{
+  "date": "2026-10-04",
+  "group": "G1",
+  "rulesId": "japan-tools-candidate-v7",
+  "itemFingerprint": "e2ec2345",
+  "status": "group-accepted-with-documented-candidate-scope",
+  "playableItems": {
+    "previouslyAccepted": 6,
+    "implementedPendingBrowser": 0,
+    "targetAfterG1": 11,
+    "catalog": 43,
+    "groupComplete": true,
+    "stageComplete": false,
+    "acceptedThisGroup": 5,
+    "acceptedTotal": 11,
+    "cards": 7,
+    "tools": 4,
+    "remaining": 32
+  },
+  "frontendTests": {
+    "files": 30,
+    "passed": 223,
+    "newRulesAndUI": 21,
+    "fullRunPassed": 223,
+    "subsequentFocusedTests": 14,
+    "fullRunDate": "2026-10-04"
+  },
+  "lint": "passed",
+  "build": "passed; existing PDF bundling warnings",
+  "browser": {
+    "status": "passed",
+    "date": "2026-10-04",
+    "script": "scripts/richman/g1-ui-browser.cjs",
+    "executedBy": "user terminal; agent inspected local results, replay and all seven screenshots",
+    "baseUrl": "http://localhost:5173",
+    "report": "docs/richman/s2-02h-browser-results.json",
+    "replay": "docs/richman/s2-02h-browser-replay.json",
+    "replaySha256": "9cbfd512e8a14b39cbbaeced9dcc711e62c18080e385c79af99c2307c3b7e5a8",
+    "normalSpeed": true,
+    "players": 2,
+    "lastCardTurn": 55,
+    "commands": 411,
+    "effects": 5,
+    "fullGameToVictory": false,
+    "replayCheck": "Downloaded UI commands replayed through dispatch and replayGame; final state and events equal",
+    "screenshotsReviewed": [
+      {
+        "path": "/private/tmp/richman-s2-02h-ui/card-03-preview.png",
+        "sha256": "565675c1727697ee68052956f63896e36e3da9d7eb195c472593813e668132de"
+      },
+      {
+        "path": "/private/tmp/richman-s2-02h-ui/card-04-preview.png",
+        "sha256": "66ec66ee2b30eba414ae17181c3b995d283ac75193140c339574974bfae5f6ec"
+      },
+      {
+        "path": "/private/tmp/richman-s2-02h-ui/card-05-preview.png",
+        "sha256": "c54844528c47a7d85f2d546751f1c668a4d3e5d43744383570c837ab286e6392"
+      },
+      {
+        "path": "/private/tmp/richman-s2-02h-ui/card-06-preview.png",
+        "sha256": "32163ff73e1cca02cca7e64871f18eb3f12f31619051a3b9517fb5d4eb41011e"
+      },
+      {
+        "path": "/private/tmp/richman-s2-02h-ui/card-12-preview.png",
+        "sha256": "5481318089d933228420f3d8089a4af4e05eb87e553c8615cda38df9a052f4c5"
+      },
+      {
+        "path": "/private/tmp/richman-s2-02h-ui/g1-fullscreen.png",
+        "sha256": "02f15076f5ce14f7f579256289949aacbb7dc96c6acd6c29937f53df6fdccd71"
+      },
+      {
+        "path": "/private/tmp/richman-s2-02h-ui/g1-mobile.png",
+        "sha256": "bfbfb7d12091e0d93405b880e22eb3eddc668a84468c89e6613cff6e0edbeb4f"
+      }
+    ],
+    "visualResult": "Five preview panels readable; fullscreen confirm/cancel/exit visible; 390px layout has no horizontal overflow",
+    "cleanup": {
+      "raf": 0,
+      "canvas": 0
+    },
+    "errors": []
+  },
+  "engineJourney": {
+    "seed": "group-one-13",
+    "turn": 55,
+    "commands": 399,
+    "settlements": [
+      {
+        "type": "g1Resolved",
+        "itemId": "card:06",
+        "option": {
+          "target": {
+            "kind": "player",
+            "id": "player-1"
+          },
+          "title": "玩家 1（你） · 50 号路格",
+          "detail": "原地转身，下次移动按新方向选路。不立刻移动或掷骰。",
+          "changes": [],
+          "turn": {
+            "playerId": "player-1",
+            "candidates": [
+              51
+            ],
+            "direction": 5
+          }
+        },
+        "previous": 51,
+        "sequence": 328,
+        "commandId": "c197",
+        "playerId": "player-1",
+        "turn": 27
+      },
+      {
+        "type": "g1Resolved",
+        "itemId": "card:03",
+        "option": {
+          "target": {
+            "kind": "property",
+            "id": "japan:land:33"
+          },
+          "title": "倉敷 · 脚下地产",
+          "detail": "支付现金 1,500 元，存入玩家 2的银行。归属改为你，建筑保持 0 级；不用存款补足。",
+          "changes": [
+            {
+              "before": {
+                "id": "japan:land:33",
+                "ownerId": "player-2",
+                "level": 0
+              },
+              "after": {
+                "id": "japan:land:33",
+                "ownerId": "player-1",
+                "level": 0
+              }
+            }
+          ],
+          "transfer": {
+            "from": "player-1",
+            "to": "player-2",
+            "amount": 1500
+          }
+        },
+        "sequence": 387,
+        "commandId": "c235",
+        "playerId": "player-1",
+        "turn": 33
+      },
+      {
+        "type": "g1Resolved",
+        "itemId": "card:04",
+        "option": {
+          "target": {
+            "kind": "property",
+            "id": "japan:land:32"
+          },
+          "title": "倉敷 · 42 号路格",
+          "detail": "脚下倉敷：玩家 1 → 待售；目标倉敷：待售 → 玩家 1。楼级和现金不变。",
+          "changes": [
+            {
+              "before": {
+                "id": "japan:land:33",
+                "ownerId": "player-1",
+                "level": 0
+              },
+              "after": {
+                "id": "japan:land:33",
+                "ownerId": null,
+                "level": 0
+              }
+            },
+            {
+              "before": {
+                "id": "japan:land:32",
+                "ownerId": null,
+                "level": 0
+              },
+              "after": {
+                "id": "japan:land:32",
+                "ownerId": "player-1",
+                "level": 0
+              }
+            }
+          ]
+        },
+        "sequence": 392,
+        "commandId": "c237",
+        "playerId": "player-1",
+        "turn": 33
+      },
+      {
+        "type": "g1Resolved",
+        "itemId": "card:12",
+        "option": {
+          "target": {
+            "kind": "property",
+            "id": "japan:land:16"
+          },
+          "title": "名古屋 · 108 号路格",
+          "detail": "待售的建筑：1 → 0 级。归属不变，不支付现金。",
+          "changes": [
+            {
+              "before": {
+                "id": "japan:land:16",
+                "ownerId": null,
+                "level": 1
+              },
+              "after": {
+                "id": "japan:land:16",
+                "ownerId": null,
+                "level": 0
+              }
+            }
+          ]
+        },
+        "sequence": 633,
+        "commandId": "c389",
+        "playerId": "player-2",
+        "turn": 54
+      },
+      {
+        "type": "g1Resolved",
+        "itemId": "card:05",
+        "option": {
+          "target": {
+            "kind": "property",
+            "id": "japan:land:19"
+          },
+          "title": "大阪 · 3 号路格",
+          "detail": "脚下大阪：1 → 0 级；目标大阪：0 → 1 级。产权和现金不变。",
+          "changes": [
+            {
+              "before": {
+                "id": "japan:land:22",
+                "ownerId": "player-1",
+                "level": 1
+              },
+              "after": {
+                "id": "japan:land:22",
+                "ownerId": "player-1",
+                "level": 0
+              }
+            },
+            {
+              "before": {
+                "id": "japan:land:19",
+                "ownerId": null,
+                "level": 0
+              },
+              "after": {
+                "id": "japan:land:19",
+                "ownerId": null,
+                "level": 1
+              }
+            }
+          ]
+        },
+        "sequence": 649,
+        "commandId": "c398",
+        "playerId": "player-1",
+        "turn": 55
+      }
+    ],
+    "isBrowserEvidence": false
+  },
+  "legacyV6": {
+    "fixture": "frontend/src/features/richman/game/fixtures/tools-v6-replay.json",
+    "golden": "frontend/src/features/richman/game/fixtures/tools-v6-golden.json",
+    "stateAndEventsExact": true
+  },
+  "scope": {
+    "ordinaryLandOnly": true,
+    "pixelHitEquivalent": false,
+    "sourceRandEquivalent": false,
+    "v7OriginalMapFullGameToVictory": false,
+    "smallMapVictoryPlayers": [
+      3
+    ],
+    "legacyS1V1V4FullGamePlayers": [
+      2,
+      3,
+      4
+    ],
+    "databaseChange": false,
+    "commitPushDeploy": false
+  },
+  "continuation": {
+    "date": "2026-10-04",
+    "server": "User started http://localhost:5173/; node listener verified",
+    "browserLaunch": "Agent launch blocked by approval service 503; user executed prepared browser script successfully",
+    "scriptUpdate": "RICHMAN_BASE_URL accepts local server address; default remains 127.0.0.1:5174",
+    "browserPassed": true
+  },
+  "nextGroup": "G2: card:14,15,16,17,30; tool:05,06"
+}

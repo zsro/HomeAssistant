@@ -1,0 +1,84 @@
+{
+  "players": 4,
+  "commands": 452,
+  "turn": 61,
+  "phase": "turnEnd",
+  "winner": null,
+  "auto": 88,
+  "human": 94,
+  "dates": 15,
+  "cross": [
+    {
+      "index": 447,
+      "kind": "auction",
+      "actor": "player-3",
+      "active": "player-1",
+      "computer": false
+    },
+    {
+      "index": 450,
+      "kind": "auction",
+      "actor": "player-4",
+      "active": "player-1",
+      "computer": true
+    }
+  ],
+  "reactions": [],
+  "forced": [],
+  "exits": [],
+  "publicAuctions": 0,
+  "negativeChecks": 2,
+  "prefixes": [
+    "paused",
+    "resumed",
+    "computer-first",
+    "human-auction",
+    "computer-auction"
+  ],
+  "report": {
+    "crossChecks": [
+      {
+        "index": 441,
+        "active": "player-1",
+        "actor": "player-3",
+        "kind": "auction",
+        "computer": false
+      },
+      {
+        "index": 442,
+        "active": "player-1",
+        "actor": "player-4",
+        "kind": "auction",
+        "computer": true
+      }
+    ],
+    "route": "auction",
+    "terminal": false,
+    "players": 4,
+    "normalSpeed": true,
+    "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+    "commands": 452,
+    "human": 94,
+    "lifecycle": [
+      "pause stops waiting",
+      "resume",
+      "reset dialog cancel",
+      "reset",
+      "replace with humans",
+      "exit cleanup",
+      "fullscreen",
+      "390px"
+    ],
+    "cleanup": {
+      "raf": 0,
+      "canvas": 0
+    },
+    "errors": [],
+    "scheduledNonMovementSteps": 88
+  },
+  "hashes": {
+    "replay": "00fe00867024759272ccfc3c4d123c31eba7cecda779ec2e1b37386aec8f8c04",
+    "state": "f93457a1dafe5f261106647d6ee170477c4c5d2fc5bc1cc118fb5c98d89c2e1a",
+    "events": "372ade06c319aa7b6189fa47ffbad6964dab4f84ea7d3243e5d293c82cd3c0c5"
+  }
+}

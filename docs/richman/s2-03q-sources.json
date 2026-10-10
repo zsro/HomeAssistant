@@ -1,0 +1,260 @@
+{
+  "referenceCommit": "ec7d70e693059d1e781d9d1cc2ad7f36d360d39e",
+  "verifiedFiles": 10,
+  "grade": "fixed cross-version assembly; no Windows runtime equivalence",
+  "sources": [
+    {
+      "path": "asm/rich4.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4.asm",
+      "gitBlobSha1": "d11a64755094435fa9953652a5a4951871fd9697",
+      "sha256": "30904cbb4f23a6b74fc1b80ad023bd7dff11b441c2c1978f768f9891d099d64a"
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_core_actions.asm",
+      "gitBlobSha1": "ebfde6c820e8a430b856d9816a926b636e0db1dc",
+      "sha256": "2874c1a3e0ca1d0da5afe4cb93e42cf2d6f6fa864dbee11d7bcaa028af07d94a"
+    },
+    {
+      "path": "asm/rich4_new_game.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_new_game.asm",
+      "gitBlobSha1": "55015c738593cf08c2bf97b6298324be4b9bec00",
+      "sha256": "0abb3c6ee86e22c768480573e365dcefb692f69ffa701d5ff027cf4d1b2bf86a"
+    },
+    {
+      "path": "asm/rich4_hospital_utils.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_hospital_utils.asm",
+      "gitBlobSha1": "a6442121b32fc0380f3a20909590236f8e7dca5e",
+      "sha256": "ba23adbaa7ccc396f3b99d8854285ee222aea8c1b81bcfc0637e72a6e56c145a"
+    },
+    {
+      "path": "asm/rich4_prison_utils.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_prison_utils.asm",
+      "gitBlobSha1": "96762e540959c05618816670fe7535e3ab495c97",
+      "sha256": "26984458a39e9fc06941772cc9b34931b32d85f561d08a4bddb88d450863abbc"
+    },
+    {
+      "path": "asm/rich4_player_utils.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_utils.asm",
+      "gitBlobSha1": "4bdaafa1f87f9fcd5f71dcf50f1aebd7e795d6be",
+      "sha256": "17479913576a004458908f124c4d7e94361dab41a501830d2ecb87eb7b438f01"
+    },
+    {
+      "path": "asm/rich4_ui_sale.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_ui_sale.asm",
+      "gitBlobSha1": "7596930dc640d065963e1228446165ab27445822",
+      "sha256": "750b782654839143d9b9a0ae53fa1a3a037e51982ea03ae28a1b35a6603dfbde"
+    },
+    {
+      "path": "asm/rich4_update_price_index.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_update_price_index.asm",
+      "gitBlobSha1": "7152da616b486af26e1abce5e4bd28758ee7177c",
+      "sha256": "ccd93c2ec02570320e33c29c15631287cc6281c809e5e57516765fa43b15ecb8"
+    },
+    {
+      "path": "asm/rich4_calculate_player_wealth.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_calculate_player_wealth.asm",
+      "gitBlobSha1": "9b142d3a8173c4f7c850cd0786b60d58564f1893",
+      "sha256": "95b68c2bf328121bcb981311a2e1ad226283c0c2a1015386397fa9df5281241c"
+    },
+    {
+      "path": "asm/rich4_date_utils.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_date_utils.asm",
+      "gitBlobSha1": "998c3796db062d05ce3703f13d0e4a9245f30b33",
+      "sha256": "4a2a4cd0ac80010a577739fd870d7735a878d8a94eb218ab5f7be6496935952f"
+    }
+  ],
+  "table": {
+    "address": "47ff4a+Japan(stage0,map2)*288;24x12 bytes;flags offset5",
+    "rows": [
+      {
+        "slot": 0,
+        "month": 1,
+        "day": 1,
+        "flags": 3
+      },
+      {
+        "slot": 1,
+        "month": 1,
+        "day": 2,
+        "flags": 0
+      },
+      {
+        "slot": 2,
+        "month": 1,
+        "day": 3,
+        "flags": 0
+      },
+      {
+        "slot": 3,
+        "month": 1,
+        "day": 15,
+        "flags": 0
+      },
+      {
+        "slot": 4,
+        "month": 2,
+        "day": 3,
+        "flags": 0
+      },
+      {
+        "slot": 5,
+        "month": 2,
+        "day": 14,
+        "flags": 0
+      },
+      {
+        "slot": 6,
+        "month": 2,
+        "day": 11,
+        "flags": 0
+      },
+      {
+        "slot": 7,
+        "month": 3,
+        "day": 3,
+        "flags": 0
+      },
+      {
+        "slot": 8,
+        "month": 3,
+        "day": 22,
+        "flags": 0
+      },
+      {
+        "slot": 9,
+        "month": 4,
+        "day": 29,
+        "flags": 0
+      },
+      {
+        "slot": 10,
+        "month": 5,
+        "day": 3,
+        "flags": 0
+      },
+      {
+        "slot": 11,
+        "month": 5,
+        "day": 5,
+        "flags": 0
+      },
+      {
+        "slot": 12,
+        "month": 9,
+        "day": 15,
+        "flags": 0
+      },
+      {
+        "slot": 13,
+        "month": 9,
+        "day": 23,
+        "flags": 0
+      },
+      {
+        "slot": 14,
+        "month": 10,
+        "day": 10,
+        "flags": 0
+      },
+      {
+        "slot": 15,
+        "month": 11,
+        "day": 3,
+        "flags": 0
+      },
+      {
+        "slot": 16,
+        "month": 11,
+        "day": 23,
+        "flags": 0
+      },
+      {
+        "slot": 17,
+        "month": 12,
+        "day": 23,
+        "flags": 0
+      },
+      {
+        "slot": 18,
+        "month": 12,
+        "day": 25,
+        "flags": 15
+      },
+      {
+        "slot": 19,
+        "month": 0,
+        "day": 0,
+        "flags": 0
+      },
+      {
+        "slot": 20,
+        "month": 0,
+        "day": 0,
+        "flags": 0
+      },
+      {
+        "slot": 21,
+        "month": 0,
+        "day": 0,
+        "flags": 0
+      },
+      {
+        "slot": 22,
+        "month": 0,
+        "day": 0,
+        "flags": 0
+      },
+      {
+        "slot": 23,
+        "month": 0,
+        "day": 0,
+        "flags": 0
+      }
+    ]
+  },
+  "rules": {
+    "R09-01q": {
+      "address": "41cf67..41d1a5;452117;452444..452788",
+      "evidence": "date advance -> day limit victory -> daily price -> market/flags -> holiday -> day15 dividends then lottery -> day1 interest/special objects -> expiry; incoming own action separate"
+    },
+    "R09-02q": {
+      "address": "47ff4a+576;452612..45275b",
+      "evidence": "Japan Jan1 flags3 presentation only; Dec25 flags15 includes bit8 card gift; only alive player+21 checked, seat order, shared receive_random_card, no cash reward; bit4 special-character/presentation deferred"
+    },
+    "R09-03q": {
+      "address": "452117;452444;41cf67",
+      "evidence": "year is incremented by month wrap; no independent birthday comparison or yearly cash reward found in inspected date chain; absence is scoped, not proof across all executable"
+    },
+    "R05-01q": {
+      "address": "423acf..423b20;new_game4201",
+      "evidence": "index starts1; signed32 sum of alive wealth, trunc average then divide initial funds, retain maximum; no random or year reset"
+    },
+    "R05-02q": {
+      "address": "4239b9..423ac4",
+      "evidence": "cash+bank-loan;12 float32 stock prices with float32 running subtotal and truncate per stock; dynamic raw land price plus ordinary floor cost or special-land one cost; facility base+level*cost; company funds/inventory not direct assets"
+    },
+    "R13-01q": {
+      "address": "41ac3c;41ac8c->41abde;41adb9..41ae1a;41ac2c",
+      "evidence": "visitor insurance base*wheel*index; Toyota vehicle*dice*base*index; Nissan selected base or cancel1000*index; SEGA base*elapsedDays no index; onsite capital/10000 not indexed"
+    },
+    "R13-02q": {
+      "address": "43ec3f..43ee0f;43d590..43d760;40d375..40d4c5;41a805",
+      "evidence": "hospital/prison/first travel/hotel duration2000*priceIndex; negative fortune payouts reimburse actual due, not a second multiplier"
+    },
+    "R09-05q": {
+      "address": "428475..4284bb (ui_sale)",
+      "evidence": "daily after price, before market: alive seats, seven 12-byte sale-record slots; nonzero entry increments byte+1; no direct reward. Full sale records/aging remain deferred with original disposal system"
+    },
+    "R09-04q": {
+      "address": "Web v30 integration",
+      "evidence": "calendar business state participates existing G7 checkpoint; v29 old fingerprints remain; property/news/fortune/item other indexed consumers explicitly deferred"
+    }
+  },
+  "deferred": [
+    "special-character Christmas branch, original media/music/timed effects",
+    "birthday/annual cash rewards not evidenced in inspected chain",
+    "other price-index consumers: general property purchase/build/rent, news/fortune/card/god/magic-house amounts need caller-by-caller audit",
+    "original forced bankruptcy auctions; Windows runtime comparison"
+  ]
+}

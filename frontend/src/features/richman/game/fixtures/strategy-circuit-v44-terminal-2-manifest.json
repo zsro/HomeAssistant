@@ -1,0 +1,95 @@
+{
+  "trades": [],
+  "restores": [],
+  "productions": [],
+  "observations": [],
+  "memory": {},
+  "players": 2,
+  "commands": 1448,
+  "turn": 196,
+  "phase": "finished",
+  "winner": "player-1",
+  "auto": 287,
+  "human": 277,
+  "dates": 97,
+  "cross": [],
+  "reactions": [],
+  "forced": [],
+  "exits": [
+    {
+      "continuation": "payment",
+      "id": "disposal-1",
+      "payerId": "player-2",
+      "recipientId": "public",
+      "propertyId": "fortune:19",
+      "due": 3000,
+      "amount": 582,
+      "unpaid": 2418,
+      "paid": {
+        "cash": 0,
+        "bank": 582
+      },
+      "released": [],
+      "pool": [],
+      "draws": [],
+      "stocks": [],
+      "inventory": [],
+      "ignoredPoints": 0,
+      "auctions": [],
+      "finishedGame": true
+    }
+  ],
+  "publicAuctions": 0,
+  "negativeChecks": 0,
+  "prefixes": [
+    "paused",
+    "resumed",
+    "computer-first",
+    "date-before",
+    "date-after",
+    "exit-start-player-2",
+    "exit-return-player-2",
+    "paymentCompleted-fortune",
+    "before-terminal"
+  ],
+  "report": {
+    "researchWindows": [],
+    "robotPreviews": [],
+    "policy": "research-v1",
+    "toolWindows": [
+      "tool:08",
+      "card:23",
+      "card:17",
+      "card:30"
+    ],
+    "crossChecks": [],
+    "route": "terminal-2",
+    "terminal": true,
+    "players": 2,
+    "normalSpeed": true,
+    "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+    "commands": 1448,
+    "auto": 287,
+    "human": 277,
+    "lifecycle": [
+      "pause stops waiting",
+      "resume",
+      "reset dialog cancel",
+      "reset",
+      "replace with humans",
+      "exit cleanup",
+      "fullscreen",
+      "390px"
+    ],
+    "cleanup": {
+      "raf": 0,
+      "canvas": 0
+    },
+    "errors": []
+  },
+  "hashes": {
+    "replay": "16bafb5ad998abd21ecdf1b6f17dbc72f6a4514a022489b7e7473432a3683cee",
+    "state": "e29f6f0dbf8cfa6efd2ae4a4d5e771d3acec5812d0bbbbf573e6ffd7c8ea93d2",
+    "events": "316e70d77c2d3b8cc8c32f3f708a8d635d4cdf07a42da0cb4da5f843e87f8409"
+  }
+}

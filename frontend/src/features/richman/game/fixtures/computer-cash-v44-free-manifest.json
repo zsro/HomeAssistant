@@ -1,0 +1,149 @@
+{
+  "players": 3,
+  "commands": 1386,
+  "turn": 197,
+  "auto": 184,
+  "human": 360,
+  "acquisitions": [
+    {
+      "id": "player-1",
+      "ai": false,
+      "item": "card:26",
+      "turn": 193,
+      "action": "buyItem",
+      "evidence": [
+        {
+          "item": "card:26",
+          "cost": 35
+        }
+      ]
+    }
+  ],
+  "uses": [
+    {
+      "ai": true,
+      "id": "player-3",
+      "item": "card:26",
+      "turn": 196,
+      "gain": 0,
+      "discarded": 0,
+      "receipt": {
+        "type": "taxSettled",
+        "sourceId": "player-1",
+        "payerId": "player-3",
+        "amount": 0,
+        "waived": true,
+        "sequence": 2643,
+        "commandId": "command-1378",
+        "playerId": "player-1",
+        "turn": 196
+      },
+      "before": {
+        "player-1": {
+          "cash": 2600,
+          "bank": 73267
+        },
+        "player-2": {
+          "cash": 0,
+          "bank": 75378
+        },
+        "player-3": {
+          "cash": 3700,
+          "bank": 73644
+        }
+      },
+      "after": {
+        "player-1": {
+          "cash": 2600,
+          "bank": 73267
+        },
+        "player-2": {
+          "cash": 0,
+          "bank": 75378
+        },
+        "player-3": {
+          "cash": 3700,
+          "bank": 73644
+        }
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "ai": true,
+      "id": "player-3",
+      "active": "player-1",
+      "stage": "free",
+      "choice": "use",
+      "turn": 196
+    }
+  ],
+  "cancellations": [
+    {
+      "ai": false,
+      "id": "player-1",
+      "item": "card:26",
+      "turn": 196
+    }
+  ],
+  "prefixes": [
+    "card:26-acquired",
+    "cancel-before",
+    "cancel-after",
+    "card:26-confirm-before",
+    "card:26-confirm-after",
+    "tax-free-paused",
+    "tax-free-resumed",
+    "tax-free-before",
+    "tax-free-after",
+    "tax-settled-before",
+    "tax-settled-after"
+  ],
+  "report": {
+    "policy": "cash-v1",
+    "toolWindows": [
+      "tool:08",
+      "tool:09",
+      "card:04"
+    ],
+    "crossChecks": [
+      {
+        "index": 1357,
+        "active": "player-1",
+        "actor": "player-3",
+        "kind": "reaction",
+        "computer": true,
+        "item": "card:26",
+        "stage": "free"
+      }
+    ],
+    "route": "free",
+    "terminal": false,
+    "players": 3,
+    "normalSpeed": true,
+    "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+    "commands": 1386,
+    "auto": 184,
+    "human": 360,
+    "lifecycle": [
+      "pause stops waiting",
+      "resume",
+      "reset dialog cancel",
+      "reset",
+      "replace with humans",
+      "exit cleanup",
+      "fullscreen",
+      "390px"
+    ],
+    "cleanup": {
+      "raf": 0,
+      "canvas": 0
+    },
+    "errors": []
+  },
+  "hashes": {
+    "replay": "bf1fd78b39018a186f8f8cecfb2105795714ff7520989aacd64191fbfad0f8c0",
+    "state": "4c070d4bf0bfde5e7bfa786bd98a3631b69af5117ba787c244f8bbc299b1ec60",
+    "events": "5ef0c219ff03e19fed612c24f1aa8cc8112f1b441109ee32a2dee1541d4fd7ce"
+  }
+}

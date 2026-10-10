@@ -1,0 +1,151 @@
+{
+  "kind": "dividend",
+  "players": 4,
+  "commands": 2724,
+  "turn": 181,
+  "date": "1998-02-15",
+  "rentSettled": 0,
+  "bankruptcies": 1,
+  "auctionPaid": 2700,
+  "stockPublic": 15,
+  "loanActual": 0,
+  "dividendActual": 0,
+  "lotteries": 2,
+  "prizes": 6815,
+  "forced": [],
+  "notices": [],
+  "receipts": [
+    {
+      "payment": {
+        "kind": "batch",
+        "stage": "completed",
+        "batchId": 4,
+        "rowIndex": 0,
+        "payerId": "player-1",
+        "due": 10000,
+        "destination": "sink",
+        "paid": {
+          "cash": 0,
+          "bank": 0
+        },
+        "disposalId": "disposal-1"
+      },
+      "disposal": {
+        "continuation": "payment",
+        "id": "disposal-1",
+        "payerId": "player-1",
+        "recipientId": "sink",
+        "propertyId": "batch:4:0",
+        "due": 10000,
+        "amount": 0,
+        "unpaid": 10000,
+        "paid": {
+          "cash": 0,
+          "bank": 0
+        },
+        "released": [
+          "japan:land:3",
+          "japan:land:6",
+          "japan:land:9",
+          "japan:land:16",
+          "japan:land:19",
+          "japan:land:24",
+          "japan:land:28",
+          "japan:land:46"
+        ],
+        "pool": [
+          null,
+          "japan:land:6",
+          "japan:land:9",
+          "japan:land:16",
+          null,
+          "japan:land:24",
+          null,
+          "japan:land:46"
+        ],
+        "draws": [
+          4,
+          6,
+          0
+        ],
+        "stocks": [
+          {
+            "stockId": "jp:26",
+            "quantity": 1,
+            "price": 1555,
+            "amount": 15
+          }
+        ],
+        "inventory": [
+          {
+            "itemId": "tool:09",
+            "quantity": 1,
+            "points": 30
+          },
+          {
+            "itemId": "tool:01",
+            "quantity": 1,
+            "points": 15
+          },
+          {
+            "itemId": "tool:02",
+            "quantity": 1,
+            "points": 30
+          },
+          {
+            "itemId": "card:05",
+            "quantity": 1,
+            "points": 20
+          },
+          {
+            "itemId": "card:30",
+            "quantity": 1,
+            "points": 70
+          }
+        ],
+        "ignoredPoints": 165,
+        "auctions": [
+          {
+            "propertyId": "japan:land:19",
+            "winnerId": "player-4",
+            "amount": 2100,
+            "reserve": 2000
+          },
+          {
+            "propertyId": "japan:land:28",
+            "winnerId": null,
+            "amount": 0,
+            "reserve": 1500
+          },
+          {
+            "propertyId": "japan:land:3",
+            "winnerId": "player-4",
+            "amount": 600,
+            "reserve": 500
+          }
+        ],
+        "finishedGame": false
+      }
+    }
+  ],
+  "prefixes": [
+    "exit-start",
+    "auction-wait",
+    "payment-return"
+  ],
+  "report": {
+    "normalSpeed": true,
+    "map": "original Japan; real UI commands; auth-only fixture; no game-state injection",
+    "calendarCommon": true,
+    "errors": [],
+    "cleanup": {
+      "raf": 0,
+      "canvas": 0
+    }
+  },
+  "hashes": {
+    "replay": "635f1dced248aeb6e70296c15af97402274233006605cb4f12272129ec47ff81",
+    "state": "68447fd366d1c1813820bd63c6c782b57bd3d6918e8e86f007a237d18b4d214e",
+    "events": "781fb8862951198924ed60f3b88161ac67a58196b5785f62df35dcefc8266263"
+  }
+}

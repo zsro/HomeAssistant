@@ -1,0 +1,115 @@
+{
+  "stage": "S3-04d-targeted",
+  "route": "research-focused",
+  "rulesId": "japan-events-candidate-v47",
+  "normalSpeed": true,
+  "originalJapan": true,
+  "authFixtureOnly": true,
+  "stateInjection": false,
+  "commands": 2432,
+  "businessCommands": 2424,
+  "fullReplay": true,
+  "prefixReplays": 4,
+  "spriteInstanceChecks": [
+    {
+      "index": 0,
+      "actual": [
+        "god-1",
+        "god-2",
+        "god-3",
+        "god-4",
+        "god-5",
+        "god-6",
+        "god-7",
+        "god-8"
+      ],
+      "expected": [
+        "god-1",
+        "god-2",
+        "god-3",
+        "god-4",
+        "god-5",
+        "god-6",
+        "god-7",
+        "god-8"
+      ]
+    },
+    {
+      "index": 2264,
+      "actual": [
+        "god-13",
+        "god-16",
+        "god-18",
+        "god-19",
+        "god-21",
+        "god-24",
+        "god-25",
+        "god-26"
+      ],
+      "expected": [
+        "god-13",
+        "god-16",
+        "god-18",
+        "god-19",
+        "god-21",
+        "god-24",
+        "god-25",
+        "god-26"
+      ]
+    },
+    {
+      "index": 2283,
+      "actual": [
+        "god-13",
+        "god-16",
+        "god-18",
+        "god-19",
+        "god-21",
+        "god-24",
+        "god-25",
+        "god-26"
+      ],
+      "expected": [
+        "god-13",
+        "god-16",
+        "god-18",
+        "god-19",
+        "god-21",
+        "god-24",
+        "god-25",
+        "god-26"
+      ]
+    },
+    {
+      "index": 2284,
+      "actual": [
+        "god-13",
+        "god-16",
+        "god-18",
+        "god-19",
+        "god-21",
+        "god-24",
+        "god-25",
+        "god-26"
+      ],
+      "expected": [
+        "god-13",
+        "god-16",
+        "god-18",
+        "god-19",
+        "god-21",
+        "god-24",
+        "god-25",
+        "god-26"
+      ]
+    }
+  ],
+  "browserPageErrors": [],
+  "cleanup": {
+    "raf": 0,
+    "canvas": 0
+  },
+  "mediaPortsReleasedAfterExit": true,
+  "replaySHA256": "49c329461cc7e9e037e7557461cda145b86a0568dcd1c0e97caac7915301fbc8",
+  "limitation": "visible sprite set unchanged across G7; no changed-set destruction assertion or exact-boundary audio-port snapshot"
+}

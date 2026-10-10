@@ -1,0 +1,250 @@
+{
+  "stage": "S2-03s",
+  "referenceCommit": "ec7d70e693059d1e781d9d1cc2ad7f36d360d39e",
+  "grade": "fixed cross-version source, no original Windows runtime comparison",
+  "sources": [
+    {
+      "path": "asm/rich4_ui_sale.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_ui_sale.asm",
+      "gitBlobSha1": "7596930dc640d065963e1228446165ab27445822",
+      "sha256": "750b782654839143d9b9a0ae53fa1a3a037e51982ea03ae28a1b35a6603dfbde"
+    },
+    {
+      "path": "asm/rich4_ui_auction.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_ui_auction.asm",
+      "gitBlobSha1": "7be2a9569b1f5158fe0d393696e11d8a0018a1bf",
+      "sha256": "771ecbbbb5830bee2b5dbc8966e068329525e6f7f090705344f49725a33b816e"
+    },
+    {
+      "path": "asm/rich4_card_paimaika.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_card_paimaika.asm",
+      "gitBlobSha1": "40c71a8005a39436a993ac1e93e69c23b7a42fb2",
+      "sha256": "b06cbb65c5bb88d3211bf095ce9fb7315a976809d670cf2f71a6cd1f8a7227ef"
+    },
+    {
+      "path": "asm/rich4_player_bankrupt.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_bankrupt.asm",
+      "gitBlobSha1": "7d89fe867d86a4b9fc230602da8bc084725310c6",
+      "sha256": "57c69d347bef382e0045b00855c17293e5cb737ed22359340894ed9b9cf8bf02"
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_core_actions.asm",
+      "gitBlobSha1": "ebfde6c820e8a430b856d9816a926b636e0db1dc",
+      "sha256": "2874c1a3e0ca1d0da5afe4cb93e42cf2d6f6fa864dbee11d7bcaa028af07d94a"
+    },
+    {
+      "path": "asm/rich4_news.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_news.asm",
+      "gitBlobSha1": "31601ae8258b6f9074c348ae17d52295c5f94b8e",
+      "sha256": "a2172acdbbfe52fbc57672e40a8f0d669b3c8fb6cabb1f3d5d7dd8e72ebc458a"
+    },
+    {
+      "path": "asm/rich4_card_tingliuka.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_card_tingliuka.asm",
+      "gitBlobSha1": "ad251401bdb7df9e3bf4cab01dd31bcbb262db56",
+      "sha256": "d372f58a77abe7b5c52caf9889cbbe5dbf8fa1918bbcd80045aed1211d80dc2d"
+    },
+    {
+      "path": "asm/rich4.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4.asm",
+      "gitBlobSha1": "d11a64755094435fa9953652a5a4951871fd9697",
+      "sha256": "30904cbb4f23a6b74fc1b80ad023bd7dff11b441c2c1978f768f9891d099d64a"
+    }
+  ],
+  "verifiedFiles": 8,
+  "references": [
+    {
+      "path": "asm/rich4_ui_sale.asm",
+      "needle": "fcn_004246c5:",
+      "lines": [
+        306
+      ]
+    },
+    {
+      "path": "asm/rich4_ui_sale.asm",
+      "needle": "cmp edx, 7",
+      "lines": [
+        318,
+        5315
+      ]
+    },
+    {
+      "path": "asm/rich4_ui_sale.asm",
+      "needle": "imul ebx, edi, 0x54",
+      "lines": [
+        322,
+        341
+      ]
+    },
+    {
+      "path": "asm/rich4_ui_sale.asm",
+      "needle": "fcn_004247d5:",
+      "lines": [
+        409
+      ]
+    },
+    {
+      "path": "asm/rich4_ui_sale.asm",
+      "needle": "fcn_0042483e:",
+      "lines": [
+        451
+      ]
+    },
+    {
+      "path": "asm/rich4_ui_sale.asm",
+      "needle": "fcn_004255da:",
+      "lines": [
+        1691
+      ]
+    },
+    {
+      "path": "asm/rich4_ui_sale.asm",
+      "needle": "loc_00426569:",
+      "lines": [
+        2881
+      ]
+    },
+    {
+      "path": "asm/rich4_ui_sale.asm",
+      "needle": "loc_004265f5:",
+      "lines": [
+        2923
+      ]
+    },
+    {
+      "path": "asm/rich4_ui_sale.asm",
+      "needle": "fcn_00428475:",
+      "lines": [
+        5299
+      ]
+    },
+    {
+      "path": "asm/rich4_ui_auction.asm",
+      "needle": "_rich4_ui_auction_entry:",
+      "lines": [
+        2458
+      ]
+    },
+    {
+      "path": "asm/rich4_ui_auction.asm",
+      "needle": "loc_0043c110:",
+      "lines": [
+        2696
+      ]
+    },
+    {
+      "path": "asm/rich4_ui_auction.asm",
+      "needle": "loc_0043c22a:",
+      "lines": [
+        2771
+      ]
+    },
+    {
+      "path": "asm/rich4_ui_auction.asm",
+      "needle": "loc_0043c83b:",
+      "lines": [
+        3246
+      ]
+    },
+    {
+      "path": "asm/rich4_ui_auction.asm",
+      "needle": "ref_004650b0:",
+      "lines": [
+        3588
+      ]
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "needle": "fcn_0041d2c6:",
+      "lines": [
+        5058
+      ]
+    },
+    {
+      "path": "asm/rich4_player_bankrupt.asm",
+      "needle": "loc_0040d089:",
+      "lines": [
+        308
+      ]
+    },
+    {
+      "path": "asm/rich4_player_bankrupt.asm",
+      "needle": "loc_0040d1c6:",
+      "lines": [
+        438
+      ]
+    },
+    {
+      "path": "asm/rich4.asm",
+      "needle": "fcn_00453544:",
+      "lines": [
+        27476
+      ]
+    },
+    {
+      "path": "asm/rich4.asm",
+      "needle": "loc_004531c4:",
+      "lines": [
+        27200
+      ]
+    }
+  ],
+  "arithmetic": {
+    "auctionHalfConstant": "3f000000=0.5",
+    "example": {
+      "rawBase": 501,
+      "level": 3,
+      "index": 3,
+      "reserve": 3756
+    },
+    "saleRows": 7,
+    "rowBytes": 12,
+    "playerBytes": 84
+  },
+  "rules": {
+    "R04-01s": {
+      "evidence": "sale426569..4265f5 uses raw base+level*cost then price index, both land and facility; times10 passed to453544 numeric input;4531c4 clamps input to argument; zero returns without inserting",
+      "implemented": "reference quote and 1..10quote integer listing price; no asset escrow"
+    },
+    "R04-02s": {
+      "evidence": "4246c5 seven12byte rows/player84bytes, first empty or same type/id; age reset0; property snapshots owner validation, type and level;4247d5 compact deletion;42483e validation on sale entry",
+      "implemented": "property-only seven slots; replace in place with new Web ID; cancel/delete compacts; Web eagerly prunes after accepted mutation; raw value/index changes keep fixed listing price"
+    },
+    "R05-01s": {
+      "evidence": "4255da buyer cash >= record price;42577d owner transfer;4258ac calls41d2c6(flags0,seller,buyer); recipient default bank. Equal cash accepted; no bank affordability. Actual sum paid, never quote/index recompute",
+      "implemented": "cash buyer to seller bank, building retained; receipt before/after; no stock liquidation for optional purchase; existing research ownership cleanup; no extra insurance or god multiplier"
+    },
+    "R04-03s": {
+      "evidence": "43bde5 ordinary/facility rawbase*(1+level*0.5), f32 intermediate, trunc then index;43c110 alive,cash>reserve; excludes bytes50..55 and source. Tingliuka writes byte56; therefore stop alone is NOT auction exclusion",
+      "implemented": "v32 indexed reserve; public stop gate corrected only in v32; source not prior owner excluded; existing Web hotseat fixed increments retained"
+    },
+    "R05-02s": {
+      "evidence": "43c83b winning bid through41d2c6 flags0; paimaika passes current player, public news passes-1; no winner returns0 and card releases owner; building level remains",
+      "implemented": "winner cash to source bank even when source is not original owner; public winner cash to public fund; no-bid unown, zero payment"
+    },
+    "R05-03s": {
+      "evidence": "41d2c6 flags0 cash then bank; insufficiency reduces actual payment then calls bankruptcy before crediting recipient;40cd87 sets alive0 first, later40d089 releases assets;40d1c6 only if owned count>3 randomly auctions exactly3 with source-1",
+      "implemented": "audit boundary only for full insolvency; keep existing Web debt/stock rescue/exit; do not claim sell-land-to-rescue or original forced auction implemented; v32 exited seller listings cleared"
+    },
+    "R13-01s": {
+      "evidence": "428475 increments nonempty listing age byte for alive players; daily caller after price before market; byte wrap, no expiry here",
+      "implemented": "daily age0..255 wrap; records remain until purchase/cancel/invalidation; G7 restores finance sales world"
+    },
+    "R13-02s": {
+      "evidence": "Web newsEligible audit: operating6/7/12 and status0/1/2/3/16/17 branches stopped at v21; original36 dispatcher unchanged from earlier source audit",
+      "implemented": "v32 restores the nine existing eligibility gates, domains compare v31 skipped vs v32 eligible; old versions frozen; browser actually triggers7 only in this group"
+    },
+    "R05-04s": {
+      "evidence": "Web versioning/integration",
+      "implemented": "v32 new mode/fingerprint; before-roll action gate; revision/actor/paused checks; old versions and golden replays frozen; safe integer receipts; no stock/tool/card listings or AI"
+    }
+  },
+  "deferred": [
+    "full original insolvency: endgame branch, disposal of stock/tool/card assets and forced random3 auctions when property count>3",
+    "stock/tool/card sale categories and original AI repricing",
+    "original auction timed UI and bid increments",
+    "special actors, original wheel/magic house",
+    "int32/float32 huge money overflow beyond Web safe integer model"
+  ]
+}

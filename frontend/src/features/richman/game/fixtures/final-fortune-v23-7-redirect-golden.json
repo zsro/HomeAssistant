@@ -1,0 +1,12 @@
+{
+  "route": "7-redirect",
+  "seed": "final-group-46",
+  "commands": 256,
+  "turn": 41,
+  "players": 3,
+  "state": "bb05649c07231d8ec0c57f2b51786941307f14159aab88acd9a148e848138f94",
+  "events": "0d79457feb11bde4b2fc4d4ac5351c8e7043a41d13bd7b7a8a928cf4d59fca59",
+  "fortune": [
+    7
+  ]
+}

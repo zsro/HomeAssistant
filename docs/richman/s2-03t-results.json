@@ -1,0 +1,201 @@
+{
+  "stage": "S2-03t",
+  "date": "2026-10-06",
+  "status": "rent-bankruptcy-disposal-candidate-subset-accepted",
+  "mode": "disposal",
+  "rulesId": "japan-events-candidate-v33",
+  "fingerprint": "f7c64cc7",
+  "scope": "Rent settleDebt only, including redirected actual payer; non-rent insolvency continuations remain legacy.",
+  "baseline": {
+    "items": "43/43 historical",
+    "news": "36/36 historical; v32 gate corrections inherited",
+    "japanFortune": "37/37 historical",
+    "oldRules": "v1-v32 fingerprints and golden replays frozen"
+  },
+  "checks": {
+    "tests": 1200,
+    "testFiles": 86,
+    "newDomainTests": 23,
+    "newPanelTests": 3,
+    "newMatrixTests": 3,
+    "newActualBrowserReplayTests": 1,
+    "versionPlayersMatrix": 99,
+    "lint": "passed",
+    "build": "passed; existing mixed import/chunk-size warnings",
+    "diffCheck": "passed",
+    "sourceFiles": 8,
+    "sourceEntryAnchors": 26
+  },
+  "browser": {
+    "routes": [
+      {
+        "route": "3",
+        "seed": "disposal-2",
+        "players": 3,
+        "commands": 811,
+        "turn": 127,
+        "endDate": "1998-02-12",
+        "state": "98504fdd4b61ae16631c4b1240b287aaee88eb4588aa305548d981270a234a84",
+        "events": "7efa9117d8260b82342e1da7f5e9a47d8efed1640758b3291d24396f5e0f1deb",
+        "checks": [
+          "exit first; frozen actual liquid payment; no debtor rescue",
+          "released original estates retain buildings; stocks public; bag no point credit; lottery/listing cleanup",
+          "forced auction indexed reserve and survivor-only participants",
+          "auction sequence freezes active turn and calendar",
+          "forced auction actual cash to public only",
+          "three distinct lots; deferred creditor actual receipt; original turn resumes"
+        ],
+        "receipt": {
+          "id": "disposal-1",
+          "payerId": "player-1",
+          "recipientId": "player-3",
+          "propertyId": "japan:land:32",
+          "due": 300,
+          "amount": 0,
+          "unpaid": 300,
+          "paid": {
+            "cash": 0,
+            "bank": 0
+          },
+          "released": [
+            "japan:land:4",
+            "japan:land:14",
+            "japan:land:22",
+            "japan:land:24",
+            "japan:land:25"
+          ],
+          "pool": [
+            null,
+            null,
+            "japan:land:22",
+            "japan:land:24",
+            null
+          ],
+          "draws": [
+            0,
+            1,
+            4
+          ],
+          "stocks": [],
+          "inventory": [
+            {
+              "itemId": "tool:09",
+              "quantity": 1,
+              "points": 30
+            },
+            {
+              "itemId": "tool:01",
+              "quantity": 1,
+              "points": 15
+            },
+            {
+              "itemId": "tool:02",
+              "quantity": 1,
+              "points": 30
+            },
+            {
+              "itemId": "card:09",
+              "quantity": 1,
+              "points": 160
+            }
+          ],
+          "ignoredPoints": 235,
+          "auctions": [
+            {
+              "propertyId": "japan:land:4",
+              "winnerId": "player-2",
+              "amount": 900,
+              "reserve": 800
+            },
+            {
+              "propertyId": "japan:land:14",
+              "winnerId": "player-2",
+              "amount": 2600,
+              "reserve": 2500
+            },
+            {
+              "propertyId": "japan:land:25",
+              "winnerId": "player-3",
+              "amount": 1600,
+              "reserve": 1500
+            }
+          ],
+          "finishedGame": false
+        }
+      }
+    ],
+    "map": "original Japan; real UI commands; auth-only fixture; no game-state injection",
+    "normalSpeed": true,
+    "planCommands": 781,
+    "actualCommands": 811,
+    "publicAuctionReceipts": 5100,
+    "creditorReceipt": 0,
+    "ignoredInventoryPoints": 235,
+    "coverage": "Three human players, continuing game, five released ordinary estates, three cash sales, index=1, zero frozen creditor payment. No residual stocks in this route.",
+    "controls": [
+      "bank withdrawal and legal estate listing purchase",
+      "purchase cancel",
+      "pause/reset cancel",
+      "pause blocks each forced auction",
+      "fullscreen",
+      "390px no overflow; screenshots inspected",
+      "reset receipt/inventory",
+      "unmount cleanup"
+    ],
+    "cleanup": {
+      "raf": 0,
+      "canvas": 0
+    },
+    "errors": [],
+    "localArtifacts": "/private/tmp/richman-unified-ui-03t/",
+    "replay": "frontend/src/features/richman/game/fixtures/disposal-v33-3-replay.json",
+    "finalRevisionCheck": "Long replay hashes and independent oracle verified after final no-eligible auto-settlement and UI text changes; no-eligible branch has domain coverage only.",
+    "finalUiSmoke": {
+      "commands": 18,
+      "turn": 1,
+      "checks": [
+        "current v33 shared estate/calendar scope text",
+        "normal first-turn original-map commands",
+        "exact replay",
+        "reset and cleanup"
+      ],
+      "cleanup": {
+        "raf": 0,
+        "canvas": 0
+      },
+      "errors": [],
+      "isLongDisposalAcceptance": false
+    }
+  },
+  "actualFixes": [
+    "Use actual alive membership when cleaning bankruptcy effects; other detained living players retain inventory.",
+    "No eligible bidders settle directly without a fictitious bid from the eliminated payer.",
+    "Browser bank business selector narrowed to avoid matching the loan business control.",
+    "v33 shared UI distinguishes completed rent forced auctions from deferred non-rent payment callbacks."
+  ],
+  "notBrowserVerified": [
+    "positive frozen creditor payment",
+    "remaining stocks and stock-company control recalculation",
+    "last survivor early finish",
+    "0/1/3-property no-auction branch",
+    "all-pass and no-eligible auctions",
+    "duplicate-slot rejection sampling",
+    "redirected payer, mixed facility and index>1",
+    "G7 restore and stale/wrong actor commands",
+    "special combinations of lottery/god/insurance/loan/research cleanup",
+    "2/4-player disposal-specific UI; version matrix only"
+  ],
+  "deferred": [
+    "News/fortune/company/dividend/loan insolvency payment continuations and batch ordering",
+    "existing Web pre-rent minimal stock rescue retained",
+    "other asset listing categories and AI prices",
+    "special actors and original single-human defeat menus",
+    "original C RNG and auction timer/increment UI",
+    "original wheel/magic house and unresolved overflow/record-tail differences"
+  ],
+  "next": {
+    "stage": "S2-03u",
+    "version": "v34",
+    "task": "Audit and implement evidence-backed non-rent insolvency continuations; reuse v33 exit/public disposal without rescuing the debtor."
+  }
+}

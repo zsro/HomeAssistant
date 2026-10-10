@@ -1,0 +1,79 @@
+{
+  "stage": "S3-02m",
+  "rulesId": "japan-events-candidate-v44",
+  "fingerprint": "f9dbb7e9",
+  "policy": "capital-v1",
+  "newGameSemantics": false,
+  "nativeExecution": false,
+  "referenceCommit": "ec7d70e693059d1e781d9d1cc2ad7f36d360d39e",
+  "preservedPolicies": [
+    "basic-v1",
+    "tools-v1",
+    "rent-v1",
+    "defense-v1",
+    "estate-v1",
+    "cash-v1",
+    "status-v1",
+    "inventory-v1",
+    "commerce-v1",
+    "area-v1",
+    "roads-v1",
+    "mobility-v1",
+    "gods-v1"
+  ],
+  "nativeReread": [
+    {
+      "path": "asm/rich4_stocks.asm",
+      "localPath": "/private/tmp/rich4-g6/rich4_stocks.asm",
+      "sha256": "d55e17af17da2464655f53d3b3dd32224637a37ab131c6cf483db8fbac045ea3",
+      "gitBlobSha1": "c45cd776b51483d17f78972845b8053deeee2433",
+      "reread": true,
+      "ranges": [
+        "_rich4_buy_stock through _rich4_sell_stock: lines94-220"
+      ],
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_stocks.asm"
+    },
+    {
+      "path": "asm/rich4_ui_bank.asm",
+      "localPath": "/private/tmp/richman-price-reference/rich4_ui_bank.asm",
+      "sha256": "bd225f868ef673c4052d145223d9564a5ded0c4eec28093811cb439ec9fc230a",
+      "gitBlobSha1": "a33182c5fa87f03271e20c43956ad11302f14baa",
+      "reread": true,
+      "ranges": [
+        "00433b7e/00433bd8: lines193-258",
+        "00435228/00435360/004353a3/004353bf: lines2020-2148"
+      ],
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_ui_bank.asm"
+    }
+  ],
+  "priorNativeAudit": [
+    "s2-04a-sources.json",
+    "s2-04b-sources.json",
+    "s2-03o-sources.json",
+    "s2-03k-sources.json",
+    "s2-03v-sources.json"
+  ],
+  "claims": [
+    "Ordinary market transactions use bank and market pool/quota; onsite capital/10000 subscription uses cash and subscription pool",
+    "Existing float32 per-share average and truncating basis reused; partial sale preserves average, zero holding clears it; company ownership uses current ranking",
+    "90-day loan date rolls to original trading day; manual bank repayment consumes bank before cash; no loan interest added; outstanding debt suppresses monthly deposit interest",
+    "Actual payer determined after reaction; existing necessary forced sales/exit/public disposal are delegated without early sale or revival",
+    "Policy reads current public quotes/holdings/company funds/relationships/properties/balances and legal pending decisions; no hidden sequences, RNG or G7 snapshots"
+  ],
+  "webPolicy": {
+    "reserve": "max(10000,5000+largest current ordinary enemy/nonally chain rent)+entire negative funds of held companies+debt",
+    "portfolio": "cost <=min(10000,20% of liquid+basis-debt); no debt-funded investment",
+    "marketBuy": "empty holding; quote<=90% initial catalog anchor; no black/halt/up-limit; <=100 shares/5000 yuan; bank reserve, quota/pool and ally tie cap",
+    "marketSell": "necessary liquid shortfall first; otherwise >=20% and >=500 yuan unrealized gain except currently self-operated company; no halt/down-limit ordinary sales",
+    "subscription": ">=10% discount to public quote; <=100 shares/5000yuan; cash floor5000, overall reserve and allied existing operator preserved",
+    "bank": "repay above operating buffer; absent debt/shares and with sufficient property-backed capacity borrow only up to liquid5000; adjust cash5000; no refinancing"
+  },
+  "deferred": [
+    "native AI equivalence",
+    "future price prediction, original precision/RNG/chart",
+    "all potential future fees, long-range trap and insolvency prevention guarantee",
+    "advanced research strategies",
+    "other asset listings/special roles/original wheel/original exit stack and endgame/minigame presentation-collision differences"
+  ],
+  "evidence": "B: fixed-commit native ASM audit reused, no new Windows observation; policy thresholds are Web heuristics"
+}

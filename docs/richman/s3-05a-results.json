@@ -1,0 +1,104 @@
+{
+  "stage": "S3-05a",
+  "date": "2026-10-10",
+  "rulesId": "japan-events-candidate-v47",
+  "policies": 15,
+  "newGameSemantics": false,
+  "status": "implemented-and-targeted-browser-accepted",
+  "browser": {
+    "scope": "real UI on original map; desktop and Chrome touch emulation, not physical mobile/Safari",
+    "rows": [
+      {
+        "mobile": false,
+        "viewport": "1440x1000",
+        "nativeFullscreen": true,
+        "zoomBefore": "120%",
+        "zoomAfter": "140%",
+        "touchTarget": {
+          "x": 1065,
+          "y": 397,
+          "width": 38,
+          "height": 34
+        },
+        "overflow": false,
+        "worker": "select/locate/pause/resume/cancel/reopen clears selection",
+        "historicalEconomyHelp": true,
+        "exitCanvas": 0,
+        "errors": []
+      },
+      {
+        "mobile": true,
+        "viewport": "390x844",
+        "nativeFullscreen": true,
+        "zoomBefore": "120%",
+        "zoomAfter": "140%",
+        "touchTarget": {
+          "x": 319,
+          "y": 391,
+          "width": 44,
+          "height": 44
+        },
+        "overflow": false,
+        "worker": "select/locate/pause/resume/cancel/reopen clears selection",
+        "historicalEconomyHelp": true,
+        "exitCanvas": 0,
+        "errors": []
+      }
+    ]
+  },
+  "replays": [
+    {
+      "name": "desktop",
+      "commands": 6,
+      "prefixes": [
+        1,
+        3,
+        4
+      ],
+      "fullReplay": true,
+      "inventoryAndEconomyUnchanged": true,
+      "consumed": 0,
+      "sha256": "204aa13ae6370c2ac6b21f807292f83074b07ebe9794b1a1b808290a7dafbc6d"
+    },
+    {
+      "name": "touch390",
+      "commands": 6,
+      "prefixes": [
+        1,
+        3,
+        4
+      ],
+      "fullReplay": true,
+      "inventoryAndEconomyUnchanged": true,
+      "consumed": 0,
+      "sha256": "6bead069ce6e538434bf9a0261ecd4de5d4139ad197c7c19957313a3122d293d"
+    }
+  ],
+  "tests": {
+    "passed": 55,
+    "files": 7,
+    "scope": "real-mode help inheritance and affected business/property panels"
+  },
+  "lint": "passed",
+  "build": "passed (tsc + Vite; existing chunk/import warnings)",
+  "baseline": {
+    "gameAndResourceFilesUnchanged": 756,
+    "existingFixturesUnchanged": 488,
+    "S3_04Closure": "preserved Chrome candidate; accepted long routes not rerun"
+  },
+  "attemptsExcluded": [
+    "first run could not locate diagnostic summary by exact text; corrected summary locator",
+    "second run checked canvas before client navigation settled; await route and teardown added",
+    "first lint found redundant boolean cast; removed before final lint"
+  ],
+  "notTested": [
+    "physical phone/tablet and Safari",
+    "native fullscreen refusal/expanded fallback this batch",
+    "pinch gesture (not implemented)",
+    "touch drag and pointercancel cases",
+    "all card targeting panels and invalid map hit feedback",
+    "all modes/browser and bankruptcy transactions (only UI text/session checks)",
+    "S3-04 natural short refusal/original-map competing queue remain untriggered; listening not tested"
+  ],
+  "next": "S3-05b: decision navigation and target feedback, original-map worker invalid hit/drag cancel/pause ownership, fullscreen fallback and touch drag short checks; no long audio reruns"
+}

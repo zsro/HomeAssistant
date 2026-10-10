@@ -1,0 +1,105 @@
+{
+  "stage": "S3-04a",
+  "date": "2026-10-09",
+  "status": "implemented-local-checks-passed-browser-deferred-to-S3-04d",
+  "rulesId": "japan-events-candidate-v47",
+  "mode": "surrender",
+  "fingerprint": "c6d96cc",
+  "newGameSemantics": false,
+  "newPolicyVersion": false,
+  "presentationProfile": "audio-foundation-v1",
+  "historicalCapabilities": {
+    "items": 43,
+    "news": 36,
+    "japanFortuneSlots": 37,
+    "policies": 15,
+    "S3_03": "ordinary-seat Web candidate closed, historical evidence retained"
+  },
+  "nativeExecution": false,
+  "resources": {
+    "musicInventory": 25,
+    "musicExported": 8,
+    "effectArchiveEntries": 115,
+    "effectRiffEntries": 99,
+    "effectEmptyEntries": 16,
+    "voiceRiffEntries": 1374,
+    "effectsExported": [
+      43,
+      48
+    ],
+    "exportedBytes": 23224313,
+    "landingNodes": 23,
+    "movieFiles": 7,
+    "maxMp3DurationDeltaSeconds": 0.046440000000004034,
+    "generatedMediaIgnoredByGit": true
+  },
+  "checks": {
+    "unitAndAdapter": {
+      "files": [
+        "audio.test.ts",
+        "game/session-audio.test.ts",
+        "game/session.test.ts"
+      ],
+      "tests": 24,
+      "passed": 24,
+      "scope": "mock media lifecycle and short local Session/replay comparison; not original-map browser flows"
+    },
+    "resources": {
+      "stage": "S3-04a",
+      "nativeExecution": false,
+      "browserStarted": false,
+      "resourceManifest": true,
+      "originalMapNodesChecked": 110,
+      "exportedMediaDecoded": 10,
+      "method": "SHA256 + ffmpeg full decode + static map-to-cue consistency; no browser/audio-device test"
+    },
+    "build": "passed: tsc -b and vite build; existing chunk/import warnings retained",
+    "lint": "passed",
+    "diffCheck": "passed",
+    "fullFrontendSuiteRun": false
+  },
+  "preservation": {
+    "baselineFiles": 755,
+    "changedExisting": [
+      "frontend/src/features/richman/richman.css",
+      "frontend/src/features/richman/scene.ts",
+      "frontend/src/features/richman/game/session.ts",
+      "frontend/src/pages/RichmanPage.tsx"
+    ],
+    "unchangedExisting": 751,
+    "oldFixtureFiles": 458,
+    "oldFixturesUnchanged": true,
+    "newReplayFixtures": 0,
+    "engineRulesPoliciesUnchanged": true
+  },
+  "browser": {
+    "started": false,
+    "commands": 0,
+    "newPassedScenarios": 0,
+    "reason": "user requests a–c feature completion before d unified flow acceptance"
+  },
+  "pendingBrowserAcceptance": [
+    "first explicit interaction/autoplay rejection and retry on real Mac browsers",
+    "MP3/WAV actual device decoding and listening: identity/volume/no clipping",
+    "music/effect sliders, mute, storage-disabled and missing resources",
+    "normal/dream/passing landings and nested fortune/G7 non-replay of historic sounds",
+    "pause/resume, setup/reset-dialog cancellation, actual reset/new game/finished/exit",
+    "hidden tab, fullscreen/390px controls, repeated page entry/StrictMode and media release",
+    "2–4-seat live computer/continuous event combinations after b/c; replay equality with audio enabled"
+  ],
+  "localRepairNotes": [
+    "Initial exporter incorrectly pinned reference EXE hash; corrected to previously registered local installation hash and uniquely matched only relevant table bytes (codes2..16).",
+    "Empty MKF slots handled explicitly (16 Effect slots).",
+    "Rejected-play mock exposed DOMException realm dependence; switched to error.name instead of instanceof Error.",
+    "Local adapter sandbox test supplied only2 characters; fixed fixture to required4.",
+    "Test mock preload type narrowed for TypeScript; final compile succeeded."
+  ],
+  "deferred": [
+    "remaining sound/voice/music mappings and priority queue (b)",
+    "god/vehicle/event animation frame mapping (c)",
+    "actual browser playback and lifecycle flows (d)",
+    "native CD/MIDI resume stack, track selection, volume curve and audio overlap",
+    "autonomous god movement not inferred; original exit stack/endgame/RNG/special characters/spinner and historical differences unchanged"
+  ],
+  "next": "S3-04b: evidence-backed event effects/voices and priority/deduplication queue; local checks only, browser acceptance stays in d"
+}

@@ -1,0 +1,12 @@
+import { it,expect } from 'vitest';
+import { createHash } from 'node:crypto';
+import { replayGame } from './engine';
+import type { Replay } from './engine';
+import nodes from '../japan-topology.fixture.json';
+import g46 from './fixtures/tools-v13-g46-replay.json';
+import g46Golden from './fixtures/tools-v13-g46-golden.json';
+import g5 from './fixtures/tools-v13-g5-replay.json';
+import g5Golden from './fixtures/tools-v13-g5-golden.json';
+import g7 from './fixtures/tools-v13-g7-replay.json';
+import g7Golden from './fixtures/tools-v13-g7-golden.json';
+it.each([{group:'G4/G6',replay:g46,golden:g46Golden},{group:'G5',replay:g5,golden:g5Golden},{group:'G7',replay:g7,golden:g7Golden}])('preserves accepted original-map $group browser state and event hashes',({replay,golden})=>{const e=replayGame(nodes,replay as Replay);expect(e.state.items!.fingerprint).toBe('7d7e7415');for(const key of ['state','events'] as const)expect(createHash('sha256').update(JSON.stringify(e[key])).digest('hex')).toBe(golden[key]);},60000);

@@ -1,0 +1,90 @@
+{
+  "referenceCommit": "ec7d70e693059d1e781d9d1cc2ad7f36d360d39e",
+  "method": "Local fixed-commit ASM read and Git blob SHA1 verified; cross-version evidence B, no Windows runtime observation",
+  "verifiedFiles": 5,
+  "sources": [
+    {
+      "path": "asm/rich4_ui_stock.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_ui_stock.asm",
+      "gitBlobSha1": "cc0913dc550a049781e3b72f2df215ce84df6b28",
+      "sha256": "0e3152263c9886615fa6509fcd005f0db37a9fb850b3124ede51de868fa8ab82"
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_core_actions.asm",
+      "gitBlobSha1": "ebfde6c820e8a430b856d9816a926b636e0db1dc",
+      "sha256": "2874c1a3e0ca1d0da5afe4cb93e42cf2d6f6fa864dbee11d7bcaa028af07d94a"
+    },
+    {
+      "path": "asm/rich4_player_bankrupt.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_bankrupt.asm",
+      "gitBlobSha1": "7d89fe867d86a4b9fc230602da8bc084725310c6",
+      "sha256": "57c69d347bef382e0045b00855c17293e5cb737ed22359340894ed9b9cf8bf02"
+    },
+    {
+      "path": "asm/rich4_news.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_news.asm",
+      "gitBlobSha1": "31601ae8258b6f9074c348ae17d52295c5f94b8e",
+      "sha256": "a2172acdbbfe52fbc57672e40a8f0d669b3c8fb6cabb1f3d5d7dd8e72ebc458a"
+    },
+    {
+      "path": "asm/rich4.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4.asm",
+      "gitBlobSha1": "d11a64755094435fa9953652a5a4951871fd9697",
+      "sha256": "30904cbb4f23a6b74fc1b80ad023bd7dff11b441c2c1978f768f9891d099d64a"
+    }
+  ],
+  "fields": {
+    "stock+4": "word commercial index,zero unmapped",
+    "commercial+0x28": "signed32 current period funds",
+    "commercial+0x2c": "signed32 cumulative funds",
+    "player+21": "who_plays nonzero eligible",
+    "player+28": "cash",
+    "player+32": "bank",
+    "player_stocks": "seat*96+stock*8 quantity"
+  },
+  "rules": {
+    "R08-01m": {
+      "addresses": [
+        "0041d2c6..0041d3af",
+        "news0044b374..0044b6d0"
+      ],
+      "evidence": "company payer>100 subtracts period+cumulative; company payee>100 adds actual paid to both. Existing news30/31/32/33/34/35 ledger is connected, complete commercial services remain deferred; dividends are not shop points or stock-sale proceeds."
+    },
+    "R08-02m": {
+      "addresses": [
+        "0042bd61..0042bdec",
+        "0042bc0c..0042bc6b"
+      ],
+      "evidence": "12 stocks in map order,skip mapping0; sum holdings across who_plays!=0; ratio stored as float32; neither issued shares nor market pool nor owner controls participation"
+    },
+    "R08-03m": {
+      "addresses": [
+        "0042bc75..0042bd49"
+      ],
+      "evidence": "signed period funds * float32 ratio -> truncate toward zero; per-seat int32 accumulation; holdings sum!=0 clears period only; no-holder carries including negative; remainder unassigned"
+    },
+    "R05-01m": {
+      "addresses": [
+        "0042be6f..0042bec5"
+      ],
+      "evidence": "after all company calculations, add net to bank; if negative add negative bank to cash and zero bank; cash<0 zero and call bankruptcy; cash==0 solvent"
+    },
+    "R13-01m": {
+      "addresses": [
+        "0041d066..0041d099",
+        "0041c84f"
+      ],
+      "evidence": "daily market and holiday routine,day15 dividend before lottery; monthly interest on month rollover; incoming loan before own action clocks"
+    },
+    "R09-01m": {
+      "evidence": "Web: v26 separate fingerprint; journal in business carried by G7 checkpoint; no RNG; bankruptcy returns holdings without proceeds using current cleanup; resolve all net payments then reselect survivor without another day; no survivors draw"
+    }
+  },
+  "retainedUnknown": [
+    "complete company services and insurance payouts",
+    "original forced bankruptcy auctions and special-player behavior",
+    "other calendar activities/price index",
+    "Windows runtime parity"
+  ]
+}

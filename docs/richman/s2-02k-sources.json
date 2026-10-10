@@ -1,0 +1,77 @@
+{
+  "referenceCommit": "ec7d70e693059d1e781d9d1cc2ad7f36d360d39e",
+  "status": "G4-group-source-reviewed-not-Windows-runtime-verified",
+  "sources": [
+    {
+      "path": "asm/rich4_card_gaijianka.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_card_gaijianka.asm",
+      "sha256": "40cdd7e63fca491b52a9fdcd549cdc64948795aa911b7b4595d041623823d20d"
+    },
+    {
+      "path": "asm/rich4_card_paimaika.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_card_paimaika.asm",
+      "sha256": "b06cbb65c5bb88d3211bf095ce9fb7315a976809d670cf2f71a6cd1f8a7227ef"
+    },
+    {
+      "path": "asm/rich4_card_chashuika.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_card_chashuika.asm",
+      "sha256": "a4c8b20ce4f657862d8aefc498de2f56f58bf25091beb7be9292a7d9f7464955"
+    },
+    {
+      "path": "asm/rich4_card_zhangjiaka.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_card_zhangjiaka.asm",
+      "sha256": "6fd665a0c1d32b2753cd96d66042575466fe6552be0c2e43a7786fcf2be2de06"
+    },
+    {
+      "path": "asm/rich4_card_chafengka.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_card_chafengka.asm",
+      "sha256": "356bb90c9e043761069ad56925180115beeb31d3896777af18b3ca0015e4df97"
+    },
+    {
+      "path": "asm/rich4_ui_auction.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_ui_auction.asm",
+      "sha256": "771ecbbbb5830bee2b5dbc8966e068329525e6f7f090705344f49725a33b816e"
+    },
+    {
+      "path": "csrc/land.h",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/csrc/land.h",
+      "sha256": "491d2be2e54736000d3829d98cb062922f9d374b58b66bce942323e11238ac28"
+    },
+    {
+      "path": "csrc/cards.c",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/csrc/cards.c",
+      "sha256": "f5f065702b1559bb08eb3989a09340f49dfd1b8b04932545d5d73b44317da410"
+    },
+    {
+      "path": "asm/rich4.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4.asm",
+      "sha256": "30904cbb4f23a6b74fc1b80ad023bd7dff11b441c2c1978f768f9891d099d64a"
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_core_actions.asm",
+      "sha256": "2874c1a3e0ca1d0da5afe4cb93e42cf2d6f6fa864dbee11d7bcaa028af07d94a"
+    },
+    {
+      "path": "asm/rich4_player_info.h",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_info.h",
+      "sha256": "cc17726ce054de587a42c0f335d84495e66698da2e15eb6a7b7ca28ab38604be"
+    },
+    {
+      "path": "asm/rich4_card_passive.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_card_passive.asm",
+      "sha256": "2c8ceb5582bb36974922ead75c86e681e35bf8faeb3ccf9a919edd108a0eaf9d"
+    },
+    {
+      "path": "asm/rich4_card_huanwuka.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_card_huanwuka.asm",
+      "sha256": "44ede630a2f32fdf1b0bdc35c3f67c8163d41cd30de1cde6d8048f693243b62a"
+    },
+    {
+      "path": "asm/rich4_card_chaichuka.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_card_chaichuka.asm",
+      "sha256": "f6f69a6029727dbb673de7be04730d818db533c8ba57e516946f810a1522bf2d"
+    }
+  ],
+  "pending": []
+}

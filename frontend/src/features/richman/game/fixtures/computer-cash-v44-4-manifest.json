@@ -1,0 +1,128 @@
+{
+  "players": 4,
+  "commands": 2128,
+  "turn": 305,
+  "auto": 658,
+  "human": 222,
+  "acquisitions": [
+    {
+      "id": "player-4",
+      "ai": true,
+      "item": "card:26",
+      "turn": 300,
+      "action": "animationDone",
+      "evidence": [
+        "玩家4附身小福神，期限7次自身行动边界。",
+        "玩家4获得card:26。"
+      ]
+    }
+  ],
+  "uses": [
+    {
+      "ai": true,
+      "id": "player-4",
+      "item": "card:26",
+      "turn": 304,
+      "gain": 260,
+      "discarded": 0,
+      "receipt": {
+        "type": "taxSettled",
+        "sourceId": "player-4",
+        "payerId": "player-2",
+        "amount": 260,
+        "waived": false,
+        "sequence": 3911,
+        "commandId": "command-2121",
+        "playerId": "player-4",
+        "turn": 304
+      },
+      "before": {
+        "player-1": {
+          "cash": 3600,
+          "bank": 98333
+        },
+        "player-2": {
+          "cash": 1300,
+          "bank": 107019
+        },
+        "player-3": {
+          "cash": 2800,
+          "bank": 87143
+        },
+        "player-4": {
+          "cash": 5609,
+          "bank": 106181
+        }
+      },
+      "after": {
+        "player-1": {
+          "cash": 3600,
+          "bank": 98333
+        },
+        "player-2": {
+          "cash": 1040,
+          "bank": 107019
+        },
+        "player-3": {
+          "cash": 2800,
+          "bank": 87143
+        },
+        "player-4": {
+          "cash": 5609,
+          "bank": 106441
+        }
+      }
+    }
+  ],
+  "reactions": [],
+  "cancellations": [],
+  "prefixes": [
+    "card:26-acquired",
+    "card:26-paused",
+    "card:26-resumed",
+    "card:26-confirm-before",
+    "card:26-confirm-after",
+    "tax-settled-before",
+    "tax-settled-after"
+  ],
+  "report": {
+    "policy": "cash-v1",
+    "toolWindows": [
+      "tool:08",
+      "tool:09",
+      "card:12",
+      "card:04",
+      "card:03",
+      "card:26"
+    ],
+    "crossChecks": [],
+    "route": "4",
+    "terminal": false,
+    "players": 4,
+    "normalSpeed": true,
+    "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+    "commands": 2128,
+    "auto": 658,
+    "human": 222,
+    "lifecycle": [
+      "pause stops waiting",
+      "resume",
+      "reset dialog cancel",
+      "reset",
+      "replace with humans",
+      "exit cleanup",
+      "fullscreen",
+      "390px"
+    ],
+    "cleanup": {
+      "raf": 0,
+      "canvas": 0
+    },
+    "errors": []
+  },
+  "hashes": {
+    "replay": "75e232c8e841fb9725e49623d66d495fb26d876ace1c10e80b92f3d03e40588a",
+    "state": "9ac8576911ec436067e7896dbedd1d19ed03c5c796a6bb41064b5dae5dd9f76e",
+    "events": "343e1cbb24e8ca0fe2ad64faa19c8d40c591c5fb1ec2fd0a0b8a33eefd78a685"
+  }
+}

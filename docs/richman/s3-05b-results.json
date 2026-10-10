@@ -1,0 +1,414 @@
+{
+  "stage": "S3-05b",
+  "date": "2026-10-10",
+  "rulesId": "japan-events-candidate-v47",
+  "policies": 15,
+  "newGameSemantics": false,
+  "status": "targeted-navigation-and-worker-accepted; S3-05 remains open",
+  "browser": {
+    "scope": "short original-map worker; Chrome desktop/touch emulation; fullscreen fault injection explicitly separate",
+    "rows": [
+      {
+        "name": "desktop",
+        "originalMap": true,
+        "authOnlyFixture": true,
+        "navigationFocus": true,
+        "invalidHitPreservesSelection": true,
+        "dragDoesNotSelect": true,
+        "interruptAndPauseResume": true,
+        "fullscreenFallback": "injected requestFullscreen rejection, expanded help/map navigation and Escape/body restore",
+        "overflow": false,
+        "pointerEvidence": [
+          {
+            "type": "pointermove",
+            "kind": "mouse",
+            "trusted": true,
+            "x": 59,
+            "y": 649
+          },
+          {
+            "type": "pointerdown",
+            "kind": "mouse",
+            "trusted": true,
+            "x": 59,
+            "y": 649
+          },
+          {
+            "type": "pointerup",
+            "kind": "mouse",
+            "trusted": true,
+            "x": 59,
+            "y": 649
+          },
+          {
+            "type": "lostpointercapture",
+            "kind": "mouse",
+            "trusted": true,
+            "x": 59,
+            "y": 649
+          },
+          {
+            "type": "pointermove",
+            "kind": "mouse",
+            "trusted": true,
+            "x": 574,
+            "y": 458
+          },
+          {
+            "type": "pointerdown",
+            "kind": "mouse",
+            "trusted": true,
+            "x": 574,
+            "y": 458
+          },
+          {
+            "type": "pointermove",
+            "kind": "mouse",
+            "trusted": true,
+            "x": 590.6666870117188,
+            "y": 466.3333435058594
+          },
+          {
+            "type": "pointermove",
+            "kind": "mouse",
+            "trusted": true,
+            "x": 607.3333129882812,
+            "y": 474.6666564941406
+          },
+          {
+            "type": "pointermove",
+            "kind": "mouse",
+            "trusted": true,
+            "x": 624,
+            "y": 483
+          },
+          {
+            "type": "pointermove",
+            "kind": "mouse",
+            "trusted": true,
+            "x": 640.6666870117188,
+            "y": 491.3333435058594
+          },
+          {
+            "type": "pointermove",
+            "kind": "mouse",
+            "trusted": true,
+            "x": 657.3333129882812,
+            "y": 499.6666564941406
+          },
+          {
+            "type": "pointermove",
+            "kind": "mouse",
+            "trusted": true,
+            "x": 674,
+            "y": 508
+          },
+          {
+            "type": "pointerup",
+            "kind": "mouse",
+            "trusted": true,
+            "x": 674,
+            "y": 508
+          },
+          {
+            "type": "lostpointercapture",
+            "kind": "mouse",
+            "trusted": true,
+            "x": 674,
+            "y": 508
+          },
+          {
+            "type": "pointermove",
+            "kind": "mouse",
+            "trusted": true,
+            "x": 574,
+            "y": 458
+          },
+          {
+            "type": "pointerdown",
+            "kind": "mouse",
+            "trusted": true,
+            "x": 574,
+            "y": 458
+          },
+          {
+            "type": "pointerup",
+            "kind": "mouse",
+            "trusted": true,
+            "x": 574,
+            "y": 458
+          },
+          {
+            "type": "pointermove",
+            "kind": "mouse",
+            "trusted": true,
+            "x": 574,
+            "y": 458
+          },
+          {
+            "type": "pointerdown",
+            "kind": "mouse",
+            "trusted": true,
+            "x": 574,
+            "y": 458
+          },
+          {
+            "type": "pointerup",
+            "kind": "mouse",
+            "trusted": true,
+            "x": 574,
+            "y": 458
+          },
+          {
+            "type": "pointermove",
+            "kind": "mouse",
+            "trusted": true,
+            "x": 59,
+            "y": 649
+          },
+          {
+            "type": "pointerdown",
+            "kind": "mouse",
+            "trusted": true,
+            "x": 59,
+            "y": 649
+          },
+          {
+            "type": "pointerup",
+            "kind": "mouse",
+            "trusted": true,
+            "x": 59,
+            "y": 649
+          },
+          {
+            "type": "lostpointercapture",
+            "kind": "mouse",
+            "trusted": true,
+            "x": 59,
+            "y": 649
+          }
+        ],
+        "errors": []
+      },
+      {
+        "name": "touch390",
+        "originalMap": true,
+        "authOnlyFixture": true,
+        "navigationFocus": true,
+        "invalidHitPreservesSelection": true,
+        "dragDoesNotSelect": true,
+        "interruptAndPauseResume": true,
+        "fullscreenFallback": "injected requestFullscreen rejection, expanded help/map navigation and Escape/body restore",
+        "overflow": false,
+        "pointerEvidence": [
+          {
+            "type": "pointerdown",
+            "kind": "touch",
+            "trusted": true,
+            "x": 45,
+            "y": 529
+          },
+          {
+            "type": "pointerup",
+            "kind": "touch",
+            "trusted": true,
+            "x": 45,
+            "y": 529
+          },
+          {
+            "type": "lostpointercapture",
+            "kind": "touch",
+            "trusted": true,
+            "x": 45,
+            "y": 529
+          },
+          {
+            "type": "pointerdown",
+            "kind": "touch",
+            "trusted": true,
+            "x": 195,
+            "y": 392
+          },
+          {
+            "type": "pointermove",
+            "kind": "touch",
+            "trusted": true,
+            "x": 265,
+            "y": 427
+          },
+          {
+            "type": "pointermove",
+            "kind": "touch",
+            "trusted": true,
+            "x": 295,
+            "y": 442
+          },
+          {
+            "type": "pointerup",
+            "kind": "touch",
+            "trusted": true,
+            "x": 295,
+            "y": 442
+          },
+          {
+            "type": "lostpointercapture",
+            "kind": "touch",
+            "trusted": true,
+            "x": 295,
+            "y": 442
+          },
+          {
+            "type": "pointerdown",
+            "kind": "touch",
+            "trusted": true,
+            "x": 195,
+            "y": 392
+          },
+          {
+            "type": "pointermove",
+            "kind": "touch",
+            "trusted": true,
+            "x": 207,
+            "y": 392
+          },
+          {
+            "type": "pointercancel",
+            "kind": "touch",
+            "trusted": true,
+            "x": 207,
+            "y": 392
+          },
+          {
+            "type": "lostpointercapture",
+            "kind": "touch",
+            "trusted": true,
+            "x": 207,
+            "y": 392
+          },
+          {
+            "type": "pointerdown",
+            "kind": "touch",
+            "trusted": true,
+            "x": 195,
+            "y": 392
+          },
+          {
+            "type": "pointerup",
+            "kind": "touch",
+            "trusted": true,
+            "x": 195,
+            "y": 392
+          },
+          {
+            "type": "pointerdown",
+            "kind": "touch",
+            "trusted": true,
+            "x": 45,
+            "y": 529
+          },
+          {
+            "type": "pointerup",
+            "kind": "touch",
+            "trusted": true,
+            "x": 45,
+            "y": 529
+          },
+          {
+            "type": "lostpointercapture",
+            "kind": "touch",
+            "trusted": true,
+            "x": 45,
+            "y": 529
+          }
+        ],
+        "errors": []
+      }
+    ]
+  },
+  "ownership": [
+    {
+      "name": "ownership",
+      "originalMap": true,
+      "automaticWorker": true,
+      "radioDisabled": true,
+      "mapMissFeedbackSuppressed": true,
+      "noHumanTargetSelection": true,
+      "pauseFrozen": true,
+      "exitCanvas": 0,
+      "errors": []
+    }
+  ],
+  "replays": [
+    {
+      "name": "desktop",
+      "commands": 6,
+      "prefixes": [
+        1,
+        3,
+        4
+      ],
+      "fullReplay": true,
+      "inventoryAndEconomyUnchanged": true,
+      "consumed": 0,
+      "sha256": "819ee44ccf454ed6ee116f4e56420491a1200fa9fcb07a707d4fda2f1037965a"
+    },
+    {
+      "name": "touch390",
+      "commands": 6,
+      "prefixes": [
+        1,
+        3,
+        4
+      ],
+      "fullReplay": true,
+      "inventoryAndEconomyUnchanged": true,
+      "consumed": 0,
+      "sha256": "660e614ab59bce1fc75168036bf7208ae16649ca1282bad39f330a874833e113"
+    },
+    {
+      "name": "ownership",
+      "commands": 17,
+      "prefixes": [
+        8,
+        15,
+        16
+      ],
+      "fullReplay": true,
+      "legalPurchaseBeforeWorker": true,
+      "pausedPendingWorkerUnconsumed": true,
+      "sha256": "33091ed054057b6471c782d4787af4b6f6c30cbf3d1ccb1155b1561a34ab1756"
+    }
+  ],
+  "actualCommands": 29,
+  "prefixChecks": 9,
+  "tests": {
+    "passed": 60,
+    "files": 4,
+    "scope": "decision navigation, real mode help, ItemPanel and map picking"
+  },
+  "lint": "passed",
+  "build": "tsc/Vite passed; existing chunk/import warnings",
+  "baseline": {
+    "gameAndResourceFilesUnchanged": 758,
+    "existingFixturesUnchanged": 490,
+    "oldAudioLongRoutesRerun": false
+  },
+  "realBugFixed": "Capture released before pointerup could still select/miss; require active capture, listen lostpointercapture, invalidate on model command/pause/newgame. Automatic responder cannot select/miss on map.",
+  "attemptsExcluded": [
+    "checked radio clicked again did not emit change: script corrected to switch target first",
+    "desktop capture-release test exposed genuine stale pointerup feedback, product guard fixed then full short checks rerun",
+    "unit test wrong GameSession identity argument corrected; nonexistent file filter removed",
+    "ownership setup exact seed-label selector did not include helper text; script changed to placeholder"
+  ],
+  "notTested": [
+    "physical touch devices and Safari",
+    "multi-touch and pinch (pinch not implemented)",
+    "natural fullscreen denial (only API rejection fault injection)",
+    "all phase navigation and all card target panels in browser; current worker/helper/map only",
+    "keyboard-only complete decision circuit",
+    "new native fullscreen lifecycle test this batch (S3-05a coverage retained)",
+    "natural short audio refusal/original-map competing queue remain untriggered; manual listening untested",
+    "original audio/palette/occlusion, exit stack/endgame/RNG/special characters/spinner differences retained"
+  ],
+  "next": "S3-05c: representative keyboard and non-current responder decision navigation, modal/focus return and minimal targeted UI closure; no long audio or old-rule reruns"
+}

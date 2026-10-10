@@ -1,0 +1,313 @@
+{
+  "referenceCommit": "ec7d70e693059d1e781d9d1cc2ad7f36d360d39e",
+  "status": "source-reviewed-candidate-not-Windows-runtime-verified",
+  "sources": [
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "sha256": "2874c1a3e0ca1d0da5afe4cb93e42cf2d6f6fa864dbee11d7bcaa028af07d94a",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_core_actions.asm",
+      "provenance": "local cache rechecked against prior fixed-commit SHA256"
+    },
+    {
+      "path": "asm/rich4_card_utils_2.asm",
+      "sha256": "98caa25f4c3cbbfca6cf304caa6485d719b3776ccb701a401d90920828b29ae2",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_card_utils_2.asm",
+      "provenance": "local cache rechecked against prior fixed-commit SHA256"
+    },
+    {
+      "path": "asm/rich4_card_utils.asm",
+      "sha256": "937d2f587f15068f1f1280ac60d4a61c0249dbde0f206bfcc1489a29591d8181",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_card_utils.asm",
+      "provenance": "local cache rechecked against prior fixed-commit SHA256"
+    },
+    {
+      "path": "asm/rich4.asm",
+      "sha256": "30904cbb4f23a6b74fc1b80ad023bd7dff11b441c2c1978f768f9891d099d64a",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4.asm",
+      "provenance": "local cache rechecked against prior fixed-commit SHA256"
+    },
+    {
+      "path": "csrc/news.c",
+      "sha256": "f9fd0ee17badef0441c1799f1ad2a529bdfcd9bef4be52b452b15982c5c28361",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/csrc/news.c",
+      "provenance": "local cache rechecked against prior fixed-commit SHA256"
+    },
+    {
+      "path": "csrc/fortune.c",
+      "sha256": "f6ed729c08b165aed4b793b40ff5508e27bf661d2e8bc8c9db8eb551cefd8823",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/csrc/fortune.c",
+      "provenance": "local cache rechecked against prior fixed-commit SHA256"
+    },
+    {
+      "path": "csrc/game_init.c",
+      "sha256": "4167f960114ff5eca0aaadb24d9266c7826d6ea4d2dc55a3512c9c669e85ea71",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/csrc/game_init.c",
+      "provenance": "local cache rechecked against prior fixed-commit SHA256"
+    }
+  ],
+  "mapAuditSha256": "e2eba8a3517f1a73fb349a42b0ae06242f8d0df026a886133059704e445a6921",
+  "mapEvents": [
+    {
+      "code": 0,
+      "candidate": "property",
+      "nodeIds": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        15,
+        17,
+        21,
+        30,
+        32,
+        34,
+        36,
+        37,
+        38,
+        39,
+        40,
+        42,
+        43,
+        44,
+        46,
+        47,
+        48,
+        49,
+        51,
+        52,
+        53,
+        54,
+        56,
+        57,
+        58,
+        59,
+        60,
+        62,
+        63,
+        64,
+        65,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        74,
+        75,
+        76,
+        77,
+        80,
+        82,
+        84,
+        85,
+        86,
+        87,
+        89,
+        90,
+        91,
+        92,
+        93,
+        95,
+        96,
+        97,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        108,
+        109,
+        110
+      ],
+      "status": "ordinary/facility implemented; companies incomplete"
+    },
+    {
+      "code": 1,
+      "candidate": "no-op",
+      "nodeIds": [
+        41
+      ],
+      "status": "explicit no additional event"
+    },
+    {
+      "code": 2,
+      "candidate": "news",
+      "nodeIds": [
+        13,
+        61,
+        94
+      ],
+      "status": "news not implemented; sequential eligible-entry traversal found, initialization/shuffle/effects pending"
+    },
+    {
+      "code": 3,
+      "candidate": "fortune",
+      "nodeIds": [
+        2,
+        19,
+        45,
+        66
+      ],
+      "status": "fortune not implemented; 49 dispatch entries, selector/eligibility incomplete"
+    },
+    {
+      "code": 4,
+      "candidate": "prison",
+      "nodeIds": [
+        78
+      ],
+      "status": "detention from attacks implemented; direct prison UI event not implemented"
+    },
+    {
+      "code": 5,
+      "candidate": "hospital",
+      "nodeIds": [
+        55
+      ],
+      "status": "hospital from attacks implemented; direct hospital UI event not implemented"
+    },
+    {
+      "code": 6,
+      "candidate": "penguin-game",
+      "nodeIds": [
+        22
+      ],
+      "status": "penguin game not implemented"
+    },
+    {
+      "code": 7,
+      "candidate": "balloon-game",
+      "nodeIds": [
+        24
+      ],
+      "status": "balloon game not implemented"
+    },
+    {
+      "code": 8,
+      "candidate": "falling-gifts-game",
+      "nodeIds": [
+        26
+      ],
+      "status": "falling gifts game not implemented"
+    },
+    {
+      "code": 9,
+      "candidate": "lottery",
+      "nodeIds": [
+        28,
+        88
+      ],
+      "status": "lottery not implemented; date low-byte 15 draw call found"
+    },
+    {
+      "code": 10,
+      "candidate": "points-50",
+      "nodeIds": [
+        20,
+        31
+      ],
+      "status": "points implemented"
+    },
+    {
+      "code": 11,
+      "candidate": "points-30",
+      "nodeIds": [
+        23,
+        27,
+        83
+      ],
+      "status": "points implemented"
+    },
+    {
+      "code": 12,
+      "candidate": "points-10",
+      "nodeIds": [
+        14,
+        16,
+        18,
+        25,
+        29,
+        33,
+        79,
+        81
+      ],
+      "status": "points implemented"
+    },
+    {
+      "code": 13,
+      "candidate": "random-card",
+      "nodeIds": [
+        98
+      ],
+      "status": "implemented in v14: weighted finite-pool random card landing"
+    },
+    {
+      "code": 14,
+      "candidate": "bank",
+      "nodeIds": [
+        1
+      ],
+      "status": "basic pass/landing banking implemented; calendar/interest/loans incomplete"
+    },
+    {
+      "code": 15,
+      "candidate": "shop",
+      "nodeIds": [
+        50,
+        107
+      ],
+      "status": "card/tool shops implemented; sell/complete original interface incomplete"
+    },
+    {
+      "code": 16,
+      "candidate": "magic-house-candidate",
+      "nodeIds": [
+        35,
+        73
+      ],
+      "status": "magic house not implemented"
+    }
+  ],
+  "randomFamilies": [
+    {
+      "id": "news",
+      "entries": 36,
+      "implemented": false
+    },
+    {
+      "id": "fortune",
+      "entries": 49,
+      "implemented": false
+    }
+  ],
+  "dateEvidence": {
+    "source": "asm/rich4_player_core_actions.asm:fcn_0041cf67 / loc_0041cf9c / loc_0041d066 / loc_0041d099 / loc_0041d12d",
+    "observed": [
+      "date helper fcn_00452117 receives global cfg date address",
+      "stock status ticks before market update",
+      "date low byte 0x0f calls lottery draw",
+      "edi==1 condition triggers another settlement helper and object relocation",
+      "property/facility date fields compared to global date and cleared on equality"
+    ],
+    "unresolved": [
+      "helper/calendar/day boundary contracts",
+      "month rollover and interest formula/rounding",
+      "business-day/holiday scheduling",
+      "full news order initialization and fortune eligibility"
+    ]
+  },
+  "remainingCall": {
+    "source": "asm/rich4_player_core_actions.asm:loc_0041b302",
+    "call": "fcn_0044f230(player, card table byte +5)",
+    "status": "tail feedback/statistics routine not resolved; not implemented or claimed equivalent"
+  }
+}

@@ -1,0 +1,188 @@
+{
+  "players": 4,
+  "commands": 884,
+  "turn": 121,
+  "auto": 272,
+  "human": 82,
+  "acquisitions": [
+    {
+      "id": "player-1",
+      "ai": false,
+      "item": "card:05",
+      "turn": 49,
+      "action": "magic",
+      "evidence": [
+        {
+          "node": 35,
+          "group": 3,
+          "targets": [
+            "player-1"
+          ],
+          "effect": 6,
+          "title": "得一张卡片",
+          "rows": [
+            {
+              "playerId": "player-1",
+              "lines": [
+                "获得换屋卡。"
+              ],
+              "pointsBefore": 0,
+              "pointsAfter": 0,
+              "cashBefore": 39100,
+              "cashAfter": 39100,
+              "bankBefore": 51600,
+              "bankAfter": 51600,
+              "stopBefore": 0,
+              "stopAfter": 0,
+              "previousBefore": 36,
+              "previousAfter": 36,
+              "received": {
+                "itemId": "card:05",
+                "discarded": null
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "player-4",
+      "ai": true,
+      "item": "card:04",
+      "turn": 84,
+      "action": "magic",
+      "evidence": [
+        {
+          "node": 35,
+          "group": 4,
+          "targets": [
+            "player-4"
+          ],
+          "effect": 6,
+          "title": "得一张卡片",
+          "rows": [
+            {
+              "playerId": "player-4",
+              "lines": [
+                "获得换地卡。"
+              ],
+              "pointsBefore": 0,
+              "pointsAfter": 0,
+              "cashBefore": 950,
+              "cashAfter": 950,
+              "bankBefore": 95400,
+              "bankAfter": 95400,
+              "stopBefore": 0,
+              "stopAfter": 0,
+              "previousBefore": 36,
+              "previousAfter": 36,
+              "received": {
+                "itemId": "card:04",
+                "discarded": null
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "player-4",
+      "ai": true,
+      "item": "card:12",
+      "turn": 100,
+      "action": "animationDone",
+      "evidence": [
+        "玩家4附身大福神，期限7次自身行动边界。",
+        "玩家4获得card:12。",
+        "玩家4获得card:13。"
+      ]
+    }
+  ],
+  "uses": [
+    {
+      "ai": true,
+      "id": "player-4",
+      "item": "card:12",
+      "turn": 120,
+      "target": "japan:land:21",
+      "cost": 0,
+      "changes": [
+        {
+          "before": {
+            "id": "japan:land:21",
+            "ownerId": "player-1",
+            "level": 1,
+            "basePrice": 2000,
+            "buildingType": 0,
+            "priceStatus": 0,
+            "research": null
+          },
+          "after": {
+            "id": "japan:land:21",
+            "ownerId": "player-1",
+            "level": 0,
+            "basePrice": 2000,
+            "buildingType": 0,
+            "priceStatus": 0,
+            "research": null
+          }
+        }
+      ]
+    }
+  ],
+  "cancellations": [
+    {
+      "ai": false,
+      "id": "player-1",
+      "item": "card:05",
+      "turn": 85
+    }
+  ],
+  "prefixes": [
+    "card:04-acquired",
+    "cancel-before",
+    "cancel-after",
+    "card:12-acquired",
+    "card:12-paused",
+    "card:12-resumed",
+    "card:12-confirm-before",
+    "card:12-confirm-after"
+  ],
+  "report": {
+    "policy": "estate-v1",
+    "toolWindows": [
+      "tool:08",
+      "tool:09",
+      "card:12"
+    ],
+    "crossChecks": [],
+    "route": "4",
+    "terminal": false,
+    "players": 4,
+    "normalSpeed": true,
+    "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+    "commands": 884,
+    "auto": 272,
+    "human": 82,
+    "lifecycle": [
+      "pause stops waiting",
+      "resume",
+      "reset dialog cancel",
+      "reset",
+      "replace with humans",
+      "exit cleanup",
+      "fullscreen",
+      "390px"
+    ],
+    "cleanup": {
+      "raf": 0,
+      "canvas": 0
+    },
+    "errors": []
+  },
+  "hashes": {
+    "replay": "4f389ceed7b930c8a65c1071ec69ed1830875ebdd44780d4d14b18f5c7743cbe",
+    "state": "0235423d342d65ac965c2b40be137b2529b6adc0bdb1303a9320d8c8241b9abb",
+    "events": "f8d8fcd73310fbf39852bc6c472e4bbed5d07fed0c746649837d386aaae68efa"
+  }
+}

@@ -1,0 +1,180 @@
+{
+  "stage": "S2-03y",
+  "source": "real original Japan UI; normal speed; auth-only fixture; no world injection",
+  "seed": "magic-nested-1",
+  "players": 4,
+  "commands": 276,
+  "turn": 30,
+  "date": "1998-01-08",
+  "calls": 3,
+  "collections": 0,
+  "reactions": 0,
+  "auctions": 2,
+  "transfers": 2,
+  "multiSeats": 0,
+  "continuationCommands": 11,
+  "receipts": [
+    {
+      "node": 35,
+      "group": 5,
+      "targets": [
+        "player-2"
+      ],
+      "effect": 1,
+      "title": "接连三次命运",
+      "rows": [
+        {
+          "playerId": "player-2",
+          "lines": [
+            "第1次命运：路上捡到钱。",
+            "第2次命运：违规穿越道路罚款。",
+            "第3次命运：遗失钱包。"
+          ],
+          "pointsBefore": 20,
+          "pointsAfter": 20,
+          "cashBefore": 36493,
+          "cashAfter": 28493,
+          "bankBefore": 50000,
+          "bankAfter": 50000,
+          "stopBefore": 0,
+          "stopAfter": 0,
+          "previousBefore": 34,
+          "previousAfter": 34,
+          "nested": {
+            "fortunes": [
+              {
+                "id": 20,
+                "title": "路上捡到钱",
+                "bankrupt": false,
+                "cursor": 5
+              },
+              {
+                "id": 14,
+                "title": "违规穿越道路罚款",
+                "bankrupt": false,
+                "cursor": 6
+              },
+              {
+                "id": 23,
+                "title": "遗失钱包",
+                "bankrupt": false,
+                "cursor": 7
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "node": 35,
+      "group": 4,
+      "targets": [
+        "player-1",
+        "player-2",
+        "player-3",
+        "player-4"
+      ],
+      "effect": 11,
+      "title": "拍卖脚下地产",
+      "rows": [
+        {
+          "playerId": "player-1",
+          "lines": [
+            "玩家 2现金支付 600 元，存入本位玩家银行。"
+          ],
+          "pointsBefore": 0,
+          "pointsAfter": 0,
+          "cashBefore": 39700,
+          "cashAfter": 39700,
+          "bankBefore": 50000,
+          "bankAfter": 50600,
+          "stopBefore": 0,
+          "stopAfter": 0,
+          "previousBefore": 86,
+          "previousAfter": 86,
+          "nested": {
+            "fortunes": [],
+            "auction": {
+              "propertyId": "japan:land:1",
+              "originalOwner": "player-1",
+              "ownerAfter": "player-2",
+              "winnerId": "player-2",
+              "amount": 600
+            }
+          }
+        },
+        {
+          "playerId": "player-2",
+          "lines": [
+            "玩家 1现金支付 6100 元，存入本位玩家银行。"
+          ],
+          "pointsBefore": 20,
+          "pointsAfter": 20,
+          "cashBefore": 21893,
+          "cashAfter": 21893,
+          "bankBefore": 50000,
+          "bankAfter": 56100,
+          "stopBefore": 0,
+          "stopAfter": 0,
+          "previousBefore": 38,
+          "previousAfter": 38,
+          "nested": {
+            "fortunes": [],
+            "auction": {
+              "propertyId": "japan:facility:2",
+              "originalOwner": "player-2",
+              "ownerAfter": "player-1",
+              "winnerId": "player-1",
+              "amount": 6100
+            }
+          }
+        },
+        {
+          "playerId": "player-3",
+          "lines": [
+            "当前不在地产或住宿、旅行、拘留中，跳过拍卖。"
+          ],
+          "pointsBefore": 60,
+          "pointsAfter": 60,
+          "cashBefore": 48500,
+          "cashAfter": 48500,
+          "bankBefore": 50000,
+          "bankAfter": 50000,
+          "stopBefore": 0,
+          "stopAfter": 0,
+          "previousBefore": 34,
+          "previousAfter": 34,
+          "nested": {
+            "fortunes": []
+          },
+          "skipped": true
+        },
+        {
+          "playerId": "player-4",
+          "lines": [
+            "当前不在地产或住宿、旅行、拘留中，跳过拍卖。"
+          ],
+          "pointsBefore": 50,
+          "pointsAfter": 50,
+          "cashBefore": 48500,
+          "cashAfter": 48500,
+          "bankBefore": 50000,
+          "bankAfter": 50000,
+          "stopBefore": 0,
+          "stopAfter": 0,
+          "previousBefore": 30,
+          "previousAfter": 30,
+          "nested": {
+            "fortunes": []
+          },
+          "skipped": true
+        }
+      ]
+    }
+  ],
+  "hashes": {
+    "replay": "9316e7f3a554234846154c57272b7e6f6f02541def5908f4538baba24f905d3b",
+    "state": "4dfc0e2292a69fc3fd91373f03178374bbd60d9e1ff0407ec89c425e8d6a919b",
+    "events": "13af0f7ecc5aa331eb468d1745fce6c2d7d2f21ed44c56eb14c6ec802016df94"
+  }
+}

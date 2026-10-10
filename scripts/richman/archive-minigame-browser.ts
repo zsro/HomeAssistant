@@ -1,0 +1,4 @@
+import {verifyMinigames} from './verify-minigames';
+import {readFileSync,writeFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+for(const node of[22,24,26]){const dir=`/private/tmp/richman-unified-ui-03ab-${node}`,r=JSON.parse(readFileSync(dir+'/replay.json','utf8')),v=verifyMinigames(r),report=JSON.parse(readFileSync(dir+'/results.json','utf8')),hash=(x:unknown)=>createHash('sha256').update(JSON.stringify(x)).digest('hex'),base=`frontend/src/features/richman/game/fixtures/minigames-v41-${node}`;const{state,events,...summary}=v;writeFileSync(base+'-replay.json',JSON.stringify(r));writeFileSync(base+'-manifest.json',JSON.stringify({...summary,report,hashes:{replay:hash(r),state:hash(state),events:hash(events)}},null,2)+'\n');console.log(node,summary.commands,summary.inputs,summary.ticks,summary.receipts);}

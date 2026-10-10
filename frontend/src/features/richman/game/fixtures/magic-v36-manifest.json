@@ -1,0 +1,79 @@
+{
+  "stage": "S2-03w",
+  "source": "real original Japan UI; normal speed; auth-only fixture; no world injection",
+  "seed": "magic-1",
+  "players": 4,
+  "commands": 567,
+  "turn": 83,
+  "date": "1998-01-21",
+  "receipts": 6,
+  "effects": [
+    0,
+    3,
+    4,
+    6,
+    7,
+    8
+  ],
+  "groups": [
+    6,
+    0,
+    10,
+    1,
+    9
+  ],
+  "nodes": [
+    73,
+    35
+  ],
+  "received": [
+    {
+      "playerId": "player-2",
+      "itemId": "card:30",
+      "discarded": null
+    }
+  ],
+  "sold": [
+    {
+      "effect": 0,
+      "playerId": "player-4",
+      "sold": [
+        {
+          "itemId": "card:17",
+          "count": 1,
+          "price": 20
+        }
+      ],
+      "pointsBefore": 10,
+      "pointsAfter": 30
+    },
+    {
+      "effect": 8,
+      "playerId": "player-4",
+      "sold": [
+        {
+          "itemId": "tool:01",
+          "count": 1,
+          "price": 15
+        },
+        {
+          "itemId": "tool:02",
+          "count": 1,
+          "price": 30
+        },
+        {
+          "itemId": "tool:09",
+          "count": 1,
+          "price": 30
+        }
+      ],
+      "pointsBefore": 30,
+      "pointsAfter": 105
+    }
+  ],
+  "hashes": {
+    "replay": "e7b02e4f03c4fd0fcc1fb3e4b7d228f77a8b45b9d066207bc0909d980283f38b",
+    "state": "c7a962938007822e618af9a0295aaf802ac99896380654f899dc7f21c05d0035",
+    "events": "0bcf3c878c32bd2c53516d157a43696f38c778ce6763827847d662e992069b47"
+  }
+}

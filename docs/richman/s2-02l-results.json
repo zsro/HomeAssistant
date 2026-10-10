@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-05",
+  "status": "implemented-awaiting-unified-acceptance",
+  "rulesId": "japan-tools-candidate-v11",
+  "itemFingerprint": "a23a792b",
+  "previousFingerprints": {
+    "v10": "d9e59846",
+    "v9": "6be76c90",
+    "v8": "717e58c0"
+  },
+  "implementedThisGroup": 7,
+  "acceptedThisGroup": 0,
+  "implementedTotal": 36,
+  "acceptedTotal": 18,
+  "pendingAcceptance": 18,
+  "unimplemented": 7,
+  "staticTypecheck": {
+    "command": "node frontend/node_modules/typescript/bin/tsc -p frontend/tsconfig.app.json --noEmit --pretty false",
+    "exitCode": 0
+  },
+  "automatedTests": {
+    "executed": false,
+    "reason": "User deferred automated tests until all 43 items implemented"
+  },
+  "browser": {
+    "executed": false,
+    "replay": null,
+    "screenshots": []
+  },
+  "gameplayExecuted": false,
+  "oldReplaysRerun": false,
+  "next": "G6 four items with deity and stock foundations; new v12; unified tests later",
+  "limitations": [
+    "projected unique anchors instead of original pixel hitmap",
+    "road-center missile target limited to nearby 440 view",
+    "research idle/turnEnd entry and owner-change cancellation are explicit Web choices",
+    "engineer temporary text status and walking sprites",
+    "special actors, gods, insurance and precise source-runtime comparison deferred",
+    "G7 research products not enabled"
+  ]
+}

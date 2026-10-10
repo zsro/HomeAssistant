@@ -1,0 +1,52 @@
+{
+  "kind": "rent",
+  "players": 2,
+  "commands": 1036,
+  "turn": 125,
+  "date": "1998-03-04",
+  "rentSettled": 1,
+  "bankruptcies": 0,
+  "auctionPaid": 0,
+  "stockPublic": 0,
+  "loanActual": 0,
+  "dividendActual": 0,
+  "lotteries": 2,
+  "prizes": 0,
+  "forced": [
+    {
+      "type": "stockTraded",
+      "stockId": "jp:24",
+      "traderId": "player-1",
+      "side": "sell",
+      "quantity": 1,
+      "price": 14700,
+      "amount": 147,
+      "forced": true,
+      "sequence": 1677,
+      "commandId": "command-1035",
+      "playerId": "player-1",
+      "turn": 125
+    }
+  ],
+  "notices": [],
+  "receipts": [],
+  "prefixes": [
+    "necessary-sale",
+    "rent-settlement"
+  ],
+  "report": {
+    "normalSpeed": true,
+    "map": "original Japan; real UI commands; auth-only fixture; no game-state injection",
+    "calendarCommon": true,
+    "errors": [],
+    "cleanup": {
+      "raf": 0,
+      "canvas": 0
+    }
+  },
+  "hashes": {
+    "replay": "ce5821d33551adc0058cd52a6bc81f7e455812bc28f25aff9ac4152124efae62",
+    "state": "1c0044a50382bb37ff3e726c5ad0183ed7c20cbc529c9ca48d64d7ac06b49c9c",
+    "events": "e79869e20f1867e1a848c5c58bf5c758ccb7d656e9b524d02190694a65dc0b18"
+  }
+}

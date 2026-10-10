@@ -1,0 +1,63 @@
+{
+  "players": 2,
+  "commands": 466,
+  "computer": 88,
+  "human": 91,
+  "dates": 32,
+  "alternate": 0,
+  "turn": 65,
+  "phase": "idle",
+  "kinds": {
+    "idle": 64,
+    "branch": 2,
+    "buy": 24,
+    "turnEnd": 64,
+    "news": 2,
+    "bank": 4,
+    "minigame": 2,
+    "subscription": 5,
+    "magic": 3,
+    "shop": 2,
+    "company": 2,
+    "rent": 2,
+    "fortune": 2,
+    "upgrade": 1
+  },
+  "prefixes": [
+    "paused",
+    "resumed",
+    "computer-first",
+    "date",
+    "return-human",
+    "computer-bank",
+    "computer-upgrade"
+  ],
+  "report": {
+    "players": 2,
+    "normalSpeed": true,
+    "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+    "commands": 466,
+    "auto": 88,
+    "human": 91,
+    "lifecycle": [
+      "pause stops waiting",
+      "resume",
+      "reset dialog cancel",
+      "reset",
+      "replace with humans",
+      "exit cleanup",
+      "fullscreen",
+      "390px"
+    ],
+    "cleanup": {
+      "raf": 0,
+      "canvas": 0
+    },
+    "errors": []
+  },
+  "hashes": {
+    "replay": "793888640e8b77da25de79314481c28eee18d8777697f07bf1e322de80d592dc",
+    "state": "c6165f2cf764baa13a10f9a9698fdc779316fc7518255e0e6679c6a9cf99830b",
+    "events": "1caa01b4a92d0cf38bb9f069f9f9b6d506476236b18471c88c8b334ab6648689"
+  }
+}

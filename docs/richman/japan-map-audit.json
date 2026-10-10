@@ -1,0 +1,4484 @@
+{
+  "schemaVersion": 1,
+  "mapId": "japan",
+  "resourceIndex": 2,
+  "sourceFiles": {
+    "MapDat.MKF": {
+      "bytes": 36560,
+      "sha256": "4dc6a47efe03f64484e6b9ac5ee31489b7f42fc369c0296f2f0b8d63845294b1"
+    },
+    "rich4.exe": {
+      "bytes": 591360,
+      "sha256": "110b29f9d2fadcff3836eb69ec380aa264951859c90955da6e11158d2f956a13"
+    }
+  },
+  "resourceSha256": "9177f5d654721cff09afa1d390eaa3fef7a6ac20d244bb56c753980f621317ac",
+  "exeTableCandidates": {
+    "initialFunds": {
+      "values": [
+        300000,
+        200000,
+        100000,
+        50000,
+        30000,
+        10000
+      ],
+      "fileOffsets": [
+        431680
+      ],
+      "meaningStatus": "candidate; byte match does not prove runtime behavior"
+    },
+    "dayLimits": {
+      "values": [
+        0,
+        730,
+        365,
+        182,
+        91,
+        30
+      ],
+      "fileOffsets": [
+        431764
+      ],
+      "meaningStatus": "candidate; byte match does not prove runtime behavior"
+    },
+    "wealthMultipliers": {
+      "values": [
+        0,
+        100,
+        50,
+        10,
+        5,
+        3
+      ],
+      "fileOffsets": [
+        431788
+      ],
+      "meaningStatus": "candidate; byte match does not prove runtime behavior"
+    }
+  },
+  "reference": {
+    "repository": "https://github.com/mytbk/rich4",
+    "commit": "ec7d70e693059d1e781d9d1cc2ad7f36d360d39e",
+    "exeSha256": "5a90aee28ee5f7a5c3ba5cb935c9e55751a529c25fcd91208748a66293569550",
+    "versionMatchesLocalExe": false,
+    "meaningStatus": "candidate-until-local-behavior-verified"
+  },
+  "sections": {
+    "nodes": {
+      "count": 110,
+      "offset": 40,
+      "stride": 40,
+      "end": 4480
+    },
+    "lands": {
+      "count": 49,
+      "offset": 4480,
+      "stride": 52,
+      "end": 7080
+    },
+    "facilities": {
+      "count": 5,
+      "offset": 7080,
+      "stride": 56,
+      "end": 7416
+    },
+    "companies": {
+      "count": 6,
+      "offset": 7416,
+      "stride": 52,
+      "end": 7780
+    },
+    "landmarks": {
+      "count": 16,
+      "offset": 7780,
+      "stride": 28,
+      "end": 8256
+    }
+  },
+  "summary": {
+    "counts": {
+      "nodes": 110,
+      "lands": 49,
+      "facilities": 5,
+      "companies": 6,
+      "landmarks": 16
+    },
+    "reachableNodes": 110,
+    "oneWayEdges": [],
+    "nodeTargets": {
+      "companies": 11,
+      "facilities": 10,
+      "lands": 49,
+      "unbound": 38,
+      "unclassified": 2
+    },
+    "eventCodeCandidates": {
+      "0": 76,
+      "1": 1,
+      "2": 3,
+      "3": 4,
+      "4": 1,
+      "5": 1,
+      "6": 1,
+      "7": 1,
+      "8": 1,
+      "9": 2,
+      "10": 2,
+      "11": 3,
+      "12": 8,
+      "13": 1,
+      "14": 1,
+      "15": 2,
+      "16": 2
+    },
+    "unclassifiedKinds": [
+      8001,
+      8002
+    ],
+    "unboundRecords": {
+      "lands": [],
+      "facilities": [],
+      "companies": []
+    },
+    "initialPropertyBytes": {
+      "lands": {
+        "ownerByte": [
+          0
+        ],
+        "levelByte": [
+          0
+        ],
+        "byte18": [
+          0
+        ]
+      },
+      "facilities": {
+        "ownerByte": [
+          0
+        ],
+        "levelByte": [
+          0
+        ],
+        "byte18": [
+          0
+        ]
+      }
+    }
+  },
+  "nodes": [
+    {
+      "id": 1,
+      "offset": 80,
+      "x": 1368,
+      "y": 1656,
+      "rawHex": "58057806bbc8a6e60000000000000000000000000000000003006e000000000076170e000e000000",
+      "adjacentSlots": [
+        3,
+        110,
+        0,
+        0
+      ],
+      "adjacent": [
+        3,
+        110
+      ],
+      "kind": 6006,
+      "word22": 14,
+      "statusBits": 14,
+      "eventCodeCandidate": 14,
+      "target": {
+        "table": "companies",
+        "id": 6
+      }
+    },
+    {
+      "id": 2,
+      "offset": 120,
+      "x": 1032,
+      "y": 1655,
+      "rawHex": "08047706a952b9420000000000000000000000000000000008000700000000000000030003000000",
+      "adjacentSlots": [
+        8,
+        7,
+        0,
+        0
+      ],
+      "adjacent": [
+        8,
+        7
+      ],
+      "kind": 0,
+      "word22": 3,
+      "statusBits": 3,
+      "eventCodeCandidate": 3,
+      "target": null
+    },
+    {
+      "id": 3,
+      "offset": 160,
+      "x": 1296,
+      "y": 1656,
+      "rawHex": "10057806a46aa8c1000000000000000000000000000000000400010000000000e307000000000000",
+      "adjacentSlots": [
+        4,
+        1,
+        0,
+        0
+      ],
+      "adjacent": [
+        4,
+        1
+      ],
+      "kind": 2019,
+      "word22": 0,
+      "statusBits": 0,
+      "eventCodeCandidate": 0,
+      "target": {
+        "table": "lands",
+        "id": 19
+      }
+    },
+    {
+      "id": 4,
+      "offset": 200,
+      "x": 1248,
+      "y": 1656,
+      "rawHex": "e0047806a46aa8c1000000000000000000000000000000000500030000000000e407000000000000",
+      "adjacentSlots": [
+        5,
+        3,
+        0,
+        0
+      ],
+      "adjacent": [
+        5,
+        3
+      ],
+      "kind": 2020,
+      "word22": 0,
+      "statusBits": 0,
+      "eventCodeCandidate": 0,
+      "target": {
+        "table": "lands",
+        "id": 20
+      }
+    },
+    {
+      "id": 5,
+      "offset": 240,
+      "x": 1200,
+      "y": 1656,
+      "rawHex": "b0047806a46aa8c1000000000000000000000000000000000600040000000000e507000000000000",
+      "adjacentSlots": [
+        6,
+        4,
+        0,
+        0
+      ],
+      "adjacent": [
+        6,
+        4
+      ],
+      "kind": 2021,
+      "word22": 0,
+      "statusBits": 0,
+      "eventCodeCandidate": 0,
+      "target": {
+        "table": "lands",
+        "id": 21
+      }
+    },
+    {
+      "id": 6,
+      "offset": 280,
+      "x": 1152,
+      "y": 1656,
+      "rawHex": "80047806a46aa8c1000000000000000000000000000000000700050000000000e607000000000000",
+      "adjacentSlots": [
+        7,
+        5,
+        0,
+        0
+      ],
+      "adjacent": [
+        7,
+        5
+      ],
+      "kind": 2022,
+      "word22": 0,
+      "statusBits": 0,
+      "eventCodeCandidate": 0,
+      "target": {
+        "table": "lands",
+        "id": 22
+      }
+    },
+    {
+      "id": 7,
+      "offset": 320,
+      "x": 1103,
+      "y": 1656,
+      "rawHex": "4f047806a46aa8c1000000000000000000000000000000000200060000000000e707000000000000",
+      "adjacentSlots": [
+        2,
+        6,
+        0,
+        0
+      ],
+      "adjacent": [
+        2,
+        6
+      ],
+      "kind": 2023,
+      "word22": 0,
+      "statusBits": 0,
+      "eventCodeCandidate": 0,
+      "target": {
+        "table": "lands",
+        "id": 23
+      }
+    },
+    {
+      "id": 8,
+      "offset": 360,
+      "x": 981,
+      "y": 1706,
+      "rawHex": "d503aa06afaba4e1000000000000000000000000000000000900020000000000e807000000000000",
+      "adjacentSlots": [
+        9,
+        2,
+        0,
+        0
+      ],
+      "adjacent": [
+        9,
+        2
+      ],
+      "kind": 2024,
+      "word22": 0,
+      "statusBits": 0,
+      "eventCodeCandidate": 0,
+      "target": {
+        "table": "lands",
+        "id": 24
+      }
+    },
+    {
+      "id": 9,
+      "offset": 400,
+      "x": 944,
+      "y": 1741,
+      "rawHex": "b003cd06afaba4e1000000000000000000000000000000000a00080000000000e907000000000000",
+      "adjacentSlots": [
+        10,
+        8,
+        0,
+        0
+      ],
+      "adjacent": [
+        10,
+        8
+      ],
+      "kind": 2025,
+      "word22": 0,
+      "statusBits": 0,
+      "eventCodeCandidate": 0,
+      "target": {
+        "table": "lands",
+        "id": 25
+      }
+    },
+    {
+      "id": 10,
+      "offset": 440,
+      "x": 910,
+      "y": 1774,
+      "rawHex": "8e03ee06afaba4e1000000000000000000000000000000000b00090000000000ea07000000000000",
+      "adjacentSlots": [
+        11,
+        9,
+        0,
+        0
+      ],
+      "adjacent": [
+        11,
+        9
+      ],
+      "kind": 2026,
+      "word22": 0,
+      "statusBits": 0,
+      "eventCodeCandidate": 0,
+      "target": {
+        "table": "lands",
+        "id": 26
+      }
+    },
+    {
+      "id": 11,
+      "offset": 480,
+      "x": 875,
+      "y": 1811,
+      "rawHex": "6b031307afaba4e1000000000000000000000000000000000c000a0000000000eb07000000000000",
+      "adjacentSlots": [
+        12,
+        10,
+        0,
+        0
+      ],
+      "adjacent": [
+        12,
+        10
+      ],
+      "kind": 2027,
+      "word22": 0,
+      "statusBits": 0,
+      "eventCodeCandidate": 0,
+      "target": {
+        "table": "lands",
+        "id": 27
+      }
+    },
+    {
+      "id": 12,
+      "offset": 520,
+      "x": 839,
+      "y": 1846,
+      "rawHex": "47033607afaba4e1000000000000000000000000000000000d000b0000000000ec07000000000000",
+      "adjacentSlots": [
+        13,
+        11,
+        0,
+        0
+      ],
+      "adjacent": [
+        13,
+        11
+      ],
+      "kind": 2028,
+      "word22": 0,
+      "statusBits": 0,
+      "eventCodeCandidate": 0,
+      "target": {
+        "table": "lands",
+        "id": 28
+      }
+    },
+    {
+      "id": 13,
+      "offset": 560,
+      "x": 792,
+      "y": 1896,
+      "rawHex": "18036807b773bb44000000000000000000000000000000000e000c00000000000000020002000000",
+      "adjacentSlots": [
+        14,
+        12,
+        0,
+        0
+      ],
+      "adjacent": [
+        14,
+        12
+      ],
+      "kind": 0,
+      "word22": 2,
+      "statusBits": 2,
+      "eventCodeCandidate": 2,
+      "target": null
+    },
+    {
+      "id": 14,
+      "offset": 600,
+      "x": 863,
+      "y": 1920,
+      "rawHex": "5f038007b16fa2b0a2afc2490000000000000000000000000f000d000000000000000c000c000000",
+      "adjacentSlots": [
+        15,
+        13,
+        0,
+        0
+      ],
+      "adjacent": [
+        15,
+        13
+      ],
+      "kind": 0,
+      "word22": 12,
+      "statusBits": 12,
+      "eventCodeCandidate": 12,
+      "target": null
+    },
+    {
+      "id": 15,
+      "offset": 640,
+      "x": 888,
+      "y": 1968,
+      "rawHex": "7803b007000000000000000000000000000000000000000010000e00000000000000110000000000",
+      "adjacentSlots": [
+        16,
+        14,
+        0,
+        0
+      ],
+      "adjacent": [
+        16,
+        14
+      ],
+      "kind": 0,
+      "word22": 17,
+      "statusBits": 0,
+      "eventCodeCandidate": 0,
+      "target": null
+    },
+    {
+      "id": 16,
+      "offset": 680,
+      "x": 887,
+      "y": 2015,
+      "rawHex": "7703df07b16fa2b0a2afc24900000000000000000000000011000f000000000000000c000c000000",
+      "adjacentSlots": [
+        17,
+        15,
+        0,
+        0
+      ],
+      "adjacent": [
+        17,
+        15
+      ],
+      "kind": 0,
+      "word22": 12,
+      "statusBits": 12,
+      "eventCodeCandidate": 12,
+      "target": null
+    },
+    {
+      "id": 17,
+      "offset": 720,
+      "x": 887,
+      "y": 2064,
+      "rawHex": "77031008a57cb0ea0000000000000000000000000000000012001000000000000000110000000000",
+      "adjacentSlots": [
+        18,
+        16,
+        0,
+        0
+      ],
+      "adjacent": [
+        18,
+        16
+      ],
+      "kind": 0,
+      "word22": 17,
+      "statusBits": 0,
+      "eventCodeCandidate": 0,
+      "target": null
+    },
+    {
+      "id": 18,
+      "offset": 760,
+      "x": 839,
+      "y": 2111,
+      "rawHex": "47033f08b16fa2b0a2afc249000000000000000000000000130011000000000000000c000c000000",
+      "adjacentSlots": [
+        19,
+        17,
+        0,
+        0
+      ],
+      "adjacent": [
+        19,
+        17
+      ],
+      "kind": 0,
+      "word22": 12,
+      "statusBits": 12,
+      "eventCodeCandidate": 12,
+      "target": null
+    },
+    {
+      "id": 19,
+      "offset": 800,
+      "x": 792,
+      "y": 2160,
+      "rawHex": "18037008a952b9420000000000000000000000000000000014001200000000000000030003000000",
+      "adjacentSlots": [
+        20,
+        18,
+        0,
+        0
+      ],
+      "adjacent": [
+        20,
+        18
+      ],
+      "kind": 0,
+      "word22": 3,
+      "statusBits": 3,
+      "eventCodeCandidate": 3,
+      "target": null
+    },
+    {
+      "id": 20,
+      "offset": 840,
+      "x": 719,
+      "y": 2160,
+      "rawHex": "cf027008b16fa2b4a2afc249000000000000000000000000150013000000000000000a000a000000",
+      "adjacentSlots": [
+        21,
+        19,
+        0,
+        0
+      ],
+      "adjacent": [
+        21,
+        19
+      ],
+      "kind": 0,
+      "word22": 10,
+      "statusBits": 10,
+      "eventCodeCandidate": 10,
+      "target": null
+    },
+    {
+      "id": 21,
+      "offset": 880,
+      "x": 671,
+      "y": 2158,
+      "rawHex": "9f026e08a57cb0ea0000000000000000000000000000000016001400000000000000110000000000",
+      "adjacentSlots": [
+        22,
+        20,
+        0,
+        0
+      ],
+      "adjacent": [
+        22,
+        20
+      ],
+      "kind": 0,
+      "word22": 17,
+      "statusBits": 0,
+      "eventCodeCandidate": 0,
+      "target": null
+    },
+    {
+      "id": 22,
+      "offset": 920,
+      "x": 623,
+      "y": 2111,
+      "rawHex": "6f023f08a5f8c35aabf5c45f00000000000000000000000017001500000000000000060006000000",
+      "adjacentSlots": [
+        23,
+        21,
+        0,
+        0
+      ],
+      "adjacent": [
+        23,
+        21
+      ],
+      "kind": 0,
+      "word22": 6,
+      "statusBits": 6,
+      "eventCodeCandidate": 6,
+      "target": null
+    },
+    {
+      "id": 23,
+      "offset": 960,
+      "x": 599,
+      "y": 2063,
+      "rawHex": "57020f08b16fa2b2a2afc249000000000000000000000000180016000000000000000b000b000080",
+      "adjacentSlots": [
+        24,
+        22,
+        0,
+        0
+      ],
+      "adjacent": [
+        24,
+        22
+      ],
+      "kind": 0,
+      "word22": 11,
+      "statusBits": 2147483659,
+      "eventCodeCandidate": 11,
+      "target": null
+    },
+    {
+      "id": 24,
+      "offset": 1000,
+      "x": 599,
+      "y": 2016,
+      "rawHex": "5702e007a443b16daef0b27900000000000000000000000019001700000000000000080007000080",
+      "adjacentSlots": [
+        25,
+        23,
+        0,
+        0
+      ],
+      "adjacent": [
+        25,
+        23
+      ],
+      "kind": 0,
+      "word22": 8,
+      "statusBits": 2147483655,
+      "eventCodeCandidate": 7,
+      "target": null
+    },
+    {
+      "id": 25,
+      "offset": 1040,
+      "x": 552,
+      "y": 1968,
+      "rawHex": "2802b007b16fa2b0a2afc2490000000000000000000000001a0018000000000000000c000c000080",
+      "adjacentSlots": [
+        26,
+        24,
+        0,
+        0
+      ],
+      "adjacent": [
+        26,
+        24
+      ],
+      "kind": 0,
+      "word22": 12,
+      "statusBits": 2147483660,
+      "eventCodeCandidate": 12,
+      "target": null
+    },
+    {
+      "id": 26,
+      "offset": 1080,
+      "x": 503,
+      "y": 1968,
+      "rawHex": "f701b007b3dfb171a4d1adb00000000000000000000000001b001900000000000000070008000080",
+      "adjacentSlots": [
+        27,
+        25,
+        0,
+        0
+      ],
+      "adjacent": [
+        27,
+        25
+      ],
+      "kind": 0,
+      "word22": 7,
+      "statusBits": 2147483656,
+      "eventCodeCandidate": 8,
+      "target": null
+    },
+    {
+      "id": 27,
+      "offset": 1120,
+      "x": 456,
+      "y": 2016,
+      "rawHex": "c801e007b16fa2b2a2afc2490000000000000000000000001c001a000000000000000b000b000080",
+      "adjacentSlots": [
+        28,
+        26,
+        0,
+        0
+      ],
+      "adjacent": [
+        28,
+        26
+      ],
+      "kind": 0,
+      "word22": 11,
+      "statusBits": 2147483659,
+      "eventCodeCandidate": 11,
+      "target": null
+    },
+    {
+      "id": 28,
+      "offset": 1160,
+      "x": 408,
+      "y": 2064,
+      "rawHex": "98011008bcd6b37a000000000000000000000000000000001d001b00000000000000090009000080",
+      "adjacentSlots": [
+        29,
+        27,
+        0,
+        0
+      ],
+      "adjacent": [
+        29,
+        27
+      ],
+      "kind": 0,
+      "word22": 9,
+      "statusBits": 2147483657,
+      "eventCodeCandidate": 9,
+      "target": null
+    },
+    {
+      "id": 29,
+      "offset": 1200,
+      "x": 336,
+      "y": 2065,
+      "rawHex": "50011108b16fa2b0a2afc2490000000000000000000000001e001c000000000000000c000c000080",
+      "adjacentSlots": [
+        30,
+        28,
+        0,
+        0
+      ],
+      "adjacent": [
+        30,
+        28
+      ],
+      "kind": 0,
+      "word22": 12,
+      "statusBits": 2147483660,
+      "eventCodeCandidate": 12,
+      "target": null
+    },
+    {
+      "id": 30,
+      "offset": 1240,
+      "x": 287,
+      "y": 2064,
+      "rawHex": "1f011008a445a67b000000000000000000000000000000001f001d00000000000000110000000000",
+      "adjacentSlots": [
+        31,
+        29,
+        0,
+        0
+      ],
+      "adjacent": [
+        31,
+        29
+      ],
+      "kind": 0,
+      "word22": 17,
+      "statusBits": 0,
+      "eventCodeCandidate": 0,
+      "target": null
+    },
+    {
+      "id": 31,
+      "offset": 1280,
+      "x": 240,
+      "y": 2016,
+      "rawHex": "f000e007b16fa2b4a2afc24900000000000000000000000020001e000000000000000a000a000000",
+      "adjacentSlots": [
+        32,
+        30,
+        0,
+        0
+      ],
+      "adjacent": [
+        32,
+        30
+      ],
+      "kind": 0,
+      "word22": 10,
+      "statusBits": 10,
+      "eventCodeCandidate": 10,
+      "target": null
+    },
+    {
+      "id": 32,
+      "offset": 1320,
+      "x": 239,
+      "y": 1968,
+      "rawHex": "ef00b007a445a67b0000000000000000000000000000000021001f00000000000000110000000000",
+      "adjacentSlots": [
+        33,
+        31,
+        0,
+        0
+      ],
+      "adjacent": [
+        33,
+        31
+      ],
+      "kind": 0,
+      "word22": 17,
+      "statusBits": 0,
+      "eventCodeCandidate": 0,
+      "target": null
+    },
+    {
+      "id": 33,
+      "offset": 1360,
+      "x": 287,
+      "y": 1920,
+      "rawHex": "1f018007b16fa2b0a2afc249000000000000000000000000220020000000000000000c000c000000",
+      "adjacentSlots": [
+        34,
+        32,
+        0,
+        0
+      ],
+      "adjacent": [
+        34,
+        32
+      ],
+      "kind": 0,
+      "word22": 12,
+      "statusBits": 12,
+      "eventCodeCandidate": 12,
+      "target": null
+    },
+    {
+      "id": 34,
+      "offset": 1400,
+      "x": 335,
+      "y": 1871,
+      "rawHex": "4f014f07000000000000000000000000000000000000000023002100000000000000110000000000",
+      "adjacentSlots": [
+        35,
+        33,
+        0,
+        0
+      ],
+      "adjacent": [
+        35,
+        33
+      ],
+      "kind": 0,
+      "word22": 17,
+      "statusBits": 0,
+      "eventCodeCandidate": 0,
+      "target": null
+    },
+    {
+      "id": 35,
+      "offset": 1440,
+      "x": 383,
+      "y": 1824,
+      "rawHex": "7f012007c55daa6babce000000000000000000000000000024002200000000000000100010000000",
+      "adjacentSlots": [
+        36,
+        34,
+        0,
+        0
+      ],
+      "adjacent": [
+        36,
+        34
+      ],
+      "kind": 0,
+      "word22": 16,
+      "statusBits": 16,
+      "eventCodeCandidate": 16,
+      "target": null
+    },
+    {
+      "id": 36,
+      "offset": 1480,
+      "x": 383,
+      "y": 1752,
+      "rawHex": "7f01d806ae63ae71000000000000000000000000000000002500230000000000ed07000000000000",
+      "adjacentSlots": [
+        37,
+        35,
+        0,
+        0
+      ],
+      "adjacent": [
+        37,
+        35
+      ],
+      "kind": 2029,
+      "word22": 0,
+      "statusBits": 0,
+      "eventCodeCandidate": 0,
+      "target": {
+        "table": "lands",
+        "id": 29
+      }
+    },
+    {
+      "id": 37,
+      "offset": 1520,
+      "x": 383,
+      "y": 1704,
+      "rawHex": "7f01a806ae63ae71000000000000000000000000000000002600240000000000ee07000000000000",
+      "adjacentSlots": [
+        38,
+        36,
+        0,
+        0
+      ],
+      "adjacent": [
+        38,
+        36
+      ],
+      "kind": 2030,
+      "word22": 0,
+      "statusBits": 0,
+      "eventCodeCandidate": 0,
+      "target": {
+        "table": "lands",
+        "id": 30
+      }
+    },
+    {
+      "id": 38,
+      "offset": 1560,
+      "x": 383,
+      "y": 1657,
+      "rawHex": "7f017906ae63ae71000000000000000000000000000000002700250000000000ef07000000000000",
+      "adjacentSlots": [
+        39,
+        37,
+        0,
+        0
+      ],
+      "adjacent": [
+        39,
+        37
+      ],
+      "kind": 2031,
+      "word22": 0,
+      "statusBits": 0,
+      "eventCodeCandidate": 0,
+      "target": {
+        "table": "lands",
+        "id": 31
+      }
+    },
+    {
+      "id": 39,
+      "offset": 1600,
+      "x": 412,
+      "y": 1603,
+      "rawHex": "9c014306bc73ae71000000000000000000000000000000002800260000000000a20f000000000000",
+      "adjacentSlots": [
+        40,
+        38,
+        0,
+        0
+      ],
+      "adjacent": [
+        40,
+        38
+      ],
+      "kind": 4002,
+      "word22": 0,
+      "statusBits": 0,
+      "eventCodeCandidate": 0,
+      "target": {
+        "table": "facilities",
+        "id": 2
+      }
+    },
+    {
+      "id": 40,
+      "offset": 1640,
+      "x": 446,
+      "y": 1569,
+      "rawHex": "be012106bc73ae71000000000000000000000000000000002900270000000000a20f000000000000",
+      "adjacentSlots": [
+        41,
+        39,
+        0,
+        0
+      ],
+      "adjacent": [
+        41,
+        39
+      ],
+      "kind": 4002,
+      "word22": 0,
+      "statusBits": 0,
+      "eventCodeCandidate": 0,
+      "target": {
+        "table": "facilities",
+        "id": 2
+      }
+    },
+    {
+      "id": 41,
+      "offset": 1680,
+      "x": 503,
+      "y": 1511,
+      "rawHex": "f701e705a4bdb6e9000000000000000000000000000000002a002800000000000000010001000000",
+      "adjacentSlots": [
+        42,
+        40,
+        0,
+        0
+      ],
+      "adjacent": [
+        42,
+        40
+      ],
+      "kind": 0,
+      "word22": 1,
+      "statusBits": 1,
+      "eventCodeCandidate": 1,
+      "target": null
+    },
+    {
+      "id": 42,
+      "offset": 1720,
+      "x": 575,
+      "y": 1511,
+      "rawHex": "3f02e705ae56b8f4000000000000000000000000000000002b00290000000000f007000000000000",
+      "adjacentSlots": [
+        43,
+        41,
+        0,
+        0
+      ],
+      "adjacent": [
+        43,
+        41
+      ],
+      "kind": 2032,
+      "word22": 0,
+      "statusBits": 0,
+      "eventCodeCandidate": 0,
+      "target": {
+        "table": "lands",
+        "id": 32
+      }
+    },
+    {
+      "id": 43,
+      "offset": 1760,
+      "x": 623,
+      "y": 1511,
+      "rawHex": "6f02e705addcbcc5000000000000000000000000000000002c002a0000000000f107000000000000",
+      "adjacentSlots": [
+        44,
+        42,
+        0,
+        0
+      ],
+      "adjacent": [
+        44,
+        42
+      ],
+      "kind": 2033,
+      "word22": 0,
+      "statusBits": 0,
+      "eventCodeCandidate": 0,
+      "target": {
+        "table": "lands",
+        "id": 33
+      }
+    },
+    {
+      "id": 44,
+      "offset": 1800,
+      "x": 672,
+      "y": 1511,
+      "rawHex": "a002e705addcbcc5000000000000000000000000000000002d002b0000000000f207000000000000",
+      "adjacentSlots": [
+        45,
+        43,
+        0,
+        0
+      ],
+      "adjacent": [
+        45,
+        43
+      ],
+      "kind": 2034,
+      "word22": 0,
+      "statusBits": 0,
+      "eventCodeCandidate": 0,
+      "target": {
+        "table": "lands",
+        "id": 34
+      }
+    },
+    {
+      "id": 45,
+      "offset": 1840,
+      "x": 744,
+      "y": 1511,
+      "rawHex": "e802e705a952b942000000000000000000000000000000002e002c00000000000000030003000000",
+      "adjacentSlots": [
+        46,
+        44,
+        0,
+        0
+      ],
+      "adjacent": [
+        46,
+        44
+      ],
+      "kind": 0,
+      "word22": 3,
+      "statusBits": 3,
+      "eventCodeCandidate": 3,
+      "target": null
+    },
+    {
+      "id": 46,
+      "offset": 1880,
+      "x": 817,
+      "y": 1511,
+      "rawHex": "3103e705ae56b8f4000000000000000000000000000000002f002d0000000000a10f000000000000",
+      "adjacentSlots": [
+        47,
+        45,
+        0,
+        0
+      ],
+      "adjacent": [
+        47,
+        45
+      ],
+      "kind": 4001,
+      "word22": 0,
+      "statusBits": 0,
+      "eventCodeCandidate": 0,
+      "target": {
+        "table": "facilities",
+        "id": 1
+      }
+    },
+    {
+      "id": 47,
+      "offset": 1920,
+      "x": 860,
+      "y": 1511,
+      "rawHex": "5c03e705ae56b8f40000000000000000000000000000000030002e0000000000a10f000000000000",
+      "adjacentSlots": [
+        48,
+        46,
+        0,
+        0
+      ],
+      "adjacent": [
+        48,
+        46
+      ],
+      "kind": 4001,
+      "word22": 0,
+      "statusBits": 0,
+      "eventCodeCandidate": 0,
+      "target": {
+        "table": "facilities",
+        "id": 1
+      }
+    },
+    {
+      "id": 48,
+      "offset": 1960,
+      "x": 912,
+      "y": 1511,
+      "rawHex": "9003e705ae56b8f40000000000000000000000000000000031002f0000000000a30f000000000000",
+      "adjacentSlots": [
+        49,
+        47,
+        0,
+        0
+      ],
+      "adjacent": [
+        49,
+        47
+      ],
+      "kind": 4003,
+      "word22": 0,
+      "statusBits": 0,
+      "eventCodeCandidate": 0,
+      "target": {
+        "table": "facilities",
+        "id": 3
+      }
+    },
+    {
+      "id": 49,
+      "offset": 2000,
+      "x": 957,
+      "y": 1511,
+      "rawHex": "bd03e705ae56b8f4000000000000000000000000000000003200300000000000a30f000000000000",
+      "adjacentSlots": [
+        50,
+        48,
+        0,
+        0
+      ],
+      "adjacent": [
+        50,
+        48
+      ],
+      "kind": 4003,
+      "word22": 0,
+      "statusBits": 0,
+      "eventCodeCandidate": 0,
+      "target": {
+        "table": "facilities",
+        "id": 3
+      }
+    },
+    {
+      "id": 50,
+      "offset": 2040,
+      "x": 1032,
+      "y": 1512,
+      "rawHex": "0804e805a6cab366a4bda571000000000000000000000000330031000000000071170f000f000000",
+      "adjacentSlots": [
+        51,
+        49,
+        0,
+        0
+      ],
+      "adjacent": [
+        51,
+        49
+      ],
+      "kind": 6001,
+      "word22": 15,
+      "statusBits": 15,
+      "eventCodeCandidate": 15,
+      "target": {
+        "table": "companies",
+        "id": 1
+      }
+    },
+    {
+      "id": 51,
+      "offset": 2080,
+      "x": 1075,
+      "y": 1467,
+      "rawHex": "3304bb05a8cab3a3000000000000000000000000000000003400320000000000f307000000000000",
+      "adjacentSlots": [
+        52,
+        50,
+        0,
+        0
+      ],
+      "adjacent": [
+        52,
+        50
+      ],
+      "kind": 2035,
+      "word22": 0,
+      "statusBits": 0,
+      "eventCodeCandidate": 0,
+      "target": {
+        "table": "lands",
+        "id": 35
+      }
+    },
+    {
+      "id": 52,
+      "offset": 2120,
+      "x": 1108,
+      "y": 1434,
+      "rawHex": "54049a05a8cab3a3000000000000000000000000000000003500330000000000f407000000000000",
+      "adjacentSlots": [
+        53,
+        51,
+        0,
+        0
+      ],
+      "adjacent": [
+        53,
+        51
+      ],
+      "kind": 2036,
+      "word22": 0,
+      "statusBits": 0,
+      "eventCodeCandidate": 0,
+      "target": {
+        "table": "lands",
+        "id": 36
+      }
+    },
+    {
+      "id": 53,
+      "offset": 2160,
+      "x": 1144,
+      "y": 1397,
+      "rawHex": "78047505a8cab3a3000000000000000000000000000000003600340000000000f507000000000000",
+      "adjacentSlots": [
+        54,
+        52,
+        0,
+        0
+      ],
+      "adjacent": [
+        54,
+        52
+      ],
+      "kind": 2037,
+      "word22": 0,
+      "statusBits": 0,
+      "eventCodeCandidate": 0,
+      "target": {
+        "table": "lands",
+        "id": 37
+      }
+    },
+    {
+      "id": 54,
+      "offset": 2200,
+      "x": 1175,
+      "y": 1366,
+      "rawHex": "97045605a8cab3a3000000000000000000000000000000003700350000000000f607000000000000",
+      "adjacentSlots": [
+        55,
+        53,
+        0,
+        0
+      ],
+      "adjacent": [
+        55,
+        53
+      ],
+      "kind": 2038,
+      "word22": 0,
+      "statusBits": 0,
+      "eventCodeCandidate": 0,
+      "target": {
+        "table": "lands",
+        "id": 38
+      }
+    },
+    {
+      "id": 55,
+      "offset": 2240,
+      "x": 1223,
+      "y": 1319,
+      "rawHex": "c7042705c2e5b07c000000000000000000000000000000003800360000000000411f050005000000",
+      "adjacentSlots": [
+        56,
+        54,
+        0,
+        0
+      ],
+      "adjacent": [
+        56,
+        54
+      ],
+      "kind": 8001,
+      "word22": 5,
+      "statusBits": 5,
+      "eventCodeCandidate": 5,
+      "target": null
+    },
+    {
+      "id": 56,
+      "offset": 2280,
+      "x": 1274,
+      "y": 1268,
+      "rawHex": "fa04f404aa51a5bb000000000000000000000000000000003900370000000000f707000000000000",
+      "adjacentSlots": [
+        57,
+        55,
+        0,
+        0
+      ],
+      "adjacent": [
+        57,
+        55
+      ],
+      "kind": 2039,
+      "word22": 0,
+      "statusBits": 0,
+      "eventCodeCandidate": 0,
+      "target": {
+        "table": "lands",
+        "id": 39
+      }
+    },
+    {
+      "id": 57,
+      "offset": 2320,
+      "x": 1307,
+      "y": 1236,
+      "rawHex": "1b05d404aa51a5bb000000000000000000000000000000003a00380000000000f807000000000000",
+      "adjacentSlots": [
+        58,
+        56,
+        0,
+        0
+      ],
+      "adjacent": [
+        58,
+        56
+      ],
+      "kind": 2040,
+      "word22": 0,
+      "statusBits": 0,
+      "eventCodeCandidate": 0,
+      "target": {
+        "table": "lands",
+        "id": 40
+      }
+    },
+    {
+      "id": 58,
+      "offset": 2360,
+      "x": 1341,
+      "y": 1201,
+      "rawHex": "3d05b104aa51a5bb000000000000000000000000000000003b00390000000000f907000000000000",
+      "adjacentSlots": [
+        59,
+        57,
+        0,
+        0
+      ],
+      "adjacent": [
+        59,
+        57
+      ],
+      "kind": 2041,
+      "word22": 0,
+      "statusBits": 0,
+      "eventCodeCandidate": 0,
+      "target": {
+        "table": "lands",
+        "id": 41
+      }
+    },
+    {
+      "id": 59,
+      "offset": 2400,
+      "x": 1378,
+      "y": 1165,
+      "rawHex": "62058d04aa51a5bb000000000000000000000000000000003c003a00000000007217000000000000",
+      "adjacentSlots": [
+        60,
+        58,
+        0,
+        0
+      ],
+      "adjacent": [
+        60,
+        58
+      ],
+      "kind": 6002,
+      "word22": 0,
+      "statusBits": 0,
+      "eventCodeCandidate": 0,
+      "target": {
+        "table": "companies",
+        "id": 2
+      }
+    },
+    {
+      "id": 60,
+      "offset": 2440,
+      "x": 1408,
+      "y": 1133,
+      "rawHex": "80056d04aa51a5bb000000000000000000000000000000003d003b00000000007217000000000000",
+      "adjacentSlots": [
+        61,
+        59,
+        0,
+        0
+      ],
+      "adjacent": [
+        61,
+        59
+      ],
+      "kind": 6002,
+      "word22": 0,
+      "statusBits": 0,
+      "eventCodeCandidate": 0,
+      "target": {
+        "table": "companies",
+        "id": 2
+      }
+    },
+    {
+      "id": 61,
+      "offset": 2480,
+      "x": 1464,
+      "y": 1080,
+      "rawHex": "b8053804b773bb44000000000000000000000000000000003e003c00000000000000020002000000",
+      "adjacentSlots": [
+        62,
+        60,
+        0,
+        0
+      ],
+      "adjacent": [
+        62,
+        60
+      ],
+      "kind": 0,
+      "word22": 2,
+      "statusBits": 2,
+      "eventCodeCandidate": 2,
+      "target": null
+    },
+    {
+      "id": 62,
+      "offset": 2520,
+      "x": 1508,
+      "y": 1034,
+      "rawHex": "e4050a04b773bcf3000000000000000000000000000000003f003d0000000000fa07000000000000",
+      "adjacentSlots": [
+        63,
+        61,
+        0,
+        0
+      ],
+      "adjacent": [
+        63,
+        61
+      ],
+      "kind": 2042,
+      "word22": 0,
+      "statusBits": 0,
+      "eventCodeCandidate": 0,
+      "target": {
+        "table": "lands",
+        "id": 42
+      }
+    },
+    {
+      "id": 63,
+      "offset": 2560,
+      "x": 1541,
+      "y": 1002,
+      "rawHex": "0506ea03b773bcf30000000000000000000000000000000040003e0000000000fb07000000000000",
+      "adjacentSlots": [
+        64,
+        62,
+        0,
+        0
+      ],
+      "adjacent": [
+        64,
+        62
+      ],
+      "kind": 2043,
+      "word22": 0,
+      "statusBits": 0,
+      "eventCodeCandidate": 0,
+      "target": {
+        "table": "lands",
+        "id": 43
+      }
+    },
+    {
+      "id": 64,
+      "offset": 2600,
+      "x": 1575,
+      "y": 968,
+      "rawHex": "2706c803b773bcf30000000000000000000000000000000041003f0000000000fc07000000000000",
+      "adjacentSlots": [
+        65,
+        63,
+        0,
+        0
+      ],
+      "adjacent": [
+        65,
+        63
+      ],
+      "kind": 2044,
+      "word22": 0,
+      "statusBits": 0,
+      "eventCodeCandidate": 0,
+      "target": {
+        "table": "lands",
+        "id": 44
+      }
+    },
+    {
+      "id": 65,
+      "offset": 2640,
+      "x": 1608,
+      "y": 935,
+      "rawHex": "4806a703b773bcf3000000000000000000000000000000004200400000000000fd07000000000000",
+      "adjacentSlots": [
+        66,
+        64,
+        0,
+        0
+      ],
+      "adjacent": [
+        66,
+        64
+      ],
+      "kind": 2045,
+      "word22": 0,
+      "statusBits": 0,
+      "eventCodeCandidate": 0,
+      "target": {
+        "table": "lands",
+        "id": 45
+      }
+    },
+    {
+      "id": 66,
+      "offset": 2680,
+      "x": 1655,
+      "y": 888,
+      "rawHex": "77067803a952b9420000000000000000000000000000000043004100000000000000030003000000",
+      "adjacentSlots": [
+        67,
+        65,
+        0,
+        0
+      ],
+      "adjacent": [
+        67,
+        65
+      ],
+      "kind": 0,
+      "word22": 3,
+      "statusBits": 3,
+      "eventCodeCandidate": 3,
+      "target": null
+    },
+    {
+      "id": 67,
+      "offset": 2720,
+      "x": 1655,
+      "y": 812,
+      "rawHex": "77062c03aceea5d00000000000000000000000000000000044004200000000007317000000000000",
+      "adjacentSlots": [
+        68,
+        66,
+        0,
+        0
+      ],
+      "adjacent": [
+        68,
+        66
+      ],
+      "kind": 6003,
+      "word22": 0,
+      "statusBits": 0,
+      "eventCodeCandidate": 0,
+      "target": {
+        "table": "companies",
+        "id": 3
+      }
+    },
+    {
+      "id": 68,
+      "offset": 2760,
+      "x": 1655,
+      "y": 768,
+      "rawHex": "77060003aceea5d00000000000000000000000000000000045004300000000007317000000000000",
+      "adjacentSlots": [
+        69,
+        67,
+        0,
+        0
+      ],
+      "adjacent": [
+        69,
+        67
+      ],
+      "kind": 6003,
+      "word22": 0,
+      "statusBits": 0,
+      "eventCodeCandidate": 0,
+      "target": {
+        "table": "companies",
+        "id": 3
+      }
+    },
+    {
+      "id": 69,
+      "offset": 2800,
+      "x": 1655,
+      "y": 719,
+      "rawHex": "7706cf02aceea5d0000000000000000000000000000000004600440000000000fe07000000000000",
+      "adjacentSlots": [
+        70,
+        68,
+        0,
+        0
+      ],
+      "adjacent": [
+        70,
+        68
+      ],
+      "kind": 2046,
+      "word22": 0,
+      "statusBits": 0,
+      "eventCodeCandidate": 0,
+      "target": {
+        "table": "lands",
+        "id": 46
+      }
+    },
+    {
+      "id": 70,
+      "offset": 2840,
+      "x": 1655,
+      "y": 672,
+      "rawHex": "7706a002aceea5d0000000000000000000000000000000004700450000000000ff07000000000000",
+      "adjacentSlots": [
+        71,
+        69,
+        0,
+        0
+      ],
+      "adjacent": [
+        71,
+        69
+      ],
+      "kind": 2047,
+      "word22": 0,
+      "statusBits": 0,
+      "eventCodeCandidate": 0,
+      "target": {
+        "table": "lands",
+        "id": 47
+      }
+    },
+    {
+      "id": 71,
+      "offset": 2880,
+      "x": 1655,
+      "y": 623,
+      "rawHex": "77066f02aceea5d00000000000000000000000000000000048004600000000000008000000000000",
+      "adjacentSlots": [
+        72,
+        70,
+        0,
+        0
+      ],
+      "adjacent": [
+        72,
+        70
+      ],
+      "kind": 2048,
+      "word22": 0,
+      "statusBits": 0,
+      "eventCodeCandidate": 0,
+      "target": {
+        "table": "lands",
+        "id": 48
+      }
+    },
+    {
+      "id": 72,
+      "offset": 2920,
+      "x": 1655,
+      "y": 576,
+      "rawHex": "77064002aceea5d00000000000000000000000000000000049004700000000000108000000000000",
+      "adjacentSlots": [
+        73,
+        71,
+        0,
+        0
+      ],
+      "adjacent": [
+        73,
+        71
+      ],
+      "kind": 2049,
+      "word22": 0,
+      "statusBits": 0,
+      "eventCodeCandidate": 0,
+      "target": {
+        "table": "lands",
+        "id": 49
+      }
+    },
+    {
+      "id": 73,
+      "offset": 2960,
+      "x": 1655,
+      "y": 503,
+      "rawHex": "7706f701c55daa6babce00000000000000000000000000004a004800000000000000100010000000",
+      "adjacentSlots": [
+        74,
+        72,
+        0,
+        0
+      ],
+      "adjacent": [
+        74,
+        72
+      ],
+      "kind": 0,
+      "word22": 16,
+      "statusBits": 16,
+      "eventCodeCandidate": 16,
+      "target": null
+    },
+    {
+      "id": 74,
+      "offset": 3000,
+      "x": 1729,
+      "y": 503,
+      "rawHex": "c106f701ab43b4cb000000000000000000000000000000004b00490000000000a40f000000000000",
+      "adjacentSlots": [
+        75,
+        73,
+        0,
+        0
+      ],
+      "adjacent": [
+        75,
+        73
+      ],
+      "kind": 4004,
+      "word22": 0,
+      "statusBits": 0,
+      "eventCodeCandidate": 0,
+      "target": {
+        "table": "facilities",
+        "id": 4
+      }
+    },
+    {
+      "id": 75,
+      "offset": 3040,
+      "x": 1772,
+      "y": 503,
+      "rawHex": "ec06f701ab43b4cb000000000000000000000000000000004c004a0000000000a40f000000000000",
+      "adjacentSlots": [
+        76,
+        74,
+        0,
+        0
+      ],
+      "adjacent": [
+        76,
+        74
+      ],
+      "kind": 4004,
+      "word22": 0,
+      "statusBits": 0,
+      "eventCodeCandidate": 0,
+      "target": {
+        "table": "facilities",
+        "id": 4
+      }
+    },
+    {
+      "id": 76,
+      "offset": 3080,
+      "x": 1826,
+      "y": 503,
+      "rawHex": "2207f701ab43b4cb000000000000000000000000000000004d004b0000000000a50f000000000000",
+      "adjacentSlots": [
+        77,
+        75,
+        0,
+        0
+      ],
+      "adjacent": [
+        77,
+        75
+      ],
+      "kind": 4005,
+      "word22": 0,
+      "statusBits": 0,
+      "eventCodeCandidate": 0,
+      "target": {
+        "table": "facilities",
+        "id": 5
+      }
+    },
+    {
+      "id": 77,
+      "offset": 3120,
+      "x": 1870,
+      "y": 503,
+      "rawHex": "4e07f701ab43b4cb000000000000000000000000000000004e004c0000000000a50f000000000000",
+      "adjacentSlots": [
+        78,
+        76,
+        0,
+        0
+      ],
+      "adjacent": [
+        78,
+        76
+      ],
+      "kind": 4005,
+      "word22": 0,
+      "statusBits": 0,
+      "eventCodeCandidate": 0,
+      "target": {
+        "table": "facilities",
+        "id": 5
+      }
+    },
+    {
+      "id": 78,
+      "offset": 3160,
+      "x": 1943,
+      "y": 503,
+      "rawHex": "9707f701bacababb0000000000000000000000000000000055004d0000004f000000040004000008",
+      "adjacentSlots": [
+        85,
+        77,
+        0,
+        79
+      ],
+      "adjacent": [
+        85,
+        77,
+        79
+      ],
+      "kind": 0,
+      "word22": 4,
+      "statusBits": 134217732,
+      "eventCodeCandidate": 4,
+      "target": null
+    },
+    {
+      "id": 79,
+      "offset": 3200,
+      "x": 1942,
+      "y": 432,
+      "rawHex": "9607b001b16fa2b0a2afc2490000000000000000000000004e0050000000000000000c000c000000",
+      "adjacentSlots": [
+        78,
+        80,
+        0,
+        0
+      ],
+      "adjacent": [
+        78,
+        80
+      ],
+      "kind": 0,
+      "word22": 12,
+      "statusBits": 12,
+      "eventCodeCandidate": 12,
+      "target": null
+    },
+    {
+      "id": 80,
+      "offset": 3240,
+      "x": 1943,
+      "y": 383,
+      "rawHex": "97077f0100000000000000000000000000000000000000004f005100000000000000110000000000",
+      "adjacentSlots": [
+        79,
+        81,
+        0,
+        0
+      ],
+      "adjacent": [
+        79,
+        81
+      ],
+      "kind": 0,
+      "word22": 17,
+      "statusBits": 0,
+      "eventCodeCandidate": 0,
+      "target": null
+    },
+    {
+      "id": 81,
+      "offset": 3280,
+      "x": 1943,
+      "y": 336,
+      "rawHex": "97075001b16fa2b0a2afc249000000000000000000000000500052000000000000000c000c000000",
+      "adjacentSlots": [
+        80,
+        82,
+        0,
+        0
+      ],
+      "adjacent": [
+        80,
+        82
+      ],
+      "kind": 0,
+      "word22": 12,
+      "statusBits": 12,
+      "eventCodeCandidate": 12,
+      "target": null
+    },
+    {
+      "id": 82,
+      "offset": 3320,
+      "x": 1943,
+      "y": 287,
+      "rawHex": "97071f01a55faefcb944000000000000000000000000000051005300000000000000110000000000",
+      "adjacentSlots": [
+        81,
+        83,
+        0,
+        0
+      ],
+      "adjacent": [
+        81,
+        83
+      ],
+      "kind": 0,
+      "word22": 17,
+      "statusBits": 0,
+      "eventCodeCandidate": 0,
+      "target": null
+    },
+    {
+      "id": 83,
+      "offset": 3360,
+      "x": 1942,
+      "y": 239,
+      "rawHex": "9607ef00b16fa2b2a2afc249000000000000000000000000520054000000000000000b000b000000",
+      "adjacentSlots": [
+        82,
+        84,
+        0,
+        0
+      ],
+      "adjacent": [
+        82,
+        84
+      ],
+      "kind": 0,
+      "word22": 11,
+      "statusBits": 11,
+      "eventCodeCandidate": 11,
+      "target": null
+    },
+    {
+      "id": 84,
+      "offset": 3400,
+      "x": 1943,
+      "y": 192,
+      "rawHex": "9707c000a55faefcb94400000000000000000000000000005300000000000000421f110000000000",
+      "adjacentSlots": [
+        83,
+        0,
+        0,
+        0
+      ],
+      "adjacent": [
+        83
+      ],
+      "kind": 8002,
+      "word22": 17,
+      "statusBits": 0,
+      "eventCodeCandidate": 0,
+      "target": null
+    },
+    {
+      "id": 85,
+      "offset": 3440,
+      "x": 1943,
+      "y": 575,
+      "rawHex": "97073f02b2b1a9a30000000000000000000000000000000056004e0000000000d107000000000000",
+      "adjacentSlots": [
+        86,
+        78,
+        0,
+        0
+      ],
+      "adjacent": [
+        86,
+        78
+      ],
+      "kind": 2001,
+      "word22": 0,
+      "statusBits": 0,
+      "eventCodeCandidate": 0,
+      "target": {
+        "table": "lands",
+        "id": 1
+      }
+    },
+    {
+      "id": 86,
+      "offset": 3480,
+      "x": 1943,
+      "y": 624,
+      "rawHex": "97077002b2b1a9a3000000000000000000000000000000005700550000000000d207000000000000",
+      "adjacentSlots": [
+        87,
+        85,
+        0,
+        0
+      ],
+      "adjacent": [
+        87,
+        85
+      ],
+      "kind": 2002,
+      "word22": 0,
+      "statusBits": 0,
+      "eventCodeCandidate": 0,
+      "target": {
+        "table": "lands",
+        "id": 2
+      }
+    },
+    {
+      "id": 87,
+      "offset": 3520,
+      "x": 1943,
+      "y": 672,
+      "rawHex": "9707a002b2b1a9a3000000000000000000000000000000005800560000000000d307000000000000",
+      "adjacentSlots": [
+        88,
+        86,
+        0,
+        0
+      ],
+      "adjacent": [
+        88,
+        86
+      ],
+      "kind": 2003,
+      "word22": 0,
+      "statusBits": 0,
+      "eventCodeCandidate": 0,
+      "target": {
+        "table": "lands",
+        "id": 3
+      }
+    },
+    {
+      "id": 88,
+      "offset": 3560,
+      "x": 1943,
+      "y": 743,
+      "rawHex": "9707e702bcd6b37a0000000000000000000000000000000059005700000000000000090009000000",
+      "adjacentSlots": [
+        89,
+        87,
+        0,
+        0
+      ],
+      "adjacent": [
+        89,
+        87
+      ],
+      "kind": 0,
+      "word22": 9,
+      "statusBits": 9,
+      "eventCodeCandidate": 9,
+      "target": null
+    },
+    {
+      "id": 89,
+      "offset": 3600,
+      "x": 1943,
+      "y": 816,
+      "rawHex": "97073003a550a578000000000000000000000000000000005a00580000000000d407000000000000",
+      "adjacentSlots": [
+        90,
+        88,
+        0,
+        0
+      ],
+      "adjacent": [
+        90,
+        88
+      ],
+      "kind": 2004,
+      "word22": 0,
+      "statusBits": 0,
+      "eventCodeCandidate": 0,
+      "target": {
+        "table": "lands",
+        "id": 4
+      }
+    },
+    {
+      "id": 90,
+      "offset": 3640,
+      "x": 1943,
+      "y": 864,
+      "rawHex": "97076003a550a578000000000000000000000000000000005b00590000000000d507000000000000",
+      "adjacentSlots": [
+        91,
+        89,
+        0,
+        0
+      ],
+      "adjacent": [
+        91,
+        89
+      ],
+      "kind": 2005,
+      "word22": 0,
+      "statusBits": 0,
+      "eventCodeCandidate": 0,
+      "target": {
+        "table": "lands",
+        "id": 5
+      }
+    },
+    {
+      "id": 91,
+      "offset": 3680,
+      "x": 1943,
+      "y": 911,
+      "rawHex": "97078f03a550a578000000000000000000000000000000005c005a0000000000d607000000000000",
+      "adjacentSlots": [
+        92,
+        90,
+        0,
+        0
+      ],
+      "adjacent": [
+        92,
+        90
+      ],
+      "kind": 2006,
+      "word22": 0,
+      "statusBits": 0,
+      "eventCodeCandidate": 0,
+      "target": {
+        "table": "lands",
+        "id": 6
+      }
+    },
+    {
+      "id": 92,
+      "offset": 3720,
+      "x": 1943,
+      "y": 961,
+      "rawHex": "9707c103a550a578000000000000000000000000000000005d005b00000000007417000000000000",
+      "adjacentSlots": [
+        93,
+        91,
+        0,
+        0
+      ],
+      "adjacent": [
+        93,
+        91
+      ],
+      "kind": 6004,
+      "word22": 0,
+      "statusBits": 0,
+      "eventCodeCandidate": 0,
+      "target": {
+        "table": "companies",
+        "id": 4
+      }
+    },
+    {
+      "id": 93,
+      "offset": 3760,
+      "x": 1943,
+      "y": 1005,
+      "rawHex": "9707ed03a550a578000000000000000000000000000000005e005c00000000007417000000000000",
+      "adjacentSlots": [
+        94,
+        92,
+        0,
+        0
+      ],
+      "adjacent": [
+        94,
+        92
+      ],
+      "kind": 6004,
+      "word22": 0,
+      "statusBits": 0,
+      "eventCodeCandidate": 0,
+      "target": {
+        "table": "companies",
+        "id": 4
+      }
+    },
+    {
+      "id": 94,
+      "offset": 3800,
+      "x": 1943,
+      "y": 1080,
+      "rawHex": "97073804b773bb44000000000000000000000000000000005f005d00000000000000020002000000",
+      "adjacentSlots": [
+        95,
+        93,
+        0,
+        0
+      ],
+      "adjacent": [
+        95,
+        93
+      ],
+      "kind": 0,
+      "word22": 2,
+      "statusBits": 2,
+      "eventCodeCandidate": 2,
+      "target": null
+    },
+    {
+      "id": 95,
+      "offset": 3840,
+      "x": 1943,
+      "y": 1153,
+      "rawHex": "97078104bad6ae710000000000000000000000000000000060005e0000000000d707000000000000",
+      "adjacentSlots": [
+        96,
+        94,
+        0,
+        0
+      ],
+      "adjacent": [
+        96,
+        94
+      ],
+      "kind": 2007,
+      "word22": 0,
+      "statusBits": 0,
+      "eventCodeCandidate": 0,
+      "target": {
+        "table": "lands",
+        "id": 7
+      }
+    },
+    {
+      "id": 96,
+      "offset": 3880,
+      "x": 1943,
+      "y": 1200,
+      "rawHex": "9707b004bad6ae710000000000000000000000000000000061005f0000000000d807000000000000",
+      "adjacentSlots": [
+        97,
+        95,
+        0,
+        0
+      ],
+      "adjacent": [
+        97,
+        95
+      ],
+      "kind": 2008,
+      "word22": 0,
+      "statusBits": 0,
+      "eventCodeCandidate": 0,
+      "target": {
+        "table": "lands",
+        "id": 8
+      }
+    },
+    {
+      "id": 97,
+      "offset": 3920,
+      "x": 1943,
+      "y": 1248,
+      "rawHex": "9707e004bad6ae71000000000000000000000000000000006200600000000000d907000000000000",
+      "adjacentSlots": [
+        98,
+        96,
+        0,
+        0
+      ],
+      "adjacent": [
+        98,
+        96
+      ],
+      "kind": 2009,
+      "word22": 0,
+      "statusBits": 0,
+      "eventCodeCandidate": 0,
+      "target": {
+        "table": "lands",
+        "id": 9
+      }
+    },
+    {
+      "id": 98,
+      "offset": 3960,
+      "x": 1943,
+      "y": 1320,
+      "rawHex": "97072805a564a4f900000000000000000000000000000000610063000000000000000d000d000000",
+      "adjacentSlots": [
+        97,
+        99,
+        0,
+        0
+      ],
+      "adjacent": [
+        97,
+        99
+      ],
+      "kind": 0,
+      "word22": 13,
+      "statusBits": 13,
+      "eventCodeCandidate": 13,
+      "target": null
+    },
+    {
+      "id": 99,
+      "offset": 4000,
+      "x": 1893,
+      "y": 1370,
+      "rawHex": "65075a05aa46a8ca000000000000000000000000000000006400620000000000da07000000000000",
+      "adjacentSlots": [
+        100,
+        98,
+        0,
+        0
+      ],
+      "adjacent": [
+        100,
+        98
+      ],
+      "kind": 2010,
+      "word22": 0,
+      "statusBits": 0,
+      "eventCodeCandidate": 0,
+      "target": {
+        "table": "lands",
+        "id": 10
+      }
+    },
+    {
+      "id": 100,
+      "offset": 4040,
+      "x": 1859,
+      "y": 1403,
+      "rawHex": "43077b05aa46a8ca000000000000000000000000000000006300650000000000db07000000000000",
+      "adjacentSlots": [
+        99,
+        101,
+        0,
+        0
+      ],
+      "adjacent": [
+        99,
+        101
+      ],
+      "kind": 2011,
+      "word22": 0,
+      "statusBits": 0,
+      "eventCodeCandidate": 0,
+      "target": {
+        "table": "lands",
+        "id": 11
+      }
+    },
+    {
+      "id": 101,
+      "offset": 4080,
+      "x": 1824,
+      "y": 1438,
+      "rawHex": "20079e05aa46a8ca000000000000000000000000000000006600640000000000dc07000000000000",
+      "adjacentSlots": [
+        102,
+        100,
+        0,
+        0
+      ],
+      "adjacent": [
+        102,
+        100
+      ],
+      "kind": 2012,
+      "word22": 0,
+      "statusBits": 0,
+      "eventCodeCandidate": 0,
+      "target": {
+        "table": "lands",
+        "id": 12
+      }
+    },
+    {
+      "id": 102,
+      "offset": 4120,
+      "x": 1791,
+      "y": 1471,
+      "rawHex": "ff06bf05aa46a8ca0000000000000000000000000000000065006700000000007517000000000000",
+      "adjacentSlots": [
+        101,
+        103,
+        0,
+        0
+      ],
+      "adjacent": [
+        101,
+        103
+      ],
+      "kind": 6005,
+      "word22": 0,
+      "statusBits": 0,
+      "eventCodeCandidate": 0,
+      "target": {
+        "table": "companies",
+        "id": 5
+      }
+    },
+    {
+      "id": 103,
+      "offset": 4160,
+      "x": 1760,
+      "y": 1504,
+      "rawHex": "e006e005aa46a8ca0000000000000000000000000000000068006600000000007517000000000000",
+      "adjacentSlots": [
+        104,
+        102,
+        0,
+        0
+      ],
+      "adjacent": [
+        104,
+        102
+      ],
+      "kind": 6005,
+      "word22": 0,
+      "statusBits": 0,
+      "eventCodeCandidate": 0,
+      "target": {
+        "table": "companies",
+        "id": 5
+      }
+    },
+    {
+      "id": 104,
+      "offset": 4200,
+      "x": 1725,
+      "y": 1539,
+      "rawHex": "bd060306aa46a8ca000000000000000000000000000000006900670000000000dd07000000000000",
+      "adjacentSlots": [
+        105,
+        103,
+        0,
+        0
+      ],
+      "adjacent": [
+        105,
+        103
+      ],
+      "kind": 2013,
+      "word22": 0,
+      "statusBits": 0,
+      "eventCodeCandidate": 0,
+      "target": {
+        "table": "lands",
+        "id": 13
+      }
+    },
+    {
+      "id": 105,
+      "offset": 4240,
+      "x": 1689,
+      "y": 1574,
+      "rawHex": "99062606aa46a8ca000000000000000000000000000000006a00680000000000de07000000000000",
+      "adjacentSlots": [
+        106,
+        104,
+        0,
+        0
+      ],
+      "adjacent": [
+        106,
+        104
+      ],
+      "kind": 2014,
+      "word22": 0,
+      "statusBits": 0,
+      "eventCodeCandidate": 0,
+      "target": {
+        "table": "lands",
+        "id": 14
+      }
+    },
+    {
+      "id": 106,
+      "offset": 4280,
+      "x": 1655,
+      "y": 1609,
+      "rawHex": "77064906aa46a8ca000000000000000000000000000000006b00690000000000df07000000000000",
+      "adjacentSlots": [
+        107,
+        105,
+        0,
+        0
+      ],
+      "adjacent": [
+        107,
+        105
+      ],
+      "kind": 2015,
+      "word22": 0,
+      "statusBits": 0,
+      "eventCodeCandidate": 0,
+      "target": {
+        "table": "lands",
+        "id": 15
+      }
+    },
+    {
+      "id": 107,
+      "offset": 4320,
+      "x": 1608,
+      "y": 1656,
+      "rawHex": "48067806a6cab366a4bda5710000000000000000000000006c006a000000000071170f000f000000",
+      "adjacentSlots": [
+        108,
+        106,
+        0,
+        0
+      ],
+      "adjacent": [
+        108,
+        106
+      ],
+      "kind": 6001,
+      "word22": 15,
+      "statusBits": 15,
+      "eventCodeCandidate": 15,
+      "target": {
+        "table": "companies",
+        "id": 1
+      }
+    },
+    {
+      "id": 108,
+      "offset": 4360,
+      "x": 1536,
+      "y": 1656,
+      "rawHex": "00067806a657a56aabce00000000000000000000000000006d006b0000000000e007000000000000",
+      "adjacentSlots": [
+        109,
+        107,
+        0,
+        0
+      ],
+      "adjacent": [
+        109,
+        107
+      ],
+      "kind": 2016,
+      "word22": 0,
+      "statusBits": 0,
+      "eventCodeCandidate": 0,
+      "target": {
+        "table": "lands",
+        "id": 16
+      }
+    },
+    {
+      "id": 109,
+      "offset": 4400,
+      "x": 1487,
+      "y": 1656,
+      "rawHex": "cf057806a657a56aabce00000000000000000000000000006e006c0000000000e107000000000000",
+      "adjacentSlots": [
+        110,
+        108,
+        0,
+        0
+      ],
+      "adjacent": [
+        110,
+        108
+      ],
+      "kind": 2017,
+      "word22": 0,
+      "statusBits": 0,
+      "eventCodeCandidate": 0,
+      "target": {
+        "table": "lands",
+        "id": 17
+      }
+    },
+    {
+      "id": 110,
+      "offset": 4440,
+      "x": 1439,
+      "y": 1656,
+      "rawHex": "9f057806a657a56aabce000000000000000000000000000001006d0000000000e207000000000000",
+      "adjacentSlots": [
+        1,
+        109,
+        0,
+        0
+      ],
+      "adjacent": [
+        1,
+        109
+      ],
+      "kind": 2018,
+      "word22": 0,
+      "statusBits": 0,
+      "eventCodeCandidate": 0,
+      "target": {
+        "table": "lands",
+        "id": 18
+      }
+    }
+  ],
+  "lands": [
+    {
+      "id": 1,
+      "offset": 4532,
+      "x": 1895,
+      "y": 575,
+      "rawHex": "67073f02b2b1a9a30000000000000000000000000000000000000006f40164006400fa00bc020807ac0dc8190000000000000000",
+      "name": "盛岡",
+      "nodeIds": [
+        85
+      ],
+      "byte18": 0,
+      "ownerByte": 0,
+      "levelByte": 0,
+      "byte1b": 6,
+      "byte17": 0,
+      "word1c": 500,
+      "word1e": 100,
+      "words20to2a": [
+        100,
+        250,
+        700,
+        1800,
+        3500,
+        6600
+      ]
+    },
+    {
+      "id": 2,
+      "offset": 4584,
+      "x": 1895,
+      "y": 624,
+      "rawHex": "67077002b2b1a9a30000000000000000000000000000000000000006f40164006400fa00bc020807ac0dc8190000000000000000",
+      "name": "盛岡",
+      "nodeIds": [
+        86
+      ],
+      "byte18": 0,
+      "ownerByte": 0,
+      "levelByte": 0,
+      "byte1b": 6,
+      "byte17": 0,
+      "word1c": 500,
+      "word1e": 100,
+      "words20to2a": [
+        100,
+        250,
+        700,
+        1800,
+        3500,
+        6600
+      ]
+    },
+    {
+      "id": 3,
+      "offset": 4636,
+      "x": 1895,
+      "y": 672,
+      "rawHex": "6707a002b2b1a9a30000000000000000000000000000000000000006f40164006400fa00bc020807ac0dc8190000000000000000",
+      "name": "盛岡",
+      "nodeIds": [
+        87
+      ],
+      "byte18": 0,
+      "ownerByte": 0,
+      "levelByte": 0,
+      "byte1b": 6,
+      "byte17": 0,
+      "word1c": 500,
+      "word1e": 100,
+      "words20to2a": [
+        100,
+        250,
+        700,
+        1800,
+        3500,
+        6600
+      ]
+    },
+    {
+      "id": 4,
+      "offset": 4688,
+      "x": 1895,
+      "y": 816,
+      "rawHex": "67073003a550a57800000000000000000000000000000000000000062003960096009001e8036009881328230000000000000000",
+      "name": "仙台",
+      "nodeIds": [
+        89
+      ],
+      "byte18": 0,
+      "ownerByte": 0,
+      "levelByte": 0,
+      "byte1b": 6,
+      "byte17": 0,
+      "word1c": 800,
+      "word1e": 150,
+      "words20to2a": [
+        150,
+        400,
+        1000,
+        2400,
+        5000,
+        9000
+      ]
+    },
+    {
+      "id": 5,
+      "offset": 4740,
+      "x": 1895,
+      "y": 864,
+      "rawHex": "67076003a550a57800000000000000000000000000000000000000062003960096009001e8036009881328230000000000000000",
+      "name": "仙台",
+      "nodeIds": [
+        90
+      ],
+      "byte18": 0,
+      "ownerByte": 0,
+      "levelByte": 0,
+      "byte1b": 6,
+      "byte17": 0,
+      "word1c": 800,
+      "word1e": 150,
+      "words20to2a": [
+        150,
+        400,
+        1000,
+        2400,
+        5000,
+        9000
+      ]
+    },
+    {
+      "id": 6,
+      "offset": 4792,
+      "x": 1895,
+      "y": 911,
+      "rawHex": "67078f03a550a5780000000000000000000000000000000000000006f401960096009001e8036009881328230000000000000000",
+      "name": "仙台",
+      "nodeIds": [
+        91
+      ],
+      "byte18": 0,
+      "ownerByte": 0,
+      "levelByte": 0,
+      "byte1b": 6,
+      "byte17": 0,
+      "word1c": 500,
+      "word1e": 150,
+      "words20to2a": [
+        150,
+        400,
+        1000,
+        2400,
+        5000,
+        9000
+      ]
+    },
+    {
+      "id": 7,
+      "offset": 4844,
+      "x": 1895,
+      "y": 1153,
+      "rawHex": "67078104bad6ae710000000000000000000000000000000000000006dc052c012c01ee02d007c012102750460000000000000000",
+      "name": "福島",
+      "nodeIds": [
+        95
+      ],
+      "byte18": 0,
+      "ownerByte": 0,
+      "levelByte": 0,
+      "byte1b": 6,
+      "byte17": 0,
+      "word1c": 1500,
+      "word1e": 300,
+      "words20to2a": [
+        300,
+        750,
+        2000,
+        4800,
+        10000,
+        18000
+      ]
+    },
+    {
+      "id": 8,
+      "offset": 4896,
+      "x": 1895,
+      "y": 1199,
+      "rawHex": "6707af04bad6ae710000000000000000000000000000000000000006dc052c012c01ee02d007c012102750460000000000000000",
+      "name": "福島",
+      "nodeIds": [
+        96
+      ],
+      "byte18": 0,
+      "ownerByte": 0,
+      "levelByte": 0,
+      "byte1b": 6,
+      "byte17": 0,
+      "word1c": 1500,
+      "word1e": 300,
+      "words20to2a": [
+        300,
+        750,
+        2000,
+        4800,
+        10000,
+        18000
+      ]
+    },
+    {
+      "id": 9,
+      "offset": 4948,
+      "x": 1895,
+      "y": 1248,
+      "rawHex": "6707e004bad6ae710000000000000000000000000000000000000006dc052c012c01ee02d007c012102750460000000000000000",
+      "name": "福島",
+      "nodeIds": [
+        97
+      ],
+      "byte18": 0,
+      "ownerByte": 0,
+      "levelByte": 0,
+      "byte1b": 6,
+      "byte17": 0,
+      "word1c": 1500,
+      "word1e": 300,
+      "words20to2a": [
+        300,
+        750,
+        2000,
+        4800,
+        10000,
+        18000
+      ]
+    },
+    {
+      "id": 10,
+      "offset": 5000,
+      "x": 1859,
+      "y": 1334,
+      "rawHex": "43073605aa46a8ca0000000000000000000000000000000000000007c409f401f401b004b80b4c1d803e30750000000000000000",
+      "name": "東京",
+      "nodeIds": [
+        99
+      ],
+      "byte18": 0,
+      "ownerByte": 0,
+      "levelByte": 0,
+      "byte1b": 7,
+      "byte17": 0,
+      "word1c": 2500,
+      "word1e": 500,
+      "words20to2a": [
+        500,
+        1200,
+        3000,
+        7500,
+        16000,
+        30000
+      ]
+    },
+    {
+      "id": 11,
+      "offset": 5052,
+      "x": 1825,
+      "y": 1366,
+      "rawHex": "21075605aa46a8ca0000000000000000000000000000000000000007c409f401f401b004b80b4c1d803e30750000000000000000",
+      "name": "東京",
+      "nodeIds": [
+        100
+      ],
+      "byte18": 0,
+      "ownerByte": 0,
+      "levelByte": 0,
+      "byte1b": 7,
+      "byte17": 0,
+      "word1c": 2500,
+      "word1e": 500,
+      "words20to2a": [
+        500,
+        1200,
+        3000,
+        7500,
+        16000,
+        30000
+      ]
+    },
+    {
+      "id": 12,
+      "offset": 5104,
+      "x": 1791,
+      "y": 1401,
+      "rawHex": "ff067905aa46a8ca0000000000000000000000000000000000000007c409f401f401b004b80b4c1d803e30750000000000000000",
+      "name": "東京",
+      "nodeIds": [
+        101
+      ],
+      "byte18": 0,
+      "ownerByte": 0,
+      "levelByte": 0,
+      "byte1b": 7,
+      "byte17": 0,
+      "word1c": 2500,
+      "word1e": 500,
+      "words20to2a": [
+        500,
+        1200,
+        3000,
+        7500,
+        16000,
+        30000
+      ]
+    },
+    {
+      "id": 13,
+      "offset": 5156,
+      "x": 1688,
+      "y": 1505,
+      "rawHex": "9806e105aa46a8ca0000000000000000000000000000000000000007c409f401f401b004b80b4c1d803e30750000000000000000",
+      "name": "東京",
+      "nodeIds": [
+        104
+      ],
+      "byte18": 0,
+      "ownerByte": 0,
+      "levelByte": 0,
+      "byte1b": 7,
+      "byte17": 0,
+      "word1c": 2500,
+      "word1e": 500,
+      "words20to2a": [
+        500,
+        1200,
+        3000,
+        7500,
+        16000,
+        30000
+      ]
+    },
+    {
+      "id": 14,
+      "offset": 5208,
+      "x": 1654,
+      "y": 1538,
+      "rawHex": "76060206aa46a8ca0000000000000000000000000000000000000007c409f401f401b004b80b4c1d803e30750000000000000000",
+      "name": "東京",
+      "nodeIds": [
+        105
+      ],
+      "byte18": 0,
+      "ownerByte": 0,
+      "levelByte": 0,
+      "byte1b": 7,
+      "byte17": 0,
+      "word1c": 2500,
+      "word1e": 500,
+      "words20to2a": [
+        500,
+        1200,
+        3000,
+        7500,
+        16000,
+        30000
+      ]
+    },
+    {
+      "id": 15,
+      "offset": 5260,
+      "x": 1620,
+      "y": 1572,
+      "rawHex": "54062406aa46a8ca0000000000000000000000000000000000000007c409f401f401b004b80b4c1d803e30750000000000000000",
+      "name": "東京",
+      "nodeIds": [
+        106
+      ],
+      "byte18": 0,
+      "ownerByte": 0,
+      "levelByte": 0,
+      "byte1b": 7,
+      "byte17": 0,
+      "word1c": 2500,
+      "word1e": 500,
+      "words20to2a": [
+        500,
+        1200,
+        3000,
+        7500,
+        16000,
+        30000
+      ]
+    },
+    {
+      "id": 16,
+      "offset": 5312,
+      "x": 1536,
+      "y": 1607,
+      "rawHex": "00064706a657a56aabce000000000000000000000000000000000000dc052c012c01ee02d007c012102750460000000000000000",
+      "name": "名古屋",
+      "nodeIds": [
+        108
+      ],
+      "byte18": 0,
+      "ownerByte": 0,
+      "levelByte": 0,
+      "byte1b": 0,
+      "byte17": 0,
+      "word1c": 1500,
+      "word1e": 300,
+      "words20to2a": [
+        300,
+        750,
+        2000,
+        4800,
+        10000,
+        18000
+      ]
+    },
+    {
+      "id": 17,
+      "offset": 5364,
+      "x": 1487,
+      "y": 1607,
+      "rawHex": "cf054706a657a56aabce000000000000000000000000000000000000dc052c012c01ee02d007c012102750460000000000000000",
+      "name": "名古屋",
+      "nodeIds": [
+        109
+      ],
+      "byte18": 0,
+      "ownerByte": 0,
+      "levelByte": 0,
+      "byte1b": 0,
+      "byte17": 0,
+      "word1c": 1500,
+      "word1e": 300,
+      "words20to2a": [
+        300,
+        750,
+        2000,
+        4800,
+        10000,
+        18000
+      ]
+    },
+    {
+      "id": 18,
+      "offset": 5416,
+      "x": 1439,
+      "y": 1607,
+      "rawHex": "9f054706a657a56aabce000000000000000000000000000000000000dc052c012c01ee02d007c012102750460000000000000000",
+      "name": "名古屋",
+      "nodeIds": [
+        110
+      ],
+      "byte18": 0,
+      "ownerByte": 0,
+      "levelByte": 0,
+      "byte1b": 0,
+      "byte17": 0,
+      "word1c": 1500,
+      "word1e": 300,
+      "words20to2a": [
+        300,
+        750,
+        2000,
+        4800,
+        10000,
+        18000
+      ]
+    },
+    {
+      "id": 19,
+      "offset": 5468,
+      "x": 1296,
+      "y": 1608,
+      "rawHex": "10054806a46aa8c10000000000000000000000000000000000000000d00790019001e80360097017d430f0550000000000000000",
+      "name": "大阪",
+      "nodeIds": [
+        3
+      ],
+      "byte18": 0,
+      "ownerByte": 0,
+      "levelByte": 0,
+      "byte1b": 0,
+      "byte17": 0,
+      "word1c": 2000,
+      "word1e": 400,
+      "words20to2a": [
+        400,
+        1000,
+        2400,
+        6000,
+        12500,
+        22000
+      ]
+    },
+    {
+      "id": 20,
+      "offset": 5520,
+      "x": 1248,
+      "y": 1608,
+      "rawHex": "e0044806a46aa8c10000000000000000000000000000000000000000d00790019001e80360097017d430f0550000000000000000",
+      "name": "大阪",
+      "nodeIds": [
+        4
+      ],
+      "byte18": 0,
+      "ownerByte": 0,
+      "levelByte": 0,
+      "byte1b": 0,
+      "byte17": 0,
+      "word1c": 2000,
+      "word1e": 400,
+      "words20to2a": [
+        400,
+        1000,
+        2400,
+        6000,
+        12500,
+        22000
+      ]
+    },
+    {
+      "id": 21,
+      "offset": 5572,
+      "x": 1200,
+      "y": 1608,
+      "rawHex": "b0044806a46aa8c10000000000000000000000000000000000000000d00790019001e80360097017d430f0550000000000000000",
+      "name": "大阪",
+      "nodeIds": [
+        5
+      ],
+      "byte18": 0,
+      "ownerByte": 0,
+      "levelByte": 0,
+      "byte1b": 0,
+      "byte17": 0,
+      "word1c": 2000,
+      "word1e": 400,
+      "words20to2a": [
+        400,
+        1000,
+        2400,
+        6000,
+        12500,
+        22000
+      ]
+    },
+    {
+      "id": 22,
+      "offset": 5624,
+      "x": 1152,
+      "y": 1608,
+      "rawHex": "80044806a46aa8c10000000000000000000000000000000000000000d00790019001e80360097017d430f0550000000000000000",
+      "name": "大阪",
+      "nodeIds": [
+        6
+      ],
+      "byte18": 0,
+      "ownerByte": 0,
+      "levelByte": 0,
+      "byte1b": 0,
+      "byte17": 0,
+      "word1c": 2000,
+      "word1e": 400,
+      "words20to2a": [
+        400,
+        1000,
+        2400,
+        6000,
+        12500,
+        22000
+      ]
+    },
+    {
+      "id": 23,
+      "offset": 5676,
+      "x": 1103,
+      "y": 1608,
+      "rawHex": "4f044806a46aa8c10000000000000000000000000000000000000000d00790019001e80360097017d430f0550000000000000000",
+      "name": "大阪",
+      "nodeIds": [
+        7
+      ],
+      "byte18": 0,
+      "ownerByte": 0,
+      "levelByte": 0,
+      "byte1b": 0,
+      "byte17": 0,
+      "word1c": 2000,
+      "word1e": 400,
+      "words20to2a": [
+        400,
+        1000,
+        2400,
+        6000,
+        12500,
+        22000
+      ]
+    },
+    {
+      "id": 24,
+      "offset": 5728,
+      "x": 943,
+      "y": 1671,
+      "rawHex": "af038706afaba4e10000000000000000000000000000000000000007dc052c012c01ee02d007c012102750460000000000000000",
+      "name": "神戶",
+      "nodeIds": [
+        8
+      ],
+      "byte18": 0,
+      "ownerByte": 0,
+      "levelByte": 0,
+      "byte1b": 7,
+      "byte17": 0,
+      "word1c": 1500,
+      "word1e": 300,
+      "words20to2a": [
+        300,
+        750,
+        2000,
+        4800,
+        10000,
+        18000
+      ]
+    },
+    {
+      "id": 25,
+      "offset": 5780,
+      "x": 909,
+      "y": 1707,
+      "rawHex": "8d03ab06afaba4e10000000000000000000000000000000000000007dc052c012c01ee02d007c012102750460000000000000000",
+      "name": "神戶",
+      "nodeIds": [
+        9
+      ],
+      "byte18": 0,
+      "ownerByte": 0,
+      "levelByte": 0,
+      "byte1b": 7,
+      "byte17": 0,
+      "word1c": 1500,
+      "word1e": 300,
+      "words20to2a": [
+        300,
+        750,
+        2000,
+        4800,
+        10000,
+        18000
+      ]
+    },
+    {
+      "id": 26,
+      "offset": 5832,
+      "x": 875,
+      "y": 1741,
+      "rawHex": "6b03cd06afaba4e10000000000000000000000000000000000000007dc052c012c01ee02d007c012102750460000000000000000",
+      "name": "神戶",
+      "nodeIds": [
+        10
+      ],
+      "byte18": 0,
+      "ownerByte": 0,
+      "levelByte": 0,
+      "byte1b": 7,
+      "byte17": 0,
+      "word1c": 1500,
+      "word1e": 300,
+      "words20to2a": [
+        300,
+        750,
+        2000,
+        4800,
+        10000,
+        18000
+      ]
+    },
+    {
+      "id": 27,
+      "offset": 5884,
+      "x": 840,
+      "y": 1776,
+      "rawHex": "4803f006afaba4e10000000000000000000000000000000000000007dc052c012c01ee02d007c012102750460000000000000000",
+      "name": "神戶",
+      "nodeIds": [
+        11
+      ],
+      "byte18": 0,
+      "ownerByte": 0,
+      "levelByte": 0,
+      "byte1b": 7,
+      "byte17": 0,
+      "word1c": 1500,
+      "word1e": 300,
+      "words20to2a": [
+        300,
+        750,
+        2000,
+        4800,
+        10000,
+        18000
+      ]
+    },
+    {
+      "id": 28,
+      "offset": 5936,
+      "x": 807,
+      "y": 1811,
+      "rawHex": "27031307afaba4e10000000000000000000000000000000000000007dc052c012c01ee02d007c012102750460000000000000000",
+      "name": "神戶",
+      "nodeIds": [
+        12
+      ],
+      "byte18": 0,
+      "ownerByte": 0,
+      "levelByte": 0,
+      "byte1b": 7,
+      "byte17": 0,
+      "word1c": 1500,
+      "word1e": 300,
+      "words20to2a": [
+        300,
+        750,
+        2000,
+        4800,
+        10000,
+        18000
+      ]
+    },
+    {
+      "id": 29,
+      "offset": 5988,
+      "x": 335,
+      "y": 1752,
+      "rawHex": "4f01d806ae63ae710000000000000000000000000000000000000006e803c800c800f401b004f00a701710270000000000000000",
+      "name": "宮島",
+      "nodeIds": [
+        36
+      ],
+      "byte18": 0,
+      "ownerByte": 0,
+      "levelByte": 0,
+      "byte1b": 6,
+      "byte17": 0,
+      "word1c": 1000,
+      "word1e": 200,
+      "words20to2a": [
+        200,
+        500,
+        1200,
+        2800,
+        6000,
+        10000
+      ]
+    },
+    {
+      "id": 30,
+      "offset": 6040,
+      "x": 335,
+      "y": 1704,
+      "rawHex": "4f01a806ae63ae710000000000000000000000000000000000000006e803c800c800f401b004f00a701710270000000000000000",
+      "name": "宮島",
+      "nodeIds": [
+        37
+      ],
+      "byte18": 0,
+      "ownerByte": 0,
+      "levelByte": 0,
+      "byte1b": 6,
+      "byte17": 0,
+      "word1c": 1000,
+      "word1e": 200,
+      "words20to2a": [
+        200,
+        500,
+        1200,
+        2800,
+        6000,
+        10000
+      ]
+    },
+    {
+      "id": 31,
+      "offset": 6092,
+      "x": 335,
+      "y": 1657,
+      "rawHex": "4f017906ae63ae710000000000000000000000000000000000000006e803c800c800f401b004f00a701710270000000000000000",
+      "name": "宮島",
+      "nodeIds": [
+        38
+      ],
+      "byte18": 0,
+      "ownerByte": 0,
+      "levelByte": 0,
+      "byte1b": 6,
+      "byte17": 0,
+      "word1c": 1000,
+      "word1e": 200,
+      "words20to2a": [
+        200,
+        500,
+        1200,
+        2800,
+        6000,
+        10000
+      ]
+    },
+    {
+      "id": 32,
+      "offset": 6144,
+      "x": 575,
+      "y": 1463,
+      "rawHex": "3f02b705addcbcc50000000000000000000000000000000000000000dc052c012c01ee02d007c012102750460000000000000000",
+      "name": "倉敷",
+      "nodeIds": [
+        42
+      ],
+      "byte18": 0,
+      "ownerByte": 0,
+      "levelByte": 0,
+      "byte1b": 0,
+      "byte17": 0,
+      "word1c": 1500,
+      "word1e": 300,
+      "words20to2a": [
+        300,
+        750,
+        2000,
+        4800,
+        10000,
+        18000
+      ]
+    },
+    {
+      "id": 33,
+      "offset": 6196,
+      "x": 623,
+      "y": 1463,
+      "rawHex": "6f02b705addcbcc50000000000000000000000000000000000000000dc052c012c01ee02d007c012102750460000000000000000",
+      "name": "倉敷",
+      "nodeIds": [
+        43
+      ],
+      "byte18": 0,
+      "ownerByte": 0,
+      "levelByte": 0,
+      "byte1b": 0,
+      "byte17": 0,
+      "word1c": 1500,
+      "word1e": 300,
+      "words20to2a": [
+        300,
+        750,
+        2000,
+        4800,
+        10000,
+        18000
+      ]
+    },
+    {
+      "id": 34,
+      "offset": 6248,
+      "x": 672,
+      "y": 1463,
+      "rawHex": "a002b705addcbcc50000000000000000000000000000000000000000dc052c012c01ee02d007c012102750460000000000000000",
+      "name": "倉敷",
+      "nodeIds": [
+        44
+      ],
+      "byte18": 0,
+      "ownerByte": 0,
+      "levelByte": 0,
+      "byte1b": 0,
+      "byte17": 0,
+      "word1c": 1500,
+      "word1e": 300,
+      "words20to2a": [
+        300,
+        750,
+        2000,
+        4800,
+        10000,
+        18000
+      ]
+    },
+    {
+      "id": 35,
+      "offset": 6300,
+      "x": 1042,
+      "y": 1430,
+      "rawHex": "12049605a8cab3a30000000000000000000000000000000000000007d00790019001e80360097017d430f0550000000000000000",
+      "name": "京都",
+      "nodeIds": [
+        51
+      ],
+      "byte18": 0,
+      "ownerByte": 0,
+      "levelByte": 0,
+      "byte1b": 7,
+      "byte17": 0,
+      "word1c": 2000,
+      "word1e": 400,
+      "words20to2a": [
+        400,
+        1000,
+        2400,
+        6000,
+        12500,
+        22000
+      ]
+    },
+    {
+      "id": 36,
+      "offset": 6352,
+      "x": 1075,
+      "y": 1397,
+      "rawHex": "33047505a8cab3a30000000000000000000000000000000000000007d00790019001e80360097017d430f0550000000000000000",
+      "name": "京都",
+      "nodeIds": [
+        52
+      ],
+      "byte18": 0,
+      "ownerByte": 0,
+      "levelByte": 0,
+      "byte1b": 7,
+      "byte17": 0,
+      "word1c": 2000,
+      "word1e": 400,
+      "words20to2a": [
+        400,
+        1000,
+        2400,
+        6000,
+        12500,
+        22000
+      ]
+    },
+    {
+      "id": 37,
+      "offset": 6404,
+      "x": 1109,
+      "y": 1364,
+      "rawHex": "55045405a8cab3a30000000000000000000000000000000000000007d00790019001e80360097017d430f0550000000000000000",
+      "name": "京都",
+      "nodeIds": [
+        53
+      ],
+      "byte18": 0,
+      "ownerByte": 0,
+      "levelByte": 0,
+      "byte1b": 7,
+      "byte17": 0,
+      "word1c": 2000,
+      "word1e": 400,
+      "words20to2a": [
+        400,
+        1000,
+        2400,
+        6000,
+        12500,
+        22000
+      ]
+    },
+    {
+      "id": 38,
+      "offset": 6456,
+      "x": 1143,
+      "y": 1329,
+      "rawHex": "77043105a8cab3a30000000000000000000000000000000000000007d00790019001e80360097017d430f0550000000000000000",
+      "name": "京都",
+      "nodeIds": [
+        54
+      ],
+      "byte18": 0,
+      "ownerByte": 0,
+      "levelByte": 0,
+      "byte1b": 7,
+      "byte17": 0,
+      "word1c": 2000,
+      "word1e": 400,
+      "words20to2a": [
+        400,
+        1000,
+        2400,
+        6000,
+        12500,
+        22000
+      ]
+    },
+    {
+      "id": 39,
+      "offset": 6508,
+      "x": 1240,
+      "y": 1232,
+      "rawHex": "d804d004aa51a5bb0000000000000000000000000000000000000007dc052c012c01ee02d007c012102750460000000000000000",
+      "name": "松本",
+      "nodeIds": [
+        56
+      ],
+      "byte18": 0,
+      "ownerByte": 0,
+      "levelByte": 0,
+      "byte1b": 7,
+      "byte17": 0,
+      "word1c": 1500,
+      "word1e": 300,
+      "words20to2a": [
+        300,
+        750,
+        2000,
+        4800,
+        10000,
+        18000
+      ]
+    },
+    {
+      "id": 40,
+      "offset": 6560,
+      "x": 1273,
+      "y": 1199,
+      "rawHex": "f904af04aa51a5bb0000000000000000000000000000000000000007dc052c012c01ee02d007c012102750460000000000000000",
+      "name": "松本",
+      "nodeIds": [
+        57
+      ],
+      "byte18": 0,
+      "ownerByte": 0,
+      "levelByte": 0,
+      "byte1b": 7,
+      "byte17": 0,
+      "word1c": 1500,
+      "word1e": 300,
+      "words20to2a": [
+        300,
+        750,
+        2000,
+        4800,
+        10000,
+        18000
+      ]
+    },
+    {
+      "id": 41,
+      "offset": 6612,
+      "x": 1309,
+      "y": 1165,
+      "rawHex": "1d058d04aa51a5bb0000000000000000000000000000000000000007dc052c012c01ee02d007c012102750460000000000000000",
+      "name": "松本",
+      "nodeIds": [
+        58
+      ],
+      "byte18": 0,
+      "ownerByte": 0,
+      "levelByte": 0,
+      "byte1b": 7,
+      "byte17": 0,
+      "word1c": 1500,
+      "word1e": 300,
+      "words20to2a": [
+        300,
+        750,
+        2000,
+        4800,
+        10000,
+        18000
+      ]
+    },
+    {
+      "id": 42,
+      "offset": 6664,
+      "x": 1474,
+      "y": 999,
+      "rawHex": "c205e703b773bcf30000000000000000000000000000000000000007e803c800c800f401b004f00a701710270000000000000000",
+      "name": "新潟",
+      "nodeIds": [
+        62
+      ],
+      "byte18": 0,
+      "ownerByte": 0,
+      "levelByte": 0,
+      "byte1b": 7,
+      "byte17": 0,
+      "word1c": 1000,
+      "word1e": 200,
+      "words20to2a": [
+        200,
+        500,
+        1200,
+        2800,
+        6000,
+        10000
+      ]
+    },
+    {
+      "id": 43,
+      "offset": 6716,
+      "x": 1507,
+      "y": 965,
+      "rawHex": "e305c503b773bcf30000000000000000000000000000000000000007e803c800c800f401b004f00a701710270000000000000000",
+      "name": "新潟",
+      "nodeIds": [
+        63
+      ],
+      "byte18": 0,
+      "ownerByte": 0,
+      "levelByte": 0,
+      "byte1b": 7,
+      "byte17": 0,
+      "word1c": 1000,
+      "word1e": 200,
+      "words20to2a": [
+        200,
+        500,
+        1200,
+        2800,
+        6000,
+        10000
+      ]
+    },
+    {
+      "id": 44,
+      "offset": 6768,
+      "x": 1541,
+      "y": 932,
+      "rawHex": "0506a403b773bcf30000000000000000000000000000000000000007e803c800c800f401b004f00a701710270000000000000000",
+      "name": "新潟",
+      "nodeIds": [
+        64
+      ],
+      "byte18": 0,
+      "ownerByte": 0,
+      "levelByte": 0,
+      "byte1b": 7,
+      "byte17": 0,
+      "word1c": 1000,
+      "word1e": 200,
+      "words20to2a": [
+        200,
+        500,
+        1200,
+        2800,
+        6000,
+        10000
+      ]
+    },
+    {
+      "id": 45,
+      "offset": 6820,
+      "x": 1576,
+      "y": 899,
+      "rawHex": "28068303b773bcf30000000000000000000000000000000000000007e803c800c800f401b004f00a701710270000000000000000",
+      "name": "新潟",
+      "nodeIds": [
+        65
+      ],
+      "byte18": 0,
+      "ownerByte": 0,
+      "levelByte": 0,
+      "byte1b": 7,
+      "byte17": 0,
+      "word1c": 1000,
+      "word1e": 200,
+      "words20to2a": [
+        200,
+        500,
+        1200,
+        2800,
+        6000,
+        10000
+      ]
+    },
+    {
+      "id": 46,
+      "offset": 6872,
+      "x": 1608,
+      "y": 719,
+      "rawHex": "4806cf02aceea5d000000000000000000000000000000000000000062003960096009001e8036009881328230000000000000000",
+      "name": "秋田",
+      "nodeIds": [
+        69
+      ],
+      "byte18": 0,
+      "ownerByte": 0,
+      "levelByte": 0,
+      "byte1b": 6,
+      "byte17": 0,
+      "word1c": 800,
+      "word1e": 150,
+      "words20to2a": [
+        150,
+        400,
+        1000,
+        2400,
+        5000,
+        9000
+      ]
+    },
+    {
+      "id": 47,
+      "offset": 6924,
+      "x": 1607,
+      "y": 672,
+      "rawHex": "4706a002aceea5d000000000000000000000000000000000000000062003960096009001e8036009881328230000000000000000",
+      "name": "秋田",
+      "nodeIds": [
+        70
+      ],
+      "byte18": 0,
+      "ownerByte": 0,
+      "levelByte": 0,
+      "byte1b": 6,
+      "byte17": 0,
+      "word1c": 800,
+      "word1e": 150,
+      "words20to2a": [
+        150,
+        400,
+        1000,
+        2400,
+        5000,
+        9000
+      ]
+    },
+    {
+      "id": 48,
+      "offset": 6976,
+      "x": 1608,
+      "y": 623,
+      "rawHex": "48066f02aceea5d000000000000000000000000000000000000000062003960096009001e8036009881328230000000000000000",
+      "name": "秋田",
+      "nodeIds": [
+        71
+      ],
+      "byte18": 0,
+      "ownerByte": 0,
+      "levelByte": 0,
+      "byte1b": 6,
+      "byte17": 0,
+      "word1c": 800,
+      "word1e": 150,
+      "words20to2a": [
+        150,
+        400,
+        1000,
+        2400,
+        5000,
+        9000
+      ]
+    },
+    {
+      "id": 49,
+      "offset": 7028,
+      "x": 1608,
+      "y": 576,
+      "rawHex": "48064002aceea5d000000000000000000000000000000000000000062003960096009001e8036009881328230000000000000000",
+      "name": "秋田",
+      "nodeIds": [
+        72
+      ],
+      "byte18": 0,
+      "ownerByte": 0,
+      "levelByte": 0,
+      "byte1b": 6,
+      "byte17": 0,
+      "word1c": 800,
+      "word1e": 150,
+      "words20to2a": [
+        150,
+        400,
+        1000,
+        2400,
+        5000,
+        9000
+      ]
+    }
+  ],
+  "facilities": [
+    {
+      "id": 1,
+      "offset": 7136,
+      "x": 838,
+      "y": 1438,
+      "rawHex": "46039e05ae56b8f40000000000000000000000000000000000000000000000000000a00f90019001e803c4098813401f0000000000000000",
+      "name": "姬路",
+      "nodeIds": [
+        46,
+        47
+      ],
+      "byte18": 0,
+      "ownerByte": 0,
+      "levelByte": 0,
+      "byte1b": 0,
+      "byte1c": 0,
+      "word22": 4000,
+      "word24": 400,
+      "words26to2e": [
+        400,
+        1000,
+        2500,
+        5000,
+        8000
+      ]
+    },
+    {
+      "id": 2,
+      "offset": 7192,
+      "x": 379,
+      "y": 1532,
+      "rawHex": "7b01fc05bc73ae710000000000000000000000000000000000000007000000000000701758025802dc05a00f401fe02e0000000000000000",
+      "name": "廣島",
+      "nodeIds": [
+        39,
+        40
+      ],
+      "byte18": 0,
+      "ownerByte": 0,
+      "levelByte": 0,
+      "byte1b": 7,
+      "byte1c": 0,
+      "word22": 6000,
+      "word24": 600,
+      "words26to2e": [
+        600,
+        1500,
+        4000,
+        8000,
+        12000
+      ]
+    },
+    {
+      "id": 3,
+      "offset": 7248,
+      "x": 935,
+      "y": 1439,
+      "rawHex": "a7039f05ae56b8f400000000000000000000000000000000000000000000000000008813f401f401b004b80b701710270000000000000000",
+      "name": "姬路",
+      "nodeIds": [
+        48,
+        49
+      ],
+      "byte18": 0,
+      "ownerByte": 0,
+      "levelByte": 0,
+      "byte1b": 0,
+      "byte1c": 0,
+      "word22": 5000,
+      "word24": 500,
+      "words26to2e": [
+        500,
+        1200,
+        3000,
+        6000,
+        10000
+      ]
+    },
+    {
+      "id": 4,
+      "offset": 7304,
+      "x": 1751,
+      "y": 431,
+      "rawHex": "d706af01ab43b4cb00000000000000000000000000000000000000000000000000008813f401f401b004280a7017983a0000000000000000",
+      "name": "青森",
+      "nodeIds": [
+        74,
+        75
+      ],
+      "byte18": 0,
+      "ownerByte": 0,
+      "levelByte": 0,
+      "byte1b": 0,
+      "byte1c": 0,
+      "word22": 5000,
+      "word24": 500,
+      "words26to2e": [
+        500,
+        1200,
+        2600,
+        6000,
+        15000
+      ]
+    },
+    {
+      "id": 5,
+      "offset": 7360,
+      "x": 1848,
+      "y": 433,
+      "rawHex": "3807b101ab43b4cb00000000000000000000000000000000000000000000000000008813f401f401b004280a7017983a0000000000000000",
+      "name": "青森",
+      "nodeIds": [
+        76,
+        77
+      ],
+      "byte18": 0,
+      "ownerByte": 0,
+      "levelByte": 0,
+      "byte1b": 0,
+      "byte1c": 0,
+      "word22": 5000,
+      "word24": 500,
+      "words26to2e": [
+        500,
+        1200,
+        2600,
+        6000,
+        15000
+      ]
+    }
+  ],
+  "companies": [
+    {
+      "id": 1,
+      "offset": 7468,
+      "x": 1671,
+      "y": 1717,
+      "rawHex": "8706b506a454b656a6cab36600000000000000000000000000020a03000000003600000080af0200000000000000000000000000",
+      "name": "三越百貨",
+      "nodeIds": [
+        50,
+        107
+      ],
+      "byte18": 0,
+      "byte19": 2,
+      "byte1a": 10,
+      "word22": 0
+    },
+    {
+      "id": 2,
+      "offset": 7520,
+      "x": 1345,
+      "y": 1095,
+      "rawHex": "41054704c2d7a5d0a854a8ae00000000000000000000000000050507000000003800bc02b01e0400000000000000000000000000",
+      "name": "豐田汽車",
+      "nodeIds": [
+        59,
+        60
+      ],
+      "byte18": 0,
+      "byte19": 5,
+      "byte1a": 5,
+      "word22": 700
+    },
+    {
+      "id": 3,
+      "offset": 7572,
+      "x": 1583,
+      "y": 789,
+      "rawHex": "2f061503a4e9b2a3abd8b35d00000000000000000000000000030b06000000003300881320b90300000000000000000000000000",
+      "name": "日產建設",
+      "nodeIds": [
+        67,
+        68
+      ],
+      "byte18": 0,
+      "byte19": 3,
+      "byte1a": 11,
+      "word22": 5000
+    },
+    {
+      "id": 4,
+      "offset": 7624,
+      "x": 1871,
+      "y": 983,
+      "rawHex": "4f07d703a454a4aba5cda95200000000000000000000000000010406000000003400e803f00d0c00000000000000000000000000",
+      "name": "三井生命",
+      "nodeIds": [
+        92,
+        93
+      ],
+      "byte18": 0,
+      "byte19": 1,
+      "byte1a": 4,
+      "word22": 1000
+    },
+    {
+      "id": 5,
+      "offset": 7676,
+      "x": 1723,
+      "y": 1436,
+      "rawHex": "bb069c05a2e1a2d3a2d5a2cf000000000000000000000000000403070000000032009600009f2400000000000000000000000000",
+      "name": "ＳＥＧＡ",
+      "nodeIds": [
+        102,
+        103
+      ],
+      "byte18": 0,
+      "byte19": 4,
+      "byte1a": 3,
+      "word22": 150
+    },
+    {
+      "id": 6,
+      "offset": 7728,
+      "x": 1369,
+      "y": 1763,
+      "rawHex": "5905e306b449a468bbc8a6e600000000000000000000000000000704000000003a00000040420f00000000000000000000000000",
+      "name": "富士銀行",
+      "nodeIds": [
+        1
+      ],
+      "byte18": 0,
+      "byte19": 0,
+      "byte1a": 7,
+      "word22": 0
+    }
+  ],
+  "landmarks": [
+    {
+      "id": 1,
+      "offset": 7808,
+      "x": 1163,
+      "y": 1251,
+      "rawHex": "8b04e304c2e5b07c0000000000000000000000000000000007003d00",
+      "name": "醫院",
+      "nodeIds": [],
+      "word18": 7,
+      "word1a": 61
+    },
+    {
+      "id": 2,
+      "offset": 7836,
+      "x": 1943,
+      "y": 126,
+      "rawHex": "97077e00bacababb0000000000000000000000000000000001006a00",
+      "name": "監獄",
+      "nodeIds": [],
+      "word18": 1,
+      "word1a": 106
+    },
+    {
+      "id": 3,
+      "offset": 7864,
+      "x": 1799,
+      "y": 1120,
+      "rawHex": "07076004aa46b7d3ae63000000000000000000000000000006006400",
+      "name": "東照宮",
+      "nodeIds": [],
+      "word18": 6,
+      "word1a": 100
+    },
+    {
+      "id": 4,
+      "offset": 7892,
+      "x": 1636,
+      "y": 1290,
+      "rawHex": "64060a05aa46a8ca0000000000000000000000000000000005006900",
+      "name": "東京",
+      "nodeIds": [],
+      "word18": 5,
+      "word1a": 105
+    },
+    {
+      "id": 5,
+      "offset": 7920,
+      "x": 1217,
+      "y": 1493,
+      "rawHex": "c104d505a8cab3a30000000000000000000000000000000005006100",
+      "name": "京都",
+      "nodeIds": [],
+      "word18": 5,
+      "word1a": 97
+    },
+    {
+      "id": 6,
+      "offset": 7948,
+      "x": 1114,
+      "y": 1780,
+      "rawHex": "5a04f406a46aa8c1abb0000000000000000000000000000000006800",
+      "name": "大阪城",
+      "nodeIds": [],
+      "word18": 0,
+      "word1a": 104
+    },
+    {
+      "id": 7,
+      "offset": 7976,
+      "x": 740,
+      "y": 1666,
+      "rawHex": "e4028206afaba4e10000000000000000000000000000000004006300",
+      "name": "神戶",
+      "nodeIds": [],
+      "word18": 4,
+      "word1a": 99
+    },
+    {
+      "id": 8,
+      "offset": 8004,
+      "x": 505,
+      "y": 1722,
+      "rawHex": "f901ba06ae63ae710000000000000000000000000000000002006500",
+      "name": "宮島",
+      "nodeIds": [],
+      "word18": 2,
+      "word1a": 101
+    },
+    {
+      "id": 9,
+      "offset": 8032,
+      "x": 135,
+      "y": 2012,
+      "rawHex": "8700dc07aafcc4aca473000000000000000000000000000000006200",
+      "name": "阿蘇山",
+      "nodeIds": [],
+      "word18": 0,
+      "word1a": 98
+    },
+    {
+      "id": 10,
+      "offset": 8060,
+      "x": 2172,
+      "y": 1345,
+      "rawHex": "7c084105000000000000000000000000000000000000000000007600",
+      "name": "",
+      "nodeIds": [],
+      "word18": 0,
+      "word1a": 118
+    },
+    {
+      "id": 11,
+      "offset": 8088,
+      "x": 1633,
+      "y": 1933,
+      "rawHex": "61068d07000000000000000000000000000000000000000000007600",
+      "name": "",
+      "nodeIds": [],
+      "word18": 0,
+      "word1a": 118
+    },
+    {
+      "id": 12,
+      "offset": 8116,
+      "x": 436,
+      "y": 1241,
+      "rawHex": "b401d904000000000000000000000000000000000000000005007600",
+      "name": "",
+      "nodeIds": [],
+      "word18": 5,
+      "word1a": 118
+    },
+    {
+      "id": 13,
+      "offset": 8144,
+      "x": 400,
+      "y": 2225,
+      "rawHex": "9001b108000000000000000000000000000000000000000001007600",
+      "name": "",
+      "nodeIds": [],
+      "word18": 1,
+      "word1a": 118
+    },
+    {
+      "id": 14,
+      "offset": 8172,
+      "x": 504,
+      "y": 1864,
+      "rawHex": "f8014807ae63ae710000000000000000000000000000000002006500",
+      "name": "宮島",
+      "nodeIds": [],
+      "word18": 2,
+      "word1a": 101
+    },
+    {
+      "id": 15,
+      "offset": 8200,
+      "x": 2111,
+      "y": 900,
+      "rawHex": "3f088403aa51ae710000000000000000000000000000000000006700",
+      "name": "松島",
+      "nodeIds": [],
+      "word18": 0,
+      "word1a": 103
+    },
+    {
+      "id": 16,
+      "offset": 8228,
+      "x": 1448,
+      "y": 1456,
+      "rawHex": "a805b005b449a468a473000000000000000000000000000000006600",
+      "name": "富士山",
+      "nodeIds": [],
+      "word18": 0,
+      "word1a": 102
+    }
+  ]
+}

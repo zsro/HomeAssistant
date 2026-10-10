@@ -1,0 +1,203 @@
+{
+  "stage": "S3-04a",
+  "referenceCommit": "ec7d70e693059d1e781d9d1cc2ad7f36d360d39e",
+  "nativeExecution": false,
+  "sources": [
+    {
+      "file": "rich4_media_music.asm",
+      "bytes": 24399,
+      "sha256": "cc1dcfd8893526c0175903308e4f236b8b9791bbfb656f6a6ec97ea8e50b62be",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_media_music.asm",
+      "priorHashRegistrations": [],
+      "provenance": "local retained reference cache; attribution to fixed commit, not freshly fetched in this batch"
+    },
+    {
+      "file": "rich4_sound_effect.asm",
+      "bytes": 21244,
+      "sha256": "f4210befb1d86ec31f01e544f4122187aa46c095cf89edb9c7a20d68d5d279a3",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_sound_effect.asm",
+      "priorHashRegistrations": [],
+      "provenance": "local retained reference cache; attribution to fixed commit, not freshly fetched in this batch"
+    },
+    {
+      "file": "rich4_load_map.asm",
+      "bytes": 18143,
+      "sha256": "7a555911e15b8c947c6c281b95c23bf536dba92baca20929ab1666ed31df3987",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_load_map.asm",
+      "priorHashRegistrations": [
+        "s3-03b-sources.json",
+        "s3-03e-sources.json",
+        "s3-03d-sources.json",
+        "s3-03c-sources.json",
+        "s2-03o-sources.json",
+        "s3-03a-sources.json",
+        "s3-03f-sources.json",
+        "s2-02d-sources.json",
+        "reference-sources.json"
+      ],
+      "provenance": "local retained reference cache; attribution to fixed commit, not freshly fetched in this batch"
+    },
+    {
+      "file": "rich4_player_core_actions.asm",
+      "bytes": 151420,
+      "sha256": "2874c1a3e0ca1d0da5afe4cb93e42cf2d6f6fa864dbee11d7bcaa028af07d94a",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_core_actions.asm",
+      "priorHashRegistrations": [
+        "s2-03e-sources.json",
+        "s2-03b-sources.json",
+        "s2-03z-sources.json",
+        "s2-05a-sources.json",
+        "s2-03c-sources.json",
+        "s2-03d-sources.json",
+        "s2-04b-sources.json",
+        "s2-03v-sources.json",
+        "s2-03q-sources.json",
+        "s2-03ac-sources.json",
+        "s3-03b-sources.json",
+        "s3-03e-sources.json",
+        "s2-03n-sources.json",
+        "s2-02l-sources.json",
+        "s2-02k-sources.json",
+        "s3-03d-sources.json",
+        "s3-03c-sources.json",
+        "s2-03ab-sources.json",
+        "s2-03p-sources.json",
+        "s2-03w-sources.json",
+        "s2-02j-sources.json",
+        "s2-02m-sources.json",
+        "s2-03o-sources.json",
+        "s3-03a-sources.json",
+        "s3-03f-sources.json",
+        "s2-03u-sources.json",
+        "s2-03r-sources.json",
+        "s2-02h-sources.json",
+        "s2-03m-sources.json",
+        "s2-03j-sources.json",
+        "s2-03s-sources.json",
+        "s2-03aa-sources.json",
+        "s2-03t-sources.json",
+        "s2-03k-sources.json",
+        "s2-03l-sources.json",
+        "s2-02i-sources.json",
+        "s2-02n-sources.json",
+        "s2-02-sources.json",
+        "s2-03f-sources.json",
+        "s2-03a-sources.json",
+        "s2-05b-sources.json",
+        "s2-03y-sources.json",
+        "s2-03g-sources.json",
+        "s2-02e-sources.json",
+        "s2-04a-sources.json",
+        "reference-sources.json"
+      ],
+      "provenance": "local retained reference cache; attribution to fixed commit, not freshly fetched in this batch"
+    },
+    {
+      "file": "rich4.asm",
+      "bytes": 1007904,
+      "sha256": "30904cbb4f23a6b74fc1b80ad023bd7dff11b441c2c1978f768f9891d099d64a",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4.asm",
+      "priorHashRegistrations": [
+        "s2-03b-sources.json",
+        "s2-03c-sources.json",
+        "s2-04b-sources.json",
+        "s2-03v-sources.json",
+        "s2-03q-sources.json",
+        "s3-03b-sources.json",
+        "s2-03n-sources.json",
+        "s2-03i-sources.json",
+        "s2-02l-sources.json",
+        "s2-02k-sources.json",
+        "s3-03d-sources.json",
+        "s3-03c-sources.json",
+        "s2-03p-sources.json",
+        "s2-03w-sources.json",
+        "s2-02j-sources.json",
+        "s2-02m-sources.json",
+        "s2-03h-sources.json",
+        "s2-03o-sources.json",
+        "s3-03a-sources.json",
+        "s2-03u-sources.json",
+        "s2-03r-sources.json",
+        "s2-02h-sources.json",
+        "s2-03m-sources.json",
+        "s2-03j-sources.json",
+        "s2-03s-sources.json",
+        "s2-03k-sources.json",
+        "s2-03l-sources.json",
+        "s2-02i-sources.json",
+        "s2-02n-sources.json",
+        "s2-02-sources.json",
+        "s2-02d-sources.json",
+        "s2-02c-sources.json",
+        "s2-03f-sources.json",
+        "s2-03a-sources.json",
+        "s2-03y-sources.json",
+        "s2-03g-sources.json",
+        "s2-02b-sources.json",
+        "s2-03x-sources.json",
+        "reference-sources.json"
+      ],
+      "provenance": "local retained reference cache; attribution to fixed commit, not freshly fetched in this batch"
+    }
+  ],
+  "resourceInventory": "s3-04a-resources.json",
+  "localBinaryNote": "Reference executable layout differs from local install. Matching relevant table byte patterns is data evidence, not proof of identical local callsites. Excluded codes0/1 are not asserted equivalent. No Windows audio runtime comparison.",
+  "facts": [
+    {
+      "id": "AUDIO-01",
+      "source": "rich4_media_music.asm:688–796 / fcn_00454d91",
+      "finding": "arg0 increments then &7; CD branch adds2 and invokes play cdtrack from %d notify. Eight background entries correspond to CD2..9. No Japan-exclusive track claim."
+    },
+    {
+      "id": "AUDIO-02",
+      "source": "rich4.asm ref_00475299 + ref_0048234a; rich4_load_map.asm:599–603; rich4_sound_effect.asm:514–543",
+      "finding": "Landing code table slots10/16 address 8-byte effect descriptors; descriptor IDs43/48 load Effect.mkf resources. Parser checks reference bytes; relevant 15 code bytes and full136-byte sound table each occur once in local EXE."
+    },
+    {
+      "id": "AUDIO-03",
+      "source": "rich4_player_core_actions.asm:322–364",
+      "finding": "Landing reads node+0x24 low byte; dream with nonzero event bypasses dispatch; codes2..16 play slot before service dispatch. No inference that passing-bank or nested fortune plays this cue."
+    },
+    {
+      "id": "AUDIO-04",
+      "source": "rich4_sound_effect.asm:120–185,444–490,684–700",
+      "finding": "RIFF/fmt/data PCM loader; effect config controls playback; resets sound buffer position then plays. Web separate linear volumes/pause policy are explicit presentation choices."
+    },
+    {
+      "id": "AUDIO-05",
+      "source": "Game/Midi.txt + Media/Music/tracklen.nfo + actual Ogg probes",
+      "finding": "25 music files and25 MIDI names. Only8 background tracks exported; remaining17 event music mappings and the MIDI/CD selection stack deferred."
+    },
+    {
+      "id": "AUDIO-06",
+      "source": "MapDat.MKF resource2; resource inventory landingNodes",
+      "finding": "23 Japan nodes mapped: news2,fortune3,bank14,shop15 ->43; points10/11/12 ->48. Code values0/1 are outside native sound range and intentionally not pattern-claimed."
+    },
+    {
+      "id": "AUDIO-07",
+      "source": "audio.ts + GameSession.publish + scene/Page ownership",
+      "finding": "Detached live presentation packets only; no sound object in serialized rules/replay. Deduplicate game/revision/sequence, never queue locked/muted/paused/replay events. First explicit sound button unlock; unmount disposes."
+    },
+    {
+      "id": "AUDIO-08",
+      "source": "audio.ts controller + resource manifest",
+      "finding": "Web playlist starts02 and cycles02..09, one music channel and one interrupting effect channel, no RNG. Reset/new game restarts02; pause/hidden retain music position; finished stops; media failure is isolated."
+    },
+    {
+      "id": "AUDIO-09",
+      "source": "S3-03f baseline + source hashes + local session comparison",
+      "finding": "Engine/rules/policies/458 old fixtures unchanged. G7 restores no audio snapshot; command and event sequence continue; pure engine replay/export do not call presentation. Explicit future replay mode is silent, not a shipped replay-player UI."
+    }
+  ],
+  "newGameSemantics": false,
+  "newPolicyVersion": false,
+  "presentationProfile": "audio-foundation-v1",
+  "deferred": [
+    "remaining sound/voice/music mappings and priority queue (b)",
+    "god/vehicle/event animation frame mapping (c)",
+    "actual browser playback and lifecycle flows (d)",
+    "native CD/MIDI resume stack, track selection, volume curve and audio overlap",
+    "autonomous god movement not inferred; original exit stack/endgame/RNG/special characters/spinner and historical differences unchanged"
+  ]
+}

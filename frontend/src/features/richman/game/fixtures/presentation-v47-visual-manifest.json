@@ -1,0 +1,18 @@
+{
+  "players": 3,
+  "normalSpeed": true,
+  "commands": 9,
+  "visualCapture": "paused screenshots hide only pause overlay via screenshot style; no game-state injection",
+  "cleanup": {
+    "raf": 0,
+    "canvas": 0
+  },
+  "errors": [],
+  "prefixes": [
+    2,
+    3,
+    6
+  ],
+  "fullReplay": true,
+  "prefixReplay": true
+}

@@ -1,0 +1,110 @@
+{
+  "displayChecks": [
+    {
+      "index": 221,
+      "gods": [
+        {
+          "carrier": "player-4",
+          "text": "天使 · 剩余7次自身行动开始结算"
+        }
+      ]
+    },
+    {
+      "index": 351,
+      "gods": [
+        {
+          "carrier": "player-1",
+          "text": "小衰神 · 剩余7次自身行动开始结算"
+        },
+        {
+          "carrier": "player-4",
+          "text": "天使 · 剩余3次自身行动开始结算"
+        }
+      ]
+    },
+    {
+      "index": 450,
+      "gods": [
+        {
+          "carrier": "player-1",
+          "text": "小衰神 · 剩余4次自身行动开始结算"
+        }
+      ]
+    },
+    {
+      "index": 583,
+      "gods": []
+    }
+  ],
+  "robotPreviews": [
+    {
+      "mines": 0,
+      "bombs": 0
+    }
+  ],
+  "policy": "research-v1",
+  "toolWindows": [
+    "tool:08",
+    "tool:09",
+    "card:09",
+    "card:24",
+    "tool:02",
+    "tool:01"
+  ],
+  "crossChecks": [],
+  "route": "4",
+  "terminal": false,
+  "players": 4,
+  "normalSpeed": true,
+  "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+  "commands": 748,
+  "auto": 258,
+  "human": 57,
+  "lifecycle": [
+    "pause stops waiting",
+    "resume",
+    "reset dialog cancel",
+    "reset",
+    "replace with humans",
+    "exit cleanup",
+    "fullscreen",
+    "390px"
+  ],
+  "cleanup": {
+    "raf": 0,
+    "canvas": 0
+  },
+  "errors": [],
+  "pairNotices": [
+    {
+      "type": "g6Notice",
+      "message": "配对补位：10号槽出现在40号路格。",
+      "sequence": 811,
+      "commandId": "command-462",
+      "playerId": "player-4",
+      "turn": 56
+    },
+    {
+      "type": "g6Notice",
+      "message": "配对补位：8号槽出现在99号路格。",
+      "sequence": 1075,
+      "commandId": "command-617",
+      "playerId": "player-1",
+      "turn": 73
+    }
+  ],
+  "prefixes": [
+    225,
+    361,
+    454,
+    603
+  ],
+  "fullReplay": true,
+  "prefixReplay": true,
+  "commandsMatchPriorLegalRoute": true,
+  "hashes": {
+    "replay": "5315c86af0207e7c1e9861acd4d8558bbedf2edb55c504d990a300c8304b1a80",
+    "state": "ade790eb0983e492a7b7af74978e572f2585db6f92310eaa3418481b8d32ae1d",
+    "events": "014a61281f9400f52a4de5ba28dce568aca386bd518ea3b8c3f843317b507602"
+  }
+}

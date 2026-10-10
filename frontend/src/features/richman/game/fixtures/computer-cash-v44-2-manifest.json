@@ -1,0 +1,137 @@
+{
+  "players": 2,
+  "commands": 277,
+  "turn": 35,
+  "auto": 61,
+  "human": 50,
+  "acquisitions": [
+    {
+      "id": "player-2",
+      "ai": true,
+      "item": "card:02",
+      "turn": 21,
+      "action": "magic",
+      "evidence": [
+        {
+          "node": 35,
+          "group": 4,
+          "targets": [
+            "player-2"
+          ],
+          "effect": 6,
+          "title": "得一张卡片",
+          "rows": [
+            {
+              "playerId": "player-2",
+              "lines": [
+                "获得均贫卡。"
+              ],
+              "pointsBefore": 0,
+              "pointsAfter": 0,
+              "cashBefore": 1000,
+              "cashAfter": 1000,
+              "bankBefore": 100100,
+              "bankAfter": 100100,
+              "stopBefore": 0,
+              "stopAfter": 0,
+              "previousBefore": 78,
+              "previousAfter": 78,
+              "received": {
+                "itemId": "card:02",
+                "discarded": null
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "uses": [
+    {
+      "ai": true,
+      "id": "player-2",
+      "item": "card:02",
+      "turn": 34,
+      "gain": 14990,
+      "discarded": 0,
+      "receipt": {
+        "type": "cashEqualized",
+        "targetId": "player-1",
+        "sourceCash": 1400,
+        "targetCash": 31380,
+        "average": 16390,
+        "discarded": 0,
+        "sequence": 512,
+        "commandId": "command-270",
+        "playerId": "player-2",
+        "turn": 34
+      },
+      "before": {
+        "player-1": {
+          "cash": 31380,
+          "bank": 55000
+        },
+        "player-2": {
+          "cash": 1400,
+          "bank": 100100
+        }
+      },
+      "after": {
+        "player-1": {
+          "cash": 16390,
+          "bank": 55000
+        },
+        "player-2": {
+          "cash": 16390,
+          "bank": 100100
+        }
+      }
+    }
+  ],
+  "reactions": [],
+  "cancellations": [],
+  "prefixes": [
+    "card:02-acquired",
+    "card:02-paused",
+    "card:02-resumed",
+    "card:02-confirm-before",
+    "card:02-confirm-after"
+  ],
+  "report": {
+    "policy": "cash-v1",
+    "toolWindows": [
+      "tool:08",
+      "tool:09",
+      "card:02"
+    ],
+    "crossChecks": [],
+    "route": "2",
+    "terminal": false,
+    "players": 2,
+    "normalSpeed": true,
+    "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+    "commands": 277,
+    "auto": 61,
+    "human": 50,
+    "lifecycle": [
+      "pause stops waiting",
+      "resume",
+      "reset dialog cancel",
+      "reset",
+      "replace with humans",
+      "exit cleanup",
+      "fullscreen",
+      "390px"
+    ],
+    "cleanup": {
+      "raf": 0,
+      "canvas": 0
+    },
+    "errors": []
+  },
+  "hashes": {
+    "replay": "e9ef5204b49e1a79c8edfff53a9b301890aa6360f4eccc2a39fa05ba7f65bb8d",
+    "state": "421c1c9f78568215612d9255fb69e6ae11210f4dd4c795a1372cc8c4892b69f3",
+    "events": "9d8495c2cb4680b576fdef0cfa6535e3eb79d97340d2ba939d9b0d571b04a74a"
+  }
+}

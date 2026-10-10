@@ -1,0 +1,611 @@
+{
+  "stage": "S3-02f",
+  "policy": "status-v1",
+  "preservedPolicies": [
+    "basic-v1",
+    "tools-v1",
+    "rent-v1",
+    "defense-v1",
+    "estate-v1",
+    "cash-v1"
+  ],
+  "rulesId": "japan-events-candidate-v44",
+  "fingerprint": "f9dbb7e9",
+  "newGameSemantics": false,
+  "nativeExecution": false,
+  "priorNativeAudit": [
+    "s2-02i-sources.json",
+    "s2-02j-sources.json",
+    "s2-03p-sources.json",
+    "s3-01a-sources.json"
+  ],
+  "sources": [
+    {
+      "path": "frontend/src/features/richman/game/computer-status.ts",
+      "sha256": "ff57f853f3d0fa81fce5b12ade8f2bc8774ab4b929e78e41fd94fa540ec29162",
+      "anchors": [
+        {
+          "text": "STATUS_POLICY",
+          "lines": [
+            8,
+            28
+          ]
+        },
+        {
+          "text": "function statusChoices",
+          "lines": [
+            11
+          ]
+        },
+        {
+          "text": "function decideComputer",
+          "lines": [
+            27
+          ]
+        },
+        {
+          "text": "insurance?.terms",
+          "lines": [
+            21
+          ]
+        }
+      ],
+      "grade": "host heuristic/validation; not original AI evidence"
+    },
+    {
+      "path": "frontend/src/features/richman/game/computer-cash.ts",
+      "sha256": "a82370fc28ddb666299136056f7c8ab609c8e18e09ce7a1f29dcc681afe3eaa6",
+      "anchors": [
+        {
+          "text": "function decideComputer",
+          "lines": [
+            39
+          ]
+        }
+      ],
+      "grade": "host heuristic/validation; not original AI evidence"
+    },
+    {
+      "path": "frontend/src/features/richman/game/computer-estate.ts",
+      "sha256": "bcce6e5aae10a0183c5b2c8af51420ab00614976d6d4ee3f40b0277409f95d30",
+      "anchors": [
+        {
+          "text": "function decideComputer",
+          "lines": [
+            41
+          ]
+        }
+      ],
+      "grade": "host heuristic/validation; not original AI evidence"
+    },
+    {
+      "path": "frontend/src/features/richman/game/computer-defense.ts",
+      "sha256": "34b21482dad7bd9684162ba5b75cffab780338ffe535f7b51832164fc412e5de",
+      "anchors": [
+        {
+          "text": "function decideComputer",
+          "lines": [
+            8
+          ]
+        }
+      ],
+      "grade": "host heuristic/validation; not original AI evidence"
+    },
+    {
+      "path": "frontend/src/features/richman/game/computer-reactions.ts",
+      "sha256": "212ddf0a043aceefe5ae286173f092cbe8b0529ce0ac77721cdec64294f769fa",
+      "anchors": [
+        {
+          "text": "function decideComputer",
+          "lines": [
+            15
+          ]
+        }
+      ],
+      "grade": "host heuristic/validation; not original AI evidence"
+    },
+    {
+      "path": "frontend/src/features/richman/game/computer-tools.ts",
+      "sha256": "00c5f76c27336c15137c98b0eb27b7cb70626aa3c1befae18b6a7e0fe4bb9e37",
+      "anchors": [
+        {
+          "text": "function decideComputer",
+          "lines": [
+            67
+          ]
+        }
+      ],
+      "grade": "host heuristic/validation; not original AI evidence"
+    },
+    {
+      "path": "frontend/src/features/richman/game/computer.ts",
+      "sha256": "438551680035ceaef532cf7e85559be6186782fd1e375b8aa61f59bff49f3c23",
+      "anchors": [
+        {
+          "text": "ComputerPolicy=",
+          "lines": [
+            7
+          ]
+        },
+        {
+          "text": "function computerDecision",
+          "lines": [
+            18
+          ]
+        }
+      ],
+      "grade": "host heuristic/validation; not original AI evidence"
+    },
+    {
+      "path": "frontend/src/features/richman/game/session.ts",
+      "sha256": "9946ceef0a6b9af08ea7ceda5dc2b12475a4c51bfc68962f3c00c8fe3eb94b19",
+      "anchors": [
+        {
+          "text": "computerPolicy",
+          "lines": [
+            79,
+            134,
+            139,
+            328,
+            391
+          ]
+        },
+        {
+          "text": "private send",
+          "lines": [
+            250
+          ]
+        },
+        {
+          "text": "tick(milliseconds",
+          "lines": [
+            379,
+            381
+          ]
+        },
+        {
+          "text": "react(decisionId",
+          "lines": [
+            408
+          ]
+        }
+      ],
+      "grade": "host heuristic/validation; not original AI evidence"
+    },
+    {
+      "path": "frontend/src/features/richman/ComputerPanel.tsx",
+      "sha256": "bff3e311a150cfb7671fa4aedfc4302d12bc315d8921331e1518d33a0a3851a9",
+      "anchors": [
+        {
+          "text": "c.policy==='status-v1'",
+          "lines": [
+            11
+          ]
+        }
+      ],
+      "grade": "host heuristic/validation; not original AI evidence"
+    },
+    {
+      "path": "frontend/src/pages/RichmanPage.tsx",
+      "sha256": "dc973ec62da26de976df193467e3ea63b347e1372a68864bdab72627cbb26685",
+      "anchors": [
+        {
+          "text": "value=\"status-v1\"",
+          "lines": [
+            342
+          ]
+        }
+      ],
+      "grade": "host heuristic/validation; not original AI evidence"
+    },
+    {
+      "path": "frontend/src/features/richman/game/g2.ts",
+      "sha256": "639f9fdaadfafa0c6fed745c65f42018c9cc9bfce8a9d99db06e6e51f1ff9c17",
+      "anchors": [
+        {
+          "text": "function g2Options",
+          "lines": [
+            62
+          ]
+        },
+        {
+          "text": "function tickMobility",
+          "lines": [
+            91
+          ]
+        },
+        {
+          "text": "function applyG2",
+          "lines": [
+            109
+          ]
+        },
+        {
+          "text": "function enterDetention",
+          "lines": [
+            127
+          ]
+        }
+      ],
+      "grade": "preserved existing semantic evidence"
+    },
+    {
+      "path": "frontend/src/features/richman/game/g3.ts",
+      "sha256": "ea51f1c7c9be00d7ed055e9dd13cb464732992a266eaededf717b60b2e4a69e0",
+      "anchors": [
+        {
+          "text": "function applyAttack",
+          "lines": [
+            149
+          ]
+        },
+        {
+          "text": "function startAttack",
+          "lines": [
+            169
+          ]
+        },
+        {
+          "text": "function reactG3",
+          "lines": [
+            197
+          ]
+        }
+      ],
+      "grade": "preserved existing semantic evidence"
+    },
+    {
+      "path": "frontend/src/features/richman/game/insurance-state.ts",
+      "sha256": "1080a67fe1f8623fd8d533d6a42b9c6603e6a0e4ea6808a9689700ee1fa68337",
+      "anchors": [
+        {
+          "text": "function claimInsurance",
+          "lines": [
+            11
+          ]
+        }
+      ],
+      "grade": "preserved existing semantic evidence"
+    },
+    {
+      "path": "frontend/src/features/richman/game/engine.ts",
+      "sha256": "edb72546f0f2c7269d77867855f24b764457c3b9f6a658632f50444eedada425",
+      "anchors": [
+        {
+          "text": "const options = g2Options",
+          "lines": [
+            740
+          ]
+        },
+        {
+          "text": "startAttack(state",
+          "lines": [
+            752
+          ]
+        },
+        {
+          "text": "g2Resolved",
+          "lines": [
+            179,
+            758
+          ]
+        }
+      ],
+      "grade": "preserved existing semantic evidence"
+    },
+    {
+      "path": "frontend/src/features/richman/game/shop-acquisition.ts",
+      "sha256": "78667adb5cfab4f0fb8ff828e94ed610ae30bd7fc6e4923070359a4b549c72cc",
+      "anchors": [
+        {
+          "text": "shopPrice",
+          "lines": [
+            17,
+            36
+          ]
+        },
+        {
+          "text": "shopSupply",
+          "lines": [
+            16,
+            19,
+            32,
+            37,
+            38
+          ]
+        },
+        {
+          "text": "buyFromShelf",
+          "lines": [
+            34
+          ]
+        }
+      ],
+      "grade": "preserved existing semantic evidence"
+    },
+    {
+      "path": "frontend/src/features/richman/game/computer-status.test.ts",
+      "sha256": "8fdff8adf50ddc7c8c77712b27e9cffd00f7d7b763f9f3447081ed08c26fb3bd",
+      "anchors": [
+        {
+          "text": "Hidden",
+          "lines": [
+            15
+          ]
+        },
+        {
+          "text": "pending %s",
+          "lines": [
+            22
+          ]
+        },
+        {
+          "text": "automatic absolution",
+          "lines": [
+            24
+          ]
+        },
+        {
+          "text": "shop respects",
+          "lines": [
+            35
+          ]
+        }
+      ],
+      "grade": "host heuristic/validation; not original AI evidence"
+    },
+    {
+      "path": "frontend/src/features/richman/game/computer-status-browser.test.ts",
+      "sha256": "27cb0843f4e358c833f7dfbd60373249d93b953c3e73b614f7d50d1b8084b925",
+      "anchors": [
+        {
+          "text": "actual status-v1",
+          "lines": [
+            5
+          ]
+        },
+        {
+          "text": "attack-reaction",
+          "lines": [
+            9
+          ]
+        }
+      ],
+      "grade": "host heuristic/validation; not original AI evidence"
+    },
+    {
+      "path": "scripts/richman/verify-computer-status.ts",
+      "sha256": "60f6b02f408fa74f1d4a40c8ff9f9a98762ff909be13f168106d4a24e395d524",
+      "anchors": [
+        {
+          "text": "verifyComputerStatus",
+          "lines": [
+            9
+          ]
+        },
+        {
+          "text": "const record=",
+          "lines": [
+            23
+          ]
+        },
+        {
+          "text": "attackResolved",
+          "lines": [
+            49
+          ]
+        },
+        {
+          "text": "replayGame",
+          "lines": [
+            2,
+            65,
+            66
+          ]
+        }
+      ],
+      "grade": "host heuristic/validation; not original AI evidence"
+    },
+    {
+      "path": "scripts/richman/plan-computer-status.ts",
+      "sha256": "91b7fd01d2fd5d8c2d7861a0ee5434706008fc17da551e3f2baeaaf8e2266654",
+      "anchors": [
+        {
+          "text": "planComputerStatus",
+          "lines": [
+            8,
+            25
+          ]
+        },
+        {
+          "text": "cancelGood",
+          "lines": [
+            16,
+            17
+          ]
+        }
+      ],
+      "grade": "host heuristic/validation; not original AI evidence"
+    },
+    {
+      "path": "scripts/richman/plan-computer-status-reaction.ts",
+      "sha256": "250f4f0cbb17264bf552a336f5925379da084055b6001a29605235487bda1305",
+      "anchors": [
+        {
+          "text": "planComputerStatusReaction",
+          "lines": [
+            14,
+            49
+          ]
+        },
+        {
+          "text": "cancelled",
+          "lines": [
+            16,
+            20,
+            36
+          ]
+        }
+      ],
+      "grade": "host heuristic/validation; not original AI evidence"
+    },
+    {
+      "path": "scripts/richman/prepare-status-routes.ts",
+      "sha256": "bcdf188efa64538eaeabb2daf62e3f0d4bb7d302392e543ed468dd14dd8793b1",
+      "anchors": [
+        {
+          "text": "status-2-2",
+          "lines": [
+            2
+          ]
+        },
+        {
+          "text": "status-reaction-3",
+          "lines": [
+            3
+          ]
+        }
+      ],
+      "grade": "host heuristic/validation; not original AI evidence"
+    },
+    {
+      "path": "scripts/richman/computer-status-ui-browser.cjs",
+      "sha256": "67612bd9c6d33b4fa40d893255b9cf30a3dd9a0ee71eeaf9409587ba0cbe3fcb",
+      "anchors": [
+        {
+          "text": "const report=",
+          "lines": [
+            116
+          ]
+        },
+        {
+          "text": "toolWindows.includes",
+          "lines": [
+            84
+          ]
+        },
+        {
+          "text": "const cross=",
+          "lines": [
+            76
+          ]
+        }
+      ],
+      "grade": "host heuristic/validation; not original AI evidence"
+    },
+    {
+      "path": "scripts/richman/computer-status-built-browser.cjs",
+      "sha256": "bb31ab7a5f81fa3d3cd261bf33e8c9503bf9db5ad9f016ae11a261c7235e5116",
+      "anchors": [
+        {
+          "text": "const report=",
+          "lines": [
+            45
+          ]
+        }
+      ],
+      "grade": "host heuristic/validation; not original AI evidence"
+    },
+    {
+      "path": "scripts/richman/archive-computer-status.ts",
+      "sha256": "90a74b32d20c5059553250a77bfce782d27d77825272a76912992a9c2d532d37",
+      "anchors": [
+        {
+          "text": "verifyComputerStatus(replay)",
+          "lines": [
+            9
+          ]
+        }
+      ],
+      "grade": "host heuristic/validation; not original AI evidence"
+    },
+    {
+      "path": "docs/richman/s2-02i-g2.md",
+      "sha256": "1ec596ee6ddb574a32a9b70b315576c53922d854e99538b627974d67363db3d9",
+      "anchors": [
+        {
+          "text": "R07-02i",
+          "lines": [
+            30
+          ]
+        },
+        {
+          "text": "R07-07i",
+          "lines": [
+            35
+          ]
+        },
+        {
+          "text": "R07-13i",
+          "lines": [
+            41,
+            73
+          ]
+        }
+      ],
+      "grade": "preserved existing semantic evidence"
+    },
+    {
+      "path": "docs/richman/s2-02j-g3.md",
+      "sha256": "622811f167d78dc22e6c4c8a0a3ea306a133e5b4dceac5a290a664d4fc3bea18",
+      "anchors": [
+        {
+          "text": "R07-04j",
+          "lines": [
+            19
+          ]
+        },
+        {
+          "text": "R07-05j",
+          "lines": [
+            20
+          ]
+        }
+      ],
+      "grade": "preserved existing semantic evidence"
+    },
+    {
+      "path": "docs/richman/s3-02c-defense-strategy.md",
+      "sha256": "54f5b3d3a56a6470aba92e6cef04458e840a831bf24b3236067ffddf2fc22385",
+      "anchors": [
+        {
+          "text": "defense-v1",
+          "lines": [
+            3,
+            21
+          ]
+        }
+      ],
+      "grade": "preserved existing semantic evidence"
+    }
+  ],
+  "strategyFacts": {
+    "cards": [
+      "card:14",
+      "card:15",
+      "card:16",
+      "card:17",
+      "card:30"
+    ],
+    "targets": "unchanged G2 legal options; never filter winter participants to a convenient subset",
+    "risk": "skip self/ally/existing raw nonzero status; attacks skip21/19/18, prison skips nonzero insurance including128",
+    "score": "1(stop),3(turtle),5(others) times legal target count, fixed item/seat tie-break; heuristic not skipped-turn or money prediction",
+    "shop": "20/100/25/20/70 points, one each empty inventory, finite shelf/pool/capacity, new group first",
+    "reaction": "automatic21/18 remain engine; optional19 delegates defense-v1, back-source4/other5/revenge5; no recursion",
+    "recheck": "recompute before confirm; cancel with no consumption when empty, locked-source artificial mutation returns null",
+    "random": "no hidden sequences/seed/RNG/G7 or world simulation; public insurance terms only"
+  },
+  "preservation": {
+    "oldFixtureJsonUnchanged": 336,
+    "oldPolicyBodiesUnchanged": true,
+    "engineAndRuleFilesByteUnchanged": true
+  },
+  "differences": [
+    "original AI/hostility/difficulty parity, optimal expected rent/cash or point utility",
+    "browser automatic absolution/revenge, insured detention payout, all original status overlap/expiry/vehicle restoration; domain and history separate",
+    "browser artificial target/status/inventory/counter/ally mutation or AI automatic cancel; domain only, real human cancel separately recorded",
+    "new bankruptcy/terminal/all characters/save-load/background throttling/per-seat mixed policies/midgame takeover",
+    "self stop/turtle positioning, refreshing statuses, aggressive attack through known defenses",
+    "other active cards/stocks/financing/research"
+  ]
+}

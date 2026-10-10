@@ -1,0 +1,780 @@
+{
+  "players": 2,
+  "commands": 828,
+  "turn": 115,
+  "auto": 167,
+  "human": 169,
+  "acquisitions": [
+    {
+      "id": "player-2",
+      "ai": true,
+      "item": "card:29",
+      "turn": 39,
+      "action": "magic",
+      "events": [
+        {
+          "type": "magicResolved",
+          "receipt": {
+            "node": 73,
+            "group": 2,
+            "targets": [
+              "player-2"
+            ],
+            "effect": 6,
+            "title": "得一张卡片",
+            "rows": [
+              {
+                "playerId": "player-2",
+                "lines": [
+                  "获得同盟卡。"
+                ],
+                "pointsBefore": 0,
+                "pointsAfter": 0,
+                "cashBefore": 871,
+                "cashAfter": 871,
+                "bankBefore": 82440,
+                "bankAfter": 82440,
+                "stopBefore": 0,
+                "stopAfter": 0,
+                "previousBefore": null,
+                "previousAfter": null,
+                "received": {
+                  "itemId": "card:29",
+                  "discarded": null
+                }
+              }
+            ]
+          },
+          "sequence": 581,
+          "commandId": "command-312",
+          "playerId": "player-1",
+          "turn": 39
+        }
+      ]
+    },
+    {
+      "id": "player-2",
+      "ai": true,
+      "item": "card:13",
+      "turn": 107,
+      "action": "magic",
+      "events": [
+        {
+          "type": "magicResolved",
+          "receipt": {
+            "node": 73,
+            "group": 4,
+            "targets": [
+              "player-2"
+            ],
+            "effect": 6,
+            "title": "得一张卡片",
+            "rows": [
+              {
+                "playerId": "player-2",
+                "lines": [
+                  "获得抢夺卡。"
+                ],
+                "pointsBefore": 70,
+                "pointsAfter": 70,
+                "cashBefore": 2500,
+                "cashAfter": 2500,
+                "bankBefore": 86168,
+                "bankAfter": 86168,
+                "stopBefore": 0,
+                "stopAfter": 0,
+                "previousBefore": 103,
+                "previousAfter": 103,
+                "received": {
+                  "itemId": "card:13",
+                  "discarded": null
+                }
+              }
+            ]
+          },
+          "sequence": 1467,
+          "commandId": "command-761",
+          "playerId": "player-1",
+          "turn": 107
+        }
+      ]
+    }
+  ],
+  "uses": [
+    {
+      "ai": true,
+      "id": "player-2",
+      "item": "card:29",
+      "target": "player-1",
+      "discarded": null,
+      "received": true,
+      "turn": 82,
+      "before": {
+        "bag": {
+          "player-1": {
+            "tool:08": 1,
+            "tool:09": 1,
+            "tool:01": 1,
+            "tool:02": 1,
+            "card:02": 0,
+            "card:01": 0,
+            "card:03": 0,
+            "card:04": 0,
+            "card:05": 0,
+            "card:06": 0,
+            "card:12": 0,
+            "card:14": 0,
+            "card:15": 0,
+            "card:16": 0,
+            "card:17": 0,
+            "card:30": 1,
+            "tool:05": 0,
+            "tool:06": 0,
+            "card:13": 0,
+            "card:18": 0,
+            "card:19": 0,
+            "card:20": 0,
+            "card:21": 0,
+            "card:29": 0,
+            "card:07": 0,
+            "card:08": 0,
+            "card:26": 0,
+            "card:27": 0,
+            "card:28": 0,
+            "card:09": 0,
+            "card:10": 0,
+            "card:11": 0,
+            "tool:03": 0,
+            "tool:04": 0,
+            "tool:07": 0,
+            "tool:12": 0,
+            "card:22": 0,
+            "card:23": 0,
+            "card:24": 0,
+            "card:25": 0,
+            "tool:10": 0,
+            "tool:11": 0,
+            "tool:13": 0
+          },
+          "player-2": {
+            "tool:08": 0,
+            "tool:09": 0,
+            "tool:01": 1,
+            "tool:02": 1,
+            "card:02": 0,
+            "card:01": 0,
+            "card:03": 0,
+            "card:04": 0,
+            "card:05": 0,
+            "card:06": 0,
+            "card:12": 0,
+            "card:14": 0,
+            "card:15": 0,
+            "card:16": 0,
+            "card:17": 0,
+            "card:30": 0,
+            "tool:05": 0,
+            "tool:06": 0,
+            "card:13": 0,
+            "card:18": 1,
+            "card:19": 1,
+            "card:20": 0,
+            "card:21": 1,
+            "card:29": 1,
+            "card:07": 0,
+            "card:08": 0,
+            "card:26": 0,
+            "card:27": 0,
+            "card:28": 0,
+            "card:09": 0,
+            "card:10": 0,
+            "card:11": 0,
+            "tool:03": 0,
+            "tool:04": 0,
+            "tool:07": 0,
+            "tool:12": 0,
+            "card:22": 0,
+            "card:23": 0,
+            "card:24": 0,
+            "card:25": 0,
+            "tool:10": 0,
+            "tool:11": 0,
+            "tool:13": 0
+          }
+        },
+        "slots": {
+          "player-1": [
+            "card:30"
+          ],
+          "player-2": [
+            "card:29",
+            "card:21",
+            "card:19",
+            "card:18"
+          ]
+        },
+        "allies": {
+          "player-1": null,
+          "player-2": null
+        }
+      },
+      "after": {
+        "bag": {
+          "player-1": {
+            "tool:08": 1,
+            "tool:09": 1,
+            "tool:01": 1,
+            "tool:02": 1,
+            "card:02": 0,
+            "card:01": 0,
+            "card:03": 0,
+            "card:04": 0,
+            "card:05": 0,
+            "card:06": 0,
+            "card:12": 0,
+            "card:14": 0,
+            "card:15": 0,
+            "card:16": 0,
+            "card:17": 0,
+            "card:30": 1,
+            "tool:05": 0,
+            "tool:06": 0,
+            "card:13": 0,
+            "card:18": 0,
+            "card:19": 0,
+            "card:20": 0,
+            "card:21": 0,
+            "card:29": 0,
+            "card:07": 0,
+            "card:08": 0,
+            "card:26": 0,
+            "card:27": 0,
+            "card:28": 0,
+            "card:09": 0,
+            "card:10": 0,
+            "card:11": 0,
+            "tool:03": 0,
+            "tool:04": 0,
+            "tool:07": 0,
+            "tool:12": 0,
+            "card:22": 0,
+            "card:23": 0,
+            "card:24": 0,
+            "card:25": 0,
+            "tool:10": 0,
+            "tool:11": 0,
+            "tool:13": 0
+          },
+          "player-2": {
+            "tool:08": 0,
+            "tool:09": 0,
+            "tool:01": 1,
+            "tool:02": 1,
+            "card:02": 0,
+            "card:01": 0,
+            "card:03": 0,
+            "card:04": 0,
+            "card:05": 0,
+            "card:06": 0,
+            "card:12": 0,
+            "card:14": 0,
+            "card:15": 0,
+            "card:16": 0,
+            "card:17": 0,
+            "card:30": 0,
+            "tool:05": 0,
+            "tool:06": 0,
+            "card:13": 0,
+            "card:18": 1,
+            "card:19": 1,
+            "card:20": 0,
+            "card:21": 1,
+            "card:29": 0,
+            "card:07": 0,
+            "card:08": 0,
+            "card:26": 0,
+            "card:27": 0,
+            "card:28": 0,
+            "card:09": 0,
+            "card:10": 0,
+            "card:11": 0,
+            "tool:03": 0,
+            "tool:04": 0,
+            "tool:07": 0,
+            "tool:12": 0,
+            "card:22": 0,
+            "card:23": 0,
+            "card:24": 0,
+            "card:25": 0,
+            "tool:10": 0,
+            "tool:11": 0,
+            "tool:13": 0
+          }
+        },
+        "slots": {
+          "player-1": [
+            "card:30"
+          ],
+          "player-2": [
+            "card:21",
+            "card:19",
+            "card:18"
+          ]
+        },
+        "allies": {
+          "player-1": {
+            "partner": "player-2",
+            "remaining": 7
+          },
+          "player-2": {
+            "partner": "player-1",
+            "remaining": 7
+          }
+        }
+      },
+      "credits": {
+        "card:29": 1
+      }
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "item": "card:13",
+      "target": "player-1",
+      "stolen": "card:30",
+      "discarded": null,
+      "received": true,
+      "turn": 114,
+      "before": {
+        "bag": {
+          "player-1": {
+            "tool:08": 1,
+            "tool:09": 1,
+            "tool:01": 1,
+            "tool:02": 1,
+            "card:02": 0,
+            "card:01": 0,
+            "card:03": 0,
+            "card:04": 0,
+            "card:05": 0,
+            "card:06": 0,
+            "card:12": 0,
+            "card:14": 0,
+            "card:15": 0,
+            "card:16": 0,
+            "card:17": 0,
+            "card:30": 1,
+            "tool:05": 0,
+            "tool:06": 0,
+            "card:13": 0,
+            "card:18": 0,
+            "card:19": 0,
+            "card:20": 0,
+            "card:21": 0,
+            "card:29": 0,
+            "card:07": 0,
+            "card:08": 0,
+            "card:26": 0,
+            "card:27": 0,
+            "card:28": 0,
+            "card:09": 0,
+            "card:10": 0,
+            "card:11": 0,
+            "tool:03": 0,
+            "tool:04": 0,
+            "tool:07": 0,
+            "tool:12": 0,
+            "card:22": 0,
+            "card:23": 0,
+            "card:24": 0,
+            "card:25": 0,
+            "tool:10": 0,
+            "tool:11": 0,
+            "tool:13": 0
+          },
+          "player-2": {
+            "tool:08": 0,
+            "tool:09": 0,
+            "tool:01": 1,
+            "tool:02": 1,
+            "card:02": 0,
+            "card:01": 0,
+            "card:03": 0,
+            "card:04": 0,
+            "card:05": 0,
+            "card:06": 0,
+            "card:12": 0,
+            "card:14": 0,
+            "card:15": 0,
+            "card:16": 0,
+            "card:17": 0,
+            "card:30": 0,
+            "tool:05": 0,
+            "tool:06": 0,
+            "card:13": 1,
+            "card:18": 0,
+            "card:19": 0,
+            "card:20": 0,
+            "card:21": 1,
+            "card:29": 0,
+            "card:07": 0,
+            "card:08": 0,
+            "card:26": 0,
+            "card:27": 1,
+            "card:28": 0,
+            "card:09": 0,
+            "card:10": 0,
+            "card:11": 0,
+            "tool:03": 0,
+            "tool:04": 0,
+            "tool:07": 0,
+            "tool:12": 0,
+            "card:22": 0,
+            "card:23": 0,
+            "card:24": 0,
+            "card:25": 0,
+            "tool:10": 0,
+            "tool:11": 0,
+            "tool:13": 0
+          }
+        },
+        "slots": {
+          "player-1": [
+            "card:30"
+          ],
+          "player-2": [
+            "card:21",
+            "card:13",
+            "card:27"
+          ]
+        },
+        "allies": {
+          "player-1": null,
+          "player-2": null
+        }
+      },
+      "after": {
+        "bag": {
+          "player-1": {
+            "tool:08": 1,
+            "tool:09": 1,
+            "tool:01": 1,
+            "tool:02": 1,
+            "card:02": 0,
+            "card:01": 0,
+            "card:03": 0,
+            "card:04": 0,
+            "card:05": 0,
+            "card:06": 0,
+            "card:12": 0,
+            "card:14": 0,
+            "card:15": 0,
+            "card:16": 0,
+            "card:17": 0,
+            "card:30": 0,
+            "tool:05": 0,
+            "tool:06": 0,
+            "card:13": 0,
+            "card:18": 0,
+            "card:19": 0,
+            "card:20": 0,
+            "card:21": 0,
+            "card:29": 0,
+            "card:07": 0,
+            "card:08": 0,
+            "card:26": 0,
+            "card:27": 0,
+            "card:28": 0,
+            "card:09": 0,
+            "card:10": 0,
+            "card:11": 0,
+            "tool:03": 0,
+            "tool:04": 0,
+            "tool:07": 0,
+            "tool:12": 0,
+            "card:22": 0,
+            "card:23": 0,
+            "card:24": 0,
+            "card:25": 0,
+            "tool:10": 0,
+            "tool:11": 0,
+            "tool:13": 0
+          },
+          "player-2": {
+            "tool:08": 0,
+            "tool:09": 0,
+            "tool:01": 1,
+            "tool:02": 1,
+            "card:02": 0,
+            "card:01": 0,
+            "card:03": 0,
+            "card:04": 0,
+            "card:05": 0,
+            "card:06": 0,
+            "card:12": 0,
+            "card:14": 0,
+            "card:15": 0,
+            "card:16": 0,
+            "card:17": 0,
+            "card:30": 1,
+            "tool:05": 0,
+            "tool:06": 0,
+            "card:13": 0,
+            "card:18": 0,
+            "card:19": 0,
+            "card:20": 0,
+            "card:21": 1,
+            "card:29": 0,
+            "card:07": 0,
+            "card:08": 0,
+            "card:26": 0,
+            "card:27": 1,
+            "card:28": 0,
+            "card:09": 0,
+            "card:10": 0,
+            "card:11": 0,
+            "tool:03": 0,
+            "tool:04": 0,
+            "tool:07": 0,
+            "tool:12": 0,
+            "card:22": 0,
+            "card:23": 0,
+            "card:24": 0,
+            "card:25": 0,
+            "tool:10": 0,
+            "tool:11": 0,
+            "tool:13": 0
+          }
+        },
+        "slots": {
+          "player-1": [],
+          "player-2": [
+            "card:21",
+            "card:27",
+            "card:30"
+          ]
+        },
+        "allies": {
+          "player-1": null,
+          "player-2": null
+        }
+      },
+      "credits": {
+        "card:13": 1
+      }
+    }
+  ],
+  "cancellations": [],
+  "clocks": [
+    {
+      "type": "allianceChanged",
+      "players": [
+        "player-2",
+        "player-1"
+      ],
+      "remaining": 7,
+      "reason": "建立同盟",
+      "sequence": 1091,
+      "commandId": "command-575",
+      "playerId": "player-2",
+      "turn": 82
+    },
+    {
+      "type": "allianceTicked",
+      "playerId": "player-1",
+      "remaining": 6,
+      "sequence": 1111,
+      "commandId": "command-583",
+      "turn": 83
+    },
+    {
+      "type": "allianceTicked",
+      "playerId": "player-2",
+      "remaining": 6,
+      "sequence": 1118,
+      "commandId": "command-587",
+      "turn": 84
+    },
+    {
+      "type": "allianceTicked",
+      "playerId": "player-1",
+      "remaining": 5,
+      "sequence": 1137,
+      "commandId": "command-595",
+      "turn": 85
+    },
+    {
+      "type": "allianceTicked",
+      "playerId": "player-2",
+      "remaining": 5,
+      "sequence": 1156,
+      "commandId": "command-605",
+      "turn": 86
+    },
+    {
+      "type": "allianceTicked",
+      "playerId": "player-1",
+      "remaining": 4,
+      "sequence": 1172,
+      "commandId": "command-613",
+      "turn": 87
+    },
+    {
+      "type": "allianceTicked",
+      "playerId": "player-2",
+      "remaining": 4,
+      "sequence": 1185,
+      "commandId": "command-620",
+      "turn": 88
+    },
+    {
+      "type": "allianceTicked",
+      "playerId": "player-1",
+      "remaining": 3,
+      "sequence": 1196,
+      "commandId": "command-624",
+      "turn": 89
+    },
+    {
+      "type": "allianceTicked",
+      "playerId": "player-2",
+      "remaining": 3,
+      "sequence": 1209,
+      "commandId": "command-631",
+      "turn": 90
+    },
+    {
+      "type": "allianceTicked",
+      "playerId": "player-1",
+      "remaining": 2,
+      "sequence": 1231,
+      "commandId": "command-639",
+      "turn": 91
+    },
+    {
+      "type": "allianceTicked",
+      "playerId": "player-2",
+      "remaining": 2,
+      "sequence": 1240,
+      "commandId": "command-644",
+      "turn": 92
+    },
+    {
+      "type": "allianceTicked",
+      "playerId": "player-1",
+      "remaining": 1,
+      "sequence": 1250,
+      "commandId": "command-648",
+      "turn": 93
+    },
+    {
+      "type": "allianceTicked",
+      "playerId": "player-2",
+      "remaining": 1,
+      "sequence": 1266,
+      "commandId": "command-656",
+      "turn": 94
+    },
+    {
+      "type": "allianceTicked",
+      "playerId": "player-1",
+      "remaining": 128,
+      "sequence": 1277,
+      "commandId": "command-660",
+      "turn": 95
+    },
+    {
+      "type": "allianceTicked",
+      "playerId": "player-2",
+      "remaining": 128,
+      "sequence": 1294,
+      "commandId": "command-669",
+      "turn": 96
+    },
+    {
+      "type": "allianceChanged",
+      "players": [
+        "player-1",
+        "player-2"
+      ],
+      "remaining": 0,
+      "reason": "同盟到期",
+      "sequence": 1313,
+      "commandId": "command-677",
+      "playerId": "player-1",
+      "turn": 97
+    }
+  ],
+  "waivers": [
+    {
+      "type": "rentWaived",
+      "propertyId": "japan:facility:3",
+      "ownerId": "player-2",
+      "reason": "同盟免租",
+      "sequence": 1264,
+      "commandId": "command-655",
+      "playerId": "player-1",
+      "turn": 93
+    }
+  ],
+  "prefixes": [
+    "card:29-acquired",
+    "card:29-paused",
+    "card:29-resumed",
+    "card:29-confirm-before",
+    "card:29-confirm-after",
+    "alliance-established-before",
+    "alliance-established-after",
+    "alliance-tick-before",
+    "alliance-tick-after",
+    "alliance-rent-waived",
+    "alliance-raw128-before",
+    "alliance-raw128-after",
+    "alliance-ended-before",
+    "alliance-ended-after",
+    "card:13-acquired",
+    "card:13-paused",
+    "card:13-resumed",
+    "card:13-confirm-before",
+    "card:13-confirm-after"
+  ],
+  "report": {
+    "policy": "inventory-v1",
+    "toolWindows": [
+      "tool:08",
+      "tool:09",
+      "card:29",
+      "card:13",
+      "card:30"
+    ],
+    "crossChecks": [],
+    "route": "2",
+    "terminal": false,
+    "players": 2,
+    "normalSpeed": true,
+    "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+    "commands": 828,
+    "auto": 167,
+    "human": 169,
+    "lifecycle": [
+      "pause stops waiting",
+      "resume",
+      "reset dialog cancel",
+      "reset",
+      "replace with humans",
+      "exit cleanup",
+      "fullscreen",
+      "390px"
+    ],
+    "cleanup": {
+      "raf": 0,
+      "canvas": 0
+    },
+    "errors": []
+  },
+  "hashes": {
+    "replay": "22d16e11152f8a180d5b0d6b2f956e63f93a26f6e3df3683a3fefc6350e6c9e3",
+    "state": "6424730a464cf392e38bc9865ac7bb7a1042f9ff67cd91e6a01cdedcbe7d29df",
+    "events": "fe2989978100a45165ed92dad71a4d620c339a29abdcafc560c9fba5e93caf14"
+  }
+}

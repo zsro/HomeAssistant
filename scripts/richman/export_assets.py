@@ -95,7 +95,7 @@ def export(game, output, decoder):
         label = lands[kind - 2001]['name'] if 2001 <= kind <= 2000 + nl else '道路'
         nodes.append(dict(id=i, x=x, y=y, adjacent=adjacent, kind=kind, name=label))
     assert all(v in range(1, nn + 1) for n in nodes for v in n['adjacent'])
-    # Validate directed reachability; the original graph includes a one-way spur.
+    # Preserve the stored edge direction; this Japan fixture has reciprocal edges.
     visited, queue = set(), [1]
     while queue:
         i = queue.pop()
@@ -129,15 +129,14 @@ def export(game, output, decoder):
                                walkFramesPerDirection=len(walking) // 8,
                                resourceIds=[base_id, base_id + 1]))
 
-    # Buildings are visual test fixtures on original land coordinates, not owned properties.
+    # Candidate Japanese residential tiers 1..5, all original orientation frames.
+    # Land level 0 is empty; ownership is rendered from the game state, never scenery.
     scenery = []
-    for i, land in enumerate(lands):
-        rid = 32 + (i % 5)
+    for level, rid in enumerate(range(32, 37), 1):
         frames = maps.frames(rid)
-        key = f'building-{rid}'
-        if key not in sprites:
-            add(key, frames[0])
-        scenery.append(dict(x=land['x'], y=land['y'], sprite=key, name=land['name']))
+        assert len(frames) == 8
+        for direction, frame in enumerate(frames):
+            add(f'house-{level}-{direction}', frame)
     landmark_resources = {'醫院': 87, '監獄': 122, '東照宮': 123, '東京': 128,
                           '京都': 126, '大阪城': 132, '神戶': 125, '宮島': 127,
                           '阿蘇山': 124, '富士山': 133, '松島': 131}
@@ -166,7 +165,7 @@ def export(game, output, decoder):
     for key, im in images:
         atlas.paste(im, (sprites[key]['x'], sprites[key]['y']))
     atlas.save(output / 'sprites.webp', lossless=True)
-    manifest = dict(version=1, map=dict(name='日本', width=w * 32, height=h * 32, nodes=nodes,
+    manifest = dict(version=1, propertyArtVersion=1, map=dict(name='日本', width=w * 32, height=h * 32, nodes=nodes,
                                        lands=lands, scenery=scenery), characters=characters, sprites=sprites,
                     sourceHashes={n: hashlib.sha256((game / n).read_bytes()).hexdigest()
                                   for n in ['Data.mkf', 'map.mkf', 'MapDat.MKF']})

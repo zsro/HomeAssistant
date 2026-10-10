@@ -1,0 +1,45 @@
+{
+  "normalSpeed": true,
+  "seed": "s2-02b-worker",
+  "map": "original Japan, no map/state injection",
+  "checks": [
+    "location restriction",
+    "explicit property selection",
+    "pause",
+    "cancel without consumption",
+    "reset dialog cancel retains target",
+    "fullscreen",
+    "390px",
+    "other-owned property upgrade",
+    "cash/points/ownership/RNG preserved",
+    "worker then remote dice",
+    "downloaded replay",
+    "reset restores worker",
+    "v1 mode still available",
+    "cleanup"
+  ],
+  "built": [
+    {
+      "type": "propertyBuilt",
+      "propertyId": "japan:land:19",
+      "fromLevel": 0,
+      "level": 1,
+      "ownerId": "player-1",
+      "sequence": 36,
+      "commandId": "command-22",
+      "playerId": "player-3",
+      "turn": 3
+    }
+  ],
+  "consumed": [
+    "tool:08",
+    "tool:08",
+    "tool:09",
+    "tool:08"
+  ],
+  "cleanup": {
+    "raf": 0,
+    "canvas": 0
+  },
+  "errors": []
+}

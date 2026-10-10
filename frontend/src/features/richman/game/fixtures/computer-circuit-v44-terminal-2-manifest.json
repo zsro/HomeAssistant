@@ -1,0 +1,78 @@
+{
+  "players": 2,
+  "commands": 566,
+  "turn": 77,
+  "phase": "finished",
+  "winner": "player-2",
+  "auto": 117,
+  "human": 114,
+  "dates": 38,
+  "cross": [],
+  "reactions": [],
+  "forced": [],
+  "exits": [
+    {
+      "continuation": "payment",
+      "id": "disposal-1",
+      "payerId": "player-1",
+      "recipientId": "public",
+      "propertyId": "fortune:14",
+      "due": 3000,
+      "amount": 2448,
+      "unpaid": 552,
+      "paid": {
+        "cash": 2448,
+        "bank": 0
+      },
+      "released": [],
+      "pool": [],
+      "draws": [],
+      "stocks": [],
+      "inventory": [],
+      "ignoredPoints": 0,
+      "auctions": [],
+      "finishedGame": true
+    }
+  ],
+  "publicAuctions": 0,
+  "negativeChecks": 0,
+  "prefixes": [
+    "paused",
+    "resumed",
+    "computer-first",
+    "exit-start",
+    "exit-return",
+    "before-terminal"
+  ],
+  "report": {
+    "crossChecks": [],
+    "route": "terminal-2",
+    "terminal": true,
+    "players": 2,
+    "normalSpeed": true,
+    "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+    "commands": 566,
+    "human": 114,
+    "lifecycle": [
+      "pause stops waiting",
+      "resume",
+      "reset dialog cancel",
+      "reset",
+      "replace with humans",
+      "exit cleanup",
+      "fullscreen",
+      "390px"
+    ],
+    "cleanup": {
+      "raf": 0,
+      "canvas": 0
+    },
+    "errors": [],
+    "scheduledNonMovementSteps": 117
+  },
+  "hashes": {
+    "replay": "271f9e29c458b89e01015b9746c57b2ce8ea5e13908eab0041e0c24c9ed10a6e",
+    "state": "ed052fb43c7776e3a1c3efbe73a9a7dc8776e453373d93cbf8c756b77f78bd0a",
+    "events": "50a59327b385326b28d4ee31037499916f409357ec2bc3c00392f49402939136"
+  }
+}

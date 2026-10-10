@@ -1,0 +1,5 @@
+import {verifyStockMarket} from './verify-stock-market';
+import {readFileSync,writeFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import {strict as assert} from 'node:assert';
+for(const n of[2,3,4]){const dir=`/private/tmp/richman-unified-ui-04a-${n}`,r=JSON.parse(readFileSync(dir+'/replay.json','utf8')),ui=JSON.parse(readFileSync(dir+'/results.json','utf8'));assert.equal(ui.normalSpeed,true);assert.deepEqual(ui.errors,[]);assert.deepEqual(ui.cleanup,{raf:0,canvas:0});assert.ok(ui.marketChecks.some((x:{blocked:string})=>x.blocked==='buy')&&ui.marketChecks.some((x:{blocked:string})=>x.blocked==='sell'));const{state,events,...summary}=verifyStockMarket(r),hash=(x:unknown)=>createHash('sha256').update(JSON.stringify(x)).digest('hex'),base=`frontend/src/features/richman/game/fixtures/stock-market-v42-${n}`;writeFileSync(base+'-replay.json',JSON.stringify(r));writeFileSync(base+'-manifest.json',JSON.stringify({...summary,report:{normalSpeed:ui.normalSpeed,map:ui.map,marketChecks:ui.marketChecks,errors:ui.errors,cleanup:ui.cleanup},hashes:{replay:hash(r),state:hash(state),events:hash(events)}},null,2)+'\n');console.log(n,summary);}

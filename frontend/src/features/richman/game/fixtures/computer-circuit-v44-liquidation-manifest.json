@@ -1,0 +1,181 @@
+{
+  "players": 3,
+  "commands": 782,
+  "turn": 108,
+  "phase": "turnEnd",
+  "winner": null,
+  "auto": 95,
+  "human": 208,
+  "dates": 35,
+  "cross": [
+    {
+      "index": 778,
+      "kind": "auction",
+      "actor": "player-2",
+      "active": "player-3",
+      "computer": false
+    }
+  ],
+  "reactions": [
+    {
+      "responder": "player-1",
+      "active": "player-1",
+      "computer": false,
+      "kind": "rent",
+      "stage": "redirect",
+      "choice": "decline",
+      "target": null
+    }
+  ],
+  "forced": [
+    {
+      "trader": "player-1",
+      "active": "player-1",
+      "quantity": 1,
+      "amount": 446,
+      "stock": "jp:30",
+      "bankBefore": 0,
+      "bankAfter": 446
+    }
+  ],
+  "exits": [
+    {
+      "continuation": "payment",
+      "id": "disposal-1",
+      "payerId": "player-1",
+      "recipientId": "public",
+      "propertyId": "batch:2:0",
+      "due": 373,
+      "amount": 146,
+      "unpaid": 227,
+      "paid": {
+        "cash": 0,
+        "bank": 146
+      },
+      "released": [
+        "japan:land:23",
+        "japan:land:24",
+        "japan:land:33",
+        "japan:land:35",
+        "japan:land:46",
+        "japan:land:49"
+      ],
+      "pool": [
+        null,
+        "japan:land:24",
+        "japan:land:33",
+        "japan:land:35",
+        null,
+        null
+      ],
+      "draws": [
+        0,
+        4,
+        5
+      ],
+      "stocks": [
+        {
+          "stockId": "jp:30",
+          "quantity": 18,
+          "price": 41500,
+          "amount": 7470
+        }
+      ],
+      "inventory": [
+        {
+          "itemId": "tool:09",
+          "quantity": 1,
+          "points": 30
+        },
+        {
+          "itemId": "tool:01",
+          "quantity": 1,
+          "points": 15
+        },
+        {
+          "itemId": "tool:02",
+          "quantity": 1,
+          "points": 30
+        },
+        {
+          "itemId": "card:19",
+          "quantity": 1,
+          "points": 40
+        }
+      ],
+      "ignoredPoints": 115,
+      "auctions": [
+        {
+          "propertyId": "japan:land:23",
+          "winnerId": "player-2",
+          "amount": 2100,
+          "reserve": 2000
+        },
+        {
+          "propertyId": "japan:land:46",
+          "winnerId": null,
+          "amount": 0,
+          "reserve": 800
+        },
+        {
+          "propertyId": "japan:land:49",
+          "winnerId": null,
+          "amount": 0,
+          "reserve": 800
+        }
+      ],
+      "finishedGame": false
+    }
+  ],
+  "publicAuctions": 2100,
+  "negativeChecks": 1,
+  "prefixes": [
+    "paused",
+    "resumed",
+    "computer-first",
+    "necessary-stock-sale",
+    "exit-start",
+    "human-auction",
+    "exit-return",
+    "tax-callback-return"
+  ],
+  "report": {
+    "crossChecks": [
+      {
+        "index": 772,
+        "active": "player-3",
+        "actor": "player-2",
+        "kind": "auction",
+        "computer": false
+      }
+    ],
+    "route": "liquidation",
+    "terminal": false,
+    "players": 3,
+    "normalSpeed": true,
+    "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+    "commands": 782,
+    "human": 208,
+    "lifecycle": [
+      "pause stops waiting",
+      "resume",
+      "reset dialog cancel",
+      "reset",
+      "replace with humans",
+      "exit cleanup",
+      "fullscreen",
+      "390px"
+    ],
+    "cleanup": {
+      "raf": 0,
+      "canvas": 0
+    },
+    "errors": [],
+    "scheduledNonMovementSteps": 95
+  },
+  "hashes": {
+    "replay": "279e1fe1f0178a8a32b4cd7ff560bae8d31b690d0303704dc084bbcbfb6f85e4",
+    "state": "1e6633cc9b41ebc9ebf942066dd8d85033c90619fb4c0f9b71dcb5d862795900",
+    "events": "d10d3d19a5801dd532b153d2cdf5581ffc3d341e95b20eeb10a62da3a1babcd3"
+  }
+}

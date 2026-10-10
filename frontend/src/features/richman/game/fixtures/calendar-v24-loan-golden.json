@@ -1,0 +1,12 @@
+{
+  "route": "loan",
+  "seed": "calendar-loan-0",
+  "players": 2,
+  "commands": 1559,
+  "turn": 236,
+  "startDate": "1998-01-28",
+  "endDate": "1998-05-25",
+  "elapsedDays": 117,
+  "state": "c8973ea41e49a18aa8398bab0e212b2b2397f2ca102d154ddd8ae50dbafe92b9",
+  "events": "767eac50f6a07144f04189b9dbf376e686b81ead0a4b2af7363b3f00e511a4ee"
+}

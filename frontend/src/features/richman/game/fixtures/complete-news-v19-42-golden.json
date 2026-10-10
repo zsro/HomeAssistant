@@ -1,0 +1,12 @@
+{
+  "route": "42",
+  "seed": "complete-news-42",
+  "commands": 328,
+  "turn": 45,
+  "players": 2,
+  "state": "d394183afb5618400bccfc12d38e3164a526d0bc619c3ecc6fc1a11c4fda681a",
+  "events": "eb729ce4ad2f4ceca7c0a27ca9abb2b6031bb1b29965196814a4219ff7b8307d",
+  "news": [
+    19
+  ]
+}

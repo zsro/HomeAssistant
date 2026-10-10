@@ -1,0 +1,617 @@
+{
+  "route": "research",
+  "players": 4,
+  "normalSpeed": true,
+  "map": "original Japan; real human UI + actual automatic seats; auth fixture only",
+  "computerCommands": 228,
+  "commands": 2442,
+  "human": 707,
+  "auto": 1717,
+  "displayChecks": [
+    {
+      "index": 0,
+      "kinds": []
+    },
+    {
+      "index": 2142,
+      "kinds": [
+        "equipped"
+      ]
+    },
+    {
+      "index": 2165,
+      "kinds": [
+        "before-surrender"
+      ]
+    },
+    {
+      "index": 2166,
+      "kinds": [
+        "after-surrender",
+        "equipped-before-attachment"
+      ]
+    },
+    {
+      "index": 2167,
+      "kinds": [
+        "cleared-after-attachment"
+      ]
+    },
+    {
+      "index": 2262,
+      "kinds": [
+        "post-exit-research-produced"
+      ]
+    },
+    {
+      "index": 2283,
+      "kinds": [
+        "before-time"
+      ]
+    },
+    {
+      "index": 2284,
+      "kinds": [
+        "after-time"
+      ]
+    },
+    {
+      "index": 2424,
+      "kinds": [
+        "death-expired"
+      ]
+    }
+  ],
+  "lifecycle": [
+    "pause/resume",
+    "reset dialog cancel",
+    "reset",
+    "replace",
+    "exit",
+    "fullscreen",
+    "390px"
+  ],
+  "cleanup": {
+    "raf": 0,
+    "canvas": 0
+  },
+  "errors": [],
+  "finalTurn": 333,
+  "finalDate": "1998-04-04",
+  "monthRefreshes": [
+    {
+      "type": "specialObjectsRefreshed",
+      "date": "1998-02-01",
+      "objects": [
+        {
+          "type": 13,
+          "node": 12
+        },
+        {
+          "type": 14,
+          "node": 53
+        }
+      ],
+      "sequence": 1254,
+      "commandId": "command-688",
+      "playerId": "player-4",
+      "turn": 92
+    },
+    {
+      "type": "specialObjectsRefreshed",
+      "date": "1998-03-01",
+      "objects": [
+        {
+          "type": 13,
+          "node": 90
+        },
+        {
+          "type": 14,
+          "node": 79
+        }
+      ],
+      "sequence": 2737,
+      "commandId": "command-1487",
+      "playerId": "player-4",
+      "turn": 204
+    },
+    {
+      "type": "specialObjectsRefreshed",
+      "date": "1998-04-01",
+      "objects": [
+        {
+          "type": 13,
+          "node": 101
+        },
+        {
+          "type": 14,
+          "node": 57
+        }
+      ],
+      "sequence": 4426,
+      "commandId": "command-2397",
+      "playerId": "player-4",
+      "turn": 323
+    }
+  ],
+  "facts": [
+    {
+      "kind": "exit-barrier",
+      "index": 2172,
+      "turn": 293,
+      "checkpointsCleared": true,
+      "sourceFunds": {
+        "cash": 0,
+        "bank": 0
+      },
+      "publicFund": 7600
+    },
+    {
+      "kind": "equipment-cleared",
+      "index": 2175,
+      "before": {
+        "mobility": {
+          "stop": 0,
+          "winter": 0,
+          "dream": 0,
+          "prison": 0,
+          "hospital": 0,
+          "turtle": 0,
+          "vehicle": "foot",
+          "diceCount": 1,
+          "savedVehicle": "foot",
+          "savedDice": 1,
+          "travel": 0
+        },
+        "engineer": {
+          "remaining": 6,
+          "vehicle": "foot",
+          "dice": 1,
+          "suspended": false
+        },
+        "inventory": {
+          "tool:08": 1,
+          "tool:09": 1,
+          "tool:01": 1,
+          "tool:02": 1,
+          "card:02": 0,
+          "card:01": 0,
+          "card:03": 0,
+          "card:04": 0,
+          "card:05": 0,
+          "card:06": 0,
+          "card:12": 0,
+          "card:14": 0,
+          "card:15": 0,
+          "card:16": 0,
+          "card:17": 0,
+          "card:30": 0,
+          "tool:05": 0,
+          "tool:06": 0,
+          "card:13": 0,
+          "card:18": 0,
+          "card:19": 0,
+          "card:20": 0,
+          "card:21": 0,
+          "card:29": 0,
+          "card:07": 0,
+          "card:08": 0,
+          "card:26": 0,
+          "card:27": 0,
+          "card:28": 1,
+          "card:09": 0,
+          "card:10": 0,
+          "card:11": 0,
+          "tool:03": 0,
+          "tool:04": 0,
+          "tool:07": 1,
+          "tool:12": 0,
+          "card:22": 0,
+          "card:23": 0,
+          "card:24": 0,
+          "card:25": 0,
+          "tool:10": 0,
+          "tool:11": 0,
+          "tool:13": 0
+        }
+      },
+      "after": {
+        "mobility": {
+          "stop": 0,
+          "winter": 0,
+          "dream": 0,
+          "prison": 0,
+          "hospital": 0,
+          "turtle": 0,
+          "vehicle": "foot",
+          "diceCount": 1,
+          "savedVehicle": "foot",
+          "savedDice": 1,
+          "travel": 0
+        },
+        "engineer": null,
+        "inventory": {
+          "tool:08": 0,
+          "tool:09": 0,
+          "tool:01": 0,
+          "tool:02": 0,
+          "card:02": 0,
+          "card:01": 0,
+          "card:03": 0,
+          "card:04": 0,
+          "card:05": 0,
+          "card:06": 0,
+          "card:12": 0,
+          "card:14": 0,
+          "card:15": 0,
+          "card:16": 0,
+          "card:17": 0,
+          "card:30": 0,
+          "tool:05": 0,
+          "tool:06": 0,
+          "card:13": 0,
+          "card:18": 0,
+          "card:19": 0,
+          "card:20": 0,
+          "card:21": 0,
+          "card:29": 0,
+          "card:07": 0,
+          "card:08": 0,
+          "card:26": 0,
+          "card:27": 0,
+          "card:28": 0,
+          "card:09": 0,
+          "card:10": 0,
+          "card:11": 0,
+          "tool:03": 0,
+          "tool:04": 0,
+          "tool:07": 0,
+          "tool:12": 0,
+          "card:22": 0,
+          "card:23": 0,
+          "card:24": 0,
+          "card:25": 0,
+          "tool:10": 0,
+          "tool:11": 0,
+          "tool:13": 0
+        },
+        "god": {
+          "id": "god-25",
+          "type": 15,
+          "node": 68,
+          "carrier": "player-2",
+          "remaining": 13,
+          "slot": 15
+        }
+      },
+      "pools": [
+        {
+          "id": "tool:01",
+          "before": 7,
+          "after": 8,
+          "bag": 1,
+          "equipped": 0
+        },
+        {
+          "id": "tool:02",
+          "before": 7,
+          "after": 8,
+          "bag": 1,
+          "equipped": 0
+        },
+        {
+          "id": "tool:03",
+          "before": 10,
+          "after": 10,
+          "bag": 0,
+          "equipped": 0
+        },
+        {
+          "id": "tool:04",
+          "before": 10,
+          "after": 10,
+          "bag": 0,
+          "equipped": 0
+        },
+        {
+          "id": "tool:05",
+          "before": 10,
+          "after": 10,
+          "bag": 0,
+          "equipped": 0
+        },
+        {
+          "id": "tool:06",
+          "before": 10,
+          "after": 10,
+          "bag": 0,
+          "equipped": 0
+        },
+        {
+          "id": "tool:07",
+          "before": 9,
+          "after": 10,
+          "bag": 1,
+          "equipped": 0
+        },
+        {
+          "id": "tool:08",
+          "before": 8,
+          "after": 9,
+          "bag": 1,
+          "equipped": 0
+        }
+      ],
+      "noRefund": true
+    },
+    {
+      "kind": "post-exit-time-research-start",
+      "index": 2184,
+      "turn": 295,
+      "property": {
+        "id": "japan:facility:4",
+        "ownerId": "player-3",
+        "level": 4,
+        "basePrice": 5000,
+        "buildingType": 4,
+        "priceStatus": 0,
+        "research": null
+      }
+    },
+    {
+      "kind": "post-exit-time-produced",
+      "index": 2271,
+      "turn": 310,
+      "inventory": {
+        "tool:08": 0,
+        "tool:09": 1,
+        "tool:01": 1,
+        "tool:02": 1,
+        "card:02": 0,
+        "card:01": 0,
+        "card:03": 0,
+        "card:04": 0,
+        "card:05": 0,
+        "card:06": 0,
+        "card:12": 0,
+        "card:14": 0,
+        "card:15": 0,
+        "card:16": 0,
+        "card:17": 0,
+        "card:30": 0,
+        "tool:05": 0,
+        "tool:06": 0,
+        "card:13": 0,
+        "card:18": 1,
+        "card:19": 0,
+        "card:20": 0,
+        "card:21": 0,
+        "card:29": 0,
+        "card:07": 0,
+        "card:08": 0,
+        "card:26": 0,
+        "card:27": 0,
+        "card:28": 0,
+        "card:09": 0,
+        "card:10": 0,
+        "card:11": 0,
+        "tool:03": 0,
+        "tool:04": 0,
+        "tool:07": 0,
+        "tool:12": 0,
+        "card:22": 0,
+        "card:23": 0,
+        "card:24": 0,
+        "card:25": 0,
+        "tool:10": 1,
+        "tool:11": 0,
+        "tool:13": 0
+      }
+    },
+    {
+      "kind": "time-restored-post-exit-world",
+      "index": 2298,
+      "checkpointTurn": 310,
+      "executionTurn": 313,
+      "beforeRemaining": 6,
+      "savedRemaining": 7,
+      "afterRemaining": 7,
+      "checkpointEliminated": [
+        "player-1"
+      ],
+      "randomBefore": 656784800,
+      "randomAfter": 656784800,
+      "dateBefore": "1998-03-29",
+      "dateSaved": "1998-03-28",
+      "dateAfter": "1998-03-28",
+      "sourceStillExited": true,
+      "inventoryTool10": 0
+    },
+    {
+      "kind": "natural-expiry",
+      "index": 2440,
+      "turn": 333,
+      "remainingBefore": 1
+    }
+  ],
+  "duration": [
+    {
+      "index": 2178,
+      "turn": 294,
+      "before": 13,
+      "after": 12,
+      "type": "endTurn"
+    },
+    {
+      "index": 2190,
+      "turn": 297,
+      "before": 12,
+      "after": 11,
+      "type": "endTurn"
+    },
+    {
+      "index": 2202,
+      "turn": 300,
+      "before": 11,
+      "after": 10,
+      "type": "endTurn"
+    },
+    {
+      "index": 2214,
+      "turn": 303,
+      "before": 10,
+      "after": 9,
+      "type": "endTurn"
+    },
+    {
+      "index": 2236,
+      "turn": 306,
+      "before": 9,
+      "after": 8,
+      "type": "endTurn"
+    },
+    {
+      "index": 2263,
+      "turn": 309,
+      "before": 8,
+      "after": 7,
+      "type": "endTurn"
+    },
+    {
+      "index": 2286,
+      "turn": 312,
+      "before": 7,
+      "after": 6,
+      "type": "endTurn"
+    },
+    {
+      "index": 2298,
+      "turn": 313,
+      "before": 6,
+      "after": 7,
+      "type": "item"
+    },
+    {
+      "index": 2315,
+      "turn": 315,
+      "before": 7,
+      "after": 6,
+      "type": "endTurn"
+    },
+    {
+      "index": 2336,
+      "turn": 318,
+      "before": 6,
+      "after": 5,
+      "type": "endTurn"
+    },
+    {
+      "index": 2360,
+      "turn": 321,
+      "before": 5,
+      "after": 4,
+      "type": "endTurn"
+    },
+    {
+      "index": 2381,
+      "turn": 324,
+      "before": 4,
+      "after": 3,
+      "type": "endTurn"
+    },
+    {
+      "index": 2398,
+      "turn": 327,
+      "before": 3,
+      "after": 2,
+      "type": "endTurn"
+    },
+    {
+      "index": 2418,
+      "turn": 330,
+      "before": 2,
+      "after": 1,
+      "type": "endTurn"
+    },
+    {
+      "index": 2440,
+      "turn": 333,
+      "before": 1,
+      "after": 0,
+      "type": "endTurn"
+    }
+  ],
+  "timeProduction": [
+    {
+      "turn": 295,
+      "remaining": 5
+    },
+    {
+      "turn": 298,
+      "remaining": 4
+    },
+    {
+      "turn": 301,
+      "remaining": 3
+    },
+    {
+      "turn": 304,
+      "remaining": 2
+    },
+    {
+      "turn": 307,
+      "remaining": 1
+    },
+    {
+      "turn": 310,
+      "remaining": 0
+    }
+  ],
+  "prefixes": [
+    {
+      "index": 2144,
+      "kind": "equipped"
+    },
+    {
+      "index": 2169,
+      "kind": "before-surrender"
+    },
+    {
+      "index": 2172,
+      "kind": "after-surrender"
+    },
+    {
+      "index": 2172,
+      "kind": "equipped-before-attachment"
+    },
+    {
+      "index": 2175,
+      "kind": "cleared-after-attachment"
+    },
+    {
+      "index": 2272,
+      "kind": "post-exit-research-produced"
+    },
+    {
+      "index": 2295,
+      "kind": "before-time"
+    },
+    {
+      "index": 2298,
+      "kind": "after-time"
+    },
+    {
+      "index": 2440,
+      "kind": "death-expired"
+    }
+  ],
+  "uniquePrefixes": 8,
+  "fullReplay": true,
+  "prefixReplay": true,
+  "commandsMatchLegalPlan": true,
+  "hashes": {
+    "replay": "c64cb45d0625d738b730c1509b42dd3dee6a3c07aa2fe2e4f34c9118a4db53c2",
+    "state": "c75823d9abeca48ff00390343bb01d69956600e91a6f0bf6dd2516f5675eae32",
+    "events": "3f0923445060080da178f9f146a783d9cca0701b9b0235a803347b39b55fb9df"
+  }
+}

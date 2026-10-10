@@ -1,0 +1,298 @@
+{
+  "stage": "S2-03u",
+  "referenceCommit": "ec7d70e693059d1e781d9d1cc2ad7f36d360d39e",
+  "grade": "fixed cross-version source, not Windows execution equivalence",
+  "sources": [
+    {
+      "path": "asm/rich4_player_bankrupt.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_bankrupt.asm",
+      "gitBlobSha1": "7d89fe867d86a4b9fc230602da8bc084725310c6",
+      "sha256": "57c69d347bef382e0045b00855c17293e5cb737ed22359340894ed9b9cf8bf02"
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_core_actions.asm",
+      "gitBlobSha1": "ebfde6c820e8a430b856d9816a926b636e0db1dc",
+      "sha256": "2874c1a3e0ca1d0da5afe4cb93e42cf2d6f6fa864dbee11d7bcaa028af07d94a"
+    },
+    {
+      "path": "asm/rich4_stocks.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_stocks.asm",
+      "gitBlobSha1": "c45cd776b51483d17f78972845b8053deeee2433",
+      "sha256": "d55e17af17da2464655f53d3b3dd32224637a37ab131c6cf483db8fbac045ea3"
+    },
+    {
+      "path": "asm/rich4_card_utils_2.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_card_utils_2.asm",
+      "gitBlobSha1": "461daf212cc8056beddaadd4ea6e36c5b9e93ceb",
+      "sha256": "98caa25f4c3cbbfca6cf304caa6485d719b3776ccb701a401d90920828b29ae2"
+    },
+    {
+      "path": "asm/rich4_tool_utils.c",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_tool_utils.c",
+      "gitBlobSha1": "218ab5b0e02204bcdb5a65c4483d8f570ef7265f",
+      "sha256": "12fb8cedf2a50efa98cdfbd15f55b8167a4b3d753c6677d5ba787ac50c8d4097"
+    },
+    {
+      "path": "asm/rich4_player_info.h",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_info.h",
+      "gitBlobSha1": "2f04e6aa425bba2f9345b64ce0ab4c1240ac185f",
+      "sha256": "cc17726ce054de587a42c0f335d84495e66698da2e15eb6a7b7ca28ab38604be"
+    },
+    {
+      "path": "asm/rich4_ui_auction.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_ui_auction.asm",
+      "gitBlobSha1": "7be2a9569b1f5158fe0d393696e11d8a0018a1bf",
+      "sha256": "771ecbbbb5830bee2b5dbc8966e068329525e6f7f090705344f49725a33b816e"
+    },
+    {
+      "path": "asm/rich4_ui_sale.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_ui_sale.asm",
+      "gitBlobSha1": "7596930dc640d065963e1228446165ab27445822",
+      "sha256": "750b782654839143d9b9a0ae53fa1a3a037e51982ea03ae28a1b35a6603dfbde"
+    },
+    {
+      "path": "asm/rich4_fortune.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_fortune.asm",
+      "gitBlobSha1": "32a7a9dff203a46ec3d2906c1e5f1ede22f97e70",
+      "sha256": "d6309c81b0943a38e138bcdf85c8d006ddb0ba53c4d72744c4d3cc4ab63a53fc"
+    },
+    {
+      "path": "asm/rich4_ui_bank.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_ui_bank.asm",
+      "gitBlobSha1": "a33182c5fa87f03271e20c43956ad11302f14baa",
+      "sha256": "bd225f868ef673c4052d145223d9564a5ded0c4eec28093811cb439ec9fc230a"
+    },
+    {
+      "path": "asm/rich4_ui_stock.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_ui_stock.asm",
+      "gitBlobSha1": "cc0913dc550a049781e3b72f2df215ce84df6b28",
+      "sha256": "0e3152263c9886615fa6509fcd005f0db37a9fb850b3124ede51de868fa8ab82"
+    },
+    {
+      "path": "asm/rich4_news.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_news.asm",
+      "gitBlobSha1": "31601ae8258b6f9074c348ae17d52295c5f94b8e",
+      "sha256": "a2172acdbbfe52fbc57672e40a8f0d669b3c8fb6cabb1f3d5d7dd8e72ebc458a"
+    },
+    {
+      "path": "asm/rich4.asm",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4.asm",
+      "gitBlobSha1": "d11a64755094435fa9953652a5a4951871fd9697",
+      "sha256": "30904cbb4f23a6b74fc1b80ad023bd7dff11b441c2c1978f768f9891d099d64a"
+    }
+  ],
+  "verifiedFiles": 13,
+  "references": [
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "anchor": "loc_0041b00e:",
+      "lines": [
+        2264
+      ]
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "anchor": "fcn_0041d2c6:",
+      "lines": [
+        5058
+      ]
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "anchor": "loc_0041d2f3:",
+      "lines": [
+        5075
+      ]
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "anchor": "loc_0041d33d:",
+      "lines": [
+        5098
+      ]
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "anchor": "loc_0041d375:",
+      "lines": [
+        5116
+      ]
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "anchor": "loc_0041d387:",
+      "lines": [
+        5125
+      ]
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "anchor": "loc_0041d394:",
+      "lines": [
+        5131
+      ]
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "anchor": "loc_0041d3af:",
+      "lines": [
+        5141
+      ]
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "anchor": "loc_0041d3c1:",
+      "lines": [
+        5148
+      ]
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "anchor": "loc_0041d066:",
+      "lines": [
+        4827
+      ]
+    },
+    {
+      "path": "asm/rich4_fortune.asm",
+      "anchor": "loc_0044ceb0:",
+      "lines": [
+        1468
+      ]
+    },
+    {
+      "path": "asm/rich4_fortune.asm",
+      "anchor": "loc_0044cec2:",
+      "lines": [
+        1476
+      ]
+    },
+    {
+      "path": "asm/rich4_ui_bank.asm",
+      "anchor": "fcn_00433bd8:",
+      "lines": [
+        230
+      ]
+    },
+    {
+      "path": "asm/rich4_ui_bank.asm",
+      "anchor": "loc_00433c1e:",
+      "lines": [
+        250
+      ]
+    },
+    {
+      "path": "asm/rich4_ui_bank.asm",
+      "anchor": "loc_00436a9b:",
+      "lines": [
+        3808
+      ]
+    },
+    {
+      "path": "asm/rich4_ui_stock.asm",
+      "anchor": "fcn_0042ba97:",
+      "lines": [
+        3052
+      ]
+    },
+    {
+      "path": "asm/rich4_ui_stock.asm",
+      "anchor": "loc_0042be6f:",
+      "lines": [
+        3372
+      ]
+    },
+    {
+      "path": "asm/rich4_ui_stock.asm",
+      "anchor": "loc_0042bec2:",
+      "lines": [
+        3394
+      ]
+    },
+    {
+      "path": "asm/rich4_news.asm",
+      "anchor": "loc_00449da1:",
+      "lines": [
+        1377
+      ]
+    },
+    {
+      "path": "asm/rich4_news.asm",
+      "anchor": "loc_00449de3:",
+      "lines": [
+        1397
+      ]
+    },
+    {
+      "path": "asm/rich4_news.asm",
+      "anchor": "loc_00449fe1:",
+      "lines": [
+        1557
+      ]
+    },
+    {
+      "path": "asm/rich4_news.asm",
+      "anchor": "loc_0044a01b:",
+      "lines": [
+        1577
+      ]
+    },
+    {
+      "path": "asm/rich4.asm",
+      "anchor": "fcn_0044ba63:",
+      "lines": [
+        22899
+      ]
+    },
+    {
+      "path": "asm/rich4.asm",
+      "anchor": "loc_0044ba9d:",
+      "lines": [
+        22919
+      ]
+    }
+  ],
+  "inheritedDisposalAnchors": "s2-03t-sources.json",
+  "rules": {
+    "R05-01u": {
+      "evidence": "41d2f3 flags&4 chooses bank-first; default41d33d cash-bank.41d375 bankruptcy returns before41d387 recipient credit. Recipient-1 public;>100 company period28/cumulative2c; player flags&1 cash,default bank. No automatic stocks sale before bankruptcy in this shared chain.",
+      "implemented": "v34 single-payer company fees and negative fortune retain shares until v33 public disposal; freeze original liquid paid, await all auctions, then credit original destination. No debt rescue."
+    },
+    "R08-01u": {
+      "evidence": "41b00e flags0, adjusted actual payer and commercial index+100, company actual receipts after shared call. Toyota/SEGA/Nissan/insurance use existing fee chain; construction/policy already granted before payment.",
+      "implemented": "four company fee entries, free/redirect/god substitute remain before payment; serialize company receipt, actual payer and company ID; complete ledger after disposal, even if company control changed; next onsite subscription only if active visitor survives."
+    },
+    "R13-01u": {
+      "evidence": "fortune44ceb0 flags0,amount,-1,current payer;44cec2 shared payment then alive check before44ba63 insurance. Insurance44ba9d company payer+100 andflags1 -> player cash.",
+      "implemented": "negative14/15/16/17/18/19/23/24/26/30; public fee receipt after stock/auction public proceeds; exited payer skips insurance. Exact funds remains alive and existing insurance can pay. No new card/fortune implementation."
+    },
+    "R05-02u": {
+      "evidence": "436a9b direct433bd8 bank-first then cash; shortfall sets both0 and calls bankruptcy, no shared recipient/public transfer; principal36/due44 zero after return.41c84f caller checks maturity before own-action status clocks.",
+      "implemented": "incoming loan shortfall awaits disposal; frozen actual recorded as bank/cash sink; no public principal credit, notices after return, turnEnd before own status ticks; existing refusal/noLoans do not block collection."
+    },
+    "R05-03u": {
+      "evidence": "news449da1/449fe1 use precomputed per-seat tax andflags0; each shared payment returns before increment; alive and global end checked. Dividends42ba97 computes all companies/nets first,42be6f applies stored net to bank/cash then bankruptcy, increment only after return.41d066 dividends before lottery.",
+      "implemented": "audit only: existing news tax and negative dividend callbacks still early-clear shares/iterate synchronously; no claim of migrated batches. Next v35 must store frozen assessment/net + seat cursor and resume outer day pipeline after last callback."
+    },
+    "R09-01u": {
+      "evidence": "Web integration convention, preserving original synchronous stack ordering across UI commands.",
+      "implemented": "finance.payments queued/disposing/completed stores discriminated company/fortune/loan continuation, no closures or hidden callbacks; old profiles do not add field. G7 finance snapshot restores callback; separatev34fingerprint; no auction input bypass via pause/ack/stale actor."
+    }
+  },
+  "implemented": [
+    "company fees: Toyota/SEGA/Nissan/Mitsui",
+    "negative fortune14..19,23,24,26,30",
+    "incoming loan maturity"
+  ],
+  "auditOnly": [
+    "news multi-player tax",
+    "negative company dividend and outer day/later lottery continuation"
+  ],
+  "deferred": [
+    "other asset listings",
+    "special actors and original menus",
+    "original RNG/timed auctions/wheel/magic house",
+    "native extreme numeric overflow differences"
+  ]
+}

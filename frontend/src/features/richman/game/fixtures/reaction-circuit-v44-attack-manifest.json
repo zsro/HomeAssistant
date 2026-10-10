@@ -1,0 +1,94 @@
+{
+  "kind": "attack",
+  "commands": 3965,
+  "players": 2,
+  "turn": 296,
+  "date": "1998-05-28",
+  "prefixes": [
+    "immune-attack",
+    "attack-redirect",
+    "self-redirect-attack",
+    "after-attack-turn",
+    "hit-attack",
+    "revenge-attack"
+  ],
+  "reactions": [
+    {
+      "kind": "attack",
+      "stage": "redirect",
+      "responderId": "player-2",
+      "choice": "use",
+      "targetId": "player-1",
+      "turn": 263
+    }
+  ],
+  "attacks": [
+    {
+      "type": "attackResolved",
+      "itemId": "card:17",
+      "sourceId": "player-1",
+      "originalId": "player-2",
+      "targetId": null,
+      "sequence": 2516,
+      "commandId": "command-1853",
+      "playerId": "player-1",
+      "turn": 175
+    },
+    {
+      "type": "attackResolved",
+      "itemId": "card:17",
+      "sourceId": "player-1",
+      "originalId": "player-2",
+      "targetId": "player-1",
+      "sequence": 3811,
+      "commandId": "command-3814",
+      "playerId": "player-1",
+      "turn": 263
+    },
+    {
+      "type": "attackResolved",
+      "itemId": "card:17",
+      "sourceId": "player-1",
+      "originalId": "player-2",
+      "targetId": "player-2",
+      "sequence": 4108,
+      "commandId": "command-3954",
+      "playerId": "player-1",
+      "turn": 285
+    }
+  ],
+  "waivers": [],
+  "forced": [],
+  "disposals": [],
+  "auctionPaid": 0,
+  "substituteSales": 0,
+  "substituteExits": 0,
+  "paidRent": 200,
+  "wrongActorChecks": 1,
+  "report": {
+    "normalSpeed": true,
+    "map": "original Japan; real UI commands; auth-only fixture; no game-state injection",
+    "calendarCommon": true,
+    "reactionCommon": true,
+    "reactionChecks": [
+      {
+        "kind": "attack",
+        "stage": "redirect",
+        "responderId": "player-2",
+        "choice": "use",
+        "targetId": "player-1",
+        "text": "请玩家 2 应答 · 嫁祸卡\n\n玩家 1使用陷害卡。\n\n可转移给任意其他未破产玩家，包括远处或设施中的玩家；不会再次触发对方的反制卡。\n\n嫁祸目标\n请选择目标\n玩家 1\n\n转回使用者为 4 次行动，转给其他玩家为 5 次；不使用时陷害卡生效后，有复仇卡则自动反击。\n\n使用嫁祸卡\n不使用嫁祸卡"
+      }
+    ],
+    "errors": [],
+    "cleanup": {
+      "raf": 0,
+      "canvas": 0
+    }
+  },
+  "hashes": {
+    "replay": "412835d4835f27fe34b39e90a96f5275831754d4e4355e5619be74192423e124",
+    "state": "af96cbc3aad1402d6677402709b80249da89027f5719b07c9df630bfc9971c95",
+    "events": "dc76bce69df8e35781443f18ab545e536837337bd4782cd1b70b5e2d76db5baa"
+  }
+}

@@ -1,0 +1,258 @@
+[
+  {
+    "route": "fortune",
+    "seed": "payment-5",
+    "players": 3,
+    "commands": 1166,
+    "turn": 159,
+    "endDate": "1998-02-22",
+    "state": "1b21d77f7290dbbd44ba5cae525bff726707f6e552937327836be94919aacdb5",
+    "events": "e8db1761fe1f3fb2490905e597076418341d5c08c67e5ce35171b5a33f6aa0c7",
+    "checks": [
+      "exit first, frozen liquid actual, no rent-credit event or debtor rescue",
+      "release buildings and retain shares until public disposal; bag and tickets cleanup",
+      "indexed auction reserve and only living bidders",
+      "public change equals stock sales plus auctions plus only fortune actual fee",
+      "suspended callback freezes active turn and date",
+      "one explicit callback after all auctions, correct destination and no insurance rescue"
+    ],
+    "payment": {
+      "kind": "fortune",
+      "stage": "completed",
+      "payerId": "player-3",
+      "due": 8000,
+      "paid": {
+        "cash": 0,
+        "bank": 489
+      },
+      "change": {
+        "godType": 0,
+        "modifier": 0,
+        "code": 0,
+        "amount": -8000,
+        "cashBefore": 0,
+        "cashAfter": 0,
+        "bankBefore": 489,
+        "bankAfter": 0,
+        "unpaid": 7511,
+        "returnedShares": 0,
+        "sold": [],
+        "pointsBefore": 235,
+        "pointsAfter": 0,
+        "vehicleBefore": "foot",
+        "vehicleAfter": "foot",
+        "bankrupt": true
+      },
+      "decision": {
+        "kind": "fortune",
+        "id": "54ba5d02-0dbc-4e58-91ed-6fbae803ae80:833",
+        "node": 66,
+        "fortuneId": 26,
+        "title": "遭遇诈骗",
+        "lines": [
+          "应付 8,000 元；现金 0＋存款 489 元于退出处置后进入公共资金，未付 7,511 元。",
+          "玩家已退出，不再领取本次保险赔款；股票和拍卖款归公共资金，不抵原债。"
+        ],
+        "scope": "日本37槽命运与36条新闻已开放；日期、交易日、月息及贷款到期已接入。原破产强拍、完整公司/保险与其他日历事件仍未实现。"
+      },
+      "skipped": [],
+      "reason": "遭遇诈骗",
+      "disposalId": "disposal-1"
+    },
+    "disposal": {
+      "continuation": "payment",
+      "id": "disposal-1",
+      "payerId": "player-3",
+      "recipientId": "public",
+      "propertyId": "fortune:26",
+      "due": 8000,
+      "amount": 489,
+      "unpaid": 7511,
+      "paid": {
+        "cash": 0,
+        "bank": 489
+      },
+      "released": [
+        "japan:land:2",
+        "japan:land:20",
+        "japan:land:30",
+        "japan:land:34"
+      ],
+      "pool": [
+        "japan:land:2",
+        null,
+        null,
+        null
+      ],
+      "draws": [
+        2,
+        1,
+        2,
+        3
+      ],
+      "stocks": [],
+      "inventory": [],
+      "ignoredPoints": 0,
+      "auctions": [
+        {
+          "propertyId": "japan:land:30",
+          "winnerId": "player-1",
+          "amount": 1100,
+          "reserve": 1000
+        },
+        {
+          "propertyId": "japan:land:20",
+          "winnerId": "player-1",
+          "amount": 2100,
+          "reserve": 2000
+        },
+        {
+          "propertyId": "japan:land:34",
+          "winnerId": null,
+          "amount": 0,
+          "reserve": 2250
+        }
+      ],
+      "finishedGame": false
+    }
+  },
+  {
+    "route": "company",
+    "seed": "payment-17",
+    "players": 3,
+    "commands": 584,
+    "turn": 84,
+    "endDate": "1998-01-28",
+    "state": "84a8684a475bdd93a7ffb477f7bb77b6e27afd02597134a7a651faf7d881ae43",
+    "events": "7e76137be8a6fd0ab2f1f5961bfdcfb7a9e156e97942ff1777caa0a081a678d8",
+    "checks": [
+      "exit first, frozen liquid actual, no rent-credit event or debtor rescue",
+      "release buildings and retain shares until public disposal; bag and tickets cleanup",
+      "indexed auction reserve and only living bidders",
+      "public change equals stock sales plus auctions plus only fortune actual fee",
+      "suspended callback freezes active turn and date",
+      "company ledger stays uncredited while auction callback pending",
+      "one explicit callback after all auctions, correct destination and no insurance rescue"
+    ],
+    "payment": {
+      "kind": "company",
+      "stage": "completed",
+      "payerId": "player-3",
+      "due": 8100,
+      "paid": {
+        "cash": 0,
+        "bank": 4130
+      },
+      "receipt": {
+        "kind": "companyFee",
+        "companyId": "japan:company:5",
+        "name": "ＳＥＧＡ",
+        "node": 102,
+        "visitorId": "player-3",
+        "ownerId": "player-2",
+        "base": 4050,
+        "amount": 8100,
+        "factor": 0,
+        "dice": 3,
+        "days": 27,
+        "reason": "150 × 已过27天",
+        "payerId": "player-3",
+        "free": false,
+        "redirected": false,
+        "godPayer": false,
+        "cash": 0,
+        "bank": 4130,
+        "paid": 4130,
+        "unpaid": 3970,
+        "bankrupt": true,
+        "fundsBefore": 2550,
+        "fundsAfter": 6680,
+        "cumulativeBefore": 2550,
+        "cumulativeAfter": 6680
+      },
+      "disposalId": "disposal-1"
+    },
+    "disposal": {
+      "continuation": "payment",
+      "id": "disposal-1",
+      "payerId": "player-3",
+      "recipientId": "japan:company:5",
+      "propertyId": "japan:company:5",
+      "due": 8100,
+      "amount": 4130,
+      "unpaid": 3970,
+      "paid": {
+        "cash": 0,
+        "bank": 4130
+      },
+      "released": [
+        "japan:land:3",
+        "japan:land:6",
+        "japan:land:21",
+        "japan:land:26",
+        "japan:land:40",
+        "japan:land:41",
+        "japan:land:43",
+        "japan:land:46",
+        "japan:facility:4"
+      ],
+      "pool": [
+        "japan:land:3",
+        "japan:land:6",
+        "japan:land:21",
+        null,
+        "japan:land:40",
+        "japan:land:41",
+        null,
+        null,
+        "japan:facility:4"
+      ],
+      "draws": [
+        3,
+        6,
+        6,
+        7
+      ],
+      "stocks": [],
+      "inventory": [
+        {
+          "itemId": "tool:09",
+          "quantity": 1,
+          "points": 30
+        },
+        {
+          "itemId": "tool:01",
+          "quantity": 1,
+          "points": 15
+        },
+        {
+          "itemId": "tool:02",
+          "quantity": 1,
+          "points": 30
+        }
+      ],
+      "ignoredPoints": 75,
+      "auctions": [
+        {
+          "propertyId": "japan:land:26",
+          "winnerId": "player-1",
+          "amount": 1600,
+          "reserve": 1500
+        },
+        {
+          "propertyId": "japan:land:43",
+          "winnerId": "player-1",
+          "amount": 1100,
+          "reserve": 1000
+        },
+        {
+          "propertyId": "japan:land:46",
+          "winnerId": "player-1",
+          "amount": 900,
+          "reserve": 800
+        }
+      ],
+      "finishedGame": false
+    }
+  }
+]

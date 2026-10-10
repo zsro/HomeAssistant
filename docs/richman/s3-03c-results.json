@@ -1,0 +1,528 @@
+{
+  "stage": "S3-03c",
+  "completedDate": "2026-10-09",
+  "status": "special-road-objects-candidate-accepted",
+  "rulesId": "japan-events-candidate-v46",
+  "fingerprint": "249e82f7",
+  "mode": "specialObjects",
+  "base": "japan-events-candidate-v45",
+  "S3_03Closed": false,
+  "nativeExecution": false,
+  "newGameSemantics": true,
+  "newPolicyVersion": false,
+  "policyChanges": "version applicability only; existing policy algorithm unchanged; new nuclear objects use separate hit list to preserve gods contract",
+  "preservedPolicies": [
+    "basic-v1",
+    "tools-v1",
+    "rent-v1",
+    "defense-v1",
+    "estate-v1",
+    "cash-v1",
+    "status-v1",
+    "inventory-v1",
+    "commerce-v1",
+    "area-v1",
+    "roads-v1",
+    "mobility-v1",
+    "gods-v1",
+    "capital-v1",
+    "research-v1"
+  ],
+  "historicalCapabilities": {
+    "items": 43,
+    "news": 36,
+    "japanFortuneSlots": 37
+  },
+  "implementedObjects": [
+    11,
+    13,
+    14
+  ],
+  "newPair": [
+    11,
+    12
+  ],
+  "corrections": [
+    "tool13 selected full stack returns nonzero: removes object without receipt/supply decrement/retry",
+    "month13/14 distant origin is captured previous node, or0 if absent",
+    "active engineering is separately stored but counts as native nonzero traffic"
+  ],
+  "checks": {
+    "targeted": {
+      "passed": true,
+      "uniqueTests": 247,
+      "files": 9,
+      "breakdown": {
+        "specialDomain": 23,
+        "oldPairDomain": 21,
+        "specialCircuitAndPolicies": 4,
+        "v1To44MatrixAndV9Golden": 133,
+        "v45BrowserGoldens": 3,
+        "godTrafficDisplay": 4,
+        "researchPolicy": 45,
+        "g7": 11,
+        "newBrowserGoldens": 3
+      },
+      "logs": [
+        "/private/tmp/special-regression.log",
+        "/private/tmp/special-final-tests.log",
+        "/private/tmp/special-linked-tests.log",
+        "/private/tmp/special-last-tests.log",
+        "/private/tmp/special-domain-final.log"
+      ],
+      "fullFrontendRerun": false
+    },
+    "build": {
+      "passed": true,
+      "log": "/private/tmp/special-build-final.log",
+      "warnings": [
+        "existing >500kB chunks"
+      ]
+    },
+    "lint": {
+      "passed": true,
+      "log": "/private/tmp/special-lint-final.log"
+    },
+    "staticAudit": {
+      "passed": true,
+      "sourceFiles": 9,
+      "facts": 12,
+      "script": "scripts/richman/audit-special-objects.py"
+    },
+    "oldFixtures": {
+      "unchanged": 434,
+      "changed": [],
+      "newFiles": 6
+    },
+    "finalReplayVerification": {
+      "passed": true,
+      "log": "/private/tmp/special-verify-final.log"
+    }
+  },
+  "browser": {
+    "passed": true,
+    "runs": [
+      {
+        "displayChecks": [
+          {
+            "index": 0,
+            "objects": [
+              {
+                "id": "god-6",
+                "type": 11,
+                "node": 99,
+                "carrier": null,
+                "remaining": 0
+              },
+              {
+                "id": "god-7",
+                "type": 13,
+                "node": 50,
+                "carrier": null,
+                "remaining": 0
+              },
+              {
+                "id": "god-8",
+                "type": 14,
+                "node": 107,
+                "carrier": null,
+                "remaining": 0
+              }
+            ],
+            "gods": []
+          }
+        ],
+        "robotPreviews": [],
+        "policy": "research-v1",
+        "toolWindows": [
+          "tool:08",
+          "tool:09",
+          "tool:06"
+        ],
+        "crossChecks": [],
+        "route": "2",
+        "terminal": false,
+        "players": 2,
+        "normalSpeed": true,
+        "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+        "commands": 77,
+        "auto": 21,
+        "human": 10,
+        "lifecycle": [
+          "pause stops waiting",
+          "resume",
+          "reset dialog cancel",
+          "reset",
+          "replace with humans",
+          "exit cleanup",
+          "fullscreen",
+          "390px"
+        ],
+        "cleanup": {
+          "raf": 0,
+          "canvas": 0
+        },
+        "errors": [],
+        "specialReceipts": [
+          {
+            "type": "specialObjectsRefreshed",
+            "date": "1998-02-01",
+            "objects": [
+              {
+                "type": 13,
+                "node": 16
+              },
+              {
+                "type": 14,
+                "node": 77
+              }
+            ],
+            "sequence": 40,
+            "commandId": "command-25",
+            "playerId": "player-2",
+            "turn": 2
+          },
+          {
+            "type": "specialObjectResolved",
+            "objectType": 13,
+            "node": 16,
+            "targetId": "player-2",
+            "outcome": "tool",
+            "itemId": "tool:06",
+            "before": 0,
+            "after": 1,
+            "sequence": 103,
+            "commandId": "command-60",
+            "playerId": "player-2",
+            "turn": 8
+          }
+        ],
+        "pairNotices": [
+          {
+            "type": "g6Notice",
+            "message": "配对补位：13号槽出现在16号路格。",
+            "sequence": 38,
+            "commandId": "command-25",
+            "playerId": "player-2",
+            "turn": 2
+          },
+          {
+            "type": "g6Notice",
+            "message": "配对补位：14号槽出现在77号路格。",
+            "sequence": 39,
+            "commandId": "command-25",
+            "playerId": "player-2",
+            "turn": 2
+          }
+        ],
+        "prefixes": [
+          19,
+          21,
+          54
+        ],
+        "fullReplay": true,
+        "prefixReplay": true,
+        "commandsMatchPriorLegalRoute": true,
+        "hashes": {
+          "replay": "9d41e5349f78eec95d0102e9bad84991ab60ca4e6ccde76d939e2191642081e2",
+          "state": "2ec6fdd61e8192b38abaddfa59bf6933ba34dc8b94e8acbda6279a7264ea7dd4",
+          "events": "a5a1b693d968676672c0a38f1d28d6a0a1a7fa7209fccdcb473ce0a6c84f24de"
+        }
+      },
+      {
+        "displayChecks": [
+          {
+            "index": 0,
+            "objects": [
+              {
+                "id": "god-6",
+                "type": 11,
+                "node": 105,
+                "carrier": null,
+                "remaining": 0
+              },
+              {
+                "id": "god-7",
+                "type": 13,
+                "node": 67,
+                "carrier": null,
+                "remaining": 0
+              },
+              {
+                "id": "god-8",
+                "type": 14,
+                "node": 103,
+                "carrier": null,
+                "remaining": 0
+              }
+            ],
+            "gods": []
+          }
+        ],
+        "robotPreviews": [],
+        "policy": "research-v1",
+        "toolWindows": [
+          "tool:08",
+          "tool:09"
+        ],
+        "crossChecks": [],
+        "route": "3",
+        "terminal": false,
+        "players": 3,
+        "normalSpeed": true,
+        "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+        "commands": 51,
+        "auto": 19,
+        "human": 7,
+        "lifecycle": [
+          "pause stops waiting",
+          "resume",
+          "reset dialog cancel",
+          "reset",
+          "replace with humans",
+          "exit cleanup",
+          "fullscreen",
+          "390px"
+        ],
+        "cleanup": {
+          "raf": 0,
+          "canvas": 0
+        },
+        "errors": [],
+        "specialReceipts": [
+          {
+            "type": "specialObjectsRefreshed",
+            "date": "1998-02-01",
+            "objects": [
+              {
+                "type": 13,
+                "node": 108
+              },
+              {
+                "type": 14,
+                "node": 4
+              }
+            ],
+            "sequence": 48,
+            "commandId": "command-31",
+            "playerId": "player-3",
+            "turn": 3
+          },
+          {
+            "type": "specialObjectResolved",
+            "objectType": 14,
+            "node": 4,
+            "targetId": "player-1",
+            "outcome": "points",
+            "before": 0,
+            "after": 500,
+            "sequence": 54,
+            "commandId": "command-34",
+            "playerId": "player-1",
+            "turn": 4
+          }
+        ],
+        "pairNotices": [
+          {
+            "type": "g6Notice",
+            "message": "配对补位：13号槽出现在108号路格。",
+            "sequence": 46,
+            "commandId": "command-31",
+            "playerId": "player-3",
+            "turn": 3
+          },
+          {
+            "type": "g6Notice",
+            "message": "配对补位：14号槽出现在4号路格。",
+            "sequence": 47,
+            "commandId": "command-31",
+            "playerId": "player-3",
+            "turn": 3
+          }
+        ],
+        "prefixes": [
+          27,
+          30
+        ],
+        "fullReplay": true,
+        "prefixReplay": true,
+        "commandsMatchPriorLegalRoute": true,
+        "hashes": {
+          "replay": "bcc56925c393bc631773089968ba6f4744172f6501e95957dfa08506da8c0acc",
+          "state": "c209812ae965825be27ed21c738b0b0725f6adc2f34968fd47c23156a742aa4c",
+          "events": "1569ead6d2f479a657301c7d45de7856c86ec2c4d8c4ec99627fd9fd689bb729"
+        }
+      },
+      {
+        "displayChecks": [
+          {
+            "index": 0,
+            "objects": [
+              {
+                "id": "god-6",
+                "type": 11,
+                "node": 103,
+                "carrier": null,
+                "remaining": 0
+              },
+              {
+                "id": "god-7",
+                "type": 13,
+                "node": 102,
+                "carrier": null,
+                "remaining": 0
+              },
+              {
+                "id": "god-8",
+                "type": 14,
+                "node": 33,
+                "carrier": null,
+                "remaining": 0
+              }
+            ],
+            "gods": []
+          }
+        ],
+        "robotPreviews": [],
+        "policy": "research-v1",
+        "toolWindows": [
+          "tool:08",
+          "tool:09"
+        ],
+        "crossChecks": [],
+        "route": "4",
+        "terminal": false,
+        "players": 4,
+        "normalSpeed": true,
+        "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+        "commands": 116,
+        "auto": 54,
+        "human": 7,
+        "lifecycle": [
+          "pause stops waiting",
+          "resume",
+          "reset dialog cancel",
+          "reset",
+          "replace with humans",
+          "exit cleanup",
+          "fullscreen",
+          "390px"
+        ],
+        "cleanup": {
+          "raf": 0,
+          "canvas": 0
+        },
+        "errors": [],
+        "specialReceipts": [
+          {
+            "type": "specialObjectsRefreshed",
+            "date": "1998-02-01",
+            "objects": [
+              {
+                "type": 13,
+                "node": 73
+              },
+              {
+                "type": 14,
+                "node": 109
+              }
+            ],
+            "sequence": 82,
+            "commandId": "command-49",
+            "playerId": "player-4",
+            "turn": 4
+          },
+          {
+            "type": "specialObjectResolved",
+            "objectType": 11,
+            "node": 103,
+            "targetId": "player-4",
+            "outcome": "hospital",
+            "sequence": 214,
+            "commandId": "command-121",
+            "playerId": "player-4",
+            "turn": 16
+          }
+        ],
+        "pairNotices": [
+          {
+            "type": "g6Notice",
+            "message": "配对补位：13号槽出现在73号路格。",
+            "sequence": 80,
+            "commandId": "command-49",
+            "playerId": "player-4",
+            "turn": 4
+          },
+          {
+            "type": "g6Notice",
+            "message": "配对补位：14号槽出现在109号路格。",
+            "sequence": 81,
+            "commandId": "command-49",
+            "playerId": "player-4",
+            "turn": 4
+          },
+          {
+            "type": "g6Notice",
+            "message": "配对补位：12号槽出现在56号路格。",
+            "sequence": 213,
+            "commandId": "command-121",
+            "playerId": "player-4",
+            "turn": 16
+          }
+        ],
+        "prefixes": [
+          45,
+          65,
+          115
+        ],
+        "fullReplay": true,
+        "prefixReplay": true,
+        "commandsMatchPriorLegalRoute": true,
+        "hashes": {
+          "replay": "7d77b141c7e790610089e75095511e2cf666fe8cc8b3c9a711a117f962e69ce3",
+          "state": "61f483031cab8c313f20150ad8c56e478baf958a2f4d0e6721df9cdb3c91ceab",
+          "events": "f8b4090d513b237ef014984a4ab81a159173b9a752b04951361218475f14ca73"
+        }
+      }
+    ],
+    "totalActualCommands": 244,
+    "legalPlanCommands": [
+      67,
+      43,
+      108
+    ],
+    "prefixes": 8,
+    "fullReplays": 3,
+    "originalMap": true,
+    "normalSpeed": true,
+    "gameStateInjection": false,
+    "authOnlyFixture": true,
+    "visualInspected": [
+      "/private/tmp/richman-special-objects-ui-3/gods-0.png",
+      "/private/tmp/richman-special-objects-ui-4/final.png"
+    ]
+  },
+  "notBrowserVerified": [
+    "vehicle/engineer avoidance and insurance combinations",
+    "tool13 empty/full/all8 kinds",
+    "dream stop/point wrap",
+    "12 attach-expire-back11",
+    "special object G7 restore/nuclear removal",
+    "public disposal suspending month rollover with special refresh"
+  ],
+  "differences": [
+    "native RNG and original runtime",
+    "special actors4+",
+    "legacy15 initial/five-round refill, acquisition still candidate",
+    "special-object teleport selection",
+    "native animations/spinner/roaming not claimed",
+    "fixed blast initial hit list versus native mutable traversal",
+    "existing AI/stock/property-sale/exit-stack/minigame differences"
+  ],
+  "next": "S3-03d: audit15 dual slots/acquisition/expiry and actual movement caller; extend reachable lifecycle/G7/vehicle/tool-failure combinations and assess candidate closure; v46 if no new semantics, v47 if new",
+  "git": {
+    "committed": false,
+    "pushed": false,
+    "deployed": false
+  }
+}

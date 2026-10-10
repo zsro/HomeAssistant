@@ -1,0 +1,110 @@
+{
+  "stage": "S3-04b",
+  "date": "2026-10-09",
+  "status": "implemented-local-checks-passed-browser-deferred-to-S3-04d",
+  "rulesId": "japan-events-candidate-v47",
+  "mode": "surrender",
+  "fingerprint": "c6d96cc",
+  "presentationProfile": "event-audio-v1",
+  "newGameSemantics": false,
+  "newPolicyVersion": false,
+  "nativeExecution": false,
+  "historicalCapabilities": {
+    "items": 43,
+    "news": 36,
+    "japanFortuneSlots": 37,
+    "policies": 15,
+    "S3_03": "historical ordinary-seat Web candidate closed"
+  },
+  "resources": {
+    "musicPreserved": 8,
+    "oldEffectsPreserved": [
+      43,
+      48
+    ],
+    "addedEffects": [
+      49,
+      50
+    ],
+    "voicesAdded": 16,
+    "voiceFamilies": [
+      "50-point node alternatives",
+      "30-point node",
+      "ordinary paid upgrade4to5"
+    ],
+    "tenPointVoice": false,
+    "newBytes": 631188,
+    "landingNodes": 33,
+    "addedLandingNodes": [
+      22,
+      24,
+      26,
+      28,
+      35,
+      55,
+      73,
+      78,
+      88,
+      98
+    ]
+  },
+  "checks": {
+    "tests": {
+      "passed": 53,
+      "files": 5,
+      "scope": "14 inherited media mocks +17 queue cases +12 routing cases +2 detached session/replay cases +8 existing session checks; local only"
+    },
+    "resources": {
+      "stage": "S3-04b",
+      "browserStarted": false,
+      "nativeExecution": false,
+      "oldMediaHashes": 10,
+      "newMediaHashes": 18,
+      "newMediaFullDecodesRecorded": 18,
+      "mapNodesChecked": 110,
+      "mappedNodes": 33,
+      "characterMappings": 16
+    },
+    "build": "tsc -b and vite build passed; preexisting chunk/import warnings",
+    "lint": "passed",
+    "diffCheck": "passed",
+    "fullFrontendRun": false
+  },
+  "preservation": {
+    "baselineFiles": 759,
+    "unchangedFiles": 754,
+    "changedExisting": [
+      "frontend/src/features/richman/audio.ts",
+      "frontend/src/features/richman/audio.test.ts",
+      "frontend/src/features/richman/AudioPanel.tsx",
+      "frontend/src/features/richman/game/session.ts",
+      "frontend/src/pages/RichmanPage.tsx"
+    ],
+    "engineRulesPoliciesUnchanged": true,
+    "oldFixtures": 458,
+    "oldFixturesUnchanged": true,
+    "newReplayFixtures": 0
+  },
+  "browser": {
+    "started": false,
+    "commands": 0,
+    "newPassedScenarios": 0,
+    "reason": "user schedules unified browser acceptance for S3-04d after a–c implementation"
+  },
+  "pendingBrowserAcceptance": [
+    "four actual voices/listening and native clip identity/volume balance",
+    "Mac per-element autoplay permission, failure/retry and queued async playback",
+    "same-turn multiple effects/voice overlap, queue priority/drop and music duck restoration",
+    "30/50-point legal landing,10-point no speech, paid ordinary purchase/upgrade5",
+    "dream/winter/travel gates and unknown-role silence",
+    "pause/reset-dialog cancellation/real reset/new game/hidden/fullscreen390px/exit cleanup",
+    "G7 and cancel clear pending clips; 2–4-seat live/replay consistency after c"
+  ],
+  "unverified": [
+    "remaining1358 Speaking entries",
+    "other item/card/attack/god/detention voices and FX not guessed",
+    "native audio/text popup synchronous timing and RNG equivalence",
+    "actual native Windows execution and audio-output listening"
+  ],
+  "next": "S3-04c: evidence-backed animation/resource increment; local checks only, unified browser acceptance remains d"
+}

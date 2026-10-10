@@ -1,0 +1,196 @@
+{
+  "stage": "S2-04b",
+  "referenceCommit": "ec7d70e693059d1e781d9d1cc2ad7f36d360d39e",
+  "grade": "fixed cross-version assembly evidence; no Windows execution",
+  "sources": [
+    {
+      "path": "asm/rich4_stocks.asm",
+      "gitBlobSha1": "c45cd776b51483d17f78972845b8053deeee2433",
+      "sha256": "d55e17af17da2464655f53d3b3dd32224637a37ab131c6cf483db8fbac045ea3",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_stocks.asm"
+    },
+    {
+      "path": "asm/rich4_ui_stock.asm",
+      "gitBlobSha1": "cc0913dc550a049781e3b72f2df215ce84df6b28",
+      "sha256": "0e3152263c9886615fa6509fcd005f0db37a9fb850b3124ede51de868fa8ab82",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_ui_stock.asm"
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "gitBlobSha1": "ebfde6c820e8a430b856d9816a926b636e0db1dc",
+      "sha256": "2874c1a3e0ca1d0da5afe4cb93e42cf2d6f6fa864dbee11d7bcaa028af07d94a",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_core_actions.asm"
+    },
+    {
+      "path": "asm/rich4_fortune.asm",
+      "gitBlobSha1": "32a7a9dff203a46ec3d2906c1e5f1ede22f97e70",
+      "sha256": "d6309c81b0943a38e138bcdf85c8d006ddb0ba53c4d72744c4d3cc4ab63a53fc",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_fortune.asm"
+    },
+    {
+      "path": "asm/rich4_player_bankrupt.asm",
+      "gitBlobSha1": "7d89fe867d86a4b9fc230602da8bc084725310c6",
+      "sha256": "57c69d347bef382e0045b00855c17293e5cb737ed22359340894ed9b9cf8bf02",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_bankrupt.asm"
+    },
+    {
+      "path": "asm/rich4.asm",
+      "gitBlobSha1": "d11a64755094435fa9953652a5a4951871fd9697",
+      "sha256": "30904cbb4f23a6b74fc1b80ad023bd7dff11b441c2c1978f768f9891d099d64a",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4.asm"
+    },
+    {
+      "path": "asm/rich4_calculate_player_wealth.asm",
+      "gitBlobSha1": "9b142d3a8173c4f7c850cd0786b60d58564f1893",
+      "sha256": "95b68c2bf328121bcb981311a2e1ad226283c0c2a1015386397fa9df5281241c",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_calculate_player_wealth.asm"
+    }
+  ],
+  "anchors": [
+    {
+      "path": "asm/rich4_stocks.asm",
+      "anchor": "_rich4_buy_stock:",
+      "lines": [
+        94
+      ]
+    },
+    {
+      "path": "asm/rich4_stocks.asm",
+      "anchor": "loc_00428d7f:",
+      "lines": [
+        119
+      ]
+    },
+    {
+      "path": "asm/rich4_stocks.asm",
+      "anchor": "loc_00428db7:",
+      "lines": [
+        136
+      ]
+    },
+    {
+      "path": "asm/rich4_stocks.asm",
+      "anchor": "_rich4_sell_stock:",
+      "lines": [
+        171
+      ]
+    },
+    {
+      "path": "asm/rich4_stocks.asm",
+      "anchor": "loc_00428e5b:",
+      "lines": [
+        191
+      ]
+    },
+    {
+      "path": "asm/rich4_stocks.asm",
+      "anchor": "loc_00428ea4:",
+      "lines": [
+        210
+      ]
+    },
+    {
+      "path": "asm/rich4_ui_stock.asm",
+      "anchor": "loc_00429ac9:",
+      "lines": [
+        531
+      ]
+    },
+    {
+      "path": "asm/rich4_ui_stock.asm",
+      "anchor": "ref_00463f64:",
+      "lines": [
+        3408
+      ]
+    },
+    {
+      "path": "asm/rich4_ui_stock.asm",
+      "anchor": "loc_0042af89:",
+      "lines": [
+        2097
+      ]
+    },
+    {
+      "path": "asm/rich4_ui_stock.asm",
+      "anchor": "loc_0042afff:",
+      "lines": [
+        2140
+      ]
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "anchor": "loc_0041d273:",
+      "lines": [
+        5018
+      ]
+    },
+    {
+      "path": "asm/rich4_fortune.asm",
+      "anchor": "loc_0044c8aa:",
+      "lines": [
+        947
+      ]
+    },
+    {
+      "path": "asm/rich4_fortune.asm",
+      "anchor": "loc_0044c9c0:",
+      "lines": [
+        1047
+      ]
+    },
+    {
+      "path": "asm/rich4_player_bankrupt.asm",
+      "anchor": "loc_0040d14d:",
+      "lines": [
+        390
+      ]
+    },
+    {
+      "path": "asm/rich4.asm",
+      "anchor": "loc_00416488:",
+      "lines": [
+        8237
+      ]
+    },
+    {
+      "path": "asm/rich4.asm",
+      "anchor": "loc_00416534:",
+      "lines": [
+        8272
+      ]
+    },
+    {
+      "path": "asm/rich4_calculate_player_wealth.asm",
+      "anchor": "_rich4_calculate_player_wealth:",
+      "lines": [
+        14
+      ]
+    },
+    {
+      "path": "asm/rich4_calculate_player_wealth.asm",
+      "anchor": "loc_004239e0:",
+      "lines": [
+        29
+      ]
+    }
+  ],
+  "rules": {
+    "R08-01b": "Holding is integer quantity + float32 average yuan. Buy truncates old quantity*average to integer, adds actual paid, divides by new quantity and stores float32. Cash subscription and public market converge on loc00428db7.",
+    "R08-02b": "Partial sell changes quantity, preserves average; exactly empty stores zero. Display cost is derived trunc(quantity*average), not cumulative cash spend. Re-entry uses surviving average, not pro-rata historical integer cost.",
+    "R08-03b": "Public buy pays bank and reduces pool/quota. Company cash buy pays trunc(capital/10000)*quantity, reduces private subscription pool; neither creates operating income. Both update ownership.",
+    "R08-04b": "Sell flag1 credits bank, flag0 public. Fortune8 calls flag0 for each stock including zero-sale; fortune9 flag1 only nonzero. Exit calls flag0 after existing final-survivor early return. Pool/quota restored and ownership updated. No public receipts pay original debt or revive player.",
+    "R08-05b": "Original stock list displays stored average with %.2f. Asset UI iterates 12 stocks, accumulating current-price*quantity and average*quantity with integer conversion and float accumulator stores. Web per-stock integer-cent value and exact-safe-integer total retained; full native aggregate/x87 precision differs. Unrealized=value-derived-cost is a labeled Web display, not claimed native realized P&L.",
+    "R10-01b": "v43 adds average field only; legacy shapes/fingerprints unchanged; existing G7 world checkpoints restore it. v43 restores inherited asset-fortune gates omitted in v42; v42 is not retroactively changed."
+  },
+  "retainedDifferences": [
+    "integer-cent trade amounts versus native float-price product boundaries",
+    "native x87/float aggregate precision and large-total rounding",
+    "native RNG/time reseeding",
+    "full native chart/input/audio",
+    "other asset listings",
+    "special actors",
+    "native roulette",
+    "native exit call stack and ending",
+    "minigame presentation/collision/input"
+  ]
+}

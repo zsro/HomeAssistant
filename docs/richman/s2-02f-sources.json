@@ -1,0 +1,58 @@
+{
+  "referenceCommit": "ec7d70e693059d1e781d9d1cc2ad7f36d360d39e",
+  "evidence": "A: inherited local catalog bytes; B: pinned reference semantics; Web targeting explicitly candidate",
+  "localCatalogEvidence": {
+    "report": "effects-audit.json",
+    "id": "card:02",
+    "name": "均貧卡",
+    "rawFields": [
+      2,
+      200,
+      2,
+      2
+    ],
+    "localRecordOffset": 508250
+  },
+  "sources": [
+    {
+      "path": "csrc/cards.c",
+      "sha256": "f5f065702b1559bb08eb3989a09340f49dfd1b8b04932545d5d73b44317da410",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/csrc/cards.c"
+    },
+    {
+      "path": "asm/rich4_card_junpinka.c",
+      "sha256": "2a8c63d740213b8c9b97c4f191410f5b53680b05a17483ab1f0135f4645725e6",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_card_junpinka.c"
+    },
+    {
+      "path": "asm/rich4_card_utils.asm",
+      "sha256": "937d2f587f15068f1f1280ac60d4a61c0249dbde0f206bfcc1489a29591d8181",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_card_utils.asm"
+    },
+    {
+      "path": "asm/rich4_card_utils_2.asm",
+      "sha256": "98caa25f4c3cbbfca6cf304caa6485d719b3776ccb701a401d90920828b29ae2",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_card_utils_2.asm"
+    },
+    {
+      "path": "asm/rich4_ui_use_card.asm",
+      "sha256": "d2dfe43bb72cf23c98e602b8415bd4900a2422f16a83c3f51a1a976f8a7f49bd",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_ui_use_card.asm"
+    },
+    {
+      "path": "asm/rich4_ui_use_tool.asm",
+      "sha256": "fa16767708c30617610771e1eb6e0003b7576a2be2efc34d92f29a631fa7754a",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_ui_use_tool.asm"
+    },
+    {
+      "path": "asm/rich4_shop.asm",
+      "sha256": "2273fa44c0cbc7d4f508006b917b4f2c412a19e33014abd968435c29e0770410",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_shop.asm"
+    },
+    {
+      "path": "asm/rich4_new_game.asm",
+      "sha256": "0abb3c6ee86e22c768480573e365dcefb692f69ffa701d5ff027cf4d1b2bf86a",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_new_game.asm"
+    }
+  ]
+}

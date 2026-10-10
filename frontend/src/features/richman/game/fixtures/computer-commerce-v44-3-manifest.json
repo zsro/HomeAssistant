@@ -1,0 +1,150 @@
+{
+  "players": 3,
+  "commands": 1438,
+  "turn": 196,
+  "auto": 397,
+  "human": 173,
+  "acquisitions": [
+    {
+      "id": "player-3",
+      "ai": true,
+      "item": "card:07",
+      "turn": 150,
+      "action": "buyItem",
+      "events": [
+        {
+          "type": "itemBought",
+          "itemId": "card:07",
+          "cost": 15,
+          "points": 5,
+          "supply": 7,
+          "sequence": 2013,
+          "commandId": "command-1079",
+          "playerId": "player-3",
+          "turn": 150
+        }
+      ]
+    },
+    {
+      "id": "player-2",
+      "ai": true,
+      "item": "card:07",
+      "turn": 173,
+      "action": "buyItem",
+      "events": [
+        {
+          "type": "itemBought",
+          "itemId": "card:07",
+          "cost": 15,
+          "points": 35,
+          "supply": 6,
+          "sequence": 2329,
+          "commandId": "command-1248",
+          "playerId": "player-2",
+          "turn": 173
+        }
+      ]
+    },
+    {
+      "id": "player-3",
+      "ai": true,
+      "item": "card:28",
+      "turn": 195,
+      "action": "buyItem",
+      "events": [
+        {
+          "type": "itemBought",
+          "itemId": "card:28",
+          "cost": 35,
+          "points": 70,
+          "supply": 2,
+          "sequence": 2665,
+          "commandId": "command-1434",
+          "playerId": "player-3",
+          "turn": 195
+        }
+      ]
+    }
+  ],
+  "uses": [
+    {
+      "ai": true,
+      "id": "player-3",
+      "item": "card:07",
+      "target": "japan:land:18",
+      "turn": 195,
+      "phase": "idle",
+      "changes": [
+        {
+          "before": {
+            "id": "japan:land:18",
+            "ownerId": "player-3",
+            "level": 1,
+            "basePrice": 1500,
+            "buildingType": 0,
+            "priceStatus": 0,
+            "research": null
+          },
+          "after": {
+            "id": "japan:land:18",
+            "ownerId": "player-3",
+            "level": 1,
+            "basePrice": 1500,
+            "buildingType": 1,
+            "priceStatus": 0,
+            "research": null
+          }
+        }
+      ]
+    }
+  ],
+  "cancellations": [],
+  "auctions": [],
+  "clocks": [],
+  "prefixes": [
+    "card:07-acquired",
+    "card:07-paused",
+    "card:07-resumed",
+    "card:07-confirm-before",
+    "card:07-confirm-after",
+    "card:28-acquired"
+  ],
+  "report": {
+    "policy": "commerce-v1",
+    "toolWindows": [
+      "tool:08",
+      "tool:09",
+      "card:12",
+      "card:07"
+    ],
+    "crossChecks": [],
+    "route": "3",
+    "terminal": false,
+    "players": 3,
+    "normalSpeed": true,
+    "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+    "commands": 1438,
+    "auto": 397,
+    "human": 173,
+    "lifecycle": [
+      "pause stops waiting",
+      "resume",
+      "reset dialog cancel",
+      "reset",
+      "replace with humans",
+      "exit cleanup",
+      "fullscreen",
+      "390px"
+    ],
+    "cleanup": {
+      "raf": 0,
+      "canvas": 0
+    },
+    "errors": []
+  },
+  "hashes": {
+    "replay": "c4fbb1866460d0e66b60ae3d972d66dd0e80b64445b78caf5d145c3e98f6e2b0",
+    "state": "43f297fa80e95b102dc47d6dec131459f68a75dea5adc97f20d58ff4a07e814f",
+    "events": "4bc9f32288346341e7334a74c89a760ce1b330b19e64f1580570ea927ce06971"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "referenceCommit": "ec7d70e693059d1e781d9d1cc2ad7f36d360d39e",
+  "semantics": "B: pinned cross-version reference; viewport/projection checked, v3 active-player center/orientation-0/anchor eligibility explicitly Web candidate, not original pixel-hit parity",
+  "localByteEvidence": "effects-audit.json items tool:09 (S2-01 audited snapshot; no resource rescan)",
+  "sources": [
+    {
+      "path": "asm/rich4.asm",
+      "sha256": "30904cbb4f23a6b74fc1b80ad023bd7dff11b441c2c1978f768f9891d099d64a",
+      "symbols": "fcn_00409b18; _rich4_get_instance_from_position; fcn_00409a23; fcn_00407a2c; ref_0046ccf0; ref_00474910; fcn_0040829d; loc_004083a3",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4.asm"
+    },
+    {
+      "path": "asm/rich4_ui_use_tool.asm",
+      "sha256": "fa16767708c30617610771e1eb6e0003b7576a2be2efc34d92f29a631fa7754a",
+      "symbols": "_rich4_select_instance_with_mouse; _rich4_select_instance_callback; loc_004461ff; loc_0044624e; loc_0044627d; loc_0044630a",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_ui_use_tool.asm"
+    },
+    {
+      "path": "asm/rich4_tool_jiqigongren.asm",
+      "sha256": "921ba82c62e2f7f966a8aa39bbde3e060925011c01468d958bbb6a26aadc7f7c",
+      "symbols": "_rich4_use_tool_jiqigongren; selector 0x2090006",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_tool_jiqigongren.asm"
+    }
+  ],
+  "restoration": "Temporary reference files had been cleaned; restored exactly these three files from pinned raw URLs and verified against prior SHA-256. No full repository or game resource rescan."
+}

@@ -1,0 +1,183 @@
+{
+  "version": 1,
+  "rulesId": "japan-events-candidate-v22",
+  "mapFingerprint": "6fb1abfd",
+  "catalogFingerprint": "628c3de8",
+  "itemFingerprint": "d2a52b1a",
+  "config": {
+    "gameId": "ed579065-e70f-4c45-8490-34444089d5c4",
+    "seed": "traffic-group-7",
+    "characterIds": [
+      "xiaomei",
+      "tuu",
+      "chyan",
+      "salonbus"
+    ],
+    "rulesId": "japan-events-candidate-v22",
+    "initialFunds": 300000
+  },
+  "commands": [
+    {
+      "id": "command-1",
+      "gameId": "ed579065-e70f-4c45-8490-34444089d5c4",
+      "expectedRevision": 0,
+      "playerId": "player-1",
+      "action": {
+        "type": "item",
+        "action": {
+          "type": "begin",
+          "definitionId": "tool:08:select-dice-v1"
+        }
+      }
+    },
+    {
+      "id": "command-2",
+      "gameId": "ed579065-e70f-4c45-8490-34444089d5c4",
+      "expectedRevision": 1,
+      "playerId": "player-1",
+      "action": {
+        "type": "item",
+        "action": {
+          "type": "confirm",
+          "decisionId": "ed579065-e70f-4c45-8490-34444089d5c4:effect:1",
+          "target": {
+            "kind": "player",
+            "id": "player-1"
+          }
+        },
+        "value": 6
+      }
+    },
+    {
+      "id": "command-3",
+      "gameId": "ed579065-e70f-4c45-8490-34444089d5c4",
+      "expectedRevision": 2,
+      "playerId": "player-1",
+      "action": {
+        "type": "animationDone",
+        "token": "ed579065-e70f-4c45-8490-34444089d5c4:1"
+      }
+    },
+    {
+      "id": "command-4",
+      "gameId": "ed579065-e70f-4c45-8490-34444089d5c4",
+      "expectedRevision": 3,
+      "playerId": "player-1",
+      "action": {
+        "type": "choose",
+        "decisionId": "ed579065-e70f-4c45-8490-34444089d5c4:2",
+        "node": 3
+      }
+    },
+    {
+      "id": "command-5",
+      "gameId": "ed579065-e70f-4c45-8490-34444089d5c4",
+      "expectedRevision": 4,
+      "playerId": "player-1",
+      "action": {
+        "type": "animationDone",
+        "token": "ed579065-e70f-4c45-8490-34444089d5c4:3"
+      }
+    },
+    {
+      "id": "command-6",
+      "gameId": "ed579065-e70f-4c45-8490-34444089d5c4",
+      "expectedRevision": 5,
+      "playerId": "player-1",
+      "action": {
+        "type": "animationDone",
+        "token": "ed579065-e70f-4c45-8490-34444089d5c4:4"
+      }
+    },
+    {
+      "id": "command-7",
+      "gameId": "ed579065-e70f-4c45-8490-34444089d5c4",
+      "expectedRevision": 6,
+      "playerId": "player-1",
+      "action": {
+        "type": "animationDone",
+        "token": "ed579065-e70f-4c45-8490-34444089d5c4:5"
+      }
+    },
+    {
+      "id": "command-8",
+      "gameId": "ed579065-e70f-4c45-8490-34444089d5c4",
+      "expectedRevision": 7,
+      "playerId": "player-1",
+      "action": {
+        "type": "animationDone",
+        "token": "ed579065-e70f-4c45-8490-34444089d5c4:6"
+      }
+    },
+    {
+      "id": "command-9",
+      "gameId": "ed579065-e70f-4c45-8490-34444089d5c4",
+      "expectedRevision": 8,
+      "playerId": "player-1",
+      "action": {
+        "type": "animationDone",
+        "token": "ed579065-e70f-4c45-8490-34444089d5c4:7"
+      }
+    },
+    {
+      "id": "command-10",
+      "gameId": "ed579065-e70f-4c45-8490-34444089d5c4",
+      "expectedRevision": 9,
+      "playerId": "player-1",
+      "action": {
+        "type": "animationDone",
+        "token": "ed579065-e70f-4c45-8490-34444089d5c4:8"
+      }
+    },
+    {
+      "id": "command-11",
+      "gameId": "ed579065-e70f-4c45-8490-34444089d5c4",
+      "expectedRevision": 10,
+      "playerId": "player-1",
+      "action": {
+        "type": "pause",
+        "value": true
+      }
+    },
+    {
+      "id": "command-12",
+      "gameId": "ed579065-e70f-4c45-8490-34444089d5c4",
+      "expectedRevision": 11,
+      "playerId": "player-1",
+      "action": {
+        "type": "pause",
+        "value": false
+      }
+    },
+    {
+      "id": "command-13",
+      "gameId": "ed579065-e70f-4c45-8490-34444089d5c4",
+      "expectedRevision": 12,
+      "playerId": "player-1",
+      "action": {
+        "type": "pause",
+        "value": true
+      }
+    },
+    {
+      "id": "command-14",
+      "gameId": "ed579065-e70f-4c45-8490-34444089d5c4",
+      "expectedRevision": 13,
+      "playerId": "player-1",
+      "action": {
+        "type": "pause",
+        "value": false
+      }
+    },
+    {
+      "id": "command-15",
+      "gameId": "ed579065-e70f-4c45-8490-34444089d5c4",
+      "expectedRevision": 14,
+      "playerId": "player-1",
+      "action": {
+        "type": "ackFortune",
+        "decisionId": "ed579065-e70f-4c45-8490-34444089d5c4:10"
+      }
+    }
+  ]
+}

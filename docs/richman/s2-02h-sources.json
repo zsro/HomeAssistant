@@ -1,0 +1,112 @@
+{
+  "referenceCommit": "ec7d70e693059d1e781d9d1cc2ad7f36d360d39e",
+  "sources": [
+    {
+      "path": "csrc/cards.c",
+      "sha256": "f5f065702b1559bb08eb3989a09340f49dfd1b8b04932545d5d73b44317da410",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/csrc/cards.c"
+    },
+    {
+      "path": "asm/rich4_card_goudika.asm",
+      "sha256": "06853906ed1132ab3b31172f461d2bf8b082aa432c5cf685df8a02e7841a8c4b",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_card_goudika.asm"
+    },
+    {
+      "path": "asm/rich4_card_huandika.asm",
+      "sha256": "d9504bbe5602c046da34cfca033e23ab3fa172ca2b61e4fa3a58e46411888d6f",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_card_huandika.asm"
+    },
+    {
+      "path": "asm/rich4_card_huanwuka.asm",
+      "sha256": "44ede630a2f32fdf1b0bdc35c3f67c8163d41cd30de1cde6d8048f693243b62a",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_card_huanwuka.asm"
+    },
+    {
+      "path": "asm/rich4_card_chaichuka.asm",
+      "sha256": "f6f69a6029727dbb673de7be04730d818db533c8ba57e516946f810a1522bf2d",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_card_chaichuka.asm"
+    },
+    {
+      "path": "asm/rich4_card_zhuanxiangka.c",
+      "sha256": "e9bbbea320b4c702281c4475e3b8d77234e699a942fb9859130ba07d715b4e32",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_card_zhuanxiangka.c"
+    },
+    {
+      "path": "asm/rich4_ui_use_tool.asm",
+      "sha256": "fa16767708c30617610771e1eb6e0003b7576a2be2efc34d92f29a631fa7754a",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_ui_use_tool.asm"
+    },
+    {
+      "path": "asm/rich4_player_core_actions.asm",
+      "sha256": "2874c1a3e0ca1d0da5afe4cb93e42cf2d6f6fa864dbee11d7bcaa028af07d94a",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_player_core_actions.asm"
+    },
+    {
+      "path": "asm/rich4.asm",
+      "sha256": "30904cbb4f23a6b74fc1b80ad023bd7dff11b441c2c1978f768f9891d099d64a",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4.asm"
+    },
+    {
+      "path": "asm/rich4_shop.asm",
+      "sha256": "2273fa44c0cbc7d4f508006b917b4f2c412a19e33014abd968435c29e0770410",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_shop.asm"
+    },
+    {
+      "path": "asm/rich4_card_utils.asm",
+      "sha256": "937d2f587f15068f1f1280ac60d4a61c0249dbde0f206bfcc1489a29591d8181",
+      "url": "https://github.com/mytbk/rich4/blob/ec7d70e693059d1e781d9d1cc2ad7f36d360d39e/asm/rich4_card_utils.asm"
+    }
+  ],
+  "catalog": [
+    {
+      "id": "card:03",
+      "rawFields": [
+        4,
+        35,
+        0,
+        1
+      ],
+      "localRecordOffset": 508258
+    },
+    {
+      "id": "card:04",
+      "rawFields": [
+        4,
+        25,
+        0,
+        0
+      ],
+      "localRecordOffset": 508266
+    },
+    {
+      "id": "card:05",
+      "rawFields": [
+        4,
+        20,
+        0,
+        0
+      ],
+      "localRecordOffset": 508274
+    },
+    {
+      "id": "card:06",
+      "rawFields": [
+        3,
+        20,
+        0,
+        0
+      ],
+      "localRecordOffset": 508282
+    },
+    {
+      "id": "card:12",
+      "rawFields": [
+        5,
+        15,
+        0,
+        1
+      ],
+      "localRecordOffset": 508330
+    }
+  ]
+}

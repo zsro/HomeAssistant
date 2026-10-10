@@ -1,0 +1,246 @@
+{
+  "players": 2,
+  "commands": 1157,
+  "auto": 240,
+  "human": 215,
+  "acquisitions": [
+    {
+      "ai": true,
+      "id": "player-2",
+      "item": "card:06",
+      "turn": 144,
+      "cost": 20
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "item": "tool:05",
+      "turn": 144,
+      "cost": 80
+    }
+  ],
+  "uses": [
+    {
+      "ai": true,
+      "id": "player-2",
+      "item": "tool:05",
+      "turn": 146,
+      "target": {
+        "kind": "player",
+        "id": "player-2"
+      },
+      "mobilityBefore": {
+        "stop": 0,
+        "winter": 0,
+        "dream": 0,
+        "prison": 0,
+        "hospital": 0,
+        "turtle": 0,
+        "vehicle": "foot",
+        "diceCount": 1,
+        "savedVehicle": "foot",
+        "savedDice": 1,
+        "travel": 0
+      },
+      "mobilityAfter": {
+        "stop": 0,
+        "winter": 0,
+        "dream": 0,
+        "prison": 0,
+        "hospital": 0,
+        "turtle": 0,
+        "vehicle": "tool:05",
+        "diceCount": 2,
+        "savedVehicle": "foot",
+        "savedDice": 1,
+        "travel": 0
+      }
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "item": "card:06",
+      "turn": 156,
+      "target": {
+        "kind": "player",
+        "id": "player-2"
+      },
+      "mobilityBefore": {
+        "stop": 0,
+        "winter": 0,
+        "dream": 0,
+        "prison": 0,
+        "hospital": 0,
+        "turtle": 0,
+        "vehicle": "tool:05",
+        "diceCount": 1,
+        "savedVehicle": "foot",
+        "savedDice": 1,
+        "travel": 0
+      },
+      "mobilityAfter": {
+        "stop": 0,
+        "winter": 0,
+        "dream": 0,
+        "prison": 0,
+        "hospital": 0,
+        "turtle": 0,
+        "vehicle": "tool:05",
+        "diceCount": 1,
+        "savedVehicle": "foot",
+        "savedDice": 1,
+        "travel": 0
+      }
+    }
+  ],
+  "cancellations": [],
+  "traffic": [
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 152,
+      "before": 2,
+      "after": 1,
+      "vehicle": "tool:05"
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 156,
+      "before": 1,
+      "after": 2,
+      "vehicle": "tool:05"
+    }
+  ],
+  "rolls": [
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 146,
+      "vehicle": "tool:05",
+      "engineer": false,
+      "values": [
+        2,
+        1
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 148,
+      "vehicle": "tool:05",
+      "engineer": false,
+      "values": [
+        4,
+        6
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 150,
+      "vehicle": "tool:05",
+      "engineer": false,
+      "values": [
+        3,
+        3
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 152,
+      "vehicle": "tool:05",
+      "engineer": false,
+      "values": [
+        4
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 154,
+      "vehicle": "tool:05",
+      "engineer": false,
+      "values": [
+        2
+      ]
+    },
+    {
+      "ai": true,
+      "id": "player-2",
+      "turn": 156,
+      "vehicle": "tool:05",
+      "engineer": false,
+      "values": [
+        5,
+        3
+      ]
+    }
+  ],
+  "engineering": [],
+  "prefixes": [
+    "card:06-bought",
+    "tool:05-bought",
+    "tool:05-paused",
+    "tool:05-resumed",
+    "tool:05-confirm-before",
+    "tool:05-confirm-after",
+    "roll-tool:05-2",
+    "traffic-before",
+    "traffic-after",
+    "roll-tool:05-1",
+    "card:06-paused",
+    "card:06-resumed",
+    "card:06-confirm-before",
+    "card:06-confirm-after"
+  ],
+  "report": {
+    "robotPreviews": [],
+    "policy": "mobility-v1",
+    "toolWindows": [
+      "tool:08",
+      "tool:09",
+      "card:15",
+      "tool:02",
+      "card:28",
+      "tool:05",
+      "card:06"
+    ],
+    "crossChecks": [
+      {
+        "index": 506,
+        "kind": "auction",
+        "computer": true
+      }
+    ],
+    "route": "2",
+    "terminal": false,
+    "players": 2,
+    "normalSpeed": true,
+    "map": "original Japan; actual human UI and session computer commands; auth fixture only",
+    "commands": 1157,
+    "auto": 240,
+    "human": 215,
+    "lifecycle": [
+      "pause stops waiting",
+      "resume",
+      "reset dialog cancel",
+      "reset",
+      "replace with humans",
+      "exit cleanup",
+      "fullscreen",
+      "390px"
+    ],
+    "cleanup": {
+      "raf": 0,
+      "canvas": 0
+    },
+    "errors": []
+  },
+  "hashes": {
+    "replay": "d6bfafb8328302e86780dd1928413336b33da78006c1a3fd8d4866b1e5bae243",
+    "state": "1ea4384b982f5793909ad0eb4b57f1e5c961e199b9931ca520268d37474e06a2",
+    "events": "b90f9a1c18454ec57c8a328470c5ebe31af2e2c2ad6746892ebbde8bd5cfb63f"
+  }
+}

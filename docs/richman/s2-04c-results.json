@@ -1,0 +1,309 @@
+{
+  "stage": "S2-04c",
+  "date": "2026-10-06",
+  "rulesId": "japan-events-candidate-v44",
+  "fingerprint": "f9dbb7e9",
+  "semanticIncrement": true,
+  "s2_04CandidateClosed": true,
+  "nativeParityComplete": false,
+  "closureScope": "Japan ordinary-player candidate quotes/ledger/trading/company/fortune/date/G7; original precision/RNG/chart/input excluded explicitly; bankruptcy/date stress combinations continue in S2-05",
+  "preserved": {
+    "s2_03CandidateClosed": true,
+    "items": 43,
+    "news": 36,
+    "japanFortuneSlots": 37,
+    "magicEffects": 12,
+    "minigames": 3,
+    "legacyFixtureJsonUnchanged": 256,
+    "legacyFingerprintsAndGoldensUnchanged": true
+  },
+  "sourceAudit": {
+    "files": 3,
+    "anchors": 19,
+    "referenceCommit": "ec7d70e693059d1e781d9d1cc2ad7f36d360d39e",
+    "nativeWindowsExecution": false
+  },
+  "checks": {
+    "frontend": {
+      "passed": 1718,
+      "files": 116,
+      "maxWorkers": 2,
+      "newDomain": 26,
+      "newActualReplay": 3,
+      "newVersionPlayerCases": 3,
+      "allVersionPlayerCases": 132
+    },
+    "lint": "passed",
+    "build": "passed; existing large-chunk warning",
+    "defaultModeUI": {
+      "development": {
+        "rulesId": "japan-events-candidate-v44",
+        "fingerprint": "f9dbb7e9",
+        "defaultMode": "stockCircuit",
+        "cleanup": {
+          "raf": 0,
+          "canvas": 0
+        },
+        "errors": []
+      },
+      "builtPreview": {
+        "rulesId": "japan-events-candidate-v44",
+        "fingerprint": "f9dbb7e9",
+        "defaultMode": "stockCircuit",
+        "cleanup": {
+          "raf": 0,
+          "canvas": 0
+        },
+        "errors": []
+      }
+    }
+  },
+  "originalMapBrowser": {
+    "routes": [
+      {
+        "kind": "commerce",
+        "players": 2,
+        "commands": 110,
+        "turn": 9,
+        "trades": 24,
+        "subscriptions": 2,
+        "subscriptionPaid": 4147,
+        "forcedBank": 0,
+        "forcedPublic": 0,
+        "fortune": [],
+        "news": [
+          33
+        ],
+        "dates": 4,
+        "quoteDays": 3,
+        "companyTrends": 1,
+        "research": 0,
+        "restored": 0,
+        "prefixes": [
+          "trade",
+          "market-date",
+          "date",
+          "subscription",
+          "closed-date",
+          "company-trend"
+        ],
+        "report": {
+          "normalSpeed": true,
+          "map": "original Japan; real UI commands; auth-only fixture; no game-state injection",
+          "circuitCommon": true,
+          "completed": [],
+          "errors": [],
+          "cleanup": {
+            "raf": 0,
+            "canvas": 0
+          }
+        },
+        "hashes": {
+          "replay": "d559e40ce2e240ee263ea5edb84c098ba8cc584cb30d1748617869b56a8e6ed4",
+          "state": "cd8c14a0eaff15ce4f36a08e4400fea03cf36d8fc532fc1f625c3eea7a380962",
+          "events": "eb13bbaaed312f70ea6a07829b49000ce52fb98deb5b2daa7f05f0f124e3b338"
+        },
+        "replay": "frontend/src/features/richman/game/fixtures/stock-circuit-v44-commerce-replay.json",
+        "screenshots": "/private/tmp/richman-unified-ui-04c-commerce"
+      },
+      {
+        "kind": "fortune",
+        "players": 3,
+        "commands": 938,
+        "turn": 100,
+        "trades": 36,
+        "subscriptions": 7,
+        "subscriptionPaid": 8632,
+        "forcedBank": 56791,
+        "forcedPublic": 776,
+        "fortune": [
+          9,
+          8
+        ],
+        "news": [
+          32,
+          18
+        ],
+        "dates": 33,
+        "quoteDays": 26,
+        "companyTrends": 1,
+        "research": 0,
+        "restored": 0,
+        "prefixes": [
+          "trade",
+          "fortune-9",
+          "market-date",
+          "date",
+          "closed-date",
+          "subscription",
+          "company-trend",
+          "fortune-8"
+        ],
+        "report": {
+          "normalSpeed": true,
+          "map": "original Japan; real UI commands; auth-only fixture; no game-state injection",
+          "circuitCommon": true,
+          "completed": [],
+          "errors": [],
+          "cleanup": {
+            "raf": 0,
+            "canvas": 0
+          }
+        },
+        "hashes": {
+          "replay": "4a5f886ae4a35d5e5ac3c46b84248cbdc244d1988b618e3fa36522d8bc8745e4",
+          "state": "3596bc152e372ae9662fa8a80b60d5c74a9124b91b02b7cc406b72d3d415f5ca",
+          "events": "3461907e10da4e5383043561b89b4806fdc56e9f5d784e9fea3dba1423654408"
+        },
+        "replay": "frontend/src/features/richman/game/fixtures/stock-circuit-v44-fortune-replay.json",
+        "screenshots": "/private/tmp/richman-unified-ui-04c-fortune"
+      },
+      {
+        "kind": "time",
+        "players": 4,
+        "commands": 2327,
+        "turn": 175,
+        "trades": 49,
+        "subscriptions": 11,
+        "subscriptionPaid": 9854,
+        "forcedBank": 0,
+        "forcedPublic": 4714,
+        "fortune": [
+          8
+        ],
+        "news": [
+          25,
+          14,
+          12,
+          30,
+          33
+        ],
+        "dates": 43,
+        "quoteDays": 35,
+        "companyTrends": 2,
+        "research": 1,
+        "restored": 1,
+        "prefixes": [
+          "trade",
+          "market-date",
+          "date",
+          "closed-date",
+          "subscription",
+          "fortune-8",
+          "company-trend",
+          "research-delivery",
+          "time-restore"
+        ],
+        "report": {
+          "normalSpeed": true,
+          "map": "original Japan; real UI commands; auth-only fixture; no game-state injection",
+          "circuitCommon": true,
+          "completed": [
+            {
+              "id": "tool:10",
+              "preview": "恢复全体玩家位置、现金/存款、地产、库存/供应、研究、车辆/状态、神仙、道路物件及股票持仓/行情。随机序列和操作日志不倒退；从历史背包扣1台，所有旧历史清除。取消不改变任何状态。"
+            }
+          ],
+          "errors": [],
+          "cleanup": {
+            "raf": 0,
+            "canvas": 0
+          }
+        },
+        "hashes": {
+          "replay": "eeff06f6cd71e58c06c637bc29745567db73fad3d62a1a9bb105cf6ddc1f56dd",
+          "state": "0ee5baef2453bff331944ba2d014ad869724a452a7abd43dad9b8912eda1545a",
+          "events": "5deebaac726b7234b6201df07b92e0e375ae7483738515f316cfa4c4094dd439"
+        },
+        "replay": "frontend/src/features/richman/game/fixtures/stock-circuit-v44-time-replay.json",
+        "screenshots": "/private/tmp/richman-unified-ui-04c-time"
+      }
+    ],
+    "commands": 3375,
+    "trades": 109,
+    "subscriptions": 20,
+    "subscriptionPaid": 22633,
+    "forcedBank": 56791,
+    "forcedPublic": 5490,
+    "quoteDays": 64,
+    "companyTrends": 4,
+    "research": 1,
+    "restored": 1,
+    "normalSpeed": true,
+    "authOnlyFixture": true,
+    "gameStateInjection": false,
+    "independentAccounting": "each actual public trade/cash subscription/fortune8/9; float32 averages and derived cost; cash/bank/public and supply; company rank owner; daily formula from recorded random draws; closed date; checkpoint restoration and prefix replay",
+    "uiAssertions": "real input and subscription receipt amount/pool, stock ledger existence, pause/cancel reset/fullscreen/390px, item time preview/use, normalized final world equals plan, actual replay, reset and cleanup; no claim of every post-event ledger text checked",
+    "continuations": [
+      "closed-date",
+      "company-trend",
+      "date",
+      "fortune-8",
+      "fortune-9",
+      "market-date",
+      "research-delivery",
+      "subscription",
+      "time-restore",
+      "trade"
+    ]
+  },
+  "resolvedFailures": [
+    "Native source audit found company news red/black failed to persist momentum in v42/v43. New v44 only synchronizes nonzero trend to +10/-10; old replay semantics unchanged.",
+    "Initial build rejected inferred verifier holding types (TS7022); explicit Holding/number annotations added and build rerun."
+  ],
+  "notNewBrowserAcceptance": [
+    "manual red/black card use with v44; routes exercised news-driven black trends",
+    "global/individual suspension with v44",
+    "negative-dividend/loan bankruptcy, necessary debt or exit stock liquidation with new quotes/averages",
+    "company news31/34/35 red trend and wrapped zero-code in UI (domain only)",
+    "G7 restoring across a new calendar boundary, negative-payment/auction continuation or undoing a cash subscription in same checkpoint (whole-world/domain or historical evidence only)",
+    "new minigame input/collision; routes wait for natural end",
+    "every post-event holding text; actual exported ledger independently checked"
+  ],
+  "remainingDifferences": [
+    "native precision/RNG/chart/input/audio",
+    "other asset listings",
+    "special actors",
+    "native roulette",
+    "native exit call stack and ending",
+    "minigame presentation/collision/input"
+  ],
+  "chartInputMatrix": [
+    {
+      "area": "history/data",
+      "native": "144-slot float ring; zero sentinel; last sample overwritten by immediate red/black update",
+      "web": "up to 144 integer-cent chronological samples; last sample replaced; last12 rendered as text",
+      "status": "candidate data retained; native ring/float rendering differs"
+    },
+    {
+      "area": "chart/scaling",
+      "native": "midpoint/spread vertical scaling, circular traversal, GDI LineTo; exact thresholds not claimed here",
+      "web": "textual history; no native chart axes/scale/GDI reproduction",
+      "status": "explicit presentation backlog; not passed"
+    },
+    {
+      "area": "ownership/pie",
+      "native": "stock screen GDI Ellipse/pie drawing beside plot",
+      "web": "holding table and company ranking text",
+      "status": "data represented; original ownership visual not reproduced"
+    },
+    {
+      "area": "input",
+      "native": "window messages for mouse move/release/doubleclick and custom events; stock selection/quantity hit regions",
+      "web": "HTML stock and side selectors, integer quantity input, confirm; pause/fullscreen/narrow layout",
+      "status": "Web workflow tested; original geometry/gesture/audio parity unverified"
+    },
+    {
+      "area": "precision/RNG",
+      "native": "float price, x87 operations, native RNG/reseeding",
+      "web": "integer-cent quotes, selected float32 stores and deterministic shared RNG",
+      "status": "explicit numerical and randomness difference; no Windows runtime comparison"
+    }
+  ],
+  "next": "S2-05a: current-profile payment/bankruptcy/date cross-system regression; prioritize negative-dividend and loan due stock liquidation, actual receipts, public disposal and resumable outer dates; no new semantics keeps v44, new semantics v45",
+  "release": {
+    "committed": false,
+    "pushed": false,
+    "deployed": false
+  }
+}
