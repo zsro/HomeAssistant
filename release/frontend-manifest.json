@@ -1,0 +1,311 @@
+{
+  "version": 1,
+  "sourceHash": "aa4ec94af4e7223d223b7d91fbe86b0b970f6f0a716415f6a1c4f95bf91db958",
+  "files": [
+    {
+      "path": "assets/BufferResource-CX54xU7k.js",
+      "bytes": 11107,
+      "sha256": "89416f1007e666f18f9dc041cc8dc226d168605285b9a4158e22733624be5b3e"
+    },
+    {
+      "path": "assets/CanvasRenderer-COQoZxm3.js",
+      "bytes": 17882,
+      "sha256": "97968750ef6e21dbc3c9805edde3730c2601165027bf2db29193edc0576d4d4e"
+    },
+    {
+      "path": "assets/Filter-wENLjsIQ.js",
+      "bytes": 910,
+      "sha256": "d2a5495c5ac521b21586e089b60361c401f4b941450975cbaf1d0767709a60c5"
+    },
+    {
+      "path": "assets/MathPdfDocument-B9yomzx0.js",
+      "bytes": 8720,
+      "sha256": "e1a2004d572423c6a04de7a18e0f6aec556ecee0c2e50cfaf73ab14677b16993"
+    },
+    {
+      "path": "assets/PinyinPdfDocument-QAcVQ5PK.js",
+      "bytes": 11747,
+      "sha256": "5e5121a9dd460ac32c293639505757cc7879f825871e00ced264b4e879360073"
+    },
+    {
+      "path": "assets/RenderTargetSystem-B4rgQYFM.js",
+      "bytes": 53427,
+      "sha256": "291ba918721778db0806f2c48a2dd039d19a1e76407617dcac7f6f141c01921f"
+    },
+    {
+      "path": "assets/RichmanPage-A9226anN.js",
+      "bytes": 929804,
+      "sha256": "287301773fd073171fca53f40b8dbcd2d99de019df0d8248d2b6ac2ba129c51d"
+    },
+    {
+      "path": "assets/RichmanPage-DAzZWJTH.css",
+      "bytes": 17550,
+      "sha256": "6a91ae543170965ad52e69e56f9ec50ce11379eb23bff73f758a2f9985f4008a"
+    },
+    {
+      "path": "assets/WebGLRenderer-DtvllB_g.js",
+      "bytes": 72499,
+      "sha256": "0833a4bfc7de8b583330189d718cd227244591880ef60af9c9733a5d8427cdda"
+    },
+    {
+      "path": "assets/WebGPURenderer-Pml05RyW.js",
+      "bytes": 48496,
+      "sha256": "b0a7ac987e6568ec7cb6a9978993aa9428a9883fba71929d7329e3c0e6f75520"
+    },
+    {
+      "path": "assets/browserAll-CzS1yA89.js",
+      "bytes": 43120,
+      "sha256": "5a2b578fa46b3de8057c4dd5f3ca75e8ac8efc2d1cc88ab2e9e2c4a8d3d61fe3"
+    },
+    {
+      "path": "assets/fonts-DC3qPIca.js",
+      "bytes": 691,
+      "sha256": "2b9933e06f0d9744b3e09c48367a52b3724565faad64711c155c7b2464afa26d"
+    },
+    {
+      "path": "assets/index-BYxVN03c.js",
+      "bytes": 286393,
+      "sha256": "bacf2685fc03fe4ff9758f308f8f62130cb874599d4e2469b66155fd46f29b17"
+    },
+    {
+      "path": "assets/index-NTAniOG0.css",
+      "bytes": 24476,
+      "sha256": "5b2a66d45880c7799ff9e3a66d3645fa2ad23a5986a98df96533ac009faccfae"
+    },
+    {
+      "path": "assets/react-pdf.browser-Bw91LWaK.js",
+      "bytes": 1237217,
+      "sha256": "325ece7d628b0a25925e501ceafb12c762c741ef6c8289a97d29b6663f913ec1"
+    },
+    {
+      "path": "assets/webworkerAll-C9kmow6i.js",
+      "bytes": 15567,
+      "sha256": "b1db26e80b1f6552fc8f44efa332fd99aa48d84a28f63218b5a34b263a8625b3"
+    },
+    {
+      "path": "fonts/Andika-OFL.txt",
+      "bytes": 4407,
+      "sha256": "606ead84f13ad76815f6f7ffbc2d6e2d01d91ed523b9500a0e6b72753144e4bc"
+    },
+    {
+      "path": "fonts/Andika-Regular.ttf",
+      "bytes": 802572,
+      "sha256": "27484fdc98d0d63f90407f8266e28295f6fb16d2b13c5024df0214f17152919a"
+    },
+    {
+      "path": "fonts/NotoSansSC-Regular.ttf",
+      "bytes": 190708,
+      "sha256": "0419c290fdd6f12d7ec138efadc070794f33db61635df81e17ea0763395ead42"
+    },
+    {
+      "path": "fonts/NotoSansSC.ttf",
+      "bytes": 17772300,
+      "sha256": "a3041811a78c361b1de50f953c805e0244951c21c5bd412f7232ef0d899af0da"
+    },
+    {
+      "path": "fonts/OFL.txt",
+      "bytes": 4301,
+      "sha256": "6a73f9541c2de74158c0e7cf6b0a58ef774f5a780bf191f2d7ec9cc53efe2bf2"
+    },
+    {
+      "path": "index.html",
+      "bytes": 547,
+      "sha256": "ea3720948bfb19f96877cc0dfabf49d9a98768f000f92634b6833b1fb8f537ca"
+    },
+    {
+      "path": "richman/generated/animation/manifest.json",
+      "bytes": 9423,
+      "sha256": "1966c7e41915e85ed0e24236998e81f5af0b5fdf98b3da3fcd8745d7702e529a"
+    },
+    {
+      "path": "richman/generated/animation/objects.webp",
+      "bytes": 166778,
+      "sha256": "b957fca8b01a5a592fee287f203010d17b5d69015912331f06e63a9cf68b3541"
+    },
+    {
+      "path": "richman/generated/audio/effect-43.wav",
+      "bytes": 10288,
+      "sha256": "75aa10c7e8e22648771395b23e903b0655d1e0a8d69a6968ff89345ada8e2f97"
+    },
+    {
+      "path": "richman/generated/audio/effect-48.wav",
+      "bytes": 23142,
+      "sha256": "abcd3a949c3fe53939f8499ab7e9c6bedb48ad980acb8045d45af5e76ff1f314"
+    },
+    {
+      "path": "richman/generated/audio/effect-49.wav",
+      "bytes": 3302,
+      "sha256": "b2ef72a6ed55f63b9f230c1df302d9a7f21df0d0be3511356106ce0863bdda9d"
+    },
+    {
+      "path": "richman/generated/audio/effect-50.wav",
+      "bytes": 20008,
+      "sha256": "efc2dcdb2bbf7a508f0d9aaf94aad9b537db48f719099d8f985e833303e87ae8"
+    },
+    {
+      "path": "richman/generated/audio/manifest.json",
+      "bytes": 1201,
+      "sha256": "167eeb03be7b5ae4a4492996516a449fca5d9f6afbdbca66e0ae432a5271d17a"
+    },
+    {
+      "path": "richman/generated/audio/track02.mp3",
+      "bytes": 2287848,
+      "sha256": "d344db89d10060a0ae4d4544866aa0226bcdeb73fdec794907ddd2e7e8c96d42"
+    },
+    {
+      "path": "richman/generated/audio/track03.mp3",
+      "bytes": 2303993,
+      "sha256": "5db7b3a1b2d2da174b80d86f64ca3d6728e9161fcb1b1dac50592f915adbfcf3"
+    },
+    {
+      "path": "richman/generated/audio/track04.mp3",
+      "bytes": 2683906,
+      "sha256": "6e5c1da8057102ef9a60e43dc0c7305285361a76736cade2ad6e6f8abc78c4b1"
+    },
+    {
+      "path": "richman/generated/audio/track05.mp3",
+      "bytes": 3229054,
+      "sha256": "6b7ec8310482aefecc8888e698f93f8d905882b6947a8484679e9810631f424d"
+    },
+    {
+      "path": "richman/generated/audio/track06.mp3",
+      "bytes": 3108420,
+      "sha256": "8f2ce04a852c5f17dc04a294ca9b515f115d7e306fc07aadb4123bf18e8b730e"
+    },
+    {
+      "path": "richman/generated/audio/track07.mp3",
+      "bytes": 2930128,
+      "sha256": "f0d8ece6472a503b6b15455b1cfbc4ffe72e718ef22a2a94d96cbf5f994975cf"
+    },
+    {
+      "path": "richman/generated/audio/track08.mp3",
+      "bytes": 2824509,
+      "sha256": "dc11ce5ac398bbf1683c275aba5db6e44681c039085dc006e01d627e2ad47c45"
+    },
+    {
+      "path": "richman/generated/audio/track09.mp3",
+      "bytes": 3823025,
+      "sha256": "a61f553d3b2d9169455aead7fd5c84491a89c46fcf3dc0d8c6bf66e45ce4ac89"
+    },
+    {
+      "path": "richman/generated/audio/voice-1077.wav",
+      "bytes": 71466,
+      "sha256": "6f8d26b9c0bb1e56e3ef042609c344202a09426c41b8542f23a7f2b9f7d7b343"
+    },
+    {
+      "path": "richman/generated/audio/voice-1078.wav",
+      "bytes": 29194,
+      "sha256": "930f16024c5d63d59e2477639a07429b0d68d558b4c98995ea9e27e150f9dc6f"
+    },
+    {
+      "path": "richman/generated/audio/voice-1079.wav",
+      "bytes": 35032,
+      "sha256": "de4a819fae56f45e311640b4bb7c5bceb5009585ac043b4d901b4e9a43111d50"
+    },
+    {
+      "path": "richman/generated/audio/voice-1092.wav",
+      "bytes": 54764,
+      "sha256": "62acd75f4d893fad9780cfa41e128089607a7b717ce9f8249cda7dd10ea9142f"
+    },
+    {
+      "path": "richman/generated/audio/voice-1131.wav",
+      "bytes": 64812,
+      "sha256": "be67e07a66d023082afbcd3585d485dd7d2d3b73bde6c87c87b7ed3495f07db9"
+    },
+    {
+      "path": "richman/generated/audio/voice-1132.wav",
+      "bytes": 40954,
+      "sha256": "ccf0d23bbca815f6aedb55f09fcb777e8f29a6c4c878ea6e15e11ee53aab400b"
+    },
+    {
+      "path": "richman/generated/audio/voice-1133.wav",
+      "bytes": 21658,
+      "sha256": "c8b69bb08a76ec70fc6522f0f1de470602a99083519347cb9dcc5e308c634776"
+    },
+    {
+      "path": "richman/generated/audio/voice-1146.wav",
+      "bytes": 44498,
+      "sha256": "7858cbe5e4ab16375ef1476a7a4e4a5f1cba10260edebc5722d48f5721c20608"
+    },
+    {
+      "path": "richman/generated/audio/voice-1158.wav",
+      "bytes": 35090,
+      "sha256": "acad0320988b94bc0b98465e7422d0509c4c8119a3b6272e1c8fe979dea8de83"
+    },
+    {
+      "path": "richman/generated/audio/voice-1159.wav",
+      "bytes": 26100,
+      "sha256": "571f02a673fe124d8294c864f77fee14378a7fc53a05e612fdfb274adca4b8d6"
+    },
+    {
+      "path": "richman/generated/audio/voice-1160.wav",
+      "bytes": 20572,
+      "sha256": "e931e045bf26649d78583e3690bcb934f194ff4a3065541ebbeb202713694bc3"
+    },
+    {
+      "path": "richman/generated/audio/voice-1173.wav",
+      "bytes": 29142,
+      "sha256": "6f6170706bbdcbb59ac8eda4babf29148a6f99cb1244e70876839397f3a75635"
+    },
+    {
+      "path": "richman/generated/audio/voice-1293.wav",
+      "bytes": 37138,
+      "sha256": "2f7999cdfda758a0c04ea1bc50c10514530d56349abb9ab25ae75d6a2c995cd7"
+    },
+    {
+      "path": "richman/generated/audio/voice-1294.wav",
+      "bytes": 24986,
+      "sha256": "e69655abe407691484cf83475fbfba5f13ada36087a883e292b8b7f5e5c4a840"
+    },
+    {
+      "path": "richman/generated/audio/voice-1295.wav",
+      "bytes": 46128,
+      "sha256": "09cb44e263654cff98054d986814aef2ab5e5d5d99066110af33a52174ef365a"
+    },
+    {
+      "path": "richman/generated/audio/voice-1308.wav",
+      "bytes": 26344,
+      "sha256": "edbebb3ce7d0c4c6ec79caba2deceae9eb54baf8d61cdc72711bd6c0727e0255"
+    },
+    {
+      "path": "richman/generated/chyan.webp",
+      "bytes": 4542,
+      "sha256": "07d537f09e102041f70dd9f803c510b5cf3116253a8a4516e38cf045be8c9b81"
+    },
+    {
+      "path": "richman/generated/japan-mini.webp",
+      "bytes": 19080,
+      "sha256": "bb539badc78468acf764260b17da34d9c69ecc592ab5e02b11b4e6fdaa2eb57b"
+    },
+    {
+      "path": "richman/generated/japan.webp",
+      "bytes": 2515610,
+      "sha256": "0219c1eb40e97a6819c982d0cec2b00a098e3836c58b04866a548162659d2464"
+    },
+    {
+      "path": "richman/generated/manifest.json",
+      "bytes": 48765,
+      "sha256": "09502821a623766728bd8f97a1d0553f575be2d6326338c5c86cc4a77f0ffc72"
+    },
+    {
+      "path": "richman/generated/salonbus.webp",
+      "bytes": 3644,
+      "sha256": "9236af7ec85a00001f5b8272eedd807dfb92199d7e1e63bdb83d98aa358696b6"
+    },
+    {
+      "path": "richman/generated/sprites.webp",
+      "bytes": 863934,
+      "sha256": "de03675f4975bdf502ab25572f04e90963d01da1781c816736352b92f6014d69"
+    },
+    {
+      "path": "richman/generated/tuu.webp",
+      "bytes": 3792,
+      "sha256": "35576561faa7a58517db3c0d529e71bcb5da1f52539d8ae702cd656833730a7a"
+    },
+    {
+      "path": "richman/generated/xiaomei.webp",
+      "bytes": 4196,
+      "sha256": "3c30ac0d63963bee01cfdbf7fc5ed0debb23d9d114e1221919a194694c679ad7"
+    }
+  ]
+}

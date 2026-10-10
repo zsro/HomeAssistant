@@ -18,7 +18,7 @@ HomeAssistant 是一个前后端分离项目：后端使用 TypeScript、Express
 
 - [大富翁 4 Web 复刻计划与接续记录](docs/richman-roadmap.md)：当前进度、分阶段任务、规则核验、验收标准和下一步。
 - [大富翁 S3 候选收口](docs/richman/s3-05c-interaction-closure.md)：v47、日本地图、电脑策略、声画与交互验收边界。
-- [大富翁资源发布](docs/richman/release-s3.md)：独立素材包校验与线上检查。
+- [前端产物发布](docs/richman/release-s3.md)：本地构建、Git产物校验与线上检查。
 - [大富翁技术验证报告](docs/richman-technical-validation.md)：原版资源、地图与移动原型的验证结果。
 
 ## 本地开发
@@ -144,11 +144,14 @@ chmod 600 /var/lib/home-assistant/shared/backend.env
    npm run build
    npm --prefix frontend ci
    npm --prefix frontend run lint
-   npm --prefix frontend run build
+   npm run release:frontend
+   npm run release:verify
    git status --short
    ```
 
-2. 只暂存预期文件，创建普通的、非 amend 提交，推送到 `origin/main`，并记录提交哈希：
+   `release:frontend`包含前端类型检查和Vite生产构建，将页面、字体及游戏运行素材写入`release/frontend/`，同时生成`release/frontend-manifest.json`。两者必须进入Git；前端源码变更后须重新打包。清单使用源码指纹而非提交哈希，避免同一提交包含产物时的循环引用。当前使用同源`/api`，打包时不允许前端生产`.env`配置或`VITE_*`环境覆盖。
+
+2. 只暂存预期文件（包括`release/frontend/`和清单），创建普通的、非 amend 提交，推送到 `origin/main`，并记录提交哈希：
 
    ```bash
    git add <intended-files>
@@ -176,7 +179,7 @@ chmod 600 /var/lib/home-assistant/shared/backend.env
    SERVER_NAME=106.15.230.148 ./deploy.sh
    ```
 
-`deploy.sh` 会创建独立 release、安装和构建依赖、默认备份数据库、执行尚未应用的 migration、切换 `current`、重建 PM2 进程、检查后端 readiness、发布前端并验证 HTTPS。migration 失败时不会切换新 release。
+`deploy.sh`首先校验已提交前端产物的完整文件集合、大小/SHA256及源码指纹，不匹配即停止。服务器只安装和构建后端依赖，默认备份数据库、执行尚未应用的migration、切换`current`、重建PM2并检查readiness；前端直接从`release/frontend/`复制到独立静态release并验证HTTPS。服务器不再安装前端依赖、不运行TypeScript/Vite，也无需单独上传大富翁素材。migration失败时不会切换新release，原有失败回退检查继续保留。
 
 部署脚本会先删除同名 PM2 旧进程，再从新 release 创建进程。这一步不能改回简单的 `startOrReload`：PM2 可能保留旧脚本路径，使已删除的旧版本继续运行。
 

@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "music": [
+    {
+      "id": "track02",
+      "src": "track02.mp3"
+    },
+    {
+      "id": "track03",
+      "src": "track03.mp3"
+    },
+    {
+      "id": "track04",
+      "src": "track04.mp3"
+    },
+    {
+      "id": "track05",
+      "src": "track05.mp3"
+    },
+    {
+      "id": "track06",
+      "src": "track06.mp3"
+    },
+    {
+      "id": "track07",
+      "src": "track07.mp3"
+    },
+    {
+      "id": "track08",
+      "src": "track08.mp3"
+    },
+    {
+      "id": "track09",
+      "src": "track09.mp3"
+    }
+  ],
+  "effects": {
+    "43": "effect-43.wav",
+    "48": "effect-48.wav",
+    "49": "effect-49.wav",
+    "50": "effect-50.wav"
+  },
+  "voices": {
+    "1077": "voice-1077.wav",
+    "1078": "voice-1078.wav",
+    "1079": "voice-1079.wav",
+    "1092": "voice-1092.wav",
+    "1131": "voice-1131.wav",
+    "1132": "voice-1132.wav",
+    "1133": "voice-1133.wav",
+    "1146": "voice-1146.wav",
+    "1158": "voice-1158.wav",
+    "1159": "voice-1159.wav",
+    "1160": "voice-1160.wav",
+    "1173": "voice-1173.wav",
+    "1293": "voice-1293.wav",
+    "1294": "voice-1294.wav",
+    "1295": "voice-1295.wav",
+    "1308": "voice-1308.wav"
+  },
+  "eventProfile": "event-audio-v1"
+}

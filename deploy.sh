@@ -50,7 +50,7 @@ if [ ! -f "$ENV_FILE" ]; then
   exit 1
 fi
 
-node "$SCRIPT_DIR/scripts/richman/check-release-assets.cjs"
+node "$SCRIPT_DIR/scripts/frontend-release.cjs" verify
 
 mkdir -p "$RELEASES_DIR" "$SHARED_DIR" "$BACKUP_DIR" "$LOG_DIR" "$STATIC_RELEASES_DIR"
 mkdir -p "$RELEASE_DIR"
@@ -65,11 +65,9 @@ tar \
 ln -sfn "$ENV_FILE" "$RELEASE_DIR/.env"
 npm --prefix "$RELEASE_DIR" ci
 npm --prefix "$RELEASE_DIR" run build
-npm --prefix "$RELEASE_DIR/frontend" ci
-npm --prefix "$RELEASE_DIR/frontend" run build
 
 mkdir -p "$STATIC_RELEASE_DIR"
-cp -a "$RELEASE_DIR/frontend/dist/." "$STATIC_RELEASE_DIR/"
+cp -a "$SCRIPT_DIR/release/frontend/." "$STATIC_RELEASE_DIR/"
 if [ ! -f "$STATIC_RELEASE_DIR/index.html" ]; then
   echo "错误: 前端构建缺少 index.html"
   exit 1

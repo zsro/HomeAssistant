@@ -1,4 +1,4 @@
-/** Verify the separately transferred, ignored resource package before any deployment mutation. */
+/** Verify local resource inputs or the resources bundled in the committed frontend release. */
 const fs = require('node:fs');
 const path = require('node:path');
 const crypto = require('node:crypto');

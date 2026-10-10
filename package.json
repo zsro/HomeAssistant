@@ -7,6 +7,9 @@
     "node": ">=20"
   },
   "scripts": {
+    "release:frontend": "node scripts/frontend-release.cjs build",
+    "release:verify": "node scripts/frontend-release.cjs verify",
+    "test:release": "node --test scripts/frontend-release.test.cjs",
     "dev": "tsx watch src/server.ts",
     "build": "tsc -p tsconfig.json",
     "start": "node dist/src/server.js",

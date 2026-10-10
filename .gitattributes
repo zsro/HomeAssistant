@@ -1,0 +1,2 @@
+# Keep build output byte-for-byte identical to its release manifest.
+release/frontend/** -text -diff -whitespace linguist-generated=true

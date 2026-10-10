@@ -37,8 +37,12 @@ and release rules below available across future work.
 
 Always release in this order:
 
-1. Run the appropriate local checks and inspect `git status --short`.
-2. Stage only intended changes and create a normal, non-amended commit.
+1. Run the appropriate local checks. Run `npm run release:frontend` locally
+   to populate `release/frontend/` and `release/frontend-manifest.json`, then
+   run `npm run release:verify`. Source changes after packaging require
+   rebuilding. Inspect `git status --short`.
+2. Stage only intended changes, including the frontend release and manifest,
+   and create a normal, non-amended commit.
 3. Push the commit to `origin main` and record the pushed commit hash.
 4. On the server, inspect `/var/HomeAssistant` and require a clean working tree.
 5. Run `git pull --ff-only origin main` inside `/var/HomeAssistant`.
@@ -56,4 +60,8 @@ Always release in this order:
 
 Never deploy before Git synchronization is confirmed. Never ignore or
 destructively clean a dirty server checkout without explicit user approval.
-The new project must recreate a suitable `deploy.sh` before its first release.
+The server verifies committed frontend hashes and the source fingerprint, then
+copies `release/frontend/` into the new static release. Never install frontend
+dependencies or run TypeScript/Vite on the production server. Do not upload
+frontend dist or game assets separately. Backend installation/build, database
+backup/migrations and health/rollback checks remain server-side.
