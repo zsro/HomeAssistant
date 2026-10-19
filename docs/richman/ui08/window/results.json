@@ -1,0 +1,338 @@
+{
+  "stage": "UI-03",
+  "layoutChecks": [
+    {
+      "label": "desktop-1440",
+      "compact": false,
+      "regions": [
+        [
+          0,
+          0,
+          440,
+          40
+        ],
+        [
+          0,
+          40,
+          440,
+          440
+        ],
+        [
+          440,
+          0,
+          200,
+          280
+        ],
+        [
+          440,
+          280,
+          200,
+          200
+        ]
+      ],
+      "logical": [
+        440,
+        440
+      ],
+      "canvases": 1,
+      "overflow": false
+    },
+    {
+      "label": "logical-640x480",
+      "compact": false,
+      "regions": [
+        [
+          0,
+          0,
+          440,
+          40
+        ],
+        [
+          0,
+          40,
+          440,
+          440
+        ],
+        [
+          440,
+          0,
+          200,
+          280
+        ],
+        [
+          440,
+          280,
+          200,
+          200
+        ]
+      ],
+      "logical": [
+        440,
+        440
+      ],
+      "canvases": 1,
+      "overflow": false
+    },
+    {
+      "label": "640x480",
+      "compact": true,
+      "regions": [
+        [
+          0,
+          0,
+          640,
+          62.33766233766234
+        ],
+        [
+          0,
+          74.8051948051948,
+          640,
+          640
+        ],
+        [
+          0,
+          785.4545454545454,
+          640,
+          273.24675324675326
+        ],
+        [
+          216.1038961038961,
+          1071.168831168831,
+          207.7922077922078,
+          230.64935064935065
+        ]
+      ],
+      "logical": [
+        440,
+        440
+      ],
+      "canvases": 1,
+      "overflow": false
+    },
+    {
+      "label": "1280x960",
+      "compact": false,
+      "regions": [
+        [
+          0,
+          0,
+          439.99999999999994,
+          40
+        ],
+        [
+          0,
+          40,
+          439.99999999999994,
+          439.99999999999994
+        ],
+        [
+          439.99999999999994,
+          0,
+          200,
+          280
+        ],
+        [
+          439.99999999999994,
+          280,
+          200,
+          200
+        ]
+      ],
+      "logical": [
+        440,
+        440
+      ],
+      "canvases": 1,
+      "overflow": false
+    },
+    {
+      "label": "844x390",
+      "compact": true,
+      "regions": [
+        [
+          0,
+          0,
+          640,
+          46.829268292682926
+        ],
+        [
+          0,
+          56.19512195121951,
+          443.3170731707317,
+          443.3170731707317
+        ],
+        [
+          452.6829268292683,
+          99.90243902439025,
+          187.3170731707317,
+          232.97560975609755
+        ],
+        [
+          468.2926829268293,
+          342.2439024390244,
+          156.09756097560975,
+          173.26829268292684
+        ]
+      ],
+      "logical": [
+        440,
+        440
+      ],
+      "canvases": 1,
+      "overflow": false
+    },
+    {
+      "label": "390x844",
+      "compact": true,
+      "regions": [
+        [
+          0,
+          0,
+          640,
+          206.56084656084658
+        ],
+        [
+          0,
+          226.8783068783069,
+          640,
+          640
+        ],
+        [
+          0,
+          982.0105820105821,
+          640,
+          445.2910052910053
+        ],
+        [
+          150.6878306878307,
+          1447.6190476190477,
+          338.62433862433863,
+          375.8730158730159
+        ]
+      ],
+      "logical": [
+        440,
+        440
+      ],
+      "canvases": 1,
+      "overflow": false
+    },
+    {
+      "label": "native-fullscreen",
+      "compact": false,
+      "regions": [
+        [
+          0,
+          0,
+          440.0000495549347,
+          40
+        ],
+        [
+          0,
+          40,
+          440.0000495549347,
+          440.0000495549347
+        ],
+        [
+          440.0000495549347,
+          0,
+          199.99995044506525,
+          280.0000495549347
+        ],
+        [
+          440.0000495549347,
+          280.0000495549347,
+          199.99995044506525,
+          199.99999008901304
+        ]
+      ],
+      "logical": [
+        440,
+        440
+      ],
+      "canvases": 1,
+      "overflow": false
+    },
+    {
+      "label": "mobile-map-selection",
+      "compact": true,
+      "regions": [
+        [
+          0,
+          0,
+          640,
+          206.56084656084658
+        ],
+        [
+          0,
+          226.8783068783069,
+          640,
+          640
+        ],
+        [
+          0,
+          982.0105820105821,
+          640,
+          445.2910052910053
+        ],
+        [
+          150.6878306878307,
+          1447.6190476190477,
+          338.62433862433863,
+          375.8730158730159
+        ]
+      ],
+      "logical": [
+        440,
+        440
+      ],
+      "canvases": 1,
+      "overflow": false
+    }
+  ],
+  "checks": [
+    "single modal host and one audio/character component",
+    "Tab stays in modal; Escape restores toolbar focus",
+    "settings changes pause state only",
+    "all additional entries available",
+    "effect opens nonmodal window",
+    "Escape minimizes without consuming or cancelling",
+    "map selection survives fullscreen/mobile/pause",
+    "double-click construction consumes once",
+    "completed decision closes automatically",
+    "real landing opens mandatory modal",
+    "Escape cannot skip property decision",
+    "configuration cancellation restores decision and pause state",
+    "property double-click does not affect next turn",
+    "downloaded replay verifies one worker and one remote die",
+    "Escape closes window before fallback fullscreen",
+    "route cleanup"
+  ],
+  "verified": {
+    "built": [
+      {
+        "type": "propertyBuilt",
+        "propertyId": "japan:land:21",
+        "fromLevel": 0,
+        "level": 1,
+        "ownerId": null,
+        "sequence": 6,
+        "commandId": "command-4",
+        "playerId": "player-1",
+        "turn": 1
+      }
+    ],
+    "consumed": [
+      "tool:09",
+      "tool:08"
+    ],
+    "phase": "turnEnd",
+    "turn": 1,
+    "revision": 14
+  },
+  "cleanup": {
+    "raf": 0,
+    "canvas": 0
+  },
+  "errors": []
+}

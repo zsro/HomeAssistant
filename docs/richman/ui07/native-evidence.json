@@ -1,0 +1,98 @@
+{
+  "sources": {
+    "Data.mkf": {
+      "bytes": 53296712,
+      "sha256": "c63023e815b1ad4bef172b6415d128c7f041f12b71b5d80dc3ff29240a0a1988"
+    },
+    "Panel.mkf": {
+      "bytes": 25351066,
+      "sha256": "5b9bfd11a866694cfdf93457d2010d30f20a43f96b668e5186fa99452e16f563"
+    },
+    "map.mkf": {
+      "bytes": 40312048,
+      "sha256": "717aaa1c1becf277064d29772500027427d39488bad64a7ee42875975c0e7106"
+    },
+    "rich4.exe": {
+      "bytes": 591360,
+      "sha256": "110b29f9d2fadcff3836eb69ec380aa264951859c90955da6e11158d2f956a13"
+    }
+  },
+  "resources": [],
+  "nativeEvidence": [
+    {
+      "id": "title-load",
+      "start": "0x402980",
+      "end": "0x402992",
+      "fileOffset": 7552,
+      "hex": "6a006a006a018b15dc70480052e8d6c20400",
+      "sha256": "fd93050c71a9d814f2a0612aacc8a44a53d00610a3dfe49560a669b44a529722",
+      "note": "Load local Data[1], nine frames."
+    },
+    {
+      "id": "title-hover",
+      "start": "0x402701",
+      "end": "0x4027ec",
+      "fileOffset": 6913,
+      "hex": "31f6eb0a4683fe040f8d120100008d04368d580289dfc1e70229dfc1e702a1787148000fbf5c0710895c245089f3c1e3020fbfabd8a946002b6c2450896c24400fbf6c0712896c24500fbfabdaa946002b6c2450896c24440fbf6c070c896c24508b6c2440036c2450896c24480fbf44070e8b6c244401c5896c244c3b5424407c823b4c24440f8c78ffffff3b5424480f8d6effffff3b4c244c0f8d64ffffff3b357c714800747889357c714800a1d87048008b106a006a0168607048006a0050ff52640fbf83daa94600500fbf83d8a9460050a17871480083c00c01f8508b0d8470480051e88c220500",
+      "sha256": "a41d7c53f4e9efe3e00f9acacab5efde2b146836f8046e4749bae833df26025b",
+      "note": "Four entries; hover frame 2*i+2, anchor-relative hit rectangle and draw position."
+    },
+    {
+      "id": "title-positions",
+      "start": "0x46a9d8",
+      "end": "0x46a9e8",
+      "fileOffset": 431576,
+      "hex": "be007c0148017c01d4017a014801c201",
+      "sha256": "b774959fdf3ff73ace277d29ed5fe510514ac43321b06900e5d85237a4679704",
+      "note": "Four int16 x/y pairs: START, LOAD, OPTION, EXIT."
+    },
+    {
+      "id": "options-load",
+      "start": "0x4114b7",
+      "end": "0x4114c9",
+      "fileOffset": 67767,
+      "hex": "6a006a006a038b15dc70480052e89fd70300",
+      "sha256": "3ab26a7928f8c1ee0d67adf0c92dfb44af387cae39c10a4cd4f9636b140f2013",
+      "note": "Options loads Data[3]; controls below are Web adaptations."
+    }
+  ],
+  "title": [
+    {
+      "id": "start",
+      "position": [
+        190,
+        380
+      ],
+      "normal": 1,
+      "hover": 2
+    },
+    {
+      "id": "load",
+      "position": [
+        328,
+        380
+      ],
+      "normal": 3,
+      "hover": 4
+    },
+    {
+      "id": "options",
+      "position": [
+        468,
+        378
+      ],
+      "normal": 5,
+      "hover": 6
+    },
+    {
+      "id": "exit",
+      "position": [
+        328,
+        450
+      ],
+      "normal": 7,
+      "hover": 8
+    }
+  ],
+  "boundary": "Original executable not run. Title states/hit rectangles statically verified; touch targets enlarged, internal options/setup/endings adapted."
+}

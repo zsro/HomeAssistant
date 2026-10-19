@@ -1,0 +1,240 @@
+{
+  "version": 1,
+  "rulesId": "japan-events-candidate-v47",
+  "mapFingerprint": "6fb1abfd",
+  "catalogFingerprint": "628c3de8",
+  "itemFingerprint": "c6d96cc",
+  "config": {
+    "humanIds": [],
+    "startDate": "1998-01-01",
+    "gameId": "b8036abe-6469-4724-b4cd-da8bc52d2620",
+    "seed": "ui08-ai",
+    "characterIds": [
+      "xiaomei",
+      "chyan"
+    ],
+    "rulesId": "japan-events-candidate-v47",
+    "initialFunds": 100000
+  },
+  "commands": [
+    {
+      "id": "command-1",
+      "gameId": "b8036abe-6469-4724-b4cd-da8bc52d2620",
+      "expectedRevision": 0,
+      "playerId": "player-1",
+      "action": {
+        "type": "roll"
+      }
+    },
+    {
+      "id": "command-2",
+      "gameId": "b8036abe-6469-4724-b4cd-da8bc52d2620",
+      "expectedRevision": 1,
+      "playerId": "player-1",
+      "action": {
+        "type": "animationDone",
+        "token": "b8036abe-6469-4724-b4cd-da8bc52d2620:1"
+      }
+    },
+    {
+      "id": "command-3",
+      "gameId": "b8036abe-6469-4724-b4cd-da8bc52d2620",
+      "expectedRevision": 2,
+      "playerId": "player-1",
+      "action": {
+        "type": "choose",
+        "decisionId": "b8036abe-6469-4724-b4cd-da8bc52d2620:2",
+        "node": 3
+      }
+    },
+    {
+      "id": "command-4",
+      "gameId": "b8036abe-6469-4724-b4cd-da8bc52d2620",
+      "expectedRevision": 3,
+      "playerId": "player-1",
+      "action": {
+        "type": "animationDone",
+        "token": "b8036abe-6469-4724-b4cd-da8bc52d2620:3"
+      }
+    },
+    {
+      "id": "command-5",
+      "gameId": "b8036abe-6469-4724-b4cd-da8bc52d2620",
+      "expectedRevision": 4,
+      "playerId": "player-1",
+      "action": {
+        "type": "animationDone",
+        "token": "b8036abe-6469-4724-b4cd-da8bc52d2620:4"
+      }
+    },
+    {
+      "id": "command-6",
+      "gameId": "b8036abe-6469-4724-b4cd-da8bc52d2620",
+      "expectedRevision": 5,
+      "playerId": "player-1",
+      "action": {
+        "type": "animationDone",
+        "token": "b8036abe-6469-4724-b4cd-da8bc52d2620:5"
+      }
+    },
+    {
+      "id": "command-7",
+      "gameId": "b8036abe-6469-4724-b4cd-da8bc52d2620",
+      "expectedRevision": 6,
+      "playerId": "player-1",
+      "action": {
+        "type": "property",
+        "decisionId": "b8036abe-6469-4724-b4cd-da8bc52d2620:6",
+        "accept": true
+      }
+    },
+    {
+      "id": "command-8",
+      "gameId": "b8036abe-6469-4724-b4cd-da8bc52d2620",
+      "expectedRevision": 7,
+      "playerId": "player-1",
+      "action": {
+        "type": "endTurn"
+      }
+    },
+    {
+      "id": "command-9",
+      "gameId": "b8036abe-6469-4724-b4cd-da8bc52d2620",
+      "expectedRevision": 8,
+      "playerId": "player-2",
+      "action": {
+        "type": "roll"
+      }
+    },
+    {
+      "id": "command-10",
+      "gameId": "b8036abe-6469-4724-b4cd-da8bc52d2620",
+      "expectedRevision": 9,
+      "playerId": "player-2",
+      "action": {
+        "type": "animationDone",
+        "token": "b8036abe-6469-4724-b4cd-da8bc52d2620:7"
+      }
+    },
+    {
+      "id": "command-11",
+      "gameId": "b8036abe-6469-4724-b4cd-da8bc52d2620",
+      "expectedRevision": 10,
+      "playerId": "player-2",
+      "action": {
+        "type": "choose",
+        "decisionId": "b8036abe-6469-4724-b4cd-da8bc52d2620:8",
+        "node": 7
+      }
+    },
+    {
+      "id": "command-12",
+      "gameId": "b8036abe-6469-4724-b4cd-da8bc52d2620",
+      "expectedRevision": 11,
+      "playerId": "player-2",
+      "action": {
+        "type": "animationDone",
+        "token": "b8036abe-6469-4724-b4cd-da8bc52d2620:9"
+      }
+    },
+    {
+      "id": "command-13",
+      "gameId": "b8036abe-6469-4724-b4cd-da8bc52d2620",
+      "expectedRevision": 12,
+      "playerId": "player-2",
+      "action": {
+        "type": "animationDone",
+        "token": "b8036abe-6469-4724-b4cd-da8bc52d2620:10"
+      }
+    },
+    {
+      "id": "command-14",
+      "gameId": "b8036abe-6469-4724-b4cd-da8bc52d2620",
+      "expectedRevision": 13,
+      "playerId": "player-2",
+      "action": {
+        "type": "animationDone",
+        "token": "b8036abe-6469-4724-b4cd-da8bc52d2620:11"
+      }
+    },
+    {
+      "id": "command-15",
+      "gameId": "b8036abe-6469-4724-b4cd-da8bc52d2620",
+      "expectedRevision": 14,
+      "playerId": "player-2",
+      "action": {
+        "type": "animationDone",
+        "token": "b8036abe-6469-4724-b4cd-da8bc52d2620:12"
+      }
+    },
+    {
+      "id": "command-16",
+      "gameId": "b8036abe-6469-4724-b4cd-da8bc52d2620",
+      "expectedRevision": 15,
+      "playerId": "player-2",
+      "action": {
+        "type": "animationDone",
+        "token": "b8036abe-6469-4724-b4cd-da8bc52d2620:13"
+      }
+    },
+    {
+      "id": "command-17",
+      "gameId": "b8036abe-6469-4724-b4cd-da8bc52d2620",
+      "expectedRevision": 16,
+      "playerId": "player-2",
+      "action": {
+        "type": "animationDone",
+        "token": "b8036abe-6469-4724-b4cd-da8bc52d2620:14"
+      }
+    },
+    {
+      "id": "command-18",
+      "gameId": "b8036abe-6469-4724-b4cd-da8bc52d2620",
+      "expectedRevision": 17,
+      "playerId": "player-2",
+      "action": {
+        "type": "bank",
+        "decisionId": "b8036abe-6469-4724-b4cd-da8bc52d2620:15",
+        "operation": "deposit",
+        "amount": 45000
+      }
+    },
+    {
+      "id": "command-19",
+      "gameId": "b8036abe-6469-4724-b4cd-da8bc52d2620",
+      "expectedRevision": 18,
+      "playerId": "player-2",
+      "action": {
+        "type": "leaveBank",
+        "decisionId": "b8036abe-6469-4724-b4cd-da8bc52d2620:16"
+      }
+    },
+    {
+      "id": "command-20",
+      "gameId": "b8036abe-6469-4724-b4cd-da8bc52d2620",
+      "expectedRevision": 19,
+      "playerId": "player-2",
+      "action": {
+        "type": "endTurn"
+      }
+    },
+    {
+      "id": "command-21",
+      "gameId": "b8036abe-6469-4724-b4cd-da8bc52d2620",
+      "expectedRevision": 20,
+      "playerId": "player-1",
+      "action": {
+        "type": "pause",
+        "value": true
+      }
+    }
+  ],
+  "control": {
+    "version": 1,
+    "policy": "basic-v1",
+    "computerIds": [
+      "xiaomei",
+      "chyan"
+    ]
+  }
+}

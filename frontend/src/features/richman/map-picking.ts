@@ -3,6 +3,13 @@ import { propertyContains } from './map-geometry';
 import type { LandShape } from './map-geometry';
 
 export type Point = { x: number; y: number };
+/** Client pixels must pass through the same outer scale as click coordinates. */
+export function dragToWorld(delta: Point, rect: { width: number; height: number },
+  screen: { width: number; height: number }, zoom: number): Point | null {
+  if (![delta.x, delta.y, rect.width, rect.height, screen.width, screen.height, zoom].every(Number.isFinite)
+    || rect.width <= 0 || rect.height <= 0 || screen.width <= 0 || screen.height <= 0 || zoom <= 0) return null;
+  return { x: delta.x * screen.width / rect.width / zoom, y: delta.y * screen.height / rect.height / zoom };
+}
 export type PixelMask = { width: number; height: number; alpha: Uint8Array };
 export type PickLayer = { target: string | null; x: number; y: number } & (
   | { kind: 'sprite'; frame: Frame }

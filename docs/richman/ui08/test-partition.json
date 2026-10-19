@@ -1,0 +1,19 @@
+{
+  "completed": [
+    "src/features/richman/game/computer-gods-browser.test.ts",
+    "src/features/richman/game/computer-capital-browser.test.ts",
+    "src/features/richman/game/computer-status-browser.test.ts",
+    "src/features/richman/game/computer-mobility-browser.test.ts",
+    "src/features/richman/game/computer-reactions-browser.test.ts",
+    "src/features/richman/game/computer-inventory-browser.test.ts",
+    "src/features/richman/game/finance-stress-browser.test.ts",
+    "src/features/richman/game/reaction-circuit-browser.test.ts",
+    "src/features/richman/game/computer-cash-browser.test.ts",
+    "src/features/richman/game/computer-roads-browser.test.ts",
+    "src/features/richman/game/computer.test.ts",
+    "src/features/richman/game/computer-defense-browser.test.ts",
+    "src/features/richman/game/restore-circuit-browser.test.ts",
+    "src/features/richman/game/computer-circuit-browser.test.ts"
+  ],
+  "completedTests": 64
+}

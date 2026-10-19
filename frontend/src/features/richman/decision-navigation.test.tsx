@@ -9,6 +9,13 @@ import {GameHelp} from './GameHelp';
 import {decisionSelector, navigateGame} from './decision-navigation';
 
 afterEach(()=>{cleanup();vi.restoreAllMocks()});
+it('opens the collapsed workbench and nested details before focusing a live business panel', () => {
+ const {container}=render(<details className="workbench"><summary>操作面板</summary><details><summary>内层</summary><section className="target"><button>确认</button></section></details></details>);
+ HTMLElement.prototype.scrollIntoView=vi.fn();
+ expect(navigateGame(container,'.target')).toBe(true);
+ expect([...container.querySelectorAll('details')].every(d=>d.open)).toBe(true);
+ expect(document.activeElement).toBe(container.querySelector('.target'));
+});
 const manifest:Manifest={version:1,map:{name:'日本',width:2304,height:2304,nodes,scenery:[]},sprites:{},characters:['a','b'].map(id=>({id,name:id,color:'#fff',idle:[],walk:[],walkFramesPerDirection:10}))};
 it('focuses the real worker panel without choosing, consuming or submitting while paused',()=>{
  const session=new GameSession(manifest,undefined,'surrender');

@@ -1,0 +1,539 @@
+{
+  "title": [
+    {
+      "id": "start",
+      "position": [
+        190,
+        380
+      ],
+      "normal": {
+        "index": 1,
+        "width": 108,
+        "height": 105,
+        "anchorX": 55,
+        "anchorY": 53,
+        "bytes": 22680,
+        "path": "Data-1/001.png",
+        "rgbaSha256": "64049fb2048ac4b6156011a4380534746342a8e324bac12f4552114dee7c29d7",
+        "pngSha256": "01c27054c6788deb64ac1fec350b657b881b81f2313ccc234680cda6affa56b3"
+      },
+      "hover": {
+        "index": 2,
+        "width": 116,
+        "height": 113,
+        "anchorX": 59,
+        "anchorY": 57,
+        "bytes": 26216,
+        "path": "Data-1/002.png",
+        "rgbaSha256": "4503608b7973d753e2bba1d184ee3c01b4083561682e3e4e7f6692e35898a9e9",
+        "pngSha256": "7201ca304b89bc75e1c9377cf06e4323f5ba7f840859de89acdcf75c9c2d9788"
+      }
+    },
+    {
+      "id": "load",
+      "position": [
+        328,
+        380
+      ],
+      "normal": {
+        "index": 3,
+        "width": 107,
+        "height": 92,
+        "anchorX": 51,
+        "anchorY": 51,
+        "bytes": 19688,
+        "path": "Data-1/003.png",
+        "rgbaSha256": "fadc98aef6284950847ca1c44106f804fe6166e325c54978a41fc2d96bbd450b",
+        "pngSha256": "563c3fbd5347a2a162bf3d407e231f67e40f736db83bf690dfb25da27124fc3a"
+      },
+      "hover": {
+        "index": 4,
+        "width": 114,
+        "height": 99,
+        "anchorX": 55,
+        "anchorY": 54,
+        "bytes": 22572,
+        "path": "Data-1/004.png",
+        "rgbaSha256": "2da3438a5ef42f7b892e3b409384f38ec04c68e17ca99b738f5285a110d9c725",
+        "pngSha256": "af898057d91461787d0044d2ea086a07448bd7f59247d57b853c851eda7bc7ff"
+      }
+    },
+    {
+      "id": "options",
+      "position": [
+        468,
+        378
+      ],
+      "normal": {
+        "index": 5,
+        "width": 98,
+        "height": 90,
+        "anchorX": 51,
+        "anchorY": 42,
+        "bytes": 17640,
+        "path": "Data-1/005.png",
+        "rgbaSha256": "281e64c0bfa2ae701d862a8b5d03368dd19eeba6f35f45790edb5635a63ce8d0",
+        "pngSha256": "e0f37eca60c458fbc3fb353e96fa24e76a8fa0fd4f10e92fbc2ef235edeec3a4"
+      },
+      "hover": {
+        "index": 6,
+        "width": 103,
+        "height": 98,
+        "anchorX": 53,
+        "anchorY": 46,
+        "bytes": 20188,
+        "path": "Data-1/006.png",
+        "rgbaSha256": "5d04369e48522502a3033b318d5c2c3255a692fb8c89a6123d7d18676618de8c",
+        "pngSha256": "161339b64bbf94c2f902604328ecf5c083bf73629c22263bec1b1934c111d3e9"
+      }
+    },
+    {
+      "id": "exit",
+      "position": [
+        328,
+        450
+      ],
+      "normal": {
+        "index": 7,
+        "width": 53,
+        "height": 18,
+        "anchorX": 27,
+        "anchorY": 9,
+        "bytes": 1908,
+        "path": "Data-1/007.png",
+        "rgbaSha256": "b482ace0779698b90b372feedcae2c3217310788adf156cd7c06950ecae7ea0e",
+        "pngSha256": "2ed9a28cda7998a876f6b1a970fa70eae6826848b64bf5a1ae415159e97d3dda"
+      },
+      "hover": {
+        "index": 8,
+        "width": 58,
+        "height": 19,
+        "anchorX": 29,
+        "anchorY": 10,
+        "bytes": 2204,
+        "path": "Data-1/008.png",
+        "rgbaSha256": "57c6bf083acc2bd93d2744f6d87dfa5c31343fc66548a0688410ce7278e2f7c0",
+        "pngSha256": "ae96a616440eba8b8dfc1a08af4189c6f3dcadf62ca37554fa1e6739764640f8"
+      }
+    }
+  ],
+  "go": {
+    "initialRect": [
+      180,
+      120,
+      72,
+      67
+    ],
+    "maskSha256": "867d59eb45008993ea8dc2fd1af8b32d3316043638643dcc791e50df594b83f5",
+    "maskPaths": {
+      "1": "M7 9h16v1h-16zM7 10h16v1h-16zM7 11h16v1h-16zM7 12h16v1h-16zM7 13h16v1h-16zM7 14h16v1h-16zM7 15h16v1h-16zM7 16h16v1h-16zM7 17h16v1h-16zM7 18h16v1h-16zM7 19h16v1h-16zM7 20h16v1h-16zM7 21h16v1h-16zM7 22h16v1h-16zM7 23h16v1h-16zM7 24h16v1h-16zM7 25h16v1h-16zM7 26h16v1h-16zM7 27h16v1h-16zM7 28h16v1h-16zM7 29h16v1h-16zM7 30h16v1h-16zM7 31h16v1h-16zM7 32h16v1h-16zM7 33h16v1h-16zM7 34h16v1h-16zM7 35h16v1h-16zM7 36h16v1h-16zM7 37h16v1h-16zM7 38h16v1h-16zM7 39h16v1h-16zM7 40h16v1h-16zM7 41h16v1h-16zM7 42h16v1h-16zM7 43h16v1h-16zM7 44h16v1h-16zM7 45h16v1h-16zM7 46h16v1h-16zM7 47h16v1h-16zM7 48h16v1h-16zM7 49h16v1h-16zM7 50h16v1h-16zM7 51h16v1h-16zM7 52h16v1h-16zM7 53h16v1h-16zM7 54h16v1h-16zM7 55h16v1h-16zM7 56h16v1h-16z",
+      "2": "M12 0h4v1h-4zM10 1h8v1h-8zM9 2h10v1h-10zM8 3h12v1h-12zM7 4h14v1h-14zM6 5h16v1h-16zM6 6h17v1h-17zM5 7h32v1h-32zM5 8h38v1h-38zM4 9h3v1h-3zM23 9h24v1h-24zM4 10h3v1h-3zM23 10h27v1h-27zM3 11h4v1h-4zM23 11h29v1h-29zM3 12h4v1h-4zM23 12h32v1h-32zM3 13h4v1h-4zM23 13h34v1h-34zM2 14h5v1h-5zM23 14h7v1h-7zM39 14h19v1h-19zM2 15h5v1h-5zM23 15h7v1h-7zM43 15h17v1h-17zM2 16h5v1h-5zM23 16h7v1h-7zM47 16h14v1h-14zM1 17h6v1h-6zM23 17h7v1h-7zM50 17h13v1h-13zM1 18h6v1h-6zM23 18h7v1h-7zM52 18h12v1h-12zM1 19h6v1h-6zM23 19h7v1h-7zM54 19h11v1h-11zM1 20h6v1h-6zM23 20h7v1h-7zM56 20h10v1h-10zM1 21h6v1h-6zM23 21h7v1h-7zM58 21h9v1h-9zM1 22h6v1h-6zM23 22h7v1h-7zM59 22h9v1h-9zM1 23h6v1h-6zM23 23h7v1h-7zM60 23h8v1h-8zM1 24h6v1h-6zM23 24h7v1h-7zM61 24h8v1h-8zM0 25h7v1h-7zM23 25h7v1h-7zM62 25h8v1h-8zM0 26h7v1h-7zM23 26h7v1h-7zM62 26h8v1h-8zM0 27h7v1h-7zM23 27h7v1h-7zM63 27h8v1h-8zM0 28h7v1h-7zM23 28h7v1h-7zM63 28h8v1h-8zM0 29h7v1h-7zM23 29h7v1h-7zM64 29h7v1h-7zM0 30h7v1h-7zM23 30h7v1h-7zM64 30h8v1h-8zM0 31h7v1h-7zM23 31h7v1h-7zM65 31h7v1h-7zM0 32h7v1h-7zM23 32h7v1h-7zM65 32h7v1h-7zM0 33h7v1h-7zM23 33h7v1h-7zM65 33h7v1h-7zM0 34h7v1h-7zM23 34h7v1h-7zM65 34h7v1h-7zM0 35h7v1h-7zM23 35h7v1h-7zM65 35h7v1h-7zM0 36h7v1h-7zM23 36h7v1h-7zM65 36h7v1h-7zM0 37h7v1h-7zM23 37h7v1h-7zM65 37h7v1h-7zM0 38h7v1h-7zM23 38h7v1h-7zM64 38h8v1h-8zM0 39h7v1h-7zM23 39h7v1h-7zM64 39h7v1h-7zM0 40h7v1h-7zM23 40h7v1h-7zM63 40h8v1h-8zM0 41h7v1h-7zM23 41h7v1h-7zM63 41h8v1h-8zM0 42h7v1h-7zM23 42h7v1h-7zM62 42h8v1h-8zM1 43h6v1h-6zM23 43h7v1h-7zM62 43h8v1h-8zM1 44h6v1h-6zM23 44h7v1h-7zM61 44h8v1h-8zM1 45h6v1h-6zM23 45h7v1h-7zM60 45h8v1h-8zM1 46h6v1h-6zM23 46h7v1h-7zM59 46h9v1h-9zM1 47h6v1h-6zM23 47h7v1h-7zM58 47h9v1h-9zM1 48h6v1h-6zM23 48h7v1h-7zM56 48h10v1h-10zM1 49h6v1h-6zM23 49h7v1h-7zM54 49h11v1h-11zM2 50h5v1h-5zM23 50h7v1h-7zM52 50h12v1h-12zM2 51h5v1h-5zM23 51h7v1h-7zM50 51h13v1h-13zM2 52h5v1h-5zM23 52h7v1h-7zM47 52h14v1h-14zM3 53h4v1h-4zM23 53h7v1h-7zM43 53h17v1h-17zM3 54h4v1h-4zM23 54h7v1h-7zM38 54h20v1h-20zM3 55h4v1h-4zM23 55h34v1h-34zM4 56h3v1h-3zM23 56h32v1h-32zM4 57h48v1h-48zM5 58h45v1h-45zM5 59h42v1h-42zM5 60h38v1h-38zM6 61h31v1h-31zM7 62h14v1h-14zM8 63h12v1h-12zM9 64h10v1h-10zM10 65h8v1h-8zM11 66h5v1h-5z",
+      "3": "M30 14h9v1h-9zM30 15h13v1h-13zM30 16h17v1h-17zM30 17h20v1h-20zM30 18h22v1h-22zM30 19h24v1h-24zM30 20h26v1h-26zM30 21h28v1h-28zM30 22h29v1h-29zM30 23h30v1h-30zM30 24h31v1h-31zM30 25h32v1h-32zM30 26h32v1h-32zM30 27h33v1h-33zM30 28h33v1h-33zM30 29h34v1h-34zM30 30h34v1h-34zM30 31h35v1h-35zM30 32h35v1h-35zM30 33h35v1h-35zM30 34h35v1h-35zM30 35h35v1h-35zM30 36h35v1h-35zM30 37h35v1h-35zM30 38h34v1h-34zM30 39h34v1h-34zM30 40h33v1h-33zM30 41h33v1h-33zM30 42h32v1h-32zM30 43h32v1h-32zM30 44h31v1h-31zM30 45h30v1h-30zM30 46h29v1h-29zM30 47h28v1h-28zM30 48h26v1h-26zM30 49h24v1h-24zM30 50h22v1h-22zM30 51h20v1h-20zM30 52h17v1h-17zM30 53h13v1h-13zM30 54h8v1h-8z"
+    }
+  },
+  "source": "UI-00 / original-ui-resource-audit.json",
+  "archiveSha256": "5b9bfd11a866694cfdf93457d2010d30f20a43f96b668e5186fa99452e16f563",
+  "toolbar": [
+    {
+      "id": "help",
+      "label": "帮助",
+      "index": 0,
+      "states": {
+        "normal": {
+          "frame": 1,
+          "drawRect": [
+            11,
+            3,
+            19,
+            34
+          ]
+        },
+        "hover": {
+          "frame": 12,
+          "drawRect": [
+            10,
+            1,
+            22,
+            39
+          ]
+        }
+      }
+    },
+    {
+      "id": "options",
+      "label": "设置",
+      "index": 1,
+      "states": {
+        "normal": {
+          "frame": 2,
+          "drawRect": [
+            43,
+            4,
+            34,
+            32
+          ]
+        },
+        "hover": {
+          "frame": 13,
+          "drawRect": [
+            41,
+            2,
+            39,
+            37
+          ]
+        }
+      }
+    },
+    {
+      "id": "ai-settings",
+      "label": "托管设置",
+      "index": 2,
+      "states": {
+        "normal": {
+          "frame": 3,
+          "drawRect": [
+            86,
+            4,
+            30,
+            32
+          ]
+        },
+        "hover": {
+          "frame": 14,
+          "drawRect": [
+            83,
+            1,
+            35,
+            39
+          ]
+        }
+      }
+    },
+    {
+      "id": "load",
+      "label": "读档",
+      "index": 3,
+      "states": {
+        "normal": {
+          "frame": 4,
+          "drawRect": [
+            124,
+            1,
+            32,
+            36
+          ]
+        },
+        "hover": {
+          "frame": 15,
+          "drawRect": [
+            122,
+            -1,
+            37,
+            41
+          ]
+        }
+      }
+    },
+    {
+      "id": "save",
+      "label": "存档",
+      "index": 4,
+      "states": {
+        "normal": {
+          "frame": 5,
+          "drawRect": [
+            164,
+            3,
+            32,
+            32
+          ]
+        },
+        "hover": {
+          "frame": 16,
+          "drawRect": [
+            162,
+            0,
+            37,
+            38
+          ]
+        }
+      }
+    },
+    {
+      "id": "small-map",
+      "label": "小地图",
+      "index": 5,
+      "states": {
+        "normal": {
+          "frame": 6,
+          "drawRect": [
+            203,
+            4,
+            34,
+            32
+          ]
+        },
+        "hover": {
+          "frame": 17,
+          "drawRect": [
+            201,
+            2,
+            39,
+            37
+          ]
+        }
+      }
+    },
+    {
+      "id": "player-info",
+      "label": "人物资料",
+      "index": 6,
+      "states": {
+        "normal": {
+          "frame": 7,
+          "drawRect": [
+            244,
+            4,
+            32,
+            33
+          ]
+        },
+        "hover": {
+          "frame": 18,
+          "drawRect": [
+            242,
+            2,
+            37,
+            38
+          ]
+        }
+      }
+    },
+    {
+      "id": "tools",
+      "label": "道具",
+      "index": 7,
+      "states": {
+        "normal": {
+          "frame": 8,
+          "drawRect": [
+            283,
+            5,
+            34,
+            31
+          ]
+        },
+        "hover": {
+          "frame": 19,
+          "drawRect": [
+            281,
+            3,
+            38,
+            36
+          ]
+        }
+      }
+    },
+    {
+      "id": "cards",
+      "label": "卡片",
+      "index": 8,
+      "states": {
+        "normal": {
+          "frame": 9,
+          "drawRect": [
+            321,
+            2,
+            35,
+            34
+          ]
+        },
+        "hover": {
+          "frame": 20,
+          "drawRect": [
+            319,
+            0,
+            38,
+            36
+          ]
+        }
+      }
+    },
+    {
+      "id": "sale",
+      "label": "地产出售",
+      "index": 9,
+      "states": {
+        "normal": {
+          "frame": 10,
+          "drawRect": [
+            362,
+            2,
+            36,
+            35
+          ]
+        },
+        "hover": {
+          "frame": 21,
+          "drawRect": [
+            360,
+            0,
+            41,
+            40
+          ]
+        }
+      }
+    },
+    {
+      "id": "stock",
+      "label": "股票",
+      "index": 10,
+      "states": {
+        "normal": {
+          "frame": 11,
+          "drawRect": [
+            402,
+            3,
+            36,
+            35
+          ]
+        },
+        "hover": {
+          "frame": 22,
+          "drawRect": [
+            400,
+            1,
+            41,
+            40
+          ]
+        }
+      }
+    }
+  ],
+  "files": [
+    "ui/Data-1/000.png",
+    "ui/Data-1/001.png",
+    "ui/Data-1/002.png",
+    "ui/Data-1/003.png",
+    "ui/Data-1/004.png",
+    "ui/Data-1/005.png",
+    "ui/Data-1/006.png",
+    "ui/Data-1/007.png",
+    "ui/Data-1/008.png",
+    "ui/Data-3/000.png",
+    "ui/Panel-0/000.png",
+    "ui/Panel-0/001.png",
+    "ui/Panel-0/002.png",
+    "ui/Panel-0/003.png",
+    "ui/Panel-1/000.png",
+    "ui/Panel-1/001.png",
+    "ui/Panel-1/002.png",
+    "ui/Panel-1/003.png",
+    "ui/Panel-1/004.png",
+    "ui/Panel-1/005.png",
+    "ui/Panel-1/006.png",
+    "ui/Panel-1/007.png",
+    "ui/Panel-1/008.png",
+    "ui/Panel-1/009.png",
+    "ui/Panel-1/010.png",
+    "ui/Panel-1/011.png",
+    "ui/Panel-1/012.png",
+    "ui/Panel-1/013.png",
+    "ui/Panel-1/014.png",
+    "ui/Panel-1/015.png",
+    "ui/Panel-1/016.png",
+    "ui/Panel-1/017.png",
+    "ui/Panel-1/018.png",
+    "ui/Panel-1/019.png",
+    "ui/Panel-1/020.png",
+    "ui/Panel-1/021.png",
+    "ui/Panel-1/022.png",
+    "ui/Panel-2/000.png",
+    "ui/Panel-2/001.png",
+    "ui/Panel-2/002.png",
+    "ui/Panel-2/003.png",
+    "ui/Panel-2/004.png",
+    "ui/Panel-2/005.png",
+    "ui/Panel-2/006.png",
+    "ui/Panel-2/007.png",
+    "ui/Panel-7/000.png",
+    "ui/Panel-7/001.png",
+    "ui/Panel-7/002.png",
+    "ui/Panel-7/003.png",
+    "ui/Panel-7/004.png",
+    "ui/Panel-7/005.png",
+    "ui/Panel-7/006.png",
+    "ui/Panel-7/007.png",
+    "ui/Panel-7/008.png",
+    "ui/Panel-7/009.png",
+    "ui/Panel-7/010.png",
+    "ui/Panel-7/011.png",
+    "ui/Panel-10/000.png",
+    "ui/Panel-10/002.png",
+    "ui/Panel-10/016.png",
+    "ui/Panel-10/018.png",
+    "ui/Panel-21/002.png",
+    "ui/Panel-21/004.png",
+    "ui/Panel-21/005.png",
+    "ui/Panel-21/006.png",
+    "ui/Panel-21/007.png",
+    "ui/Panel-21/008.png",
+    "ui/Panel-21/009.png",
+    "ui/Panel-21/010.png",
+    "ui/Panel-21/011.png",
+    "ui/Panel-21/012.png",
+    "ui/Panel-21/013.png",
+    "ui/Panel-21/014.png",
+    "ui/Panel-21/015.png",
+    "ui/Panel-23/000.png",
+    "ui/Panel-23/016.png",
+    "ui/Panel-23/017.png",
+    "ui/Panel-26/000.png",
+    "ui/Panel-26/003.png",
+    "ui/Panel-26/005.png",
+    "ui/Panel-26/006.png",
+    "ui/Panel-26/007.png",
+    "ui/Panel-26/008.png",
+    "ui/Panel-26/009.png",
+    "ui/Panel-26/010.png",
+    "ui/Panel-26/011.png",
+    "ui/Panel-26/012.png",
+    "ui/Panel-26/013.png",
+    "ui/Panel-26/014.png",
+    "ui/Panel-26/015.png",
+    "ui/Panel-26/016.png",
+    "ui/Panel-26/017.png",
+    "ui/Data-399/000.png",
+    "ui/Data-399/001.png",
+    "ui/Data-399/002.png",
+    "ui/Data-476/005.png",
+    "ui/Panel-11/000.png",
+    "ui/Panel-11/001.png",
+    "ui/Panel-11/002.png",
+    "ui/Panel-11/003.png",
+    "ui/Panel-11/004.png",
+    "ui/Panel-11/005.png",
+    "ui/Panel-11/006.png",
+    "ui/Panel-11/007.png",
+    "ui/Panel-11/008.png",
+    "ui/Panel-11/009.png",
+    "ui/Panel-11/010.png",
+    "ui/Panel-11/011.png",
+    "ui/Panel-11/012.png",
+    "ui/Panel-11/013.png",
+    "ui/Panel-11/014.png",
+    "ui/Panel-12/000.png",
+    "ui/Panel-12/001.png",
+    "ui/Panel-63/000.png",
+    "ui/Panel-65/000.png",
+    "ui/Panel-71/000.png",
+    "ui/Panel-71/002.png",
+    "ui/Panel-73/000.png",
+    "ui/Panel-75/000.png",
+    "ui/Panel-76/000.png",
+    "ui/Panel-18/000.png",
+    "ui/Panel-18/001.png",
+    "ui/Panel-66/000.png",
+    "ui/Panel-66/001.png"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "scenarios": [
+    {
+      "scenario": "touch-portrait",
+      "cleanup": {
+        "raf": 0,
+        "canvas": 0,
+        "observers": 0,
+        "listeners": []
+      },
+      "passed": true
+    }
+  ],
+  "entries": [],
+  "assets": [],
+  "errors": []
+}

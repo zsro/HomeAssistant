@@ -20,7 +20,15 @@ export function decisionSelector(state: Pick<SessionSnapshot, 'phase' | 'insuran
 export function navigateGame(root: HTMLElement, selector: string) {
   const target = root.querySelector<HTMLElement>(selector);
   if (!target) return false;
-  if (target instanceof HTMLDetailsElement) target.open = true;
+  if (selector === '.rm-board' && !root.dispatchEvent(new CustomEvent('richman:open-window', { cancelable: true, detail: { selector } }))) return true;
+  // The host owns visibility and focus; never focus a still-hidden dialog child.
+  if (target.closest('[data-window-host]')) {
+    return !target.dispatchEvent(new CustomEvent('richman:open-window', { bubbles: true, cancelable: true, detail: { selector } }));
+  }
+  // UI-01 keeps each existing panel mounted once inside the collapsed workbench.
+  for (let ancestor: HTMLElement | null = target; ancestor && ancestor !== root; ancestor = ancestor.parentElement) {
+    if (ancestor instanceof HTMLDetailsElement) ancestor.open = true;
+  }
   target.tabIndex = -1;
   target.focus({ preventScroll: true });
   target.scrollIntoView({ block: 'start', behavior: 'instant' });

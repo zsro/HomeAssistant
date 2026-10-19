@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "rulesId": "japan-events-candidate-v47",
+  "mapFingerprint": "6fb1abfd",
+  "catalogFingerprint": "628c3de8",
+  "itemFingerprint": "c6d96cc",
+  "config": {
+    "humanIds": [
+      "player-1",
+      "player-2",
+      "player-3",
+      "player-4"
+    ],
+    "startDate": "1998-01-01",
+    "gameId": "d413c8d7-a588-4715-a07f-cf30e5c02c57",
+    "seed": "ui06-events",
+    "characterIds": [
+      "xiaomei",
+      "tuu",
+      "chyan",
+      "salonbus"
+    ],
+    "rulesId": "japan-events-candidate-v47",
+    "initialFunds": 100000
+  },
+  "commands": [
+    {
+      "id": "command-1",
+      "gameId": "d413c8d7-a588-4715-a07f-cf30e5c02c57",
+      "expectedRevision": 0,
+      "playerId": "player-1",
+      "action": {
+        "type": "surrender"
+      }
+    },
+    {
+      "id": "command-2",
+      "gameId": "d413c8d7-a588-4715-a07f-cf30e5c02c57",
+      "expectedRevision": 1,
+      "playerId": "player-1",
+      "action": {
+        "type": "chooseDeath",
+        "decisionId": "d413c8d7-a588-4715-a07f-cf30e5c02c57:2",
+        "targetId": "player-2"
+      }
+    }
+  ]
+}

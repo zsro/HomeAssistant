@@ -3,7 +3,7 @@ import type {SessionSnapshot} from './game/session';
 const money=(n:number)=>n.toLocaleString('zh-CN');
 export function CompanyPanel({snapshot,ack}:{snapshot:SessionSnapshot;ack:(id:string)=>unknown}){
  const b=snapshot.news?.business;if(b?.service===undefined)return null;const r=snapshot.companyDecision?.receipt??b.service;
- return <section className="rm-property rm-finance" aria-label="公司营业结算"><h2>公司营业 · {modeIncludes(snapshot.mode, 'insurance')?'丰田、日产、三井与 SEGA':snapshot.mode==='commerce'?'丰田、日产与 SEGA':'丰田与 SEGA'}</h2>
+ return <section className="rm-property rm-finance rm-business-ledger" aria-label="公司营业结算"><h2>公司营业 · {modeIncludes(snapshot.mode, 'insurance')?'丰田、日产、三井与 SEGA':snapshot.mode==='commerce'?'丰田、日产与 SEGA':'丰田与 SEGA'}</h2>
  <p>丰田：车辆系数 × 本次点数 × 700 元。SEGA：已过天数 × 150 元。仅落点收费，经营者本人及无人经营时免付。</p>
  {r?<div aria-label="最近营业账单"><h3>{r.name} · {r.node} 号路格</h3><p>来访者：玩家 {r.visitorId.split('-')[1]} · 经营者：{r.ownerId?`玩家 ${r.ownerId.split('-')[1]}`:'暂无'}</p>
  <p>{r.reason}；原价 {money(r.base)} 元，神仙修正后 {money(r.amount)} 元{r.free?'；免费卡免付':''}。</p>

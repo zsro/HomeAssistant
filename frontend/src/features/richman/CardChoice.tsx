@@ -1,3 +1,4 @@
+import { ClassicPrompt, ClassicDecisionActions } from './ClassicDecisionArt';
 import { useState } from 'react';
 import type { EffectAction } from './game/effects';
 import type { SessionSnapshot } from './game/session';
@@ -11,8 +12,8 @@ export function CardChoice({ snapshot, onUse }: { snapshot: SessionSnapshot; onU
   const target = targetId && snapshot.cardTargets?.some(p => p.id === targetId) ? snapshot.economy!.balances[targetId] : null;
   const preview = target && equalCashPreview(source.cash, target.cash);
   const pending = snapshot.effects!.pending!;
-  return <section className="rm-property rm-items" aria-label="均贫卡选择">
-    <h2>均贫卡 · 平均双方现金</h2>
+  return <section className="rm-property rm-items rm-classic-target" aria-label="均贫卡选择">
+    <ClassicPrompt><h2>均贫卡 · 平均双方现金</h2></ClassicPrompt>
     <p>确认后消耗 1 张，双方现金各取平均值；存款、地产和点数不变，随后仍可掷骰。</p>
     <fieldset disabled={snapshot.paused}><legend>选择一位对手</legend>
       {snapshot.cardTargets?.map(player => <label className="rm-card-target" key={player.id}>
@@ -29,8 +30,8 @@ export function CardChoice({ snapshot, onUse }: { snapshot: SessionSnapshot; onU
     </div> : <p>请先选择目标，查看结算预览。</p>}
     <p className="rm-property-note">候选版仅选择角色附近的未破产对手；范围不随拖动、缩放改变，未模拟原版像素遮挡。</p>
     {error && <p role="alert">{error}</p>}
-    <div className="rm-property-actions"><button className="rm-button" disabled={snapshot.paused || !preview} onClick={() => {
+    <ClassicDecisionActions accept="确认使用均贫卡" decline="取消使用" disabled={snapshot.paused || !preview} declineDisabled={snapshot.paused} onAccept={() => {
       if (targetId && !onUse({ type: 'confirm', decisionId: pending.id, target: { kind: 'player', id: targetId } })) setError('目标或当前操作已失效，未消耗卡片。');
-    }}>确认使用均贫卡</button><button className="rm-button rm-button-light" disabled={snapshot.paused} onClick={() => onUse({ type: 'cancel', decisionId: pending.id })}>取消使用</button></div>
+    }} onDecline={() => onUse({ type: 'cancel', decisionId: pending.id })} />
   </section>;
 }

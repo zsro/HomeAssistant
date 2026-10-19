@@ -1,0 +1,75 @@
+/** UI-07: real menu, settings, pause, resize, setup, result and exit flows. */
+const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
+const fs=require('node:fs'),assert=require('node:assert/strict');
+const base=process.env.RICHMAN_TEST_BASE_URL||'http://127.0.0.1:5174',output=process.env.RICHMAN_TEST_OUTPUT||'/private/tmp/richman-ui07';
+if(!['localhost','127.0.0.1'].includes(new URL(base).hostname))throw Error('Local validation only');fs.mkdirSync(output,{recursive:true});
+(async()=>{
+ const browser=await chromium.launch({channel:'chrome',headless:true,args:['--enable-unsafe-swiftshader']});
+ const context=await browser.newContext({viewport:{width:1440,height:1080}}),errors=[];
+ const user={id:'richman-validation',username:'validation',displayName:'技术验证',inviteCode:'VALIDATION',invitedByUserId:null,status:'active',createdAt:'2026-10-19T00:00:00.000Z'};
+ await context.route(base+'/api/**',route=>route.fulfill(route.request().url().endsWith('/users/me')?{json:{success:true,data:{user}}}:{status:404,json:{success:false}}));
+ await context.addInitScript(user=>localStorage.setItem('home-assistant.session.v1',JSON.stringify({user,tokens:{accessToken:'browser-test-only',refreshToken:'browser-test-only',tokenType:'Bearer',accessExpiresIn:3600,refreshExpiresIn:7200},accessExpiresAt:Date.now()+3600000,refreshExpiresAt:Date.now()+7200000})),user);
+ const page=await context.newPage();page.on('pageerror',e=>errors.push(e.message));page.on('console',m=>{if(m.type()==='error')errors.push(m.text())});
+ const capture=async name=>{await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));await page.screenshot({path:output+'/'+name+'.png'});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);};
+ try{
+ await page.goto(base+'/modules/richman');
+ const system=page.locator('.rm-system-dialog'),host=page.locator('[data-window-host]'),viewport=page.getByTestId('richman-viewport');
+ await system.getByRole('heading',{name:'大富翁4 · 主菜单'}).waitFor();await capture('title-desktop');await page.setViewportSize({width:390,height:844});await capture('title-portrait');await page.setViewportSize({width:1440,height:1080});
+ await system.getByRole('button',{name:'LOAD · 读档（暂未接入）'}).click();assert.match(await system.innerText(),/功能暂未接入/);await system.getByRole('button',{name:'知道了'}).click();
+ await system.getByRole('button',{name:'OPTION · 设置'}).click();await system.getByLabel('音乐音量').focus();await page.keyboard.press('Home');await page.keyboard.press('ArrowRight');
+ assert.equal(await system.getByLabel('音乐音量').inputValue(),'1');await capture('options-desktop');await page.setViewportSize({width:390,height:844});await capture('options-portrait');await page.setViewportSize({width:1440,height:1080});
+ await system.getByRole('button',{name:'查看操作帮助'}).click();assert.match(await system.innerText(),/不能恢复当前页面进度/);await capture('help-desktop');
+ await system.getByRole('button',{name:'返回上一级'}).click();assert.equal(await system.getByLabel('音乐音量').inputValue(),'1');await system.getByRole('button',{name:'返回上一级'}).click();
+ await system.getByRole('button',{name:'START · 新建对局'}).click();await system.getByText('高级设置 · 历史模式、电脑策略与种子',{exact:true}).click();
+ await system.getByLabel('游戏模式',{exact:true}).selectOption('economy');await system.getByLabel(/对局种子/).fill('ui07-controls');
+ for(const name of ['孙小美','阿土伯','钱夫人','沙隆巴斯'])await system.getByRole('checkbox',{name,exact:true}).setChecked(name==='孙小美');
+ await system.getByRole('button',{name:'开始新对局'}).click();assert.match(await system.getByRole('alert').innerText(),/至少选择两位/);
+ await system.getByRole('checkbox',{name:'钱夫人',exact:true}).setChecked(true);await capture('setup-desktop');
+ await page.setViewportSize({width:390,height:844});await capture('setup-portrait');await page.setViewportSize({width:844,height:390});await capture('setup-landscape');
+ await page.setViewportSize({width:390,height:844});await system.getByRole('button',{name:'开始新对局'}).click();await page.getByRole('button',{name:'掷骰出发',exact:true}).waitFor();
+ assert.equal(await page.locator('.rm-classic-frame').getAttribute('class').then(c=>c.includes('is-compact')),true);
+ await page.evaluate(()=>{window.ui07Canvas=document.querySelector('.rm-viewport canvas');});const revision=await viewport.getAttribute('data-revision');
+ const toolbar=page.getByRole('navigation',{name:'原版工具栏'});assert.ok((await toolbar.getByRole('button').evaluateAll(bs=>bs.map(b=>b.getBoundingClientRect().height))).every(h=>h>=44));
+ await capture('game-portrait');await page.setViewportSize({width:844,height:390});await capture('game-landscape');
+ await page.setViewportSize({width:1440,height:1080});await capture('game-desktop');for(const [width,height] of [[640,480],[1280,960],[1440,900]]){await page.setViewportSize({width,height});await capture('game-'+width+'x'+height);assert.equal(await page.evaluate(()=>window.ui07Canvas===document.querySelector('.rm-viewport canvas')),true);assert.equal(await viewport.getAttribute('data-revision'),revision);}await page.setViewportSize({width:1440,height:1080});
+ assert.equal(await page.evaluate(()=>window.ui07Canvas===document.querySelector('.rm-viewport canvas')),true);assert.equal(await viewport.getAttribute('data-revision'),revision);
+ await page.locator('.rm-game-toolbar').getByRole('button',{name:'全屏游戏',exact:true}).click();await capture('game-fullscreen');await page.locator('.rm-game-toolbar').getByRole('button',{name:'退出全屏',exact:true}).click();
+ // Verify GO's own map-plane transform, then a map drag, without advancing a turn.
+ await page.setViewportSize({width:390,height:844});
+ const go=page.locator('.rm-classic-go'),goBefore=await go.evaluate(el=>({x:parseFloat(el.style.left),y:parseFloat(el.style.top)}));
+ const plane=await page.locator('.rm-classic-map-plane').boundingBox();const drag=go.getByRole('button',{name:'移动 GO 控件（方向键移动）'});await drag.focus();await page.keyboard.press('ArrowRight');
+ assert.equal(await go.evaluate(el=>parseFloat(el.style.left)),goBefore.x+8);assert.equal(await viewport.getAttribute('data-revision'),revision);
+ await go.scrollIntoViewIfNeeded();const goBox=await go.boundingBox(),goScale=goBox.width/72;
+ await page.mouse.move(goBox.x+4*goScale,goBox.y+33*goScale);await page.mouse.down();await page.mouse.move(goBox.x+24*goScale,goBox.y+53*goScale,{steps:5});await page.mouse.up();
+ const goAfter=await go.evaluate(el=>({x:parseFloat(el.style.left),y:parseFloat(el.style.top)}));assert.ok(Math.abs(goAfter.x-goBefore.x-28)<2);assert.ok(Math.abs(goAfter.y-goBefore.y-20)<2);
+ assert.ok((await page.getByLabel('地图视角').getByRole('button').evaluateAll(bs=>bs.map(b=>b.getBoundingClientRect().height))).every(h=>h>=43.9));
+ const canvas=page.locator('.rm-viewport canvas');await canvas.scrollIntoViewIfNeeded();const box=await canvas.boundingBox();
+ await page.mouse.move(box.x+box.width*.2,box.y+box.height*.6);await page.mouse.down();await page.mouse.move(box.x+box.width*.3,box.y+box.height*.7,{steps:5});await page.mouse.up();
+ assert.equal(await viewport.getAttribute('data-revision'),revision);assert.ok(plane.width>300);
+ await page.setViewportSize({width:1440,height:1080});
+ await page.getByRole('button',{name:'掷骰出发',exact:true}).click();await page.locator('.rm-window-launcher').getByRole('button',{name:'暂停',exact:true}).click();
+ await system.getByRole('heading',{name:'游戏已暂停'}).waitFor();const pausedRevision=await viewport.getAttribute('data-revision');await page.waitForTimeout(400);assert.equal(await viewport.getAttribute('data-revision'),pausedRevision);
+ await system.getByRole('button',{name:'游戏设置',exact:true}).click();await page.setViewportSize({width:390,height:844});await capture('options-portrait');
+ await system.getByRole('button',{name:'返回上一级'}).click();await capture('pause-portrait');await system.getByRole('button',{name:'重新开始',exact:true}).click();
+ await system.getByRole('button',{name:'继续当前旅程'}).click();assert.equal(await system.getByRole('heading',{name:'游戏已暂停'}).isVisible(),true);assert.equal(await viewport.getAttribute('data-revision'),pausedRevision);
+ await system.getByRole('button',{name:'返回模块集合',exact:true}).click();await capture('exit-portrait');await system.getByRole('button',{name:'留在对局'}).click();
+ await system.getByRole('button',{name:'继续旅程',exact:true}).click();await page.setViewportSize({width:1440,height:1080});
+ await page.waitForFunction(()=>!['rolling','moving'].includes(document.querySelector('[data-testid="richman-viewport"]').dataset.phase));
+ const phase=await viewport.getAttribute('data-phase');assert.ok(['property','bank','choosing','turnEnd'].includes(phase));
+ if(await host.isVisible()){
+  await host.getByRole('button',{name:'新建对局',exact:true}).click();await system.getByRole('button',{name:'取消',exact:true}).click();
+  assert.equal(await viewport.getAttribute('data-phase'),phase);assert.equal(await host.isVisible(),true);if(phase==='choosing')assert.equal(await host.getByRole('button',{name:'收起窗口，地图选点'}).isVisible(),true);else assert.equal(await host.getByRole('button',{name:'关闭窗口'}).isDisabled(),true);
+  await host.getByRole('button',{name:'暂停',exact:true}).click();await system.getByRole('button',{name:'重新开始',exact:true}).click();await system.getByRole('button',{name:'确认重新开始'}).click();await page.waitForFunction(()=>document.querySelector('[data-testid="richman-viewport"]').dataset.phase==='idle');await page.locator('.rm-game-toolbar').getByRole('button',{name:'新建对局',exact:true}).click();
+ }else await page.locator('.rm-game-toolbar').getByRole('button',{name:'新建对局',exact:true}).click();
+ await system.getByText('高级设置 · 历史模式、电脑策略与种子',{exact:true}).click();await system.getByLabel('游戏模式',{exact:true}).selectOption('surrender');
+ await system.getByLabel(/对局种子/).fill('ui07-result');await system.getByLabel('钱夫人控制方式').selectOption('computer');await system.getByLabel('电脑策略',{exact:true}).selectOption('rent-v1');await capture('computer-setup');
+ await system.getByRole('button',{name:'开始新对局'}).click();await page.getByRole('button',{name:'更多功能',exact:true}).click();await host.getByRole('button',{name:'认输与衰神',exact:true}).click();
+ await host.getByRole('button',{name:'认输退出本局',exact:true}).click();await host.getByRole('button',{name:'确认认输',exact:true}).dblclick();
+ await host.getByRole('region',{name:'对局结果'}).waitFor();await capture('result-desktop');await page.setViewportSize({width:390,height:844});await capture('result-portrait');
+ const download=page.waitForEvent('download');await host.getByRole('button',{name:'下载回放记录'}).click();await(await download).saveAs(output+'/replay.json');
+ const replay=JSON.parse(fs.readFileSync(output+'/replay.json','utf8'));assert.equal(replay.commands.filter(c=>c.action.type==='surrender').length,1);assert.equal(replay.config.seed,'ui07-result');assert.equal(replay.control.policy,'rent-v1');
+ await host.getByRole('button',{name:'关闭窗口'}).click();await page.locator('.rm-classic-sitebar').getByRole('link',{name:'模块集合'}).click();await system.getByRole('button',{name:'留在对局'}).click();assert.equal(await viewport.getAttribute('data-phase'),'finished');
+ await page.locator('.rm-classic-sitebar').getByRole('link',{name:'模块集合'}).click();await system.getByRole('button',{name:'确认返回模块集合'}).click();await page.waitForURL(base+'/');await page.locator('.rm-viewport canvas').waitFor({state:'detached'});assert.equal(await page.locator('.rm-viewport canvas').count(),0);
+ assert.deepEqual(errors,[]);fs.writeFileSync(output+'/results.json',JSON.stringify({checks:['four native menu entries','LOAD truthful notice','audio draft retained across help','legacy mode and seed','minimum roster validation','computer policy config','same canvas and revision across portrait/landscape/desktop/fullscreen','44px compact toolbar','GO scaled pointer/keyboard and map drag','44px map controls','pause stops revisions','nested reset/exit cancellation restores pause','cancel setup restores mandatory decision','confirmed reset clears pending decision','result and replay','confirmed exit removes canvas'],sizes:['640x480','1280x960','1440x900','1440x1080','390x844','844x390'],errors},null,2));console.log('UI-07 browser checks passed');
+ }catch(e){await page.screenshot({path:output+'/failure.png',fullPage:true});throw e;}finally{await browser.close();}
+})().catch(e=>{console.error(e);process.exit(1)});

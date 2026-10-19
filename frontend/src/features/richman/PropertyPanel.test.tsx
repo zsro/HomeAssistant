@@ -44,3 +44,14 @@ describe('property decision interface', () => {
     expect(screen.getByText('19号 · 0级：400 元')).toBeInTheDocument();
   });
 });
+
+it('renders and submits an upgrade with the actual payer balance and no accidental decline on rent', () => {
+ const snapshot=view();snapshot.decision={...snapshot.decision!,operation:'upgrade',amount:500,payerId:'player-2'};
+ snapshot.economy!.balances['player-1'].cash=0;snapshot.economy!.balances['player-2'].cash=500;
+ const decide=vi.fn();const ui=render(<PropertyPanel snapshot={snapshot} manifest={manifest} decide={decide}/>);
+ fireEvent.click(screen.getByRole('button',{name:'确认升级'}));expect(decide).toHaveBeenCalledWith('decision-1',true);
+ snapshot.decision={...snapshot.decision,operation:'rent',recipientId:'player-1'};
+ ui.rerender(<PropertyPanel snapshot={snapshot} manifest={manifest} decide={decide}/>);
+ expect(screen.queryByRole('button',{name:'暂时放弃'})).not.toBeInTheDocument();
+ fireEvent.click(screen.getByRole('button',{name:'支付租金'}));expect(decide).toHaveBeenCalledTimes(2);
+});

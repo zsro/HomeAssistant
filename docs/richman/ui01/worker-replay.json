@@ -1,0 +1,261 @@
+{
+  "version": 1,
+  "rulesId": "japan-tools-candidate-v3",
+  "mapFingerprint": "6fb1abfd",
+  "catalogFingerprint": "628c3de8",
+  "itemFingerprint": "18003b93",
+  "config": {
+    "gameId": "1cf23e04-960a-4c39-85d5-33471552f3a1",
+    "seed": "s2-02d-worker",
+    "characterIds": [
+      "xiaomei",
+      "tuu",
+      "chyan",
+      "salonbus"
+    ],
+    "rulesId": "japan-tools-candidate-v3",
+    "initialFunds": 100000
+  },
+  "commands": [
+    {
+      "id": "command-1",
+      "gameId": "1cf23e04-960a-4c39-85d5-33471552f3a1",
+      "expectedRevision": 0,
+      "playerId": "player-1",
+      "action": {
+        "type": "item",
+        "action": {
+          "type": "begin",
+          "definitionId": "tool:09:build-nearby-anchor-v1"
+        }
+      }
+    },
+    {
+      "id": "command-2",
+      "gameId": "1cf23e04-960a-4c39-85d5-33471552f3a1",
+      "expectedRevision": 1,
+      "playerId": "player-1",
+      "action": {
+        "type": "item",
+        "action": {
+          "type": "cancel",
+          "decisionId": "1cf23e04-960a-4c39-85d5-33471552f3a1:effect:1"
+        }
+      }
+    },
+    {
+      "id": "command-3",
+      "gameId": "1cf23e04-960a-4c39-85d5-33471552f3a1",
+      "expectedRevision": 2,
+      "playerId": "player-1",
+      "action": {
+        "type": "item",
+        "action": {
+          "type": "begin",
+          "definitionId": "tool:09:build-nearby-anchor-v1"
+        }
+      }
+    },
+    {
+      "id": "command-4",
+      "gameId": "1cf23e04-960a-4c39-85d5-33471552f3a1",
+      "expectedRevision": 3,
+      "playerId": "player-1",
+      "action": {
+        "type": "pause",
+        "value": true
+      }
+    },
+    {
+      "id": "command-5",
+      "gameId": "1cf23e04-960a-4c39-85d5-33471552f3a1",
+      "expectedRevision": 4,
+      "playerId": "player-1",
+      "action": {
+        "type": "pause",
+        "value": false
+      }
+    },
+    {
+      "id": "command-6",
+      "gameId": "1cf23e04-960a-4c39-85d5-33471552f3a1",
+      "expectedRevision": 5,
+      "playerId": "player-1",
+      "action": {
+        "type": "item",
+        "action": {
+          "type": "cancel",
+          "decisionId": "1cf23e04-960a-4c39-85d5-33471552f3a1:effect:2"
+        }
+      }
+    },
+    {
+      "id": "command-7",
+      "gameId": "1cf23e04-960a-4c39-85d5-33471552f3a1",
+      "expectedRevision": 6,
+      "playerId": "player-1",
+      "action": {
+        "type": "item",
+        "action": {
+          "type": "begin",
+          "definitionId": "tool:09:build-nearby-anchor-v1"
+        }
+      }
+    },
+    {
+      "id": "command-8",
+      "gameId": "1cf23e04-960a-4c39-85d5-33471552f3a1",
+      "expectedRevision": 7,
+      "playerId": "player-1",
+      "action": {
+        "type": "item",
+        "action": {
+          "type": "confirm",
+          "decisionId": "1cf23e04-960a-4c39-85d5-33471552f3a1:effect:3",
+          "target": {
+            "kind": "property",
+            "id": "japan:land:21"
+          }
+        }
+      }
+    },
+    {
+      "id": "command-9",
+      "gameId": "1cf23e04-960a-4c39-85d5-33471552f3a1",
+      "expectedRevision": 8,
+      "playerId": "player-1",
+      "action": {
+        "type": "item",
+        "action": {
+          "type": "begin",
+          "definitionId": "tool:08:select-dice-v1"
+        }
+      }
+    },
+    {
+      "id": "command-10",
+      "gameId": "1cf23e04-960a-4c39-85d5-33471552f3a1",
+      "expectedRevision": 9,
+      "playerId": "player-1",
+      "action": {
+        "type": "item",
+        "action": {
+          "type": "confirm",
+          "decisionId": "1cf23e04-960a-4c39-85d5-33471552f3a1:effect:4",
+          "target": {
+            "kind": "player",
+            "id": "player-1"
+          }
+        },
+        "value": 1
+      }
+    },
+    {
+      "id": "command-11",
+      "gameId": "1cf23e04-960a-4c39-85d5-33471552f3a1",
+      "expectedRevision": 10,
+      "playerId": "player-1",
+      "action": {
+        "type": "animationDone",
+        "token": "1cf23e04-960a-4c39-85d5-33471552f3a1:1"
+      }
+    },
+    {
+      "id": "command-12",
+      "gameId": "1cf23e04-960a-4c39-85d5-33471552f3a1",
+      "expectedRevision": 11,
+      "playerId": "player-1",
+      "action": {
+        "type": "choose",
+        "decisionId": "1cf23e04-960a-4c39-85d5-33471552f3a1:2",
+        "node": 3
+      }
+    },
+    {
+      "id": "command-13",
+      "gameId": "1cf23e04-960a-4c39-85d5-33471552f3a1",
+      "expectedRevision": 12,
+      "playerId": "player-1",
+      "action": {
+        "type": "animationDone",
+        "token": "1cf23e04-960a-4c39-85d5-33471552f3a1:3"
+      }
+    },
+    {
+      "id": "command-14",
+      "gameId": "1cf23e04-960a-4c39-85d5-33471552f3a1",
+      "expectedRevision": 13,
+      "playerId": "player-1",
+      "action": {
+        "type": "property",
+        "decisionId": "1cf23e04-960a-4c39-85d5-33471552f3a1:4",
+        "accept": true
+      }
+    },
+    {
+      "id": "command-15",
+      "gameId": "1cf23e04-960a-4c39-85d5-33471552f3a1",
+      "expectedRevision": 14,
+      "playerId": "player-1",
+      "action": {
+        "type": "endTurn"
+      }
+    },
+    {
+      "id": "command-16",
+      "gameId": "1cf23e04-960a-4c39-85d5-33471552f3a1",
+      "expectedRevision": 15,
+      "playerId": "player-2",
+      "action": {
+        "type": "item",
+        "action": {
+          "type": "begin",
+          "definitionId": "tool:09:build-nearby-anchor-v1"
+        }
+      }
+    },
+    {
+      "id": "command-17",
+      "gameId": "1cf23e04-960a-4c39-85d5-33471552f3a1",
+      "expectedRevision": 16,
+      "playerId": "player-2",
+      "action": {
+        "type": "item",
+        "action": {
+          "type": "cancel",
+          "decisionId": "1cf23e04-960a-4c39-85d5-33471552f3a1:effect:5"
+        }
+      }
+    },
+    {
+      "id": "command-18",
+      "gameId": "1cf23e04-960a-4c39-85d5-33471552f3a1",
+      "expectedRevision": 17,
+      "playerId": "player-2",
+      "action": {
+        "type": "item",
+        "action": {
+          "type": "begin",
+          "definitionId": "tool:09:build-nearby-anchor-v1"
+        }
+      }
+    },
+    {
+      "id": "command-19",
+      "gameId": "1cf23e04-960a-4c39-85d5-33471552f3a1",
+      "expectedRevision": 18,
+      "playerId": "player-2",
+      "action": {
+        "type": "item",
+        "action": {
+          "type": "confirm",
+          "decisionId": "1cf23e04-960a-4c39-85d5-33471552f3a1:effect:6",
+          "target": {
+            "kind": "property",
+            "id": "japan:land:21"
+          }
+        }
+      }
+    }
+  ]
+}

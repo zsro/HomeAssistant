@@ -5,7 +5,7 @@ import type {AudioPacket} from './audio';
 import {godTrafficView} from './god-traffic-view';
 import { buildingName, priceText } from './game/g4';
 import { ROBOT_EFFECT } from './game/road-tools';
-import { atlasMask, pickMapTarget, pointerToWorld } from './map-picking';
+import { atlasMask, dragToWorld, pickMapTarget, pointerToWorld } from './map-picking';
 import type { PixelMask, PickLayer } from './map-picking';
 import { propertyOutline, roadSegments } from './map-geometry';
 import { propertyAppearance, propertySprite, validMapArt } from './property-art';
@@ -17,7 +17,7 @@ import type { SessionSnapshot } from './game/session';
 import type { Frame, Manifest, Snapshot } from './types';
 
 export const ASSET_ROOT = '/richman/generated/';
-export type SceneStats = { fps: number; zoom: number; sprites: number; objectSprites: number; objectIds: string[]; loadMs: number };
+export type SceneStats = { camera: { x: number; y: number; width: number; height: number }; fps: number; zoom: number; sprites: number; objectSprites: number; objectIds: string[]; loadMs: number };
 type Callbacks = {
   presentation?: (packet: AudioPacket) => void;
   propertySelected?: (propertyId: string, decisionId: string) => void;
@@ -314,7 +314,7 @@ export class RichmanScene {
   };
 
   private reportStats(fps: number) {
-    this.callbacks.stats({ fps, zoom: Math.round(this.zoom * 100), sprites: this.textures.size, objectSprites: this.godSprites.size, objectIds: [...this.godSprites.keys()].sort(), loadMs: Math.round(this.loadMs) });
+    this.callbacks.stats({ camera: { ...this.center, width: this.app.screen.width / this.zoom, height: this.app.screen.height / this.zoom }, fps, zoom: Math.round(this.zoom * 100), sprites: this.textures.size, objectSprites: this.godSprites.size, objectIds: [...this.godSprites.keys()].sort(), loadMs: Math.round(this.loadMs) });
   }
 
   private renderActors() {
@@ -457,8 +457,10 @@ export class RichmanScene {
     if (!this.drag.moved && Math.hypot(dx, dy) < 4) return;
     this.follow = false;
     this.drag.moved = true;
-    this.center.x -= dx / this.zoom;
-    this.center.y -= dy / this.zoom;
+    const delta = dragToWorld({ x: dx, y: dy }, this.app.canvas.getBoundingClientRect(), this.app.screen, this.zoom);
+    if (!delta) return;
+    this.center.x -= delta.x;
+    this.center.y -= delta.y;
     this.drag.x = event.clientX;
     this.drag.y = event.clientY;
     this.camera();
@@ -532,6 +534,14 @@ export class RichmanScene {
     this.center = { x: definition.x, y: definition.y - 35 };
     this.zoom = 1.2;
     this.highlightProperty(id);
+    this.camera();
+    this.reportStats(Math.round(this.app.ticker.FPS));
+  }
+  /** Presentation only: minimap navigation must never select a target or dispatch a game command. */
+  panTo(x: number, y: number) {
+    if (!Number.isFinite(x) || !Number.isFinite(y)) return;
+    this.follow = false;
+    this.center = { x, y };
     this.camera();
     this.reportStats(Math.round(this.app.ticker.FPS));
   }

@@ -1,0 +1,149 @@
+{
+  "environment": "Same local Chrome headless + SwiftShader, DPR 1, 1440x1080; 3 fresh contexts each, alternating order; idle scene, not hardware GPU benchmark",
+  "samples": [
+    {
+      "target": "baseline",
+      "run": 1,
+      "canvasReadyMs": 1002,
+      "fps": [
+        51,
+        58,
+        59,
+        59,
+        58,
+        59
+      ],
+      "sceneLoadMs": 384,
+      "canvas": [
+        1090,
+        626
+      ],
+      "requests": 22,
+      "transferredBytes": 7712223
+    },
+    {
+      "target": "candidate",
+      "run": 1,
+      "canvasReadyMs": 906,
+      "fps": [
+        53,
+        59,
+        59,
+        58,
+        59,
+        59
+      ],
+      "sceneLoadMs": 188,
+      "canvas": [
+        440,
+        440
+      ],
+      "requests": 77,
+      "transferredBytes": 8900997
+    },
+    {
+      "target": "candidate",
+      "run": 2,
+      "canvasReadyMs": 884,
+      "fps": [
+        51,
+        59,
+        58,
+        59,
+        59,
+        59
+      ],
+      "sceneLoadMs": 181,
+      "canvas": [
+        440,
+        440
+      ],
+      "requests": 77,
+      "transferredBytes": 8900997
+    },
+    {
+      "target": "baseline",
+      "run": 2,
+      "canvasReadyMs": 896,
+      "fps": [
+        56,
+        59,
+        59,
+        58,
+        59,
+        58
+      ],
+      "sceneLoadMs": 255,
+      "canvas": [
+        1090,
+        626
+      ],
+      "requests": 22,
+      "transferredBytes": 7712223
+    },
+    {
+      "target": "baseline",
+      "run": 3,
+      "canvasReadyMs": 877,
+      "fps": [
+        56,
+        59,
+        58,
+        59,
+        59,
+        58
+      ],
+      "sceneLoadMs": 246,
+      "canvas": [
+        1090,
+        626
+      ],
+      "requests": 22,
+      "transferredBytes": 7712223
+    },
+    {
+      "target": "candidate",
+      "run": 3,
+      "canvasReadyMs": 882,
+      "fps": [
+        52,
+        59,
+        58,
+        59,
+        58,
+        59
+      ],
+      "sceneLoadMs": 175,
+      "canvas": [
+        440,
+        440
+      ],
+      "requests": 77,
+      "transferredBytes": 8900997
+    }
+  ],
+  "summary": {
+    "baseline": {
+      "canvasReadyMs": 896,
+      "sceneLoadMs": 255,
+      "fps": 59,
+      "requests": 22,
+      "transferredBytes": 7712223,
+      "canvas": [
+        1090,
+        626
+      ]
+    },
+    "candidate": {
+      "canvasReadyMs": 884,
+      "sceneLoadMs": 181,
+      "fps": 59,
+      "requests": 77,
+      "transferredBytes": 8900997,
+      "canvas": [
+        440,
+        440
+      ]
+    }
+  }
+}

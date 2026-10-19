@@ -1,0 +1,29 @@
+{
+  "checks": [
+    "four native menu entries",
+    "LOAD truthful notice",
+    "audio draft retained across help",
+    "legacy mode and seed",
+    "minimum roster validation",
+    "computer policy config",
+    "same canvas and revision across portrait/landscape/desktop/fullscreen",
+    "44px compact toolbar",
+    "GO scaled pointer/keyboard and map drag",
+    "44px map controls",
+    "pause stops revisions",
+    "nested reset/exit cancellation restores pause",
+    "cancel setup restores mandatory decision",
+    "confirmed reset clears pending decision",
+    "result and replay",
+    "confirmed exit removes canvas"
+  ],
+  "sizes": [
+    "640x480",
+    "1280x960",
+    "1440x900",
+    "1440x1080",
+    "390x844",
+    "844x390"
+  ],
+  "errors": []
+}

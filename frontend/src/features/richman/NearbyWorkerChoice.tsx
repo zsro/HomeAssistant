@@ -1,3 +1,4 @@
+import { ClassicPrompt, ClassicDecisionActions } from './ClassicDecisionArt';
 import { useState } from 'react';
 import type { SessionSnapshot } from './game/session';
 import type { EffectAction } from './game/effects';
@@ -16,11 +17,12 @@ export function NearbyWorkerChoice({ snapshot, onUse, preview, selection, select
   const decisionId = snapshot.effects!.pending!.id;
   const selected = select ? selection?.decisionId === decisionId ? selection.propertyId : null : localSelected;
   const selectedDefinition = PROPERTY_CATALOG.properties.find(p => p.id === selected);
-  return <section className="rm-property rm-items" aria-label="机器工人选择">
-    <h2>选择邻近地块</h2>
-    <p>消耗 1 个机器工人，免费建造一级。归属不变，随后仍可掷骰。</p>
-    <p className="rm-property-note">候选版：以角色周边的固定范围选地；拖动、缩放和全屏不改变范围。暂未还原原版建筑遮挡选地。</p>
-    <p>可点选地图上的地块或住宅，也可从下方列表选择；点选不会立即消耗道具。</p>
+  return <section className="rm-property rm-items rm-classic-target" aria-label="机器工人选择">
+    <ClassicPrompt><h2>选择邻近地块</h2>
+      <p>机器工人 · 免费建造一级</p>
+      <p>{selectedDefinition ? `${selectedDefinition.name} · ${selectedDefinition.nodeIds.join(' / ')} 号路格` : '在地图或列表选择目标'}</p>
+    </ClassicPrompt>
+    <p>点选仅预览，确认后消耗 1 个机器工人；归属不变，随后仍可掷骰。</p>
     <fieldset disabled={snapshot.paused}><legend>选择建造目标（{targets.length} 块）</legend>
       <div className="rm-worker-targets">{targets.map(id => {
         const definition = PROPERTY_CATALOG.properties.find(p => p.id === id)!;
@@ -37,8 +39,9 @@ export function NearbyWorkerChoice({ snapshot, onUse, preview, selection, select
     {selectedDefinition && <p role="status">已选择：{selectedDefinition.name} · {selectedDefinition.nodeIds.join(" / ")} 号路格</p>}
     {selected && <button className="rm-button rm-button-light" disabled={snapshot.paused || !targets.includes(selected)} onClick={() => preview?.(selected)}>定位所选地块</button>}
     {error && <p role="alert">{error}</p>}
-    <div className="rm-property-actions"><button className="rm-button" disabled={snapshot.paused || !selected || !targets.includes(selected)} onClick={() => {
-      if (selected && !onUse({ type: 'confirm', decisionId, target: { kind: 'property', id: selected } })) setError('目标或当前操作已失效，未消耗道具。');
-    }}>确认建造</button><button className="rm-button rm-button-light" disabled={snapshot.paused} onClick={() => onUse({ type: 'cancel', decisionId })}>取消使用</button></div>
+    <ClassicDecisionActions accept="确认建造" decline="取消使用" disabled={snapshot.paused || !selected || !targets.includes(selected)} declineDisabled={snapshot.paused}
+      onAccept={() => { if (selected && !onUse({ type: 'confirm', decisionId, target: { kind: 'property', id: selected } })) setError('目标或当前操作已失效，未消耗道具。'); }}
+      onDecline={() => onUse({ type: 'cancel', decisionId })} />
+    <details className="rm-target-rules"><summary>选地说明</summary><p>以角色周边固定范围选地，拖动、缩放和全屏不改变范围。当前不模拟建筑遮挡选地。</p></details>
   </section>;
 }

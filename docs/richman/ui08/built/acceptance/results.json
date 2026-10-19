@@ -1,0 +1,1493 @@
+{
+  "scenarios": [
+    {
+      "scenario": "normal-dpr2",
+      "cleanup": {
+        "raf": 0,
+        "canvas": 0,
+        "observers": 0,
+        "listeners": []
+      },
+      "passed": true
+    },
+    {
+      "scenario": "required-retry",
+      "cleanup": {
+        "raf": 0,
+        "canvas": 0,
+        "observers": 0,
+        "listeners": []
+      },
+      "passed": true
+    },
+    {
+      "scenario": "missing-animation",
+      "cleanup": {
+        "raf": 0,
+        "canvas": 0,
+        "observers": 0,
+        "listeners": []
+      },
+      "passed": true
+    },
+    {
+      "scenario": "corrupt-animation",
+      "cleanup": {
+        "raf": 0,
+        "canvas": 0,
+        "observers": 0,
+        "listeners": []
+      },
+      "passed": true
+    },
+    {
+      "scenario": "missing-ui",
+      "cleanup": {
+        "raf": 0,
+        "canvas": 0,
+        "observers": 0,
+        "listeners": []
+      },
+      "passed": true
+    },
+    {
+      "scenario": "missing-audio",
+      "cleanup": {
+        "raf": 0,
+        "canvas": 0,
+        "observers": 0,
+        "listeners": []
+      },
+      "passed": true
+    },
+    {
+      "scenario": "late-exit",
+      "cleanup": {
+        "raf": 0,
+        "canvas": 0,
+        "observers": 0,
+        "listeners": []
+      },
+      "passed": true
+    },
+    {
+      "scenario": "context-loss",
+      "cleanup": {
+        "raf": 0,
+        "canvas": 0,
+        "observers": 0,
+        "listeners": []
+      },
+      "passed": true
+    }
+  ],
+  "entries": [
+    {
+      "name": "资产处置记录",
+      "panel": "disposal",
+      "text": "破产资产处置\n\n租金、公司费用、命运罚款、税款、负分红或到期贷款不足时先退出对局。多人继续且退出者原持有超过三块地产时，随机公开拍卖三块；收入归公共资金，不能恢复退出者资格。债权人只收到退出时可支付的现金与存款。\n\n尚未发生破产处置。\n\n税款实收归公共资金；负分红扣款不再进入公司或公共账本。前人拍卖可能改变后人可用现金与产权，冻结税额/净额不重算。退出者的股"
+    },
+    {
+      "name": "声音设置",
+      "panel": "settings",
+      "text": "开启声音\n静音\n音乐\n音效\n语音\n显示与操作设置"
+    },
+    {
+      "name": "操作帮助",
+      "panel": "help",
+      "text": "玩法与操作帮助\n\n拖动地图浏览；使用放大、缩小按钮或鼠标滚轮调整视角。触屏可单指拖动，缩放请用按钮。点击“跟随当前角色”可找回人物。\n\n选择目标后先核对名称、路格和预览，再点击确认；选中或定位不会立即使用道具。可取消后重新选择。\n\n全屏后可用“退出全屏”按钮返回，键盘可按 Esc。暂停时先点击“继续”再操作；重开和换局会丢弃当前未导出的进度，刷新页面会重新开"
+    },
+    {
+      "name": "人物资料",
+      "panel": "players",
+      "text": "同行的伙伴\n04\n\n第 1 回合 · 按列表顺序轮流行动\n\n孙小美\n当前角色\n现金 50,000\n存款 50,000\n点数 0\n步行 · 1 骰\n阿土伯\n等待出发\n现金 50,000\n存款 50,000\n点数 0\n步行 · 1 骰\n钱夫人\n等待出发\n现金 50,000\n存款 50,000\n点数 0\n步行 · 1 骰\n沙隆巴斯\n等待出发\n现金 50,000\n存"
+    },
+    {
+      "name": "道具与卡片",
+      "panel": "items",
+      "text": "我的道具\n0 点\n全部\n道具\n卡片\n只看已持有\n道具箱\n机器娃娃\n×1\n路障\n×1\n遥控骰子\n×1\n机器工人\n×1\n卡包 0/15\n\n尚未持有卡片。\n\n天使卡 × 0\n\n使用天使卡\n\n三越百货 160 点购买\n\n恶魔卡 × 0\n\n使用恶魔卡\n\n三越百货 180 点购买\n\n怪兽卡 × 0\n\n使用怪兽卡\n\n三越百货 60 点购买\n\n地雷 × 0\n\n使用地雷\n\n三"
+    },
+    {
+      "name": "股票市场",
+      "panel": "stocks",
+      "text": "股票市场 · 第1期\n\n1998-01-01 日本固定节日休市 · 所选股票可交易\n\n行情规则与结算记录\n持仓成本与盈亏账本\n\n当前玩家银行 50,000 元 · 股票估值 0 元\n\n交易与偿债规则\n12支股票行情与当前持仓\n股票\t现价 / 基准\t红黑行情\t可购 / 公共余股\t持股 / 均价 / 成本 / 市值 / 未实现盈亏\n富士银行\t160.00 / 1"
+    },
+    {
+      "name": "地产出售",
+      "panel": "sales",
+      "text": "地产挂牌市场\n挂牌\n关闭出售\n地产\n股票 · 暂未接入\n卡片 · 暂未接入\n道具 · 暂未接入\n\n每人最多七条；挂牌不转移资产，不提前收款。买家只用现金，成交款存入卖家银行；原价保留至改价或撤回。建筑类型、楼级、产权变化会撤销旧挂牌。\n\n挂牌自己的地产\n挂牌地产\n请选择地产\n\n当前没有挂牌。\n\n本次开放地产挂牌；股票、卡片和道具挂牌仍未接入。新闻税与负分红按"
+    },
+    {
+      "name": "彩票",
+      "panel": "lottery",
+      "text": "1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31\n32\n33\n34\n35\n36\n彩票 · 公共奖池 0 元\n\n每月15日开奖。每次停在彩票站可用现金1,000元买一张；经过或梦游不购彩。\n\n玩家 1：未持票\n玩家 2：未持票\n玩家 3：未持票"
+    },
+    {
+      "name": "保险办理",
+      "panel": "insurance",
+      "text": "三井生命 · 保险\n\n停在三井生命且已有经营者时抽取保障期限：3、5、10、15、20 或 30 次行动。经营者免费，其他玩家每次期限 1,000 元；先增加保障，再结算费用。\n\n玩家 1：未投保\n玩家 2：未投保\n玩家 3：未投保\n玩家 4：未投保\n\n住院、监禁、首次旅行、住宿及已核验的命运损失可触发赔付；罚款先支付，破产者不获补偿。赔款进入本人现金，公司"
+    },
+    {
+      "name": "公司服务",
+      "panel": "commerce",
+      "text": "日产建造与现场认股\n\n停在日产可使用建造服务；丰田、日产、SEGA和三井可现场认股。三井保险服务见保险面板。"
+    },
+    {
+      "name": "公司营业",
+      "panel": "company",
+      "text": "公司营业 · 丰田、日产、三井与 SEGA\n\n丰田：车辆系数 × 本次点数 × 700 元。SEGA：已过天数 × 150 元。仅落点收费，经营者本人及无人经营时免付。\n\n尚未发生营业结算。可在股票市场买股建立经营权。\n\n费用进入公司账本，每月15日按持股分配；经营者不直接收款。三越商店与富士银行保留现有业务，保险、日产建造和现场认股已接入。"
+    },
+    {
+      "name": "日历与分红",
+      "panel": "calendar",
+      "text": "公司账本 · 每月15日分红\n\n公司本期收益按在局玩家的实际持股比例分配；亏损也由持股人承担。先合计各公司分配，再入银行；银行不足扣现金，仍不足将退出。\n\n三越百貨：本期 0 元 · 累计 0 元\n豐田汽車：本期 0 元 · 累计 0 元\n日產建設：本期 0 元 · 累计 0 元\n三井生命：本期 0 元 · 累计 0 元\nＳＥＧＡ：本期 0 元 · 累计 0"
+    },
+    {
+      "name": "研究与道路状态",
+      "panel": "research",
+      "text": "道路与研究状态\n\n道路无地雷或炸弹。\n\n红色圆标为地雷，深色圆标为炸弹；头顶圆标表示携带。地雷停下触发；携带炸弹按移动格计时。攻击范围采用地图投影候选规则。"
+    },
+    {
+      "name": "魔法屋记录",
+      "panel": "magic-report",
+      "text": "当前模式或状态未启用此功能。入口已保留，尚未接入的业务暂时挂起。"
+    },
+    {
+      "name": "魔法屋",
+      "panel": "magic",
+      "text": "当前模式或状态未启用此功能。入口已保留，尚未接入的业务暂时挂起。"
+    },
+    {
+      "name": "设施探访",
+      "panel": "facility",
+      "text": "当前模式或状态未启用此功能。入口已保留，尚未接入的业务暂时挂起。"
+    },
+    {
+      "name": "商店经营记录",
+      "panel": "shop-report",
+      "text": "当前模式或状态未启用此功能。入口已保留，尚未接入的业务暂时挂起。"
+    },
+    {
+      "name": "命运",
+      "panel": "fortune",
+      "text": "当前模式或状态未启用此功能。入口已保留，尚未接入的业务暂时挂起。"
+    },
+    {
+      "name": "新闻",
+      "panel": "news",
+      "text": "当前模式或状态未启用此功能。入口已保留，尚未接入的业务暂时挂起。"
+    },
+    {
+      "name": "地产拍卖",
+      "panel": "auction",
+      "text": "当前模式或状态未启用此功能。入口已保留，尚未接入的业务暂时挂起。"
+    },
+    {
+      "name": "反应决策",
+      "panel": "reaction",
+      "text": "当前模式或状态未启用此功能。入口已保留，尚未接入的业务暂时挂起。"
+    },
+    {
+      "name": "银行与债务",
+      "panel": "finance",
+      "text": "当前模式或状态未启用此功能。入口已保留，尚未接入的业务暂时挂起。"
+    },
+    {
+      "name": "地产",
+      "panel": "property",
+      "text": "地产与资产\n物价 ×1\n\n停在普通地产后可购买、升级或支付租金。\n\n当前角色的地产（0）"
+    },
+    {
+      "name": "行动与交通",
+      "panel": "traffic",
+      "text": "行动与交通\n\n步行 · 1 骰\n\n骰子数量\n1 颗\n\n停留不移动；乌龟固定一格；梦游无法用卡或购买地产。状态在轮到该玩家时计时，暂停不推进。"
+    },
+    {
+      "name": "旅途记录",
+      "panel": "journey",
+      "text": "旅途记录\n↗\n\n轮到孙小美，请掷骰。\n\n已完成移动\n00\n当前路格\n01"
+    },
+    {
+      "name": "认输与衰神",
+      "panel": "surrender",
+      "text": "认输退出本局\n\n认输后将退出本局。请先确认，再进行资产处置。\n\n认输退出本局"
+    },
+    {
+      "name": "电脑状态",
+      "panel": "computer",
+      "text": "当前模式或状态未启用此功能。入口已保留，尚未接入的业务暂时挂起。"
+    },
+    {
+      "name": "小游戏",
+      "panel": "minigame",
+      "text": "当前模式或状态未启用此功能。入口已保留，尚未接入的业务暂时挂起。"
+    },
+    {
+      "name": "运行信息与验证工具",
+      "panel": "diagnostics",
+      "text": "运行信息与验证工具\n59 FPS · 1637 个精灵帧 · 8 个对象实例\n\nWebGL · 地图 2304 × 2304 · 110 个道路节点 · 首次场景加载 278 ms。地产模式按真实归属和等级显示建筑；住宅五级素材与朝向映射仍待原版运行对照。\n\n高亮道路节点定位岔路验证\n\n本局种子：d694e7c9 · 状态版本：2。相同配置、种子和选择可复现"
+    }
+  ],
+  "assets": [
+    {
+      "path": "animation/manifest.json",
+      "bytes": 9423,
+      "dimensions": null
+    },
+    {
+      "path": "animation/objects.webp",
+      "bytes": 166778,
+      "dimensions": [
+        1024,
+        292
+      ]
+    },
+    {
+      "path": "audio/effect-43.wav",
+      "bytes": 10288,
+      "dimensions": null
+    },
+    {
+      "path": "audio/effect-48.wav",
+      "bytes": 23142,
+      "dimensions": null
+    },
+    {
+      "path": "audio/effect-49.wav",
+      "bytes": 3302,
+      "dimensions": null
+    },
+    {
+      "path": "audio/effect-50.wav",
+      "bytes": 20008,
+      "dimensions": null
+    },
+    {
+      "path": "audio/manifest.json",
+      "bytes": 1201,
+      "dimensions": null
+    },
+    {
+      "path": "audio/track02.mp3",
+      "bytes": 2287848,
+      "dimensions": null
+    },
+    {
+      "path": "audio/track03.mp3",
+      "bytes": 2303993,
+      "dimensions": null
+    },
+    {
+      "path": "audio/track04.mp3",
+      "bytes": 2683906,
+      "dimensions": null
+    },
+    {
+      "path": "audio/track05.mp3",
+      "bytes": 3229054,
+      "dimensions": null
+    },
+    {
+      "path": "audio/track06.mp3",
+      "bytes": 3108420,
+      "dimensions": null
+    },
+    {
+      "path": "audio/track07.mp3",
+      "bytes": 2930128,
+      "dimensions": null
+    },
+    {
+      "path": "audio/track08.mp3",
+      "bytes": 2824509,
+      "dimensions": null
+    },
+    {
+      "path": "audio/track09.mp3",
+      "bytes": 3823025,
+      "dimensions": null
+    },
+    {
+      "path": "audio/voice-1077.wav",
+      "bytes": 71466,
+      "dimensions": null
+    },
+    {
+      "path": "audio/voice-1078.wav",
+      "bytes": 29194,
+      "dimensions": null
+    },
+    {
+      "path": "audio/voice-1079.wav",
+      "bytes": 35032,
+      "dimensions": null
+    },
+    {
+      "path": "audio/voice-1092.wav",
+      "bytes": 54764,
+      "dimensions": null
+    },
+    {
+      "path": "audio/voice-1131.wav",
+      "bytes": 64812,
+      "dimensions": null
+    },
+    {
+      "path": "audio/voice-1132.wav",
+      "bytes": 40954,
+      "dimensions": null
+    },
+    {
+      "path": "audio/voice-1133.wav",
+      "bytes": 21658,
+      "dimensions": null
+    },
+    {
+      "path": "audio/voice-1146.wav",
+      "bytes": 44498,
+      "dimensions": null
+    },
+    {
+      "path": "audio/voice-1158.wav",
+      "bytes": 35090,
+      "dimensions": null
+    },
+    {
+      "path": "audio/voice-1159.wav",
+      "bytes": 26100,
+      "dimensions": null
+    },
+    {
+      "path": "audio/voice-1160.wav",
+      "bytes": 20572,
+      "dimensions": null
+    },
+    {
+      "path": "audio/voice-1173.wav",
+      "bytes": 29142,
+      "dimensions": null
+    },
+    {
+      "path": "audio/voice-1293.wav",
+      "bytes": 37138,
+      "dimensions": null
+    },
+    {
+      "path": "audio/voice-1294.wav",
+      "bytes": 24986,
+      "dimensions": null
+    },
+    {
+      "path": "audio/voice-1295.wav",
+      "bytes": 46128,
+      "dimensions": null
+    },
+    {
+      "path": "audio/voice-1308.wav",
+      "bytes": 26344,
+      "dimensions": null
+    },
+    {
+      "path": "chyan.webp",
+      "bytes": 4542,
+      "dimensions": [
+        67,
+        74
+      ]
+    },
+    {
+      "path": "dice-1.webp",
+      "bytes": 634,
+      "dimensions": [
+        35,
+        41
+      ]
+    },
+    {
+      "path": "dice-2.webp",
+      "bytes": 588,
+      "dimensions": [
+        35,
+        41
+      ]
+    },
+    {
+      "path": "dice-3.webp",
+      "bytes": 612,
+      "dimensions": [
+        35,
+        41
+      ]
+    },
+    {
+      "path": "dice-4.webp",
+      "bytes": 682,
+      "dimensions": [
+        35,
+        41
+      ]
+    },
+    {
+      "path": "dice-5.webp",
+      "bytes": 618,
+      "dimensions": [
+        35,
+        41
+      ]
+    },
+    {
+      "path": "dice-6.webp",
+      "bytes": 628,
+      "dimensions": [
+        35,
+        41
+      ]
+    },
+    {
+      "path": "japan-mini.webp",
+      "bytes": 19080,
+      "dimensions": [
+        320,
+        320
+      ]
+    },
+    {
+      "path": "japan.webp",
+      "bytes": 2515610,
+      "dimensions": [
+        2304,
+        2304
+      ]
+    },
+    {
+      "path": "manifest.json",
+      "bytes": 183379,
+      "dimensions": null
+    },
+    {
+      "path": "salonbus.webp",
+      "bytes": 3644,
+      "dimensions": [
+        70,
+        65
+      ]
+    },
+    {
+      "path": "sprites.webp",
+      "bytes": 4551612,
+      "dimensions": [
+        2048,
+        3575
+      ]
+    },
+    {
+      "path": "tuu.webp",
+      "bytes": 3792,
+      "dimensions": [
+        77,
+        65
+      ]
+    },
+    {
+      "path": "ui/Data-1/000.png",
+      "bytes": 226181,
+      "dimensions": [
+        640,
+        480
+      ]
+    },
+    {
+      "path": "ui/Data-1/001.png",
+      "bytes": 13332,
+      "dimensions": [
+        108,
+        105
+      ]
+    },
+    {
+      "path": "ui/Data-1/002.png",
+      "bytes": 16040,
+      "dimensions": [
+        116,
+        113
+      ]
+    },
+    {
+      "path": "ui/Data-1/003.png",
+      "bytes": 11503,
+      "dimensions": [
+        107,
+        92
+      ]
+    },
+    {
+      "path": "ui/Data-1/004.png",
+      "bytes": 13990,
+      "dimensions": [
+        114,
+        99
+      ]
+    },
+    {
+      "path": "ui/Data-1/005.png",
+      "bytes": 9147,
+      "dimensions": [
+        98,
+        90
+      ]
+    },
+    {
+      "path": "ui/Data-1/006.png",
+      "bytes": 10459,
+      "dimensions": [
+        103,
+        98
+      ]
+    },
+    {
+      "path": "ui/Data-1/007.png",
+      "bytes": 1717,
+      "dimensions": [
+        53,
+        18
+      ]
+    },
+    {
+      "path": "ui/Data-1/008.png",
+      "bytes": 1757,
+      "dimensions": [
+        58,
+        19
+      ]
+    },
+    {
+      "path": "ui/Data-3/000.png",
+      "bytes": 142659,
+      "dimensions": [
+        347,
+        363
+      ]
+    },
+    {
+      "path": "ui/Data-399/000.png",
+      "bytes": 7037,
+      "dimensions": [
+        96,
+        48
+      ]
+    },
+    {
+      "path": "ui/Data-399/001.png",
+      "bytes": 6898,
+      "dimensions": [
+        96,
+        48
+      ]
+    },
+    {
+      "path": "ui/Data-399/002.png",
+      "bytes": 7268,
+      "dimensions": [
+        96,
+        48
+      ]
+    },
+    {
+      "path": "ui/Data-476/005.png",
+      "bytes": 12658,
+      "dimensions": [
+        195,
+        133
+      ]
+    },
+    {
+      "path": "ui/Panel-0/000.png",
+      "bytes": 66712,
+      "dimensions": [
+        200,
+        280
+      ]
+    },
+    {
+      "path": "ui/Panel-0/001.png",
+      "bytes": 67013,
+      "dimensions": [
+        200,
+        280
+      ]
+    },
+    {
+      "path": "ui/Panel-0/002.png",
+      "bytes": 66946,
+      "dimensions": [
+        200,
+        280
+      ]
+    },
+    {
+      "path": "ui/Panel-0/003.png",
+      "bytes": 66735,
+      "dimensions": [
+        200,
+        280
+      ]
+    },
+    {
+      "path": "ui/Panel-1/000.png",
+      "bytes": 3801,
+      "dimensions": [
+        439,
+        40
+      ]
+    },
+    {
+      "path": "ui/Panel-1/001.png",
+      "bytes": 838,
+      "dimensions": [
+        19,
+        34
+      ]
+    },
+    {
+      "path": "ui/Panel-1/002.png",
+      "bytes": 1007,
+      "dimensions": [
+        34,
+        32
+      ]
+    },
+    {
+      "path": "ui/Panel-1/003.png",
+      "bytes": 1001,
+      "dimensions": [
+        30,
+        32
+      ]
+    },
+    {
+      "path": "ui/Panel-1/004.png",
+      "bytes": 1132,
+      "dimensions": [
+        32,
+        36
+      ]
+    },
+    {
+      "path": "ui/Panel-1/005.png",
+      "bytes": 1121,
+      "dimensions": [
+        32,
+        32
+      ]
+    },
+    {
+      "path": "ui/Panel-1/006.png",
+      "bytes": 1569,
+      "dimensions": [
+        34,
+        32
+      ]
+    },
+    {
+      "path": "ui/Panel-1/007.png",
+      "bytes": 985,
+      "dimensions": [
+        32,
+        33
+      ]
+    },
+    {
+      "path": "ui/Panel-1/008.png",
+      "bytes": 1220,
+      "dimensions": [
+        34,
+        31
+      ]
+    },
+    {
+      "path": "ui/Panel-1/009.png",
+      "bytes": 1865,
+      "dimensions": [
+        35,
+        34
+      ]
+    },
+    {
+      "path": "ui/Panel-1/010.png",
+      "bytes": 2085,
+      "dimensions": [
+        36,
+        35
+      ]
+    },
+    {
+      "path": "ui/Panel-1/011.png",
+      "bytes": 1234,
+      "dimensions": [
+        36,
+        35
+      ]
+    },
+    {
+      "path": "ui/Panel-1/012.png",
+      "bytes": 1159,
+      "dimensions": [
+        22,
+        39
+      ]
+    },
+    {
+      "path": "ui/Panel-1/013.png",
+      "bytes": 1446,
+      "dimensions": [
+        39,
+        37
+      ]
+    },
+    {
+      "path": "ui/Panel-1/014.png",
+      "bytes": 1641,
+      "dimensions": [
+        35,
+        39
+      ]
+    },
+    {
+      "path": "ui/Panel-1/015.png",
+      "bytes": 1672,
+      "dimensions": [
+        37,
+        41
+      ]
+    },
+    {
+      "path": "ui/Panel-1/016.png",
+      "bytes": 1644,
+      "dimensions": [
+        37,
+        38
+      ]
+    },
+    {
+      "path": "ui/Panel-1/017.png",
+      "bytes": 2008,
+      "dimensions": [
+        39,
+        37
+      ]
+    },
+    {
+      "path": "ui/Panel-1/018.png",
+      "bytes": 1374,
+      "dimensions": [
+        37,
+        38
+      ]
+    },
+    {
+      "path": "ui/Panel-1/019.png",
+      "bytes": 1688,
+      "dimensions": [
+        38,
+        36
+      ]
+    },
+    {
+      "path": "ui/Panel-1/020.png",
+      "bytes": 1174,
+      "dimensions": [
+        38,
+        36
+      ]
+    },
+    {
+      "path": "ui/Panel-1/021.png",
+      "bytes": 2859,
+      "dimensions": [
+        41,
+        40
+      ]
+    },
+    {
+      "path": "ui/Panel-1/022.png",
+      "bytes": 1554,
+      "dimensions": [
+        41,
+        40
+      ]
+    },
+    {
+      "path": "ui/Panel-10/000.png",
+      "bytes": 339366,
+      "dimensions": [
+        640,
+        480
+      ]
+    },
+    {
+      "path": "ui/Panel-10/002.png",
+      "bytes": 47710,
+      "dimensions": [
+        173,
+        448
+      ]
+    },
+    {
+      "path": "ui/Panel-10/016.png",
+      "bytes": 459977,
+      "dimensions": [
+        640,
+        480
+      ]
+    },
+    {
+      "path": "ui/Panel-10/018.png",
+      "bytes": 53245,
+      "dimensions": [
+        182,
+        256
+      ]
+    },
+    {
+      "path": "ui/Panel-11/000.png",
+      "bytes": 112670,
+      "dimensions": [
+        412,
+        180
+      ]
+    },
+    {
+      "path": "ui/Panel-11/001.png",
+      "bytes": 111726,
+      "dimensions": [
+        412,
+        180
+      ]
+    },
+    {
+      "path": "ui/Panel-11/002.png",
+      "bytes": 1671,
+      "dimensions": [
+        40,
+        34
+      ]
+    },
+    {
+      "path": "ui/Panel-11/003.png",
+      "bytes": 1436,
+      "dimensions": [
+        38,
+        25
+      ]
+    },
+    {
+      "path": "ui/Panel-11/004.png",
+      "bytes": 1583,
+      "dimensions": [
+        39,
+        39
+      ]
+    },
+    {
+      "path": "ui/Panel-11/005.png",
+      "bytes": 1423,
+      "dimensions": [
+        22,
+        38
+      ]
+    },
+    {
+      "path": "ui/Panel-11/006.png",
+      "bytes": 1021,
+      "dimensions": [
+        34,
+        19
+      ]
+    },
+    {
+      "path": "ui/Panel-11/007.png",
+      "bytes": 1295,
+      "dimensions": [
+        39,
+        20
+      ]
+    },
+    {
+      "path": "ui/Panel-11/008.png",
+      "bytes": 621,
+      "dimensions": [
+        14,
+        32
+      ]
+    },
+    {
+      "path": "ui/Panel-11/009.png",
+      "bytes": 1179,
+      "dimensions": [
+        38,
+        38
+      ]
+    },
+    {
+      "path": "ui/Panel-11/010.png",
+      "bytes": 1790,
+      "dimensions": [
+        32,
+        40
+      ]
+    },
+    {
+      "path": "ui/Panel-11/011.png",
+      "bytes": 1764,
+      "dimensions": [
+        36,
+        32
+      ]
+    },
+    {
+      "path": "ui/Panel-11/012.png",
+      "bytes": 845,
+      "dimensions": [
+        34,
+        15
+      ]
+    },
+    {
+      "path": "ui/Panel-11/013.png",
+      "bytes": 1125,
+      "dimensions": [
+        34,
+        19
+      ]
+    },
+    {
+      "path": "ui/Panel-11/014.png",
+      "bytes": 977,
+      "dimensions": [
+        14,
+        36
+      ]
+    },
+    {
+      "path": "ui/Panel-12/000.png",
+      "bytes": 293467,
+      "dimensions": [
+        640,
+        480
+      ]
+    },
+    {
+      "path": "ui/Panel-12/001.png",
+      "bytes": 87130,
+      "dimensions": [
+        358,
+        298
+      ]
+    },
+    {
+      "path": "ui/Panel-18/000.png",
+      "bytes": 345327,
+      "dimensions": [
+        640,
+        480
+      ]
+    },
+    {
+      "path": "ui/Panel-18/001.png",
+      "bytes": 33921,
+      "dimensions": [
+        165,
+        213
+      ]
+    },
+    {
+      "path": "ui/Panel-2/000.png",
+      "bytes": 36087,
+      "dimensions": [
+        200,
+        200
+      ]
+    },
+    {
+      "path": "ui/Panel-2/001.png",
+      "bytes": 37770,
+      "dimensions": [
+        200,
+        200
+      ]
+    },
+    {
+      "path": "ui/Panel-2/002.png",
+      "bytes": 56742,
+      "dimensions": [
+        200,
+        200
+      ]
+    },
+    {
+      "path": "ui/Panel-2/003.png",
+      "bytes": 23378,
+      "dimensions": [
+        200,
+        200
+      ]
+    },
+    {
+      "path": "ui/Panel-2/004.png",
+      "bytes": 24089,
+      "dimensions": [
+        200,
+        200
+      ]
+    },
+    {
+      "path": "ui/Panel-2/005.png",
+      "bytes": 23251,
+      "dimensions": [
+        200,
+        200
+      ]
+    },
+    {
+      "path": "ui/Panel-2/006.png",
+      "bytes": 39274,
+      "dimensions": [
+        200,
+        200
+      ]
+    },
+    {
+      "path": "ui/Panel-2/007.png",
+      "bytes": 15934,
+      "dimensions": [
+        200,
+        200
+      ]
+    },
+    {
+      "path": "ui/Panel-21/002.png",
+      "bytes": 452,
+      "dimensions": [
+        49,
+        25
+      ]
+    },
+    {
+      "path": "ui/Panel-21/004.png",
+      "bytes": 270,
+      "dimensions": [
+        33,
+        17
+      ]
+    },
+    {
+      "path": "ui/Panel-21/005.png",
+      "bytes": 239,
+      "dimensions": [
+        33,
+        17
+      ]
+    },
+    {
+      "path": "ui/Panel-21/006.png",
+      "bytes": 251,
+      "dimensions": [
+        33,
+        17
+      ]
+    },
+    {
+      "path": "ui/Panel-21/007.png",
+      "bytes": 239,
+      "dimensions": [
+        33,
+        17
+      ]
+    },
+    {
+      "path": "ui/Panel-21/008.png",
+      "bytes": 235,
+      "dimensions": [
+        33,
+        17
+      ]
+    },
+    {
+      "path": "ui/Panel-21/009.png",
+      "bytes": 249,
+      "dimensions": [
+        33,
+        17
+      ]
+    },
+    {
+      "path": "ui/Panel-21/010.png",
+      "bytes": 255,
+      "dimensions": [
+        33,
+        17
+      ]
+    },
+    {
+      "path": "ui/Panel-21/011.png",
+      "bytes": 256,
+      "dimensions": [
+        33,
+        17
+      ]
+    },
+    {
+      "path": "ui/Panel-21/012.png",
+      "bytes": 245,
+      "dimensions": [
+        33,
+        17
+      ]
+    },
+    {
+      "path": "ui/Panel-21/013.png",
+      "bytes": 234,
+      "dimensions": [
+        33,
+        17
+      ]
+    },
+    {
+      "path": "ui/Panel-21/014.png",
+      "bytes": 253,
+      "dimensions": [
+        33,
+        17
+      ]
+    },
+    {
+      "path": "ui/Panel-21/015.png",
+      "bytes": 248,
+      "dimensions": [
+        33,
+        17
+      ]
+    },
+    {
+      "path": "ui/Panel-23/000.png",
+      "bytes": 255585,
+      "dimensions": [
+        640,
+        480
+      ]
+    },
+    {
+      "path": "ui/Panel-23/016.png",
+      "bytes": 2347,
+      "dimensions": [
+        114,
+        40
+      ]
+    },
+    {
+      "path": "ui/Panel-23/017.png",
+      "bytes": 2083,
+      "dimensions": [
+        114,
+        40
+      ]
+    },
+    {
+      "path": "ui/Panel-26/000.png",
+      "bytes": 314616,
+      "dimensions": [
+        640,
+        480
+      ]
+    },
+    {
+      "path": "ui/Panel-26/003.png",
+      "bytes": 2262,
+      "dimensions": [
+        87,
+        39
+      ]
+    },
+    {
+      "path": "ui/Panel-26/005.png",
+      "bytes": 2162,
+      "dimensions": [
+        87,
+        39
+      ]
+    },
+    {
+      "path": "ui/Panel-26/006.png",
+      "bytes": 3702,
+      "dimensions": [
+        94,
+        46
+      ]
+    },
+    {
+      "path": "ui/Panel-26/007.png",
+      "bytes": 2518,
+      "dimensions": [
+        87,
+        39
+      ]
+    },
+    {
+      "path": "ui/Panel-26/008.png",
+      "bytes": 3634,
+      "dimensions": [
+        94,
+        46
+      ]
+    },
+    {
+      "path": "ui/Panel-26/009.png",
+      "bytes": 2720,
+      "dimensions": [
+        87,
+        39
+      ]
+    },
+    {
+      "path": "ui/Panel-26/010.png",
+      "bytes": 3703,
+      "dimensions": [
+        94,
+        46
+      ]
+    },
+    {
+      "path": "ui/Panel-26/011.png",
+      "bytes": 2738,
+      "dimensions": [
+        87,
+        39
+      ]
+    },
+    {
+      "path": "ui/Panel-26/012.png",
+      "bytes": 3725,
+      "dimensions": [
+        94,
+        46
+      ]
+    },
+    {
+      "path": "ui/Panel-26/013.png",
+      "bytes": 2639,
+      "dimensions": [
+        87,
+        39
+      ]
+    },
+    {
+      "path": "ui/Panel-26/014.png",
+      "bytes": 3357,
+      "dimensions": [
+        94,
+        46
+      ]
+    },
+    {
+      "path": "ui/Panel-26/015.png",
+      "bytes": 2866,
+      "dimensions": [
+        87,
+        39
+      ]
+    },
+    {
+      "path": "ui/Panel-26/016.png",
+      "bytes": 3693,
+      "dimensions": [
+        94,
+        46
+      ]
+    },
+    {
+      "path": "ui/Panel-26/017.png",
+      "bytes": 32332,
+      "dimensions": [
+        109,
+        388
+      ]
+    },
+    {
+      "path": "ui/Panel-63/000.png",
+      "bytes": 271784,
+      "dimensions": [
+        640,
+        480
+      ]
+    },
+    {
+      "path": "ui/Panel-65/000.png",
+      "bytes": 362799,
+      "dimensions": [
+        640,
+        480
+      ]
+    },
+    {
+      "path": "ui/Panel-66/000.png",
+      "bytes": 32081,
+      "dimensions": [
+        440,
+        480
+      ]
+    },
+    {
+      "path": "ui/Panel-66/001.png",
+      "bytes": 24484,
+      "dimensions": [
+        440,
+        480
+      ]
+    },
+    {
+      "path": "ui/Panel-7/000.png",
+      "bytes": 4314,
+      "dimensions": [
+        72,
+        67
+      ]
+    },
+    {
+      "path": "ui/Panel-7/001.png",
+      "bytes": 4452,
+      "dimensions": [
+        72,
+        67
+      ]
+    },
+    {
+      "path": "ui/Panel-7/002.png",
+      "bytes": 4758,
+      "dimensions": [
+        72,
+        67
+      ]
+    },
+    {
+      "path": "ui/Panel-7/003.png",
+      "bytes": 4810,
+      "dimensions": [
+        72,
+        67
+      ]
+    },
+    {
+      "path": "ui/Panel-7/004.png",
+      "bytes": 4574,
+      "dimensions": [
+        72,
+        67
+      ]
+    },
+    {
+      "path": "ui/Panel-7/005.png",
+      "bytes": 4868,
+      "dimensions": [
+        72,
+        67
+      ]
+    },
+    {
+      "path": "ui/Panel-7/006.png",
+      "bytes": 306,
+      "dimensions": [
+        15,
+        15
+      ]
+    },
+    {
+      "path": "ui/Panel-7/007.png",
+      "bytes": 284,
+      "dimensions": [
+        15,
+        15
+      ]
+    },
+    {
+      "path": "ui/Panel-7/008.png",
+      "bytes": 290,
+      "dimensions": [
+        15,
+        15
+      ]
+    },
+    {
+      "path": "ui/Panel-7/009.png",
+      "bytes": 291,
+      "dimensions": [
+        15,
+        15
+      ]
+    },
+    {
+      "path": "ui/Panel-7/010.png",
+      "bytes": 313,
+      "dimensions": [
+        15,
+        15
+      ]
+    },
+    {
+      "path": "ui/Panel-7/011.png",
+      "bytes": 331,
+      "dimensions": [
+        15,
+        15
+      ]
+    },
+    {
+      "path": "ui/Panel-71/000.png",
+      "bytes": 2561,
+      "dimensions": [
+        75,
+        61
+      ]
+    },
+    {
+      "path": "ui/Panel-71/002.png",
+      "bytes": 25883,
+      "dimensions": [
+        164,
+        164
+      ]
+    },
+    {
+      "path": "ui/Panel-73/000.png",
+      "bytes": 260096,
+      "dimensions": [
+        596,
+        348
+      ]
+    },
+    {
+      "path": "ui/Panel-75/000.png",
+      "bytes": 291503,
+      "dimensions": [
+        640,
+        480
+      ]
+    },
+    {
+      "path": "ui/Panel-76/000.png",
+      "bytes": 139866,
+      "dimensions": [
+        592,
+        432
+      ]
+    },
+    {
+      "path": "xiaomei.webp",
+      "bytes": 4196,
+      "dimensions": [
+        73,
+        72
+      ]
+    }
+  ],
+  "errors": []
+}

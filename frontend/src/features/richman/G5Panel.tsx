@@ -1,3 +1,4 @@
+import { ClassicItemIcon } from './ClassicBusinessArt';
 import { useState } from 'react';
 import type { SessionSnapshot } from './game/session';
 import { PROPERTY_CATALOG } from './game/economy';
@@ -7,8 +8,9 @@ export function ResearchPanel({ snapshot, start }: { snapshot: SessionSnapshot; 
   const options = snapshot.researchChoices ?? [];
   const option = options.find(o => `${o.propertyId}/${o.itemId}` === choice);
   if (!options.length) return null;
-  return <section className="rm-property" aria-label="研究生产"><h2>研究所生产</h2>
+  return <section className="rm-property rm-business-ledger" aria-label="研究生产"><h2>研究所生产</h2>
     <p>选择后确认开工，免费等待5次自身行动，完成自动入包（每种最多9件，满包不接收）。产权改变、改建、查封或等级不足会取消任务。{snapshot.g7 ? '机器工人/时光机/传送机/工程车/核子飞弹分别需1/2/3/4/5级。' : '机器工人需1级，工程车需4级；此模式其他研究产品未开放。'}</p>
+    <div className="rm-research-projects" role="group" aria-label="研究项目">{options.map(o=><button type="button" key={`${o.propertyId}/${o.itemId}`} disabled={snapshot.paused} aria-pressed={choice===`${o.propertyId}/${o.itemId}`} onClick={()=>setChoice(`${o.propertyId}/${o.itemId}`)}><ClassicItemIcon id={o.itemId} />{o.title}</button>)}</div>
     <label className="rm-form-field">生产项目<select value={option ? choice : ''} disabled={snapshot.paused} onChange={e => setChoice(e.target.value)}><option value="">暂不生产</option>{options.map(o => <option key={`${o.propertyId}/${o.itemId}`} value={`${o.propertyId}/${o.itemId}`}>{o.title}</option>)}</select></label>
     <button className="rm-button" disabled={snapshot.paused || !option} onClick={() => { if (option && !start(option.propertyId, option.itemId)) setError('项目已失效，未开始生产。'); else { setChoice(''); setError(''); } }}>确认开始研究</button>
     {error && <p role="alert">{error}</p>}

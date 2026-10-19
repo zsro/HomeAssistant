@@ -1,3 +1,4 @@
+import { ClassicNumberKeys, ClassicPrompt, ClassicDecisionActions } from './ClassicDecisionArt';
 import { stockValue } from './game/g6-market';
 import { useState } from 'react';
 import type { Manifest } from './types';
@@ -11,7 +12,7 @@ const money = (amount: number) => amount.toLocaleString('zh-CN');
 type Props = {
   snapshot: SessionSnapshot; manifest: Manifest; loan?:(id:string,operation:'borrow'|'repay',amount:number)=>boolean;
   transfer: (id: string, operation: 'deposit' | 'withdraw', amount: number) => void;
-  leaveBank: (id: string) => void; settleDebt: (id: string) => void; newGame: () => void;
+  leaveBank: (id: string) => void; settleDebt: (id: string) => void; newGame: () => void; downloadReplay?: () => void;
 };
 function BankForm({ loan, snapshot, decision, balance, paused, transfer, leaveBank, remaining }: {
   snapshot:SessionSnapshot; loan?:Props['loan']; decision: BankDecision; balance: Balance; paused: boolean; remaining: number;
@@ -22,19 +23,27 @@ function BankForm({ loan, snapshot, decision, balance, paused, transfer, leaveBa
   const amount = /^\d+$/.test(input) ? Number(input) : NaN;
   const valid = !rejected && bankTransfer(balance, operation, amount) !== null;
   const maximum = operation === 'deposit' ? balance.cash : balance.bank;
-  return <section className="rm-property rm-finance" aria-label="银行存取款">
+  return <section className="rm-property rm-finance rm-classic-bank" aria-label="银行存取款">
     <div className="rm-section-title"><h2>富士銀行</h2><span>{decision.arrival === 'passing' ? '途中停留' : '本次落点'}</span></div>
-    <p>现金 {money(balance.cash)} · 存款 {money(balance.bank)}</p>{!!rejected && <p role="status">银行拒绝往来：{rejected&128?"下次自身行动解除":`剩余 ${rejected} 次自身行动边界`}，停止存取款及借还款。</p>}
-    <form onSubmit={(event) => { event.preventDefault(); if (valid && !paused) transfer(decision.id, operation, amount); }}>
-      <fieldset disabled={paused || !!rejected}>
+    <div className="rm-bank-scene">
+    <div className="rm-bank-picture"><img className="rm-bank-backdrop" src="/richman/generated/ui/Panel-23/000.png" alt="" />
+      <button className="rm-bank-exit" aria-label={remaining ? `离开银行，继续 ${remaining} 步` : '离开银行，结束移动'} title={remaining ? `离开银行，继续 ${remaining} 步` : '离开银行，结束移动'} disabled={paused} onClick={() => leaveBank(decision.id)}><span>EXIT</span></button>
+    </div>
+    <div className="rm-bank-service">
+    <p className="rm-bank-balances">现金 <strong>{money(balance.cash)}</strong> · 存款 <strong>{money(balance.bank)}</strong></p>{!!rejected && <p role="status">银行拒绝往来：{rejected&128?"下次自身行动解除":`剩余 ${rejected} 次自身行动边界`}，停止存取款及借还款。</p>}
+    <form className="rm-bank-transfer" onSubmit={(event) => { event.preventDefault(); if (valid && !paused) transfer(decision.id, operation, amount); }}>
+      <fieldset className="rm-bank-fields" disabled={paused || !!rejected}>
         <label className="rm-form-field">业务<select value={operation} onChange={(event) => { setOperation(event.target.value as 'deposit' | 'withdraw'); setInput(''); }}><option value="withdraw">取款到现金</option><option value="deposit">存入银行</option></select></label>
         <label className="rm-form-field">金额（整数元）<input inputMode="numeric" value={input} onChange={(event) => setInput(event.target.value)} autoComplete="off" /><small>最多 {money(maximum)} 元</small></label>
         {input && !valid && <p role="alert">请输入余额范围内的正整数。</p>}
+        <ClassicNumberKeys value={input} onChange={setInput} maximum={maximum} disabled={paused || !!rejected} />
         <div className="rm-property-actions"><button type="button" className="rm-button rm-button-light" disabled={maximum === 0} onClick={() => setInput(String(maximum))}>全部{operation === 'deposit' ? '存入' : '取出'}</button><button className="rm-button" type="submit" disabled={!valid}>确认{operation === 'deposit' ? '存款' : '取款'}</button></div>
       </fieldset>
     </form>
-    {snapshot.news?.business && loan ? <LoanForm snapshot={snapshot} loan={loan} /> : <p className="rm-property-note">本阶段仅开放基础存取款，不计利息，不提供贷款。</p>}
-    <button className="rm-button rm-button-light" disabled={paused} onClick={() => leaveBank(decision.id)}>{remaining ? `离开银行，继续 ${remaining} 步` : '离开银行，结束移动'}</button>
+    </div>
+    </div>
+    {snapshot.news?.business && loan ? <LoanForm snapshot={snapshot} loan={loan} /> : <details className="rm-bank-unavailable"><summary>借款与还款</summary><p>当前模式未启用贷款，入口保留。基础存取款可正常使用，不计利息。</p></details>}
+    <p className="rm-property-note">{remaining ? `离开后继续前进 ${remaining} 步。` : '离开后结束本次移动。'}</p>
   </section>;
 }
 function LoanForm({snapshot,loan}:{snapshot:SessionSnapshot;loan:NonNullable<Props['loan']>}){
@@ -50,7 +59,7 @@ function LoanForm({snapshot,loan}:{snapshot:SessionSnapshot;loan:NonNullable<Pro
  <button className="rm-button" disabled={!valid}>确认{operation==='borrow'?'借款':'还款'}</button></fieldset>
  <p>借款计入银行和负债，还款先用银行再用现金。有贷款者不领新闻储金红利；{snapshot.calendar?`到期日 ${snapshot.calendar.due[id]??'无'}。首次借款90天，休市顺延，追加不延期。有贷款不领月息；到期自动收款。`:'暂不计利息或到期催收。'}</p>{message&&<p role="status">{message}</p>}</form>;
 }
-export function FinancePanel({ loan, snapshot, manifest, transfer, leaveBank, settleDebt, newGame }: Props) {
+export function FinancePanel({ loan, snapshot, manifest, transfer, leaveBank, settleDebt, newGame, downloadReplay }: Props) {
   const economy = snapshot.economy, finance = snapshot.finance;
   if (!economy || !finance) return null;
   const playerId = snapshot.debtDecision?.payerId ?? `player-${snapshot.participants.indexOf(snapshot.active) + 1}`;
@@ -61,7 +70,7 @@ export function FinancePanel({ loan, snapshot, manifest, transfer, leaveBank, se
     const debt = snapshot.debtDecision;
     const owned = economy.properties.filter((p) => p.ownerId === playerId);
     return <section className="rm-property rm-finance rm-debt" aria-label="债务处理">
-      <h2>租金不足 · 破产清算</h2><p>付款人：{name(playerId)}</p>
+      <ClassicPrompt><h2>租金不足 · 破产清算</h2><p>付款人：{name(playerId)}</p></ClassicPrompt>
       <p>应付{name(debt.recipientId)} <strong>{money(debt.amount)} 元</strong></p>
       <p>现金 {money(economy.balances[playerId].cash)} · 存款 {money(economy.balances[playerId].bank)}</p>
       <p role="status">可支付 {money(debt.available)} 元，差额 {money(debt.shortfall)} 元无法偿付。</p>
@@ -71,11 +80,11 @@ export function FinancePanel({ loan, snapshot, manifest, transfer, leaveBank, se
       {!!owned.length && <details><summary>将失去的地产</summary><ul>{owned.map((p) => <li key={p.id}>{PROPERTY_CATALOG.properties.find((d) => d.id === p.id)?.name} · {p.id.split(':')[2]}号 · {p.level}级</li>)}</ul></details>}
       <p className="rm-property-note">候选破产规则：地产不自动抵债，不直接转给债权人。{finance.disposal?'多人继续且原持地超过三块时公开拍卖三块；仅剩一人则结束对局，不再处置资产。':'本阶段不进行后续拍卖。'}</p>
       {finance.disposal&&<p>确认后退出；若仍有多人且原持地超过三块，将公开处置三块地产。拍卖款不抵偿本笔欠款，债权人实收在处置结束后入账。</p>}
-    <button className="rm-button" disabled={snapshot.paused} onClick={() => settleDebt(debt.id)}>确认支付现有资金并破产</button>
+    <ClassicDecisionActions accept="确认支付现有资金并破产" disabled={snapshot.paused} onAccept={() => settleDebt(debt.id)} />
     </section>;
   }
   if (snapshot.phase === 'finished' && finance.winnerId) return <section className="rm-property rm-finance rm-result" aria-label="对局结果">
-    <p className="rm-eyebrow">本局结束</p><h2>{name(finance.winnerId)}获胜</h2>
+    <ClassicPrompt><p className="rm-eyebrow">本局结束</p><h2>{name(finance.winnerId)}获胜</h2></ClassicPrompt>
     <p>本局采用最后一位未破产玩家获胜的限定玩法。</p>
     <ul className="rm-result-list">{snapshot.participants.map((_, i) => {
       const id = `player-${i + 1}`, balance = economy.balances[id];
@@ -84,7 +93,7 @@ export function FinancePanel({ loan, snapshot, manifest, transfer, leaveBank, se
       return <li key={id}><strong>{name(id)} · {finance.eliminated.includes(id) ? '已破产' : '胜者'}</strong><span>现金 {money(balance.cash)} / 存款 {money(balance.bank)}</span><span>地产估值 {money(value)}{snapshot.g6 ? ` / 股票 ${money(stocks)}` : ''} / 贷款 {money(loans)} / 净值 {money(balance.cash + balance.bank + value + stocks-loans)}</span></li>;
     })}</ul>
     <p className="rm-property-note">地产估值按地价加建造成本汇总，仅供查看，不作为本局胜负依据。</p>
-    <button className="rm-button" onClick={newGame}>再开一局</button>
+    <div className="rm-result-actions"><button className="rm-button" onClick={newGame}>再开一局</button>{downloadReplay && <button className="rm-button rm-button-light" onClick={downloadReplay}>下载回放记录</button>}</div>
   </section>;
   return null;
 }

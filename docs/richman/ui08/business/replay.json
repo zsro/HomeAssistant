@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "rulesId": "japan-events-candidate-v47",
+  "mapFingerprint": "6fb1abfd",
+  "catalogFingerprint": "628c3de8",
+  "itemFingerprint": "c6d96cc",
+  "config": {
+    "humanIds": [
+      "player-1",
+      "player-2",
+      "player-3",
+      "player-4"
+    ],
+    "startDate": "1998-01-07",
+    "gameId": "68b0f39d-4b2d-42b4-80c5-e3c7b51aec27",
+    "seed": "ui05-business",
+    "characterIds": [
+      "xiaomei",
+      "tuu",
+      "chyan",
+      "salonbus"
+    ],
+    "rulesId": "japan-events-candidate-v47",
+    "initialFunds": 100000
+  },
+  "commands": [
+    {
+      "id": "command-1",
+      "gameId": "68b0f39d-4b2d-42b4-80c5-e3c7b51aec27",
+      "expectedRevision": 0,
+      "playerId": "player-1",
+      "action": {
+        "type": "stockTrade",
+        "stockId": "jp:24",
+        "side": "buy",
+        "quantity": 2
+      }
+    },
+    {
+      "id": "command-2",
+      "gameId": "68b0f39d-4b2d-42b4-80c5-e3c7b51aec27",
+      "expectedRevision": 1,
+      "playerId": "player-1",
+      "action": {
+        "type": "stockTrade",
+        "stockId": "jp:24",
+        "side": "sell",
+        "quantity": 1
+      }
+    }
+  ]
+}

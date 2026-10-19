@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { atlasMask, pickMapTarget, pointerToWorld, spriteContains } from './map-picking';
+import { atlasMask, dragToWorld, pickMapTarget, pointerToWorld, spriteContains } from './map-picking';
 import type { PickLayer } from './map-picking';
 
 const mask = { width: 4, height: 2, alpha: Uint8Array.from([0, 255, 0, 0, 255, 0, 1, 0]) };
@@ -8,6 +8,20 @@ const sprite: Extract<PickLayer, { kind: 'sprite' }> = { kind: 'sprite', target:
 const land: PickLayer = { kind: 'land', target: 'b', x: 100, y: 80, shape: { kind: 'land', direction: 0 } };
 
 describe('Web map picking using actual sprite opacity and draw order', () => {
+  it('keeps dragging and clicking in the same world coordinates under outer UI scaling', () => {
+    for (const scale of [0.5, 1, 1.75, 2]) {
+      const screen = { width: 440, height: 440 };
+      const rect = { left: 50, top: 80, width: 440 * scale, height: 440 * scale };
+      const world = { x: -100, y: -200, zoom: 1.4 };
+      const from = { x: 100, y: 120 }, delta = { x: 40, y: 30 };
+      const a = pointerToWorld(from, rect, screen, world)!;
+      const b = pointerToWorld({ x: from.x + delta.x, y: from.y + delta.y }, rect, screen, world)!;
+      const drag = dragToWorld(delta, rect, screen, world.zoom)!;
+      expect(drag.x).toBeCloseTo(b.x - a.x);
+      expect(drag.y).toBeCloseTo(b.y - a.y);
+    }
+    expect(dragToWorld({ x: 1, y: 1 }, { width: 0, height: 440 }, { width: 440, height: 440 }, 1)).toBeNull();
+  });
   it('extracts alpha rather than treating RGB black or bounding boxes as opaque', () => {
     expect(atlasMask(2, 1, new Uint8ClampedArray([255, 20, 1, 0, 0, 0, 0, 255])).alpha).toEqual(Uint8Array.from([0, 255]));
     expect(() => atlasMask(2, 1, new Uint8ClampedArray(4))).toThrow(/尺寸/);

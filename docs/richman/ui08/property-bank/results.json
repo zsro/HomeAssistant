@@ -1,0 +1,15 @@
+{
+  "stage": "UI-04",
+  "seed": "ui04-1",
+  "uiCommands": 138,
+  "turn": 53,
+  "covered": [
+    "buy",
+    "bank",
+    "rent",
+    "upgrade"
+  ],
+  "animation": "only repeated existing 50ms ticks; no map/economy/state injection",
+  "replayEconomyMatches": true,
+  "errors": []
+}

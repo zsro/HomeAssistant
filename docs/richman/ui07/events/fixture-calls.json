@@ -1,0 +1,66 @@
+[
+  [
+    "news",
+    "news"
+  ],
+  [
+    "fortune",
+    "fortune",
+    "card:18"
+  ],
+  [
+    "magic",
+    "magic",
+    1
+  ],
+  [
+    "magic",
+    "magic",
+    4
+  ],
+  [
+    "magic",
+    "magic",
+    null
+  ],
+  [
+    "auction",
+    "auction",
+    500
+  ],
+  [
+    "auction",
+    "auction",
+    null
+  ],
+  [
+    "reaction",
+    "reaction",
+    "decline",
+    null
+  ],
+  [
+    "finance",
+    "debt"
+  ],
+  [
+    "minigame",
+    {
+      "kind": "start"
+    }
+  ],
+  [
+    "minigame",
+    {
+      "kind": "point",
+      "x": 326,
+      "y": 206
+    }
+  ],
+  [
+    "minigame",
+    {
+      "kind": "ack"
+    }
+  ]
+]

@@ -1,0 +1,21 @@
+{
+  "realRoute": [
+    "cancel surrender without mutation",
+    "double-click surrender only once",
+    "mandatory target selection",
+    "mobile target choice",
+    "replay command counts",
+    "actual surrender disposal receipt"
+  ],
+  "replayVerified": true,
+  "fixtures": [
+    "news",
+    "fortune donor handoff",
+    "magic choose/build/result",
+    "auction responder cash",
+    "nested reaction handoff",
+    "debt single confirmation",
+    "minigame scaled input/pause/result"
+  ],
+  "errors": []
+}

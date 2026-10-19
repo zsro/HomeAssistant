@@ -1,0 +1,11 @@
+{
+  "stage": "UI-04-built",
+  "seed": "ui04-1",
+  "uiCommands": 21,
+  "covered": [
+    "buy",
+    "bank"
+  ],
+  "keypadAndTransfers": true,
+  "errors": []
+}

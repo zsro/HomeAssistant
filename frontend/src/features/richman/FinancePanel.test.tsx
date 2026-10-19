@@ -78,3 +78,19 @@ it('v23 bank refusal disables every service but preserves exit and visible reaso
  props.snapshot.phase='bank';props.snapshot.bankDecision={kind:'bank',id:'refused',node:1,arrival:'passing'};props.snapshot.news!.business!.bankRejected!['player-1']=30;
  render(<FinancePanel {...props}/>);expect(screen.getByRole('status')).toHaveTextContent('银行拒绝往来');expect(screen.getByLabelText('业务')).toBeDisabled();expect(screen.getByLabelText('贷款业务')).toBeDisabled();expect(screen.getByRole('button',{name:'确认取款'})).toBeDisabled();expect(screen.getByRole('button',{name:'确认借款'})).toBeDisabled();fireEvent.click(screen.getByRole('button',{name:/离开银行/}));expect(props.leaveBank).toHaveBeenCalledWith('refused');expect(props.loan).not.toHaveBeenCalled();
 });
+
+it('native keypad edits drafts, supports repeated digits, clear/backspace/MAX, and never submits by itself', () => {
+ const props=fixture();props.snapshot.phase='bank';props.snapshot.bankDecision={kind:'bank',id:'keypad-bank',node:1,arrival:'landing'};
+ const ui=render(<FinancePanel {...props}/>);
+ const input=screen.getByLabelText(/金额（整数元）/);
+ fireEvent.click(screen.getByRole('button',{name:'输入 1'}),{detail:1});
+ fireEvent.click(screen.getByRole('button',{name:'输入 1'}),{detail:2});
+ fireEvent.click(screen.getByRole('button',{name:'输入 0'}));expect(input).toHaveValue('110');
+ fireEvent.click(screen.getByRole('button',{name:'删除末位'}));expect(input).toHaveValue('11');
+ fireEvent.click(screen.getByRole('button',{name:'清空金额'}));expect(input).toHaveValue('');
+ fireEvent.click(screen.getByRole('button',{name:'填入最大金额'}));expect(input).toHaveValue('50000');
+ expect(props.transfer).not.toHaveBeenCalled();
+ props.snapshot.paused=true;ui.rerender(<FinancePanel {...props}/>);
+ expect(screen.getByRole('button',{name:'输入 1'})).toBeDisabled();
+ expect(screen.getByRole('button',{name:'填入最大金额'})).toBeDisabled();
+});

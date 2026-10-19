@@ -1,0 +1,42 @@
+[
+  {
+    "file": "computer-research-v44-2-replay.json",
+    "sha256": "51e36c984efcf6a77bd82d646c8f54122395fb440507ee2726a87fc72cf68017",
+    "archiveMatches": true
+  },
+  {
+    "file": "computer-research-v44-3-replay.json",
+    "sha256": "c1aa2de930b36d312feba1a87ad72689eb44b3c87d602e23f8183d1f47cfc3ce",
+    "archiveMatches": true
+  },
+  {
+    "file": "computer-research-v44-4-replay.json",
+    "sha256": "7d7e44e9a8b2b499376ff4ed390bb4d114c1b475b842a0576f177d575b6bdb71",
+    "archiveMatches": true
+  },
+  {
+    "file": "strategy-circuit-v44-liquidation-replay.json",
+    "sha256": "c795494ce54dc301708dca3356c7937009ba329a8bb0f6cbc21ad71b689efd93",
+    "archiveMatches": true
+  },
+  {
+    "file": "strategy-circuit-v44-restore-3-replay.json",
+    "sha256": "09411811f9a66934ffa90755dbaff0fa755611a7567c55128d026daa95245d08",
+    "archiveMatches": true
+  },
+  {
+    "file": "strategy-circuit-v44-terminal-2-replay.json",
+    "sha256": "16bafb5ad998abd21ecdf1b6f17dbc72f6a4514a022489b7e7473432a3683cee",
+    "archiveMatches": true
+  },
+  {
+    "file": "strategy-circuit-v44-terminal-3-replay.json",
+    "sha256": "0c0cf4ca5c0ab3662cea920fb4ee2eb083b88ed0da6ef1ecd80ecac1dc60188f",
+    "archiveMatches": true
+  },
+  {
+    "file": "strategy-circuit-v44-terminal-4-replay.json",
+    "sha256": "6f76adf125bce0beffae5d30f7d96b078845fa329610afcdc7658612265b6c3c",
+    "archiveMatches": true
+  }
+]

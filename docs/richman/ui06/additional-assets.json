@@ -1,0 +1,506 @@
+{
+  "sources": {
+    "Data.mkf": {
+      "bytes": 53296712,
+      "sha256": "c63023e815b1ad4bef172b6415d128c7f041f12b71b5d80dc3ff29240a0a1988"
+    },
+    "Panel.mkf": {
+      "bytes": 25351066,
+      "sha256": "5b9bfd11a866694cfdf93457d2010d30f20a43f96b668e5186fa99452e16f563"
+    },
+    "map.mkf": {
+      "bytes": 40312048,
+      "sha256": "717aaa1c1becf277064d29772500027427d39488bad64a7ee42875975c0e7106"
+    },
+    "rich4.exe": {
+      "bytes": 591360,
+      "sha256": "110b29f9d2fadcff3836eb69ec380aa264951859c90955da6e11158d2f956a13"
+    }
+  },
+  "resources": [
+    {
+      "id": "Panel-18",
+      "archive": "Panel.mkf",
+      "index": 18,
+      "resourceSha256": "3f0de89347216c237874343e80ab8a7c460635f27ae81605ce29f70086c55527",
+      "graph": {
+        "signature": "SMP",
+        "frameCount": 35,
+        "bytesPerPixel": 2,
+        "frames": [
+          {
+            "index": 0,
+            "width": 640,
+            "height": 480,
+            "anchorX": 0,
+            "anchorY": 0,
+            "bytes": 614400,
+            "path": "Panel-18/000.png",
+            "rgbaSha256": "b0ba753c86c98ec32b5c725932327970778ccaf88116311fdabacd3db25b12da",
+            "pngSha256": "578ef5fa791efc06c4b106eca6f587a05499ab2b07685a068cf1c9fc17274dd0"
+          },
+          {
+            "index": 1,
+            "width": 165,
+            "height": 213,
+            "anchorX": 0,
+            "anchorY": 0,
+            "bytes": 70290,
+            "path": "Panel-18/001.png",
+            "rgbaSha256": "ce0f5cbf5701f2c3b6e25a3e5debd20d081b17b2b9297acd8b897752f26a1f9c",
+            "pngSha256": "b45de4fa98da1b77a99da40ff30f6db79877be19c9b1be7f6f96bfeb4c87fb91"
+          },
+          {
+            "index": 2,
+            "width": 284,
+            "height": 210,
+            "anchorX": 0,
+            "anchorY": 0,
+            "bytes": 119280,
+            "path": "Panel-18/002.png",
+            "rgbaSha256": "f755fdf649d787c52d69fa731c3d175bc9a8a5167e906b2cf6c3846d600eed4d",
+            "pngSha256": "3b3ceb7941a4a932e29ae2f29cea9c5406a9d5a13c86600081a36015d9510855"
+          },
+          {
+            "index": 3,
+            "width": 60,
+            "height": 35,
+            "anchorX": 0,
+            "anchorY": 0,
+            "bytes": 4200,
+            "path": "Panel-18/003.png",
+            "rgbaSha256": "1c51cce9fda9f0c54947b9e29b47614ef475607a85fac2ed28572e6b92e2105f",
+            "pngSha256": "79bf095e8f34bdf6c86fb269f5c798d42aaf65a0f38b0c48d420e99c40b78ca3"
+          },
+          {
+            "index": 4,
+            "width": 60,
+            "height": 18,
+            "anchorX": 0,
+            "anchorY": 0,
+            "bytes": 2160,
+            "path": "Panel-18/004.png",
+            "rgbaSha256": "0ec89ab6d2961bc41fe278a1a35f0ec38c098df51a724a667e2f951f85a2c7b4",
+            "pngSha256": "45eb6a365fbda547a50e52e10ebfc12fefdf5d1687b3ea439052eaa9ee340063"
+          },
+          {
+            "index": 5,
+            "width": 60,
+            "height": 21,
+            "anchorX": 0,
+            "anchorY": 0,
+            "bytes": 2520,
+            "path": "Panel-18/005.png",
+            "rgbaSha256": "6a10ff66207e6ca6faaf478b2a054d1ce0e5ef2ec52cf70849dab378a93d6b1b",
+            "pngSha256": "057ac4278eb25d7cfa161bdadfc3755e82394955a774477af1a89a9ceacc37bd"
+          },
+          {
+            "index": 6,
+            "width": 142,
+            "height": 120,
+            "anchorX": 69,
+            "anchorY": 56,
+            "bytes": 34080,
+            "path": "Panel-18/006.png",
+            "rgbaSha256": "0248fc2ed74519cad41bf94d9f7347a8e3b56c0031d079e7621df97445d23de1",
+            "pngSha256": "b23fda4001624203bcbccb08c9d32f834806586785dafb4a91bc5a5b69b9e6d0"
+          },
+          {
+            "index": 7,
+            "width": 142,
+            "height": 120,
+            "anchorX": 72,
+            "anchorY": 56,
+            "bytes": 34080,
+            "path": "Panel-18/007.png",
+            "rgbaSha256": "f59df45a34f244d7a51fca3040d16657de5c4b2c92278883af76aeb4ac1943dc",
+            "pngSha256": "1cb80d6c6d7fa869bd6d51a79fda6e05b2d1491a98eaaa74dcb84c82adf69594"
+          },
+          {
+            "index": 8,
+            "width": 280,
+            "height": 173,
+            "anchorX": 140,
+            "anchorY": 86,
+            "bytes": 96880,
+            "path": "Panel-18/008.png",
+            "rgbaSha256": "6824109c15eb88a08f471f82b22a15453350b794a9f342871382a60f098d411b",
+            "pngSha256": "71c3ec68895a56a633406abd1f754a58bfa005404882380c8fb607fc4e7035ad"
+          },
+          {
+            "index": 9,
+            "width": 142,
+            "height": 120,
+            "anchorX": 70,
+            "anchorY": 64,
+            "bytes": 34080,
+            "path": "Panel-18/009.png",
+            "rgbaSha256": "60cd65ffc889da4c83c22a3de2e014da26a81b426724cb69fc0a38174a780176",
+            "pngSha256": "e5904a3bfb5bc9c476bbe1f46929b3304f00225be2ed8ddff206d25c49b87166"
+          },
+          {
+            "index": 10,
+            "width": 141,
+            "height": 120,
+            "anchorX": 72,
+            "anchorY": 64,
+            "bytes": 33840,
+            "path": "Panel-18/010.png",
+            "rgbaSha256": "68b63c1a9e5724621414100e7ca47180b7e0f65d4c26ad22bc3e881403594b38",
+            "pngSha256": "b37cac5b186936331d5949a8bf5e1aad6547465b54018708c3b632743294dcbd"
+          },
+          {
+            "index": 11,
+            "width": 57,
+            "height": 53,
+            "anchorX": 28,
+            "anchorY": 26,
+            "bytes": 6042,
+            "path": "Panel-18/011.png",
+            "rgbaSha256": "5fb2ef31c61b94dd665f6cd3bc491b0550a42b6ede2b3543fb8ebabcc956d302",
+            "pngSha256": "aab6f4191e4561e0295f6d0dfcd51c2041577f6caf84a9011c5d3f9f9ce862a3"
+          },
+          {
+            "index": 12,
+            "width": 50,
+            "height": 47,
+            "anchorX": 26,
+            "anchorY": 24,
+            "bytes": 4700,
+            "path": "Panel-18/012.png",
+            "rgbaSha256": "bef071d408eb907ca7789ff40aa4ac934a7ba895f24ade2a5d4aed4ed6203fe3",
+            "pngSha256": "7eb086691df204865d6a01394435e18f5d8c41aa47348a27c4f17d80d414702d"
+          },
+          {
+            "index": 13,
+            "width": 49,
+            "height": 44,
+            "anchorX": 22,
+            "anchorY": 19,
+            "bytes": 4312,
+            "path": "Panel-18/013.png",
+            "rgbaSha256": "ba2bdd84ed7ab7ebb8b51b3f42dcab5cb56380772130290dd76716e4510f8641",
+            "pngSha256": "a73b155ce116ec036075239743776a296093b914df895c8a9bdd9fbc46514758"
+          },
+          {
+            "index": 14,
+            "width": 60,
+            "height": 61,
+            "anchorX": 29,
+            "anchorY": 30,
+            "bytes": 7320,
+            "path": "Panel-18/014.png",
+            "rgbaSha256": "1c3515d048c6e6e46781a79449aa2ce11585036fbfb549f55d1979d736981f66",
+            "pngSha256": "bf7e4d6495f9a556ed79af43b523214f21fe8e533f865c9177aeda0dcaaffee3"
+          },
+          {
+            "index": 15,
+            "width": 46,
+            "height": 60,
+            "anchorX": 23,
+            "anchorY": 30,
+            "bytes": 5520,
+            "path": "Panel-18/015.png",
+            "rgbaSha256": "292fc867a47a5b22cc78d9a1c5de76d69785cc1bfd56f3fdc06fbd039da4b59d",
+            "pngSha256": "62c9a82cbd3ee77fd0d59e2c74a4a171584c2eeb7f3b16c201db7bd584a45635"
+          },
+          {
+            "index": 16,
+            "width": 37,
+            "height": 40,
+            "anchorX": 18,
+            "anchorY": 21,
+            "bytes": 2960,
+            "path": "Panel-18/016.png",
+            "rgbaSha256": "73ae6c65faf295970e5bca16b92d3f3f73bd37c32908387cdd77e2c2d4404c4f",
+            "pngSha256": "9dd05afb05b6ae5866a8bd4bcbe7817952e4cdad0864e624aea0b7c813907312"
+          },
+          {
+            "index": 17,
+            "width": 64,
+            "height": 38,
+            "anchorX": 31,
+            "anchorY": 17,
+            "bytes": 4864,
+            "path": "Panel-18/017.png",
+            "rgbaSha256": "5aa42472cd3d258e3531ec730d5d436388a55b8447c84bba717f6314a5c90098",
+            "pngSha256": "489cf61f8773ad7dc1c56e61da54fa1cadc35ea5b6022e49b8a35db73e2616be"
+          },
+          {
+            "index": 18,
+            "width": 51,
+            "height": 47,
+            "anchorX": 27,
+            "anchorY": 24,
+            "bytes": 4794,
+            "path": "Panel-18/018.png",
+            "rgbaSha256": "3541f519c61b40eb83678edc83b0b635129ee5ebabebc00d2da68b31eb8dcc32",
+            "pngSha256": "3cf785f47d0aa7307ea9744c457a6e681ba2676e9e2774146a6512b179af65db"
+          },
+          {
+            "index": 19,
+            "width": 51,
+            "height": 39,
+            "anchorX": 27,
+            "anchorY": 20,
+            "bytes": 3978,
+            "path": "Panel-18/019.png",
+            "rgbaSha256": "048071fd564cc470f806ed05c46e76d14c41f2c2dd98be6325a26a71ef2cdbc0",
+            "pngSha256": "518e0a5b364ab893de601ca5e512169a0f07943ad5c58d6b96b16168fed75050"
+          },
+          {
+            "index": 20,
+            "width": 55,
+            "height": 58,
+            "anchorX": 28,
+            "anchorY": 30,
+            "bytes": 6380,
+            "path": "Panel-18/020.png",
+            "rgbaSha256": "fc9d1d99d3fffd7effe2a5180b3d2741399077a5a440ea5701d96f55fe485b0c",
+            "pngSha256": "fcb79b7cae8dfa49b3147fbd2fd0b0db034a63e2b9bfe906ad2b54569efc59f1"
+          },
+          {
+            "index": 21,
+            "width": 38,
+            "height": 55,
+            "anchorX": 21,
+            "anchorY": 28,
+            "bytes": 4180,
+            "path": "Panel-18/021.png",
+            "rgbaSha256": "c4bf8b7a9649055dbe37dc79f3059b9f12d832ced7a391823bb02cde63b6f462",
+            "pngSha256": "24c078b8e5d7a95e6d29cc0c38e92cf4ca1d7e96f40e35005508205af59082c3"
+          },
+          {
+            "index": 22,
+            "width": 40,
+            "height": 48,
+            "anchorX": 18,
+            "anchorY": 24,
+            "bytes": 3840,
+            "path": "Panel-18/022.png",
+            "rgbaSha256": "89da9350e5960df9cb8a49edc1c6e68f6dabb9683738ec1f7bc27438c79ba3e4",
+            "pngSha256": "f27e5f1aa0f4f48d341ae1e321f36226567e6f2f214f79324018b70fb8346d9f"
+          },
+          {
+            "index": 23,
+            "width": 64,
+            "height": 42,
+            "anchorX": 32,
+            "anchorY": 21,
+            "bytes": 5376,
+            "path": "Panel-18/023.png",
+            "rgbaSha256": "1fb96319f175df69cb1d8b66df7f76a1c341f11e2dba9d8be92c94a36095fb84",
+            "pngSha256": "d96a9adf42be09998ee93f3eb097a7daf92813120183e5b87e1a35cce7a3f02e"
+          },
+          {
+            "index": 24,
+            "width": 40,
+            "height": 55,
+            "anchorX": 21,
+            "anchorY": 26,
+            "bytes": 4400,
+            "path": "Panel-18/024.png",
+            "rgbaSha256": "cef5b44734f203a48a2ddca84641fdee4ef796606c33b2ddf6dcd09c2f587b42",
+            "pngSha256": "ff5c18eb3f7c342b2cccd771f6bc870f72c065119d1ac0ac585a12d5e0777459"
+          },
+          {
+            "index": 25,
+            "width": 57,
+            "height": 50,
+            "anchorX": 28,
+            "anchorY": 25,
+            "bytes": 5700,
+            "path": "Panel-18/025.png",
+            "rgbaSha256": "f9e547958d3f3b81a3871810c8418ccb5135dbf164fb4a9ff34dc6f18d6ea55e",
+            "pngSha256": "ac4d9b0ebedf724ed7b26e25b8637686f54b1ed936869183ca782aea3b7999b4"
+          },
+          {
+            "index": 26,
+            "width": 58,
+            "height": 50,
+            "anchorX": 29,
+            "anchorY": 26,
+            "bytes": 5800,
+            "path": "Panel-18/026.png",
+            "rgbaSha256": "e5b3fbb38648c1ac4a5a3085d1eae7f35e6e09d0c80867eec52e153e97b368d2",
+            "pngSha256": "311867ab1312943244c61cb79a04ef4bb344500a403c69dee65eea7bc8e51b4c"
+          },
+          {
+            "index": 27,
+            "width": 46,
+            "height": 49,
+            "anchorX": 23,
+            "anchorY": 27,
+            "bytes": 4508,
+            "path": "Panel-18/027.png",
+            "rgbaSha256": "5a0ccece4867af8fba548699974114f9427b0b457c565a817afad1cf84584123",
+            "pngSha256": "e39e488b2c2adafef96ed11837193bd4eef2edb2648bb3b6a208f44efef3c5b1"
+          },
+          {
+            "index": 28,
+            "width": 53,
+            "height": 51,
+            "anchorX": 28,
+            "anchorY": 26,
+            "bytes": 5406,
+            "path": "Panel-18/028.png",
+            "rgbaSha256": "ab385aca3cf6a2a09de40ad78fa20a22ab617e2fe870cf7634ba69aeb0a63a66",
+            "pngSha256": "0034f357cfdd68a9559d3a21a7edf9ec9806711d4d63274fac243052a894cbde"
+          },
+          {
+            "index": 29,
+            "width": 40,
+            "height": 64,
+            "anchorX": 17,
+            "anchorY": 32,
+            "bytes": 5120,
+            "path": "Panel-18/029.png",
+            "rgbaSha256": "ac1edb91deb14ce9c3ef628ba7ff8e9fb6dc24cf209792277638d8c62df0b6b0",
+            "pngSha256": "d0b3a40575989c68261e37913f0e50cd02f7ae4c5f302a0932b5bc9d976de1d1"
+          },
+          {
+            "index": 30,
+            "width": 58,
+            "height": 58,
+            "anchorX": 28,
+            "anchorY": 29,
+            "bytes": 6728,
+            "path": "Panel-18/030.png",
+            "rgbaSha256": "6b36e55a66a161cfa97232139d7325f6a75faece7e8805f91083e97e96625b4a",
+            "pngSha256": "de30f131eb34a89952fab803b8c554325fa1b955b74f1d973b9784d13ef15b4f"
+          },
+          {
+            "index": 31,
+            "width": 55,
+            "height": 55,
+            "anchorX": 27,
+            "anchorY": 28,
+            "bytes": 6050,
+            "path": "Panel-18/031.png",
+            "rgbaSha256": "2ffd65a0644e79e42507802900016f9e58b508192253905fb4d754a09818ca7e",
+            "pngSha256": "bd692798c25029a369567bc1feb62af9a6e1e53e8a981b8033c0bf67740f4ac0"
+          },
+          {
+            "index": 32,
+            "width": 54,
+            "height": 44,
+            "anchorX": 26,
+            "anchorY": 21,
+            "bytes": 4752,
+            "path": "Panel-18/032.png",
+            "rgbaSha256": "acf5f4537703c893fc2450bd03341f33cff8ef36e090c95a3536403153293ce7",
+            "pngSha256": "b50a5a69394fc786bef766766ec014abe132ca7c6161e173f933302b971bfd42"
+          },
+          {
+            "index": 33,
+            "width": 52,
+            "height": 54,
+            "anchorX": 25,
+            "anchorY": 27,
+            "bytes": 5616,
+            "path": "Panel-18/033.png",
+            "rgbaSha256": "52fbb2f1b1a274536a6deb87aa100ddfbcafd3bfdcf00d77fd9ce7f08817b264",
+            "pngSha256": "c3c4065ab5cb368c7955636343edd46718c9566cb2ef409170f7de3f514bcf01"
+          },
+          {
+            "index": 34,
+            "width": 49,
+            "height": 57,
+            "anchorX": 25,
+            "anchorY": 28,
+            "bytes": 5586,
+            "path": "Panel-18/034.png",
+            "rgbaSha256": "e1ba1f02198ac96295e2c33eda044d06f75a99e4b2d98e5383113c2ae3ae4840",
+            "pngSha256": "ffab8b5cd9801012f5305f89e5b91fdd40ace77f4e819634a5d2313a0ddafd9e"
+          }
+        ],
+        "byteMaskCompatible": false,
+        "semanticMappingConfirmed": false
+      },
+      "contactSheets": [
+        "Panel-18-sheet-01.png",
+        "Panel-18-sheet-02.png"
+      ]
+    },
+    {
+      "id": "Panel-66",
+      "archive": "Panel.mkf",
+      "index": 66,
+      "resourceSha256": "040fe8e66a3fb940bafe2aaa71a14673f16d834878c98f220b4fb1e9fa6cc3b4",
+      "graph": {
+        "signature": "SMP",
+        "frameCount": 2,
+        "bytesPerPixel": 2,
+        "frames": [
+          {
+            "index": 0,
+            "width": 440,
+            "height": 480,
+            "anchorX": 0,
+            "anchorY": 0,
+            "bytes": 422400,
+            "path": "Panel-66/000.png",
+            "rgbaSha256": "12a65a003b84c4b9eafa574be5888a4d74fa82ada63edc1ed17a34f44fc79ecc",
+            "pngSha256": "1007b751081ce49f5ae0b43dd619136c19925d36a7bc6f11a2f92ad2598901f1"
+          },
+          {
+            "index": 1,
+            "width": 440,
+            "height": 480,
+            "anchorX": 0,
+            "anchorY": 0,
+            "bytes": 422400,
+            "path": "Panel-66/001.png",
+            "rgbaSha256": "620e02d749f7ea4f0bcc22f3763598661ff1eaeb1f84aca1f976743ba29c9dc1",
+            "pngSha256": "4f7e995e80bddc61a9b7d247db6dad54d25635191e24312f5ae4a426498c3057"
+          }
+        ],
+        "byteMaskCompatible": false,
+        "semanticMappingConfirmed": false
+      },
+      "contactSheets": [
+        "Panel-66-sheet-01.png"
+      ]
+    }
+  ],
+  "nativeEvidence": [
+    {
+      "id": "magic-load",
+      "start": "0x432bee",
+      "end": "0x432bfa",
+      "fileOffset": 204782,
+      "hex": "6a006a006a1250e86ec00100",
+      "sha256": "ebed337b9bfc802af6273305629c9efdb7a6ea63b7c1dc8fee6dc485d138302d",
+      "note": "Magic house loads Panel[18]."
+    },
+    {
+      "id": "auction-load",
+      "start": "0x43aeae",
+      "end": "0x43aeba",
+      "fileOffset": 238254,
+      "hex": "6a006a006a1a50e8ae3d0100",
+      "sha256": "7274b4845396b37780733a32f23daf922a7d1dd849fb4e7fb36267fb1dde3fe2",
+      "note": "Auction loads Panel[26], already exported in UI-00."
+    },
+    {
+      "id": "news-load",
+      "start": "0x44a189",
+      "end": "0x44a195",
+      "fileOffset": 300425,
+      "hex": "6a006a006a4250e8d34a0000",
+      "sha256": "185fb690e8931a67e3e7b4b84e3618e9c5a8e128f773aab3339bc1a4beaf0060",
+      "note": "News loads shared Panel[66]; frame 0 NEWS border."
+    },
+    {
+      "id": "fortune-load",
+      "start": "0x44c4b6",
+      "end": "0x44c4c2",
+      "fileOffset": 309430,
+      "hex": "6a006a006a4250e8a6270000",
+      "sha256": "8c5556e40abcfce3fc42b9e80a26dd28ddd85fa975ab9c80c85f818f7117e0a5",
+      "note": "Fortune loads shared Panel[66]; frame 1 question-mark border."
+    }
+  ],
+  "referenceCommit": "ec7d70e693059d1e781d9d1cc2ad7f36d360d39e",
+  "runtimeBoundary": "Static resource/call inspection only; no original executable run."
+}

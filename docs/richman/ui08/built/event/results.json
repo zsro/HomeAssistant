@@ -1,0 +1,13 @@
+{
+  "realRoute": [
+    "cancel surrender without mutation",
+    "double-click surrender only once",
+    "mandatory target selection",
+    "mobile target choice",
+    "replay command counts",
+    "actual surrender disposal receipt"
+  ],
+  "replayVerified": false,
+  "fixtures": [],
+  "errors": []
+}

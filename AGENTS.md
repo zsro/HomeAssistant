@@ -65,3 +65,12 @@ copies `release/frontend/` into the new static release. Never install frontend
 dependencies or run TypeScript/Vite on the production server. Do not upload
 frontend dist or game assets separately. Backend installation/build, database
 backup/migrations and health/rollback checks remain server-side.
+
+## Richman UI Restoration Priority
+
+User direction recorded on 2026-10-18: prioritize restoring the original
+Richman UI. Preserve the original entries for features whose business logic
+is not implemented; mark them as not yet available and defer the business
+implementation without blocking UI restoration. Existing working features
+must remain usable. Track UI restoration and business integration separately
+in `docs/richman/original-ui-restoration-plan.md`.

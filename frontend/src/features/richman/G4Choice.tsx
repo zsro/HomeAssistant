@@ -1,3 +1,4 @@
+import { ClassicBidButton, ClassicEventScene, ClassicAuctionPass } from './ClassicEventArt';
 import { G6_GOODS } from './game/g6-catalog';
 import { G5_GOODS } from './game/g5-catalog';
 import { useState } from 'react';
@@ -28,13 +29,13 @@ export function AuctionPanel({ snapshot, bid }: { snapshot: SessionSnapshot; bid
   const a = snapshot.auction!, [error, setError] = useState('');
   const cash = snapshot.economy!.balances[a.responderId].cash;
   const send = (increment: number | null) => { if (!bid(a.id, increment)) setError('出价或竞价人已失效，请查看当前现金与轮次。'); };
-  return <section className="rm-property" aria-label="地产拍卖">
+  return <section className="rm-property rm-classic-auction" aria-label="地产拍卖">
     {a.disposalId&&<p aria-label="破产强拍说明">玩家已破产退出，正在处置其释放地产；拍卖收入进入公共资金，不恢复玩家资格。债权人实收将在全部处置后入账。</p>}
-    <h2>{PROPERTY_CATALOG.properties.find(p => p.id === a.propertyId)?.name} · 拍卖</h2>
+    <ClassicEventScene kind="auction"><h2>{PROPERTY_CATALOG.properties.find(p => p.id === a.propertyId)?.name} · 拍卖</h2>
     <p>请玩家 {a.responderId.split('-')[1]} 竞价 · 可用现金 {cash.toLocaleString()} 元</p>
-    <p>标价 {a.reserve.toLocaleString()} 元；当前 {a.bid.toLocaleString()} 元{a.leader ? `（玩家 ${a.leader.split('-')[1]}领先）` : '（尚无人出价）'}</p>
+    <p>标价 {a.reserve.toLocaleString()} 元；当前 {a.bid.toLocaleString()} 元{a.leader ? `（玩家 ${a.leader.split('-')[1]}领先）` : '（尚无人出价）'}</p></ClassicEventScene>
     <p>{a.magicBatchId ? <>成交款存入被选玩家 {a.sourceId.split('-')[1]}的银行；原业主可以竞价，流拍保留原产权。建筑保留，本位玩家不能竞价。</> : a.publicNews||a.disposalId ? '成交款进入公共资金；建筑保留，流拍保持待售。在局且符合条件的玩家可参加。' : <>成交款存入玩家 {a.sourceId.split('-')[1]}的银行；建筑保留。退出后本次不能重新竞价，无人出价则恢复待售。</>}</p>
-    <div className="rm-property-actions">{BID_INCREMENTS.map(n => <button key={n} className="rm-button" disabled={snapshot.paused || cash < a.bid + n} onClick={() => send(n)}>加价 {n.toLocaleString()}</button>)}<button className="rm-button rm-button-light" disabled={snapshot.paused} onClick={() => send(null)}>退出竞价</button></div>
+    <div className="rm-auction-bids" aria-label="竞价操作"><ClassicAuctionPass />{BID_INCREMENTS.map(n => <ClassicBidButton key={n} increment={n} disabled={snapshot.paused || cash < a.bid + n} onClick={() => send(n)} />)}<ClassicBidButton increment={null} disabled={snapshot.paused} onClick={() => send(null)} /></div>
     {error && <p role="alert">{error}</p>}
   </section>;
 }

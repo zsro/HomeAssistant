@@ -1,0 +1,462 @@
+{
+  "sources": {
+    "Data.mkf": {
+      "bytes": 53296712,
+      "sha256": "c63023e815b1ad4bef172b6415d128c7f041f12b71b5d80dc3ff29240a0a1988"
+    },
+    "Panel.mkf": {
+      "bytes": 25351066,
+      "sha256": "5b9bfd11a866694cfdf93457d2010d30f20a43f96b668e5186fa99452e16f563"
+    },
+    "map.mkf": {
+      "bytes": 40312048,
+      "sha256": "717aaa1c1becf277064d29772500027427d39488bad64a7ee42875975c0e7106"
+    },
+    "rich4.exe": {
+      "bytes": 591360,
+      "sha256": "110b29f9d2fadcff3836eb69ec380aa264951859c90955da6e11158d2f956a13"
+    }
+  },
+  "resources": [
+    {
+      "id": "Data-399",
+      "archive": "Data.mkf",
+      "index": 399,
+      "resourceSha256": "dfe92eff65dfb3df7282d511236530724b2d94912752f225490141a14da68ad0",
+      "graph": {
+        "signature": "SMP",
+        "frameCount": 3,
+        "bytesPerPixel": 2,
+        "frames": [
+          {
+            "index": 0,
+            "width": 96,
+            "height": 48,
+            "anchorX": 0,
+            "anchorY": 0,
+            "bytes": 9216,
+            "path": "Data-399/000.png",
+            "rgbaSha256": "877940b6189b945adb2f8931cf2a751481393f1f5e670698951287606d2c80f9",
+            "pngSha256": "eb47ad5e482e80fece4f681310079068d893a5526b5dfc5e1807c0017ab7655d"
+          },
+          {
+            "index": 1,
+            "width": 96,
+            "height": 48,
+            "anchorX": 0,
+            "anchorY": 0,
+            "bytes": 9216,
+            "path": "Data-399/001.png",
+            "rgbaSha256": "e1a4bdabfd707ca1da4ce53dc3b724ef8a94536272c3b31507816cf58d07b515",
+            "pngSha256": "ec4c11109a21a3baf4c50557d838bb3409fa234380d6b393bbfd8c1b954c999d"
+          },
+          {
+            "index": 2,
+            "width": 96,
+            "height": 48,
+            "anchorX": 0,
+            "anchorY": 0,
+            "bytes": 9216,
+            "path": "Data-399/002.png",
+            "rgbaSha256": "b7279b3d4ffaf7b563b6b29ece5572403f906421f8d37d91ddcc56ce8366f8be",
+            "pngSha256": "17b8cd45031ba5c85b82b1ed1d379d6bb80c7046397a83044ab9964c57d16b36"
+          }
+        ],
+        "byteMaskCompatible": false,
+        "semanticMappingConfirmed": false
+      },
+      "contactSheets": [
+        "Data-399-sheet-01.png"
+      ]
+    },
+    {
+      "id": "Data-476",
+      "archive": "Data.mkf",
+      "index": 476,
+      "resourceSha256": "d1b2f8a056f9fc437b7ee3c5ee1bdf5924d92ef7b1f51daa23a0135b82c564df",
+      "graph": {
+        "signature": "SMP",
+        "frameCount": 30,
+        "bytesPerPixel": 2,
+        "frames": [
+          {
+            "index": 0,
+            "width": 139,
+            "height": 116,
+            "anchorX": 0,
+            "anchorY": 0,
+            "bytes": 32248,
+            "path": "Data-476/000.png",
+            "rgbaSha256": "7ef6d9af0c4943ed4d6fc8c247386034670d3b8969eadee3fd08fd83a8d38ac3",
+            "pngSha256": "d84821f0c69e204e1eddc17bbf7fbd30612dcfe8dbb63a8f3a9382bcfb30f5da"
+          },
+          {
+            "index": 1,
+            "width": 139,
+            "height": 116,
+            "anchorX": 0,
+            "anchorY": 116,
+            "bytes": 32248,
+            "path": "Data-476/001.png",
+            "rgbaSha256": "9bc328fbca67d1b4f69be08afdf41e56268a6f36a9f77a4eb0001583c1cd49d1",
+            "pngSha256": "28b4c20c78da1a80c4950509c984e53bee45dbb95a188011d4679da3324e5b05"
+          },
+          {
+            "index": 2,
+            "width": 139,
+            "height": 116,
+            "anchorX": 139,
+            "anchorY": 0,
+            "bytes": 32248,
+            "path": "Data-476/002.png",
+            "rgbaSha256": "26aa5292a8b8e52455cfe192ebfbbc1c5c915ba82afd70aefd382c69401e4dea",
+            "pngSha256": "357abd486fc99c0e17b9fd68f9896745afb56de605ae89b5d8a3c1c7e524851a"
+          },
+          {
+            "index": 3,
+            "width": 139,
+            "height": 116,
+            "anchorX": 139,
+            "anchorY": 116,
+            "bytes": 32248,
+            "path": "Data-476/003.png",
+            "rgbaSha256": "1a82571ef6fb906da5244cfc4b58eeb21ccae1543cf7c677c860b5dade5c1612",
+            "pngSha256": "9254175392b653b1d1f5e28c4faa1c0b20695b3eff5756301eb4892cf3615c82"
+          },
+          {
+            "index": 4,
+            "width": 355,
+            "height": 83,
+            "anchorX": 0,
+            "anchorY": 0,
+            "bytes": 58930,
+            "path": "Data-476/004.png",
+            "rgbaSha256": "0479c5d7f43556ba011bc4df8293b6ed5fb421c81328ab858cb0c2fad514a325",
+            "pngSha256": "9da420b2919bb7ae9a4d891c9523852a39640766851d59869a204417cfa1ae51"
+          },
+          {
+            "index": 5,
+            "width": 195,
+            "height": 133,
+            "anchorX": 97,
+            "anchorY": 81,
+            "bytes": 51870,
+            "path": "Data-476/005.png",
+            "rgbaSha256": "8e485d81e33bd7354adbd8c5c23ea6a8b3be9be62047b0b4d7834e4a3179388c",
+            "pngSha256": "1bc4cf3a81e38a48872683768361d514544121d2b9eb862b69f040bc6a945561"
+          },
+          {
+            "index": 6,
+            "width": 210,
+            "height": 154,
+            "anchorX": 98,
+            "anchorY": 69,
+            "bytes": 64680,
+            "path": "Data-476/006.png",
+            "rgbaSha256": "da84329fbd7e98ad8bca030e6eb75020d4e109cdcf0a5d9cf570c6e9ddf482dc",
+            "pngSha256": "29b157cc2d6f6a03edfc04d71eda9645b22cbd103400f8310e301afeaa2616ec"
+          },
+          {
+            "index": 7,
+            "width": 400,
+            "height": 89,
+            "anchorX": 0,
+            "anchorY": 0,
+            "bytes": 71200,
+            "path": "Data-476/007.png",
+            "rgbaSha256": "218328e604041de623b8775c066299b9b0f1a73115abe5036c68535b01845601",
+            "pngSha256": "88fbc5d2f7f45b354a2e1cc0a697f2380739b76aef1508b2a28a404424e85e92"
+          },
+          {
+            "index": 8,
+            "width": 35,
+            "height": 43,
+            "anchorX": 16,
+            "anchorY": 19,
+            "bytes": 3010,
+            "path": "Data-476/008.png",
+            "rgbaSha256": "74baf812518fb2156fa2c4c797b3ddfad5ee3fabb02b89bf99a0b2bcc037f876",
+            "pngSha256": "dc2c7af12fe79014a9afae9287fdba04b4ea7422edc42da44bf5b5c17fa271ac"
+          },
+          {
+            "index": 9,
+            "width": 25,
+            "height": 43,
+            "anchorX": 17,
+            "anchorY": 19,
+            "bytes": 2150,
+            "path": "Data-476/009.png",
+            "rgbaSha256": "7ed63bf9feb20a1af89f6457dfb2c7cd4cc60385e16b3dad677912ba70220dd2",
+            "pngSha256": "df57b4916c9344a2d841c69b7fbb369595bb711d95a2294f017884606f4078b5"
+          },
+          {
+            "index": 10,
+            "width": 36,
+            "height": 43,
+            "anchorX": 17,
+            "anchorY": 20,
+            "bytes": 3096,
+            "path": "Data-476/010.png",
+            "rgbaSha256": "f7069b357d22cb881c53f6eda2be69a1c7628ddf3f51a7005463974c3200af16",
+            "pngSha256": "6d2482d810db1a8db92b893425af07241b1e5ebda884aa35daf20c4935a8e15d"
+          },
+          {
+            "index": 11,
+            "width": 35,
+            "height": 44,
+            "anchorX": 14,
+            "anchorY": 19,
+            "bytes": 3080,
+            "path": "Data-476/011.png",
+            "rgbaSha256": "8459fd459fd9fd7e757f0a8866d4b33d2c1e1abdda6a7d5e926db00c846d20a1",
+            "pngSha256": "ad5ec4e940baa5ad82b1315fcbd9e6a048355ed9c2a7d8a3912ef6b7748f0239"
+          },
+          {
+            "index": 12,
+            "width": 38,
+            "height": 43,
+            "anchorX": 18,
+            "anchorY": 19,
+            "bytes": 3268,
+            "path": "Data-476/012.png",
+            "rgbaSha256": "a5f4e2bdb0cabce1b9db03c01d2d0b63a47454ad3c6dc923fc12adcc9ac00c8e",
+            "pngSha256": "1a2775b4681e820554e10c59d9414445c005b2430bf1b6a08bf923ac0abed776"
+          },
+          {
+            "index": 13,
+            "width": 35,
+            "height": 44,
+            "anchorX": 16,
+            "anchorY": 19,
+            "bytes": 3080,
+            "path": "Data-476/013.png",
+            "rgbaSha256": "90d154c3d5b16ba46ff687830389ebea5f418b400d93e7d34b5ff552f97430a4",
+            "pngSha256": "eb41a251764fb7570bfce322ab6f5e718c16a81b9a95bee566247929c8be9e95"
+          },
+          {
+            "index": 14,
+            "width": 35,
+            "height": 44,
+            "anchorX": 16,
+            "anchorY": 19,
+            "bytes": 3080,
+            "path": "Data-476/014.png",
+            "rgbaSha256": "5326f0d0580516c84c0d5ddeda306592726c4bafcf4a19d21940134bef18db70",
+            "pngSha256": "5f2cfefeb2096fd9151e5ad4ca4c3d4f566afb22e0a6c8b247fa19bf0d0bf7aa"
+          },
+          {
+            "index": 15,
+            "width": 35,
+            "height": 42,
+            "anchorX": 16,
+            "anchorY": 18,
+            "bytes": 2940,
+            "path": "Data-476/015.png",
+            "rgbaSha256": "31f834551f875a85d44396a325958c31ca04e209ecae991038b40bc996354701",
+            "pngSha256": "6b0e510c8fd642bbc3669679ed884f7eddb51f19c42a343542e945f133e69435"
+          },
+          {
+            "index": 16,
+            "width": 36,
+            "height": 44,
+            "anchorX": 16,
+            "anchorY": 20,
+            "bytes": 3168,
+            "path": "Data-476/016.png",
+            "rgbaSha256": "744c039a3e3ed826dfe2f85a6d882a0d171b15953df134bdc7d94497c33e1935",
+            "pngSha256": "1615c1a7c03f58e9d56d3c8b4d7d45588a245ea9ef55592081f334042fcdb045"
+          },
+          {
+            "index": 17,
+            "width": 35,
+            "height": 43,
+            "anchorX": 15,
+            "anchorY": 20,
+            "bytes": 3010,
+            "path": "Data-476/017.png",
+            "rgbaSha256": "5f5c587919fdf8b3f698fe94446c07bdd7ca614d0ab8837ef3163e7e4a7e2099",
+            "pngSha256": "42f5f19c8c2c77bbb5dccf8e54013ae25ba73d89a634325efa8c51fed7b1dfef"
+          },
+          {
+            "index": 18,
+            "width": 25,
+            "height": 26,
+            "anchorX": 0,
+            "anchorY": 0,
+            "bytes": 1300,
+            "path": "Data-476/018.png",
+            "rgbaSha256": "64f81f68618fc2b7b6184cce45cedba398622e55cc33fdef7416234b27242ffc",
+            "pngSha256": "2535fc6608dddcaac6aa025b0d3618356ae991a82ae34c3217cc4aa7195ff112"
+          },
+          {
+            "index": 19,
+            "width": 25,
+            "height": 26,
+            "anchorX": 0,
+            "anchorY": 0,
+            "bytes": 1300,
+            "path": "Data-476/019.png",
+            "rgbaSha256": "96539d5594fbf9bf1ba8b350f50d84a52c8777d62939def7c2717bae1b0bdb18",
+            "pngSha256": "09a6a90c1ec2929f8c135ea703aee0e6962724d166dbce86812a1cd74a6935ef"
+          },
+          {
+            "index": 20,
+            "width": 25,
+            "height": 26,
+            "anchorX": 0,
+            "anchorY": 0,
+            "bytes": 1300,
+            "path": "Data-476/020.png",
+            "rgbaSha256": "b860ac6ce717ec24393d7acde0f5ae55b91862b1d9f8ab9fd5b9b59ca06d22bd",
+            "pngSha256": "05a642d40704cd74ac6d397a3b1b55c613b642359a8fc63403c07339e700164e"
+          },
+          {
+            "index": 21,
+            "width": 25,
+            "height": 26,
+            "anchorX": 0,
+            "anchorY": 0,
+            "bytes": 1300,
+            "path": "Data-476/021.png",
+            "rgbaSha256": "7508b80f50557ae36d210df4f7b313de26417e093c4e1298731a5a7239acf6b8",
+            "pngSha256": "e59bfe7f8162881564df04d33bd3adc4daaffb08da2d85780fc51811c465282b"
+          },
+          {
+            "index": 22,
+            "width": 3,
+            "height": 3,
+            "anchorX": 1,
+            "anchorY": 1,
+            "bytes": 18,
+            "path": "Data-476/022.png",
+            "rgbaSha256": "12d7fb01d772ff6956aafcf092bb374eae554678621ed33a2a26aea23187e410",
+            "pngSha256": "54b14f1f41e38f979a0a41ed64be6210c89f1831e3f3b2c815594e0ba27ab9ba"
+          },
+          {
+            "index": 23,
+            "width": 5,
+            "height": 5,
+            "anchorX": 2,
+            "anchorY": 2,
+            "bytes": 50,
+            "path": "Data-476/023.png",
+            "rgbaSha256": "94a7a9916f987b3ca9f21b0ed4ac77ba87a3826b9fd26e2cef985ecffec6079f",
+            "pngSha256": "a034a4b377961b6e37fc768ad76d531c11126c96b9f4ceb6803df9c8bbefedf0"
+          },
+          {
+            "index": 24,
+            "width": 7,
+            "height": 7,
+            "anchorX": 3,
+            "anchorY": 3,
+            "bytes": 98,
+            "path": "Data-476/024.png",
+            "rgbaSha256": "2cb07de40ac9009e6db0670036f42b248bd824a8fcc2f6873dea684b37db72dc",
+            "pngSha256": "f3545c6e25fdb7927e2785cdce551b26e394f2dca633c69f6d00f57350b000c3"
+          },
+          {
+            "index": 25,
+            "width": 11,
+            "height": 11,
+            "anchorX": 5,
+            "anchorY": 5,
+            "bytes": 242,
+            "path": "Data-476/025.png",
+            "rgbaSha256": "6b93a158d9401e499ff4355b4355ae929dcd3c485c75dbfd9d26b701ac77716f",
+            "pngSha256": "a3b8897c3a4d99e61f9f2cbc2056fe288992bb45ac8301be93e8758e2a282fea"
+          },
+          {
+            "index": 26,
+            "width": 9,
+            "height": 9,
+            "anchorX": 4,
+            "anchorY": 4,
+            "bytes": 162,
+            "path": "Data-476/026.png",
+            "rgbaSha256": "55e8a538dd9bb7a0fd165f1ac703e58170abb054b1fa62eb77401f7b8de23dc9",
+            "pngSha256": "1f9b4a7555d4d254b578a033953385be3b7c2dcdd8b66d81e94433ec338159cc"
+          },
+          {
+            "index": 27,
+            "width": 11,
+            "height": 11,
+            "anchorX": 5,
+            "anchorY": 5,
+            "bytes": 242,
+            "path": "Data-476/027.png",
+            "rgbaSha256": "6b93a158d9401e499ff4355b4355ae929dcd3c485c75dbfd9d26b701ac77716f",
+            "pngSha256": "a3b8897c3a4d99e61f9f2cbc2056fe288992bb45ac8301be93e8758e2a282fea"
+          },
+          {
+            "index": 28,
+            "width": 17,
+            "height": 17,
+            "anchorX": 8,
+            "anchorY": 8,
+            "bytes": 578,
+            "path": "Data-476/028.png",
+            "rgbaSha256": "e6b102706223a7c1e147bc82124533263e58e7eff16240dfcc1e816d93e59546",
+            "pngSha256": "2db96e40aa28eee863f331af7ae05d514a247883164cac6fb23eba9d9e16a704"
+          },
+          {
+            "index": 29,
+            "width": 23,
+            "height": 23,
+            "anchorX": 11,
+            "anchorY": 11,
+            "bytes": 1058,
+            "path": "Data-476/029.png",
+            "rgbaSha256": "d3fc05098ecf58b6de7c4bf8995723c168688918898ad469f50f9d7214f5fabc",
+            "pngSha256": "b7f16fa5ec8555d2d99795ac7f4c8cd9a911047f680ed2d27f6b46aa229a1098"
+          }
+        ],
+        "byteMaskCompatible": false,
+        "semanticMappingConfirmed": false
+      },
+      "contactSheets": [
+        "Data-476-sheet-01.png",
+        "Data-476-sheet-02.png"
+      ]
+    }
+  ],
+  "nativeEvidence": [
+    {
+      "id": "common-message-load",
+      "start": "0x407cad",
+      "end": "0x407cca",
+      "fileOffset": 28845,
+      "hex": "6a006a0068dc0100008b2ddc70480055e8a66f040083c410a364884800",
+      "sha256": "1e62f3def7ad97bf81aac658b2c638d86b60373fe22663656129800ddb40e56d",
+      "note": "Local Data[476] loaded into 0x488864; reference Data[517] is a different version."
+    },
+    {
+      "id": "property-prompt",
+      "start": "0x43f86d",
+      "end": "0x43f8f0",
+      "fileOffset": 257133,
+      "hex": "688200000068dc000000a16488480083c048508b3d8470480057e8ec51010083c4106a04688200000068dc0000008b6c2430556a00e83cea000083c414a1d87048008b186a0050ff9380000000a1d47048008b186a1068503b47008b15d8704800528b0d543b4700518b35503b47005650ff531c684001000068dc000000e82c280100",
+      "sha256": "5f7af4768451418d53bb55a009cabd2c8b90dcad654074c7281dbcdfe7dce984",
+      "note": "Frame 5 (+0x48) at reference (220,130); text then YES/NO centered (220,320)."
+    },
+    {
+      "id": "yes-no-load",
+      "start": "0x452136",
+      "end": "0x452153",
+      "fileOffset": 333110,
+      "hex": "6a006a00688f0100008b15dc70480052e81dcbffff83c410a34c984800",
+      "sha256": "2c06de51377a1a5cd948665bc7d739874ea11e57eba80c9b2ae1704639c15a48",
+      "note": "Local Data[399], not reference Data[440]."
+    },
+    {
+      "id": "bank-load",
+      "start": "0x435ba1",
+      "end": "0x435bb5",
+      "fileOffset": 216993,
+      "hex": "6a006a006a1750e8bb90010083c410a338914800",
+      "sha256": "1bd7854f9a0f8b102e833a04ee51b544afc66ed5fee0def0f8820b95342f027a",
+      "note": "Local Panel[23] loaded into 0x489138."
+    }
+  ],
+  "referenceCommit": "ec7d70e693059d1e781d9d1cc2ad7f36d360d39e",
+  "runtimeBoundary": "Static resource/call inspection only; no original executable run."
+}

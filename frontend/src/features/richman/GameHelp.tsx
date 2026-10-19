@@ -1,8 +1,8 @@
 import type { SessionSnapshot } from './game/session';
 import { disposalHelp, modeIncludes } from './mode-help';
 
-export function GameHelp({ snapshot }: { snapshot: SessionSnapshot }) {
-  return <details className="rm-property rm-help">
+export function GameHelp({ snapshot, expanded = false }: { snapshot: SessionSnapshot; expanded?: boolean }) {
+  return <details className="rm-property rm-help rm-classic-help" open={expanded || undefined}>
     <summary>玩法与操作帮助</summary>
     <p>拖动地图浏览；使用放大、缩小按钮或鼠标滚轮调整视角。触屏可单指拖动，缩放请用按钮。点击“跟随当前角色”可找回人物。</p>
     <p>选择目标后先核对名称、路格和预览，再点击确认；选中或定位不会立即使用道具。可取消后重新选择。</p>

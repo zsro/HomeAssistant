@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "rulesId": "japan-events-candidate-v47",
+  "mapFingerprint": "6fb1abfd",
+  "catalogFingerprint": "628c3de8",
+  "itemFingerprint": "c6d96cc",
+  "config": {
+    "humanIds": [
+      "player-1"
+    ],
+    "startDate": "1998-01-01",
+    "gameId": "c27e92d1-ba8e-463e-8c52-3d322b7f23fc",
+    "seed": "ui07-result",
+    "characterIds": [
+      "xiaomei",
+      "chyan"
+    ],
+    "rulesId": "japan-events-candidate-v47",
+    "initialFunds": 100000
+  },
+  "commands": [
+    {
+      "id": "command-1",
+      "gameId": "c27e92d1-ba8e-463e-8c52-3d322b7f23fc",
+      "expectedRevision": 0,
+      "playerId": "player-1",
+      "action": {
+        "type": "surrender"
+      }
+    }
+  ],
+  "control": {
+    "version": 1,
+    "policy": "rent-v1",
+    "computerIds": [
+      "chyan"
+    ]
+  }
+}

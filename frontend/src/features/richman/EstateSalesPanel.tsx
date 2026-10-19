@@ -1,3 +1,4 @@
+import { navigateGame } from './decision-navigation';
 import { disposalHelp } from './mode-help';
 import {useState} from 'react';
 import type {SessionSnapshot} from './game/session';
@@ -8,7 +9,7 @@ export function EstateSalesPanel({snapshot,act}:{snapshot:SessionSnapshot;act:(a
  const sales=snapshot.finance?.sales;if(!sales)return null;
  const id=`player-${snapshot.participants.indexOf(snapshot.active)+1}`,owned=snapshot.economy!.properties.filter(p=>p.ownerId===id),p=owned.find(p=>p.id===chosen),d=PROPERTY_CATALOG.properties.find(d=>d.id===chosen),index=snapshot.calendar!.business!.priceIndex,quote=p&&d?((p.basePrice??d.basePrice)+p.level*d.upgradeCost)*index:0,enabled=!!snapshot.salesAvailable;
  const send=(a:SaleAction)=>{if(act(a)){setConfirm(null);setError('');}else setError('挂牌或资金已变化，未成交，请查看当前报价。');};
- return <section className="rm-property" aria-label="地产挂牌市场"><h2>地产挂牌市场</h2><p>每人最多七条；挂牌不转移资产，不提前收款。买家只用现金，成交款存入卖家银行；原价保留至改价或撤回。建筑类型、楼级、产权变化会撤销旧挂牌。</p>
+ return <section className="rm-property rm-classic-sales" aria-label="地产挂牌市场"><div className="rm-sale-masthead"><h2>地产挂牌市场</h2><div><button type="button" onClick={e=>{const field=e.currentTarget.closest('section')?.querySelector<HTMLSelectElement>('[aria-label="挂牌地产"]');field?.scrollIntoView({block:'nearest'});field?.focus();}}>挂牌</button><button type="button" onClick={e=>{const root=e.currentTarget.closest<HTMLElement>('.rm-page');if(root)navigateGame(root,'.rm-board');}}>关闭出售</button></div></div><div className="rm-sale-categories" role="group" aria-label="出售类别"><button type="button" aria-pressed="true">地产</button>{['股票','卡片','道具'].map(name=><button type="button" disabled key={name}>{name} · 暂未接入</button>)}</div><p>每人最多七条；挂牌不转移资产，不提前收款。买家只用现金，成交款存入卖家银行；原价保留至改价或撤回。建筑类型、楼级、产权变化会撤销旧挂牌。</p>
  {!enabled&&<p>可在本人可行动的掷骰前管理挂牌或购买；暂停和待结算期间不可操作。</p>}
  <fieldset disabled={!enabled}><legend>挂牌自己的地产</legend><label className="rm-form-field">挂牌地产<select aria-label="挂牌地产" value={chosen} onChange={e=>{setChosen(e.target.value);setPrice('');}}><option value="">请选择地产</option>{owned.map(p=>{const d=PROPERTY_CATALOG.properties.find(d=>d.id===p.id)!;return <option key={p.id} value={p.id}>{d.name} · {p.id.split(':').at(-1)}号 · {p.level}级</option>;})}</select></label>
  {p&&<><p>参考估值 {quote.toLocaleString()} 元（原地价＋楼级成本）×物价{index}；最高挂牌 { (quote*10).toLocaleString()} 元。已有挂牌可改价。</p><label className="rm-form-field">挂牌总价<input aria-label="挂牌总价" type="number" min="1" max={quote*10} step="1" value={price} onChange={e=>setPrice(e.target.value)}/></label><button className="rm-button" disabled={!Number.isSafeInteger(Number(price))||Number(price)<1||Number(price)>quote*10} onClick={()=>send({type:'listProperty',propertyId:chosen,price:Number(price)})}>确认挂牌</button></>}
