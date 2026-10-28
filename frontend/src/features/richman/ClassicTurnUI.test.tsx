@@ -1,6 +1,6 @@
 import { cleanup, fireEvent, render, screen, within } from '@testing-library/react';
 import { afterEach, expect, it, vi } from 'vitest';
-import nodes from './japan-topology.fixture.json';
+import nodes from '../../../../shared/richman/japan-topology.fixture.json';
 import type { Manifest } from './types';
 import { GameSession } from './game/session';
 import { ClassicGo } from './ClassicGo';

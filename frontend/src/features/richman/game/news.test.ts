@@ -32,5 +32,5 @@ import actualReplay from './fixtures/news-v15-replay.json';
 import golden from './fixtures/news-v15-golden.json';
 import type { Replay } from './engine';
 import { createHash } from 'node:crypto';
-import japan from '../japan-topology.fixture.json';
+import japan from '../../../../../shared/richman/japan-topology.fixture.json';
 it('freezes real original-map browser four-news economic changes, public ledger and state/event hashes',()=>{const e=replayGame(japan,actualReplay as Replay);for(const k of ['state','events']as const)expect(createHash('sha256').update(JSON.stringify(e[k])).digest('hex')).toBe(golden[k]);const resolved=e.events.filter(x=>x.type==='newsResolved');expect(resolved.map(x=>x.newsId)).toEqual([23,11,25,24]);let tax=0;for(const n of resolved){for(const m of n.money){if(n.newsId===11){expect(m.cashBefore-m.cashAfter).toBe(Math.floor(m.cashBefore/20));expect(m.bankAfter).toBe(m.bankBefore);tax+=m.cashBefore-m.cashAfter;}else{expect(m.bankAfter-m.bankBefore).toBe(Math.floor(m.bankBefore/10));expect(m.cashAfter).toBe(m.cashBefore);}}if(n.newsId>=24)expect(n.stocks).toHaveLength(12);}expect(e.state.news!.publicFund).toBe(tax);expect(e.state.phase).toBe('turnEnd');});

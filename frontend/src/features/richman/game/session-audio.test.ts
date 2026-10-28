@@ -1,5 +1,5 @@
 import { expect, it } from 'vitest';
-import nodes from '../japan-topology.fixture.json';
+import nodes from '../../../../../shared/richman/japan-topology.fixture.json';
 import type { Manifest } from '../types';
 import type { AudioPacket } from '../audio';
 import { GameSession } from './session';

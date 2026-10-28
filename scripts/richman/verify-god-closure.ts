@@ -5,7 +5,7 @@ import assert from 'node:assert/strict';
 import {GameEngine,replayGame,type Command,type GameState} from '../../frontend/src/features/richman/game/engine';
 import {SURRENDER_FINGERPRINT} from '../../frontend/src/features/richman/game/surrender';
 import {shopSupply} from '../../frontend/src/features/richman/game/shop-acquisition';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 const hash=(x:unknown)=>createHash('sha256').update(JSON.stringify(x)).digest('hex');
 const normalize=(c:Command)=>{const a=structuredClone(c.action) as unknown as Record<string,unknown>;delete a.decisionId;delete a.token;if(a.action)delete(a.action as Record<string,unknown>).decisionId;return{playerId:c.playerId,action:a};};
 const receipts=[];

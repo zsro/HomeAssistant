@@ -9,7 +9,7 @@ import {researchOptions} from '../../frontend/src/features/richman/game/g5';
 import {g7Options,timeAvailable} from '../../frontend/src/features/richman/game/g7';
 import {PROPERTY_CATALOG} from '../../frontend/src/features/richman/game/economy';
 import {writeFileSync} from 'node:fs';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 const defs=PROPERTY_CATALOG.properties,byId=new Map(nodes.map(n=>[n.id,n]));
 const distances=new Map<number,Map<number,number>>();for(const n of nodes){const d=new Map([[n.id,0]]),q=[n.id];for(let i=0;i<q.length;i++)for(const next of byId.get(q[i])!.adjacent)if(!d.has(next)){d.set(next,d.get(q[i])!+1);q.push(next);}distances.set(n.id,d);}
 export function planCircuit(seed:string,count:number,kind:'commerce'|'fortune'|'time',limit=3000){

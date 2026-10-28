@@ -5,7 +5,7 @@ import {CalendarPanel} from './CalendarPanel';
 import {InsurancePanel} from './InsurancePanel';
 import {GameSession} from './game/session';
 import type {Manifest} from './types';
-import nodes from './japan-topology.fixture.json';
+import nodes from '../../../../shared/richman/japan-topology.fixture.json';
 afterEach(cleanup);
 const manifest:Manifest={version:1,map:{name:'日本',width:2304,height:2304,nodes,scenery:[]},sprites:{},characters:['a','b'].map(id=>({id,name:id,color:'#fff',idle:[],walk:[],walkFramesPerDirection:10}))};
 function fixture(){const session=new GameSession(manifest,{id:()=> 'date-ui',seed:()=> 'date-ui'},'dateBusiness');session.start({mode:'dateBusiness',characterIds:['a','b'],seed:'date-ui',startDate:'1998-12-24'});return{session,snapshot:session.snapshot()};}

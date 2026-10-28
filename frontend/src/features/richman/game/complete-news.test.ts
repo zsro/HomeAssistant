@@ -8,7 +8,7 @@ import {tradeStock,marketTick,liquidateForRent} from './g6-market';
 import {syncCardSlots} from './g3';
 import {saveCheckpoint,restoreCheckpoint} from './g7';
 import {PROPERTY_CATALOG} from './economy';
-import nodes from '../japan-topology.fixture.json';
+import nodes from '../../../../../shared/richman/japan-topology.fixture.json';
 const defs=PROPERTY_CATALOG.properties;
 function fixture(id=22,rulesId:string=COMPLETE_NEWS_RULES.id){const e=new GameEngine(nodes,{gameId:'complete',seed:'complete',rulesId,characterIds:['a','b','c'],initialFunds:100000});const s=(e as unknown as {current:GameState}).current;s.g6!.gods=[];s.players[0].node=13;s.news!.order=[id,...Array.from({length:36},(_,i)=>i).filter(n=>n!==id)];return{e,s};}
 function send(e:GameEngine,action:Action,playerId?:string){const s=e.state;return e.dispatch({id:`c${s.revision}`,gameId:s.gameId,expectedRevision:s.revision,playerId:playerId??s.players[s.active].id,action});}

@@ -6,7 +6,7 @@ import {FORTUNE_NODES} from '../../frontend/src/features/richman/game/fortune';
 import {itemSite,REMOTE_EFFECT} from '../../frontend/src/features/richman/game/items';
 import {g1Adjacent} from '../../frontend/src/features/richman/game/g1';
 import {actionLocked} from '../../frontend/src/features/richman/game/g2';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 const byId=new Map(nodes.map(n=>[n.id,n]));
 function distance(node:number,prev:number|null,targets:readonly number[]){const q:[number,number|null,number][]=[[node,prev,0]],seen=new Set<string>();for(let i=0;i<q.length;i++){const[n,p,d]=q[i];if(targets.includes(n))return d;const k=n+'/'+p;if(seen.has(k))continue;seen.add(k);const a=g1Adjacent(byId.get(n)!),f=a.filter(x=>x!==p);for(const t of f.length?f:a)q.push([t,n,d+1]);}return 999;}
 export function planFinalFortune(seed:string,required:number[],count=3,limit=1800){

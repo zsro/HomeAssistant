@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import {GameEngine} from '../../frontend/src/features/richman/game/engine';
 import {ASSET_FORTUNE_RULES} from '../../frontend/src/features/richman/game/asset-fortune';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 import {planAssetFortune} from './plan-asset-fortune-journey';
 const routes=[];
 for(const target of (process.env.RICHMAN_TARGETS||'0,1,5,8,9').split(',').map(Number)){

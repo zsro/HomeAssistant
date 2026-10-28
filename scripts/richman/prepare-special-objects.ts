@@ -4,7 +4,7 @@ import {GameEngine} from '../../frontend/src/features/richman/game/engine';
 import {computerDecision,decisionPlayer} from '../../frontend/src/features/richman/game/computer';
 import {decideComputer,observeResearch,type ResearchMemory} from '../../frontend/src/features/richman/game/computer-research';
 import {GODS} from '../../frontend/src/features/richman/game/g6-catalog';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 for(const count of [2,3,4]){
  const goal=count===2?13:count===3?14:11;let found=false;
  for(let seed=0;seed<80&&!found;seed++){

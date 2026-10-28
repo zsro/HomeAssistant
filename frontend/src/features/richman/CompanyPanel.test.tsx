@@ -4,7 +4,7 @@ import {afterEach,expect,it,vi} from 'vitest';
 import {CompanyPanel} from './CompanyPanel';
 import {GameSession} from './game/session';
 import type {Manifest} from './types';
-import nodes from './japan-topology.fixture.json';
+import nodes from '../../../../shared/richman/japan-topology.fixture.json';
 afterEach(cleanup);
 const manifest:Manifest={version:1,map:{name:'日本',width:2304,height:2304,nodes,scenery:[]},sprites:{},characters:['a','b','c','d'].map(id=>({id,name:id,color:'#fff',idle:[],walk:[],walkFramesPerDirection:10}))};
 function snapshot(){const session=new GameSession(manifest,{id:()=> 'company-ui',seed:()=> 'company-ui'},'company');session.start({mode:'company',characterIds:['b','d'],seed:'company-ui',startDate:'1998-01-07'});return session.snapshot();}

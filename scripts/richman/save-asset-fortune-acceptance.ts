@@ -3,7 +3,7 @@ import {createHash} from 'node:crypto';
 import assert from 'node:assert/strict';
 import {GameEngine,replayGame} from '../../frontend/src/features/richman/game/engine';
 import type {Replay} from '../../frontend/src/features/richman/game/engine';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 import {verifyAssetFortune} from './verify-asset-fortune';
 const root='frontend/src/features/richman/game/fixtures',manifest=[],routes=[];
 for(const i of [0,1,5,8,9]){

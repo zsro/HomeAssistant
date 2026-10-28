@@ -15,7 +15,7 @@ for line in a.split('ref_0047ff4a:\n',1)[1].splitlines():
  if m:raw.extend(int(m[2],16).to_bytes(1 if m[1]=='db' else 4,'little'))
  if len(raw)>=864:break
 rows=[dict(slot=i,month=raw[578+i*12],day=raw[579+i*12],flags=raw[581+i*12]) for i in range(24)]
-assert rows==json.load(open('frontend/src/features/richman/game/calendar-activities-japan.json'))
+assert rows==json.load(open('shared/richman/game/calendar-activities-japan.json'))
 assert [(r['month'],r['day'],r['flags']) for r in rows if r['flags']]==[(1,1,3),(12,25,15)]
 out=dict(referenceCommit=commit,verifiedFiles=len(sources),grade='fixed cross-version assembly; no Windows runtime equivalence',sources=sources,table=dict(address='47ff4a+Japan(stage0,map2)*288;24x12 bytes;flags offset5',rows=rows),rules={
 'R09-01q':dict(address='41cf67..41d1a5;452117;452444..452788',evidence='date advance -> day limit victory -> daily price -> market/flags -> holiday -> day15 dividends then lottery -> day1 interest/special objects -> expiry; incoming own action separate'),

@@ -11,7 +11,7 @@ import { saveCheckpoint, restoreCheckpoint } from './g7';
 import { PROPERTY_CATALOG } from './economy';
 import type { PropertyDefinition } from './economy';
 const definitions=PROPERTY_CATALOG.properties as readonly PropertyDefinition[];
-import nodes from '../japan-topology.fixture.json';
+import nodes from '../../../../../shared/richman/japan-topology.fixture.json';
 const emit = () => undefined;
 function setup(version=43,count=3) {
   const e=new GameEngine(nodes,{gameId:'ledger',seed:'ledger',rulesId:`japan-events-candidate-v${version}`,characterIds:['a','b','c'].slice(0,count),initialFunds:100000,startDate:'1998-01-09'});

@@ -1,6 +1,6 @@
 import {expect,it} from 'vitest';
 import {GameEngine,replayGame,type Action,type GameState} from './engine';
-import nodes from '../japan-topology.fixture.json';
+import nodes from '../../../../../shared/richman/japan-topology.fixture.json';
 import {SURRENDER_RULES,attachSurrenderGod,canSurrender} from './surrender';
 import {attachedGod,tickGods,replenishGods} from './g6';
 import {removeGod} from './god-pairs';

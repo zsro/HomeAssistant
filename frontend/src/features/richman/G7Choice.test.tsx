@@ -4,7 +4,7 @@ import { ItemPanel } from './ItemPanel';
 import { GameSession } from './game/session';
 import { G7_GOODS } from './game/g7-catalog';
 import type { Manifest } from './types';
-import nodes from './japan-topology.fixture.json';
+import nodes from '../../../../shared/richman/japan-topology.fixture.json';
 afterEach(cleanup);
 const manifest:Manifest={version:1,map:{name:'日本',width:2304,height:2304,nodes,scenery:[]},sprites:{},characters:['小美','土伯'].map((name,i)=>({id:String(i),name,color:'#fff',idle:[],walk:[],walkFramesPerDirection:10}))};
 function fixture(index=0){const session=new GameSession(manifest);session.start({mode:'g7',characterIds:['0','1'],seed:'ui-g7'});const snapshot=session.snapshot(),good=G7_GOODS[index];snapshot.phase='effect';snapshot.effects!.pending={id:'decision-1',definitionId:good.effect,playerId:'player-1',timing:'beforeRoll'};snapshot.g7Choices![good.id]=[{target:{kind:'player',id:'player-1'},title:'当前对象',detail:'恢复资金、库存、股票与研究。',...(index===1?{destinations:[{target:{kind:'node' as const,id:'31'},title:'31号路格'}]}:{})}];return{snapshot,onUse:vi.fn(()=>true),buy:vi.fn(()=>true),leave:vi.fn()};}

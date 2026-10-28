@@ -81,9 +81,13 @@ import type { BankDecision, DebtDecision } from './finance';
 import { ECONOMY_RULES, PROPERTY_CATALOG } from './economy';
 import type { PropertyDecision } from './economy';
 import type { Action, GameEvent, GameState } from './engine';
+import { createSave, restoreSave, savePoint, SaveError, SAVE_LIMITS } from './save';
+import type { RestoredSave, SavePoint, RestoreOptions } from './save';
 
 export type SessionOptions = { computerPolicy?:ComputerPolicy; computerIds?: string[]; mode: 'surrender' | 'specialObjects' | 'godPairs' | 'stockCircuit' | 'stockLedger' | 'stockMarket' | 'minigames' | 'shopAcquisition' | 'siteServices' | 'magicNested' | 'magicActions' | 'magic' | 'batches' | 'payments' | 'disposal' | 'estateSales' | 'indexedEconomy' | 'dateBusiness' | 'insurance' | 'commerce' | 'company' | 'dividends' | 'lottery' | 'calendar' | 'finalFortune' | 'trafficFortune' | 'assetFortune' | 'fortune' | 'completeNews' | 'statusNews' | 'operatingNews' | 'propertyNews' | 'news' | 'events' | 'g7' | 'g6' | 'g5' | 'g4' | 'g3' | 'g2' | 'g1' | 'wealth' | 'cards' | 'roadTools' | 'nearby' | 'construction' | 'tools' | 'economy' | 'turns' | 'sandbox'; characterIds: string[]; seed: string; initialFunds?: number; startDate?: string };
 export type SessionSnapshot = Snapshot & {
+  network?: { sending?: boolean; self: string; responderId: string; waiting: boolean; gameId: string; connected: boolean; pending: boolean; message: string; readOnly: boolean };
+  restorationPending?: boolean;
   canSurrender?:boolean; surrenderDecision?:SurrenderDecision|null;
   computer?: {policy?:ComputerPolicy;ids:string[];playerId:string;automatic:boolean;reason:string;error:string|null;lastReason:string|null};
   mode: SessionOptions['mode']; participants: number[]; seed: string; turn: number; round: number;
@@ -122,6 +126,9 @@ export class GameSession {
   private animation = { token: '', elapsed: 0 };
   private commandSerial = 0;
   private disposed = false;
+  private restorationPending = false;
+  private hostSuspended = false;
+  private currentGameId = '';
   private researchMemory: ResearchMemory = {};
   private computerWait = {key:'',elapsed:0};
   private computerError: string | null = null;
@@ -131,12 +138,50 @@ export class GameSession {
   onPresentation: (packet: AudioPacket) => void = () => undefined;
   onChange: (state: SessionSnapshot) => void = () => undefined;
 
-  constructor(readonly manifest: Manifest, private readonly ids = identity, initialMode: SessionOptions['mode'] = 'turns') {
+  constructor(readonly manifest: Manifest, private readonly ids = identity, initialMode: SessionOptions['mode'] = 'turns', restored?: RestoredSave) {
     this.nodes = new Map(manifest.map.nodes.map((n) => [n.id, n]));
-    this.start({ mode: initialMode, characterIds: manifest.characters.map((c) => c.id), seed: ids.seed() });
+    if (restored) {
+      // Only the validated replay path supplies this bootstrap. No start(), new
+      // game ID, random seed, historical audio or animation callbacks run here.
+      this.engine = restored.engine;
+      const config = this.engine.exportReplay().config;
+      this.currentGameId = config.gameId;
+      this.options = { mode: 'surrender', characterIds: [...config.characterIds], seed: config.seed,
+        initialFunds: config.initialFunds, startDate: config.startDate,
+        computerIds: [...restored.control.computerIds], computerPolicy: restored.control.computerPolicy };
+      this.commandSerial = restored.control.commandSerial;
+      this.researchMemory = structuredClone(restored.researchMemory);
+      this.restorationPending = true;
+      this.publish();
+    } else this.start({ mode: initialMode, characterIds: manifest.characters.map((c) => c.id), seed: ids.seed() });
+  }
+
+  static async restore(manifest: Manifest, serialized: string, ids = identity, options: RestoreOptions = {}): Promise<GameSession> {
+    const restored = await restoreSave(manifest, serialized, SAVE_LIMITS.restoreMs, options);
+    return new GameSession(manifest, ids, 'surrender', restored);
+  }
+
+  get saveAvailability(): SavePoint {
+    return this.sandbox || this.disposed ? { ok: false, reason: 'unsupported-mode' } : savePoint(this.engine.state);
+  }
+
+  exportSave(): Promise<string> {
+    if (this.disposed) return Promise.reject(new SaveError('closed-session', '对局已关闭'));
+    if (this.sandbox || this.options.mode !== 'surrender') return Promise.reject(new SaveError('unsupported-version', '首版存档仅支持 v47 对局'));
+    return createSave(this.manifest, this.engine, { mode: 'surrender', computerIds: this.options.computerIds ?? [],
+      computerPolicy: this.options.computerPolicy ?? COMPUTER_POLICY, commandSerial: this.commandSerial }, this.researchMemory);
+  }
+
+  continueRestored(): void {
+    if (this.disposed || !this.restorationPending) return;
+    this.restorationPending = false;
+    this.publish(); // Host barrier only: do not change pause, revision or RNG.
   }
 
   get state() { return this.view; }
+  /** Menus freeze host work without adding pause commands to the saved game. */
+  hold(value: boolean) { this.hostSuspended = value; }
+  get gameId() { return this.currentGameId; }
   get actor() { return this.view.actors[this.view.active]; }
   snapshot(): SessionSnapshot { return structuredClone(this.view); }
   get gameState(): GameState | null { return this.sandbox ? null : this.engine.state; }
@@ -157,7 +202,8 @@ export class GameSession {
       ...(['surrender','specialObjects','godPairs','stockCircuit','stockLedger','stockMarket','minigames','shopAcquisition','siteServices','magicNested','magicActions','magic','batches','payments','disposal','estateSales','indexedEconomy','dateBusiness','insurance', 'commerce', 'company', 'dividends', 'lottery', 'calendar', 'finalFortune', 'trafficFortune', 'assetFortune', 'fortune', 'completeNews', 'statusNews', 'operatingNews', 'propertyNews', 'news', 'events', 'g7', 'g6', 'g5', 'g4', 'g3', 'g2', 'g1', 'wealth', 'cards', 'roadTools', 'nearby', 'construction', 'tools', 'economy'].includes(options.mode) ? { rulesId: options.mode==='surrender'?SURRENDER_RULES.id:options.mode==='specialObjects'?SPECIAL_OBJECT_RULES.id:options.mode==='godPairs'?GOD_PAIRS_RULES.id:options.mode === 'stockCircuit'?STOCK_CIRCUIT_RULES.id:options.mode==='stockLedger'?STOCK_LEDGER_RULES.id:options.mode==='stockMarket'?STOCK_MARKET_RULES.id:options.mode==='minigames'?MINIGAME_RULES.id:options.mode === 'shopAcquisition'?SHOP_ACQUISITION_RULES.id:options.mode === 'siteServices'?SITE_SERVICES_RULES.id:options.mode === 'magicNested'?MAGIC_NESTED_RULES.id:options.mode==='magicActions'?MAGIC_ACTIONS_RULES.id:options.mode==='magic'?MAGIC_RULES.id:options.mode==='batches'?BATCH_RULES.id:options.mode==='payments'?PAYMENT_RULES.id:options.mode==='disposal'?DISPOSAL_RULES.id:options.mode==='estateSales'?ESTATE_RULES.id:options.mode==='indexedEconomy'?INDEXED_RULES.id:options.mode==='dateBusiness'?DATE_BUSINESS_RULES.id:options.mode==='insurance'?INSURANCE_RULES.id:options.mode === 'commerce' ? COMMERCE_RULES.id : options.mode === 'company' ? COMPANY_RULES.id : options.mode === 'dividends' ? DIVIDEND_RULES.id : options.mode === 'lottery' ? LOTTERY_RULES.id : options.mode === 'calendar' ? CALENDAR_RULES.id : options.mode === 'finalFortune' ? FINAL_FORTUNE_RULES.id : options.mode === 'trafficFortune' ? TRAFFIC_FORTUNE_RULES.id : options.mode === 'assetFortune' ? ASSET_FORTUNE_RULES.id : options.mode === 'fortune' ? FORTUNE_RULES.id : options.mode === 'completeNews' ? COMPLETE_NEWS_RULES.id : options.mode === 'statusNews' ? STATUS_NEWS_RULES.id : options.mode === 'operatingNews' ? OPERATING_NEWS_RULES.id : options.mode === 'propertyNews' ? PROPERTY_NEWS_RULES.id : options.mode === 'news' ? NEWS_RULES.id : options.mode === 'events' ? MAP_EVENT_RULES.id : options.mode === 'g7' ? G7_RULES.id : options.mode === 'g6' ? G6_RULES.id : options.mode === 'g5' ? G5_RULES.id : options.mode === 'g4' ? G4_RULES.id : options.mode === 'g3' ? G3_RULES.id : options.mode === 'g2' ? G2_RULES.id : options.mode === 'g1' ? G1_RULES.id : options.mode === 'wealth' ? WEALTH_RULES.id : options.mode === 'cards' ? CARD_RULES.id : options.mode === 'roadTools' ? ROAD_RULES.id : options.mode === 'nearby' ? NEARBY_RULES.id : options.mode === 'construction' ? CONSTRUCTION_RULES.id : options.mode === 'tools' ? ITEM_RULES.id : FINANCE_RULES.id, initialFunds: options.initialFunds ?? ECONOMY_RULES.initialFunds } : {}),
     });
     if (this.sandbox) this.sandbox.onChange = () => undefined;
-    this.engine = next; this.researchMemory = {};
+    this.engine = next; this.currentGameId = next.state.gameId; this.researchMemory = {};
+    this.restorationPending = false;
     this.options = structuredClone({ ...options, seed: options.seed.trim() });
     this.animation = { token: '', elapsed: 0 };
     this.commandSerial = 0; this.recentEvents = [];
@@ -270,7 +316,7 @@ export class GameSession {
   operateSales(action:SaleAction){return this.send(action).ok;}
 
   private send(action: Action, playerId?: string, automatic=false): import('./engine').Result {
-    if(this.disposed)return {ok:false,reason:'illegal-action'};
+    if(this.disposed || this.restorationPending || this.hostSuspended)return {ok:false,reason:'illegal-action'};
     const state = this.engine.state;
     const actor=playerId??state.players[state.active].id;
     if(!automatic&&action.type!=='pause'&&action.type!=='animationDone'&&!(action.type==='minigame'&&action.input.kind==='tick')&&this.isComputer(actor,state))return {ok:false,reason:'wrong-player'};
@@ -348,7 +394,7 @@ export class GameSession {
       : definition?.kind === 'facility' && state.economy && !state.g4 ? `${definition.name}是大型用地，专属建筑玩法尚未开放，可交给${nextName}。`
       : `${name}到达 ${actors[active].node} 号路格，确认后交给${nextName}。`;
     const responder=decisionPlayer(state),automatic=this.isComputer(responder,state);
-    return { ...(this.options.computerIds?.length?{computer:{policy:this.options.computerPolicy??COMPUTER_POLICY,ids:[...this.options.computerIds],playerId:responder,automatic,reason:automatic?(decideComputer(state,this.manifest.map.nodes,this.options.computerPolicy,this.researchMemory)?.reason??'等待当前动画完成'):'等待人类操作',error:this.computerError,lastReason:this.lastComputerReason}}:{}),active, actors, phase: state.phase, paused: state.paused, dice: state.dice,
+    return { ...(this.restorationPending ? { restorationPending: true } : {}), ...(this.options.computerIds?.length?{computer:{policy:this.options.computerPolicy??COMPUTER_POLICY,ids:[...this.options.computerIds],playerId:responder,automatic,reason:automatic?(decideComputer(state,this.manifest.map.nodes,this.options.computerPolicy,this.researchMemory)?.reason??'等待当前动画完成'):'等待人类操作',error:this.computerError,lastReason:this.lastComputerReason}}:{}),active, actors, phase: state.phase, paused: state.paused, dice: state.dice,
       remaining: state.remaining, choices: state.pending?.kind === 'branch' ? state.pending.choices : [],
       canSurrender:canSurrender(state),surrenderDecision:state.pending?.kind==='surrender'?state.pending:null,
       completed: state.completed, message, mode: this.options.mode, participants, seed: state.seed,
@@ -401,7 +447,7 @@ export class GameSession {
   dispose(){this.onPresentation=()=>undefined;this.disposed=true;this.computerWait={key:'',elapsed:0};this.onChange=()=>undefined;if(this.sandbox)this.sandbox.onChange=()=>undefined;}
 
   tick(milliseconds: number) {
-    if(this.disposed)return;
+    if(this.disposed || this.restorationPending || this.hostSuspended)return;
     if (this.sandbox) { this.sandbox.tick(milliseconds); this.view = this.project(); return; }
     const state = this.engine.state;
     if (state.phase==='finished'||state.paused || !Number.isFinite(milliseconds) || milliseconds <= 0) return;

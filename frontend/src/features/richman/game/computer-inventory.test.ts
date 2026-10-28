@@ -1,7 +1,7 @@
 import {expect,it} from 'vitest';
 import {GameEngine} from './engine';import type {GameState,Action} from './engine';import {GameSession} from './session';import type {Manifest} from '../types';
 import {decideComputer,inventoryChoices,robberyGain,INVENTORY_GOODS} from './computer-inventory';import {decideComputer as previous} from './computer-status';
-import {tickAlliance,hostility} from './g3';import {PROPERTY_CATALOG} from './economy';import nodes from '../japan-topology.fixture.json';
+import {tickAlliance,hostility} from './g3';import {PROPERTY_CATALOG} from './economy';import nodes from '../../../../../shared/richman/japan-topology.fixture.json';
 const config={gameId:'inventory-domain',seed:'inventory',rulesId:'japan-events-candidate-v44',characterIds:['xiaomei','tuu','chyan','salonbus'],initialFunds:100000};
 const cur=(e:GameEngine)=>(e as unknown as {current:GameState}).current;
 function grant(s:GameState,id:string,item:string,n=1){s.effects!.inventory[id][item]=(s.effects!.inventory[id][item]??0)+n;if(item.startsWith('card:'))s.g3!.slots[id].push(...Array(n).fill(item));}

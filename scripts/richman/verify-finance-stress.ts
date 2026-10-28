@@ -2,8 +2,8 @@ import {GameEngine,replayGame} from '../../frontend/src/features/richman/game/en
 import type {Replay,GameEvent} from '../../frontend/src/features/richman/game/engine';
 import type {PaymentBatch} from '../../frontend/src/features/richman/game/payment-batches';
 import {strict as assert} from 'node:assert';
-import holidays from '../../frontend/src/features/richman/game/calendar-japan.json';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import holidays from '../../shared/richman/game/calendar-japan.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 export async function verifyFinanceStress(replay:Replay,kind:string){
  assert.equal(replay.rulesId,'japan-events-candidate-v44');assert.equal(replay.itemFingerprint,'f9dbb7e9');
  const e=new GameEngine(nodes,replay.config),prefixes=new Map<string,number>(),batches=new Map<number,PaymentBatch>(),receipts:unknown[]=[],notices:unknown[]=[],forced:unknown[]=[];

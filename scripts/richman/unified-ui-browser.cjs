@@ -174,7 +174,7 @@ for(let index=0;index<plan.replay.commands.length;index++){
  else if(a.type==='item'){
   if(a.action.type==='begin'){effect=a.action.definitionId;await button('使用'+names[effect.slice(0,7)]).click();}
   else if(a.action.type==='cancel')await button('取消使用').click();
-  else if(effect.startsWith('tool:09')){const d=require('../../frontend/src/features/richman/game/japan-properties.json').properties.find(p=>p.id===a.action.target.id);const panel=page.getByRole('region',{name:'机器工人选择'});await panel.getByRole('radio',{name:new RegExp(d.name+' · '+d.nodeIds.join(' / ')+' 号路格')}).check();await button('确认建造').click();}
+  else if(effect.startsWith('tool:09')){const d=require('../../shared/richman/game/japan-properties.json').properties.find(p=>p.id===a.action.target.id);const panel=page.getByRole('region',{name:'机器工人选择'});await panel.getByRole('radio',{name:new RegExp(d.name+' · '+d.nodeIds.join(' / ')+' 号路格')}).check();await button('确认建造').click();}
   else if(effect.startsWith('tool:08')){await page.getByRole('radio',{name:`${a.value} 点`,exact:true}).check();await button('确认并出发').click();}
   else {const id=effect.slice(0,7),name=names[id],panel=page.getByRole('region',{name:name+'选择'});const g7=['tool:10','tool:11','tool:13'].includes(id);
    async function choose(){const select=panel.getByRole('combobox').nth(0),value=g7?a.action.target.kind+'/'+a.action.target.id:a.action.target.id;if(await select.isDisabled())assert.equal(await select.inputValue(),value);else await select.selectOption(value);if(a.action.destination)await panel.getByLabel('传送目的地').selectOption(a.action.destination.kind+'/'+a.action.destination.id);if(a.value!==undefined)await panel.getByLabel('改建类型').selectOption(String(a.value));}

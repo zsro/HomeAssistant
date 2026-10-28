@@ -6,7 +6,7 @@ import {newsEligible} from './news';
 import {PROPERTY_CATALOG} from './economy';
 import {auctionReserve,applyG4,startPublicAuction,bidG4} from './g4';
 import {saveCheckpoint,restoreCheckpoint} from './g7';
-import nodes from '../japan-topology.fixture.json';
+import nodes from '../../../../../shared/richman/japan-topology.fixture.json';
 function setup(version=32){const e=new GameEngine(nodes,{gameId:'sale',seed:'sale',rulesId:`japan-events-candidate-v${version}`,characterIds:['a','b','c','d'],initialFunds:100000});const s=current(e);s.g6!.gods=[];return{e,s};}
 function current(e:GameEngine){return(e as unknown as {current:GameState}).current;}
 function send(e:GameEngine,action:Action,ok=true){const s=e.state,r=e.dispatch({id:'c'+s.revision,gameId:s.gameId,expectedRevision:s.revision,playerId:s.players[s.active].id,action});expect(r.ok,JSON.stringify(r)).toBe(ok);return r;}

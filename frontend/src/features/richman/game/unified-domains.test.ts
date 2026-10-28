@@ -1,7 +1,7 @@
 import { expect, it } from 'vitest';
 import { GameEngine, replayGame } from './engine';
 import type { Action, EventPayload } from './engine';
-import nodes from '../japan-topology.fixture.json';
+import nodes from '../../../../../shared/richman/japan-topology.fixture.json';
 import { PROPERTY_CATALOG } from './economy';
 import { G7_RULES, saveCheckpoint, restoreCheckpoint, g7Options, applyG7, nuclearTargets } from './g7';
 import { G4_GOODS, applyG4, bidG4, g4Options, g4RentLines, tickProperties, reactTax } from './g4';

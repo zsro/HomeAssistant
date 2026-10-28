@@ -3,7 +3,7 @@ import {GameEngine} from './engine';import type {GameState,EventPayload} from '.
 import {GameSession} from './session';import type {Manifest} from '../types';
 import {decideComputer} from './computer-defense';import {decideComputer as priorDecision} from './computer-reactions';
 import {startAttack,openReaction} from './g3';import {detentionNode} from './g2';
-import nodes from '../japan-topology.fixture.json';
+import nodes from '../../../../../shared/richman/japan-topology.fixture.json';
 const config={gameId:'defense-domain',seed:'defense',rulesId:'japan-events-candidate-v44',characterIds:['xiaomei','tuu','chyan','salonbus'],initialFunds:30000};
 const cur=(e:GameEngine)=>(e as unknown as {current:GameState}).current;
 function grant(s:GameState,id:string,item:string){s.effects!.inventory[id][item]=(s.effects!.inventory[id][item]??0)+1;s.g3!.slots[id].push(item);}

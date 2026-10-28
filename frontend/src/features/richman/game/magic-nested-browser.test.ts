@@ -2,7 +2,7 @@ import {expect,it} from 'vitest';
 import {createHash} from 'node:crypto';
 import {GameEngine,replayGame} from './engine';
 import type {Replay} from './engine';
-import nodes from '../japan-topology.fixture.json';
+import nodes from '../../../../../shared/richman/japan-topology.fixture.json';
 import effectsReplay from './fixtures/magic-nested-v38-effects-replay.json';
 import effectsGolden from './fixtures/magic-nested-v38-effects-manifest.json';
 import multiReplay from './fixtures/magic-nested-v38-multi-replay.json';

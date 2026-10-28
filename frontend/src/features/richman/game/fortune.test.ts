@@ -6,7 +6,7 @@ import {saveCheckpoint,restoreCheckpoint} from './g7';
 import {syncCardSlots} from './g3';
 import {newsEligible} from './news';
 import {PROPERTY_CATALOG} from './economy';
-import nodes from '../japan-topology.fixture.json';
+import nodes from '../../../../../shared/richman/japan-topology.fixture.json';
 function fixture(){const e=new GameEngine(nodes,{gameId:'fortune',rulesId:FORTUNE_RULES.id,seed:'fortune',characterIds:['a','b','c'],initialFunds:100000});const s=(e as unknown as {current:GameState}).current;s.g6!.gods=[];return{e,s};}
 function send(e:GameEngine,action:Action,playerId?:string){const s=e.state;return e.dispatch({id:`c${s.revision}`,gameId:s.gameId,expectedRevision:s.revision,playerId:playerId??s.players[s.active].id,action});}
 function god(s:GameState,type:number){s.g6!.gods=[{id:'god-1',type,node:2,carrier:'player-1',remaining:7}];}

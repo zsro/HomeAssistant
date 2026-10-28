@@ -2,6 +2,36 @@
 .rm-page button, .rm-page a { -webkit-tap-highlight-color: transparent; }
 .rm-page button { font: inherit; cursor: pointer; }
 .rm-page button:disabled { cursor: not-allowed; opacity: .45; }
+.rm-cloud-status { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; padding: 7px 12px; margin-bottom: 8px; font-size: 12px; background: #f4e6bc; color: #342f25; border: 1px solid #ae905b; }
+.rm-cloud-status button { min-height: 36px; border: 1px solid #ae905b; background: #fff8dc; color: #342f25; padding: 5px 10px; }
+.rm-cloud-saves { padding: 16px; font-size: 14px; line-height: 1.6; }
+.rm-cloud-saves > p:first-child { margin-top: 0; }
+.rm-save-auto { display: flex; align-items: center; gap: 8px; min-height: 44px; font-weight: 600; }
+.rm-save-auto input { width: 18px; height: 18px; }
+.rm-save-slots { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 14px; }
+.rm-save-slot { display: flex; flex-direction: column; align-items: stretch; padding: 14px; border: 3px ridge #b6a06e; background: #fff3d4; min-width: 0; }
+.rm-save-slot h3 { margin: 0 0 10px; font-size: 17px; color: #3d534a; }
+.rm-save-slot > button { margin-top: auto; min-height: 44px; }
+.rm-save-summary { margin: 0 0 12px; font-size: 12px; }
+.rm-save-summary div { margin-bottom: 5px; }
+.rm-save-summary dt { color: #716346; font-size: 11px; }
+.rm-save-summary dd { margin: 0; overflow-wrap: anywhere; }
+.rm-save-actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 12px 0; }
+.rm-save-actions button { min-height: 44px; }
+.rm-save-confirm { border: 3px ridge #ae905b; background: #fff2ce; padding: 14px; margin-top: 16px; }
+.rm-save-error { padding: 10px; background: #fff0e5; border-left: 4px solid #a74729; color: #762e1a; }
+.rm-save-status { padding: 10px; background: #f7edcc; border-left: 4px solid #526c46; }
+.rm-save-login { padding: 14px; border: 2px solid #b6a06e; background: #fff7e1; }
+.rm-save-login label { display: grid; grid-template-columns: 3em minmax(0, 1fr); align-items: center; gap: 10px; margin: 10px 0; }
+.rm-save-login input { min-width: 0; padding: 10px; border: 1px solid #ae905b; font: inherit; }
+.rm-save-restoring { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.rm-save-restoring progress { width: min(240px, 70%); }
+.rm-newgame-save-note { padding: 8px 18px 0; font-size: 13px; line-height: 1.7; }
+@media (max-width: 540px) {
+  .rm-save-slots { grid-template-columns: minmax(0, 1fr); }
+  .rm-cloud-saves { padding: 12px; }
+  .rm-save-actions > button { width: 100%; }
+}
 .rm-header { height: 78px; display: flex; align-items: center; justify-content: space-between; padding: 0 max(28px, calc((100vw - 1440px) / 2)); border-bottom: 1px solid #deded2; background: #fbf9f2; }
 .rm-back { display: flex; gap: 12px; align-items: center; font-size: 13px; color: #596c61; text-decoration: none; }
 .rm-back span { font-size: 22px; }

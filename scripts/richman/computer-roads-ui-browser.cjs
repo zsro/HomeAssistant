@@ -65,7 +65,7 @@ async function act(a){
   if(effect.startsWith('tool:01'))return button('确认清路').click();
   if(effect.startsWith('tool:02')){await page.getByLabel('目标路格',{exact:true}).selectOption(a.action.target.id);return button('确认放置路障').click();}
   if(effect.startsWith('tool:08')){await page.getByRole('radio',{name:`${a.value} 点`,exact:true}).check();return button('确认并出发').click();}
-  if(effect.startsWith('tool:09')){const d=require('../../frontend/src/features/richman/game/japan-properties.json').properties.find(p=>p.id===a.action.target.id);await page.getByRole('region',{name:'机器工人选择'}).getByRole('radio',{name:new RegExp(d.name+' · '+d.nodeIds.join(' / ')+' 号路格')}).check();return button('确认建造').click();}
+  if(effect.startsWith('tool:09')){const d=require('../../shared/richman/game/japan-properties.json').properties.find(p=>p.id===a.action.target.id);await page.getByRole('region',{name:'机器工人选择'}).getByRole('radio',{name:new RegExp(d.name+' · '+d.nodeIds.join(' / ')+' 号路格')}).check();return button('确认建造').click();}
   if(effect.startsWith('card:15'))return button('确认使用冬眠卡').click();
   if(effect.startsWith('card:01'))return button('确认使用均富卡').click();
   const name=names[effect.slice(0,7)],p=page.getByRole('region',{name:name+'选择'});await p.getByRole('combobox').nth(0).selectOption(a.action.target.id);if(a.stolenItemId)await p.getByLabel('抢夺物品').selectOption(a.stolenItemId);if(a.value!==undefined)await p.getByLabel('改建类型').selectOption(String(a.value));return button('确认使用'+name).click();

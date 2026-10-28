@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import nodes from '../japan-topology.fixture.json';
+import nodes from '../../../../../shared/richman/japan-topology.fixture.json';
 import { GameEngine, replayGame } from './engine';
 import type { Action } from './engine';
 import { ROAD_RULES, ROAD_GOODS, ROADBLOCK, ROADBLOCK_EFFECT, ROBOT, ROBOT_EFFECT, roadblockTargets, robotPath } from './road-tools';

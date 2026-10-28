@@ -64,6 +64,15 @@ describe('audio presentation boundaries (mock media, not browser acceptance)',()
   it('cycles exactly eight documented background tracks without RNG',()=>{
     const {audio,ports}=setup();audio.receive(packet());audio.unlock();for(let i=0;i<8;i++)ports[i].end();expect(ports[8].src).toContain('track02.mp3');
   });
+  it('restoring an older revision of the same game clears cues and accepts new live events',()=>{
+    const {audio,ports}=setup();audio.receive(packet());audio.unlock();audio.receive(landing(20));
+    const old=ports[1];audio.restore(packet(2,{paused:true}));
+    expect(old.src).toBe('');expect(old.onended).toBeNull();
+    const count=ports.length;
+    audio.restore(packet(2));audio.receive(landing(3));
+    expect(ports.length).toBeGreaterThan(count);
+    expect(ports.at(-1)?.src).toContain('effect-43.wav');
+  });
   it('failed play is caught, no repeated attempts each command, explicit retry allowed',async()=>{
     const ports:Port[]=[];const audio=new RichmanAudio(()=>{const p=new Port();if(ports.length===0)p.result=Promise.reject(new DOMException('gesture','NotAllowedError'));ports.push(p);return p;});
     audio.configure(manifest);audio.receive(packet());audio.unlock();await flush();expect(audio.status.blocked).toBe(true);audio.receive(packet(1));expect(ports).toHaveLength(1);audio.unlock();expect(ports[1].plays).toBe(1);

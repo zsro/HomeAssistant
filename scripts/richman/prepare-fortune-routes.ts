@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import {GameEngine} from '../../frontend/src/features/richman/game/engine';
 import {FORTUNE_RULES} from '../../frontend/src/features/richman/game/fortune';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 import {planFortune} from './plan-fortune-journey';
 const uncovered=new Set(Array.from({length:16},(_,i)=>i+17)),routes=[];
 for(let index=0;uncovered.size;index++){

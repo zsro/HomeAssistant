@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import {readFileSync,writeFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {GameEngine,replayGame} from '../../frontend/src/features/richman/game/engine';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 const dir='/private/tmp/richman-polish-help';
 const rows=[];
 for(const name of ['desktop','touch390']){

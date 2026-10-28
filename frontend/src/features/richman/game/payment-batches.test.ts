@@ -3,7 +3,7 @@ import {GameEngine} from './engine';
 import type {GameState,Action,EventPayload} from './engine';
 import {BATCH_FINGERPRINT,beginDividendBatch,advanceBatch} from './payment-batches';
 import {saveCheckpoint,restoreCheckpoint} from './g7';
-import nodes from '../japan-topology.fixture.json';
+import nodes from '../../../../../shared/richman/japan-topology.fixture.json';
 const current=(e:GameEngine)=>(e as unknown as{current:GameState}).current;
 function setup(count=4,version=35){const e=new GameEngine(nodes,{gameId:'batches',rulesId:`japan-events-candidate-v${version}`,seed:'batches',characterIds:['a','b','c','d'].slice(0,count),initialFunds:100000,startDate:'1998-01-14'}),s=current(e);s.g6!.gods=[];return{e,s};}
 function send(e:GameEngine,action:Action,ok=true){const s=e.state,p=s.pending,r=e.dispatch({id:'c'+s.revision,gameId:s.gameId,expectedRevision:s.revision,playerId:action.type==='auction'&&p?.kind==='auction'?p.responderId:s.players[s.active].id,action});expect(r.ok,JSON.stringify(r)).toBe(ok);return r;}

@@ -4,7 +4,7 @@ import { ItemPanel } from './ItemPanel';
 import { GameSession } from './game/session';
 import { ROBOT_EFFECT, ROADBLOCK_EFFECT } from './game/road-tools';
 import type { Manifest } from './types';
-import nodes from './japan-topology.fixture.json';
+import nodes from '../../../../shared/richman/japan-topology.fixture.json';
 afterEach(cleanup);
 const manifest: Manifest = { version: 1, map: { name: '日本', width: 2304, height: 2304, nodes, scenery: [] }, sprites: {},
   characters: ['a', 'b', 'c', 'd'].map(id => ({ id, name: id, color: '#fff', idle: [], walk: [], walkFramesPerDirection: 10 })) };

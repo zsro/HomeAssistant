@@ -3,7 +3,7 @@ import { GameEngine, replayGame } from './engine';
 import type { Action } from './engine';
 import { FINANCE_RULES } from './finance';
 import { PROPERTY_CATALOG } from './economy';
-import nodes from '../japan-topology.fixture.json';
+import nodes from '../../../../../shared/richman/japan-topology.fixture.json';
 
 // Original 110-node Japan topology and real property catalog: never shorten the roads.
 describe('S1 complete Japan games', () => {

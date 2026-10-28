@@ -24,7 +24,7 @@ def audit(tree_path, asm_path):
         if len(table) >= 3*288:
             break
     rows = [dict(slot=i, closed=table[576+i*12], kind=table[577+i*12], month=table[578+i*12], day=table[579+i*12]) for i in range(24)]
-    current = json.loads(Path('frontend/src/features/richman/game/calendar-japan.json').read_text())
+    current = json.loads(Path('shared/richman/game/calendar-japan.json').read_text())
     assert rows == current
     assert all(r['kind'] == 0 and r['closed'] in [0, 1] for r in rows)
     assert sum(r['closed'] for r in rows) == 15

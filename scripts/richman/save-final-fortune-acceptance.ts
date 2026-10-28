@@ -3,7 +3,7 @@ import {createHash} from 'node:crypto';
 import assert from 'node:assert/strict';
 import {GameEngine,replayGame} from '../../frontend/src/features/richman/game/engine';
 import type {Replay} from '../../frontend/src/features/richman/game/engine';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 import {verifyFinalFortune} from './verify-final-fortune';
 const root='frontend/src/features/richman/game/fixtures',manifest=[],routes=[];
 for(const i of (process.env.RICHMAN_ROUTES||'2,3,4,6,7,2-repay,3-bank,6-return,7-redirect').split(',')){

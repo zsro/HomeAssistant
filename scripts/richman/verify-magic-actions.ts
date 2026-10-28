@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import {GameEngine,replayGame} from '../../frontend/src/features/richman/game/engine';
 import type {Replay} from '../../frontend/src/features/richman/game/engine';
 import {PROPERTY_CATALOG} from '../../frontend/src/features/richman/game/economy';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 /** Independently checks actual command worlds, including multiple rows in a single command. */
 export function verifyMagicActions(replay:Replay,requireAll=true){
  assert.equal(replay.rulesId,'japan-events-candidate-v37');const live=new GameEngine(nodes,replay.config);const effects=new Set<number>();let rows=0,reactions=0,buildChoices=0;

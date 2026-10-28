@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import {GameEngine,replayGame} from '../../frontend/src/features/richman/game/engine';
 import type {Replay} from '../../frontend/src/features/richman/game/engine';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 export function verifyMagic(replay:Replay){
  const e=replayGame(nodes,replay),events=e.events,receipts=events.filter(e=>e.type==='magicResolved').map(e=>e.receipt),effects=new Set<number>();
  assert.equal(replay.rulesId,'japan-events-candidate-v36');

@@ -2,7 +2,7 @@
 import {planComputerRent} from './plan-computer-rent';
 import {planRentPayer} from './plan-computer-rent-payer';
 import {GameEngine} from '../../frontend/src/features/richman/game/engine';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 import {writeFileSync} from 'node:fs';
 for(const route of ['2','3a','payer']){
  const p=route==='payer'?planRentPayer('reaction-debt-0','debt',4,4000):planComputerRent(route==='2'?2:3,route==='2'?'rent-ai-2-4':'rent-ai-3-13',3500,route==='2'?['free','redirect']:['redirect']);

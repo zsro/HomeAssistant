@@ -6,7 +6,7 @@ import {encounterGod,tickGods,replenishGods,applyG6,g6Options} from './g6';
 import {saveCheckpoint,restoreCheckpoint,applyG7,nuclearTargets} from './g7';
 import {beginRentDisposal} from './disposal';
 import {PROPERTY_CATALOG} from './economy';
-import nodes from '../japan-topology.fixture.json';
+import nodes from '../../../../../shared/richman/japan-topology.fixture.json';
 function fixture(version=45){const e=new GameEngine(nodes,{gameId:'pair-test',rulesId:`japan-events-candidate-v${version}`,seed:'pairs',characterIds:['a','b','c'],initialFunds:100000});const s=(e as unknown as {current:GameState}).current;const events:EventPayload[]=[];return {e,s,events,emit:(v:EventPayload)=>events.push(v)};}
 function carry(s:GameState,type=1){s.g6!.gods=[{id:'attached',type,node:99,carrier:'player-1',remaining:1}];}
 it('v45 initializes five ordinary odd slots and retains inherited systems/fingerprint',()=>{const {s}=fixture();expect(s.items!.fingerprint).toBe(GOD_PAIRS_FINGERPRINT);expect(s.g6!.gods.map(g=>g.type)).toEqual([1,3,5,7,9,12,15]);expect(s.g6!.gods.filter(g=>g.type<=10).every(g=>![23,24,25,26,27,28,29].includes(g.node))).toBe(true);expect(s.calendar&&s.g6!.market&&s.g6!.holdings['player-1']['jp:24'].average===0).toBeTruthy();expect(fixture().s).toEqual(s);});

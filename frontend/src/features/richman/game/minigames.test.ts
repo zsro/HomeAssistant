@@ -4,7 +4,7 @@ import type {GameState,Action} from './engine';
 import {MINIGAME_FINGERPRINT,MINIGAME_RULES,PENGUIN_GRID} from './minigames';
 import type {MiniInput} from './minigames';
 import {g6Draw} from './g6-random';
-import nodes from '../japan-topology.fixture.json';
+import nodes from '../../../../../shared/richman/japan-topology.fixture.json';
 const cur=(e:GameEngine)=>(e as unknown as {current:GameState}).current;
 function setup(version=41){const e=new GameEngine(nodes,{gameId:'mini-test',seed:'mini-test',rulesId:`japan-events-candidate-v${version}`,characterIds:['a','b','c','d'],initialFunds:100000,startDate:'1998-01-14'});cur(e).g6!.gods=[];return e;}
 function send(e:GameEngine,action:Action,ok=true,who?:string){const s=e.state,r=e.dispatch({gameId:s.gameId,id:'c'+s.revision,expectedRevision:s.revision,playerId:who??s.players[s.active].id,action});expect(r.ok,JSON.stringify(r)).toBe(ok);return r;}

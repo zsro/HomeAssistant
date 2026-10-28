@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import nodes from './japan-topology.fixture.json';
+import nodes from '../../../../shared/richman/japan-topology.fixture.json';
 import { directionFor, exits, Traversal } from './traversal';
 import type { Manifest } from './types';
 

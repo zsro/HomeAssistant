@@ -1,0 +1,143 @@
+{
+  "task": "SAVE-02",
+  "date": "2026-10-20",
+  "status": "implemented and verified; not deployed",
+  "scope": "Authenticated personal v47 save persistence; no browser product flow or authoritative multiplayer",
+  "database": {
+    "engine": "MySQL 8.0.44",
+    "database": "homeAssistantDB_test",
+    "maxAllowedPacket": 67108864,
+    "migration": "202610200001-richman-saves",
+    "migrationAppliedToProduction": false,
+    "isolation": "two random test users; only their slots/revisions/users removed in afterAll; no table reset",
+    "verified": [
+      "additive migration and interrupted-DDL retry",
+      "unique request and slot version indexes",
+      "owner-scoped list/read/create/overwrite",
+      "fresh app reads from MySQL",
+      "concurrent first create and overwrite",
+      "simultaneous idempotent requests",
+      "same requestId/different body rejected",
+      "lost response retry after later overwrite",
+      "explicit lower game revision with current slotVersion",
+      "rollback after revision insert and pointer failure",
+      "rollback after first-slot insert failure",
+      "auth revocation during validation",
+      "exact 8 MiB payload HTTP/MySQL round trip"
+    ],
+    "exact8MiBRoundTripMs": 20632
+  },
+  "tests": {
+    "backend": {
+      "passed": 44,
+      "failed": 0,
+      "pending": 0,
+      "files": [
+        {
+          "path": "tests/integration/richman-save.test.ts",
+          "passed": 12
+        },
+        {
+          "path": "tests/unit/app.test.ts",
+          "passed": 4
+        },
+        {
+          "path": "tests/unit/rate-limit.test.ts",
+          "passed": 1
+        },
+        {
+          "path": "tests/unit/richman-save.test.ts",
+          "passed": 20
+        },
+        {
+          "path": "tests/unit/security.test.ts",
+          "passed": 4
+        },
+        {
+          "path": "tests/unit/validation.test.ts",
+          "passed": 3
+        }
+      ]
+    },
+    "restorationRegression": {
+      "passed": 47,
+      "failed": 0,
+      "pending": 0,
+      "files": [
+        {
+          "path": "frontend/src/features/richman/game/save-circuit.test.ts",
+          "passed": 5
+        },
+        {
+          "path": "frontend/src/features/richman/game/save.test.ts",
+          "passed": 42
+        }
+      ]
+    },
+    "totalPassed": 91,
+    "initialSandboxRun": "HTTP listen/DB access failed with EPERM; rerun with reviewed network permission passed"
+  },
+  "worker": {
+    "runtime": "compiled JavaScript; no tsx or frontend dependencies at runtime",
+    "concurrency": 2,
+    "oldGenerationLimitMiB": 256,
+    "hardTimeoutMs": 30000,
+    "firstCloudAttempt": {
+      "outcome": "SAVE_RESTORE_TIMEOUT",
+      "payloadBytes": 455316,
+      "commands": 2442,
+      "change": "Skip world snapshot cloning for v47 commands that cannot alter research observations; every game command still dispatched"
+    },
+    "cloudAfterOptimization": {
+      "node": "v20.20.0",
+      "platform": "linux",
+      "arch": "x64",
+      "bytes": 455316,
+      "sha256": "bc3d2d76effabf384d8904714c882e832378cb0ba790be54a9eeb50bc042a4df",
+      "revision": 2442,
+      "errorCode": null,
+      "restoreMs": 13486,
+      "maxTimerDelayMs": 11,
+      "timerTicks": 662
+    },
+    "benchmarkHarness": "scripts/richman/benchmark-save-worker.mjs",
+    "cloudProcedure": "temporary /tmp directory; compiled pure rules/worker only; directory automatically removed; no production application change",
+    "measurementLimit": "single isolated run on existing cloud host, not a sustained load or end-to-end HTTPS benchmark"
+  },
+  "http": {
+    "slots": [
+      "manual-1",
+      "manual-2",
+      "manual-3",
+      "auto"
+    ],
+    "payloadBytes": 8388608,
+    "bodyBytes": 9437184,
+    "putPerOwnerPerMinute": 12,
+    "activeRequestsPerOwner": 1,
+    "activeRequestsPerApp": 4,
+    "compressedBodies": false
+  },
+  "checks": {
+    "backendTypeScriptBuild": true,
+    "frontendLint": true,
+    "frontendTypeScriptViteBuild": true,
+    "changedBackendTestsWorkerLint": true,
+    "rootFullLint": "failed: 2733 existing errors in historical CommonJS/browser scripts; new fixture lint issue fixed and all changed scope passes",
+    "nginxSnippetSyntax": "nginx -t passed using isolated temporary config on cloud host; live config not changed"
+  },
+  "release": {
+    "committed": false,
+    "deployed": false,
+    "productionDatabaseChanged": false,
+    "productionServicesRestarted": false,
+    "frontendReleaseRebuilt": false,
+    "requiredBeforePublication": [
+      "normal AGENTS.md local package / commit / push / server synchronization / deployment workflow",
+      "include deployment/nginx-richman-saves.conf inside each public server block and validate/reload Nginx",
+      "HTTPS save >1 MiB and oversize check",
+      "SAVE-03 browser LOAD/SAVE workflow"
+    ],
+    "liveNginxAtInspection": "no client_max_body_size override; default 1 MiB; prepared snippet sets save route to 9 MiB"
+  }
+}

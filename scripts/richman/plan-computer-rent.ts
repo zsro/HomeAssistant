@@ -2,7 +2,7 @@
 import {GameEngine} from '../../frontend/src/features/richman/game/engine';
 import {computerDecision,decisionPlayer} from '../../frontend/src/features/richman/game/computer';
 import {decideComputer} from '../../frontend/src/features/richman/game/computer-reactions';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 import {writeFileSync} from 'node:fs';
 export function planComputerRent(count:number,seed:string,limit=3500,required=['free','redirect']){
  const ids=['xiaomei','tuu','chyan','salonbus'].slice(0,count),computerIds=ids.filter((_,i)=>i%2===1),e=new GameEngine(nodes,{gameId:'rent-plan',seed,characterIds:ids,rulesId:'japan-events-candidate-v44',initialFunds:30000,startDate:'1998-01-14'}),used=new Set<string>();

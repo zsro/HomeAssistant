@@ -8,7 +8,7 @@ import { WEALTH_EFFECT } from './wealth';
 import { G1_FINGERPRINT } from './g1';
 import { PROPERTY_CATALOG } from './economy';
 import { drawDice } from './random';
-import nodes from '../japan-topology.fixture.json';
+import nodes from '../../../../../shared/richman/japan-topology.fixture.json';
 import v7 from './fixtures/tools-v7-replay.json';
 import golden from './fixtures/tools-v7-golden.json';
 

@@ -3,7 +3,7 @@ import {createHash} from 'node:crypto';
 import {GameEngine,replayGame} from './engine';
 import type {Replay} from './engine';
 import {verifyFortune} from '../../../../../scripts/richman/verify-fortune';
-import nodes from '../japan-topology.fixture.json';
+import nodes from '../../../../../shared/richman/japan-topology.fixture.json';
 import manifest from './fixtures/fortune-v20-manifest.json';
 const replays=import.meta.glob('./fixtures/fortune-v20-*-replay.json',{eager:true,import:'default'});
 it.each(manifest)('preserves actual v20 $players-player browser route $route and independent fortune arithmetic',row=>{

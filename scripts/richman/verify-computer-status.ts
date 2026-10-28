@@ -4,7 +4,7 @@ import type {ControlledReplay} from '../../frontend/src/features/richman/game/co
 import {decisionPlayer} from '../../frontend/src/features/richman/game/computer';
 import {decideComputer,STATUS_GOODS} from '../../frontend/src/features/richman/game/computer-status';
 import {shopPrice} from '../../frontend/src/features/richman/game/shop-acquisition';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 const goods=STATUS_GOODS.map(g=>g.id as string);
 export async function verifyComputerStatus(replay:ControlledReplay){
  assert.equal(replay.rulesId,'japan-events-candidate-v44');assert.equal(replay.itemFingerprint,'f9dbb7e9');assert.equal(replay.control?.policy,'status-v1');

@@ -1,0 +1,157 @@
+{
+  "task": "NET-03",
+  "generatedAt": "2026-10-20T11:23:51.647166+00:00",
+  "status": "recovery implementation and scoped acceptance passed; uncommitted; not deployed",
+  "baseCommit": "6e84e79e9562b93b82278df3939e74a8939a5eef",
+  "scope": [
+    "Durable localStorage intent keyed by account/game; migrates NET-02 sessionStorage; no optimistic settlement",
+    "Authenticated recover endpoint returns receipt resolution and current private projection under the same game queue; never executes missing commands",
+    "Successful POST remains pending until recovery confirms receipt revision; drains pre-command poll before unlock",
+    "Bounded automatic reconnect, online/visibility wakeup, combined cancellation and 10-second request timeout; original-account login and initial failure retry",
+    "Abort/drain disposed requests, compare request ID before deleting durable intent, retire disconnected controller in MySQL",
+    "Service restart restores authoritative checkpoint, RNG, decision continuation, AI memory and receipt journal; no offline wall-clock catch-up"
+  ],
+  "validation": {
+    "backend": {
+      "files": 8,
+      "tests": 76,
+      "failed": 0,
+      "unit": 45,
+      "hostCloudIntegration": 23,
+      "roomCloudIntegration": 8,
+      "environment": "real cloud homeAssistantDB_test; random temporary test accounts and games cleaned; production untouched",
+      "cases": [
+        "atomic committed/missing/conflicting recovery and account isolation",
+        "unknown database commit acknowledgement reconciles without replay",
+        "retired controller cannot renew presence or act after restart",
+        "2/3/4 humans and 1 human + 3 AI checkpoint after simulated seven-day offline interval",
+        "balloon/sky/penguin lease expiry, explicit disconnect, restart and exactly-once result ack",
+        "actual non-active auction responder and reaction continuation match uninterrupted checkpoint",
+        "existing host/room/auth/save-unit regression"
+      ]
+    },
+    "frontend": {
+      "files": 58,
+      "tests": 399,
+      "failed": 0,
+      "scope": "all non-game-directory frontend test files; 11 network projection/recovery/window tests included; historical full rules suite not rerun",
+      "runner": "threads; maxWorkers=4"
+    },
+    "recoveryBrowser": {
+      "environment": "real headless Chrome, four independent account logins, localhost Vite/API, live cloud MySQL; actual Node child process SIGKILL",
+      "browserPersistence": "First player uses launchPersistentContext with an on-disk temporary user-data directory, closes Chrome and reopens the same profile; its pending intent is not injected or imported. Other player authentication contexts are restored using Playwright storageState.",
+      "checks": [
+        {
+          "name": "committed-lost-response-survives-browser-close-and-SIGKILL-without-resubmit"
+        },
+        {
+          "name": "room-list-returns-to-original-game-after-restart"
+        },
+        {
+          "name": "uncommitted-request-survives-refresh-and-only-explicit-retry-executes"
+        },
+        {
+          "name": "offline-online-and-expired-login-recover-in-place"
+        },
+        {
+          "name": "3-independent-human-browser-seats-recover-after-SIGKILL"
+        },
+        {
+          "name": "4-independent-human-browser-seats-recover-after-SIGKILL"
+        },
+        {
+          "name": "controller-replacement-survives-process-restart-and-explicit-reclaim"
+        },
+        {
+          "name": "one-human-three-AI-seat-and-memory-checkpoint-recovery"
+        },
+        {
+          "name": "initial-connection-failure-retains-retry-entry-and-original-game"
+        },
+        {
+          "name": "live-minigame-freezes-on-restart-and-lost-settlement-recovers-once"
+        }
+      ],
+      "errors": [],
+      "screenshots": [
+        "net03/browser-and-server-recovered.png",
+        "net03/3-human-recovered.png",
+        "net03/4-human-recovered.png",
+        "net03/minigame-settlement-recovered.png"
+      ]
+    },
+    "builds": {
+      "backend": "passed",
+      "frontend": "passed; existing large-chunk warnings"
+    },
+    "lint": {
+      "frontend": "passed",
+      "changedBackendAndScripts": "passed",
+      "fullRepository": "not clean: existing historical .cjs scripts and generated/shared JavaScript trigger repository-wide lint findings; scoped changed files pass. Five globals findings in the new browser script were fixed before the final scoped check."
+    },
+    "gitDiffCheck": "passed",
+    "existingProductBrowserRegression": {
+      "environment": "two independent Chrome account logins, localhost API/Vite and cloud test DB; updated fault harness holds automatic receipt recovery until explicit retry",
+      "checks": [
+        {
+          "name": "two-separate-browser-logins-create-code-join-ready"
+        },
+        {
+          "name": "lost-command-response-retries-original-id-once"
+        },
+        {
+          "name": "formal-map-property-decision-and-turn-handoff"
+        },
+        {
+          "name": "save-is-server-persistence-and-host-leaving-does-not-end-game"
+        },
+        {
+          "name": "formal-auction-window-authorized-seat",
+          "prefix": 399,
+          "responder": "player-2"
+        },
+        {
+          "name": "formal-reaction-window-authorized-seat",
+          "prefix": 1345,
+          "responder": "player-2"
+        },
+        {
+          "name": "formal-minigame-window-authorized-seat",
+          "prefix": 130,
+          "responder": "player-1"
+        },
+        {
+          "name": "same-account-latest-window-readonly-and-explicit-reclaim"
+        },
+        {
+          "name": "mobile-room-layout-and-no-browser-runtime-errors"
+        }
+      ],
+      "errors": []
+    }
+  },
+  "policy": {
+    "humanOffline": "No automatic AI takeover, spending or surrender. Wait at human decision; retain active game indefinitely.",
+    "presence": "15-second lease. During unannounced network loss the clock may continue until lease expiry; explicit disconnect or process restart clears presence immediately.",
+    "time": "Server shutdown/restart does not catch up downtime. Other users cannot restart an offline human minigame clock.",
+    "pendingMissing": "Never auto-execute. Only explicit retry sends the original immutable intent.",
+    "capacity": "32 active games is an admission limit, not a tested throughput claim. Finished games remain readable. No automatic deletion.",
+    "pause": "Shared pause remains unavailable; menus do not freeze global play."
+  },
+  "boundaries": [
+    "Recovery matrix does not claim full asset-chain journeys completed for every player count or mixed AI configuration",
+    "No public-internet latency, physical mobile device, 32-game load or database-server crash/restore testing",
+    "Clearing browser site data or closing private mode can erase unsubmitted local intent; committed server progress remains recoverable",
+    "Existing fail-closed checkpoint compatibility/corruption behavior retained; no online repair or automatic historical-room archive",
+    "No new migration; no production modifications; no release packaging, Git commit, push or deployment"
+  ],
+  "testDevelopmentNotes": [
+    "Browser scripts wait for observed room readiness revisions and command recovery barriers before injecting the next fault. Earlier harness timing failures were fixed and the complete matrix rerun.",
+    "Nested-response fixture uses a legal external auction/reaction action; historical single-player pause commands are intentionally rejected by the network host."
+  ],
+  "commands": {
+    "backend": "RUN_NET_DB_TESTS=1 DB_NAME=homeAssistantDB_test JWT_ACCESS_SECRET=<test-only-secret> npm test -- tests/unit tests/integration/richman-host.test.ts tests/integration/richman-rooms.test.ts --no-file-parallelism --reporter=default",
+    "frontend": "npm --prefix frontend test -- --exclude 'src/features/richman/game/**' --pool=threads --maxWorkers=4",
+    "browser": "DB_NAME=homeAssistantDB_test JWT_ACCESS_SECRET=<test-only-secret> PLAYWRIGHT_MODULE=<installed-playwright-module> node --import tsx scripts/richman/verify-net-recovery.mjs"
+  }
+}

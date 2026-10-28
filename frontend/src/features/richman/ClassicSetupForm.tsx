@@ -24,7 +24,7 @@ export function ClassicSetupForm({ manifest, draft: d, onChange, error, onSubmit
       <label className="rm-form-field">游戏模式<select aria-label="游戏模式" value={d.mode} onChange={e => onChange({mode:e.target.value as SetupDraft['mode']})}>{SETUP_MODES.map(m => <option key={m.id} value={m.id}>{m.label}</option>)}</select></label>
       {hasComputer(d.mode) && <label className="rm-form-field">电脑策略<select aria-label="电脑策略" value={d.policy} onChange={e => onChange({policy:e.target.value as ComputerPolicy})}>{COMPUTER_POLICIES.map(p => <option key={p.id} value={p.id}>{p.label}</option>)}</select></label>}
       {d.mode !== 'sandbox' && <label className="rm-form-field">对局种子（可选）<input value={d.seed} maxLength={64} onChange={e => onChange({seed:e.target.value})} placeholder="留空自动生成" /><small>相同配置、种子和选择可重现对局。</small></label>}
-      <p>历史模式保留当时的能力；验证模式用于检查地图。原版存读档尚未接入，回放下载是独立功能。</p>
+      <p>云存档支持当前完整对局，历史模式与原版 .sav 文件暂不支持。回放下载用于复现，是独立功能。</p>
     </details>
     {error && <p role="alert">{error}</p>}
     <div className="rm-setup-actions"><button type="button" className="rm-button rm-button-light" onClick={onCancel}>取消</button><button type="submit" className="rm-button">开始新对局</button></div>

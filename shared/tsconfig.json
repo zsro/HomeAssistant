@@ -1,0 +1,26 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "composite": true,
+    "declaration": true,
+    "rootDir": "..",
+    "outDir": "../dist",
+    "tsBuildInfoFile": "../dist/shared.tsbuildinfo",
+    "noUncheckedIndexedAccess": false,
+    "exactOptionalPropertyTypes": false,
+    "lib": [
+      "ES2022"
+    ],
+    "types": [
+      "node"
+    ]
+  },
+  "include": [
+    "richman/**/*.ts",
+    "richman/**/*.json"
+  ],
+  "exclude": [
+    "**/*.test.ts"
+  ],
+  "references": []
+}

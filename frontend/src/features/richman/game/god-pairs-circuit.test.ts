@@ -5,7 +5,7 @@ import {computerDecision,decisionPlayer} from './computer';
 import {decideComputer,observeResearch,type ResearchMemory} from './computer-research';
 import {GOD_PAIRS_FINGERPRINT} from './god-pairs-rules';
 import type {Manifest} from '../types';
-import nodes from '../japan-topology.fixture.json';
+import nodes from '../../../../../shared/richman/japan-topology.fixture.json';
 it.each([2,3,4])('v45 %i-player legal mixed decisions/date/paired lifecycle and prefix replay',n=>{
  const e=new GameEngine(nodes,{gameId:'pair-circuit',rulesId:'japan-events-candidate-v45',seed:'paired-'+n,characterIds:['xiaomei','tuu','chyan','salonbus'].slice(0,n),initialFunds:100000,startDate:'1998-01-14'});let memory:ResearchMemory={};
  for(let i=0;i<600&&e.state.phase!=='finished';i++){

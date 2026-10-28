@@ -7,12 +7,12 @@ import { SETUP_MODES, hasCalendar, hasComputer, hasFunds } from './setup-options
 import { ClassicGameShell } from './ClassicGameShell';
 import { GameSession } from './game/session';
 import type { Manifest } from './types';
-import nodes from './japan-topology.fixture.json';
+import nodes from '../../../../shared/richman/japan-topology.fixture.json';
 const manifest: Manifest = {version:1,map:{name:'日本',width:2304,height:2304,nodes,scenery:[]},sprites:{},characters:['a','b','c','d'].map(id=>({id,name:id,color:'#fff',idle:[],walk:[],walkFramesPerDirection:10}))};
 afterEach(()=>{cleanup();vi.restoreAllMocks();vi.unstubAllGlobals();});
 it('keeps four local title entries and sends distinct START/LOAD/OPTION/EXIT actions',()=>{
  const select=vi.fn();render(<ClassicTitleMenu onSelect={select}/>);
- for(const [name,id] of [['START · 新建对局','start'],['LOAD · 读档（暂未接入）','load'],['OPTION · 设置','options'],['EXIT · 返回模块集合','exit']]){fireEvent.click(screen.getByRole('button',{name}));expect(select).toHaveBeenLastCalledWith(id);}
+ for(const [name,id] of [['START · 新建对局','start'],['LOAD · 读档','load'],['OPTION · 设置','options'],['EXIT · 返回模块集合','exit']]){fireEvent.click(screen.getByRole('button',{name}));expect(select).toHaveBeenLastCalledWith(id);}
  expect(screen.getAllByRole('button')).toHaveLength(4);
 });
 it('retains every historical mode and editable seed without changing the basic roster',()=>{

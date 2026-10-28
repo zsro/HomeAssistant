@@ -9,7 +9,7 @@ ROOT = Path(__file__).resolve().parents[2]
 class RuntimePropertiesTest(unittest.TestCase):
     def test_runtime_catalog_is_reproducible_from_audit(self):
         audit = json.loads((ROOT / 'docs/richman/japan-map-audit.json').read_text())
-        actual = json.loads((ROOT / 'frontend/src/features/richman/game/japan-properties.json').read_text())
+        actual = json.loads((ROOT / 'shared/richman/game/japan-properties.json').read_text())
         self.assertEqual(build(audit), actual)
         self.assertEqual(len(actual['properties']), 54)
         refs = [node for p in actual['properties'] for node in p['nodeIds']]

@@ -1,6 +1,6 @@
 import {expect,it} from 'vitest';
 import {GameEngine} from './engine';import type {GameState,Action} from './engine';import {GameSession} from './session';import type {Manifest} from '../types';
-import {decideComputer,godsChoice,GODS_GOODS} from './computer-gods';import {decideComputer as previous} from './computer-mobility';import {g6Options,tickGods} from './g6';import {marketPrice} from './g6-market';import nodes from '../japan-topology.fixture.json';
+import {decideComputer,godsChoice,GODS_GOODS} from './computer-gods';import {decideComputer as previous} from './computer-mobility';import {g6Options,tickGods} from './g6';import {marketPrice} from './g6-market';import nodes from '../../../../../shared/richman/japan-topology.fixture.json';
 const config={gameId:'gods-domain',seed:'gods',rulesId:'japan-events-candidate-v44',characterIds:['xiaomei','tuu','chyan'],initialFunds:100000};
 const cur=(e:GameEngine)=>(e as unknown as {current:GameState}).current;
 function make(item='card:24'){const e=new GameEngine(nodes,config),s=cur(e);for(const p of s.players){for(const k of Object.keys(s.effects!.inventory[p.id]))s.effects!.inventory[p.id][k]=0;s.g3!.slots[p.id]=[];}s.effects!.inventory['player-1'][item]=1;s.g3!.slots['player-1']=[item];s.g6!.gods=[];s.g6!.holdings['player-1']['jp:24']={quantity:100,cost:16000,average:16000};return e;}

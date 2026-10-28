@@ -1,7 +1,7 @@
 import {expect,it} from 'vitest';
 import {GameSession} from './session';
 import type {Manifest} from '../types';
-import nodes from '../japan-topology.fixture.json';
+import nodes from '../../../../../shared/richman/japan-topology.fixture.json';
 const manifest:Manifest={version:1,map:{name:'Japan',nodes,width:2304,height:2304,scenery:[]},sprites:{},characters:['a','b','c','d'].map(id=>({id,name:id,color:'#fff',idle:[],walk:[],walkFramesPerDirection:10}))};
 function session(){let serial=0;return new GameSession(manifest,{id:()=>`game-${++serial}`,seed:()=> 'surrender'},'surrender');}
 it('human source retains answer ownership after exit, ordinary AI target continues via same commands',()=>{const g=session();g.start({mode:'surrender',characterIds:['a','b','c'],computerIds:['c'],computerPolicy:'research-v1',seed:'mixed'});expect(g.surrender()?.ok).toBe(true);const d=g.snapshot().surrenderDecision!;expect(d.targets).toEqual(['player-2','player-3']);expect(g.snapshot().computer?.automatic).toBe(false);const revision=g.snapshot().revision;g.tick(10000);expect(g.snapshot().revision).toBe(revision);expect(g.chooseDeath(d.id,'player-3')?.ok).toBe(true);expect(g.snapshot().g6!.gods.find(x=>x.type===15)?.carrier).toBe('player-3');expect(g.exportReplay()!.config.humanIds).toEqual(['player-1','player-2']);});

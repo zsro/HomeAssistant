@@ -6,7 +6,7 @@ import type {Manifest} from '../types';
 import {decideComputer,rentRisk} from './computer-reactions';
 import {decideComputer as oldDecision} from './computer-tools';
 import {offerRent} from './g3';
-import nodes from '../japan-topology.fixture.json';
+import nodes from '../../../../../shared/richman/japan-topology.fixture.json';
 const config={gameId:'rent-test',seed:'rent',rulesId:'japan-events-candidate-v44',characterIds:['xiaomei','tuu','chyan','salonbus'],initialFunds:30000};
 const cur=(e:GameEngine)=>(e as unknown as {current:GameState}).current;
 function make(stage:'free'|'redirect'='free',amount=3000){const e=new GameEngine(nodes,config),s=cur(e);s.effects!.inventory['player-1']['card:20']=stage==='free'?1:0;s.effects!.inventory['player-1']['card:19']=1;s.g3!.slots['player-1']=stage==='free'?['card:20','card:19']:['card:19'];offerRent(s,{kind:'rent',sourceId:'player-1',decision:{kind:'property',id:'rent',propertyId:'japan:land:1',operation:'rent',amount,recipientId:'player-2',lines:[]}},'player-1',()=> 'reaction',()=>{});return e;}

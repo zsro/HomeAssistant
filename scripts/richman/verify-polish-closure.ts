@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import {readFileSync,writeFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {GameEngine,replayGame} from '../../frontend/src/features/richman/game/engine';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 const rows=[];
 const specs=[...['desktop','touch390'].flatMap(view=>['before-reset','after-reset','after-new'].map(part=>({name:view+'-'+part,dir:'/private/tmp/richman-polish-closure',prefixes:part==='before-reset'?[1,3,8]:[1],length:part==='before-reset'?9:2}))),...['auction','reaction'].map(name=>({name,dir:'/private/tmp/richman-polish-responders',prefixes:name==='auction'?[20,26,28]:[200,282,283],length:name==='auction'?30:284}))];
 for(const spec of specs){

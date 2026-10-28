@@ -2,7 +2,7 @@ import {readFileSync,writeFileSync} from 'node:fs';
 import {strict as assert} from 'node:assert';
 import {createHash} from 'node:crypto';
 import {GameEngine,replayGame} from '../../frontend/src/features/richman/game/engine';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 const result=[];
 for(const n of [2,3,4]) {
  const dir=`/private/tmp/richman-god-pairs-ui-${n}`,replay=JSON.parse(readFileSync(dir+'/replay.json','utf8')),report=JSON.parse(readFileSync(dir+'/results.json','utf8')),plan=JSON.parse(readFileSync(`/private/tmp/god-pairs-${n}.json`,'utf8'));

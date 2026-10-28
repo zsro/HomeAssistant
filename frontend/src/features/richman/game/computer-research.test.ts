@@ -2,7 +2,7 @@ import {it,expect} from 'vitest';
 import {GameEngine} from './engine';import type {GameState,Action} from './engine';
 import {decideComputer,observeResearch,publicObservation,researchChoice,timeChoice} from './computer-research';import type {ResearchMemory} from './computer-research';
 import {decideComputer as previous} from './computer-capital';import {GameSession} from './session';import type {Manifest} from '../types';
-import {PROPERTY_CATALOG} from './economy';import {g7Options,nuclearTargets} from './g7';import {researchOptions,tickG5,reconcileResearch} from './g5';import {G7_GOODS} from './g7-catalog';import nodes from '../japan-topology.fixture.json';
+import {PROPERTY_CATALOG} from './economy';import {g7Options,nuclearTargets} from './g7';import {researchOptions,tickG5,reconcileResearch} from './g5';import {G7_GOODS} from './g7-catalog';import nodes from '../../../../../shared/richman/japan-topology.fixture.json';
 const config={gameId:'research-domain',seed:'research',rulesId:'japan-events-candidate-v44',characterIds:['xiaomei','tuu','chyan'],initialFunds:300000,startDate:'1998-01-05'},defs=PROPERTY_CATALOG.properties;
 const cur=(e:GameEngine)=>(e as unknown as {current:GameState}).current;
 function make(){const e=new GameEngine(nodes,config),s=cur(e);s.g6!.gods=[];for(const p of s.players){for(const k in s.effects!.inventory[p.id])s.effects!.inventory[p.id][k]=0;s.g3!.slots[p.id]=[];}return e;}

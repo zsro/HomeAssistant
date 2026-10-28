@@ -6,7 +6,7 @@ import {decideComputer} from '../../frontend/src/features/richman/game/computer-
 import {REMOTE_EFFECT} from '../../frontend/src/features/richman/game/items';
 import {NEARBY_WORKER_EFFECT,nearbyWorkerTargets} from '../../frontend/src/features/richman/game/nearby-construction';
 import {PROPERTY_CATALOG} from '../../frontend/src/features/richman/game/economy';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 export async function verifyComputerTools(replay:ControlledReplay){
  assert.equal(replay.rulesId,'japan-events-candidate-v44');assert.equal(replay.itemFingerprint,'f9dbb7e9');assert.equal(replay.control?.policy,'tools-v1');
  const e=new GameEngine(nodes,replay.config),prefixes=new Map<string,number>(),used:Record<string,number>={},bought:unknown[]=[];let auto=0,human=0,dates=0;

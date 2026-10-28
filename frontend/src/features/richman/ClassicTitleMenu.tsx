@@ -1,6 +1,6 @@
 import art from './classic-ui-art.json';
 
-const labels: Record<string, string> = { start: 'START · 新建对局', load: 'LOAD · 读档（暂未接入）', options: 'OPTION · 设置', exit: 'EXIT · 返回模块集合' };
+const labels: Record<string, string> = { start: 'START · 新建对局', load: 'LOAD · 读档', options: 'OPTION · 设置', exit: 'EXIT · 返回模块集合' };
 export function ClassicTitleMenu({ onSelect }: { onSelect: (id: string) => void }) {
   return <div className="rm-title-scene">
     <img className="rm-title-background" src="/richman/generated/ui/Data-1/000.png" alt="大富翁4" draggable={false} />

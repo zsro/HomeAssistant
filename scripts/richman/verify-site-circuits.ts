@@ -1,6 +1,6 @@
 import {GameEngine,replayGame} from '../../frontend/src/features/richman/game/engine';
 import type {Replay,GameState} from '../../frontend/src/features/richman/game/engine';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 import {strict as assert} from 'node:assert';
 const stableMini=(s:GameState)=>({economy:s.economy,effects:s.effects,g2:s.g2,g3:s.g3,g6:s.g6,news:s.news,calendar:s.calendar,finance:s.finance,g1:s.g1,g4:s.g4,g5:s.g5,roadTools:s.roadTools,cards:s.cards,wealth:s.wealth,siteServices:s.siteServices,lottery:s.lottery});
 /** Operates only on recorded commands; checkpoints are reconstructed prefixes, never patched state. */

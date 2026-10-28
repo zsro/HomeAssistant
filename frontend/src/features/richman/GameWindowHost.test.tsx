@@ -4,7 +4,7 @@ import { afterEach, beforeEach, expect, it, vi } from 'vitest';
 import { GameSession } from './game/session';
 import type { SessionSnapshot } from './game/session';
 import type { Manifest } from './types';
-import nodes from './japan-topology.fixture.json';
+import nodes from '../../../../shared/richman/japan-topology.fixture.json';
 import { GameWindowHost, WindowPanel } from './GameWindowHost';
 import { decisionWindow } from './window-state';
 import { preventRepeatedClick, preventRepeatedKey } from './window-input';

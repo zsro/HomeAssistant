@@ -3,7 +3,7 @@ import {afterEach,expect,it,vi} from 'vitest';
 import {LotteryPanel} from './LotteryPanel';
 import {GameSession} from './game/session';
 import type {Manifest} from './types';
-import nodes from './japan-topology.fixture.json';
+import nodes from '../../../../shared/richman/japan-topology.fixture.json';
 afterEach(cleanup);
 const manifest:Manifest={version:1,map:{name:'日本',width:2304,height:2304,nodes,scenery:[]},sprites:{},characters:['a','b','c','d'].map(id=>({id,name:id,color:'#fff',idle:[],walk:[],walkFramesPerDirection:10}))};
 function fixture(){const session=new GameSession(manifest,{id:()=> 'lottery-ui',seed:()=> 'lottery-ui'},'lottery');session.start({mode:'lottery',characterIds:['b','d'],seed:'lottery-ui',startDate:'1998-01-14'});const snapshot=session.snapshot();snapshot.lotteryDecision={kind:'lottery',id:'lottery-token',node:88};snapshot.phase='lottery';return{snapshot,buy:vi.fn(),leave:vi.fn()};}

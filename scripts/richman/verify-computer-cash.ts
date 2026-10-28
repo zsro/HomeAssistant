@@ -5,7 +5,7 @@ import type {ControlledReplay} from '../../frontend/src/features/richman/game/co
 import {decisionPlayer} from '../../frontend/src/features/richman/game/computer';
 import {decideComputer,CASH_GOODS} from '../../frontend/src/features/richman/game/computer-cash';
 import {shopPrice} from '../../frontend/src/features/richman/game/shop-acquisition';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 const goods=CASH_GOODS.map(x=>x.id as string);
 const supply=(s:GameState,item:string)=>item==='card:01'?s.wealth!.supply:item==='card:02'?s.cards!.supply:s.g4!.supply[item];
 export async function verifyComputerCash(replay:ControlledReplay){

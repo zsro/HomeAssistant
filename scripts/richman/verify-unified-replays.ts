@@ -5,7 +5,7 @@ import crypto from 'node:crypto';
 import assert from 'node:assert/strict';
 import { replayGame,GameEngine } from '../../frontend/src/features/richman/game/engine';
 import { PROPERTY_CATALOG } from '../../frontend/src/features/richman/game/economy';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 const input=process.env.RICHMAN_REPLAY!;
 if(!input)throw Error('RICHMAN_REPLAY required');
 const replay=JSON.parse(fs.readFileSync(input,'utf8'));

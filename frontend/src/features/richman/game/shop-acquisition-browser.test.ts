@@ -2,7 +2,7 @@ import {GameEngine,replayGame} from './engine';
 import type {Replay} from './engine';
 import {expect,it} from 'vitest';
 import {createHash} from 'node:crypto';
-import nodes from '../japan-topology.fixture.json';
+import nodes from '../../../../../shared/richman/japan-topology.fixture.json';
 import card from './fixtures/shop-acquisition-v40-card-replay.json';
 import cardGolden from './fixtures/shop-acquisition-v40-card-manifest.json';
 import tool from './fixtures/shop-acquisition-v40-tool-replay.json';

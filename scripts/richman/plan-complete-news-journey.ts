@@ -9,7 +9,7 @@ import {nearbyWorkerTargets,NEARBY_WORKER_EFFECT} from '../../frontend/src/featu
 import {g1Adjacent} from '../../frontend/src/features/richman/game/g1';
 import {REMOTE_EFFECT} from '../../frontend/src/features/richman/game/items';
 import {actionLocked} from '../../frontend/src/features/richman/game/g2';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 const byId=new Map(nodes.map(n=>[n.id,n])),defs=PROPERTY_CATALOG.properties;
 function distance(start:number,prev:number|null,targets:readonly number[]=NEWS_NODES){const q:[number,number|null,number][]=[[start,prev,0]],seen=new Set<string>();for(let i=0;i<q.length;i++){const[n,p,d]=q[i],k=n+'/'+p;if(targets.includes(n))return d;if(seen.has(k))continue;seen.add(k);const a=g1Adjacent(byId.get(n)!),f=a.filter(x=>x!==p);for(const to of f.length?f:a)q.push([to,n,d+1]);}return 999;}
 const required=(process.env.RICHMAN_NEWS||'4,10,13,14,18,19,20,21,22,26,27,28,29,30,31,32,33,34,35').split(',').map(Number);

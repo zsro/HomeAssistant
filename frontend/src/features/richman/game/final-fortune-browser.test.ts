@@ -3,7 +3,7 @@ import {createHash} from 'node:crypto';
 import {GameEngine,replayGame} from './engine';
 import type {Replay} from './engine';
 import {verifyFinalFortune} from '../../../../../scripts/richman/verify-final-fortune';
-import nodes from '../japan-topology.fixture.json';
+import nodes from '../../../../../shared/richman/japan-topology.fixture.json';
 import manifest from './fixtures/final-fortune-v23-manifest.json';
 const replays=import.meta.glob('./fixtures/final-fortune-v23-*-replay.json',{eager:true,import:'default'});
 it.each(manifest)('preserves actual v23 $players-player browser route $route and independent bank and travel semantics',row=>{

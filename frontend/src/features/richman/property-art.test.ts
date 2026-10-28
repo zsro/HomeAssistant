@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { PROPERTY_CATALOG } from './game/economy';
 import { propertyAppearance, propertySprite, requiredPropertySprites, validMapArt } from './property-art';
 import type { Manifest } from './types';
-import topology from './japan-topology.fixture.json';
+import topology from '../../../../shared/richman/japan-topology.fixture.json';
 import audit from '../../../../docs/richman/japan-map-audit.json';
 
 function artManifest(): Manifest {

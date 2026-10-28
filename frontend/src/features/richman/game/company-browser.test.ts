@@ -3,7 +3,7 @@ import {createHash} from 'node:crypto';
 import {GameEngine,replayGame} from './engine';
 import type {Replay} from './engine';
 import {verifyCompany} from '../../../../../scripts/richman/verify-company';
-import nodes from '../japan-topology.fixture.json';
+import nodes from '../../../../../shared/richman/japan-topology.fixture.json';
 import manifest from './fixtures/company-v27-manifest.json';
 const replays=import.meta.glob('./fixtures/company-v27-*-replay.json',{eager:true,import:'default'});
 it.each(manifest)('preserves actual v27 $players-player browser route with independent services/holdings/dividend accounting',row=>{

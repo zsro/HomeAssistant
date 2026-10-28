@@ -10,7 +10,7 @@ import {saveCheckpoint,restoreCheckpoint} from './g7';
 import {PROPERTY_CATALOG} from './economy';
 import type {PropertyDefinition} from './economy';
 import {STOCK_CIRCUIT_FINGERPRINT} from './stock-circuit-rules';
-import nodes from '../japan-topology.fixture.json';
+import nodes from '../../../../../shared/richman/japan-topology.fixture.json';
 const defs=PROPERTY_CATALOG.properties as readonly PropertyDefinition[],emit=()=>undefined;
 function fixture(version=44){const e=new GameEngine(nodes,{gameId:'circuit',seed:'circuit',rulesId:`japan-events-candidate-v${version}`,characterIds:['a','b','c'],initialFunds:300000,startDate:'1998-01-09'});const s=(e as unknown as{current:GameState}).current;s.g6!.gods=[];return{s,e};}
 const news=(s:GameState,id:number)=>applyCompleteNews(s,id,defs,nodes,[],emit);

@@ -3,7 +3,7 @@ import {createHash} from 'node:crypto';
 import {GameEngine,replayGame} from './engine';
 import type {Replay} from './engine';
 import manifest from './fixtures/payments-v34-manifest.json';
-import nodes from '../japan-topology.fixture.json';
+import nodes from '../../../../../shared/richman/japan-topology.fixture.json';
 import {verifyPayments} from '../../../../../scripts/richman/verify-payments';
 const replays=import.meta.glob('./fixtures/payments-v34-*-replay.json',{eager:true,import:'default'});
 for(const route of manifest)it(`actual original-map v34 ${route.route} browser route preserves hashes and independent callback accounting`,()=>{

@@ -2,7 +2,7 @@ import {GameEngine} from '../../frontend/src/features/richman/game/engine';
 import {computerDecision,decisionPlayer} from '../../frontend/src/features/richman/game/computer';
 import {decideComputer,observeResearch} from '../../frontend/src/features/richman/game/computer-research';
 import type {ResearchMemory} from '../../frontend/src/features/richman/game/computer-research';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';import {writeFileSync} from 'node:fs';
+import nodes from '../../shared/richman/japan-topology.fixture.json';import {writeFileSync} from 'node:fs';
 export function planComputerResearch(count:number,seed:string,required:string[],limit=6000){
  const ids=['xiaomei','tuu','chyan','salonbus'].slice(0,count),computerIds=ids.slice(1),e=new GameEngine(nodes,{gameId:'research-plan',seed,characterIds:ids,rulesId:'japan-events-candidate-v44',initialFunds:300000,startDate:'1998-01-05'}),used=new Set<string>(),cross:{index:number;kind:string;computer:boolean}[]=[];let end=0,memory:ResearchMemory={};
  for(let i=0;i<limit;i++){

@@ -4,7 +4,7 @@ import assert from 'node:assert/strict';
 import {GameEngine,replayGame} from '../../frontend/src/features/richman/game/engine';
 import type {Replay} from '../../frontend/src/features/richman/game/engine';
 import {verifyCalendar} from './verify-calendar';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 const root='frontend/src/features/richman/game/fixtures',manifest=[],routes=[];
 for(const route of (process.env.RICHMAN_ROUTES||'loan,year,leap').split(',')){
  const dir='/private/tmp/richman-unified-ui-03k-'+route,report=JSON.parse(fs.readFileSync(dir+'/results.json','utf8')),replay=JSON.parse(fs.readFileSync(dir+'/replay.json','utf8')) as Replay;

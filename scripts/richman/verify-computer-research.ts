@@ -1,6 +1,6 @@
 import {strict as assert} from 'node:assert';import {GameEngine,replayGame} from '../../frontend/src/features/richman/game/engine';import type {ControlledReplay} from '../../frontend/src/features/richman/game/computer';import {decisionPlayer} from '../../frontend/src/features/richman/game/computer';
 import {decideComputer,observeResearch,publicObservation,researchChoice} from '../../frontend/src/features/richman/game/computer-research';import type {ResearchMemory} from '../../frontend/src/features/richman/game/computer-research';
-import {nuclearTargets} from '../../frontend/src/features/richman/game/g7';import {PROPERTY_CATALOG} from '../../frontend/src/features/richman/game/economy';import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import {nuclearTargets} from '../../frontend/src/features/richman/game/g7';import {PROPERTY_CATALOG} from '../../frontend/src/features/richman/game/economy';import nodes from '../../shared/richman/japan-topology.fixture.json';
 export async function verifyComputerResearch(replay:ControlledReplay,checkPrefixes=true){
  assert.equal(replay.rulesId,'japan-events-candidate-v44');assert.equal(replay.itemFingerprint,'f9dbb7e9');assert.equal(replay.control?.policy,'research-v1');
  const e=new GameEngine(nodes,replay.config),prefixes=new Map<string,number>(),production:unknown[]=[],deliveries:unknown[]=[],uses:unknown[]=[],cancellations:unknown[]=[];let auto=0,human=0,memory:ResearchMemory={};

@@ -1,7 +1,7 @@
 import {strict as assert} from 'node:assert';
 import {GameEngine,replayGame} from '../../frontend/src/features/richman/game/engine';
 import type {Replay,GameState} from '../../frontend/src/features/richman/game/engine';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 const passive=['card:18','card:19','card:20','card:21','card:29'];
 const total=(s:GameState,item:string)=>s.g3!.supply[item]+Object.values(s.effects!.inventory).reduce((n,b)=>n+(b[item]??0),0);
 export async function verifyReactionCircuit(replay:Replay,kind:string){

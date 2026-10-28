@@ -1,5 +1,5 @@
 /** Explicit domain probes from accepted legal UI prefixes; not additional browser scenarios. */
-import {expect,it} from 'vitest';import {GameEngine} from './engine';import {GameSession} from './session';import {decisionPlayer} from './computer';import type {ControlledReplay} from './computer';import type {Manifest} from '../types';import nodes from '../japan-topology.fixture.json';
+import {expect,it} from 'vitest';import {GameEngine} from './engine';import {GameSession} from './session';import {decisionPlayer} from './computer';import type {ControlledReplay} from './computer';import type {Manifest} from '../types';import nodes from '../../../../../shared/richman/japan-topology.fixture.json';
 const replays=import.meta.glob('./fixtures/computer-circuit-v44-*-replay.json',{eager:true,import:'default'}) as Record<string,ControlledReplay>;
 const manifest:Manifest={version:1,map:{name:'日本',width:2304,height:2304,nodes,scenery:[]},sprites:{},characters:['xiaomei','tuu','chyan','salonbus'].map(id=>({id,name:id,color:'#fff',idle:[],walk:[],walkFramesPerDirection:10}))};
 const tick=(s:GameSession,n:number)=>{for(let i=0;i<n;i++)s.tick(50);};

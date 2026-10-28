@@ -3,7 +3,7 @@ import {strict as assert} from 'node:assert';
 import {GameEngine,replayGame} from '../../frontend/src/features/richman/game/engine';
 import {computerDecision,decisionPlayer} from '../../frontend/src/features/richman/game/computer';
 import type {ControlledReplay} from '../../frontend/src/features/richman/game/computer';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 export async function verifyComputerCircuit(replay:ControlledReplay,terminal=false){
  assert.equal(replay.rulesId,'japan-events-candidate-v44');assert.equal(replay.itemFingerprint,'f9dbb7e9');assert.equal(replay.control!.policy,'basic-v1');
  const frozen=new Map<string,{due:number;amount:number;unpaid:number}>();

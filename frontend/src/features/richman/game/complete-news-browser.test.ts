@@ -2,7 +2,7 @@ import {expect,it} from 'vitest';
 import {createHash} from 'node:crypto';
 import {replayGame} from './engine';
 import type {Replay} from './engine';
-import nodes from '../japan-topology.fixture.json';
+import nodes from '../../../../../shared/richman/japan-topology.fixture.json';
 import manifest from './fixtures/complete-news-v19-manifest.json';
 const replays=import.meta.glob('./fixtures/complete-news-v19-*-replay.json',{eager:true,import:'default'});
 it.each(manifest)('preserves actual v19 original-map $players-player browser route $route and independent state/events hashes',row=>{

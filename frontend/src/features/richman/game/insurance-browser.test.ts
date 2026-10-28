@@ -3,7 +3,7 @@ import {createHash} from 'node:crypto';
 import {GameEngine,replayGame} from './engine';
 import type {Replay} from './engine';
 import {verifyInsurance} from '../../../../../scripts/richman/verify-insurance';
-import nodes from '../japan-topology.fixture.json';
+import nodes from '../../../../../shared/richman/japan-topology.fixture.json';
 import manifest from './fixtures/insurance-v29-manifest.json';
 const replays=import.meta.glob('./fixtures/insurance-v29-*-replay.json',{eager:true,import:'default'});
 it.each(manifest)('preserves actual v29 browser route $route with independent policy/claim/premium/dividend accounting',row=>{

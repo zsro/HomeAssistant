@@ -8,7 +8,7 @@ import { PROPERTY_CATALOG } from './economy';
 import { NEARBY_WORKER_EFFECT } from './nearby-construction';
 import { REMOTE_EFFECT } from './items';
 import { WEALTH_FINGERPRINT } from './wealth';
-import nodes from '../japan-topology.fixture.json';
+import nodes from '../../../../../shared/richman/japan-topology.fixture.json';
 import v6 from './fixtures/tools-v6-replay.json';
 import golden from './fixtures/tools-v6-golden.json';
 

@@ -143,6 +143,12 @@ if [ "$health_ok" != true ]; then
   exit 1
 fi
 
+if ! node "$SCRIPT_DIR/scripts/configure-richman-nginx.cjs"; then
+  echo "错误: 存档代理配置失败，已恢复 Nginx 配置"
+  rollback_backend
+  exit 1
+fi
+
 pm2 save
 
 if [ -L "$STATIC_ROOT" ]; then

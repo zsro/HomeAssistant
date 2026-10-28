@@ -62,7 +62,7 @@ async function act(a){
   if(a.action.type==='begin'){effect=a.action.definitionId;return button('使用'+names[effect.slice(0,7)]).click();}
   if(a.action.type==='cancel')return button('取消使用').click();
   if(effect.startsWith('tool:08')){await page.getByRole('radio',{name:`${a.value} 点`,exact:true}).check();return button('确认并出发').click();}
-  if(effect.startsWith('tool:09')){const d=require('../../frontend/src/features/richman/game/japan-properties.json').properties.find(p=>p.id===a.action.target.id);await page.getByRole('region',{name:'机器工人选择'}).getByRole('radio',{name:new RegExp(d.name+' · '+d.nodeIds.join(' / ')+' 号路格')}).check();return button('确认建造').click();}
+  if(effect.startsWith('tool:09')){const d=require('../../shared/richman/game/japan-properties.json').properties.find(p=>p.id===a.action.target.id);await page.getByRole('region',{name:'机器工人选择'}).getByRole('radio',{name:new RegExp(d.name+' · '+d.nodeIds.join(' / ')+' 号路格')}).check();return button('确认建造').click();}
   const name=names[effect.slice(0,7)],p=page.getByRole('region',{name:name+'选择'});await p.getByRole('combobox').nth(0).selectOption(a.action.target.id);return button('确认使用'+name).click();
  }
  throw Error('Unhandled UI '+a.type);

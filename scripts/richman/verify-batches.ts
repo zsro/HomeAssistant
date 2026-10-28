@@ -3,7 +3,7 @@ import {GameEngine} from '../../frontend/src/features/richman/game/engine';
 import type {Replay} from '../../frontend/src/features/richman/game/engine';
 import type {PaymentBatch} from '../../frontend/src/features/richman/game/payment-batches';
 import {PROPERTY_CATALOG} from '../../frontend/src/features/richman/game/economy';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 /** Independent arithmetic/ordering oracle: no production payment, tax, dividend or disposal calculator. */
 export function verifyBatchReplay(replay:Replay){
  let taxStart:null|{fund:number;stock:number;auction:number}=null;

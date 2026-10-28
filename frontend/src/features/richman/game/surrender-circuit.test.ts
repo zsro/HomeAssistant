@@ -6,7 +6,7 @@ import {computerDecision,decisionPlayer} from './computer';
 import {decideComputer,observeResearch,type ResearchMemory} from './computer-research';
 import {SURRENDER_FINGERPRINT} from './surrender';
 import type {Manifest} from '../types';
-import nodes from '../japan-topology.fixture.json';
+import nodes from '../../../../../shared/richman/japan-topology.fixture.json';
 it.each([2,3,4])('v47 %i-player legal mixed decisions/date/special objects/month lifecycle and prefix replay',n=>{
  const e=new GameEngine(nodes,{gameId:'pair-circuit',rulesId:'japan-events-candidate-v47',seed:'paired-'+n,characterIds:['xiaomei','tuu','chyan','salonbus'].slice(0,n),initialFunds:100000,startDate:'1998-01-31'});let memory:ResearchMemory={};
  for(let i=0;i<600&&e.state.phase!=='finished';i++){

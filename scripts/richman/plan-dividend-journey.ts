@@ -3,7 +3,7 @@ import fs from 'node:fs';
 import {GameEngine,replayGame} from '../../frontend/src/features/richman/game/engine';
 import type {Action} from '../../frontend/src/features/richman/game/engine';
 import {DIVIDEND_RULES} from '../../frontend/src/features/richman/game/dividends';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 export function planDividends(seed:string,count:number,goal:'positive'|'negative'|'carry',limit=1100){
  const e=new GameEngine(nodes,{gameId:'dividend-plan',seed,rulesId:DIVIDEND_RULES.id,characterIds:['xiaomei','tuu','chyan','salonbus'].slice(0,count),initialFunds:300000,startDate:'1998-01-07'});const purchased=new Set<string>();let found=false;
  for(let step=0;step<limit;step++){

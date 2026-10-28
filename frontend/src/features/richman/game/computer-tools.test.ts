@@ -8,7 +8,7 @@ import {computerDecision} from './computer';
 import {REMOTE_EFFECT} from './items';
 import {NEARBY_WORKER_EFFECT} from './nearby-construction';
 import {PROPERTY_CATALOG} from './economy';
-import nodes from '../japan-topology.fixture.json';
+import nodes from '../../../../../shared/richman/japan-topology.fixture.json';
 import {planComputerTools} from '../../../../../scripts/richman/plan-computer-tools';
 const config={gameId:'tools-test',seed:'tools',rulesId:'japan-events-candidate-v44',characterIds:['xiaomei','tuu'],initialFunds:30000,startDate:'1998-01-14'};
 const cur=(e:GameEngine)=>(e as unknown as {current:GameState}).current;

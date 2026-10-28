@@ -6,7 +6,7 @@ import fs from 'node:fs';
 import {GameEngine,replayGame} from '../../frontend/src/features/richman/game/engine';
 import type {Action} from '../../frontend/src/features/richman/game/engine';
 import {DATE_BUSINESS_RULES} from '../../frontend/src/features/richman/game/date-business';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 const byId=new Map(nodes.map(n=>[n.id,n]));
 function distance(node:number,targets:number[]){const seen=new Set([node]),q=[[node,0]];for(const[n,d]of q){if(targets.includes(n))return d;for(const a of byId.get(n)!.adjacent)if(!seen.has(a)){seen.add(a);q.push([a,d+1]);}}return 999;}
 export function planDateBusiness(seed:string,count:number,funds=30000,limit=4000,stopDate='1999-01-15'){

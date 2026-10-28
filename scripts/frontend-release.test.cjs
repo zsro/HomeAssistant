@@ -29,15 +29,23 @@ test('committed release works without source assets and rejects stale or damaged
     write('.gitignore', 'frontend/dist/\nfrontend/public/richman/generated/\n');
     write('frontend/package.json', JSON.stringify({ scripts: { build: 'node build.cjs' } }));
     write('frontend/index.html', '<html>release test</html>');
+    write('shared/richman/rules.ts', 'export const version = 1;');
+    write('frontend/obsolete.json', '{}');
     write('frontend/build.cjs', "const fs=require('node:fs');fs.mkdirSync('dist',{recursive:true});fs.copyFileSync('index.html','dist/index.html');");
     write('frontend/public/richman/generated/resource.bin', 'resource');
     write('scripts/richman/release-assets.json', JSON.stringify({ version: 1, files: [{ path: 'resource.bin', bytes: 8, sha256: createHash('sha256').update('resource').digest('hex') }] }));
     execFileSync('git', ['init', '-q'], { cwd: root });
     execFileSync('git', ['add', '.'], { cwd: root });
+    fs.unlinkSync(path.join(root, 'frontend/obsolete.json'));
     succeeds('build');
+    // Staging the deletion after packaging must preserve the working-tree source hash.
+    execFileSync('git', ['add', '-u'], { cwd: root });
     // Simulate a server checkout without separately copied, ignored game assets.
     fs.rmSync(path.join(root, 'frontend/public/richman/generated'), { recursive: true });
     succeeds('verify');
+    write('shared/richman/rules.ts', 'export const version = 2;');
+    rejects(/Frontend source changed/);
+    write('shared/richman/rules.ts', 'export const version = 1;');
     write('frontend/index.html', '<html>changed</html>');
     rejects(/Frontend source changed/);
     write('frontend/index.html', '<html>release test</html>');

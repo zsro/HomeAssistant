@@ -3,7 +3,7 @@ import {GameEngine,replayGame,type EventPayload} from '../../frontend/src/featur
 import type {ControlledReplay} from '../../frontend/src/features/richman/game/computer';
 import {decisionPlayer} from '../../frontend/src/features/richman/game/computer';
 import {decideComputer} from '../../frontend/src/features/richman/game/computer-defense';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 export async function verifyComputerDefense(replay:ControlledReplay){
  assert.equal(replay.rulesId,'japan-events-candidate-v44');assert.equal(replay.itemFingerprint,'f9dbb7e9');assert.equal(replay.control?.policy,'defense-v1');
  const e=new GameEngine(nodes,replay.config),prefixes=new Map<string,number>(),acquisitions:unknown[]=[],attacks:unknown[]=[],reactions:unknown[]=[],automatic:unknown[]=[];let auto=0,human=0;

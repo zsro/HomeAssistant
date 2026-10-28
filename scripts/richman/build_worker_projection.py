@@ -8,7 +8,7 @@ import struct
 
 SOURCE_SHA256 = '30904cbb4f23a6b74fc1b80ad023bd7dff11b441c2c1978f768f9891d099d64a'
 COMMIT = 'ec7d70e693059d1e781d9d1cc2ad7f36d360d39e'
-OUTPUT = Path(__file__).resolve().parents[2] / 'frontend/src/features/richman/game/worker-projection.json'
+OUTPUT = Path(__file__).resolve().parents[2] / 'shared/richman/game/worker-projection.json'
 
 
 def data_at(source, label, size):

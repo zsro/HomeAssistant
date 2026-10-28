@@ -12,6 +12,8 @@ import { propertyAppearance, propertySprite, validMapArt } from './property-art'
 import { NEARBY_WORKER_EFFECT } from './game/nearby-construction';
 import { Application, Container, Graphics, Rectangle, Sprite, Text, Texture } from 'pixi.js';
 import { PROPERTY_CATALOG } from './game/economy';
+import type { NetworkSession } from './network/session';
+export type SceneSession = GameSession | NetworkSession;
 import { GameSession } from './game/session';
 import type { SessionSnapshot } from './game/session';
 import type { Frame, Manifest, Snapshot } from './types';
@@ -36,7 +38,7 @@ async function bitmap(path: string, signal: AbortSignal) {
   return image;
 }
 
-export async function createScene(host: HTMLElement, signal: AbortSignal, callbacks: Callbacks): Promise<RichmanScene> {
+export async function createScene(host: HTMLElement, signal: AbortSignal, callbacks: Callbacks, modelFactory?: (manifest: Manifest) => Promise<SceneSession>): Promise<RichmanScene> {
   const started = performance.now();
   callbacks.progress('正在读取地图与角色…');
   const response = await fetch(ASSET_ROOT + 'manifest.json', { signal });
@@ -52,7 +54,6 @@ export async function createScene(host: HTMLElement, signal: AbortSignal, callba
     })) || PROPERTY_CATALOG.properties.some(p => !Number.isInteger(manifest.map.propertyDirections?.[p.id]))) {
     throw new Error('地产数据与素材版本不一致，请重新运行资源转换脚本。');
   }
-  const model = new GameSession(manifest, undefined, 'surrender');
   callbacks.progress('正在展开地图和人物图集…');
   const results = await Promise.allSettled([bitmap('japan.webp', signal), bitmap('sprites.webp', signal)]);
   const images = results.flatMap((result) => result.status === 'fulfilled' ? [result.value] : []);
@@ -77,7 +78,9 @@ export async function createScene(host: HTMLElement, signal: AbortSignal, callba
   if (signal.aborted) { images.forEach(image => image.close()); signal.throwIfAborted(); }
   const app = new Application();
   let initialized = false;
+  let model: SceneSession | null = null;
   try {
+    model = modelFactory ? await modelFactory(manifest) : new GameSession(manifest, undefined, 'surrender');
     callbacks.progress('正在准备游戏画面…');
     await app.init({
       width: host.clientWidth || 800, height: host.clientHeight || 640,
@@ -89,6 +92,7 @@ export async function createScene(host: HTMLElement, signal: AbortSignal, callba
     const scene = new RichmanScene(app, host, manifest, model, images, callbacks, performance.now() - started, objectArt);
     return scene;
   } catch (error) {
+    model?.dispose();
     if (initialized) app.destroy(true, { children: true });
     images.forEach((image) => image.close());
     throw error;
@@ -96,7 +100,7 @@ export async function createScene(host: HTMLElement, signal: AbortSignal, callba
 }
 
 export class RichmanScene {
-  readonly model: GameSession;
+  model: SceneSession;
   private readonly world = new Container();
   private readonly objects = new Container();
   private readonly paths = new Graphics();
@@ -135,7 +139,7 @@ export class RichmanScene {
     private readonly app: Application,
     host: HTMLElement,
     readonly manifest: Manifest,
-    model: GameSession,
+    model: SceneSession,
     private readonly images: ImageBitmap[],
     private readonly callbacks: Callbacks,
     loadMs: number,
@@ -221,24 +225,9 @@ export class RichmanScene {
     this.listen(canvas, 'wheel', this.wheel as EventListener, { passive: false });
     this.listen(canvas, 'webglcontextlost', this.contextLost as EventListener);
     this.listen(document, 'visibilitychange', this.visibility);
-    model.onPresentation = packet => {
-      if (this.disposed) return;
-      if (this.presentationGame !== packet.gameId || packet.flush) this.animationMs = 0;
-      this.presentationGame = packet.gameId;
-      callbacks.presentation?.(packet);
-    };
-    const initial = model.gameState!;
+    this.bindModel(model);
+    const initial = { ...model.state, gameId: model.gameId };
     callbacks.presentation?.({gameId:initial.gameId,revision:initial.revision,paused:initial.paused,active:initial.phase!=='finished',landings:[]});
-    model.onChange = (state) => {
-      if (this.disposed) return;
-      // A command, pause or new game invalidates an in-flight gesture.
-      this.pointerCancel();
-      this.drawChoices(state);
-      this.drawRoadTools(state);
-      if (state.phase !== 'effect') this.propertyPreview.clear();
-      this.renderProperties(state);
-      callbacks.state(state);
-    };
     this.focus();
     this.renderActors();
     this.drawRoadTools(model.state); // Initial fallback markers must not wait for the first command.
@@ -248,6 +237,50 @@ export class RichmanScene {
     app.ticker.maxFPS = 60;
     app.ticker.add(this.tick);
     if (!document.hidden) app.start();
+  }
+
+  private bindModel(model: SceneSession) {
+    model.onPresentation = packet => {
+      if (this.disposed) return;
+      if (this.presentationGame !== packet.gameId || packet.flush) this.animationMs = 0;
+      this.presentationGame = packet.gameId;
+      this.callbacks.presentation?.(packet);
+    };
+    model.onChange = (state) => {
+      if (this.disposed) return;
+      // A command, pause or new game invalidates an in-flight gesture.
+      this.pointerCancel();
+      this.drawChoices(state);
+      this.drawRoadTools(state);
+      if (state.phase !== 'effect') this.propertyPreview.clear();
+      this.renderProperties(state);
+      this.callbacks.state(state);
+    };
+  }
+
+  /** Adopt only a fully restored candidate; old callbacks/gestures cannot act on it. */
+  replaceModel(next: GameSession) {
+    if (this.disposed || !next.state.restorationPending) throw new Error('无法接入此存档');
+    const previous = this.model;
+    this.pointerCancel();
+    const render = (model: SceneSession) => {
+      this.model = model;
+      this.bindModel(model);
+      this.animationMs = 0; this.presentationGame = null; this.propertySignature = '';
+      this.propertyPreview.clear();
+      this.drawChoices(model.state); this.drawRoadTools(model.state); this.renderProperties(model.state); this.renderActors();
+      this.followPlayer();
+      this.callbacks.state(model.snapshot());
+    };
+    try { render(next); }
+    catch (error) {
+      // A failed presentation must never commit the candidate over the live session.
+      this.model = previous;
+      this.bindModel(previous);
+      try { render(previous); } catch { /* Keep the original session even if the renderer is unavailable. */ }
+      throw error;
+    }
+    previous.dispose();
   }
 
   private renderProperties(state: SessionSnapshot) {
@@ -375,7 +408,7 @@ export class RichmanScene {
     for(const g of this.objectArt ? [] : state.g6?.objects??[]){const n=this.model.nodes.get(g.node)!;graphics.rect(n.x-10,n.y-32,20,20).fill(g.type===11?'#d65545':g.type===13?'#5496df':'#68b573').stroke({color:'#fff4ba',width:2});}
     for (const h of state.g5?.hazards ?? []) {
       if (this.textures.has(`tool-${h.itemId === 'tool:03' ? 'mine' : 'bomb'}-0`)) continue;
-      const node = this.model.nodes.get(h.carrier ? this.model.gameState!.players.find(p => p.id === h.carrier)!.node : h.node)!;
+      const node = this.model.nodes.get(h.carrier ? state.actors[state.participants[Number(h.carrier.split('-')[1]) - 1]].node : h.node)!;
       graphics.circle(node.x, node.y - (h.carrier ? 45 : 6), 10).fill(h.itemId === 'tool:03' ? '#b94b42' : '#342b46').stroke({ color: '#ffe183', width: 2 });
     }
     for (const id of state.roadTools?.blocks ?? []) {

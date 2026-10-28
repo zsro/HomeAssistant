@@ -3,7 +3,7 @@ import type {Replay} from '../../frontend/src/features/richman/game/engine';
 import {JAPAN_STOCKS} from '../../frontend/src/features/richman/game/g6-catalog';
 import {calendarClosed} from '../../frontend/src/features/richman/game/calendar-date';
 import {g6Draw} from '../../frontend/src/features/richman/game/g6-random';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 import {strict as assert} from 'node:assert';
 const quote=(base:number,p:number)=>{const target=base*(100+p)/100,step=target<500?1:target<1500?5:target<5000?10:target<15000?50:100;return Math.max(100,Math.min(999900,base+Math.sign(p)*Math.floor(Math.abs(base*p/100)/step)*step));};
 export function verifyStockMarket(r:Replay){

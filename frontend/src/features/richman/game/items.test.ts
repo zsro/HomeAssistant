@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import nodes from '../japan-topology.fixture.json';
+import nodes from '../../../../../shared/richman/japan-topology.fixture.json';
 import { GameEngine, replayGame, TURN_RULES } from './engine';
 import type { Action } from './engine';
 import { ITEM_RULES, REMOTE_DICE, REMOTE_EFFECT } from './items';

@@ -5,7 +5,7 @@ import {decideComputer,ESTATE_CARDS} from '../../frontend/src/features/richman/g
 import {g1Options,G1_GOODS} from '../../frontend/src/features/richman/game/g1';
 import {PROPERTY_CATALOG} from '../../frontend/src/features/richman/game/economy';
 import {actionLocked} from '../../frontend/src/features/richman/game/g2';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 import {writeFileSync} from 'node:fs';
 export function planComputerEstate(count:number,seed:string,required:readonly string[],limit=4000){
  const ids=['xiaomei','tuu','chyan','salonbus'].slice(0,count),computerIds=ids.filter((_,i)=>i>0);

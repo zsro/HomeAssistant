@@ -12,7 +12,7 @@ s=(root/'rich4_small_games.asm').read_text().split('ref_00474d7c:\n')[1].split('
 for size,n in re.findall(r'^(db|dd) (0x[0-9a-f]+)',s,re.M):b+=int(n,16).to_bytes(1 if size=='db'else 4,'little')
 grid=[dict(x=x,y=y,cover=bool(f))for x,y,f,_ in [struct.unpack('<hhhh',b[i:i+8])for i in range(0,len(b),8)]]
 assert len(grid)==81 and sum(bool(c['x'])for c in grid)==64
-assert json.loads(pathlib.Path('frontend/src/features/richman/game/penguin-grid.json').read_text())==grid
+assert json.loads(pathlib.Path('shared/richman/game/penguin-grid.json').read_text())==grid
 rules={
 'R12-04ab':'Japan node22/code6 penguin,24/code7 balloon,26/code8 sky; current seat only on normal landing, nonzero event skipped under dream, no passing service. Native human byte+21==1 AND cfg+1 enables game; otherwise rand%20+50. Web human hotseat actual game; no fallback-only claim. No entry payment, company owner test or inventory reward in these entries.',
 'R12-05ab':'Penguin:81 grid cells,64 valid; starting(2,6); hidden types1..5 counts3/12/3/9/1 uniformly without replacement. Click different valid cell, move via fixed-point DDA with4 ticks per segment and4dig ticks, only destination removes item. Type1 trap ends,2/3/4/5 awards5/12/8/20. 150*100ms; time expiry cancels unfinished movement/dig. Native postgame character animation/delay does not award inventory.',

@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { actorMode, actorSprite, roadToolPoses } from './actor-presentation';
 import { GameSession } from './game/session';
 import type { CharacterPose, Manifest } from './types';
-import nodes from './japan-topology.fixture.json';
+import nodes from '../../../../shared/richman/japan-topology.fixture.json';
 
 const pose = (name: string): CharacterPose => ({ idle: Array.from({ length: 8 }, (_, i) => `${name}-idle-${i}`),
   walk: Array.from({ length: 24 }, (_, i) => `${name}-walk-${i}`), walkFramesPerDirection: 3 });

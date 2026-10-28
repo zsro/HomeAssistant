@@ -14,7 +14,7 @@ import { actionLocked } from '../../frontend/src/features/richman/game/g2';
 import { g1Adjacent } from '../../frontend/src/features/richman/game/g1';
 import { PROPERTY_CATALOG } from '../../frontend/src/features/richman/game/economy';
 import { itemSite, REMOTE_EFFECT } from '../../frontend/src/features/richman/game/items';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 const group=process.env.RICHMAN_GROUP||'4567',count=Number(process.env.RICHMAN_PLAYERS||2),seed=process.env.RICHMAN_SEED||'unified-0';
 const goods=[...(group.includes('4')?G4_GOODS:[]),...(group.includes('5')?G5_GOODS:[]),...(group.includes('6')?G6_GOODS:[]),...(group.includes('7')?G7_GOODS:[])];
 const byId=new Map(nodes.map(n=>[n.id,n])),defs=PROPERTY_CATALOG.properties;

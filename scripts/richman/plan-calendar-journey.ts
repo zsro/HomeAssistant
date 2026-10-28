@@ -3,7 +3,7 @@ import {GameEngine,replayGame} from '../../frontend/src/features/richman/game/en
 import type {Action} from '../../frontend/src/features/richman/game/engine';
 import {CALENDAR_RULES} from '../../frontend/src/features/richman/game/calendar';
 import {marketAvailable} from '../../frontend/src/features/richman/game/g6-market';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 export function planCalendar(seed:string,count:number,startDate:string,goal:'loan'|'month',limit=5000){
  const e=new GameEngine(nodes,{gameId:'calendar-plan',seed,rulesId:CALENDAR_RULES.id,characterIds:['xiaomei','tuu','chyan','salonbus'].slice(0,count),initialFunds:300000,startDate});let borrower='',traded=false,month=false,collected=false;
  for(let step=0;step<limit;step++){

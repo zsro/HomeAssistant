@@ -4,7 +4,7 @@ import {GameSession} from './session';import type {Manifest} from '../types';
 import {decideComputer,estateChoices,ESTATE_CARDS} from './computer-estate';import {decideComputer as previous} from './computer-defense';
 import {openReaction} from './g3';
 import {G1_GOODS,g1Options} from './g1';import {PROPERTY_CATALOG} from './economy';
-import nodes from '../japan-topology.fixture.json';
+import nodes from '../../../../../shared/richman/japan-topology.fixture.json';
 const config={gameId:'estate-domain',seed:'estate',rulesId:'japan-events-candidate-v44',characterIds:['xiaomei','tuu','chyan','salonbus'],initialFunds:100000};
 const cur=(e:GameEngine)=>(e as unknown as {current:GameState}).current;
 function make(item:string='card:04'){

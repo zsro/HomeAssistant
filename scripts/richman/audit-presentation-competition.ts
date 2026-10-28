@@ -8,7 +8,7 @@ import {GameEngine} from '../../frontend/src/features/richman/game/engine';
 import {eventAudio} from '../../frontend/src/features/richman/audio-events';
 import {landingSound} from '../../frontend/src/features/richman/audio';
 import {PROPERTY_CATALOG} from '../../frontend/src/features/richman/game/economy';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 const dir='frontend/src/features/richman/game/fixtures';
 const rows=[];
 for(const file of readdirSync(dir).filter(f=>f.startsWith('presentation-')&&f.endsWith('-replay.json')).sort()){

@@ -7,7 +7,7 @@ import { CARD_FINGERPRINT, EQUAL_CASH, EQUAL_CASH_EFFECT, cardPurchaseReason } f
 import { REMOTE_EFFECT } from './items';
 import { ROADBLOCK_EFFECT, ROBOT_EFFECT } from './road-tools';
 import { PROPERTY_CATALOG } from './economy';
-import nodes from '../japan-topology.fixture.json';
+import nodes from '../../../../../shared/richman/japan-topology.fixture.json';
 import v5 from './fixtures/tools-v5-replay.json';
 import golden from './fixtures/tools-v5-golden.json';
 const map = [20, 50, 1, 3].map((id, i, ids) => ({ id, x: 1000 + i * 1000, y: 1000, adjacent: [ids[(i + 1) % ids.length]], kind: id === 50 ? 6001 : id === 1 ? 6006 : 0, name: '' }));

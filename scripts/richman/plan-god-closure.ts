@@ -9,7 +9,7 @@ import {shopPrice,shopSupply} from '../../frontend/src/features/richman/game/sho
 import {PROPERTY_CATALOG} from '../../frontend/src/features/richman/game/economy';
 import {REMOTE_EFFECT} from '../../frontend/src/features/richman/game/items';
 import {writeFileSync} from 'node:fs';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 const defs=PROPERTY_CATALOG.properties,byId=new Map(nodes.map(n=>[n.id,n])),distance=new Map<number,Map<number,number>>();
 for(const n of nodes){const d=new Map([[n.id,0]]),q=[n.id];for(let i=0;i<q.length;i++)for(const a of byId.get(q[i])!.adjacent)if(!d.has(a)){d.set(a,d.get(q[i])!+1);q.push(a);}distance.set(n.id,d);}
 export function planClosure(kind:'car'|'research',seed:string,limit=6500){

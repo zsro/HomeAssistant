@@ -4,7 +4,7 @@ import {createHash} from 'node:crypto';
 import assert from 'node:assert/strict';
 import {GameEngine,replayGame,type Command,type GameState} from '../../frontend/src/features/richman/game/engine';
 import {SURRENDER_FINGERPRINT} from '../../frontend/src/features/richman/game/surrender';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 const receipts=[];
 for(const n of [2,3,4]){
  const path='/private/tmp/richman-surrender-ui-'+n,replay=JSON.parse(readFileSync(path+'/replay.json','utf8')),report=JSON.parse(readFileSync(path+'/results.json','utf8')),plan=JSON.parse(readFileSync('/private/tmp/surrender-'+n+'.json','utf8'));

@@ -4,7 +4,7 @@ import {createHash} from 'node:crypto';
 import {GameEngine,replayGame} from '../../frontend/src/features/richman/game/engine';
 import type {Replay} from '../../frontend/src/features/richman/game/engine';
 import {verifyPayments} from './verify-payments';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 const rows=[];
 for(const route of (process.env.RICHMAN_PAYMENT_ROUTES??'fortune,company').split(',')){
  const source='/private/tmp/richman-unified-ui-03u-'+route,replay=JSON.parse(fs.readFileSync(source+'/replay.json','utf8')) as Replay,e=replayGame(nodes,replay),engine=new GameEngine(nodes,replay.config),checks=new Set<string>();

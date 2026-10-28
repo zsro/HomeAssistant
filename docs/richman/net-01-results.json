@@ -1,0 +1,454 @@
+{
+  "task": "NET-01",
+  "generatedAt": "2026-10-20T09:26:12.721473+00:00",
+  "status": "complete; implementation and scoped acceptance passed; not committed or deployed",
+  "scope": [
+    "Shared pure v47 and historical rule core in shared/richman; old TypeScript imports remain compatibility exports",
+    "Authoritative RNG, account-bound intentions, AI/research memory, animation and minigame clocks",
+    "MySQL transactional checkpoint/journal/receipt, single scheduler advisory lock and restart",
+    "Explicit user projection excluding seed/RNG/future decks/checkpoints/other inventories/hidden penguin cells"
+  ],
+  "validation": {
+    "hostUnit": {
+      "files": 1,
+      "tests": 13,
+      "passed": 13,
+      "failed": 0,
+      "cases": [
+        {
+          "name": "NET-01 shared authoritative host owns dice and animation progression; rejected commands do not change RNG",
+          "status": "passed"
+        },
+        {
+          "name": "NET-01 shared authoritative host rejects wrong seats, stale revisions and extra action fields",
+          "status": "passed"
+        },
+        {
+          "name": "NET-01 shared authoritative host forks an isolated candidate and restores pending animation without wall-clock catch-up",
+          "status": "passed"
+        },
+        {
+          "name": "NET-01 shared authoritative host schedules AI but never answers for a disconnected human",
+          "status": "passed"
+        },
+        {
+          "name": "NET-01 shared authoritative host preserves golden events, RNG and research memory after checkpoint: surrender-v47-4",
+          "status": "passed"
+        },
+        {
+          "name": "NET-01 shared authoritative host preserves golden events, RNG and research memory after checkpoint: surrender-v47-3",
+          "status": "passed"
+        },
+        {
+          "name": "NET-01 shared authoritative host preserves golden events, RNG and research memory after checkpoint: presentation-v47-research-focused",
+          "status": "passed"
+        },
+        {
+          "name": "NET-01 shared authoritative host binds non-active auction responders to their own accounts",
+          "status": "passed"
+        },
+        {
+          "name": "NET-01 shared authoritative host refuses incompatible checkpoints and duplicate/unknown seats",
+          "status": "passed"
+        },
+        {
+          "name": "NET-01 private projections and server minigame clock keeps hidden treasure, seed, RNG, decks, checkpoints, memories and other inventories off the wire",
+          "status": "passed"
+        },
+        {
+          "name": "NET-01 private projections and server minigame clock masks every undug penguin treasure and trap in a real playable board",
+          "status": "passed"
+        },
+        {
+          "name": "NET-01 private projections and server minigame clock pauses minigame clock offline, resumes from checkpoint, and advances only host ticks",
+          "status": "passed"
+        },
+        {
+          "name": "NET-01 private projections and server minigame clock allows bounded delayed input in the same minigame, rejects future/old/other decisions",
+          "status": "passed"
+        }
+      ]
+    },
+    "cloudMySQL": {
+      "files": 1,
+      "tests": 12,
+      "passed": 12,
+      "failed": 0,
+      "cases": [
+        {
+          "name": "NET-01 real cloud MySQL and authenticated HTTP does not expose provisioning or raw state, authenticates all command and view access",
+          "status": "passed"
+        },
+        {
+          "name": "NET-01 real cloud MySQL and authenticated HTTP rejects internal, wrong-seat, malformed, overlarge and client-authored state commands",
+          "status": "passed"
+        },
+        {
+          "name": "NET-01 real cloud MySQL and authenticated HTTP serializes simultaneous commands and deduplicates exact requests before stale checks",
+          "status": "passed"
+        },
+        {
+          "name": "NET-01 real cloud MySQL and authenticated HTTP rolls back journal + checkpoint together and never publishes failed candidate state",
+          "status": "passed"
+        },
+        {
+          "name": "NET-01 real cloud MySQL and authenticated HTTP recovers a committed request after acknowledgement loss without replaying RNG or duplicating rows",
+          "status": "passed"
+        },
+        {
+          "name": "NET-01 real cloud MySQL and authenticated HTTP rejects expired authentication again inside the transaction",
+          "status": "passed"
+        },
+        {
+          "name": "NET-01 real cloud MySQL and authenticated HTTP holds a single scheduler lock and permits a replacement only after shutdown",
+          "status": "passed"
+        },
+        {
+          "name": "NET-01 real cloud MySQL and authenticated HTTP treats client queue saturation as backpressure without disabling the scheduler",
+          "status": "passed"
+        },
+        {
+          "name": "NET-01 real cloud MySQL and authenticated HTTP serializes disconnect after pending reads and rejects non-member disconnects",
+          "status": "passed"
+        },
+        {
+          "name": "NET-01 real cloud MySQL and authenticated HTTP restores an animation checkpoint after restart without advancing for offline wall time",
+          "status": "passed"
+        },
+        {
+          "name": "NET-01 real cloud MySQL and authenticated HTTP finishes a real two-human game and keeps the original receipt after restart",
+          "status": "passed"
+        },
+        {
+          "name": "NET-01 real cloud MySQL and authenticated HTTP fails closed on corrupt durable checkpoints without altering stored data",
+          "status": "passed"
+        }
+      ]
+    },
+    "existingBackendUnitRegression": {
+      "files": 5,
+      "tests": 32,
+      "passed": 32,
+      "failed": 0,
+      "cases": [
+        {
+          "name": "HTTP shell serves health without touching the database",
+          "status": "passed"
+        },
+        {
+          "name": "HTTP shell serves OpenAPI and docs",
+          "status": "passed"
+        },
+        {
+          "name": "HTTP shell requires an invitation before database work",
+          "status": "passed"
+        },
+        {
+          "name": "HTTP shell uses the common not-found error shape",
+          "status": "passed"
+        },
+        {
+          "name": "authentication rate limiting returns the common 429 error after ten requests",
+          "status": "passed"
+        },
+        {
+          "name": "isolated save validation restores a real v47 save in the compiled Node worker",
+          "status": "passed"
+        },
+        {
+          "name": "isolated save validation rejects invalid JSON without returning a candidate state",
+          "status": "passed"
+        },
+        {
+          "name": "isolated save validation rejects invalid version without returning a candidate state",
+          "status": "passed"
+        },
+        {
+          "name": "isolated save validation rejects invalid digest without returning a candidate state",
+          "status": "passed"
+        },
+        {
+          "name": "isolated save validation rejects invalid fingerprint without returning a candidate state",
+          "status": "passed"
+        },
+        {
+          "name": "isolated save validation bounds byte size before starting a worker",
+          "status": "passed"
+        },
+        {
+          "name": "isolated save validation hard terminates a timed out worker and releases capacity",
+          "status": "passed"
+        },
+        {
+          "name": "isolated save validation admits at most two workers and cancels abandoned work",
+          "status": "passed"
+        },
+        {
+          "name": "isolated save validation reports worker startup errors without leaking payloads",
+          "status": "passed"
+        },
+        {
+          "name": "save HTTP boundaries (database calls stubbed) authenticates before parsing a large invalid body",
+          "status": "passed"
+        },
+        {
+          "name": "save HTTP boundaries (database calls stubbed) allows more than 32 KB only on the authenticated save route",
+          "status": "passed"
+        },
+        {
+          "name": "save HTTP boundaries (database calls stubbed) rejects unknown ownership, malformed versions/IDs and slots",
+          "status": "passed"
+        },
+        {
+          "name": "save HTTP boundaries (database calls stubbed) rejects unknown ownership, malformed versions/IDs and slots",
+          "status": "passed"
+        },
+        {
+          "name": "save HTTP boundaries (database calls stubbed) rejects unknown ownership, malformed versions/IDs and slots",
+          "status": "passed"
+        },
+        {
+          "name": "save HTTP boundaries (database calls stubbed) rejects unknown ownership, malformed versions/IDs and slots",
+          "status": "passed"
+        },
+        {
+          "name": "save HTTP boundaries (database calls stubbed) returns stable errors for malformed JSON and HTTP body limits",
+          "status": "passed"
+        },
+        {
+          "name": "save HTTP boundaries (database calls stubbed) rejects oversized UTF-8 saves, non-JSON and compressed input",
+          "status": "passed"
+        },
+        {
+          "name": "save HTTP boundaries (database calls stubbed) rate limits PUT attempts by authenticated account before replay or database writes",
+          "status": "passed"
+        },
+        {
+          "name": "save HTTP boundaries (database calls stubbed) keeps health responsive and rejects concurrent uploads for the same account",
+          "status": "passed"
+        },
+        {
+          "name": "save HTTP boundaries (database calls stubbed) does not expose slot content through list calls",
+          "status": "passed"
+        },
+        {
+          "name": "security primitives generates invitation codes with the restricted alphabet",
+          "status": "passed"
+        },
+        {
+          "name": "security primitives hashes passwords with Argon2id",
+          "status": "passed"
+        },
+        {
+          "name": "security primitives signs and verifies scoped access tokens",
+          "status": "passed"
+        },
+        {
+          "name": "security primitives stores only a deterministic refresh token hash",
+          "status": "passed"
+        },
+        {
+          "name": "auth validation normalizes usernames and invitation codes",
+          "status": "passed"
+        },
+        {
+          "name": "auth validation does not trim passwords",
+          "status": "passed"
+        },
+        {
+          "name": "auth validation rejects ambiguous invitation characters",
+          "status": "passed"
+        }
+      ]
+    },
+    "frontendFullInitial": {
+      "files": 192,
+      "tests": 2747,
+      "passedAssertions": 2747,
+      "exitCode": 1,
+      "runnerError": "vitest-worker Timeout calling onTaskUpdate; not counted as a clean pass"
+    },
+    "builds": {
+      "backendAndSharedAndWorker": "passed",
+      "frontend": "passed",
+      "compiledNodeHostSmoke": "passed; no browser globals; surrender reaches finished",
+      "typecheck": "passed"
+    },
+    "lint": {
+      "frontend": "passed",
+      "changedBackendSharedTests": "passed",
+      "wholeRoot": "not run; pre-existing CommonJS/browser script configuration errors documented in SAVE-02"
+    },
+    "releaseContract": {
+      "tests": 1,
+      "status": "passed",
+      "covers": [
+        "shared source mutation invalidates package",
+        "unstaged source deletion then staging keeps fingerprint stable",
+        "artifact tampering and missing assets rejected"
+      ]
+    },
+    "minigameBrowser": {
+      "generatedAt": "2026-10-20T09:07:20.201Z",
+      "environment": "Chrome headless, test-only browser client, real local HTTP API/server scheduler/cloud homeAssistantDB_test",
+      "fixtureBoundary": "Legally replayed v47 prefixes seed minigame entry; not a complete room or journey UI acceptance.",
+      "results": [
+        {
+          "game": "balloon",
+          "fixture": "presentation-v47-paid-upgrade-tuu",
+          "legalPrefixCommands": 130,
+          "serverCommands": 15,
+          "score": 1,
+          "pointsBefore": 560,
+          "pointsAfter": 561,
+          "activeInteractionMs": 2550,
+          "addedRequestLatencyMs": 40,
+          "authoritativeTicks": true,
+          "singleSettlement": true
+        },
+        {
+          "game": "sky",
+          "fixture": "presentation-v47-paid-upgrade-tuu",
+          "legalPrefixCommands": 808,
+          "serverCommands": 51,
+          "score": 1,
+          "pointsBefore": 670,
+          "pointsAfter": 671,
+          "activeInteractionMs": 4603,
+          "addedRequestLatencyMs": 40,
+          "authoritativeTicks": true,
+          "singleSettlement": true
+        },
+        {
+          "game": "penguin",
+          "fixture": "presentation-v47-paid-upgrade-tuu",
+          "legalPrefixCommands": 1827,
+          "serverCommands": 21,
+          "score": 0,
+          "pointsBefore": 260,
+          "pointsAfter": 260,
+          "activeInteractionMs": 3483,
+          "addedRequestLatencyMs": 40,
+          "authoritativeTicks": true,
+          "singleSettlement": true
+        }
+      ],
+      "errors": [],
+      "cleanup": "Only this run UUID games/users/auth sessions removed; production untouched"
+    },
+    "saveProductBrowserRegression": {
+      "generatedAt": "2026-10-20T09:05:40.901Z",
+      "environment": "Chrome headless, local Vite/API, real cloud homeAssistantDB_test",
+      "checks": [
+        {
+          "name": "new-game-to-manual-save-at-property-decision",
+          "revision": 8,
+          "phase": "property"
+        },
+        {
+          "name": "exit-signout-signin-load-continue-same-decision"
+        },
+        {
+          "name": "automatic-save-after-restored-decision",
+          "revision": 9
+        },
+        {
+          "name": "lost-response-retry-reuses-request-and-one-revision"
+        },
+        {
+          "name": "two-tab-conflict-preserves-newer-cloud-save-and-allows-another-slot"
+        },
+        {
+          "name": "expired-login-reauthentication-preserves-live-game-and-retry"
+        },
+        {
+          "name": "cancel-pending-network-load-keeps-current-game"
+        },
+        {
+          "name": "bad-digest-and-declined-load-preserve-current-progress"
+        },
+        {
+          "name": "restored-game-completes-through-normal-surrender"
+        },
+        {
+          "name": "mobile-390px-save-slots-no-horizontal-overflow"
+        },
+        {
+          "name": "save-and-exit-retries-previous-failed-request-and-waits-for-receipt"
+        },
+        {
+          "name": "second-account-cannot-list-or-load-first-account-saves"
+        }
+      ],
+      "failures": [],
+      "cleanup": "Only UUID owners created by this run and their save/auth rows removed. Production untouched."
+    },
+    "screenshots": [
+      "net01/balloon.png",
+      "net01/sky.png",
+      "net01/penguin.png"
+    ],
+    "visualInspection": "Chrome test UI readable; sky and balloon have positive earned score; penguin visible dig succeeds with zero reward in this fixture",
+    "frontendForkRetest": {
+      "files": 192,
+      "tests": 2747,
+      "passedAssertions": 2747,
+      "exitCode": 1,
+      "options": "RICHMAN_SKIP_REPEATED_PREFIXES=1 --maxWorkers=4 --reporter=dot",
+      "runnerError": "vitest-worker Timeout calling onTaskUpdate; not counted as a clean pass"
+    },
+    "movedCatalogPythonChecks": {
+      "tests": 16,
+      "passed": 14,
+      "skipped": 2,
+      "failed": 0,
+      "commands": [
+        "python3 -m unittest discover -s scripts/richman -p 'test_build_*.py'",
+        "python3 -m unittest discover -s scripts/richman -p 'test_audit_map.py'"
+      ],
+      "boundary": "Two optional supplied-original-resource checks skipped; existing audit-derived node/property catalogs match shared JSON exactly."
+    },
+    "frontendFinal": {
+      "files": 192,
+      "tests": 2747,
+      "passed": 2747,
+      "failed": 0,
+      "exitCode": 0,
+      "runnerErrors": 0,
+      "durationSeconds": 647.05,
+      "command": "RICHMAN_SKIP_REPEATED_PREFIXES=1 npm --prefix frontend test -- --pool=threads --maxWorkers=4 --reporter=default --reporter=json",
+      "boundary": "Existing research/strategy replay tests skip duplicate prefix reconstruction after validating archive hashes; full replay/state/event hashes still checked. Initial run included repeated prefixes and passed all assertions but had an RPC runner error. No tests or assertions were filtered out."
+    },
+    "runnerInvestigation": "Two fork/dot-reporter runs passed all 2747 assertions but exited 1 due to onTaskUpdate RPC timeout. Final threads/default-reporter run passed the same 192 files and 2747 tests, exited 0 with no runner errors. No framework dependencies changed and no test error was suppressed."
+  },
+  "resolvedDuringValidation": [
+    "Checkpoint event offset also applies to player-elimination effect boundaries",
+    "Queue saturation delays a game pulse rather than stopping all games",
+    "Disconnect serializes behind previous reads; acceptance client drains in-flight polls before disconnect",
+    "Legal long replay fixture needed a 30-second test budget; assertions passed on focused rerun",
+    "Sky browser acceptance now waits for input completion and catches a visible reward instead of chasing drops into a bomb"
+  ],
+  "limits": {
+    "activeGameAdmission": 32,
+    "checkpointBytes": 8388608,
+    "gameQueue": 8,
+    "totalQueue": 64,
+    "jsonCommandBytes": 4096,
+    "presenceLeaseMs": 15000,
+    "maxPulseElapsedMs": 250,
+    "maxInternalStepsPerPulse": 8,
+    "minPointDigIntervalMs": 50,
+    "sameMinigameRevisionLag": 40
+  },
+  "boundaries": [
+    "No public room creation, room code, ready/start or production network-session UI yet; NET-02 next",
+    "HTTP polling test client is local acceptance infrastructure, not a restored original UI or WebSocket integration",
+    "Minigames start from legal recorded v47 prefixes; not a complete browser multiplayer journey",
+    "Cloud database tests use homeAssistantDB_test; own UUID test rows only are cleaned; no table reset",
+    "Single-instance scheduler only; 32-game cap is not a measured concurrency guarantee",
+    "Unexpected disconnect pauses minigame after presence expiry; connection generations, reconnect UI and consensus pause remain NET-02/03",
+    "Projection requires further legitimate display/choice fields for complete frontend business windows",
+    "No production migration, deployment, git commit/push or regenerated release package"
+  ],
+  "next": "NET-02 私人房间与正式联机客户端"
+}

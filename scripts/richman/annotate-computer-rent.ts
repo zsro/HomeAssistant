@@ -1,5 +1,5 @@
 import {GameEngine} from '../../frontend/src/features/richman/game/engine';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 import {readFileSync,writeFileSync} from 'node:fs';
 for(const route of (process.env.RICHMAN_ROUTES??'payer').split(',')){
  const path='/private/tmp/computer-rent-'+route+'.json',p=JSON.parse(readFileSync(path,'utf8')),e=new GameEngine(nodes,p.replay.config);p.cross=[];

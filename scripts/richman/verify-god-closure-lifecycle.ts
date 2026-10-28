@@ -3,7 +3,7 @@ import {readFileSync,writeFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import assert from 'node:assert/strict';
 import {GameEngine,replayGame,type Replay} from '../../frontend/src/features/richman/game/engine';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 const path='/private/tmp/richman-god-closure-lifecycle',replay=JSON.parse(readFileSync(path+'/replay.json','utf8')),report=JSON.parse(readFileSync(path+'/results.json','utf8'));
 assert.deepEqual(replay.config.humanIds,['player-1','player-3']);assert.equal(replay.control.policy,'research-v1');assert.deepEqual(replay.control.computerIds,['tuu']);
 assert.deepEqual(replay.commands.map((c:Replay['commands'][number])=>[c.playerId,c.action.type]),[['player-1','surrender'],['player-1','chooseDeath'],['player-1','endTurn'],['player-2','pause'],['player-2','pause'],['player-2','roll'],['player-2','pause']]);

@@ -1,7 +1,7 @@
 /** Legal v44 original-map planning; not browser evidence. Humans follow scripted ordinary commands. */
 import {GameEngine} from '../../frontend/src/features/richman/game/engine';
 import {computerDecision} from '../../frontend/src/features/richman/game/computer';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 import {writeFileSync} from 'node:fs';
 export function planComputer(count:number,seed:string,turns=65){
  const ids=['xiaomei','tuu','chyan','salonbus'].slice(0,count),computerIds=ids.filter((_,i)=>i%2===1);

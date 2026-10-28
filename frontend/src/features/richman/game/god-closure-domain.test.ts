@@ -1,7 +1,7 @@
 /** Legal command boundaries, not browser coverage or an invented extra source for god15. */
 import {expect,it} from 'vitest';
 import {GameEngine,replayGame,type Action} from './engine';
-import nodes from '../japan-topology.fixture.json';
+import nodes from '../../../../../shared/richman/japan-topology.fixture.json';
 it('two ordinary human exits can replace the same computer carrier; third exit cannot create a busy-slot UI gift',()=>{
  const e=new GameEngine(nodes,{gameId:'closure-seats',rulesId:'japan-events-candidate-v47',seed:'closure-seats',characterIds:['a','b','c','d'],humanIds:['player-1','player-2','player-3']});
  const send=(action:Action)=>{const s=e.state,r=e.dispatch({id:'c'+s.revision,gameId:s.gameId,expectedRevision:s.revision,playerId:s.pending?.kind==='surrender'?s.pending.sourceId:s.players[s.active].id,action});expect(r.ok).toBe(true);};

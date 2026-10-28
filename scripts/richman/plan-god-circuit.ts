@@ -6,7 +6,7 @@ import {actionLocked} from '../../frontend/src/features/richman/game/g2';
 import {REMOTE_EFFECT} from '../../frontend/src/features/richman/game/items';
 import {shopSupply,shopPrice} from '../../frontend/src/features/richman/game/shop-acquisition';
 import {writeFileSync} from 'node:fs';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 const byId=new Map(nodes.map(n=>[n.id,n])),distance=new Map<number,Map<number,number>>();
 for(const n of nodes){const d=new Map([[n.id,0]]),q=[n.id];for(let i=0;i<q.length;i++)for(const a of byId.get(q[i])!.adjacent)if(!d.has(a)){d.set(a,d.get(q[i])!+1);q.push(a);}distance.set(n.id,d);}
 export function planGodCircuit(seed:string,count:number,goal:'pair'|'full',limit=5000){

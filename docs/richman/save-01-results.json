@@ -1,0 +1,345 @@
+{
+  "recordedAt": "2026-10-20T06:53:43.902Z",
+  "node": "v23.11.0",
+  "platform": "darwin",
+  "arch": "arm64",
+  "scope": "Existing browser-exported commands replayed through SAVE-01; research-v1 host variant, not new browser evidence or original AI-policy acceptance.",
+  "limits": {
+    "bytes": 8388608,
+    "commands": 20000,
+    "restoreMs": 30000
+  },
+  "results": [
+    {
+      "name": "surrender-v47-2",
+      "sourceSha256": "9bd50aa637998d22534e70fd2510e16602e0dec39e1743e526fe1c0afbba50a0",
+      "commands": 3,
+      "seats": 2,
+      "originalPolicy": null,
+      "testedPolicy": "research-v1",
+      "checkpointResults": [
+        {
+          "index": 3,
+          "phase": "finished",
+          "pending": null,
+          "respondingPlayer": null,
+          "activePlayer": "player-1",
+          "memoryPlayers": [],
+          "bytes": 1146,
+          "createMs": 3,
+          "parseMs": 0.07,
+          "restoreMs": 6,
+          "suffixCommands": 0,
+          "stateEventsRandomAndMemoryEqual": true
+        }
+      ]
+    },
+    {
+      "name": "surrender-v47-4",
+      "sourceSha256": "0ae94216b2344e52e1b3cbac5a3e5eab59f439dcd1166a314995128ad030010e",
+      "commands": 431,
+      "seats": 4,
+      "originalPolicy": null,
+      "testedPolicy": "research-v1",
+      "checkpointResults": [
+        {
+          "index": 399,
+          "phase": "auction",
+          "pending": "auction",
+          "respondingPlayer": "player-2",
+          "activePlayer": "player-1",
+          "memoryPlayers": [],
+          "bytes": 74117,
+          "createMs": 5,
+          "parseMs": 0.68,
+          "restoreMs": 1391,
+          "suffixCommands": 32,
+          "stateEventsRandomAndMemoryEqual": true
+        },
+        {
+          "index": 410,
+          "phase": "surrender",
+          "pending": "surrender",
+          "respondingPlayer": null,
+          "activePlayer": "player-1",
+          "memoryPlayers": [],
+          "bytes": 76359,
+          "createMs": 3,
+          "parseMs": 0.76,
+          "restoreMs": 1410,
+          "suffixCommands": 21,
+          "stateEventsRandomAndMemoryEqual": true
+        },
+        {
+          "index": 431,
+          "phase": "idle",
+          "pending": null,
+          "respondingPlayer": null,
+          "activePlayer": "player-3",
+          "memoryPlayers": [],
+          "bytes": 80060,
+          "createMs": 2,
+          "parseMs": 0.74,
+          "restoreMs": 1418,
+          "suffixCommands": 0,
+          "stateEventsRandomAndMemoryEqual": true
+        }
+      ]
+    },
+    {
+      "name": "god-closure-v47-research",
+      "sourceSha256": "c64cb45d0625d738b730c1509b42dd3dee6a3c07aa2fe2e4f34c9118a4db53c2",
+      "commands": 2442,
+      "seats": 4,
+      "originalPolicy": "basic-v1",
+      "testedPolicy": "research-v1",
+      "checkpointResults": [
+        {
+          "index": 176,
+          "phase": "idle",
+          "pending": null,
+          "respondingPlayer": null,
+          "activePlayer": "player-1",
+          "memoryPlayers": [],
+          "bytes": 32907,
+          "createMs": 5,
+          "parseMs": 0.28,
+          "restoreMs": 571,
+          "suffixCommands": 2266,
+          "stateEventsRandomAndMemoryEqual": true
+        },
+        {
+          "index": 1871,
+          "phase": "magic",
+          "pending": "magic",
+          "respondingPlayer": null,
+          "activePlayer": "player-3",
+          "memoryPlayers": [],
+          "bytes": 348518,
+          "createMs": 12,
+          "parseMs": 2.46,
+          "restoreMs": 8602,
+          "suffixCommands": 571,
+          "stateEventsRandomAndMemoryEqual": true
+        },
+        {
+          "index": 2297,
+          "phase": "effect",
+          "pending": "effect",
+          "respondingPlayer": null,
+          "activePlayer": "player-3",
+          "memoryPlayers": [
+            "player-3"
+          ],
+          "bytes": 428330,
+          "createMs": 12,
+          "parseMs": 3.14,
+          "restoreMs": 10960,
+          "suffixCommands": 145,
+          "stateEventsRandomAndMemoryEqual": true
+        },
+        {
+          "index": 2298,
+          "phase": "idle",
+          "pending": null,
+          "respondingPlayer": null,
+          "activePlayer": "player-3",
+          "memoryPlayers": [],
+          "bytes": 428603,
+          "createMs": 8,
+          "parseMs": 3.19,
+          "restoreMs": 10609,
+          "suffixCommands": 144,
+          "stateEventsRandomAndMemoryEqual": true
+        },
+        {
+          "index": 2442,
+          "phase": "idle",
+          "pending": null,
+          "respondingPlayer": null,
+          "activePlayer": "player-2",
+          "memoryPlayers": [],
+          "bytes": 455316,
+          "createMs": 11,
+          "parseMs": 3.49,
+          "restoreMs": 11236,
+          "suffixCommands": 0,
+          "stateEventsRandomAndMemoryEqual": true
+        }
+      ]
+    },
+    {
+      "name": "presentation-v47-g7-changed-set",
+      "sourceSha256": "1b85a5658aa03a1cbb8830c885ff6750cd8558dd1f9f125bd4acf6b555b4779b",
+      "commands": 2114,
+      "seats": 2,
+      "originalPolicy": null,
+      "testedPolicy": "research-v1",
+      "checkpointResults": [
+        {
+          "index": 91,
+          "phase": "commerce",
+          "pending": "insurance",
+          "respondingPlayer": null,
+          "activePlayer": "player-1",
+          "memoryPlayers": [],
+          "bytes": 17341,
+          "createMs": 2,
+          "parseMs": 0.16,
+          "restoreMs": 139,
+          "suffixCommands": 2023,
+          "stateEventsRandomAndMemoryEqual": true
+        },
+        {
+          "index": 101,
+          "phase": "minigame",
+          "pending": "minigame",
+          "respondingPlayer": null,
+          "activePlayer": "player-2",
+          "memoryPlayers": [],
+          "bytes": 19222,
+          "createMs": 3,
+          "parseMs": 0.2,
+          "restoreMs": 158,
+          "suffixCommands": 2013,
+          "stateEventsRandomAndMemoryEqual": true
+        },
+        {
+          "index": 282,
+          "phase": "turnEnd",
+          "pending": null,
+          "respondingPlayer": null,
+          "activePlayer": "player-2",
+          "memoryPlayers": [],
+          "bytes": 59404,
+          "createMs": 4,
+          "parseMs": 0.55,
+          "restoreMs": 522,
+          "suffixCommands": 1832,
+          "stateEventsRandomAndMemoryEqual": true
+        },
+        {
+          "index": 766,
+          "phase": "reaction",
+          "pending": "reaction",
+          "respondingPlayer": "player-2",
+          "activePlayer": "player-2",
+          "memoryPlayers": [],
+          "bytes": 154882,
+          "createMs": 7,
+          "parseMs": 1.29,
+          "restoreMs": 1717,
+          "suffixCommands": 1348,
+          "stateEventsRandomAndMemoryEqual": true
+        },
+        {
+          "index": 2104,
+          "phase": "effect",
+          "pending": "effect",
+          "respondingPlayer": null,
+          "activePlayer": "player-2",
+          "memoryPlayers": [
+            "player-2"
+          ],
+          "bytes": 425074,
+          "createMs": 11,
+          "parseMs": 3.33,
+          "restoreMs": 5510,
+          "suffixCommands": 10,
+          "stateEventsRandomAndMemoryEqual": true
+        },
+        {
+          "index": 2105,
+          "phase": "idle",
+          "pending": null,
+          "respondingPlayer": null,
+          "activePlayer": "player-2",
+          "memoryPlayers": [],
+          "bytes": 425347,
+          "createMs": 7,
+          "parseMs": 3.65,
+          "restoreMs": 5475,
+          "suffixCommands": 9,
+          "stateEventsRandomAndMemoryEqual": true
+        },
+        {
+          "index": 2114,
+          "phase": "idle",
+          "pending": null,
+          "respondingPlayer": null,
+          "activePlayer": "player-1",
+          "memoryPlayers": [],
+          "bytes": 427041,
+          "createMs": 9,
+          "parseMs": 3.7,
+          "restoreMs": 5468,
+          "suffixCommands": 0,
+          "stateEventsRandomAndMemoryEqual": true
+        }
+      ]
+    }
+  ],
+  "debt": {
+    "source": "generated legal v47 actions, no state injection or browser claim",
+    "seed": "save-debt-0",
+    "prefixCommands": 1398,
+    "suffixCommands": 40,
+    "bytes": 193571,
+    "restoreMs": 1690,
+    "fullStateEventsRandomEqual": true
+  },
+  "supplementedAt": "2026-10-20T06:56:38.888Z",
+  "measurementNote": "Local Node process; typechecking or tests may be concurrent. Timings are observations, not device or server latency guarantees.",
+  "verification": {
+    "uniqueTestsPassed": 204,
+    "testFiles": 7,
+    "saveAndRelatedTests": 71,
+    "legacyCompatibilityTests": 133,
+    "initialRun": {
+      "passed": 70,
+      "failed": 1,
+      "reason": "Generated debt test harness included the AI reason string in the persisted command. Strict schema rejected the extra field as intended."
+    },
+    "repair": "Generator now persists only playerId/action along with command identity and revision; no game rules or save validation relaxed.",
+    "retest": {
+      "passed": 1,
+      "otherCircuitTestsSkipped": 4,
+      "scope": "Only the corrected generated debt test"
+    },
+    "frontendLint": "passed",
+    "frontendTypeScriptAndViteBuild": "passed",
+    "browserAcceptance": "not run; product LOAD/SAVE wiring is not part of SAVE-01",
+    "databaseAndDeployment": "not performed",
+    "releaseBundle": "not regenerated; packaging and release verification required before later deployment",
+    "testSuites": [
+      {
+        "file": "frontend/src/features/richman/game/engine.test.ts",
+        "passed": 11
+      },
+      {
+        "file": "frontend/src/features/richman/game/replay-matrix.test.ts",
+        "passed": 133
+      },
+      {
+        "file": "frontend/src/features/richman/game/save-circuit.test.ts",
+        "passed": 5
+      },
+      {
+        "file": "frontend/src/features/richman/game/save.test.ts",
+        "passed": 42
+      },
+      {
+        "file": "frontend/src/features/richman/game/session-audio.test.ts",
+        "passed": 2
+      },
+      {
+        "file": "frontend/src/features/richman/game/session.test.ts",
+        "passed": 8
+      },
+      {
+        "file": "frontend/src/features/richman/game/surrender-session.test.ts",
+        "passed": 3
+      }
+    ]
+  }
+}

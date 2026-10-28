@@ -7,7 +7,7 @@ import {enterDetention} from './g2';
 import {saveCheckpoint,restoreCheckpoint} from './g7';
 import {PROPERTY_CATALOG} from './economy';
 import {REMOTE_EFFECT} from './items';
-import japan from '../japan-topology.fixture.json';
+import japan from '../../../../../shared/richman/japan-topology.fixture.json';
 function fixture(id=16,rulesId:string=STATUS_NEWS_RULES.id){const e=new GameEngine(japan,{gameId:'status',seed:'status',rulesId,characterIds:['a','b','c'],initialFunds:100000});const s=(e as unknown as {current:GameState}).current;s.g6!.gods=[];s.players[0].node=13;s.news!.order=[id,...Array.from({length:36},(_,i)=>i).filter(n=>n!==id)];return{e,s};}
 function send(e:GameEngine,action:Action){const s=e.state,c={id:`c${s.revision}`,gameId:s.gameId,expectedRevision:s.revision,playerId:s.players[s.active].id,action};expect(e.dispatch(c).ok,JSON.stringify(action)).toBe(true);return c;}
 function news(s:GameState){const events:EventPayload[]=[];offerNews(s,()=>`n${++s.serial}`,e=>events.push(e),PROPERTY_CATALOG.properties);return events;}

@@ -4,7 +4,7 @@ import {createHash} from 'node:crypto';
 import {readFileSync,writeFileSync} from 'node:fs';
 import {GameEngine,replayGame,type Command} from '../../frontend/src/features/richman/game/engine';
 import {eventAudio} from '../../frontend/src/features/richman/audio-events';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 import catalog from '../../frontend/src/features/richman/audio-catalog.json';
 
 const character=process.env.RICHMAN_CHARACTER;

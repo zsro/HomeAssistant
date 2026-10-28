@@ -3,7 +3,7 @@ import {GameEngine} from './engine';
 import type {GameState,EventPayload,Action} from './engine';
 import {DIVIDEND_FINGERPRINT,settleDividends} from './dividends';
 import {saveCheckpoint,restoreCheckpoint} from './g7';
-import nodes from '../japan-topology.fixture.json';
+import nodes from '../../../../../shared/richman/japan-topology.fixture.json';
 function fixture(version=26,count=4){const e=new GameEngine(nodes,{gameId:'dividends',seed:'dividends',rulesId:`japan-events-candidate-v${version}`,characterIds:['a','b','c','d'].slice(0,count),initialFunds:100000,startDate:'1998-01-14'});const s=(e as unknown as{current:GameState}).current;s.g6!.gods=[];return{e,s};}
 function shares(s:GameState,company:number,funds:number,quantities:number[]){const c=s.news!.business!.companies[company];c.funds=funds;c.cumulative=123456;quantities.forEach((q,i)=>{s.g6!.holdings[`player-${i+1}`][c.stockId].quantity=q;});return c;}
 function settle(s:GameState){s.calendar!.date='1998-01-15';const ev:EventPayload[]=[];settleDividends(s,e=>ev.push(e),id=>s.finance!.eliminated.push(id));return ev;}

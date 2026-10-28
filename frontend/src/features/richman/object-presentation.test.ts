@@ -3,7 +3,7 @@ import {objectPoses, validObjectArt} from './object-presentation';
 import type {ObjectArt} from './object-presentation';
 import {GameSession} from './game/session';
 import type {Manifest} from './types';
-import nodes from './japan-topology.fixture.json';
+import nodes from '../../../../shared/richman/japan-topology.fixture.json';
 const manifest:Manifest={version:1,map:{name:'日本',width:2304,height:2304,nodes,scenery:[]},sprites:{},characters:['xiaomei','tuu','chyan','salonbus'].map(id=>({id,name:id,color:'#fff',idle:[],walk:[],walkFramesPerDirection:10}))};
 const art:ObjectArt={version:1,profile:'object-presentation-v1',sourceHash:'c63023e815b1ad4bef172b6415d128c7f041f12b71b5d80dc3ff29240a0a1988',offsets:[[-10,-22],[-22,-10],[-22,10],[-10,22],[10,22],[22,10],[22,-10],[10,-22]],sprites:Object.fromEntries(Array.from({length:120},(_,i)=>[`god-${Math.floor(i/8)+1}-${i%8}`,{x:0,y:0,width:20,height:30,anchorX:10,anchorY:35}]))};
 const map=new Map(nodes.map(n=>[n.id,n]));

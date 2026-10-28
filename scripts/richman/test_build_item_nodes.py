@@ -9,7 +9,7 @@ ROOT = Path(__file__).resolve().parents[2]
 class RuntimeItemSitesTest(unittest.TestCase):
     def test_reproduces_exact_sites_from_original_map_audit(self):
         audit = json.loads((ROOT / 'docs/richman/japan-map-audit.json').read_text())
-        actual = json.loads((ROOT / 'frontend/src/features/richman/game/japan-item-nodes.json').read_text())
+        actual = json.loads((ROOT / 'shared/richman/game/japan-item-nodes.json').read_text())
         self.assertEqual(build(audit), actual)
         self.assertEqual(len(actual['nodes']), 15)
         self.assertEqual([n['id'] for n in actual['nodes'] if n['shop']], [50, 107])

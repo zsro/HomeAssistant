@@ -18,7 +18,7 @@ import {offerTrafficFortune} from './traffic-fortune';
 import {offerAssetFortune} from './asset-fortune';
 import {offerCompany} from './company-services';
 import {saveCheckpoint,restoreCheckpoint} from './g7';
-import nodes from '../japan-topology.fixture.json';
+import nodes from '../../../../../shared/richman/japan-topology.fixture.json';
 const road=[701,702].map(id=>({id,x:id*20,y:0,adjacent:[1403-id],name:'测试',kind:0}));
 const lot:PropertyDefinition={id:'test:land:1',kind:'land',name:'街道',nodeIds:[701,702],x:0,y:0,direction:0,basePrice:501,upgradeCost:101,rents:[101,201,301,401,501,601]};
 function setup(version=31,small=false,definition=lot){const e=new GameEngine(small?road:nodes,{gameId:'price',seed:'price-r',rulesId:`japan-events-candidate-v${version}`,characterIds:small?['a','b']:['a','b','c'],initialFunds:100000},small?[definition]:undefined),s=(e as unknown as {current:GameState}).current;s.g6!.gods=[];s.calendar!.business!.priceIndex=3;return{e,s,events:[] as EventPayload[]};}

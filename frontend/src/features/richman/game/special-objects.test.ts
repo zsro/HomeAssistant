@@ -7,7 +7,7 @@ import {SHOP_TOOLS,shopSupply} from './shop-acquisition';
 import {returnSupply} from './g3';
 import {saveCheckpoint,restoreCheckpoint,nuclearTargets,applyG7} from './g7';
 import {PROPERTY_CATALOG} from './economy';
-import nodes from '../japan-topology.fixture.json';
+import nodes from '../../../../../shared/richman/japan-topology.fixture.json';
 function fixture(version=46){const s=new GameEngine(nodes,{gameId:'special',rulesId:`japan-events-candidate-v${version}`,seed:'special',characterIds:['a','b','c'],initialFunds:100000,startDate:'1998-01-31'}).state;const events:EventPayload[]=[];return{s,events,emit:(e:EventPayload)=>events.push(e)};}
 function object(s:ReturnType<typeof fixture>['s'],type:number){s.g6!.objects=[{id:'special',type,node:s.players[s.active].node,carrier:null,remaining:0}];s.remaining=0;}
 it('initializes six odd slots then13/14 without duplicate12 and with distinct unoccupied nodes',()=>{const{s}=fixture();expect(allRoadGods(s).map(g=>g.type).sort((a,b)=>a-b)).toEqual([1,3,5,7,9,11,13,14,15]);expect(new Set(allRoadGods(s).map(g=>g.node)).size).toBe(9);expect(s.g6!.objects!.map(g=>g.type)).toEqual([11,13,14]);expect(pairCandidates(s,null).candidates.every(n=>!s.g6!.objects!.some(g=>g.node===n.id))).toBe(true);});

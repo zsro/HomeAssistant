@@ -12,7 +12,7 @@ export const WINDOW_TITLES: Record<string, string> = {
 };
 export type WindowRequest = { panel: string; title: string; selector: string; key: string; required: boolean; map: boolean; decision: boolean; minimized?: boolean };
 export function decisionWindow(s: SessionSnapshot | null): WindowRequest | null {
-  if (!s) return null;
+  if (!s || s.network?.waiting || s.network?.readOnly) return null;
   const selector = decisionSelector(s);
   if (selector === '.rm-action-bar') return null;
   const panels: Partial<Record<SessionSnapshot['phase'], string>> = {

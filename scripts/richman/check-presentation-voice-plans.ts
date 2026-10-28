@@ -2,7 +2,7 @@
 import {readFileSync} from 'node:fs';
 import {GameEngine} from '../../frontend/src/features/richman/game/engine';
 import {eventAudio} from '../../frontend/src/features/richman/audio-events';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 for(const character of (process.env.RICHMAN_CHARACTERS??'xiaomei,tuu,chyan,salonbus').split(',')){
   const plan=JSON.parse(readFileSync(`/private/tmp/presentation-paid-upgrade-${character}-voice.json`,'utf8'));
   const engine=new GameEngine(nodes,plan.replay.config);let cue:unknown=null,paid=0;

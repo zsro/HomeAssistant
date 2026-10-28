@@ -7,7 +7,7 @@ import {applyG2,tickMobility} from './g2';
 import {syncCardSlots,returnSupply} from './g3';
 function pool(s:GameState,id:string):number{return id==='tool:08'?s.items!.supply:id==='card:01'?s.wealth!.supply:id==='card:02'?s.cards!.supply:[s.g6,s.g5,s.g4,s.g3,s.g2,s.g1].find(x=>x&&id in x.supply)?.supply[id]??0;}
 import {saveCheckpoint,restoreCheckpoint} from './g7';
-import nodes from '../japan-topology.fixture.json';
+import nodes from '../../../../../shared/richman/japan-topology.fixture.json';
 const defs=PROPERTY_CATALOG.properties,current=(e:GameEngine)=>(e as unknown as{current:GameState}).current;
 function setup(count=4,version=36){const e=new GameEngine(nodes,{gameId:'magic',rulesId:`japan-events-candidate-v${version}`,seed:'magic',characterIds:['xiaomei','tuu','chyan','salonbus'].slice(0,count),initialFunds:100000});return {e,s:current(e)};}
 function send(e:GameEngine,action:Action,ok=true){const s=e.state,r=e.dispatch({id:'c'+s.revision,gameId:s.gameId,expectedRevision:s.revision,playerId:s.players[s.active].id,action});expect(r.ok,JSON.stringify(r)).toBe(ok);return r;}

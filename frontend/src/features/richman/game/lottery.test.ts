@@ -4,7 +4,7 @@ import type {GameState,Action,EventPayload} from './engine';
 import {LOTTERY_FINGERPRINT,initializeLottery,offerLottery,drawLottery,releaseLottery} from './lottery';
 import {g6Draw} from './g6-random';
 import {saveCheckpoint,restoreCheckpoint} from './g7';
-import nodes from '../japan-topology.fixture.json';
+import nodes from '../../../../../shared/richman/japan-topology.fixture.json';
 function fixture(version=25,count=4){const e=new GameEngine(nodes,{gameId:'lottery',seed:'lottery-test',rulesId:`japan-events-candidate-v${version}`,characterIds:['a','b','c','d'].slice(0,count),initialFunds:100000,startDate:'1998-01-14'});const s=(e as unknown as{current:GameState}).current;s.g6!.gods=[];return{e,s};}
 function send(e:GameEngine,action:Action,playerId?:string){const s=e.state;return e.dispatch({id:`c${s.revision}`,gameId:s.gameId,expectedRevision:s.revision,playerId:playerId??s.players[s.active].id,action});}
 function offer(s:GameState,node=28){s.players[s.active].node=node;return offerLottery(s,nodes,()=>`l${++s.serial}`,()=>{});}

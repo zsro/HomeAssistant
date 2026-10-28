@@ -3,7 +3,7 @@ import {eventAudio} from './audio-events';
 import {GameEngine} from './game/engine';
 import type {GameEvent,GameState} from './game/engine';
 import {PROPERTY_CATALOG} from './game/economy';
-import nodes from './japan-topology.fixture.json';
+import nodes from '../../../../shared/richman/japan-topology.fixture.json';
 const chars=['xiaomei','tuu','chyan','salonbus'];
 const state=()=>new GameEngine(nodes,{gameId:'audio',seed:'audio',characterIds:chars,rulesId:'japan-events-candidate-v47'}).state;
 const base={sequence:1,commandId:'cmd',playerId:'player-1',turn:1};

@@ -6,7 +6,7 @@ import {offerRent,startAttack,returnSupply} from './g3';
 import {buyHolding} from './stock-ledger';
 import {updateCompanyOwner} from './news-business';
 import {PROPERTY_CATALOG} from './economy';
-import nodes from '../japan-topology.fixture.json';
+import nodes from '../../../../../shared/richman/japan-topology.fixture.json';
 const mutable=(e:GameEngine)=>(e as unknown as{current:GameState}).current;
 function setup(count=4){const e=new GameEngine(nodes,{gameId:'reaction-domain',rulesId:'japan-events-candidate-v44',seed:'reaction-domain',characterIds:['a','b','c','d'].slice(0,count),initialFunds:100000,startDate:'1998-01-14'});const s=mutable(e);s.g6!.gods=[];return{e,s};}
 function grant(s:GameState,id:string,...items:string[]){for(const item of items){s.effects!.inventory[id][item]=(s.effects!.inventory[id][item]??0)+1;s.g3!.slots[id].push(item);returnSupply(s,item,-1);}}

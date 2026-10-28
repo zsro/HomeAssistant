@@ -1,7 +1,7 @@
 import {expect,it} from 'vitest';
 import {createHash} from 'node:crypto';
 import {replayGame,type Replay} from './engine';
-import nodes from '../japan-topology.fixture.json';
+import nodes from '../../../../../shared/richman/japan-topology.fixture.json';
 const files=import.meta.glob('./fixtures/special-objects-v46-*.json',{eager:true,import:'default'}) as Record<string,Replay & {hashes:Record<string,string>}>;
 for(const n of [2,3,4])it(`${n} seats preserves accepted special road object UI replay`,()=>{
  const load=(suffix:string)=>files[`./fixtures/special-objects-v46-${n}-${suffix}.json`];

@@ -3,7 +3,7 @@ import {GameEngine,replayGame} from '../../frontend/src/features/richman/game/en
 import type {ControlledReplay} from '../../frontend/src/features/richman/game/computer';
 import {decisionPlayer} from '../../frontend/src/features/richman/game/computer';
 import {decideComputer,capitalBudget} from '../../frontend/src/features/richman/game/computer-capital';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 /** Independent receipt arithmetic; replay tests intentionally use the production dispatcher. */
 export async function verifyComputerCapital(replay:ControlledReplay){
  assert.equal(replay.rulesId,'japan-events-candidate-v44');assert.equal(replay.itemFingerprint,'f9dbb7e9');assert.equal(replay.control?.policy,'capital-v1');

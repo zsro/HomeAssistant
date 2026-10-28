@@ -5,7 +5,7 @@ import {SHOP_ACQUISITION_FINGERPRINT,SHOP_CARDS,SHOP_TOOLS,shopSupply,shopPrice}
 import {returnSupply,syncCardSlots} from './g3';
 import {g6Draw} from './g6-random';
 import {saveCheckpoint,restoreCheckpoint} from './g7';
-import nodes from '../japan-topology.fixture.json';
+import nodes from '../../../../../shared/richman/japan-topology.fixture.json';
 const cur=(e:GameEngine)=>(e as unknown as{current:GameState}).current;
 function setup(version=40){const e=new GameEngine(nodes,{gameId:'shop-aa',seed:'shop-aa',rulesId:`japan-events-candidate-v${version}`,characterIds:['a','b','c','d'],initialFunds:100000,startDate:'1998-01-14'}),s=cur(e);s.g6!.gods=[];s.items!.points['player-1']=1000;return{e,s};}
 function send(e:GameEngine,action:Action,ok=true,who?:string){const s=e.state,r=e.dispatch({gameId:s.gameId,id:'c'+s.revision,expectedRevision:s.revision,playerId:who??s.players[s.active].id,action});expect(r.ok,JSON.stringify(r)).toBe(ok);return r;}

@@ -1,7 +1,7 @@
 import {expect,it} from 'vitest';
 import {GameEngine} from './engine';
 import type {GameState,EventPayload,Action} from './engine';
-import nodes from '../japan-topology.fixture.json';
+import nodes from '../../../../../shared/richman/japan-topology.fixture.json';
 import {DATE_BUSINESS_RULES,DATE_BUSINESS_FINGERPRINT,priceWealth,updatePriceIndex,settleFestival} from './date-business';
 import {PROPERTY_CATALOG} from './economy';
 import {priceIndex} from './price-index';

@@ -1,4 +1,4 @@
-import {planComputer} from './plan-computer';import {GameEngine} from '../../frontend/src/features/richman/game/engine';import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';import {writeFileSync} from 'node:fs';
+import {planComputer} from './plan-computer';import {GameEngine} from '../../frontend/src/features/richman/game/engine';import nodes from '../../shared/richman/japan-topology.fixture.json';import {writeFileSync} from 'node:fs';
 for(const seed of [7]){
  const plan=planComputer(4,'mixed-auction-'+seed,70),e=new GameEngine(nodes,plan.replay.config);let found=false,saved=false;
  for(const c of plan.replay.commands){const s=e.state,p=s.pending,ai=plan.replay.control.computerIds.includes(s.players.find(p=>p.id===c.playerId)!.characterId);if(p?.kind==='auction'&&c.playerId!==s.players[s.active].id&&ai)found=true;e.dispatch(c);const after=e.state;

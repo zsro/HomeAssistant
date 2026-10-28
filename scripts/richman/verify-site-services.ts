@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import {GameEngine,replayGame} from '../../frontend/src/features/richman/game/engine';
 import type {Replay} from '../../frontend/src/features/richman/game/engine';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 /** Recompute each real UI payment/inventory/roster transition, independently of exported receipts. */
 export function verifySiteServices(replay:Replay){
  assert.equal(replay.rulesId,'japan-events-candidate-v39');const live=new GameEngine(nodes,replay.config);let facilities=0,sales=0,closings=0,purchases=0;const kinds=new Set<string>();

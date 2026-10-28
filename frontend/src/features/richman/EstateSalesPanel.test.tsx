@@ -3,7 +3,7 @@ import {cleanup,fireEvent,render,screen} from '@testing-library/react';
 import {EstateSalesPanel} from './EstateSalesPanel';
 import {GameSession} from './game/session';
 import type {Manifest} from './types';
-import nodes from './japan-topology.fixture.json';
+import nodes from '../../../../shared/richman/japan-topology.fixture.json';
 afterEach(cleanup);
 function snapshot(){const manifest:Manifest={version:1,map:{name:'日本',width:2304,height:2304,nodes,scenery:[]},sprites:{},characters:['孙小美','阿土伯'].map((name,i)=>({id:String(i),name,color:'#fff',idle:[],walk:[],walkFramesPerDirection:10}))};return new GameSession(manifest,{id:()=> 'sales-ui',seed:()=> 'sales-ui'},'estateSales').snapshot();}
 it('offers price-bounded property listing and submits actual property/price without upfront transfer',()=>{const s=snapshot();s.economy!.properties[0].ownerId='player-1';const act=vi.fn(()=>true);render(<EstateSalesPanel snapshot={s} act={act}/>);fireEvent.change(screen.getByLabelText('挂牌地产'),{target:{value:s.economy!.properties[0].id}});fireEvent.change(screen.getByLabelText('挂牌总价'),{target:{value:'1500'}});fireEvent.click(screen.getByRole('button',{name:'确认挂牌'}));expect(act).toHaveBeenCalledWith({type:'listProperty',propertyId:s.economy!.properties[0].id,price:1500});});

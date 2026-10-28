@@ -8,7 +8,7 @@ import {PROPERTY_CATALOG} from './economy';
 import {syncCardSlots} from './g3';
 import {tickMobility} from './g2';
 import {saveCheckpoint,restoreCheckpoint} from './g7';
-import nodes from '../japan-topology.fixture.json';
+import nodes from '../../../../../shared/richman/japan-topology.fixture.json';
 const defs=PROPERTY_CATALOG.properties;
 function fixture(){const e=new GameEngine(nodes,{gameId:'traffic',rulesId:TRAFFIC_FORTUNE_RULES.id,seed:'traffic',characterIds:['a','b','c','d'],initialFunds:100000});const s=(e as unknown as {current:GameState}).current;s.g6!.gods=[];s.players[0].node=19;return{e,s};}
 function apply(s:GameState,id:number,eliminate:(id:string)=>void=()=>{}){const events:EventPayload[]=[];offerTrafficFortune(s,nodes,id>=41?id-8:id,id,[],()=>`f${++s.serial}`,e=>events.push(e),eliminate);return events;}

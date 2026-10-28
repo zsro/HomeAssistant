@@ -11,9 +11,10 @@ export function WindowPanel({ id, children }: { id: string; children: ReactNode 
 }
 
 /** A single mounted copy of every panel. Opening/closing windows never dispatches game commands. */
-export function GameWindowHost({ root, snapshot, epoch, suspended, isCurrent, onPause, onNewGame, children }: {
+export function GameWindowHost({ root, snapshot, epoch, suspended, isCurrent, onPause, onNewGame, onSave, onLoad, connection, children }: {
   root: RefObject<HTMLElement | null>; snapshot: SessionSnapshot | null; epoch: number; suspended: boolean;
   isCurrent: () => boolean; onPause: () => void; onNewGame: () => void; children: ReactNode;
+  onSave?: () => void; onLoad?: () => void; connection?: ReactNode;
 }) {
   const dialog = useRef<HTMLDialogElement>(null);
   const heading = useRef<HTMLHeadingElement>(null);
@@ -116,11 +117,14 @@ export function GameWindowHost({ root, snapshot, epoch, suspended, isCurrent, on
       <header className="rm-window-header">
         <h2 id="rm-window-title" ref={heading} tabIndex={-1}>{request?.title ?? '游戏窗口'}</h2>
         <div>
+          {onSave && <button onClick={onSave}>存档</button>}
+          {onLoad && <button onClick={onLoad}>读档</button>}
           {snapshot && <button onClick={onPause}>{snapshot.paused ? '继续' : '暂停'}</button>}
           <button disabled={!snapshot} onClick={onNewGame}>新建对局</button>
           <button onClick={dismiss} disabled={!!request?.required && !request.map} aria-label={request?.map ? '收起窗口，地图选点' : '关闭窗口'}>{request?.map ? '地图选点' : '关闭'}</button>
         </div>
       </header>
+      {connection}
       {request?.required && <p className="rm-window-required">{snapshot?.paused ? '已暂停 · ' : ''}{snapshot?.computer?.automatic ? '电脑正在应答 · ' : ''}请完成当前操作{request.map ? '，或收起窗口查看地图' : ''}。</p>}
       {hint && <p className="rm-window-hint" role="status">{hint}</p>}
       <div className="rm-window-body" onClickCapture={guard} onSubmitCapture={guard} onChangeCapture={guard}>

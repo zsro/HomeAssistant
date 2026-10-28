@@ -3,7 +3,7 @@ import {createHash} from 'node:crypto';
 import {GameEngine,replayGame} from './engine';
 import type {Replay} from './engine';
 import {verifyIndexedEconomy} from '../../../../../scripts/richman/verify-indexed-economy';
-import nodes from '../japan-topology.fixture.json';
+import nodes from '../../../../../shared/richman/japan-topology.fixture.json';
 import manifest from './fixtures/indexed-economy-v31-manifest.json';
 const replays=import.meta.glob('./fixtures/indexed-economy-v31-*-replay.json',{eager:true,import:'default'});
 it.each(manifest)('actual v31 browser route $route preserves exact replay and independently reconciles index2 purchases/construction/rent/fortune',row=>{

@@ -4,7 +4,7 @@ import {GameEngine} from './game/engine';
 import {GameSession} from './game/session';
 import {G6Panel} from './G6Panel';
 import type {Manifest} from './types';
-import nodes from './japan-topology.fixture.json';
+import nodes from '../../../../shared/richman/japan-topology.fixture.json';
 void GameEngine;afterEach(cleanup);
 const manifest:Manifest={version:1,map:{name:'日本',width:2304,height:2304,nodes,scenery:[]},sprites:{},characters:['a','b'].map(id=>({id,name:id,color:'#fff',idle:[],walk:[],walkFramesPerDirection:10}))};
 function snapshot(mode:'stockLedger'|'stockMarket'|'minigames'='stockMarket'){const model=new GameSession(manifest,{id:()=> 'market-ui',seed:()=> 'market-ui'},mode);model.start({mode,seed:'market-ui',characterIds:['a','b'],startDate:'1998-01-09'});return model.snapshot();}

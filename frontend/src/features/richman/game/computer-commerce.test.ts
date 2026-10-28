@@ -1,5 +1,5 @@
 import {expect,it} from 'vitest';import {GameEngine} from './engine';import type {GameState,Action} from './engine';import {GameSession} from './session';import type {Manifest} from '../types';
-import {decideComputer,commerceChoices,COMMERCE_GOODS} from './computer-commerce';import {decideComputer as previous} from './computer-inventory';import {PROPERTY_CATALOG} from './economy';import {auctionReserve,tickProperties} from './g4';import nodes from '../japan-topology.fixture.json';
+import {decideComputer,commerceChoices,COMMERCE_GOODS} from './computer-commerce';import {decideComputer as previous} from './computer-inventory';import {PROPERTY_CATALOG} from './economy';import {auctionReserve,tickProperties} from './g4';import nodes from '../../../../../shared/richman/japan-topology.fixture.json';
 const config={gameId:'commerce-domain',seed:'commerce',rulesId:'japan-events-candidate-v44',characterIds:['xiaomei','tuu','chyan','salonbus'],initialFunds:100000};
 const cur=(e:GameEngine)=>(e as unknown as {current:GameState}).current,def=PROPERTY_CATALOG.properties.find(d=>d.kind==='land')!;
 function grant(s:GameState,id:string,item:string){s.effects!.inventory[id][item]++;s.g3!.slots[id].push(item);}

@@ -5,7 +5,7 @@ import {decisionPlayer} from '../../frontend/src/features/richman/game/computer'
 import type {ControlledReplay} from '../../frontend/src/features/richman/game/computer';
 import {decideComputer,observeResearch,publicObservation} from '../../frontend/src/features/richman/game/computer-research';
 import type {ResearchMemory} from '../../frontend/src/features/richman/game/computer-research';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 export async function verifyStrategyCircuit(replay:ControlledReplay,terminal=false,checkPrefixes=true){
  assert.equal(replay.rulesId,'japan-events-candidate-v44');assert.equal(replay.itemFingerprint,'f9dbb7e9');assert.equal(replay.control!.policy,'research-v1');
  const frozen=new Map<string,{due:number;amount:number;unpaid:number}>();

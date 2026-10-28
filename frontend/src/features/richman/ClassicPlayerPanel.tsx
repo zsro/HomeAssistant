@@ -28,7 +28,7 @@ export function ClassicPlayerPanel({ manifest, snapshot }: { manifest: Manifest 
     <div className="rm-classic-person">
       {character && <img src={`/richman/generated/${character.id}.webp`} alt="" />}
       <strong>{character?.name ?? '准备中'}</strong>
-      <span>{snapshot?.paused ? '已暂停' : snapshot?.computer?.automatic ? '电脑行动中' : '当前角色'}</span>
+      <span>{snapshot?.paused ? '已暂停' : snapshot?.network ? (snapshot.network.waiting ? '等待应答' : '你的操作') : snapshot?.computer?.automatic ? '电脑行动中' : '当前角色'}</span>
     </div>
     <details className="rm-classic-status"><summary title="查看人物状态">{response || status}</summary><p>{status}{response && <><br />{response}</>}</p></details>
     <div className="rm-player-tabs" role="tablist" aria-label="人物资料分页">{tabs.map((label, index) => <button key={label} role="tab" id={`rm-player-tab-${index}`} aria-selected={tab === index} aria-controls="rm-player-fields" onClick={() => setTab(index)}>{label}</button>)}</div>

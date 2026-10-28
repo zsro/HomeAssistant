@@ -3,7 +3,7 @@ import {GameEngine} from '../../frontend/src/features/richman/game/engine';
 import {computerDecision,decisionPlayer} from '../../frontend/src/features/richman/game/computer';
 import {decideComputer,INVENTORY_GOODS,inventoryChoices} from '../../frontend/src/features/richman/game/computer-inventory';
 import {actionLocked} from '../../frontend/src/features/richman/game/g2';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 import {writeFileSync} from 'node:fs';
 export function planComputerInventory(count:number,seed:string,required:readonly string[],limit=4000){
  const ids=['xiaomei','tuu','chyan','salonbus'].slice(0,count),computerIds=ids.filter((_,i)=>i>0);

@@ -5,7 +5,7 @@ import { CARD_RULES, EQUAL_CASH, equalCashTargets } from '../../frontend/src/fea
 import { REMOTE_DICE, REMOTE_EFFECT, itemSite } from '../../frontend/src/features/richman/game/items';
 import { ROADBLOCK, ROADBLOCK_EFFECT, roadblockTargets } from '../../frontend/src/features/richman/game/road-tools';
 import { drawDice } from '../../frontend/src/features/richman/game/random';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 import type { Action } from '../../frontend/src/features/richman/game/engine';
 const byId = new Map(nodes.map(node => [node.id,node]));
 const distance = (start:number,targets:number[]) => {

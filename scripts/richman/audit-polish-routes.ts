@@ -1,7 +1,7 @@
 /** Read-only existing legal prefixes; never inject these states into the browser. */
 import {readFileSync,writeFileSync,readdirSync} from 'node:fs';
 import {GameEngine} from '../../frontend/src/features/richman/game/engine';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 const root='frontend/src/features/richman/game/fixtures';const rows=[];
 for(const file of readdirSync(root).filter(n=>/^(computer-circuit|reaction-circuit|polish).*replay.json$/.test(n))){
  const r=JSON.parse(readFileSync(root+'/'+file,'utf8')),e=new GameEngine(nodes,r.config);const found=new Set();

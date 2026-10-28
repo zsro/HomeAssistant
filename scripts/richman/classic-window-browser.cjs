@@ -97,7 +97,7 @@ await openItems();await page.getByRole('button',{name:'使用机器工人',exact
 const choice=window.getByRole('region',{name:'机器工人选择'});await choice.waitFor();await page.waitForFunction(()=>{const d=document.querySelector('[data-window-host]');return d.open&&!d.matches(':modal');});
 assert.equal(await window.evaluate(el=>el.open&&!el.matches(':modal')),true);
 assert.equal(await choice.getByRole('button',{name:'确认建造'}).isDisabled(),true);
-const definitions=JSON.parse(fs.readFileSync('frontend/src/features/richman/game/japan-properties.json','utf8')).properties;
+const definitions=JSON.parse(fs.readFileSync('shared/richman/game/japan-properties.json','utf8')).properties;
 const first=definitions.find(p=>p.id==='japan:land:21'),second=definitions.find(p=>p.id==='japan:land:20');
 const manifest=await page.evaluate(async()=>await(await fetch('/richman/generated/manifest.json')).json());
 const canvas=page.locator('canvas');let cameraZoom=1.2,cameraCenter={x:manifest.map.nodes[0].x,y:manifest.map.nodes[0].y-55};

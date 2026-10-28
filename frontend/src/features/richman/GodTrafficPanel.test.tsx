@@ -4,7 +4,7 @@ import {GameSession} from './game/session';
 import {GodTrafficPanel} from './GodTrafficPanel';
 import {godTrafficView} from './god-traffic-view';
 import type {Manifest} from './types';
-import nodes from './japan-topology.fixture.json';
+import nodes from '../../../../shared/richman/japan-topology.fixture.json';
 afterEach(cleanup);
 const manifest:Manifest={version:1,map:{name:'日本',width:2304,height:2304,nodes,scenery:[]},sprites:{},characters:['a','b','c'].map(id=>({id,name:id,color:'#fff',idle:[],walk:[],walkFramesPerDirection:10}))};
 function snapshot(mode:'stockCircuit'|'g6'='stockCircuit') {const session=new GameSession(manifest,{id:()=> 'god-ui',seed:()=> 'god-ui'},mode);session.start({mode,seed:'god-ui',characterIds:['c','a','b']});return session.snapshot();}

@@ -10,6 +10,9 @@ import { errorHandler, notFoundHandler } from './middleware/error-handler';
 import { createAuthRouter } from './modules/auth/auth-routes';
 import { createUserRouter } from './modules/users/user-routes';
 import { openapiDocument } from './openapi';
+import { createSaveRouter } from './modules/richman/save-routes';
+import { createRoomRouter } from './modules/richman/room-routes';
+import { createGameRouter } from './modules/richman/game-routes';
 
 export function createApp(context: AppContext) {
   const app = express();
@@ -25,6 +28,9 @@ export function createApp(context: AppContext) {
       return callback(null, false);
     },
   }));
+  app.use('/api/v1/richman/saves', createSaveRouter(context));
+  app.use('/api/v1/richman/rooms', createRoomRouter(context));
+  app.use('/api/v1/richman/games', createGameRouter(context));
   app.use(express.json({ limit: '32kb' }));
 
   app.get('/api/health', (_request, response) => {
@@ -33,6 +39,7 @@ export function createApp(context: AppContext) {
   app.get('/api/ready', async (_request, response) => {
     try {
       await context.sequelize.authenticate();
+      if (context.gameHost && !context.gameHost.available) throw new Error('game host unavailable');
       const pending = await createMigrator(context.sequelize, false).pending();
       if (pending.length > 0) throw new Error('pending migrations');
       response.json({ status: 'ready' });

@@ -2,7 +2,7 @@
 import {readFileSync,writeFileSync} from 'node:fs';
 import {GameEngine} from '../../frontend/src/features/richman/game/engine';
 import {GODS} from '../../frontend/src/features/richman/game/g6-catalog';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 for(const n of [2,3,4]) {
  const p=JSON.parse(readFileSync(`/private/tmp/computer-gods-${n}.json`,'utf8')),e=new GameEngine(nodes,p.replay.config),checks=[];
  let last='',end=0;

@@ -4,7 +4,7 @@ import { ClassicToolbar } from './ClassicToolbar';
 
 afterEach(cleanup);
 
-it('keeps all original entries, including unimplemented save/load, accessible and in audited order', () => {
+it('keeps all original entries, including save/load, accessible and in audited order', () => {
   const open = vi.fn();
   render(<ClassicToolbar onOpen={open} />);
   const toolbar = screen.getByRole('navigation', { name: '原版工具栏' });

@@ -7,7 +7,7 @@ import { OPERATING_NEWS_RULES,NEWS_NODES } from '../../frontend/src/features/ric
 import { REMOTE_EFFECT } from '../../frontend/src/features/richman/game/items';
 import { g1Adjacent } from '../../frontend/src/features/richman/game/g1';
 import { actionLocked } from '../../frontend/src/features/richman/game/g2';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 const byId=new Map(nodes.map(n=>[n.id,n]));
 function distance(node:number,prev:number|null){const q:[number,number|null,number][]=[[node,prev,0]],seen=new Set<string>();for(let i=0;i<q.length;i++){const[n,p,d]=q[i];if((NEWS_NODES as readonly number[]).includes(n))return d;const k=n+'/'+p;if(seen.has(k))continue;seen.add(k);const a=g1Adjacent(byId.get(n)!),f=a.filter(x=>x!==p);for(const t of f.length?f:a)q.push([t,n,d+1]);}return 999;}
 const e=new GameEngine(nodes,{gameId:'operating-news-plan',seed:process.env.RICHMAN_SEED||'operating-news-4',rulesId:OPERATING_NEWS_RULES.id,characterIds:['xiaomei','tuu','chyan'],initialFunds:300000});const seen=new Set<number>(),used=new Set<string>();let value=1;

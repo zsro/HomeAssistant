@@ -10,11 +10,14 @@
     "release:frontend": "node scripts/frontend-release.cjs build",
     "release:verify": "node scripts/frontend-release.cjs verify",
     "test:release": "node --test scripts/frontend-release.test.cjs",
+    "predev": "npm run build:save-worker",
     "dev": "tsx watch src/server.ts",
-    "build": "tsc -p tsconfig.json",
+    "build:save-worker": "npm run build:core && tsc -p tsconfig.save-worker.json",
+    "build": "npm run build:core && tsc -p tsconfig.json && npm run build:save-worker",
     "start": "node dist/src/server.js",
     "lint": "eslint .",
-    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "typecheck": "npm run build:core && tsc -p tsconfig.json --noEmit && tsc -p tsconfig.save-worker.json --noEmit",
+    "pretest": "npm run build:save-worker",
     "test": "vitest run",
     "test:watch": "vitest",
     "frontend:dev": "npm --prefix frontend run dev",
@@ -23,7 +26,8 @@
     "frontend:test": "npm --prefix frontend run test",
     "db:migrate": "tsx src/database/migrate.ts",
     "db:migrate:status": "tsx src/database/migration-status.ts",
-    "bootstrap:user": "tsx scripts/bootstrap-user.ts"
+    "bootstrap:user": "tsx scripts/bootstrap-user.ts",
+    "build:core": "tsc -b shared"
   },
   "dependencies": {
     "argon2": "^0.44.0",

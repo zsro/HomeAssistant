@@ -3,7 +3,7 @@ import {strict as assert} from 'node:assert';
 import {GameEngine,replayGame} from '../../frontend/src/features/richman/game/engine';
 import {computerDecision,decisionPlayer} from '../../frontend/src/features/richman/game/computer';
 import type {ControlledReplay} from '../../frontend/src/features/richman/game/computer';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 export async function verifyComputer(replay:ControlledReplay){
  assert.equal(replay.rulesId,'japan-events-candidate-v44');assert.equal(replay.itemFingerprint,'f9dbb7e9');assert.equal(replay.control?.policy,'basic-v1');
  const e=new GameEngine(nodes,replay.config),prefixes=new Map<string,number>(),kinds:Record<string,number>={};let computer=0,human=0,dates=0,alternate=0;const mark=(k:string,i:number)=>{if(!prefixes.has(k))prefixes.set(k,i);};

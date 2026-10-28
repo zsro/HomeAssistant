@@ -4,7 +4,7 @@ import type {Action,GameState} from './engine';
 import {SITE_SERVICES_FINGERPRINT,saleOptions} from './site-services';
 import {syncCardSlots} from './g3';
 import {saveCheckpoint,restoreCheckpoint} from './g7';
-import nodes from '../japan-topology.fixture.json';
+import nodes from '../../../../../shared/richman/japan-topology.fixture.json';
 const current=(e:GameEngine)=>(e as unknown as{current:GameState}).current;
 function setup(version=39){const e=new GameEngine(nodes,{gameId:'sites',seed:'sites',rulesId:`japan-events-candidate-v${version}`,characterIds:['xiaomei','tuu','chyan','salonbus'],initialFunds:100000});const s=current(e);s.g6!.gods=[];return{e,s};}
 function send(e:GameEngine,action:Action,ok=true,playerId?:string){const s=e.state;const r=e.dispatch({gameId:s.gameId,id:'c'+s.revision,expectedRevision:s.revision,playerId:playerId??s.players[s.active].id,action});expect(r.ok,JSON.stringify(r)).toBe(ok);return r;}

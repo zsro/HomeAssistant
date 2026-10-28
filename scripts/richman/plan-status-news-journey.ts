@@ -8,7 +8,7 @@ import {g5Options,blastTargets} from '../../frontend/src/features/richman/game/g
 import {PROPERTY_CATALOG} from '../../frontend/src/features/richman/game/economy';
 import {g1Adjacent} from '../../frontend/src/features/richman/game/g1';
 import {REMOTE_EFFECT,itemSite} from '../../frontend/src/features/richman/game/items';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 const byId=new Map(nodes.map(n=>[n.id,n])),defs=PROPERTY_CATALOG.properties;
 function distance(start:number,prev:number|null,targets:readonly number[]){const q:[number,number|null,number][]=[[start,prev,0]],seen=new Set<string>();for(let i=0;i<q.length;i++){const[n,p,d]=q[i],k=n+'/'+p;if(targets.includes(n))return d;if(seen.has(k))continue;seen.add(k);const a=g1Adjacent(byId.get(n)!),f=a.filter(x=>x!==p);for(const to of f.length?f:a)q.push([to,n,d+1]);}return 999;}
 const required=(process.env.RICHMAN_STATUS_NEWS||'0,1').split(',').map(Number);

@@ -2,7 +2,7 @@ import {render, cleanup} from '@testing-library/react';
 import {afterEach, expect, it, vi} from 'vitest';
 import {GameSession} from './game/session';
 import type {Manifest} from './types';
-import nodes from './japan-topology.fixture.json';
+import nodes from '../../../../shared/richman/japan-topology.fixture.json';
 import {NEARBY_WORKER_EFFECT} from './game/nearby-construction';
 import {ItemPanel} from './ItemPanel';
 import {GameHelp} from './GameHelp';

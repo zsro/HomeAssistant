@@ -2,7 +2,7 @@
 import {readFileSync,writeFileSync} from 'node:fs';
 import assert from 'node:assert/strict';
 import {GameEngine,replayGame} from '../../frontend/src/features/richman/game/engine';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 const root='/private/tmp/richman-presentation-ui-research-focused';
 const replay=JSON.parse(readFileSync(root+'/replay.json','utf8'));
 const report=JSON.parse(readFileSync(root+'/results.json','utf8'));

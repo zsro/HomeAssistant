@@ -9,7 +9,7 @@ import {applyG6,g6Options} from './g6';
 import {syncCardSlots} from './g3';
 import {offerNews} from './news';
 import {saveCheckpoint,restoreCheckpoint} from './g7';
-import nodes from '../japan-topology.fixture.json';
+import nodes from '../../../../../shared/richman/japan-topology.fixture.json';
 function setup(version=42){const e=new GameEngine(nodes,{gameId:'market-test',seed:'market-test',rulesId:`japan-events-candidate-v${version}`,characterIds:['a','b','c','d'],initialFunds:100000,startDate:'1998-01-05'});const s=(e as unknown as{current:GameState}).current,events:EventPayload[]=[];return{e,s,events,emit:(e:EventPayload)=>events.push(e)};}
 it('v42 has persistent ordinary percent and receipt while v41/v40 state and fingerprints remain unchanged',()=>{expect(setup().s.items!.fingerprint).toBe(STOCK_MARKET_FINGERPRINT);expect(STOCK_MARKET_FINGERPRINT).toBe('3d941ac1');for(const[v,fp]of[[41,'31214035'],[40,'72a3a480']]as const){const{s}=setup(v);expect(s.items!.fingerprint).toBe(fp);expect(s.g6!.market).toBeUndefined();expect(s.g6!.stocks.every(k=>k.momentum===undefined)).toBe(true);}});
 it.each([[499,1],[500,5],[1499,5],[1500,10],[4999,10],[5000,50],[14999,50],[15000,100]])('stepped target band at%s cents uses delta tick%s',(base,tick)=>{expect(marketPrice(base,0)).toBe(base);const percent=.001;expect(marketPrice(base,percent)-base).toBe(Math.trunc(base*percent/100/tick)*tick);});

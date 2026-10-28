@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { propertyContains, propertyOutline, roadSegments } from './map-geometry';
-import topology from './japan-topology.fixture.json';
+import topology from '../../../../shared/richman/japan-topology.fixture.json';
 import { PROPERTY_CATALOG } from './game/economy';
 
 describe('Japan ground overlays', () => {

@@ -7,7 +7,7 @@ import {marketAvailable,priceLimit} from '../../frontend/src/features/richman/ga
 import {marketBuyLimit} from '../../frontend/src/features/richman/game/stock-market';
 import {g3Options} from '../../frontend/src/features/richman/game/g3';
 import {actionLocked} from '../../frontend/src/features/richman/game/g2';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 import {writeFileSync} from 'node:fs';
 export function planComputerGods(count:number,seed:string,required:readonly string[],limit=4000,manual=false,stockMode='all'){
  const ids=['xiaomei','tuu','chyan','salonbus'].slice(0,count),computerIds=ids.filter((_,i)=>i>0);

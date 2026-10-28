@@ -6,7 +6,7 @@ import {MAGIC_NESTED_FINGERPRINT} from './magic-nested';
 import {PROPERTY_CATALOG} from './economy';
 import {returnSupply,syncCardSlots} from './g3';
 import {saveCheckpoint,restoreCheckpoint} from './g7';
-import nodes from '../japan-topology.fixture.json';
+import nodes from '../../../../../shared/richman/japan-topology.fixture.json';
 const current=(e:GameEngine)=>(e as unknown as{current:GameState}).current,defs=PROPERTY_CATALOG.properties;
 function setup(count=4,version=38){const e=new GameEngine(nodes,{gameId:'nested',seed:'nested',rulesId:`japan-events-candidate-v${version}`,characterIds:['xiaomei','tuu','chyan','salonbus'].slice(0,count),initialFunds:100000});const s=current(e);s.active=count-1;s.g6!.gods=[];s.phase='magic';s.pending={kind:'magic',id:'choose',stage:'choose',node:35,group:6,targets:s.players.map(p=>p.id),extended:true,nestedEnabled:version===38};return{e,s};}
 function target(s:GameState,ids:string[]){if(s.pending?.kind==='magic')s.pending.targets=ids;}

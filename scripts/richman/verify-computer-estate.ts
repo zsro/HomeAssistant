@@ -5,7 +5,7 @@ import {decisionPlayer} from '../../frontend/src/features/richman/game/computer'
 import {decideComputer,ESTATE_CARDS} from '../../frontend/src/features/richman/game/computer-estate';
 import {shopPrice} from '../../frontend/src/features/richman/game/shop-acquisition';
 import {PROPERTY_CATALOG,propertyBase} from '../../frontend/src/features/richman/game/economy';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 export async function verifyComputerEstate(replay:ControlledReplay){
  assert.equal(replay.rulesId,'japan-events-candidate-v44');assert.equal(replay.itemFingerprint,'f9dbb7e9');assert.equal(replay.control?.policy,'estate-v1');
  const e=new GameEngine(nodes,replay.config),prefixes=new Map<string,number>(),acquisitions:unknown[]=[],uses:unknown[]=[],cancellations:unknown[]=[];let auto=0,human=0;

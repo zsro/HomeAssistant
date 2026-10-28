@@ -9,7 +9,7 @@ import {PROPERTY_CATALOG} from '../../frontend/src/features/richman/game/economy
 import {g1Adjacent} from '../../frontend/src/features/richman/game/g1';
 import {REMOTE_EFFECT,itemSite} from '../../frontend/src/features/richman/game/items';
 import {shopPrice,shopSupply} from '../../frontend/src/features/richman/game/shop-acquisition';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 import {writeFileSync} from 'node:fs';
 const byId=new Map(nodes.map(n=>[n.id,n]));
 function distance(start:number,targets:number[]){const seen=new Set([start]),q=[[start,0]];for(const[n,d]of q){if(targets.includes(n))return d;for(const a of byId.get(n)!.adjacent)if(!seen.has(a)){seen.add(a);q.push([a,d+1]);}}return 999;}

@@ -54,7 +54,7 @@ function WorkerChoice({ snapshot, onUse }: Pick<Props, 'snapshot' | 'onUse'>) {
   const definition = PROPERTY_CATALOG.properties.find(p => p.id === target);
   const property = snapshot.economy?.properties.find(p => p.id === target);
   const id = snapshot.effects!.pending!.id;
-  const playerId = `player-${snapshot.participants.indexOf(snapshot.active) + 1}`;
+  const playerId = snapshot.network?.self ?? `player-${snapshot.participants.indexOf(snapshot.active) + 1}`;
   return <section className="rm-property rm-items rm-classic-target" aria-label="机器工人选择">
     <ClassicPrompt><h2>建造当前地块</h2><p>机器工人 · 免费建造一级</p></ClassicPrompt><p>确认后消耗 1 个机器工人，免费建造一级，随后仍可掷骰。</p>
     {definition && property ? <fieldset disabled={snapshot.paused}>
@@ -74,7 +74,7 @@ export function ItemPanel({ snapshot, onUse, buy, sell, leave, preview, selectio
   const [error, setError] = useState('');
   const items = snapshot.items, effects = snapshot.effects;
   if (!items || !effects || snapshot.phase === 'finished' || snapshot.phase === 'reaction' || snapshot.phase === 'auction') return null;
-  const playerId = `player-${snapshot.participants.indexOf(snapshot.active) + 1}`;
+  const playerId = snapshot.network?.self ?? `player-${snapshot.participants.indexOf(snapshot.active) + 1}`;
   if (snapshot.eliminated.includes(snapshot.active)) return null;
   const quantity = effects.inventory[playerId][REMOTE_DICE] ?? 0;
   const mobility = snapshot.g2?.players[playerId];

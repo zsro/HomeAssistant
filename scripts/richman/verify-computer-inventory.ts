@@ -5,7 +5,7 @@ import {decisionPlayer} from '../../frontend/src/features/richman/game/computer'
 import {decideComputer} from '../../frontend/src/features/richman/game/computer-inventory';
 import {cardPrices} from '../../frontend/src/features/richman/game/g3';
 import {shopPrice,shopSupply} from '../../frontend/src/features/richman/game/shop-acquisition';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 const goods=['card:13','card:29'];
 export async function verifyComputerInventory(replay:ControlledReplay){
  assert.equal(replay.rulesId,'japan-events-candidate-v44');assert.equal(replay.itemFingerprint,'f9dbb7e9');assert.equal(replay.control?.policy,'inventory-v1');

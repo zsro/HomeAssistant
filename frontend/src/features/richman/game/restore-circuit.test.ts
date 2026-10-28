@@ -5,7 +5,7 @@ import type {Action,GameState,Replay} from './engine';
 import {saveCheckpoint,restoreCheckpoint,g7Options,applyG7} from './g7';
 import {tickG5} from './g5';
 import {PROPERTY_CATALOG} from './economy';
-import nodes from '../japan-topology.fixture.json';
+import nodes from '../../../../../shared/richman/japan-topology.fixture.json';
 import rent from './fixtures/finance-stress-v44-rent-replay.json';
 import dividend from './fixtures/finance-stress-v44-dividend-replay.json';
 import loan from './fixtures/finance-stress-v44-loan-replay.json';

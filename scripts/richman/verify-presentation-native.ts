@@ -3,7 +3,7 @@ import {readFileSync,writeFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import assert from 'node:assert/strict';
 import {GameEngine,replayGame} from '../../frontend/src/features/richman/game/engine';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 const dir='/private/tmp/richman-native-tab';
 const media=JSON.parse(readFileSync(dir+'/final.json','utf8'));
 const replay=JSON.parse(readFileSync(dir+'/replay.json','utf8'));

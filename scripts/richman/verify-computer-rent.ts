@@ -3,7 +3,7 @@ import {GameEngine,replayGame} from '../../frontend/src/features/richman/game/en
 import type {ControlledReplay} from '../../frontend/src/features/richman/game/computer';
 import {decisionPlayer} from '../../frontend/src/features/richman/game/computer';
 import {decideComputer} from '../../frontend/src/features/richman/game/computer-reactions';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 export async function verifyComputerRent(replay:ControlledReplay){
  assert.equal(replay.rulesId,'japan-events-candidate-v44');assert.equal(replay.itemFingerprint,'f9dbb7e9');assert.equal(replay.control?.policy,'rent-v1');
  const e=new GameEngine(nodes,replay.config),prefixes=new Map<string,number>(),reactions:unknown[]=[],purchases:unknown[]=[],acquisitions:unknown[]=[],payments:unknown[]=[],forced:unknown[]=[],disposals:unknown[]=[];let auto=0,human=0;const disposalStart=new Map<string,{fund:number;bank:number;date:string;turn:number}>();

@@ -2,7 +2,7 @@
 import {readFileSync,readdirSync} from 'node:fs';
 import {GameEngine} from '../../frontend/src/features/richman/game/engine';
 import {PROPERTY_CATALOG} from '../../frontend/src/features/richman/game/economy';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 const root='frontend/src/features/richman/game/fixtures';
 const files=readdirSync(root).filter(f=>f.endsWith('-replay.json')).map(f=>{
  const o=JSON.parse(readFileSync(root+'/'+f,'utf8'));return{file:f,replay:o};

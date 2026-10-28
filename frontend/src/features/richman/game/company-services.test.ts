@@ -5,7 +5,7 @@ import type {GameState,Action,EventPayload} from './engine';
 import {COMPANY_FINGERPRINT,offerCompany,reactCompany} from './company-services';
 import {saveCheckpoint,restoreCheckpoint} from './g7';
 import {settleDividends} from './dividends';
-import nodes from '../japan-topology.fixture.json';
+import nodes from '../../../../../shared/richman/japan-topology.fixture.json';
 function fixture(version=27,count=4){const e=new GameEngine(nodes,{gameId:'company',seed:'company',rulesId:`japan-events-candidate-v${version}`,characterIds:['a','b','c','d'].slice(0,count),initialFunds:100000,startDate:'1998-01-07'});const s=(e as unknown as{current:GameState}).current;s.g6!.gods=[];s.players[0].node=59;s.dice=3;s.g2!.players['player-1'].vehicle='tool:05';for(const c of s.news!.business!.companies){c.ownerId='player-2';c.ranking=['player-2'];s.g6!.holdings['player-2'][c.stockId].quantity=1;}return{e,s};}
 function offer(s:GameState){syncCardSlots(s);const events:EventPayload[]=[];const ok=offerCompany(s,()=>`company-${++s.serial}`,e=>events.push(e),id=>s.finance!.eliminated.push(id));return{ok,events};}
 function send(e:GameEngine,a:Action,id?:string){const s=e.state;return e.dispatch({id:`c${s.revision}`,gameId:s.gameId,expectedRevision:s.revision,playerId:id??s.players[s.active].id,action:a});}

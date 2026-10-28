@@ -11,7 +11,7 @@ import {dayNumber} from '../../frontend/src/features/richman/game/calendar-date'
 import {loanCapacity} from '../../frontend/src/features/richman/game/news-business';
 import {marketBuyLimit} from '../../frontend/src/features/richman/game/stock-market';
 import {marketAvailable,priceLimit} from '../../frontend/src/features/richman/game/g6-market';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 const byId=new Map(nodes.map(n=>[n.id,n]));
 function distance(node:number,targets:number[]){const seen=new Set([node]),q=[[node,0]];for(const[n,d]of q){if(targets.includes(n))return d;for(const a of byId.get(n)!.adjacent)if(!seen.has(a)){seen.add(a);q.push([a,d+1]);}}return 999;}
 export function planStressLoan(seed:string,count=3,funds=100000,limit=6500){

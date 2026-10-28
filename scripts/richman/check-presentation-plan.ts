@@ -1,6 +1,6 @@
 import {readFileSync} from 'node:fs';
 import {GameEngine} from '../../frontend/src/features/richman/game/engine';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 const file=process.env.RICHMAN_PLAN;
 if(!file)throw Error('RICHMAN_PLAN required');
 const p=JSON.parse(readFileSync(file,'utf8')),replay=p.replay??p,e=new GameEngine(nodes,replay.config);

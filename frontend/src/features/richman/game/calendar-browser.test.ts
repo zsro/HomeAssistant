@@ -4,7 +4,7 @@ import {GameEngine,replayGame} from './engine';
 import type {Replay} from './engine';
 import {verifyCalendar} from '../../../../../scripts/richman/verify-calendar';
 import manifest from './fixtures/calendar-v24-manifest.json';
-import nodes from '../japan-topology.fixture.json';
+import nodes from '../../../../../shared/richman/japan-topology.fixture.json';
 const replays=import.meta.glob('./fixtures/calendar-v24-*-replay.json',{eager:true,import:'default'});
 it.each(manifest)('preserves actual v24 $players-player $route browser world and independently checks calendar/bank transitions',row=>{
  const replay=replays[`./fixtures/calendar-v24-${row.route}-replay.json`] as Replay,e=replayGame(nodes,replay);

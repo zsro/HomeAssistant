@@ -3,7 +3,7 @@ import {readFileSync} from 'node:fs';
 import {GameEngine} from '../../frontend/src/features/richman/game/engine';
 import {eventAudio, type AudioCue} from '../../frontend/src/features/richman/audio-events';
 import {landingSound} from '../../frontend/src/features/richman/audio';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 const file=process.env.RICHMAN_PLAN;if(!file)throw Error('RICHMAN_PLAN required');
 const plan=JSON.parse(readFileSync(file,'utf8'));
 const engine=new GameEngine(nodes,plan.replay.config),turns=new Map<number,{low:{index:number;node:number;sound:string}[];high:{index:number;cue:AudioCue}[]}>();

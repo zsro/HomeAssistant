@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import {GameEngine,replayGame} from '../../frontend/src/features/richman/game/engine';
 import type {Action} from '../../frontend/src/features/richman/game/engine';
 import {LOTTERY_RULES} from '../../frontend/src/features/richman/game/lottery';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 export function planLottery(seed:string,count:number,goal:'win'|'carry',limit=1100){
  const e=new GameEngine(nodes,{gameId:'lottery-plan',seed,rulesId:LOTTERY_RULES.id,characterIds:['xiaomei','tuu','chyan','salonbus'].slice(0,count),initialFunds:300000,startDate:'1998-01-07'});let found=false,drawDay='',bought=0;
  for(let step=0;step<limit;step++){

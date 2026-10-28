@@ -3,7 +3,7 @@ import {afterEach,expect,it,vi} from 'vitest';
 import {InsurancePanel} from './InsurancePanel';
 import {GameSession} from './game/session';
 import type {Manifest} from './types';
-import nodes from './japan-topology.fixture.json';
+import nodes from '../../../../shared/richman/japan-topology.fixture.json';
 afterEach(cleanup);
 const manifest:Manifest={version:1,map:{name:'日本',width:2304,height:2304,nodes,scenery:[]},sprites:{},characters:['a','b'].map(id=>({id,name:id,color:'#fff',idle:[],walk:[],walkFramesPerDirection:10}))};
 function setup(mode:'insurance'|'commerce'='insurance'){const session=new GameSession(manifest,{id:()=> 'ui',seed:()=> 'ui'},mode);session.start({mode,characterIds:['a','b'],seed:'ui',startDate:'1998-01-07'});return{snapshot:session.snapshot(),spin:vi.fn()};}

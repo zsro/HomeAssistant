@@ -4,7 +4,7 @@ import {GameEngine,replayGame} from './engine';
 import type {Action,GameState,Replay} from './engine';
 import {computerDecision,decisionPlayer} from './computer';
 import type {Manifest} from '../types';
-import nodes from '../japan-topology.fixture.json';
+import nodes from '../../../../../shared/richman/japan-topology.fixture.json';
 import {planComputer} from '../../../../../scripts/richman/plan-computer';
 const manifest:Manifest={version:1,map:{name:'日本',width:2304,height:2304,nodes,scenery:[]},sprites:{},characters:['xiaomei','tuu','chyan','salonbus'].map(id=>({id,name:id,color:'#fff',idle:[],walk:[],walkFramesPerDirection:10}))};
 function make(computerIds=['tuu']){let n=0;const m=new GameSession(manifest,{id:()=>`game-${++n}`,seed:()=> 'test'});m.start({mode:'stockCircuit',characterIds:['tuu','salonbus'],computerIds,seed:'computer',initialFunds:10000});return m;}

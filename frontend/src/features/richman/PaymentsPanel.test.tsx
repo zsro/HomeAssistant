@@ -5,7 +5,7 @@ import {DisposalPanel} from './DisposalPanel';
 import {EstateSalesPanel} from './EstateSalesPanel';
 import {CalendarPanel} from './CalendarPanel';
 import type {Manifest} from './types';
-import nodes from './japan-topology.fixture.json';
+import nodes from '../../../../shared/richman/japan-topology.fixture.json';
 afterEach(cleanup);
 function snapshot(){const m:Manifest={version:1,map:{name:'日本',width:2304,height:2304,nodes,scenery:[]},sprites:{},characters:['孙小美','阿土伯','钱夫人'].map((name,i)=>({id:String(i),name,color:'#fff',idle:[],walk:[],walkFramesPerDirection:10}))};return new GameSession(m,{id:()=> 'payments-ui',seed:()=> 'payments-ui'},'payments').snapshot();}
 it('v34 session selects correct profile and accurately separates batch callbacks still pending',()=>{const s=snapshot();expect(s.finance!.payments).toEqual({current:null,last:null});render(<DisposalPanel snapshot={s}/>);expect(screen.getByRole('region',{name:'破产资产处置'})).toBeInTheDocument();expect(screen.getByText(/新闻税和负分红的多人结算仍待接入/)).toBeInTheDocument();expect(screen.getByText('尚未发生破产处置。')).toBeInTheDocument();});

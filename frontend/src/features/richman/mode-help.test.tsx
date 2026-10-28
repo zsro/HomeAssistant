@@ -2,7 +2,7 @@ import { cleanup, render, screen } from '@testing-library/react';
 import { afterEach, expect, it, vi } from 'vitest';
 import { GameSession, type SessionOptions } from './game/session';
 import type { Manifest } from './types';
-import nodes from './japan-topology.fixture.json';
+import nodes from '../../../../shared/richman/japan-topology.fixture.json';
 import { CompanyPanel } from './CompanyPanel';
 import { CommercePanel } from './CommercePanel';
 import { DividendPanel } from './DividendPanel';

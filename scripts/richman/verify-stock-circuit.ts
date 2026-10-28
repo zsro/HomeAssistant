@@ -2,7 +2,7 @@ import {GameEngine,replayGame} from '../../frontend/src/features/richman/game/en
 import type {Holding} from '../../frontend/src/features/richman/game/g6-market';
 import type {Replay} from '../../frontend/src/features/richman/game/engine';
 import {JAPAN_STOCKS} from '../../frontend/src/features/richman/game/g6-catalog';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 import {strict as assert} from 'node:assert';
 const quote=(base:number,percent:number)=>{const target=base*(100+percent)/100,tick=target<500?1:target<1500?5:target<5000?10:target<15000?50:100;return Math.max(100,Math.min(999900,base+Math.trunc(base*percent/100/tick)*tick));};
 export function verifyStockCircuit(r:Replay,kind:string){

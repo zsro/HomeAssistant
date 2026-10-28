@@ -1,6 +1,6 @@
 # HomeAssistant
 
-HomeAssistant 是一个前后端分离项目：后端使用 TypeScript、Express、Sequelize 和 MySQL，前端位于 `frontend/`。当前后端提供邀请码注册、登录、刷新令牌、退出、修改密码和当前用户接口。
+HomeAssistant 是一个前后端分离项目：后端使用 TypeScript、Express、Sequelize 和 MySQL，前端位于 `frontend/`。当前后端提供邀请码注册、登录、刷新令牌、退出、修改密码、当前用户及大富翁账号存档接口。
 
 ## 项目结构
 
@@ -16,10 +16,8 @@ HomeAssistant 是一个前后端分离项目：后端使用 TypeScript、Express
 
 ## 模块开发接续
 
-- [大富翁 4 Web 复刻计划与接续记录](docs/richman-roadmap.md)：当前进度、分阶段任务、规则核验、验收标准和下一步。
-- [大富翁 S3 候选收口](docs/richman/s3-05c-interaction-closure.md)：v47、日本地图、电脑策略、声画与交互验收边界。
-- [前端产物发布](docs/richman/release-s3.md)：本地构建、Git产物校验与线上检查。
-- [大富翁技术验证报告](docs/richman-technical-validation.md)：原版资源、地图与移动原型的验证结果。
+- [大富翁复刻项目总览](docs/richman/README.md)：当前复刻程度、四份常用文档与历史资料索引。
+- [大富翁后续路线图](docs/richman-roadmap.md)：先存档、后联机的任务顺序、依赖与验收门槛。
 
 ## 本地开发
 
@@ -63,8 +61,18 @@ Vite 会输出实际本地地址，通常为 `http://127.0.0.1:5173`。前端通
 - `POST /api/v1/auth/logout-all`
 - `PUT /api/v1/auth/password`
 - `GET /api/v1/users/me`
+- `GET /api/v1/richman/saves`
+- `GET /api/v1/richman/saves/:slot`
+- `PUT /api/v1/richman/saves/:slot`
+- `GET /api/v1/richman/games/:id`
+- `POST /api/v1/richman/games/:id/commands`
+- `POST /api/v1/richman/games/:id/disconnect`
 
 公开注册需要有效邀请码。访问令牌有效期为 15 分钟；刷新令牌有效期为 30 天且每次刷新都会轮换，数据库只保存刷新令牌的 SHA-256 哈希。
+
+大富翁云存档需登录，支持 `manual-1`、`manual-2`、`manual-3`、`auto`。协议、幂等重试和发布前 Nginx 配置见[存档实现](docs/richman/save-and-multiplayer.md#save-02mysql-与-api已实现)。前端 LOAD/SAVE、三个手动槽/自动槽、失败重试和安全恢复已接入，见 [SAVE-03 验收](docs/richman/save-03-results.json)；尚未发布生产。`npm run build` 同时编译纯规则恢复 Worker；`npm run dev` 启动前会构建它，修改恢复规则后须重启开发命令以重建 Worker。
+
+NET-01 将唯一纯规则实现迁至 `shared/richman`；`npm run build` 构建共享核心、后端和 Worker。后端启动持续对局宿主，必须先迁移新表，并保持单实例 MySQL 调度锁。已提供账号投影、外部意图 API、事务命令日志和重启恢复；私人房间和正式联机界面待 NET-02，没有公开创建对局接口。协议与实际验收边界见[宿主设计](docs/richman/save-and-multiplayer.md#net-01共享核心与权威宿主已实现)。
 
 ## 数据库迁移
 
@@ -88,6 +96,7 @@ npm test
 npm run build
 DB_NAME=homeAssistantDB_test npm run db:migrate
 RUN_DB_TESTS=1 DB_NAME=homeAssistantDB_test npm test
+RUN_SAVE_DB_TESTS=1 DB_NAME=homeAssistantDB_test npm test -- tests/integration/richman-save.test.ts
 npm --prefix frontend ci
 npm --prefix frontend run lint
 npm --prefix frontend run build

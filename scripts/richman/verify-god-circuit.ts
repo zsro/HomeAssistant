@@ -4,7 +4,7 @@ import {strict as assert} from 'node:assert';
 import {createHash} from 'node:crypto';
 import {GameEngine,replayGame} from '../../frontend/src/features/richman/game/engine';
 import {shopSupply} from '../../frontend/src/features/richman/game/shop-acquisition';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 const receipts=[];
 for(const route of (process.env.RICHMAN_VERIFY_ROUTES??'pair,full-known,restore').split(',')){
  const dir='/private/tmp/richman-god-circuit-ui-'+route,replay=JSON.parse(readFileSync(dir+'/replay.json','utf8')),report=JSON.parse(readFileSync(dir+'/results.json','utf8')),plan=JSON.parse(readFileSync('/private/tmp/god-circuit-'+route+'.json','utf8'));

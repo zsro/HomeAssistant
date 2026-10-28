@@ -1,8 +1,11 @@
+import { saveOpenapiPaths } from './modules/richman/save-openapi';
+import { gameOpenapiPaths } from './modules/richman/game-openapi';
+
 export const openapiDocument = {
   openapi: '3.1.0',
-  info: { title: 'HomeAssistant Invitation Auth API', version: '2.0.0' },
+  info: { title: 'HomeAssistant API', version: '2.2.0' },
   servers: [{ url: '/api' }],
-  tags: [{ name: 'System' }, { name: 'Auth' }, { name: 'Users' }],
+  tags: [{ name: 'System' }, { name: 'Auth' }, { name: 'Users' }, { name: 'Richman' }],
   components: {
     securitySchemes: {
       bearerAuth: { type: 'http', scheme: 'bearer', bearerFormat: 'JWT' },
@@ -44,6 +47,8 @@ export const openapiDocument = {
     },
   },
   paths: {
+    ...saveOpenapiPaths,
+    ...gameOpenapiPaths,
     '/health': { get: { tags: ['System'], summary: '进程健康检查', responses: { '200': { description: 'Healthy' } } } },
     '/ready': { get: { tags: ['System'], summary: '数据库及迁移就绪检查', responses: { '200': { description: 'Ready' }, '503': { description: 'Not ready' } } } },
     '/v1/auth/register': {

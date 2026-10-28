@@ -4,7 +4,7 @@ import { ItemPanel } from './ItemPanel';
 import { GameSession } from './game/session';
 import { WEALTH_CARD, WEALTH_EFFECT } from './game/wealth';
 import type { Manifest } from './types';
-import nodes from './japan-topology.fixture.json';
+import nodes from '../../../../shared/richman/japan-topology.fixture.json';
 afterEach(cleanup);
 const manifest: Manifest={version:1,map:{name:'日本',width:2304,height:2304,nodes,scenery:[]},sprites:{},characters:['小美','土伯','夫人','沙隆'].map((name,i)=>({id:String(i),name,color:'#fff',idle:[],walk:[],walkFramesPerDirection:10}))};
 function fixture(){

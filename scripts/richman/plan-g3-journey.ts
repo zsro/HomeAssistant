@@ -9,7 +9,7 @@ import { WORKER } from '../../frontend/src/features/richman/game/construction';
 import { NEARBY_WORKER_EFFECT, nearbyWorkerTargets } from '../../frontend/src/features/richman/game/nearby-construction';
 import { PROPERTY_CATALOG, rentLines } from '../../frontend/src/features/richman/game/economy';
 import { REMOTE_DICE, REMOTE_EFFECT, itemSite } from '../../frontend/src/features/richman/game/items';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 const byId=new Map(nodes.map(n=>[n.id,n]));
 const distance=(start:number,targets:number[])=>{const seen=new Set([start]),queue=[[start,0]];for(let i=0;i<queue.length;i++){const [node,d]=queue[i];if(targets.includes(node))return d;for(const next of byId.get(node)!.adjacent)if(!seen.has(next)){seen.add(next);queue.push([next,d+1]);}}return 1000;};
 let best:{replay:ReturnType<GameEngine['exportReplay']>;state:GameEngine['state'];events:GameEngine['events']}|null=null;

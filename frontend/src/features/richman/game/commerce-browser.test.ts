@@ -3,7 +3,7 @@ import {createHash} from 'node:crypto';
 import {GameEngine,replayGame} from './engine';
 import type {Replay} from './engine';
 import {verifyCommerce} from '../../../../../scripts/richman/verify-commerce';
-import nodes from '../japan-topology.fixture.json';
+import nodes from '../../../../../shared/richman/japan-topology.fixture.json';
 import manifest from './fixtures/commerce-v28-manifest.json';
 const replays=import.meta.glob('./fixtures/commerce-v28-*-replay.json',{eager:true,import:'default'});
 it.each(manifest)('preserves actual v28 browser route $route with independent construction/subscription/payment accounting',row=>{

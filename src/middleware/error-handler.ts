@@ -37,6 +37,18 @@ export const errorHandler: ErrorRequestHandler = (error: unknown, request, respo
     });
   }
 
+  if (error && typeof error === 'object' && 'type' in error && 'status' in error) {
+    const parserErrors: Record<string, [number, string, string]> = {
+      'entity.too.large': [413, 'PAYLOAD_TOO_LARGE', '请求体超过大小限制'],
+      'entity.parse.failed': [400, 'INVALID_JSON', '请求体 JSON 格式错误'],
+      'encoding.unsupported': [415, 'ENCODING_UNSUPPORTED', '不支持此请求编码'],
+      'charset.unsupported': [415, 'CHARSET_UNSUPPORTED', '不支持此字符编码'],
+      'request.aborted': [400, 'REQUEST_ABORTED', '请求传输中断'],
+    };
+    const mapped = parserErrors[String(error.type)];
+    if (mapped) return response.status(mapped[0]).json({ success: false, error: { code: mapped[1], message: mapped[2] } });
+  }
+
   request.log.error({ err: error }, 'unhandled request error');
   return response.status(500).json({
     success: false,

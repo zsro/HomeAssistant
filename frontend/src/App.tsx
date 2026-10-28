@@ -1,4 +1,4 @@
-import { lazy, Suspense, useEffect } from 'react';
+import { lazy, Suspense, useEffect, useRef } from 'react';
 import { Navigate, Route, Routes, useLocation } from 'react-router-dom';
 import { useAuth } from './auth/auth-context';
 import { LoadingScreen } from './components/LoadingScreen';
@@ -12,6 +12,9 @@ import { RegisterPage } from './pages/RegisterPage';
 
 const RichmanPage = lazy(() => import('./pages/RichmanPage').then((module) => ({ default: module.RichmanPage })));
 
+const RichmanOnlinePage = lazy(() => import('./pages/RichmanOnlinePage').then(m => ({ default: m.RichmanOnlinePage })));
+const RichmanNetworkGamePage = lazy(() => import('./pages/RichmanOnlinePage').then(m => ({ default: m.RichmanNetworkGamePage })));
+
 function PublicOnly({ children }: { children: React.ReactNode }) {
   const { status } = useAuth();
   if (status === 'loading') return <LoadingScreen />;
@@ -19,8 +22,13 @@ function PublicOnly({ children }: { children: React.ReactNode }) {
   return children;
 }
 
-function Protected({ children }: { children: React.ReactNode }) {
+function Protected({ children, retainOnExpiry = false }: { children: React.ReactNode; retainOnExpiry?: boolean }) {
   const { status } = useAuth();
+  const admitted = useRef(false);
+  if (status === 'authenticated') admitted.current = true;
+  // An expired token must not unmount an already running local Richman game.
+  // Initial access still requires authentication; save requests remain authenticated.
+  if (retainOnExpiry && admitted.current) return children;
   if (status === 'loading') return <LoadingScreen />;
   if (status !== 'authenticated') return <Navigate to="/login" replace />;
   return children;
@@ -48,7 +56,10 @@ export function App() {
         <Route path="/register" element={<PublicOnly><RegisterPage /></PublicOnly>} />
         <Route path="/" element={<Protected><HomePage /></Protected>} />
         <Route path="/account" element={<Protected><AccountPage /></Protected>} />
-        <Route path="/modules/richman" element={<Protected><Suspense fallback={<LoadingScreen />}><RichmanPage /></Suspense></Protected>} />
+        <Route path="/modules/richman/online" element={<Protected><Suspense fallback={<LoadingScreen />}><RichmanOnlinePage /></Suspense></Protected>} />
+        <Route path="/modules/richman/online/rooms/:roomId" element={<Protected><Suspense fallback={<LoadingScreen />}><RichmanOnlinePage /></Suspense></Protected>} />
+        <Route path="/modules/richman/online/games/:gameId" element={<Protected retainOnExpiry><Suspense fallback={<LoadingScreen />}><RichmanNetworkGamePage /></Suspense></Protected>} />
+        <Route path="/modules/richman" element={<Protected retainOnExpiry><Suspense fallback={<LoadingScreen />}><RichmanPage /></Suspense></Protected>} />
         <Route path="/modules/printer" element={<Protected><PrinterPage /></Protected>} />
         <Route path="/modules/printer/kindergarten/math" element={<Protected><MathPrintablePage /></Protected>} />
         <Route path="/modules/printer/kindergarten/pinyin" element={<Protected><PinyinPrintablePage /></Protected>} />

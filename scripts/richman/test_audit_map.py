@@ -93,7 +93,7 @@ class MapParserTests(unittest.TestCase):
         saved = json.loads((root / 'docs/richman/japan-map-audit.json').read_text())
         # JSON normalizes integer Counter keys to strings.
         self.assertEqual(json.loads(json.dumps(result)), saved)
-        topology = json.loads((root / 'frontend/src/features/richman/japan-topology.fixture.json').read_text())
+        topology = json.loads((root / 'shared/richman/japan-topology.fixture.json').read_text())
         for actual, old in zip(result['nodes'], topology, strict=True):
             self.assertEqual({k: actual[k] for k in ('id', 'x', 'y', 'adjacent', 'kind')},
                              {k: old[k] for k in ('id', 'x', 'y', 'adjacent', 'kind')})

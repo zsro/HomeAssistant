@@ -23,6 +23,6 @@ def build(audit):
 
 if __name__ == '__main__':
     audit = json.loads((ROOT / 'docs/richman/japan-map-audit.json').read_text())
-    target = ROOT / 'frontend/src/features/richman/game/japan-item-nodes.json'
+    target = ROOT / 'shared/richman/game/japan-item-nodes.json'
     target.write_text(json.dumps(build(audit), ensure_ascii=False, indent=2) + '\n')
     print(f'Wrote {target.relative_to(ROOT)}')

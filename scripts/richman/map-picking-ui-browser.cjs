@@ -43,7 +43,7 @@ async function remote(value){
   await page.getByRole('button',{name:'确认并出发',exact:true}).click();
   await finishMovement();
 }
-const definitions=JSON.parse(fs.readFileSync('frontend/src/features/richman/game/japan-properties.json','utf8')).properties;
+const definitions=JSON.parse(fs.readFileSync('shared/richman/game/japan-properties.json','utf8')).properties;
 const manifest=await page.evaluate(async()=>await(await fetch('/richman/generated/manifest.json')).json());
 const first=definitions.find(p=>p.id==='japan:land:21'),second=definitions.find(p=>p.id==='japan:land:20');
 const choice=page.getByRole('region',{name:'机器工人选择'});

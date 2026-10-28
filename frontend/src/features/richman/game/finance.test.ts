@@ -4,7 +4,7 @@ import type { Action, Command } from './engine';
 import { ECONOMY_RULES, PROPERTY_CATALOG } from './economy';
 import type { PropertyDefinition } from './economy';
 import { bankTransfer, FINANCE_RULES, nextSolventIndex } from './finance';
-import nodes from '../japan-topology.fixture.json';
+import nodes from '../../../../../shared/richman/japan-topology.fixture.json';
 import { drawDice, hashSeed } from './random';
 
 const road = [10, 20, 30].map((id, i) => ({ id, x: i * 30, y: 0, adjacent: [[20], [30], [10]][i], name: '测试', kind: 0 }));

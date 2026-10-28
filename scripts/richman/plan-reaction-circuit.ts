@@ -11,7 +11,7 @@ import {PROPERTY_CATALOG,rentLines} from '../../frontend/src/features/richman/ga
 import {shopPrice,shopSupply} from '../../frontend/src/features/richman/game/shop-acquisition';
 import {salesAvailable} from '../../frontend/src/features/richman/game/estate-sales';
 import {marketAvailable,priceLimit} from '../../frontend/src/features/richman/game/g6-market';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 const byId=new Map(nodes.map(n=>[n.id,n]));
 function distance(start:number,targets:number[]){const seen=new Set([start]),q=[[start,0]];for(const[n,d]of q){if(targets.includes(n))return d;for(const a of byId.get(n)!.adjacent)if(!seen.has(a)){seen.add(a);q.push([a,d+1]);}}return 999;}
 export function planReactionCircuit(seed:string,kind:'attack'|'waiver'|'debt',count:number,limit=9000){

@@ -2,7 +2,7 @@ import { it, expect } from 'vitest';
 import { createHash } from 'node:crypto';
 import { replayGame } from './engine';
 import type { Replay } from './engine';
-import nodes from '../japan-topology.fixture.json';
+import nodes from '../../../../../shared/richman/japan-topology.fixture.json';
 import replay from './fixtures/tools-v8-replay.json';
 import golden from './fixtures/tools-v8-golden.json';
 

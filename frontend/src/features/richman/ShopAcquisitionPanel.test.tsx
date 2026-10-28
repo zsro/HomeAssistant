@@ -3,7 +3,7 @@ import {afterEach,expect,it,vi} from 'vitest';
 import {GameSession} from './game/session';
 import type {Manifest} from './types';
 import {ItemPanel} from './ItemPanel';
-import nodes from './japan-topology.fixture.json';
+import nodes from '../../../../shared/richman/japan-topology.fixture.json';
 afterEach(cleanup);
 const manifest:Manifest={version:1,map:{name:'日本',width:2304,height:2304,nodes,scenery:[]},sprites:{},characters:['小美','土伯'].map((name,i)=>({id:String(i),name,color:'#fff',idle:[],walk:[],walkFramesPerDirection:10}))};
 function setup(){const session=new GameSession(manifest);session.start({mode:'shopAcquisition',characterIds:['0','1'],seed:'aa-ui'});const s=session.snapshot();s.phase='shop';s.items!.points['player-1']=30;s.shopDecision={kind:'shop',id:'shop',node:50,companyId:'japan:company:1',turnover:0,sales:[],shelf:{requested:6,cards:[{itemId:'card:06',available:true},{itemId:'card:06',available:true}],tools:[{itemId:'tool:01',available:true}],gift:{kind:'card',itemId:'card:04',received:true,discarded:null,reason:'received'}}};return s;}

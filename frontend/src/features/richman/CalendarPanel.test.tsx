@@ -3,7 +3,7 @@ import {afterEach,expect,it} from 'vitest';
 import {CalendarPanel} from './CalendarPanel';
 import {GameSession} from './game/session';
 import type {Manifest} from './types';
-import nodes from './japan-topology.fixture.json';
+import nodes from '../../../../shared/richman/japan-topology.fixture.json';
 afterEach(cleanup);
 const manifest:Manifest={version:1,map:{name:'日本',width:2304,height:2304,nodes,scenery:[]},sprites:{},characters:['a','b'].map(id=>({id,name:id,color:'#fff',idle:[],walk:[],walkFramesPerDirection:10}))};
 function fixture(){const session=new GameSession(manifest,{id:()=> 'calendar-ui',seed:()=> 'calendar-ui'},'calendar');session.start({mode:'calendar',characterIds:['a','b'],seed:'calendar-ui',startDate:'1998-02-01'});return{session,snapshot:session.snapshot()};}

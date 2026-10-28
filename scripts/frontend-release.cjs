@@ -22,7 +22,9 @@ function files(root, prefix = '') {
 }
 
 function sourceHash() {
-  const names = execFileSync('git', ['ls-files', '-z', '--cached', '--others', '--exclude-standard', '--', 'frontend'], { cwd: repo }).toString().split('\0').filter(Boolean);
+  // Packaging precedes staging: renamed/deleted tracked sources may still be in the index.
+  const names = execFileSync('git', ['ls-files', '-z', '--cached', '--others', '--exclude-standard', '--', 'frontend', 'shared'], { cwd: repo })
+    .toString().split('\0').filter(name => name && fs.existsSync(path.join(repo, name)));
   names.push('scripts/richman/release-assets.json', 'scripts/frontend-release.cjs');
   return sha(JSON.stringify([...new Set(names)].sort().map(name => [name, sha(fs.readFileSync(path.join(repo, name)))])));
 }

@@ -4,7 +4,7 @@ import {createHash} from 'node:crypto';
 import assert from 'node:assert/strict';
 import {GameEngine,replayGame,type Command} from '../../frontend/src/features/richman/game/engine';
 import {eventAudio} from '../../frontend/src/features/richman/audio-events';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 const routes:Record<string,string>={special2:'special-objects-2',special3:'special-objects-3',special4:'special-objects-4',pair:'god-circuit-pair',full:'god-circuit-full',research:'god-closure-research',car:'god-closure-car'};
 const hash=(v:unknown)=>createHash('sha256').update(JSON.stringify(v)).digest('hex');
 const normalize=(c:Command)=>{const action=structuredClone(c.action) as unknown as Record<string,unknown>;delete action.decisionId;delete action.token;if(action.action)delete (action.action as Record<string,unknown>).decisionId;return {playerId:c.playerId,action};};

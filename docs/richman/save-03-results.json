@@ -1,0 +1,155 @@
+{
+  "task": "SAVE-03",
+  "date": "2026-10-20",
+  "status": "implemented and verified; not deployed",
+  "scope": "Current v47 personal cloud SAVE/LOAD product flow; no native .sav import, authoritative multiplayer or production rollout",
+  "frontend": {
+    "passed": 128,
+    "failed": 0,
+    "files": [
+      {
+        "path": "frontend/src/App.richman-auth.test.tsx",
+        "passed": 1
+      },
+      {
+        "path": "frontend/src/App.test.tsx",
+        "passed": 5
+      },
+      {
+        "path": "frontend/src/features/richman/ClassicSystemUI.test.tsx",
+        "passed": 4
+      },
+      {
+        "path": "frontend/src/features/richman/ClassicToolbar.test.tsx",
+        "passed": 1
+      },
+      {
+        "path": "frontend/src/features/richman/ClassicTurnUI.test.tsx",
+        "passed": 13
+      },
+      {
+        "path": "frontend/src/features/richman/GameWindowHost.test.tsx",
+        "passed": 10
+      },
+      {
+        "path": "frontend/src/features/richman/audio-queue.test.ts",
+        "passed": 17
+      },
+      {
+        "path": "frontend/src/features/richman/audio.test.ts",
+        "passed": 15
+      },
+      {
+        "path": "frontend/src/features/richman/cloud-saves.test.ts",
+        "passed": 13
+      },
+      {
+        "path": "frontend/src/features/richman/game/save-circuit.test.ts",
+        "passed": 5
+      },
+      {
+        "path": "frontend/src/features/richman/game/save.test.ts",
+        "passed": 42
+      },
+      {
+        "path": "frontend/src/features/richman/game/session-audio.test.ts",
+        "passed": 2
+      }
+    ]
+  },
+  "backend": {
+    "passed": 20,
+    "failed": 0,
+    "files": [
+      {
+        "path": "tests/unit/richman-save.test.ts",
+        "passed": 20
+      }
+    ]
+  },
+  "browser": {
+    "generatedAt": "2026-10-20T08:09:10.915Z",
+    "environment": "Chrome headless, local Vite/API, real cloud homeAssistantDB_test",
+    "checks": [
+      {
+        "name": "new-game-to-manual-save-at-property-decision",
+        "revision": 8,
+        "phase": "property"
+      },
+      {
+        "name": "exit-signout-signin-load-continue-same-decision"
+      },
+      {
+        "name": "automatic-save-after-restored-decision",
+        "revision": 9
+      },
+      {
+        "name": "lost-response-retry-reuses-request-and-one-revision"
+      },
+      {
+        "name": "two-tab-conflict-preserves-newer-cloud-save-and-allows-another-slot"
+      },
+      {
+        "name": "expired-login-reauthentication-preserves-live-game-and-retry"
+      },
+      {
+        "name": "cancel-pending-network-load-keeps-current-game"
+      },
+      {
+        "name": "bad-digest-and-declined-load-preserve-current-progress"
+      },
+      {
+        "name": "restored-game-completes-through-normal-surrender"
+      },
+      {
+        "name": "mobile-390px-save-slots-no-horizontal-overflow"
+      },
+      {
+        "name": "save-and-exit-retries-previous-failed-request-and-waits-for-receipt"
+      },
+      {
+        "name": "second-account-cannot-list-or-load-first-account-saves"
+      }
+    ],
+    "failures": [],
+    "cleanup": "Only UUID owners created by this run and their save/auth rows removed. Production untouched."
+  },
+  "builds": {
+    "frontendLint": "passed",
+    "frontendBuild": "passed",
+    "backendBuild": "passed",
+    "diffWhitespace": "passed",
+    "warnings": [
+      "Existing Vite chunk size warnings and mixed math-printables import warning; build succeeded."
+    ]
+  },
+  "verificationNotes": [
+    "Frontend totals use the latest result per file: 115 unaffected assertions plus 13 cloud workflow assertions from the focused final rerun.",
+    "A new regression initially expected autosave after a failed candidate adoption; corrected it to require error recovery first, matching intended behavior. No failed assertions remain.",
+    "Supertest initially could not listen under the filesystem/network sandbox (EPERM); all 20 backend checks passed with local listener permission.",
+    "Browser workflow uses real local app/API and cloud homeAssistantDB_test. Only designated network responses are dropped/corrupted/delayed for failure scenarios.",
+    "Screenshots visually checked: desktop two-column slots, mobile single-column scrolling, legible save status and restoration barrier."
+  ],
+  "screenshots": [
+    {
+      "path": "docs/richman/save03/save-desktop.png",
+      "sha256": "e36358010f3c35fcfd3f4b4e9527fc0349077032bce3c1074fad0634e1aa19c6"
+    },
+    {
+      "path": "docs/richman/save03/save-mobile.png",
+      "sha256": "cff2b6a2d5ed482d7f9bbaac175ace170bdc8f9298cc4a3c0a7c42102a89e62c"
+    },
+    {
+      "path": "docs/richman/save03/restored.png",
+      "sha256": "534812e572785c57164a253975166aaa45ac9cf7926da5918e17fc29abd49bc3"
+    }
+  ],
+  "limits": [
+    "Not deployed; production database, services and Nginx unchanged. Formal frontend release package has not been regenerated.",
+    "Production migration and save-specific Nginx limit/HTTPS >1MiB acceptance remain release tasks.",
+    "390x844 is a Chrome emulated viewport, not a physical mobile device. No Safari or cross-physical-device acceptance.",
+    "In-app exit controls and beforeunload protect departure; SPA browser-back navigation has no custom unsaved-progress blocker.",
+    "Cloud save remains local single-device gameplay with personal recovery, not online multiplayer."
+  ],
+  "nextTask": "NET-01 authoritative server game host; SAVE release can run independently"
+}

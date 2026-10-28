@@ -4,7 +4,7 @@ import type {GameState,Action} from './engine';
 import {buyHolding} from './stock-ledger';
 import {updateCompanyOwner} from './news-business';
 import {liquidateForRent} from './g6-market';
-import nodes from '../japan-topology.fixture.json';
+import nodes from '../../../../../shared/richman/japan-topology.fixture.json';
 const mutable=(e:GameEngine)=>(e as unknown as{current:GameState}).current;
 function setup(count=4){const e=new GameEngine(nodes,{gameId:'stress',rulesId:'japan-events-candidate-v44',seed:'stress',characterIds:['a','b','c','d'].slice(0,count),initialFunds:100000,startDate:'1998-01-14'}),s=mutable(e);s.g6!.gods=[];return{e,s};}
 function send(e:GameEngine,action:Action,ok=true){const s=e.state,p=s.pending,r=e.dispatch({gameId:s.gameId,id:'c'+s.revision,expectedRevision:s.revision,playerId:action.type==='auction'&&p?.kind==='auction'?p.responderId:s.players[s.active].id,action});expect(r.ok,JSON.stringify(r)).toBe(ok);return r;}

@@ -5,7 +5,7 @@ import { ReactionPanel } from './G3Choice';
 import { GameSession } from './game/session';
 import { G3_GOODS } from './game/g3';
 import type { Manifest } from './types';
-import nodes from './japan-topology.fixture.json';
+import nodes from '../../../../shared/richman/japan-topology.fixture.json';
 afterEach(cleanup);
 const manifest:Manifest={version:1,map:{name:'日本',width:2304,height:2304,nodes,scenery:[]},sprites:{},characters:['小美','土伯','夫人','沙隆'].map((name,i)=>({id:String(i),name,color:'#fff',idle:[],walk:[],walkFramesPerDirection:10}))};
 function fixture(){const session=new GameSession(manifest);session.start({mode:'g3',characterIds:['0','2','3'],seed:'ui-g3'});return {snapshot:session.snapshot(),onUse:vi.fn(()=>true),buy:vi.fn(()=>true),leave:vi.fn()};}

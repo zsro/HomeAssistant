@@ -10,7 +10,7 @@ import {auctionReserve,g4RentLines,startPublicAuction,bidG4} from './g4';
 import {g6Draw} from './g6-random';
 import {saveCheckpoint,restoreCheckpoint} from './g7';
 import {REMOTE_EFFECT} from './items';
-import japan from '../japan-topology.fixture.json';
+import japan from '../../../../../shared/richman/japan-topology.fixture.json';
 const defs=PROPERTY_CATALOG.properties,ld=defs.find(d=>d.kind==='land')!,fd=defs.find(d=>d.kind==='facility')!;
 function fixture(newsId=6,rulesId:string=OPERATING_NEWS_RULES.id){const e=new GameEngine(japan,{gameId:'operating',seed:'operating',rulesId,characterIds:['a','b','c'],initialFunds:100000});const s=(e as unknown as{current:GameState}).current;s.g6!.gods=[];s.players[0].node=13;s.news!.order=[newsId,...Array.from({length:36},(_,i)=>i).filter(i=>i!==newsId)];return{e,s};}
 function prop(s:GameState,id=ld.id){return s.economy!.properties.find(p=>p.id===id)!;}

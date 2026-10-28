@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import {GameEngine,replayGame} from '../../frontend/src/features/richman/game/engine';
 import type {Replay} from '../../frontend/src/features/richman/game/engine';
 import {PROPERTY_CATALOG,propertyBase} from '../../frontend/src/features/richman/game/economy';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 /** Actual UI commands only. Check order and cash/ownership independently of final replay equality. */
 export function verifyMagicNested(replay:Replay){
  assert.equal(replay.rulesId,'japan-events-candidate-v38');const live=new GameEngine(nodes,replay.config);let calls=0,collections=0,reactions=0,auctions=0,transfers=0,multiSeats=0,continuationCommands=0;

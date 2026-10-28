@@ -2,7 +2,7 @@ import {expect,it} from 'vitest';
 import {GameEngine} from './engine';import type {GameState,Action} from './engine';
 import {GameSession} from './session';import type {Manifest} from '../types';
 import {decideComputer,cashChoices,CASH_GOODS} from './computer-cash';import {decideComputer as previous} from './computer-estate';
-import nodes from '../japan-topology.fixture.json';
+import nodes from '../../../../../shared/richman/japan-topology.fixture.json';
 const config={gameId:'cash-domain',seed:'cash',rulesId:'japan-events-candidate-v44',characterIds:['xiaomei','tuu','chyan','salonbus'],initialFunds:100000};
 const cur=(e:GameEngine)=>(e as unknown as {current:GameState}).current;
 const supply=(s:GameState,item:string)=>item==='card:01'?s.wealth!.supply:item==='card:02'?s.cards!.supply:s.g4!.supply[item];

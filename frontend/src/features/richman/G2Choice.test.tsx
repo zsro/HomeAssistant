@@ -4,7 +4,7 @@ import { ItemPanel } from './ItemPanel';
 import { GameSession } from './game/session';
 import { G2_GOODS } from './game/g2';
 import type { Manifest } from './types';
-import nodes from './japan-topology.fixture.json';
+import nodes from '../../../../shared/richman/japan-topology.fixture.json';
 afterEach(cleanup);
 const manifest:Manifest={version:1,map:{name:'日本',width:2304,height:2304,nodes,scenery:[]},sprites:{},characters:['小美','土伯','夫人','沙隆'].map((name,i)=>({id:String(i),name,color:'#fff',idle:[],walk:[],walkFramesPerDirection:10}))};
 function fixture(index=0){const session=new GameSession(manifest);session.start({mode:'g2',characterIds:['1','3'],seed:'ui-g2'});const snapshot=session.snapshot(),good=G2_GOODS[index];snapshot.phase='effect';snapshot.effects!.pending={id:'decision-1',definitionId:good.effect,playerId:'player-1',timing:'beforeRoll'};snapshot.g2Choices![good.id]=[{target:{kind:'player',id:good.target==='self'?'player-1':'player-2'},title:'受影响玩家',detail:'行动期限与交通预览',playerIds:['player-2']}];return{snapshot,onUse:vi.fn(()=>true),buy:vi.fn(()=>true),leave:vi.fn()};}

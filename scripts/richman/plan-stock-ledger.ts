@@ -1,7 +1,7 @@
 import {GameEngine,replayGame} from '../../frontend/src/features/richman/game/engine';
 import type {Action} from '../../frontend/src/features/richman/game/engine';
 import {marketAvailable,priceLimit} from '../../frontend/src/features/richman/game/g6-market';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 import {writeFileSync} from 'node:fs';
 export function planLedger(seed:string,count:number){const e=new GameEngine(nodes,{gameId:'market-route',seed,rulesId:'japan-events-candidate-v43',characterIds:['xiaomei','tuu','chyan','salonbus'].slice(0,count),initialFunds:100000,startDate:'1998-01-09'}),done=new Set<string>(),ledgerSteps:Record<number,{stockId:string;quantity:number;average:number;cost:number;price:number}>={};for(let i=0;i<1800;i++){const s=e.state,p=s.pending,id=s.players[s.active].id;let a:Action,actor=id;
  if(s.calendar!.date>='1998-01-13'&&s.phase==='idle'){const replay=e.exportReplay();if(JSON.stringify(replayGame(nodes,replay).state)!==JSON.stringify(s))throw Error('replay');return{replay,state:s,events:e.events,used:[],ledgerSteps};}

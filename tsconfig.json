@@ -12,8 +12,24 @@
     "resolveJsonModule": true,
     "noUncheckedIndexedAccess": true,
     "exactOptionalPropertyTypes": true,
-    "types": ["node"]
+    "types": [
+      "node"
+    ]
   },
-  "include": ["src/**/*.ts", "database/**/*.ts", "scripts/**/*.ts", "tests/**/*.ts"],
-  "exclude": ["node_modules", "dist", "scripts/richman"]
+  "include": [
+    "src/**/*.ts",
+    "database/**/*.ts",
+    "scripts/**/*.ts",
+    "tests/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "scripts/richman"
+  ],
+  "references": [
+    {
+      "path": "./shared"
+    }
+  ]
 }

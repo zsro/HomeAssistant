@@ -7,7 +7,7 @@ import {updateCompanyOwner} from './news-business';
 import {tradeStock} from './g6-market';
 import {saveCheckpoint,restoreCheckpoint} from './g7';
 import {settleDividends} from './dividends';
-import nodes from '../japan-topology.fixture.json';
+import nodes from '../../../../../shared/richman/japan-topology.fixture.json';
 const defs=PROPERTY_CATALOG.properties;
 function setup(version=28){const e=new GameEngine(nodes,{gameId:'commerce',seed:'commerce',rulesId:`japan-events-candidate-v${version}`,characterIds:['a','b','c'],initialFunds:100000,startDate:'1998-01-07'}),s=(e as unknown as {current:GameState}).current;s.g6!.gods=[];s.players[0].node=67;return{e,s,c:s.news!.business!.companies[2]};}
 function send(e:GameEngine,action:Action,playerId?:string){const s=e.state;return e.dispatch({id:'c'+s.revision,gameId:s.gameId,expectedRevision:s.revision,playerId:playerId??s.players[s.active].id,action});}

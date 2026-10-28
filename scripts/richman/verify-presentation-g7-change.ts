@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {readFileSync,writeFileSync} from 'node:fs';
 import {GameEngine,replayGame,type Command} from '../../frontend/src/features/richman/game/engine';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 
 const dir='/private/tmp/richman-presentation-ui-g7change-changed-set';
 const read=(path:string)=>JSON.parse(readFileSync(path,'utf8'));

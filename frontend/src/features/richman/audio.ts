@@ -89,6 +89,12 @@ export class RichmanAudio {
   }
   visibility(hidden: boolean) { this.hidden = hidden; this.sync(); }
   setReplay(replay: boolean) { this.replay = replay; this.sync(); }
+  /** A restored branch may have the same gameId and a lower revision. */
+  restore(packet: AudioPacket) {
+    this.clear(); this.gameId = ''; this.revision = -1; this.sequence = -1; this.cueSequence = -1;
+    this.turn = undefined; this.track = 0;
+    this.receive({ ...packet, landings: [], cues: [], flush: true });
+  }
   receive(packet: AudioPacket) {
     if (this.disposed) return;
     if (packet.gameId !== this.gameId) {

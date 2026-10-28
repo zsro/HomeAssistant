@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>NET-01 服务端小游戏验收</title>
+<style>
+body{font:16px system-ui;background:#17232b;color:#eee;margin:32px;max-width:1000px}button,input{font:inherit;padding:9px;margin:4px}
+main{display:flex;gap:24px;flex-wrap:wrap}#board{position:relative;width:640px;height:420px;background:#e8e0bf;overflow:hidden;color:#233a33}
+.balloon{position:absolute;border-radius:50%;width:42px;height:54px;background:#e5916c;transform:translate(-50%,-50%);padding:0;margin:0}
+.cell{position:absolute;width:48px;height:40px;background:#b9e4e7;padding:0;margin:0;font-size:12px}
+#sky-player{position:absolute;top:330px;width:48px;height:38px;background:#78583c;transform:translateX(-50%)}
+.drop{position:absolute;width:18px;height:18px;border-radius:50%;background:#b57b29;transform:translate(-50%,-50%)}
+pre{white-space:pre-wrap;max-width:300px}#status{min-height:24px}label{display:inline-grid}small{color:#bdd0d3}
+</style>
+<h1>NET-01 · 服务端计时与输入验收</h1><p>独立验收客户端；房间与正式联机界面尚未接入。只发送输入意图，计时与结算来自服务端。</p>
+<form id="login"><label>账号<input id="username" autocomplete="username"></label><label>密码<input id="password" type="password" autocomplete="current-password"></label><button>登录测试账号</button></form>
+<p id="status" role="status">等待登录</p><div><button id="start" disabled>开始小游戏</button><button id="quit" disabled>退出小游戏</button><button id="ack" disabled>结算点数</button><button id="disconnect" disabled>模拟离线</button><button id="reconnect" disabled>重新连接</button></div>
+<main><div id="board" aria-label="服务端小游戏画面"></div><pre id="summary"></pre></main>
+<small>测试用界面不加载本地 GameSession，也不运行本地游戏规则或 tick。</small>
+<script>
+const gameId=location.pathname.split('/').at(-1);let token='',view=null,polling=false,timer=null,busy=false,pendingRequests=0;
+const el=id=>document.getElementById(id),board=el('board');
+async function api(path,body){pendingRequests++;try{const response=await fetch('/api/v1/'+path,{method:body?'POST':'GET',headers:{'Content-Type':'application/json',...(token?{Authorization:'Bearer '+token}:{})},...(body?{body:JSON.stringify(body)}:{})});const result=await response.json();if(!result.success)throw Error(result.error.code);return result.data;}finally{pendingRequests--;}}
+function render(){
+ const d=view.decision;el('summary').textContent=JSON.stringify({game:view.gameId,self:view.self,revision:view.revision,phase:view.phase,kind:d?.game,stage:d?.stage,tick:d?.tick,score:d?.score,points:view.private.points,hostError:view.hostError},null,2);
+ for(const [id,stage] of [['start','ready'],['quit','playing'],['ack','result']])el(id).disabled=busy||d?.stage!==stage;
+ board.dataset.tick=String(d?.tick??-1);board.dataset.score=String(d?.score??0);board.dataset.stage=d?.stage??'';board.dataset.points=String(view.private.points);board.dataset.revision=String(view.revision);
+ board.replaceChildren();
+ if(d?.penguin){board.dataset.penguin=JSON.stringify(d.penguin);d.penguin.cells.forEach((value,i)=>{if(value===-1)return;const b=document.createElement('button');b.className='cell';b.dataset.cell=i;b.textContent=d.penguin.dug.includes(i)?'已挖':'?';b.style.left=(80+i%9*50)+'px';b.style.top=(20+Math.floor(i/9)*42)+'px';b.onclick=()=>send({kind:'dig',cell:i});board.append(b);});}
+ if(d?.balloons)for(const b of d.balloons){if(!b||b.burst)continue;const button=document.createElement('button');button.className='balloon';button.style.left=b.x+'px';button.style.top=b.y+'px';button.textContent=String(b.type);button.onclick=()=>send({kind:'point',x:b.x,y:b.y});board.append(button);}
+ if(d?.sky){board.dataset.target=String(d.sky.target);const player=document.createElement('div');player.id='sky-player';player.style.left=d.sky.x+'px';board.append(player);for(const drop of d.sky.drops){if(!drop)continue;const dot=document.createElement('div');dot.className='drop';dot.dataset.type=drop.type;dot.style.left=(drop.x+Math.trunc(drop.drift*Math.max(0,drop.y-130)/250))+'px';dot.style.top=drop.y+'px';dot.style.background=drop.type===4?'#b33':'#b57b29';board.append(dot);}}
+}
+async function poll(){if(!polling)return;try{view=await api('richman/games/'+gameId);render();}catch(error){el('status').textContent=error.message;}finally{if(polling)timer=setTimeout(poll,100);}}
+async function send(input){if(busy||!view?.decision)return;busy=true;render();const body={id:crypto.randomUUID(),expectedRevision:view.revision,action:{type:'minigame',decisionId:view.decision.id,input}};try{const receipt=await api('richman/games/'+gameId+'/commands',body);el('status').textContent='已提交 '+input.kind+' · '+receipt.revision;el('status').dataset.lastInput=input.kind;view=await api('richman/games/'+gameId);}catch(error){el('status').textContent=error.message;}finally{busy=false;render();}}
+el('login').onsubmit=async event=>{event.preventDefault();try{const data=await api('auth/login',{username:el('username').value,password:el('password').value});token=data.tokens.accessToken;el('password').value='';el('login').hidden=true;el('status').textContent='已登录';el('disconnect').disabled=false;polling=true;poll();}catch(error){el('status').textContent=error.message;}};
+el('start').onclick=()=>send({kind:'start'});el('quit').onclick=()=>send({kind:'quit'});el('ack').onclick=()=>send({kind:'ack'});
+board.onpointerdown=event=>{if(view?.decision?.game==='sky'){const r=board.getBoundingClientRect();send({kind:'point',x:Math.max(0,Math.min(639,Math.round(event.clientX-r.left))),y:Math.max(0,Math.min(420,Math.round(event.clientY-r.top)))});}};
+el('disconnect').onclick=async()=>{polling=false;clearTimeout(timer);el('disconnect').disabled=true;while(pendingRequests||busy)await new Promise(resolve=>setTimeout(resolve,20));await api('richman/games/'+gameId+'/disconnect',{});el('reconnect').disabled=false;el('status').textContent='已离线';};
+el('reconnect').onclick=()=>{el('reconnect').disabled=true;el('disconnect').disabled=false;polling=true;poll();};
+</script></html>

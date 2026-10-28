@@ -4,7 +4,7 @@ import {computerDecision,decisionPlayer} from '../../frontend/src/features/richm
 import {decideComputer,COMMERCE_GOODS,commerceChoices} from '../../frontend/src/features/richman/game/computer-commerce';
 import {shopPrice,shopSupply} from '../../frontend/src/features/richman/game/shop-acquisition';
 import {actionLocked} from '../../frontend/src/features/richman/game/g2';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 import {writeFileSync} from 'node:fs';
 export function planComputerCommerceManual(count:number,seed:string,_required:readonly string[],limit=4000){
  const ids=['xiaomei','tuu','chyan','salonbus'].slice(0,count),computerIds=ids.filter((_,i)=>i>0);

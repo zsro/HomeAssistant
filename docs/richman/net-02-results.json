@@ -1,0 +1,157 @@
+{
+  "task": "NET-02",
+  "generatedAt": "2026-10-20T10:10:35.773238+00:00",
+  "status": "complete; implementation and scoped acceptance passed; not committed or deployed",
+  "scope": [
+    "Persistent private rooms with 12-character random codes, account-bound seats, character selection, readiness, host configuration and atomic start",
+    "Existing original map/business windows via NetworkSession; no local authoritative engine, RNG, AI or rule clock",
+    "Explicit public UI projection and self-only inventory/holdings; actual decision responder authorization",
+    "Immutable command retries and sessionStorage recovery; persistent latest-window control, read-only older windows and explicit reclaim",
+    "Separate server-persisted multiplayer progress from personal SAVE/LOAD; finished room status commits with terminal game command"
+  ],
+  "validation": {
+    "backend": {
+      "uniqueTestsPassed": 65,
+      "unit": 45,
+      "hostCloudIntegration": 12,
+      "roomsCloudIntegration": 8,
+      "environment": "real cloud homeAssistantDB_test for integration; no production reset",
+      "roomsCases": [
+        "auth/ownership/create+join idempotency",
+        "last-seat race and one waiting room per account",
+        "owner configuration, role/character uniqueness, stale revision and ready reset",
+        "host transfer and empty-room close",
+        "online/ready/seat-count/open-seat start barriers",
+        "atomic rollback and duplicate start",
+        "two-account seat binding and old-controller fence",
+        "terminal game+room status transaction"
+      ]
+    },
+    "frontend": {
+      "files": 57,
+      "tests": 393,
+      "failed": 0,
+      "scope": "all non-game-directory frontend test files, including 5 network projection/session tests; not a new full historical rules run",
+      "runner": "threads, maxWorkers=4",
+      "projectionWindowReplay": "presentation-v47-paid-upgrade-tuu; legal recorded commands, each distinct decision/stage rendered for both accounts, not fabricated world state"
+    },
+    "productBrowser": {
+      "environment": "two isolated Chrome browser contexts, distinct actual account logins, local Vite/API + cloud test DB",
+      "checks": [
+        {
+          "name": "two-separate-browser-logins-create-code-join-ready"
+        },
+        {
+          "name": "lost-command-response-retries-original-id-once"
+        },
+        {
+          "name": "formal-map-property-decision-and-turn-handoff"
+        },
+        {
+          "name": "save-is-server-persistence-and-host-leaving-does-not-end-game"
+        },
+        {
+          "name": "formal-auction-window-authorized-seat",
+          "prefix": 399,
+          "responder": "player-2"
+        },
+        {
+          "name": "formal-reaction-window-authorized-seat",
+          "prefix": 1345,
+          "responder": "player-2"
+        },
+        {
+          "name": "formal-minigame-window-authorized-seat",
+          "prefix": 130,
+          "responder": "player-1"
+        },
+        {
+          "name": "same-account-latest-window-readonly-and-explicit-reclaim"
+        },
+        {
+          "name": "mobile-room-layout-and-no-browser-runtime-errors"
+        }
+      ],
+      "errors": []
+    },
+    "saveProductRegression": {
+      "checks": [
+        {
+          "name": "new-game-to-manual-save-at-property-decision",
+          "revision": 8,
+          "phase": "property"
+        },
+        {
+          "name": "exit-signout-signin-load-continue-same-decision"
+        },
+        {
+          "name": "automatic-save-after-restored-decision",
+          "revision": 9
+        },
+        {
+          "name": "lost-response-retry-reuses-request-and-one-revision"
+        },
+        {
+          "name": "two-tab-conflict-preserves-newer-cloud-save-and-allows-another-slot"
+        },
+        {
+          "name": "expired-login-reauthentication-preserves-live-game-and-retry"
+        },
+        {
+          "name": "cancel-pending-network-load-keeps-current-game"
+        },
+        {
+          "name": "bad-digest-and-declined-load-preserve-current-progress"
+        },
+        {
+          "name": "restored-game-completes-through-normal-surrender"
+        },
+        {
+          "name": "mobile-390px-save-slots-no-horizontal-overflow"
+        },
+        {
+          "name": "save-and-exit-retries-previous-failed-request-and-waits-for-receipt"
+        },
+        {
+          "name": "second-account-cannot-list-or-load-first-account-saves"
+        }
+      ],
+      "count": 12,
+      "environment": "actual Chrome + local Vite/API + cloud test DB"
+    },
+    "build": {
+      "backend": "passed including shared core and save worker",
+      "frontend": "passed; existing large chunk warnings retained"
+    },
+    "lint": {
+      "frontend": "passed",
+      "backend": "passed for src/shared/database/tests and new acceptance script"
+    },
+    "gitDiffCheck": "passed"
+  },
+  "screenshots": [
+    "net02/room-desktop.png",
+    "net02/game-desktop.png",
+    "net02/auction-desktop.png",
+    "net02/reaction-desktop.png",
+    "net02/minigame-desktop.png",
+    "net02/room-mobile.png"
+  ],
+  "boundaries": [
+    "No Git commit/push, production deployment, production DB/config mutation or release packaging",
+    "Migration 202610200003 applied only to cloud test DB; earlier migrations unchanged",
+    "Two independently authenticated clients on one physical development machine; 390px viewport is not a physical mobile device",
+    "Auction uses legal surrender-v47-4 prefix 399 with 4 persisted human seats and 2 browser clients; verifies non-active player-2 action, not a complete 4-client journey",
+    "Reaction uses legal paid-upgrade-tuu prefix 1345; formal balloon minigame prefix 130. No claim that all network decision permutations or 3/4-player mixed sessions are fully accepted",
+    "HTTP poll 400ms, minigame 100ms; no WebSocket/public latency/load acceptance",
+    "No shared pause or automatic takeover of disconnected human decisions; full recovery/timeout/lifecycle matrix belongs to NET-03",
+    "No raw event stream or complete multiplayer replay export; no fabricated per-action sound/history receipts"
+  ],
+  "repairNotes": [
+    "Initial room default funds did not match the established allowed funds; corrected to 100000 and reused existing six funding options",
+    "Added retry/connection controls inside mandatory decision windows and disabled retry while original send is still in flight",
+    "Acceptance harness now waits for the latest room readiness revision and uses an existing legal auction prefix rather than expecting auctions in a non-auction fixture",
+    "Initial unprivileged unit run could not bind local HTTP ports; authorized rerun passed"
+  ],
+  "next": "NET-03"
+}

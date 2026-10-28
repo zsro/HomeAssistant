@@ -7,7 +7,7 @@ import {PROPERTY_CATALOG,propertyBase} from './economy';
 import {syncCardSlots} from './g3';
 import {updateCompanyOwner,loanCapacity} from './news-business';
 import {saveCheckpoint,restoreCheckpoint} from './g7';
-import nodes from '../japan-topology.fixture.json';
+import nodes from '../../../../../shared/richman/japan-topology.fixture.json';
 const defs=PROPERTY_CATALOG.properties;
 function fixture(){const e=new GameEngine(nodes,{gameId:'asset',rulesId:ASSET_FORTUNE_RULES.id,seed:'asset',characterIds:['a','b','c','d'],initialFunds:100000});const s=(e as unknown as {current:GameState}).current;s.g6!.gods=[];s.players[0].node=19;return{e,s};}
 function apply(s:GameState,id:number){const events:EventPayload[]=[];offerAssetFortune(s,id,defs,[],()=>`f${++s.serial}`,e=>events.push(e));return events;}

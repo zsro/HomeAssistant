@@ -52,7 +52,7 @@ function LoanForm({snapshot,loan}:{snapshot:SessionSnapshot;loan:NonNullable<Pro
  const rejected=b.bankRejected?.[id]??0;
  const maximum=rejected?0:operation==='borrow'?(b.noLoans[id]?0:snapshot.loanLimit??0):Math.min(b.loans[id],balance.cash+balance.bank);
  const amount=/^\d+$/.test(input)?Number(input):NaN,valid=Number.isSafeInteger(amount)&&amount>0&&amount<=maximum&&!snapshot.paused;
- return <form aria-label="银行借还款" onSubmit={e=>{e.preventDefault();if(valid){const ok=loan(snapshot.bankDecision!.id,operation,amount);setMessage(ok?'借还款完成。':'条件已变化，未执行。');if(ok)setInput('');}}}>
+ return <form aria-label="银行借还款" onSubmit={e=>{e.preventDefault();if(valid){const ok=loan(snapshot.bankDecision!.id,operation,amount);setMessage(ok?snapshot.network?'已提交，等待服务器确认。':'借还款完成。':'条件已变化，未执行。');if(ok)setInput('');}}}>
  <h3>贷款</h3><p>未偿贷款 {money(b.loans[id])} 元 · {rejected?'银行拒绝往来，停止借还款':b.noLoans[id]?`停止放款：${b.noLoans[id]===128?'下次自身行动解除':`剩余${b.noLoans[id]}次自身行动边界`}`:'可正常申请'}</p>
  <fieldset disabled={snapshot.paused || !!rejected}><label className="rm-form-field">贷款业务<select value={operation} onChange={e=>{setOperation(e.target.value as 'borrow'|'repay');setInput('');}}><option value="borrow">借款存入银行</option><option value="repay">偿还贷款</option></select></label>
  <label className="rm-form-field">贷款金额<input aria-label="贷款金额" inputMode="numeric" value={input} onChange={e=>setInput(e.target.value)} /><small>本次最多 {money(maximum)} 元</small></label>
@@ -90,7 +90,7 @@ export function FinancePanel({ loan, snapshot, manifest, transfer, leaveBank, se
       const id = `player-${i + 1}`, balance = economy.balances[id];
       const value = propertyValue(id, economy.properties, PROPERTY_CATALOG.properties);
       const stocks = stockValue(snapshot.g6, id),loans=snapshot.news?.business?.loans[id]??0;
-      return <li key={id}><strong>{name(id)} · {finance.eliminated.includes(id) ? '已破产' : '胜者'}</strong><span>现金 {money(balance.cash)} / 存款 {money(balance.bank)}</span><span>地产估值 {money(value)}{snapshot.g6 ? ` / 股票 ${money(stocks)}` : ''} / 贷款 {money(loans)} / 净值 {money(balance.cash + balance.bank + value + stocks-loans)}</span></li>;
+      return <li key={id}><strong>{name(id)} · {finance.eliminated.includes(id) ? '已破产' : '胜者'}</strong><span>现金 {money(balance.cash)} / 存款 {money(balance.bank)}</span><span>地产估值 {money(value)}{snapshot.network && snapshot.network.self !== id ? ' / 股票及净值未公开' : `${snapshot.g6 ? ` / 股票 ${money(stocks)}` : ''} / 净值 ${money(balance.cash + balance.bank + value + stocks-loans)}`} / 贷款 {money(loans)}</span></li>;
     })}</ul>
     <p className="rm-property-note">地产估值按地价加建造成本汇总，仅供查看，不作为本局胜负依据。</p>
     <div className="rm-result-actions"><button className="rm-button" onClick={newGame}>再开一局</button>{downloadReplay && <button className="rm-button rm-button-light" onClick={downloadReplay}>下载回放记录</button>}</div>

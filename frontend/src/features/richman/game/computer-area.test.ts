@@ -1,5 +1,5 @@
 import {expect,it} from 'vitest';import {GameEngine} from './engine';import type {GameState,Action} from './engine';import {GameSession} from './session';import type {Manifest} from '../types';
-import {decideComputer,areaChoices,AREA_GOODS} from './computer-area';import {decideComputer as previous} from './computer-commerce';import {PROPERTY_CATALOG} from './economy';import {g5Options} from './g5';import nodes from '../japan-topology.fixture.json';
+import {decideComputer,areaChoices,AREA_GOODS} from './computer-area';import {decideComputer as previous} from './computer-commerce';import {PROPERTY_CATALOG} from './economy';import {g5Options} from './g5';import nodes from '../../../../../shared/richman/japan-topology.fixture.json';
 const config={gameId:'area-domain',seed:'area',rulesId:'japan-events-candidate-v44',characterIds:['xiaomei','tuu','chyan','salonbus'],initialFunds:100000};
 const cur=(e:GameEngine)=>(e as unknown as {current:GameState}).current,defs=PROPERTY_CATALOG.properties,def=defs.find(d=>d.kind==='land')!,street=defs.filter(d=>d.kind==='land'&&d.name===def.name);
 function grant(s:GameState,id:string,item:string){s.effects!.inventory[id][item]++;s.g3!.slots[id].push(item);}

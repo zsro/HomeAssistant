@@ -3,7 +3,7 @@ import {syncCardSlots} from './g3';
 import {expect,it} from 'vitest';
 import {GameEngine} from './engine';
 import type {Action,GameState,EventPayload} from './engine';
-import nodes from '../japan-topology.fixture.json';
+import nodes from '../../../../../shared/richman/japan-topology.fixture.json';
 import {offerInsurance,INSURANCE_FINGERPRINT} from './insurance';
 import {claimInsurance,tickInsurance,INSURANCE_TERMS} from './insurance-state';
 import {g6Draw} from './g6-random';

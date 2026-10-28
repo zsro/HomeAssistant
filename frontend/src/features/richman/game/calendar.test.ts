@@ -6,7 +6,7 @@ import {bankLoan,tickLoans} from './news-business';
 import {marketAvailable,marketTick,refreshQuota} from './g6-market';
 import {PROPERTY_CATALOG} from './economy';
 import {saveCheckpoint,restoreCheckpoint} from './g7';
-import nodes from '../japan-topology.fixture.json';
+import nodes from '../../../../../shared/richman/japan-topology.fixture.json';
 function fixture(count=4,date='1998-01-31',version=24){const e=new GameEngine(nodes,{gameId:'calendar',rulesId:`japan-events-candidate-v${version}`,seed:'calendar',characterIds:['a','b','c','d'].slice(0,count),initialFunds:100000,...(version===24?{startDate:date}:{})});const s=(e as unknown as{current:GameState}).current;s.g6!.gods=[];return {e,s};}
 function send(e:GameEngine,action:Action){const s=e.state;return e.dispatch({id:`c${s.revision}`,gameId:s.gameId,expectedRevision:s.revision,playerId:s.players[s.active].id,action});}
 function finish(e:GameEngine,active:number){const s=(e as unknown as{current:GameState}).current;s.phase='turnEnd';s.pending=null;s.active=active;const result=send(e,{type:'endTurn'});if(!result.ok)throw Error(result.reason);return result;}

@@ -3,7 +3,7 @@ import {GameEngine} from './engine';
 import type {Action,GameState} from './engine';
 import {G7_GOODS} from './g7-catalog';
 import {saveCheckpoint,restoreCheckpoint} from './g7';
-import nodes from '../japan-topology.fixture.json';
+import nodes from '../../../../../shared/richman/japan-topology.fixture.json';
 // Boundary fixtures deliberately set a single arrival; legal-route/browser evidence is separate.
 const cur=(e:GameEngine)=>(e as unknown as {current:GameState}).current;
 function setup(){const e=new GameEngine(nodes,{gameId:'site-circuit-boundaries',seed:'site-circuit-boundaries',rulesId:'japan-events-candidate-v41',characterIds:['a','b','c','d'],initialFunds:100000,startDate:'1998-01-14'});const s=cur(e);s.g6!.gods=[];s.g2!.players['player-2'].prison=5;s.g2!.players['player-3'].hospital=5;s.news!.detention!.prison=['player-2'];s.news!.detention!.hospital=['player-3'];return e;}

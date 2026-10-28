@@ -3,7 +3,7 @@ import {GameEngine} from './engine';
 import type {GameState,Action} from './engine';
 import {PAYMENT_FINGERPRINT} from './payments';
 import {saveCheckpoint,restoreCheckpoint} from './g7';
-import nodes from '../japan-topology.fixture.json';
+import nodes from '../../../../../shared/richman/japan-topology.fixture.json';
 const current=(e:GameEngine)=>(e as unknown as{current:GameState}).current;
 function setup(version=34,count=3,lots=4){const e=new GameEngine(nodes,{gameId:'payments',rulesId:`japan-events-candidate-v${version}`,seed:'payments',characterIds:['a','b','c','d'].slice(0,count),initialFunds:100000,startDate:'1998-01-07'}),s=current(e);s.g6!.gods=[];s.economy!.balances['player-1']={cash:2,bank:3};for(let i=0;i<lots;i++)Object.assign(s.economy!.properties[i],{ownerId:'player-1',level:1,basePrice:501});for(const c of s.news!.business!.companies){c.ownerId='player-2';c.ranking=['player-2'];s.g6!.holdings['player-2'][c.stockId].quantity=1;}s.dice=3;return{e,s};}
 function send(e:GameEngine,action:Action,ok=true,actor?:string){const s=e.state,p=s.pending,r=e.dispatch({id:'c'+s.revision,gameId:s.gameId,expectedRevision:s.revision,playerId:actor??(p?.kind==='auction'||p?.kind==='reaction'?p.responderId:s.players[s.active].id),action});expect(r.ok,JSON.stringify(r)).toBe(ok);return r;}

@@ -6,7 +6,7 @@ import {GameSession} from './game/session';
 import {DisposalPanel} from './DisposalPanel';
 import {AuctionPanel} from './G4Choice';
 import type {Manifest} from './types';
-import nodes from './japan-topology.fixture.json';
+import nodes from '../../../../shared/richman/japan-topology.fixture.json';
 afterEach(cleanup);
 function snapshot(){const manifest:Manifest={version:1,map:{name:'日本',width:2304,height:2304,nodes,scenery:[]},sprites:{},characters:['孙小美','阿土伯','钱夫人'].map((name,i)=>({id:String(i),name,color:'#fff',idle:[],walk:[],walkFramesPerDirection:10}))};return new GameSession(manifest,{id:()=> 'disposal-ui',seed:()=> 'disposal-ui'},'disposal').snapshot();}
 it('describes rent-only disposal and empty state without claiming other callbacks completed',()=>{render(<DisposalPanel snapshot={snapshot()}/>);expect(screen.getByText('尚未发生租金破产处置。')).toBeInTheDocument();expect(screen.getByText(/新闻、命运、公司及贷款扣款/)).toBeInTheDocument();});

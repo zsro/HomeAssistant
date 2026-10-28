@@ -3,7 +3,7 @@ import {createHash} from 'node:crypto';
 import {GameEngine,replayGame} from '../../frontend/src/features/richman/game/engine';
 import type {Replay} from '../../frontend/src/features/richman/game/engine';
 import {verifyDisposal} from './verify-disposal';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 const source='/private/tmp/richman-unified-ui-03t',replay=JSON.parse(fs.readFileSync(source+'/replay.json','utf8')) as Replay,e=replayGame(nodes,replay),engine=new GameEngine(nodes,replay.config),checks=new Set<string>();
 for(const command of replay.commands){const before=engine.state,r=engine.dispatch(command);if(!r.ok)throw Error(r.reason);for(const c of verifyDisposal(before,engine.state,r.events))checks.add(c);}
 if(checks.size!==6)throw Error('Missing check: '+JSON.stringify([...checks]));

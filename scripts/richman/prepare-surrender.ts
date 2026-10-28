@@ -3,7 +3,7 @@ import {writeFileSync} from 'node:fs';
 import {GameEngine,type Action} from '../../frontend/src/features/richman/game/engine';
 import {computerDecision,decisionPlayer} from '../../frontend/src/features/richman/game/computer';
 import {marketAvailable,tradeStock} from '../../frontend/src/features/richman/game/g6-market';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 for(const count of [2,3,4]){
  const e=new GameEngine(nodes,{gameId:'surrender-route',rulesId:'japan-events-candidate-v47',seed:'surrender-'+count,characterIds:['xiaomei','tuu','chyan','salonbus'].slice(0,count),humanIds:Array.from({length:count},(_,i)=>`player-${i+1}`),initialFunds:300000,startDate:'1998-01-25'}),marks:{index:number;kind:string}[]=[];
  let first=false,second=false,bought=false,done=false;

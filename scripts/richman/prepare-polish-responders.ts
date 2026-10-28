@@ -1,6 +1,6 @@
 import {readFileSync,writeFileSync} from 'node:fs';
 import {GameEngine} from '../../frontend/src/features/richman/game/engine';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 for(const [name,file,length,mode] of [['auction','operating-news-v17',30,'operatingNews'],['reaction','magic-actions-v37-nested',284,'magicActions']] as const){
  const r=JSON.parse(readFileSync(`frontend/src/features/richman/game/fixtures/${file}-replay.json`,'utf8'));r.commands=r.commands.slice(0,length);
  const e=new GameEngine(nodes,r.config),targets=[];

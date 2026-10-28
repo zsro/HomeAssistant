@@ -5,7 +5,7 @@ import {PROPERTY_CATALOG} from '../../frontend/src/features/richman/game/economy
 import {g1Adjacent} from '../../frontend/src/features/richman/game/g1';
 import {REMOTE_EFFECT} from '../../frontend/src/features/richman/game/items';
 import {actionLocked} from '../../frontend/src/features/richman/game/g2';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 const byId=new Map(nodes.map(n=>[n.id,n]));
 function distance(node:number,targets:number[]){const seen=new Set([node]),q=[[node,0]];for(const[n,d]of q){if(targets.includes(n))return d;for(const a of byId.get(n)!.adjacent)if(!seen.has(a)){seen.add(a);q.push([a,d+1]);}}return 999;}
 export function planSiteServices(seed:string,count=4,limit=2000,goal:string='both'){

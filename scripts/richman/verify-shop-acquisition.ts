@@ -2,7 +2,7 @@
 import {GameEngine,replayGame} from '../../frontend/src/features/richman/game/engine';
 import type {Replay} from '../../frontend/src/features/richman/game/engine';
 import assert from 'node:assert/strict';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 import {g6Draw} from '../../frontend/src/features/richman/game/g6-random';
 import {cardPrices} from '../../frontend/src/features/richman/game/g3';
 import {shopSupply,shopPrice} from '../../frontend/src/features/richman/game/shop-acquisition';

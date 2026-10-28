@@ -7,7 +7,7 @@ import { ROAD_RULES, ROAD_FINGERPRINT, ROADBLOCK, ROADBLOCK_EFFECT, ROBOT_EFFECT
 import { REMOTE_EFFECT } from './items';
 import { NEARBY_WORKER_EFFECT } from './nearby-construction';
 import { PROPERTY_CATALOG } from './economy';
-import nodes from '../japan-topology.fixture.json';
+import nodes from '../../../../../shared/richman/japan-topology.fixture.json';
 import v4 from './fixtures/tools-v4-replay.json';
 import golden from './fixtures/tools-v4-golden.json';
 

@@ -1,7 +1,7 @@
 import {expect,it} from 'vitest';
 import {GameEngine} from './engine';
 import type {GameState,Action} from './engine';
-import nodes from '../japan-topology.fixture.json';
+import nodes from '../../../../../shared/richman/japan-topology.fixture.json';
 import {PROPERTY_CATALOG} from './economy';
 import {MAGIC_ACTIONS_FINGERPRINT} from './magic-actions';
 import {returnSupply,syncCardSlots} from './g3';

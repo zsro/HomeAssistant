@@ -6,7 +6,7 @@ import { MAP_EVENT_RULES } from '../../frontend/src/features/richman/game/map-ev
 import { G2_GOODS, g2Options, actionLocked } from '../../frontend/src/features/richman/game/g2';
 import { g1Adjacent } from '../../frontend/src/features/richman/game/g1';
 import { REMOTE_EFFECT } from '../../frontend/src/features/richman/game/items';
-import nodes from '../../frontend/src/features/richman/japan-topology.fixture.json';
+import nodes from '../../shared/richman/japan-topology.fixture.json';
 const byId=new Map(nodes.map(n=>[n.id,n]));
 function distance(node:number,previous:number|null){const q:[number,number|null,number][]=[[node,previous,0]],seen=new Set<string>();for(let i=0;i<q.length;i++){const[n,p,d]=q[i];if(n===98)return d;const key=n+'/'+p;if(seen.has(key))continue;seen.add(key);const a=g1Adjacent(byId.get(n)!),f=a.filter(x=>x!==p);for(const next of f.length?f:a)q.push([next,n,d+1]);}return 999;}
 for(let seedNo=0;seedNo<80;seedNo++){

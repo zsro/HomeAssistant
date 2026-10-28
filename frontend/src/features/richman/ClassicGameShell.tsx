@@ -25,7 +25,7 @@ export function ClassicGameShell({ children, manifest, snapshot, onOpen, ready, 
     const element = fit.current;
     if (!element) return;
     const page = element.closest('.rm-classic-page');
-    const chrome = ['.rm-classic-sitebar', '.rm-game-toolbar', '.rm-action-bar', '.rm-decision-nav', '.rm-window-launcher']
+    const chrome = ['.rm-classic-sitebar', '.rm-game-toolbar', '.rm-cloud-status', '.rm-action-bar', '.rm-decision-nav', '.rm-window-launcher']
       .map(selector => page?.querySelector<HTMLElement>(selector)).filter((item): item is HTMLElement => !!item);
     const resize = () => {
       const reserved = chrome.reduce((sum, item) => {

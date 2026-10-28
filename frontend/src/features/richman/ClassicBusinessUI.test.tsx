@@ -7,7 +7,7 @@ import { G6Panel } from './G6Panel';
 import { ClassicStockHistory } from './ClassicBusinessArt';
 import { GameSession } from './game/session';
 import type { Manifest } from './types';
-import nodes from './japan-topology.fixture.json';
+import nodes from '../../../../shared/richman/japan-topology.fixture.json';
 const manifest: Manifest = { version: 1, map: { name: '日本', width: 2304, height: 2304, nodes, scenery: [] }, sprites: {}, characters: ['a', 'b'].map(id => ({ id, name: id, color: '#fff', idle: [], walk: [], walkFramesPerDirection: 10 })) };
 afterEach(cleanup);
 function snapshot() { const s = new GameSession(manifest, { id: () => 'ui05', seed: () => 'ui05' }, 'surrender'); s.start({ mode: 'surrender', seed: 'ui05', characterIds: ['a', 'b'], startDate: '1998-01-07' }); return s.snapshot(); }

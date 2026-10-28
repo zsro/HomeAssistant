@@ -2,7 +2,7 @@ import {expect,it} from 'vitest';
 import {createHash} from 'node:crypto';
 import {GameEngine,replayGame} from './engine';
 import type {Replay} from './engine';
-import nodes from '../japan-topology.fixture.json';
+import nodes from '../../../../../shared/richman/japan-topology.fixture.json';
 import prison from './fixtures/site-services-v39-prison-replay.json';
 import prisonGolden from './fixtures/site-services-v39-prison-manifest.json';
 import hospital from './fixtures/site-services-v39-hospital-replay.json';

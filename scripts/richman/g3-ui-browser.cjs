@@ -35,7 +35,7 @@ async function settled(){
  throw Error('Movement timeout');
 }
 const names={'card:13':'抢夺卡','card:18':'复仇卡','card:19':'嫁祸卡','card:20':'免费卡','card:21':'免罪卡','card:29':'同盟卡','card:14':'停留卡','card:16':'梦游卡','card:17':'陷害卡'};
-const catalog=JSON.parse(fs.readFileSync('frontend/src/features/richman/game/japan-properties.json','utf8')).properties;
+const catalog=JSON.parse(fs.readFileSync('shared/richman/game/japan-properties.json','utf8')).properties;
 const completed=[],reactions=[];let turns=0,currentEffect='',commonChecked=false,reactionChecked=false;
 for(const command of plan.replay.commands){
  const a=command.action;if(a.type==='animationDone')continue;await settled();
